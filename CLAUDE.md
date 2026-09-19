@@ -4,7 +4,61 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-09-20 (3-bosqich: to'liq import, 1571 qism).
+> Oxirgi yangilanish: 2026-09-20 (3-bosqich tugadi, 5-bosqich kontent 218/~750).
+
+## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
+
+1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
+   4-bo'lim (xavflar) — qisqa.
+2. Holatni tekshiring: `git status` toza, `git log --oneline | head -5`
+   oxirgi commit `5b5a9b8` yoki undan keyingisi bo'lishi kerak.
+3. Meshlar diskda bor (`public/meshes/` 183 MB, 7 papka; `data/raw/`
+   110 MB) — gitignore'da, QAYTA HOSIL QILISH SHART EMAS. Agar yo'q bo'lsa
+   (yangi kompyuter): `pipeline/README.md` retsepti + `volume_to_glb.py`
+   har atlas uchun (neuroparc fayllari `data/raw/neuroparc/` — curl bilan
+   olinadi, URL `pipeline/volume_to_glb.py` docstringida).
+4. Dev server: `npm run dev` → http://localhost:3019 (**3019**, Falcon 3017
+   band). `preview_start` vositasi ishlamasa (Falcon konfiguratsiyasini
+   o'qib qolgan bo'lsa) — `npm run dev`ni fonda Bash bilan ishga tushirib
+   `navigate` qiling.
+5. Tekshiruv uchun ikki yo'l: brauzer pane (foydalanuvchi bir vaqtda
+   pane'da ishlayotgan bo'lsa state o'zgarib turadi — bunda ishlatmang) yoki
+   headless: `node scripts/shot.mjs out.png --lang uz --setup "JS" --wait
+   3000` (`__atlas.getState()`, `__scene` global). Qatlam yuklanishi
+   kerak bo'lsa `--wait 12000`+.
+6. Har commit oldidan: `npx tsc -p tsconfig.app.json --noEmit && npm run
+   build && rm -rf dist`. Commit xabari o'zbekcha, batafsil (nima va NEGA),
+   `Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>` bilan. Push
+   `origin master`. Uzun xabarni `-F fayl` bilan bering (ichida `"`
+   bo'lsa `-m` buziladi — bir marta shunday xato bo'lgan).
+7. Har bosqich oxirida shu faylning 3-bo'limi va `PLAN.md` jadvalini
+   yangilang.
+
+**Keyingi vazifa (foydalanuvchi tanlaydi, ikkalasi ham navbatda):**
+- **5-bosqich davomi — kontent.** Fayl formati va id'lar quyida
+  (3-bo'lim, 5-bosqich). Ustuvorlik: (a) tuzilma nomlarining `uz`/`la`
+  tarjimasi — `content/*.json` yozuviga `name: {uz, la}` qo'shib
+  `data/index.ts` merge qismida `p.name.uz = entry.name?.uz` qilish
+  (hozir faqat `la` yopishtiriladi); (b) Julich 207 alohida hudud
+  (`julich-areas.json`, id = `j-<slug>` masalan `j-vim`, `j-ca1`,
+  `j-area-4a`); (c) Desikan 35 (`dk-<slug>`), Destrieux 75 (`ds-<slug>`),
+  JHU ~30 (`wm-<slug>`), Glasser 180 (`gl-<slug>`). Id'larni olish:
+  `python3 -c "import json;d=json.load(open('src/data/parts.json'));
+  print(sorted(set(p['concept'] for p in d['parts'] if p['layer']=='julich')))"`.
+  Yangi faylni `content/index.ts` `FILES` ro'yxatiga qo'shing. Har
+  yozuvda `sources` shart. Tekshiruv: JSON yuklanadi + `unmatched` bo'sh
+  (skript 5-bosqich bandida).
+- **4-bosqich — kesim.** Hozirgi `cutaway` bitta vertikal tekislik
+  (Falcon'dan). Kerak: sagittal/koronal/aksial 3 slayder (MNI mm),
+  `clipPlane` → 3 ta `T.Plane`, `interiorMaterial`/`material.clippingPlanes`
+  massivini yangilash, Inspector/PlanesPanel'da MNI koordinata ko'rsatish,
+  kesilgan tomon pick'da e'tiborsiz (`pick()` allaqachon plane'ni
+  tekshiradi — 3 taga kengaytiring). `ui/ViewControls.tsx` → `PlanesPanel`.
+- **6-bosqich — deploy:** meshlar 183 MB — GitHub Pages'ga sig'adi (1 GB),
+  lekin `public/meshes` gitignore'da; variant: Draco siqish
+  (`gltf-transform`) + GitHub Release asset yoki alohida `neuro-atlas-data`
+  repo + `MESHES_URL` env. `deploy.yml` Falcon'dan ko'chirilgan, `VITE_BASE`
+  ishlaydi.
 
 ## 1. Loyiha nima
 
@@ -137,6 +191,17 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     StatPearls), Julich-Brain asl maqolalari (DOI). Har yozuvda `sources`.
 - ⬜ 6–7.
 
-## 4. Ma'lum xatolar tarixi
+## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
-(hali bo'sh — Falcon'dagi ro'yxatni takrorlamang)
+1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).
+2. Julich qisman qoplaydigan gyruslar landmark sifatida 10–24 mm xato.
+3. Peel qayta-kadrlash sharti `last.peel !== s.peel` faqat birinchi kadrda
+   rost — damp tugamasdan o'tib ketardi; `lastFitPeel` bilan tuzatildi.
+4. Sfera bo'yicha kadrlash uzunchoq miya uchun katta bo'sh joy qoldiradi —
+   margin 0.68.
+5. Tomirlar/jugular bo'yingacha tushadi — `modelBox` faqat `BRAIN_SYSTEMS`.
+6. Brauzer pane screenshot'i bir qadam kechikishi va foydalanuvchi bir
+   vaqtda pane'da ishlashi mumkin — muhim tekshiruvlarni headless qiling.
+7. `git commit -m` ichida `"` — pathspec xatosi; `-F` ishlating.
+8. `--setup`da noto'g'ri id (`j-vim-thalamus-...`) → bo'sh tanlov + isolate
+   → qora ekran; id'larni `parts.json`dan tekshiring (`j-vim-left`).
