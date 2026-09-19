@@ -1,0 +1,51 @@
+{
+ "affine": [
+  [
+   1.071268,
+   -0.022478,
+   -0.008603,
+   15.086801
+  ],
+  [
+   0.040168,
+   0.993938,
+   0.361007,
+   -657.081301
+  ],
+  [
+   0.000525,
+   -0.275569,
+   1.064974,
+   -1631.702731
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "rms_mm": 5.2718760972535925,
+ "landmarks": [
+  "L Left amygdala (7 julich)",
+  "L Left hippocampus proper (4 julich)",
+  "L Left thalamus (32 julich)",
+  "L Left precentral gyrus (8 julich)",
+  "L Left postcentral gyrus (4 julich)",
+  "L Left insula (16 julich)",
+  "L Left inferior frontal gyrus (2 julich)",
+  "L Left anterior orbital gyrus (7 julich)",
+  "L Left angular gyrus (2 julich)",
+  "L Left supramarginal gyrus (5 julich)",
+  "R Right amygdala (7 julich)",
+  "R Right hippocampus proper (4 julich)",
+  "R Right thalamus (32 julich)",
+  "R Right precentral gyrus (8 julich)",
+  "R Right postcentral gyrus (4 julich)",
+  "R Right insula (16 julich)",
+  "R Right inferior frontal gyrus (2 julich)",
+  "R Right anterior orbital gyrus (7 julich)",
+  "R Right angular gyrus (2 julich)",
+  "R Right supramarginal gyrus (5 julich)"
+ ]
+}

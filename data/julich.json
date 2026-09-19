@@ -1,0 +1,10352 @@
+[
+ {
+  "id": "area-3b-postcg-left",
+  "name": "Area 3b (PostCG) left",
+  "label": 1,
+  "fragment": "left hemisphere",
+  "faces": 18116,
+  "bbox": [
+   [
+    -68.1,
+    -41.82,
+    12.05
+   ],
+   [
+    -2.39,
+    1.94,
+    81.03
+   ]
+  ],
+  "centroid": [
+   -41.72,
+   -18.98,
+   48.83
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pf-ipl-left",
+  "name": "Area PF (IPL) left",
+  "label": 3,
+  "fragment": "left hemisphere",
+  "faces": 5896,
+  "bbox": [
+   [
+    -69.48,
+    -44.92,
+    19.21
+   ],
+   [
+    -50.65,
+    -26.92,
+    58.18
+   ]
+  ],
+  "centroid": [
+   -61.58,
+   -36.28,
+   39.11
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc4la-loc-left",
+  "name": "Area hOc4la (LOC) left",
+  "label": 2,
+  "fragment": "left hemisphere",
+  "faces": 7338,
+  "bbox": [
+   [
+    -55.98,
+    -88.76,
+    -17.67
+   ],
+   [
+    -35.22,
+    -68.13,
+    22.1
+   ]
+  ],
+  "centroid": [
+   -46.54,
+   -79.36,
+   1.53
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-cos1-cos-left",
+  "name": "Area CoS1 (CoS) left",
+  "label": 4,
+  "fragment": "left hemisphere",
+  "faces": 720,
+  "bbox": [
+   [
+    -45.6,
+    -33.8,
+    -22.88
+   ],
+   [
+    -39.8,
+    -20.81,
+    -16.11
+   ]
+  ],
+  "centroid": [
+   -42.19,
+   -27.77,
+   -19.52
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "astr-amygdala-left",
+  "name": "Astr (Amygdala) left",
+  "label": 5,
+  "fragment": "left hemisphere",
+  "faces": 548,
+  "bbox": [
+   [
+    -31.89,
+    -10.11,
+    -17.78
+   ],
+   [
+    -25.12,
+    -3.94,
+    -10.42
+   ]
+  ],
+  "centroid": [
+   -28.54,
+   -6.92,
+   -14.2
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id8-insula-left",
+  "name": "Area Id8 (Insula) left",
+  "label": 6,
+  "fragment": "left hemisphere",
+  "faces": 1948,
+  "bbox": [
+   [
+    -41.8,
+    11.08,
+    -14.37
+   ],
+   [
+    -27.15,
+    27.1,
+    -0.16
+   ]
+  ],
+  "centroid": [
+   -35.11,
+   18.95,
+   -6.28
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sfg4-sfg-left",
+  "name": "Area SFG4 (SFG) left",
+  "label": 7,
+  "fragment": "left hemisphere",
+  "faces": 6248,
+  "bbox": [
+   [
+    -32.39,
+    33.33,
+    19.7
+   ],
+   [
+    -13.36,
+    55.87,
+    52.82
+   ]
+  ],
+  "centroid": [
+   -23.41,
+   43.37,
+   36.69
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-1-postcg-left",
+  "name": "Area 1 (PostCG) left",
+  "label": 8,
+  "fragment": "left hemisphere",
+  "faces": 11596,
+  "bbox": [
+   [
+    -68.17,
+    -42.21,
+    25.51
+   ],
+   [
+    -12.26,
+    -3.53,
+    80.74
+   ]
+  ],
+  "centroid": [
+   -44.15,
+   -25.88,
+   59.55
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "po-thalamus-posterior-nucleus-left",
+  "name": "Po (Thalamus, posterior Nucleus) left",
+  "label": 9,
+  "fragment": "left hemisphere",
+  "faces": 196,
+  "bbox": [
+   [
+    -16.45,
+    -29.8,
+    -4.01
+   ],
+   [
+    -12.21,
+    -26.49,
+    -2.0
+   ]
+  ],
+  "centroid": [
+   -14.13,
+   -28.33,
+   -3.0
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-1-0-heschl-left",
+  "name": "Area Te 1.0 (HESCHL) left",
+  "label": 10,
+  "fragment": "left hemisphere",
+  "faces": 1446,
+  "bbox": [
+   [
+    -53.73,
+    -24.75,
+    2.03
+   ],
+   [
+    -41.0,
+    -11.49,
+    13.94
+   ]
+  ],
+  "centroid": [
+   -46.89,
+   -18.44,
+   8.55
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sts2-sts-left",
+  "name": "Area STS2 (STS) left",
+  "label": 11,
+  "fragment": "left hemisphere",
+  "faces": 8506,
+  "bbox": [
+   [
+    -68.87,
+    -33.85,
+    -29.85
+   ],
+   [
+    -46.9,
+    11.17,
+    -0.19
+   ]
+  ],
+  "centroid": [
+   -57.72,
+   -8.96,
+   -14.75
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ld-thalamus-lateral-dorsal-nucleus-left",
+  "name": "LD (Thalamus, lateral dorsal Nucleus) left",
+  "label": 12,
+  "fragment": "left hemisphere",
+  "faces": 568,
+  "bbox": [
+   [
+    -11.96,
+    -26.76,
+    13.82
+   ],
+   [
+    -6.0,
+    -17.13,
+    18.97
+   ]
+  ],
+  "centroid": [
+   -9.03,
+   -21.77,
+   16.19
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6mp-sma-mesial-sfg-left",
+  "name": "Area 6mp (SMA, mesial SFG) left",
+  "label": 13,
+  "fragment": "left hemisphere",
+  "faces": 2876,
+  "bbox": [
+   [
+    -11.98,
+    -20.65,
+    48.02
+   ],
+   [
+    -0.58,
+    -3.57,
+    67.86
+   ]
+  ],
+  "centroid": [
+   -5.05,
+   -11.77,
+   57.91
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id3-insula-left",
+  "name": "Area Id3 (Insula) left",
+  "label": 14,
+  "fragment": "left hemisphere",
+  "faces": 2196,
+  "bbox": [
+   [
+    -44.89,
+    -16.69,
+    -18.83
+   ],
+   [
+    -33.58,
+    -2.21,
+    1.71
+   ]
+  ],
+  "centroid": [
+   -39.99,
+   -9.29,
+   -7.54
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "zi-thalamus-zona-incerta-left",
+  "name": "ZI (Thalamus, zona incerta) left",
+  "label": 15,
+  "fragment": "left hemisphere",
+  "faces": 1212,
+  "bbox": [
+   [
+    -16.94,
+    -22.35,
+    -10.13
+   ],
+   [
+    -5.9,
+    -7.06,
+    -2.65
+   ]
+  ],
+  "centroid": [
+   -11.14,
+   -14.67,
+   -6.37
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "cgm-metathalamus-left",
+  "name": "CGM (Metathalamus) left",
+  "label": 16,
+  "fragment": "left hemisphere",
+  "faces": 312,
+  "bbox": [
+   [
+    -18.86,
+    -28.1,
+    -7.78
+   ],
+   [
+    -13.27,
+    -24.92,
+    -3.44
+   ]
+  ],
+  "centroid": [
+   -16.11,
+   -26.49,
+   -5.65
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pirtb-piriformcortexmesial-temporobasal-left",
+  "name": "Area PirTB (PiriformCortexMesial, temporobasal) left",
+  "label": 17,
+  "fragment": "left hemisphere",
+  "faces": 36,
+  "bbox": [
+   [
+    -29.44,
+    3.23,
+    -17.73
+   ],
+   [
+    -29.1,
+    3.58,
+    -17.46
+   ]
+  ],
+  "centroid": [
+   -29.24,
+   3.39,
+   -17.6
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "nrp-midbrain-nucleus-ruber-parvocellular-part-left",
+  "name": "NRp (Midbrain, Nucleus Ruber, parvocellular part) left",
+  "label": 18,
+  "fragment": "left hemisphere",
+  "faces": 674,
+  "bbox": [
+   [
+    -8.24,
+    -22.08,
+    -15.57
+   ],
+   [
+    -1.64,
+    -15.25,
+    -6.93
+   ]
+  ],
+  "centroid": [
+   -4.49,
+   -18.76,
+   -10.51
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ti-stg-left",
+  "name": "Area TI (STG) left",
+  "label": 21,
+  "fragment": "left hemisphere",
+  "faces": 2638,
+  "bbox": [
+   [
+    -53.05,
+    -19.46,
+    -20.55
+   ],
+   [
+    -42.3,
+    11.97,
+    -2.09
+   ]
+  ],
+  "centroid": [
+   -46.64,
+   -2.35,
+   -10.84
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-p24ab-pacc-left",
+  "name": "Area p24ab (pACC) left",
+  "label": 20,
+  "fragment": "left hemisphere",
+  "faces": 2920,
+  "bbox": [
+   [
+    -10.39,
+    30.33,
+    -8.22
+   ],
+   [
+    0.69,
+    47.09,
+    16.59
+   ]
+  ],
+  "centroid": [
+   -4.21,
+   38.25,
+   4.64
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pft-ipl-left",
+  "name": "Area PFt (IPL) left",
+  "label": 19,
+  "fragment": "left hemisphere",
+  "faces": 7426,
+  "bbox": [
+   [
+    -69.33,
+    -35.32,
+    22.28
+   ],
+   [
+    -39.11,
+    -11.56,
+    51.87
+   ]
+  ],
+  "centroid": [
+   -56.93,
+   -25.13,
+   38.27
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fg5-fusg-left",
+  "name": "Area FG5 (FusG) left",
+  "label": 22,
+  "fragment": "left hemisphere",
+  "faces": 2158,
+  "bbox": [
+   [
+    -44.96,
+    -32.31,
+    -33.58
+   ],
+   [
+    -31.77,
+    -14.17,
+    -20.78
+   ]
+  ],
+  "centroid": [
+   -39.7,
+   -23.94,
+   -26.88
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pui-thalamus-inferior-pulvinar-left",
+  "name": "PUi (Thalamus, inferior pulvinar) left",
+  "label": 24,
+  "fragment": "left hemisphere",
+  "faces": 324,
+  "bbox": [
+   [
+    -24.85,
+    -31.81,
+    -6.77
+   ],
+   [
+    -19.12,
+    -27.27,
+    -2.87
+   ]
+  ],
+  "centroid": [
+   -22.01,
+   -29.59,
+   -4.76
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pum-thalamus-medial-pulvinar-left",
+  "name": "PUm (Thalamus, medial pulvinar) left",
+  "label": 23,
+  "fragment": "left hemisphere",
+  "faces": 1374,
+  "bbox": [
+   [
+    -18.08,
+    -36.98,
+    -2.53
+   ],
+   [
+    -7.87,
+    -27.8,
+    11.99
+   ]
+  ],
+  "centroid": [
+   -13.25,
+   -32.09,
+   4.41
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-3-stg-left",
+  "name": "Area Te 3 (STG) left",
+  "label": 25,
+  "fragment": "left hemisphere",
+  "faces": 6500,
+  "bbox": [
+   [
+    -71.39,
+    -33.06,
+    -14.51
+   ],
+   [
+    -52.48,
+    15.92,
+    16.83
+   ]
+  ],
+  "centroid": [
+   -63.6,
+   -10.27,
+   0.52
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-to-occipital-gapmap-left",
+  "name": "Frontal-to-Occipital (GapMap) left",
+  "label": 27,
+  "fragment": "left hemisphere",
+  "faces": 47600,
+  "bbox": [
+   [
+    -25.45,
+    -79.66,
+    -6.03
+   ],
+   [
+    0.07,
+    44.0,
+    65.83
+   ]
+  ],
+  "centroid": [
+   -8.66,
+   -33.8,
+   30.35
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-mfg1-mfg-left",
+  "name": "Area MFG1 (MFG) left",
+  "label": 26,
+  "fragment": "left hemisphere",
+  "faces": 2820,
+  "bbox": [
+   [
+    -46.78,
+    46.08,
+    9.88
+   ],
+   [
+    -29.67,
+    60.82,
+    32.59
+   ]
+  ],
+  "centroid": [
+   -37.65,
+   53.36,
+   19.53
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-7p-spl-left",
+  "name": "Area 7P (SPL) left",
+  "label": 28,
+  "fragment": "left hemisphere",
+  "faces": 4500,
+  "bbox": [
+   [
+    -15.43,
+    -82.37,
+    35.7
+   ],
+   [
+    -0.15,
+    -62.2,
+    65.72
+   ]
+  ],
+  "centroid": [
+   -6.79,
+   -73.14,
+   51.7
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6r1-precg-left",
+  "name": "Area 6r1 (PreCG) left",
+  "label": 29,
+  "fragment": "left hemisphere",
+  "faces": 3038,
+  "bbox": [
+   [
+    -65.37,
+    -1.85,
+    6.27
+   ],
+   [
+    -45.27,
+    12.71,
+    21.3
+   ]
+  ],
+  "centroid": [
+   -56.21,
+   6.08,
+   14.55
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6d1-precg-left",
+  "name": "Area 6d1 (PreCG) left",
+  "label": 30,
+  "fragment": "left hemisphere",
+  "faces": 11556,
+  "bbox": [
+   [
+    -44.14,
+    -29.63,
+    43.98
+   ],
+   [
+    -0.71,
+    -2.08,
+    79.94
+   ]
+  ],
+  "centroid": [
+   -21.0,
+   -13.77,
+   67.35
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "va-thalamus-ventral-anterior-nucleus-ventral-left",
+  "name": "VA (Thalamus, ventral anterior Nucleus (ventral)) left",
+  "label": 31,
+  "fragment": "left hemisphere",
+  "faces": 1632,
+  "bbox": [
+   [
+    -17.55,
+    -11.14,
+    -2.95
+   ],
+   [
+    -4.29,
+    -1.67,
+    14.08
+   ]
+  ],
+  "centroid": [
+   -11.09,
+   -6.19,
+   5.58
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip4-ips-left",
+  "name": "Area hIP4 (IPS) left",
+  "label": 32,
+  "fragment": "left hemisphere",
+  "faces": 2524,
+  "bbox": [
+   [
+    -33.78,
+    -88.76,
+    13.74
+   ],
+   [
+    -22.37,
+    -72.2,
+    36.84
+   ]
+  ],
+  "centroid": [
+   -29.28,
+   -81.25,
+   24.14
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op6-frontal-operculum-left",
+  "name": "Area Op6 (Frontal Operculum) left",
+  "label": 33,
+  "fragment": "left hemisphere",
+  "faces": 4648,
+  "bbox": [
+   [
+    -65.89,
+    -5.55,
+    -4.43
+   ],
+   [
+    -37.33,
+    14.89,
+    15.51
+   ]
+  ],
+  "centroid": [
+   -52.21,
+   4.11,
+   4.94
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fg2-fusg-left",
+  "name": "Area FG2 (FusG) left",
+  "label": 34,
+  "fragment": "left hemisphere",
+  "faces": 4676,
+  "bbox": [
+   [
+    -52.77,
+    -81.39,
+    -21.25
+   ],
+   [
+    -31.17,
+    -56.58,
+    -6.83
+   ]
+  ],
+  "centroid": [
+   -42.64,
+   -69.19,
+   -15.01
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip6-ips-left",
+  "name": "Area hIP6 (IPS) left",
+  "label": 35,
+  "fragment": "left hemisphere",
+  "faces": 4958,
+  "bbox": [
+   [
+    -41.72,
+    -75.05,
+    35.1
+   ],
+   [
+    -20.95,
+    -57.98,
+    61.46
+   ]
+  ],
+  "centroid": [
+   -31.08,
+   -66.82,
+   47.99
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "bst-basal-forebrain-bed-nucleus-left",
+  "name": "BST (Basal Forebrain, Bed Nucleus) left",
+  "label": 38,
+  "fragment": "left hemisphere",
+  "faces": 460,
+  "bbox": [
+   [
+    -9.03,
+    -1.74,
+    -6.01
+   ],
+   [
+    -3.28,
+    4.12,
+    0.64
+   ]
+  ],
+  "centroid": [
+   -6.33,
+   1.26,
+   -2.88
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-tpj-stg-smg-left",
+  "name": "Area TPJ (STG, SMG) left",
+  "label": 37,
+  "fragment": "left hemisphere",
+  "faces": 3382,
+  "bbox": [
+   [
+    -70.47,
+    -49.84,
+    9.04
+   ],
+   [
+    -46.59,
+    -29.8,
+    26.63
+   ]
+  ],
+  "centroid": [
+   -61.86,
+   -40.67,
+   18.42
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo5-ofc-left",
+  "name": "Area Fo5 (OFC) left",
+  "label": 36,
+  "fragment": "left hemisphere",
+  "faces": 2026,
+  "bbox": [
+   [
+    -46.8,
+    50.2,
+    -17.55
+   ],
+   [
+    -31.28,
+    64.66,
+    -3.98
+   ]
+  ],
+  "centroid": [
+   -38.64,
+   57.51,
+   -10.61
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "am-thalamus-anteromedial-nucleus-left",
+  "name": "AM (Thalamus, anteromedial Nucleus) left",
+  "label": 39,
+  "fragment": "left hemisphere",
+  "faces": 420,
+  "bbox": [
+   [
+    -7.48,
+    -8.52,
+    5.33
+   ],
+   [
+    -1.97,
+    -3.04,
+    11.62
+   ]
+  ],
+  "centroid": [
+   -4.36,
+   -5.42,
+   8.4
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op7-frontal-operculum-left",
+  "name": "Area Op7 (Frontal Operculum) left",
+  "label": 40,
+  "fragment": "left hemisphere",
+  "faces": 1440,
+  "bbox": [
+   [
+    -46.81,
+    3.63,
+    1.65
+   ],
+   [
+    -32.53,
+    14.18,
+    15.31
+   ]
+  ],
+  "centroid": [
+   -39.53,
+   8.68,
+   9.62
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc6-pos-left",
+  "name": "Area hOc6 (POS) left",
+  "label": 41,
+  "fragment": "left hemisphere",
+  "faces": 742,
+  "bbox": [
+   [
+    -18.9,
+    -76.32,
+    7.03
+   ],
+   [
+    -11.97,
+    -67.98,
+    15.34
+   ]
+  ],
+  "centroid": [
+   -15.57,
+   -72.23,
+   10.92
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ia3-insula-left",
+  "name": "Area Ia3 (Insula) left",
+  "label": 42,
+  "fragment": "left hemisphere",
+  "faces": 848,
+  "bbox": [
+   [
+    -43.19,
+    -3.37,
+    -19.11
+   ],
+   [
+    -35.92,
+    5.04,
+    -9.61
+   ]
+  ],
+  "centroid": [
+   -39.21,
+   0.87,
+   -14.41
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ig2-insula-left",
+  "name": "Area Ig2 (Insula) left",
+  "label": 43,
+  "fragment": "left hemisphere",
+  "faces": 1328,
+  "bbox": [
+   [
+    -41.56,
+    -22.36,
+    -2.23
+   ],
+   [
+    -32.38,
+    -14.29,
+    13.74
+   ]
+  ],
+  "centroid": [
+   -36.88,
+   -18.62,
+   5.23
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ca2-hippocampus-left",
+  "name": "CA2 (Hippocampus) left",
+  "label": 44,
+  "fragment": "left hemisphere",
+  "faces": 628,
+  "bbox": [
+   [
+    -28.43,
+    -17.23,
+    -21.74
+   ],
+   [
+    -16.4,
+    -11.42,
+    -16.03
+   ]
+  ],
+  "centroid": [
+   -21.9,
+   -14.1,
+   -18.8
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fp2-fpole-left",
+  "name": "Area Fp2 (FPole) left",
+  "label": 46,
+  "fragment": "left hemisphere",
+  "faces": 5598,
+  "bbox": [
+   [
+    -12.09,
+    45.14,
+    -22.1
+   ],
+   [
+    -1.54,
+    68.73,
+    27.53
+   ]
+  ],
+  "centroid": [
+   -5.64,
+   59.55,
+   -2.17
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vlp-thalamus-ventral-lateral-posterior-nucleus-left",
+  "name": "VLP (Thalamus, ventral lateral posterior Nucleus) left",
+  "label": 45,
+  "fragment": "left hemisphere",
+  "faces": 2018,
+  "bbox": [
+   [
+    -21.77,
+    -23.78,
+    3.58
+   ],
+   [
+    -9.44,
+    -9.42,
+    18.77
+   ]
+  ],
+  "centroid": [
+   -15.28,
+   -16.75,
+   11.88
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "li-thalamus-limitans-nucleus-left",
+  "name": "Li (Thalamus, limitans Nucleus) left",
+  "label": 47,
+  "fragment": "left hemisphere",
+  "faces": 484,
+  "bbox": [
+   [
+    -10.91,
+    -30.64,
+    -5.09
+   ],
+   [
+    -4.6,
+    -24.04,
+    0.28
+   ]
+  ],
+  "centroid": [
+   -7.83,
+   -27.28,
+   -2.68
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ec-hippocampal-region-entorhinal-cortex-left",
+  "name": "Area EC (Hippocampal Region, Entorhinal Cortex) left",
+  "label": 48,
+  "fragment": "left hemisphere",
+  "faces": 2208,
+  "bbox": [
+   [
+    -29.72,
+    -29.9,
+    -39.09
+   ],
+   [
+    -16.48,
+    -3.21,
+    -20.33
+   ]
+  ],
+  "centroid": [
+   -23.43,
+   -14.74,
+   -31.68
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id4-insula-left",
+  "name": "Area Id4 (Insula) left",
+  "label": 49,
+  "fragment": "left hemisphere",
+  "faces": 1770,
+  "bbox": [
+   [
+    -45.85,
+    -11.52,
+    4.57
+   ],
+   [
+    -32.25,
+    1.08,
+    18.94
+   ]
+  ],
+  "centroid": [
+   -37.55,
+   -4.4,
+   11.75
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "tu-basal-forebrain-tuberculum-left",
+  "name": "Tu (Basal Forebrain, Tuberculum) left",
+  "label": 51,
+  "fragment": "left hemisphere",
+  "faces": 192,
+  "bbox": [
+   [
+    -11.77,
+    4.32,
+    -16.7
+   ],
+   [
+    -7.72,
+    6.91,
+    -14.03
+   ]
+  ],
+  "centroid": [
+   -10.07,
+   5.73,
+   -15.27
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op1-poperc-left",
+  "name": "Area Op1 (POperc) left",
+  "label": 50,
+  "fragment": "left hemisphere",
+  "faces": 3706,
+  "bbox": [
+   [
+    -63.18,
+    -31.95,
+    10.78
+   ],
+   [
+    -39.7,
+    -14.1,
+    25.31
+   ]
+  ],
+  "centroid": [
+   -50.88,
+   -22.34,
+   18.51
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id6-insula-left",
+  "name": "Area Id6 (Insula) left",
+  "label": 53,
+  "fragment": "left hemisphere",
+  "faces": 5072,
+  "bbox": [
+   [
+    -46.19,
+    -2.67,
+    -9.32
+   ],
+   [
+    -28.35,
+    20.67,
+    17.2
+   ]
+  ],
+  "centroid": [
+   -36.62,
+   9.61,
+   3.62
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "rt-thalamus-reticular-nucleus-left",
+  "name": "Rt (Thalamus, reticular Nucleus) left",
+  "label": 52,
+  "fragment": "left hemisphere",
+  "faces": 3518,
+  "bbox": [
+   [
+    -32.2,
+    -34.06,
+    -7.44
+   ],
+   [
+    -16.03,
+    -7.43,
+    18.79
+   ]
+  ],
+  "centroid": [
+   -24.01,
+   -23.34,
+   6.31
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifs4-ifs-left",
+  "name": "Area IFS4 (IFS) left",
+  "label": 54,
+  "fragment": "left hemisphere",
+  "faces": 1072,
+  "bbox": [
+   [
+    -49.19,
+    15.88,
+    18.45
+   ],
+   [
+    -35.37,
+    21.9,
+    27.9
+   ]
+  ],
+  "centroid": [
+   -43.02,
+   18.86,
+   23.33
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6d3-sfs-left",
+  "name": "Area 6d3 (SFS) left",
+  "label": 55,
+  "fragment": "left hemisphere",
+  "faces": 5724,
+  "bbox": [
+   [
+    -33.76,
+    -9.04,
+    40.35
+   ],
+   [
+    -17.59,
+    21.57,
+    63.07
+   ]
+  ],
+  "centroid": [
+   -24.48,
+   6.38,
+   52.67
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ndentv-cerebellum-ventral-dentate-nucleus-left",
+  "name": "Ndentv (Cerebellum, Ventral Dentate Nucleus) left",
+  "label": 56,
+  "fragment": "left hemisphere",
+  "faces": 936,
+  "bbox": [
+   [
+    -16.41,
+    -67.61,
+    -34.98
+   ],
+   [
+    -10.41,
+    -51.98,
+    -26.98
+   ]
+  ],
+  "centroid": [
+   -13.19,
+   -58.49,
+   -31.08
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6v1-precg-left",
+  "name": "Area 6v1 (PreCG) left",
+  "label": 57,
+  "fragment": "left hemisphere",
+  "faces": 6998,
+  "bbox": [
+   [
+    -48.83,
+    -15.54,
+    43.97
+   ],
+   [
+    -26.32,
+    12.34,
+    69.11
+   ]
+  ],
+  "centroid": [
+   -38.13,
+   -1.81,
+   57.8
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip2-ips-left",
+  "name": "Area hIP2 (IPS) left",
+  "label": 58,
+  "fragment": "left hemisphere",
+  "faces": 3758,
+  "bbox": [
+   [
+    -55.2,
+    -52.75,
+    36.43
+   ],
+   [
+    -37.45,
+    -30.8,
+    56.51
+   ]
+  ],
+  "centroid": [
+   -46.97,
+   -41.87,
+   46.14
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-44-ifg-left",
+  "name": "Area 44 (IFG) left",
+  "label": 59,
+  "fragment": "left hemisphere",
+  "faces": 7208,
+  "bbox": [
+   [
+    -61.84,
+    5.27,
+    -4.71
+   ],
+   [
+    -41.58,
+    25.2,
+    30.39
+   ]
+  ],
+  "centroid": [
+   -52.74,
+   16.05,
+   12.43
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo7-ofc-left",
+  "name": "Area Fo7 (OFC) left",
+  "label": 60,
+  "fragment": "left hemisphere",
+  "faces": 2792,
+  "bbox": [
+   [
+    -44.7,
+    30.1,
+    -20.36
+   ],
+   [
+    -28.07,
+    47.68,
+    -7.68
+   ]
+  ],
+  "centroid": [
+   -35.67,
+   38.05,
+   -13.99
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pv-thalamus-paraventricular-nucleus-left",
+  "name": "Pv (Thalamus, paraventricular Nucleus) left",
+  "label": 61,
+  "fragment": "left hemisphere",
+  "faces": 134,
+  "bbox": [
+   [
+    -3.39,
+    -8.41,
+    4.51
+   ],
+   [
+    -2.03,
+    -5.42,
+    6.64
+   ]
+  ],
+  "centroid": [
+   -2.62,
+   -6.75,
+   5.64
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pga-ipl-left",
+  "name": "Area PGa (IPL) left",
+  "label": 62,
+  "fragment": "left hemisphere",
+  "faces": 6796,
+  "bbox": [
+   [
+    -62.61,
+    -74.01,
+    20.18
+   ],
+   [
+    -32.92,
+    -51.89,
+    57.57
+   ]
+  ],
+  "centroid": [
+   -49.51,
+   -63.16,
+   38.95
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pua-thalamus-anterior-pulvinar-left",
+  "name": "PUa (Thalamus, anterior pulvinar) left",
+  "label": 63,
+  "fragment": "left hemisphere",
+  "faces": 562,
+  "bbox": [
+   [
+    -17.25,
+    -29.54,
+    -1.63
+   ],
+   [
+    -12.31,
+    -23.99,
+    8.2
+   ]
+  ],
+  "centroid": [
+   -15.02,
+   -26.75,
+   3.19
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-8d2-sfg-left",
+  "name": "Area 8d2 (SFG) left",
+  "label": 64,
+  "fragment": "left hemisphere",
+  "faces": 4838,
+  "bbox": [
+   [
+    -31.94,
+    16.28,
+    32.14
+   ],
+   [
+    -16.23,
+    37.86,
+    58.52
+   ]
+  ],
+  "centroid": [
+   -24.07,
+   27.56,
+   44.28
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ia1-insula-left",
+  "name": "Area Ia1 (Insula) left",
+  "label": 65,
+  "fragment": "left hemisphere",
+  "faces": 580,
+  "bbox": [
+   [
+    -44.03,
+    -5.74,
+    -10.86
+   ],
+   [
+    -36.34,
+    0.58,
+    -4.67
+   ]
+  ],
+  "centroid": [
+   -40.42,
+   -2.9,
+   -8.09
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vtm-amygdala-left",
+  "name": "VTM (Amygdala) left",
+  "label": 66,
+  "fragment": "left hemisphere",
+  "faces": 376,
+  "bbox": [
+   [
+    -28.49,
+    -11.36,
+    -20.76
+   ],
+   [
+    -21.69,
+    -7.76,
+    -15.64
+   ]
+  ],
+  "centroid": [
+   -25.64,
+   -9.86,
+   -18.28
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op8-frontal-operculum-left",
+  "name": "Area Op8 (Frontal Operculum) left",
+  "label": 67,
+  "fragment": "left hemisphere",
+  "faces": 2504,
+  "bbox": [
+   [
+    -47.61,
+    10.0,
+    -3.13
+   ],
+   [
+    -32.42,
+    24.01,
+    13.89
+   ]
+  ],
+  "centroid": [
+   -40.72,
+   17.78,
+   6.25
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifj2-ifs-precs-left",
+  "name": "Area IFJ2 (IFS, PreCS) left",
+  "label": 69,
+  "fragment": "left hemisphere",
+  "faces": 1820,
+  "bbox": [
+   [
+    -46.49,
+    3.8,
+    22.31
+   ],
+   [
+    -31.1,
+    13.27,
+    33.97
+   ]
+  ],
+  "centroid": [
+   -39.31,
+   8.19,
+   28.83
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "fup-ventral-striatum-fundus-of-putamen-left",
+  "name": "FuP (Ventral Striatum, Fundus of Putamen) left",
+  "label": 68,
+  "fragment": "left hemisphere",
+  "faces": 2184,
+  "bbox": [
+   [
+    -30.87,
+    -3.8,
+    -15.27
+   ],
+   [
+    -15.61,
+    18.81,
+    -4.6
+   ]
+  ],
+  "centroid": [
+   -22.65,
+   7.47,
+   -9.15
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-25-sacc-left",
+  "name": "Area 25 (sACC) left",
+  "label": 71,
+  "fragment": "left hemisphere",
+  "faces": 688,
+  "bbox": [
+   [
+    -8.0,
+    10.13,
+    -17.72
+   ],
+   [
+    -2.2,
+    16.31,
+    -4.46
+   ]
+  ],
+  "centroid": [
+   -4.47,
+   13.55,
+   -12.09
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-7m-spl-left",
+  "name": "Area 7M (SPL) left",
+  "label": 70,
+  "fragment": "left hemisphere",
+  "faces": 1008,
+  "bbox": [
+   [
+    -5.7,
+    -78.85,
+    32.3
+   ],
+   [
+    0.37,
+    -70.43,
+    46.97
+   ]
+  ],
+  "centroid": [
+   -2.12,
+   -74.54,
+   40.01
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pfm-ipl-left",
+  "name": "Area PFm (IPL) left",
+  "label": 73,
+  "fragment": "left hemisphere",
+  "faces": 9310,
+  "bbox": [
+   [
+    -68.37,
+    -64.74,
+    18.38
+   ],
+   [
+    -39.21,
+    -41.25,
+    59.21
+   ]
+  ],
+  "centroid": [
+   -55.73,
+   -52.41,
+   40.95
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op5-frontal-operculum-left",
+  "name": "Area Op5 (Frontal Operculum) left",
+  "label": 72,
+  "fragment": "left hemisphere",
+  "faces": 2264,
+  "bbox": [
+   [
+    -54.17,
+    -13.07,
+    4.49
+   ],
+   [
+    -37.58,
+    0.8,
+    20.0
+   ]
+  ],
+  "centroid": [
+   -45.4,
+   -5.81,
+   12.27
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "md-thalamus-mediodorsal-nucleus-left",
+  "name": "MD (Thalamus, mediodorsal Nucleus) left",
+  "label": 74,
+  "fragment": "left hemisphere",
+  "faces": 1468,
+  "bbox": [
+   [
+    -10.36,
+    -25.86,
+    1.87
+   ],
+   [
+    -1.34,
+    -10.75,
+    13.71
+   ]
+  ],
+  "centroid": [
+   -5.83,
+   -18.53,
+   7.43
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "lb-amygdala-left",
+  "name": "LB (Amygdala) left",
+  "label": 75,
+  "fragment": "left hemisphere",
+  "faces": 1856,
+  "bbox": [
+   [
+    -33.49,
+    -9.5,
+    -31.13
+   ],
+   [
+    -19.27,
+    2.41,
+    -16.66
+   ]
+  ],
+  "centroid": [
+   -25.65,
+   -2.76,
+   -23.69
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-4a-precg-left",
+  "name": "Area 4a (PreCG) left",
+  "label": 76,
+  "fragment": "left hemisphere",
+  "faces": 5618,
+  "bbox": [
+   [
+    -20.4,
+    -37.65,
+    50.57
+   ],
+   [
+    -0.51,
+    -17.0,
+    81.29
+   ]
+  ],
+  "centroid": [
+   -7.33,
+   -26.32,
+   68.63
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-5m-spl-left",
+  "name": "Area 5M (SPL) left",
+  "label": 77,
+  "fragment": "left hemisphere",
+  "faces": 5330,
+  "bbox": [
+   [
+    -18.03,
+    -52.34,
+    46.55
+   ],
+   [
+    -0.74,
+    -24.88,
+    78.54
+   ]
+  ],
+  "centroid": [
+   -7.94,
+   -39.73,
+   58.94
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op10-frontal-operculum-left",
+  "name": "Area Op10 (Frontal Operculum) left",
+  "label": 78,
+  "fragment": "left hemisphere",
+  "faces": 1104,
+  "bbox": [
+   [
+    -41.66,
+    22.28,
+    0.61
+   ],
+   [
+    -30.5,
+    32.64,
+    12.48
+   ]
+  ],
+  "centroid": [
+   -35.36,
+   27.75,
+   6.13
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pf-thalamus-parafascicular-nucleus-left",
+  "name": "Pf (Thalamus, parafascicular Nucleus) left",
+  "label": 79,
+  "fragment": "left hemisphere",
+  "faces": 342,
+  "bbox": [
+   [
+    -7.89,
+    -23.86,
+    -4.59
+   ],
+   [
+    -3.51,
+    -19.26,
+    -0.39
+   ]
+  ],
+  "centroid": [
+   -5.83,
+   -21.83,
+   -2.5
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fp1-fpole-left",
+  "name": "Area Fp1 (FPole) left",
+  "label": 80,
+  "fragment": "left hemisphere",
+  "faces": 14166,
+  "bbox": [
+   [
+    -40.7,
+    52.47,
+    -27.59
+   ],
+   [
+    -1.58,
+    73.45,
+    27.73
+   ]
+  ],
+  "centroid": [
+   -18.61,
+   64.22,
+   -0.41
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pul-thalamus-lateral-pulvinar-left",
+  "name": "PUl (Thalamus, lateral pulvinar) left",
+  "label": 81,
+  "fragment": "left hemisphere",
+  "faces": 1050,
+  "bbox": [
+   [
+    -25.89,
+    -36.36,
+    -3.87
+   ],
+   [
+    -17.63,
+    -29.09,
+    8.18
+   ]
+  ],
+  "centroid": [
+   -21.33,
+   -32.58,
+   2.13
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-mfg2-mfg-left",
+  "name": "Area MFG2 (MFG) left",
+  "label": 82,
+  "fragment": "left hemisphere",
+  "faces": 2802,
+  "bbox": [
+   [
+    -38.56,
+    47.22,
+    7.82
+   ],
+   [
+    -20.67,
+    61.56,
+    26.48
+   ]
+  ],
+  "centroid": [
+   -27.58,
+   54.42,
+   16.48
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-3a-postcg-left",
+  "name": "Area 3a (PostCG) left",
+  "label": 84,
+  "fragment": "left hemisphere",
+  "faces": 3954,
+  "bbox": [
+   [
+    -53.78,
+    -31.63,
+    23.15
+   ],
+   [
+    -17.59,
+    -2.56,
+    58.59
+   ]
+  ],
+  "centroid": [
+   -37.51,
+   -18.61,
+   40.5
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ph1-phg-left",
+  "name": "Area Ph1 (PhG) left",
+  "label": 83,
+  "fragment": "left hemisphere",
+  "faces": 2516,
+  "bbox": [
+   [
+    -30.56,
+    -67.67,
+    -11.95
+   ],
+   [
+    -18.18,
+    -43.1,
+    -1.93
+   ]
+  ],
+  "centroid": [
+   -23.96,
+   -54.96,
+   -6.32
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id7-insula-left",
+  "name": "Area Id7 (Insula) left",
+  "label": 86,
+  "fragment": "left hemisphere",
+  "faces": 1784,
+  "bbox": [
+   [
+    -40.32,
+    19.07,
+    -1.56
+   ],
+   [
+    -26.9,
+    31.21,
+    12.74
+   ]
+  ],
+  "centroid": [
+   -31.54,
+   23.55,
+   4.16
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fg4-fusg-left",
+  "name": "Area FG4 (FusG) left",
+  "label": 85,
+  "fragment": "left hemisphere",
+  "faces": 14026,
+  "bbox": [
+   [
+    -56.59,
+    -65.09,
+    -33.33
+   ],
+   [
+    -16.17,
+    -15.28,
+    -4.92
+   ]
+  ],
+  "centroid": [
+   -37.84,
+   -42.88,
+   -20.25
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ninterp-cerebellum-interposed-nucleus-left",
+  "name": "Ninterp (Cerebellum, Interposed Nucleus) left",
+  "label": 87,
+  "fragment": "left hemisphere",
+  "faces": 556,
+  "bbox": [
+   [
+    -10.47,
+    -62.48,
+    -34.49
+   ],
+   [
+    -6.76,
+    -52.31,
+    -26.38
+   ]
+  ],
+  "centroid": [
+   -8.88,
+   -57.1,
+   -30.28
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "stn-subthalamus-left",
+  "name": "STN (Subthalamus) left",
+  "label": 88,
+  "fragment": "left hemisphere",
+  "faces": 774,
+  "bbox": [
+   [
+    -15.74,
+    -17.64,
+    -12.42
+   ],
+   [
+    -5.94,
+    -8.4,
+    -7.04
+   ]
+  ],
+  "centroid": [
+   -10.69,
+   -13.14,
+   -10.04
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo6-ofc-left",
+  "name": "Area Fo6 (OFC) left",
+  "label": 89,
+  "fragment": "left hemisphere",
+  "faces": 4060,
+  "bbox": [
+   [
+    -54.79,
+    29.14,
+    -21.79
+   ],
+   [
+    -35.57,
+    55.85,
+    -6.78
+   ]
+  ],
+  "centroid": [
+   -45.19,
+   42.69,
+   -14.75
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-p32-pacc-left",
+  "name": "Area p32 (pACC) left",
+  "label": 90,
+  "fragment": "left hemisphere",
+  "faces": 9726,
+  "bbox": [
+   [
+    -15.84,
+    33.82,
+    -17.2
+   ],
+   [
+    -0.08,
+    62.7,
+    32.11
+   ]
+  ],
+  "centroid": [
+   -6.84,
+   48.78,
+   9.62
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "cgl-metathalamus-left",
+  "name": "CGL (Metathalamus) left",
+  "label": 92,
+  "fragment": "left hemisphere",
+  "faces": 810,
+  "bbox": [
+   [
+    -29.54,
+    -29.4,
+    -11.14
+   ],
+   [
+    -19.49,
+    -19.06,
+    -4.85
+   ]
+  ],
+  "centroid": [
+   -24.41,
+   -23.72,
+   -8.13
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc1-v1-17-calcs-left",
+  "name": "Area hOc1 (V1, 17, CalcS) left",
+  "label": 91,
+  "fragment": "left hemisphere",
+  "faces": 16692,
+  "bbox": [
+   [
+    -25.03,
+    -107.44,
+    -19.69
+   ],
+   [
+    1.3,
+    -57.04,
+    17.63
+   ]
+  ],
+  "centroid": [
+   -8.98,
+   -85.64,
+   1.23
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-8v1-mfg-left",
+  "name": "Area 8v1 (MFG) left",
+  "label": 95,
+  "fragment": "left hemisphere",
+  "faces": 6920,
+  "bbox": [
+   [
+    -49.55,
+    7.73,
+    40.36
+   ],
+   [
+    -24.34,
+    42.76,
+    65.61
+   ]
+  ],
+  "centroid": [
+   -35.34,
+   23.08,
+   51.08
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ph3-phg-left",
+  "name": "Area Ph3 (PhG) left",
+  "label": 94,
+  "fragment": "left hemisphere",
+  "faces": 1790,
+  "bbox": [
+   [
+    -20.38,
+    -61.09,
+    -12.96
+   ],
+   [
+    -9.85,
+    -39.09,
+    -2.23
+   ]
+  ],
+  "centroid": [
+   -15.66,
+   -51.36,
+   -7.37
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "snc-midbrain-substantia-nigra-pars-compacta-left",
+  "name": "SNC (Midbrain, Substantia Nigra pars compacta) left",
+  "label": 93,
+  "fragment": "left hemisphere",
+  "faces": 1406,
+  "bbox": [
+   [
+    -15.12,
+    -28.18,
+    -20.5
+   ],
+   [
+    -2.31,
+    -19.59,
+    -8.34
+   ]
+  ],
+  "centroid": [
+   -9.32,
+   -23.3,
+   -14.73
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sfg2-sfg-left",
+  "name": "Area SFG2 (SFG) left",
+  "label": 97,
+  "fragment": "left hemisphere",
+  "faces": 5406,
+  "bbox": [
+   [
+    -19.97,
+    38.71,
+    24.37
+   ],
+   [
+    -1.03,
+    65.96,
+    54.71
+   ]
+  ],
+  "centroid": [
+   -10.11,
+   52.36,
+   40.0
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc4lp-loc-left",
+  "name": "Area hOc4lp (LOC) left",
+  "label": 96,
+  "fragment": "left hemisphere",
+  "faces": 9444,
+  "bbox": [
+   [
+    -47.31,
+    -98.91,
+    -15.48
+   ],
+   [
+    -19.85,
+    -79.46,
+    30.6
+   ]
+  ],
+  "centroid": [
+   -34.92,
+   -89.65,
+   8.07
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo3-ofc-left",
+  "name": "Area Fo3 (OFC) left",
+  "label": 98,
+  "fragment": "left hemisphere",
+  "faces": 9330,
+  "bbox": [
+   [
+    -38.61,
+    9.18,
+    -29.11
+   ],
+   [
+    -9.78,
+    59.2,
+    -8.89
+   ]
+  ],
+  "centroid": [
+   -22.79,
+   33.89,
+   -21.02
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-1-1-heschl-left",
+  "name": "Area Te 1.1 (HESCHL) left",
+  "label": 99,
+  "fragment": "left hemisphere",
+  "faces": 2952,
+  "bbox": [
+   [
+    -48.33,
+    -36.72,
+    2.31
+   ],
+   [
+    -32.29,
+    -19.2,
+    20.54
+   ]
+  ],
+  "centroid": [
+   -39.74,
+   -28.21,
+   12.56
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-mfg5-mfg-ifg-left",
+  "name": "Area MFG5 (MFG, IFG) left",
+  "label": 100,
+  "fragment": "left hemisphere",
+  "faces": 3942,
+  "bbox": [
+   [
+    -53.95,
+    29.78,
+    7.3
+   ],
+   [
+    -33.9,
+    46.56,
+    29.68
+   ]
+  ],
+  "centroid": [
+   -43.56,
+   36.78,
+   17.35
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc2-v2-18-left",
+  "name": "Area hOc2 (V2, 18) left",
+  "label": 101,
+  "fragment": "left hemisphere",
+  "faces": 7220,
+  "bbox": [
+   [
+    -29.38,
+    -106.68,
+    -17.2
+   ],
+   [
+    1.03,
+    -72.32,
+    27.15
+   ]
+  ],
+  "centroid": [
+   -11.34,
+   -96.19,
+   11.18
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-mfg4-mfg-left",
+  "name": "Area MFG4 (MFG) left",
+  "label": 102,
+  "fragment": "left hemisphere",
+  "faces": 8700,
+  "bbox": [
+   [
+    -52.79,
+    28.13,
+    8.24
+   ],
+   [
+    -25.05,
+    52.32,
+    44.45
+   ]
+  ],
+  "centroid": [
+   -39.37,
+   40.33,
+   26.95
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "lp-thalamus-lateral-posterior-nucleus-left",
+  "name": "LP (Thalamus, lateral posterior Nucleus) left",
+  "label": 103,
+  "fragment": "left hemisphere",
+  "faces": 1080,
+  "bbox": [
+   [
+    -22.13,
+    -33.88,
+    7.48
+   ],
+   [
+    -12.0,
+    -23.48,
+    16.24
+   ]
+  ],
+  "centroid": [
+   -17.1,
+   -28.51,
+   12.11
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6d2-precg-left",
+  "name": "Area 6d2 (PreCG) left",
+  "label": 104,
+  "fragment": "left hemisphere",
+  "faces": 8202,
+  "bbox": [
+   [
+    -30.0,
+    -5.95,
+    59.09
+   ],
+   [
+    -1.15,
+    26.55,
+    77.28
+   ]
+  ],
+  "centroid": [
+   -15.24,
+   7.2,
+   67.7
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ig3-insula-left",
+  "name": "Area Ig3 (Insula) left",
+  "label": 105,
+  "fragment": "left hemisphere",
+  "faces": 1110,
+  "bbox": [
+   [
+    -42.64,
+    -18.74,
+    9.56
+   ],
+   [
+    -32.76,
+    -10.0,
+    18.43
+   ]
+  ],
+  "centroid": [
+   -37.6,
+   -14.3,
+   13.65
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc4d-cuneus-left",
+  "name": "Area hOc4d (Cuneus) left",
+  "label": 106,
+  "fragment": "left hemisphere",
+  "faces": 4908,
+  "bbox": [
+   [
+    -30.83,
+    -99.0,
+    10.99
+   ],
+   [
+    -5.53,
+    -82.75,
+    44.48
+   ]
+  ],
+  "centroid": [
+   -20.62,
+   -90.15,
+   27.66
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sfg3-sfg-left",
+  "name": "Area SFG3 (SFG) left",
+  "label": 107,
+  "fragment": "left hemisphere",
+  "faces": 5560,
+  "bbox": [
+   [
+    -31.56,
+    41.16,
+    12.66
+   ],
+   [
+    -7.16,
+    67.85,
+    35.95
+   ]
+  ],
+  "centroid": [
+   -19.98,
+   55.85,
+   25.08
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6v3-precg-left",
+  "name": "Area 6v3 (PreCG) left",
+  "label": 108,
+  "fragment": "left hemisphere",
+  "faces": 7446,
+  "bbox": [
+   [
+    -65.35,
+    -9.96,
+    18.66
+   ],
+   [
+    -33.92,
+    12.44,
+    54.41
+   ]
+  ],
+  "centroid": [
+   -54.52,
+   2.56,
+   32.35
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "nrm-midbrain-nucleus-ruber-magnocellular-part-left",
+  "name": "NRm (Midbrain, Nucleus Ruber, magnocellular part) left",
+  "label": 109,
+  "fragment": "left hemisphere",
+  "faces": 796,
+  "bbox": [
+   [
+    -6.59,
+    -30.59,
+    -17.87
+   ],
+   [
+    -1.55,
+    -22.1,
+    -4.28
+   ]
+  ],
+  "centroid": [
+   -3.6,
+   -25.25,
+   -12.16
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo4-ofc-left",
+  "name": "Area Fo4 (OFC) left",
+  "label": 110,
+  "fragment": "left hemisphere",
+  "faces": 2582,
+  "bbox": [
+   [
+    -37.97,
+    43.17,
+    -20.02
+   ],
+   [
+    -20.19,
+    65.65,
+    -10.39
+   ]
+  ],
+  "centroid": [
+   -28.93,
+   53.46,
+   -15.11
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifs1-ifs-left",
+  "name": "Area IFS1 (IFS) left",
+  "label": 111,
+  "fragment": "left hemisphere",
+  "faces": 1354,
+  "bbox": [
+   [
+    -45.49,
+    20.72,
+    16.32
+   ],
+   [
+    -35.82,
+    31.08,
+    26.8
+   ]
+  ],
+  "centroid": [
+   -40.79,
+   26.33,
+   21.34
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op4-poperc-left",
+  "name": "Area Op4 (POperc) left",
+  "label": 112,
+  "fragment": "left hemisphere",
+  "faces": 3608,
+  "bbox": [
+   [
+    -69.29,
+    -16.68,
+    5.85
+   ],
+   [
+    -44.65,
+    -2.88,
+    24.16
+   ]
+  ],
+  "centroid": [
+   -59.73,
+   -10.51,
+   14.0
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ch-4-basal-forebrain-left",
+  "name": "Ch 4 (Basal Forebrain) left",
+  "label": 113,
+  "fragment": "left hemisphere",
+  "faces": 1370,
+  "bbox": [
+   [
+    -27.65,
+    -10.93,
+    -13.89
+   ],
+   [
+    -12.71,
+    2.45,
+    -6.67
+   ]
+  ],
+  "centroid": [
+   -21.18,
+   -4.16,
+   -10.3
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hpo1-pos-left",
+  "name": "Area hPO1 (POS) left",
+  "label": 114,
+  "fragment": "left hemisphere",
+  "faces": 4662,
+  "bbox": [
+   [
+    -26.81,
+    -90.55,
+    22.35
+   ],
+   [
+    -2.6,
+    -72.16,
+    50.46
+   ]
+  ],
+  "centroid": [
+   -14.74,
+   -81.23,
+   37.18
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ndentd-cerebellum-dorsal-dentate-nucleus-left",
+  "name": "Ndentd (Cerebellum, Dorsal Dentate Nucleus) left",
+  "label": 115,
+  "fragment": "left hemisphere",
+  "faces": 2252,
+  "bbox": [
+   [
+    -23.18,
+    -67.81,
+    -43.19
+   ],
+   [
+    -10.84,
+    -48.03,
+    -31.25
+   ]
+  ],
+  "centroid": [
+   -16.46,
+   -58.02,
+   -37.4
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifs3-ifs-left",
+  "name": "Area IFS3 (IFS) left",
+  "label": 116,
+  "fragment": "left hemisphere",
+  "faces": 2018,
+  "bbox": [
+   [
+    -53.26,
+    16.21,
+    22.49
+   ],
+   [
+    -34.26,
+    33.53,
+    32.47
+   ]
+  ],
+  "centroid": [
+   -45.64,
+   23.97,
+   27.31
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op2-poperc-left",
+  "name": "Area Op2 (POperc) left",
+  "label": 117,
+  "fragment": "left hemisphere",
+  "faces": 2296,
+  "bbox": [
+   [
+    -42.12,
+    -34.32,
+    12.18
+   ],
+   [
+    -29.78,
+    -16.09,
+    25.08
+   ]
+  ],
+  "centroid": [
+   -35.79,
+   -24.45,
+   19.35
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-8v2-mfg-left",
+  "name": "Area 8v2 (MFG) left",
+  "label": 118,
+  "fragment": "left hemisphere",
+  "faces": 3430,
+  "bbox": [
+   [
+    -46.32,
+    19.33,
+    28.16
+   ],
+   [
+    -27.25,
+    38.13,
+    44.79
+   ]
+  ],
+  "centroid": [
+   -36.76,
+   28.37,
+   36.84
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "acbm-ventral-striatum-medial-accumbens-left",
+  "name": "AcbM (Ventral Striatum, Medial Accumbens) left",
+  "label": 119,
+  "fragment": "left hemisphere",
+  "faces": 508,
+  "bbox": [
+   [
+    -10.01,
+    4.26,
+    -11.69
+   ],
+   [
+    -4.32,
+    11.79,
+    -4.97
+   ]
+  ],
+  "centroid": [
+   -7.24,
+   8.15,
+   -8.01
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "dg-hippocampus-left",
+  "name": "DG (Hippocampus) left",
+  "label": 120,
+  "fragment": "left hemisphere",
+  "faces": 724,
+  "bbox": [
+   [
+    -30.81,
+    -23.54,
+    -24.57
+   ],
+   [
+    -22.38,
+    -12.08,
+    -15.34
+   ]
+  ],
+  "centroid": [
+   -28.14,
+   -16.25,
+   -20.62
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pgp-ipl-left",
+  "name": "Area PGp (IPL) left",
+  "label": 121,
+  "fragment": "left hemisphere",
+  "faces": 11132,
+  "bbox": [
+   [
+    -60.19,
+    -91.06,
+    13.4
+   ],
+   [
+    -28.91,
+    -62.11,
+    53.69
+   ]
+  ],
+  "centroid": [
+   -43.33,
+   -75.54,
+   31.39
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6ma-presma-mesial-sfg-left",
+  "name": "Area 6ma (preSMA, mesial SFG) left",
+  "label": 122,
+  "fragment": "left hemisphere",
+  "faces": 4736,
+  "bbox": [
+   [
+    -13.27,
+    -5.86,
+    44.41
+   ],
+   [
+    -0.55,
+    19.74,
+    70.22
+   ]
+  ],
+  "centroid": [
+   -5.29,
+   5.84,
+   56.82
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ig1-insula-left",
+  "name": "Area Ig1 (Insula) left",
+  "label": 123,
+  "fragment": "left hemisphere",
+  "faces": 972,
+  "bbox": [
+   [
+    -38.63,
+    -29.48,
+    0.54
+   ],
+   [
+    -29.85,
+    -21.17,
+    15.19
+   ]
+  ],
+  "centroid": [
+   -33.72,
+   -25.01,
+   8.78
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id10-insula-left",
+  "name": "Area Id10 (Insula) left",
+  "label": 124,
+  "fragment": "left hemisphere",
+  "faces": 2746,
+  "bbox": [
+   [
+    -36.4,
+    10.22,
+    -25.52
+   ],
+   [
+    -22.88,
+    26.73,
+    -2.7
+   ]
+  ],
+  "centroid": [
+   -29.31,
+   17.53,
+   -14.17
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vm-thalamus-ventral-medial-nucleus-left",
+  "name": "VM (Thalamus, ventral medial Nucleus) left",
+  "label": 125,
+  "fragment": "left hemisphere",
+  "faces": 134,
+  "bbox": [
+   [
+    -11.12,
+    -16.75,
+    -4.5
+   ],
+   [
+    -8.47,
+    -14.4,
+    -3.03
+   ]
+  ],
+  "centroid": [
+   -9.51,
+   -15.7,
+   -3.77
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-p24c-pacc-left",
+  "name": "Area p24c (pACC) left",
+  "label": 126,
+  "fragment": "left hemisphere",
+  "faces": 2284,
+  "bbox": [
+   [
+    -15.81,
+    37.53,
+    -4.7
+   ],
+   [
+    -5.34,
+    46.06,
+    25.13
+   ]
+  ],
+  "centroid": [
+   -10.52,
+   41.89,
+   9.21
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc3v-lingg-left",
+  "name": "Area hOc3v (LingG) left",
+  "label": 127,
+  "fragment": "left hemisphere",
+  "faces": 10354,
+  "bbox": [
+   [
+    -40.22,
+    -101.59,
+    -20.47
+   ],
+   [
+    -3.44,
+    -59.19,
+    3.8
+   ]
+  ],
+  "centroid": [
+   -18.31,
+   -83.96,
+   -9.51
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pfcm-ipl-left",
+  "name": "Area PFcm (IPL) left",
+  "label": 128,
+  "fragment": "left hemisphere",
+  "faces": 5846,
+  "bbox": [
+   [
+    -62.23,
+    -48.36,
+    10.21
+   ],
+   [
+    -35.34,
+    -26.69,
+    35.53
+   ]
+  ],
+  "centroid": [
+   -51.3,
+   -37.35,
+   22.9
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pirt-piriformcortexmesial-temporal-left",
+  "name": "Area PirT (PiriformCortexMesial, temporal) left",
+  "label": 130,
+  "fragment": "left hemisphere",
+  "faces": 104,
+  "bbox": [
+   [
+    -32.32,
+    5.33,
+    -24.85
+   ],
+   [
+    -30.44,
+    6.71,
+    -23.43
+   ]
+  ],
+  "centroid": [
+   -31.28,
+   6.07,
+   -24.14
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sfs2-sfs-left",
+  "name": "Area SFS2 (SFS) left",
+  "label": 129,
+  "fragment": "left hemisphere",
+  "faces": 1028,
+  "bbox": [
+   [
+    -34.3,
+    42.93,
+    21.35
+   ],
+   [
+    -26.62,
+    52.51,
+    33.5
+   ]
+  ],
+  "centroid": [
+   -31.1,
+   47.6,
+   26.66
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip5-ips-left",
+  "name": "Area hIP5 (IPS) left",
+  "label": 132,
+  "fragment": "left hemisphere",
+  "faces": 5274,
+  "bbox": [
+   [
+    -34.06,
+    -84.91,
+    23.26
+   ],
+   [
+    -21.32,
+    -61.3,
+    51.7
+   ]
+  ],
+  "centroid": [
+   -27.87,
+   -74.54,
+   38.13
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "cm-thalamus-centromedian-nucleus-left",
+  "name": "CM (Thalamus, centromedian Nucleus) left",
+  "label": 131,
+  "fragment": "left hemisphere",
+  "faces": 594,
+  "bbox": [
+   [
+    -14.28,
+    -26.5,
+    -4.59
+   ],
+   [
+    -6.91,
+    -19.33,
+    1.59
+   ]
+  ],
+  "centroid": [
+   -10.65,
+   -23.06,
+   -1.52
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sfs1-sfs-left",
+  "name": "Area SFS1 (SFS) left",
+  "label": 133,
+  "fragment": "left hemisphere",
+  "faces": 1128,
+  "bbox": [
+   [
+    -32.72,
+    44.13,
+    18.83
+   ],
+   [
+    -21.1,
+    56.52,
+    27.61
+   ]
+  ],
+  "centroid": [
+   -27.27,
+   49.96,
+   22.26
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-to-temporal-i-gapmap-left",
+  "name": "Frontal-to-Temporal-I (GapMap) left",
+  "label": 135,
+  "fragment": "left hemisphere",
+  "faces": 6906,
+  "bbox": [
+   [
+    -56.87,
+    16.33,
+    -24.42
+   ],
+   [
+    -27.17,
+    38.58,
+    5.29
+   ]
+  ],
+  "centroid": [
+   -41.44,
+   27.73,
+   -9.86
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fg1-fusg-left",
+  "name": "Area FG1 (FusG) left",
+  "label": 134,
+  "fragment": "left hemisphere",
+  "faces": 2758,
+  "bbox": [
+   [
+    -36.16,
+    -75.25,
+    -18.92
+   ],
+   [
+    -23.32,
+    -56.53,
+    -2.94
+   ]
+  ],
+  "centroid": [
+   -29.21,
+   -67.14,
+   -12.58
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "fucd-ventral-striatum-fundus-of-caudate-nucleus-left",
+  "name": "FuCd (Ventral Striatum, Fundus of Caudate Nucleus) left",
+  "label": 136,
+  "fragment": "left hemisphere",
+  "faces": 1844,
+  "bbox": [
+   [
+    -17.28,
+    5.21,
+    -11.16
+   ],
+   [
+    -6.1,
+    24.69,
+    0.56
+   ]
+  ],
+  "centroid": [
+   -11.59,
+   15.24,
+   -5.43
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "mv-thalamus-medioventral-nucleus-left",
+  "name": "MV (Thalamus, medioventral Nucleus) left",
+  "label": 138,
+  "fragment": "left hemisphere",
+  "faces": 234,
+  "bbox": [
+   [
+    -5.58,
+    -9.71,
+    -3.43
+   ],
+   [
+    -2.1,
+    -6.13,
+    0.35
+   ]
+  ],
+  "centroid": [
+   -3.64,
+   -7.97,
+   -1.47
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vamc-thalamus-ventral-anterior-nucleus-magnocellular-part-left",
+  "name": "VAmc (Thalamus, ventral anterior Nucleus, magnocellular part) left",
+  "label": 137,
+  "fragment": "left hemisphere",
+  "faces": 958,
+  "bbox": [
+   [
+    -11.31,
+    -12.29,
+    -0.4
+   ],
+   [
+    -5.38,
+    -5.38,
+    14.58
+   ]
+  ],
+  "centroid": [
+   -8.74,
+   -8.65,
+   7.14
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-i-2-gapmap-left",
+  "name": "Frontal-I.2 (GapMap) left",
+  "label": 140,
+  "fragment": "left hemisphere",
+  "faces": 7810,
+  "bbox": [
+   [
+    -13.96,
+    11.14,
+    25.27
+   ],
+   [
+    -0.53,
+    52.77,
+    61.64
+   ]
+  ],
+  "centroid": [
+   -5.23,
+   31.11,
+   43.93
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip3-ips-left",
+  "name": "Area hIP3 (IPS) left",
+  "label": 139,
+  "fragment": "left hemisphere",
+  "faces": 6578,
+  "bbox": [
+   [
+    -45.91,
+    -61.31,
+    35.23
+   ],
+   [
+    -21.28,
+    -35.06,
+    57.7
+   ]
+  ],
+  "centroid": [
+   -34.08,
+   -48.26,
+   48.13
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "cm-amygdala-left",
+  "name": "CM (Amygdala) left",
+  "label": 141,
+  "fragment": "left hemisphere",
+  "faces": 1228,
+  "bbox": [
+   [
+    -28.2,
+    -11.06,
+    -18.65
+   ],
+   [
+    -16.24,
+    0.27,
+    -10.54
+   ]
+  ],
+  "centroid": [
+   -22.04,
+   -5.04,
+   -14.15
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-4p-precg-left",
+  "name": "Area 4p (PreCG) left",
+  "label": 142,
+  "fragment": "left hemisphere",
+  "faces": 4232,
+  "bbox": [
+   [
+    -53.98,
+    -27.96,
+    29.36
+   ],
+   [
+    -22.31,
+    -3.75,
+    71.76
+   ]
+  ],
+  "centroid": [
+   -36.59,
+   -18.97,
+   50.06
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-33-acc-left",
+  "name": "Area 33 (ACC) left",
+  "label": 143,
+  "fragment": "left hemisphere",
+  "faces": 1504,
+  "bbox": [
+   [
+    -7.0,
+    3.44,
+    17.33
+   ],
+   [
+    -0.94,
+    23.94,
+    31.59
+   ]
+  ],
+  "centroid": [
+   -4.07,
+   13.68,
+   25.01
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ots1-ots-left",
+  "name": "Area OTS1 (OTS) left",
+  "label": 144,
+  "fragment": "left hemisphere",
+  "faces": 1142,
+  "bbox": [
+   [
+    -50.46,
+    -37.16,
+    -24.68
+   ],
+   [
+    -43.65,
+    -18.81,
+    -16.17
+   ]
+  ],
+  "centroid": [
+   -47.04,
+   -29.25,
+   -20.94
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id2-insula-left",
+  "name": "Area Id2 (Insula) left",
+  "label": 145,
+  "fragment": "left hemisphere",
+  "faces": 1476,
+  "bbox": [
+   [
+    -45.32,
+    -17.05,
+    -1.9
+   ],
+   [
+    -34.3,
+    -5.45,
+    11.75
+   ]
+  ],
+  "centroid": [
+   -40.87,
+   -11.75,
+   5.11
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ca1-hippocampus-left",
+  "name": "CA1 (Hippocampus) left",
+  "label": 146,
+  "fragment": "left hemisphere",
+  "faces": 4194,
+  "bbox": [
+   [
+    -39.0,
+    -39.4,
+    -27.7
+   ],
+   [
+    -16.2,
+    -5.42,
+    -7.2
+   ]
+  ],
+  "centroid": [
+   -29.18,
+   -21.86,
+   -18.6
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-i-1-gapmap-left",
+  "name": "Frontal-I.1 (GapMap) left",
+  "label": 147,
+  "fragment": "left hemisphere",
+  "faces": 8788,
+  "bbox": [
+   [
+    -56.27,
+    34.1,
+    -12.31
+   ],
+   [
+    -22.17,
+    63.79,
+    12.74
+   ]
+  ],
+  "centroid": [
+   -40.17,
+   48.9,
+   1.86
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip8-ips-left",
+  "name": "Area hIP8 (IPS) left",
+  "label": 148,
+  "fragment": "left hemisphere",
+  "faces": 4288,
+  "bbox": [
+   [
+    -24.89,
+    -84.16,
+    32.31
+   ],
+   [
+    -10.01,
+    -60.35,
+    57.56
+   ]
+  ],
+  "centroid": [
+   -18.4,
+   -72.77,
+   45.56
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op9-frontal-operculum-left",
+  "name": "Area Op9 (Frontal Operculum) left",
+  "label": 150,
+  "fragment": "left hemisphere",
+  "faces": 2762,
+  "bbox": [
+   [
+    -54.65,
+    21.44,
+    -6.06
+   ],
+   [
+    -37.98,
+    33.78,
+    9.76
+   ]
+  ],
+  "centroid": [
+   -47.14,
+   26.64,
+   0.98
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "if-amygdala-left",
+  "name": "IF (Amygdala) left",
+  "label": 149,
+  "fragment": "left hemisphere",
+  "faces": 888,
+  "bbox": [
+   [
+    -32.8,
+    -6.52,
+    -24.07
+   ],
+   [
+    -25.37,
+    2.71,
+    -14.46
+   ]
+  ],
+  "centroid": [
+   -29.24,
+   -1.69,
+   -19.03
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "temporal-to-parietal-gapmap-left",
+  "name": "Temporal-to-Parietal (GapMap) left",
+  "label": 152,
+  "fragment": "left hemisphere",
+  "faces": 67618,
+  "bbox": [
+   [
+    -71.5,
+    -77.25,
+    -51.48
+   ],
+   [
+    -16.06,
+    25.36,
+    37.19
+   ]
+  ],
+  "centroid": [
+   -49.28,
+   -26.13,
+   -15.81
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vim-thalamus-ventral-intermediate-nucleus-left",
+  "name": "VIM (Thalamus, ventral intermediate Nucleus) left",
+  "label": 151,
+  "fragment": "left hemisphere",
+  "faces": 2004,
+  "bbox": [
+   [
+    -22.9,
+    -24.41,
+    -6.67
+   ],
+   [
+    -9.17,
+    -11.2,
+    6.27
+   ]
+  ],
+  "centroid": [
+   -15.93,
+   -17.82,
+   0.34
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "hata-hippocampus-left",
+  "name": "HATA (Hippocampus) left",
+  "label": 153,
+  "fragment": "left hemisphere",
+  "faces": 1204,
+  "bbox": [
+   [
+    -19.19,
+    -14.55,
+    -29.77
+   ],
+   [
+    -11.02,
+    -5.49,
+    -15.2
+   ]
+  ],
+  "centroid": [
+   -15.05,
+   -10.29,
+   -22.2
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "tuti-basal-forebrain-terminal-islands-left",
+  "name": "TuTi (Basal Forebrain, Terminal islands) left",
+  "label": 154,
+  "fragment": "left hemisphere",
+  "faces": 988,
+  "bbox": [
+   [
+    -23.14,
+    2.17,
+    -17.91
+   ],
+   [
+    -5.15,
+    8.17,
+    -9.65
+   ]
+  ],
+  "centroid": [
+   -14.24,
+   5.01,
+   -14.0
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-45-ifg-left",
+  "name": "Area 45 (IFG) left",
+  "label": 155,
+  "fragment": "left hemisphere",
+  "faces": 5872,
+  "bbox": [
+   [
+    -60.12,
+    16.56,
+    -6.09
+   ],
+   [
+    -37.95,
+    42.86,
+    29.87
+   ]
+  ],
+  "centroid": [
+   -52.42,
+   28.98,
+   12.32
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id1-insula-left",
+  "name": "Area Id1 (Insula) left",
+  "label": 160,
+  "fragment": "left hemisphere",
+  "faces": 1124,
+  "bbox": [
+   [
+    -44.52,
+    -25.78,
+    -10.39
+   ],
+   [
+    -35.33,
+    -12.9,
+    1.83
+   ]
+  ],
+  "centroid": [
+   -40.04,
+   -18.57,
+   -4.42
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ia2-insula-left",
+  "name": "Area Ia2 (Insula) left",
+  "label": 159,
+  "fragment": "left hemisphere",
+  "faces": 544,
+  "bbox": [
+   [
+    -45.62,
+    -2.61,
+    -23.75
+   ],
+   [
+    -39.03,
+    4.91,
+    -18.14
+   ]
+  ],
+  "centroid": [
+   -42.18,
+   1.33,
+   -20.72
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-to-temporal-ii-gapmap-left",
+  "name": "Frontal-to-Temporal-II (GapMap) left",
+  "label": 158,
+  "fragment": "left hemisphere",
+  "faces": 12928,
+  "bbox": [
+   [
+    -40.67,
+    -36.39,
+    -28.5
+   ],
+   [
+    -2.45,
+    15.16,
+    -1.41
+   ]
+  ],
+  "centroid": [
+   -27.84,
+   -7.66,
+   -16.49
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-5ci-spl-left",
+  "name": "Area 5Ci (SPL) left",
+  "label": 157,
+  "fragment": "left hemisphere",
+  "faces": 2822,
+  "bbox": [
+   [
+    -19.32,
+    -43.62,
+    35.73
+   ],
+   [
+    -8.7,
+    -26.11,
+    54.64
+   ]
+  ],
+  "centroid": [
+   -14.37,
+   -34.47,
+   44.46
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "cl-thalamus-anterior-intralaminar-nuclei-left",
+  "name": "CL (Thalamus, anterior intralaminar nuclei) left",
+  "label": 156,
+  "fragment": "left hemisphere",
+  "faces": 3058,
+  "bbox": [
+   [
+    -15.75,
+    -28.07,
+    -3.64
+   ],
+   [
+    -1.6,
+    -6.19,
+    14.79
+   ]
+  ],
+  "centroid": [
+   -8.47,
+   -17.3,
+   5.55
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id5-insula-left",
+  "name": "Area Id5 (Insula) left",
+  "label": 162,
+  "fragment": "left hemisphere",
+  "faces": 1758,
+  "bbox": [
+   [
+    -44.79,
+    -11.19,
+    -8.54
+   ],
+   [
+    -34.46,
+    1.85,
+    8.76
+   ]
+  ],
+  "centroid": [
+   -39.44,
+   -4.5,
+   0.66
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-1-2-heschl-left",
+  "name": "Area Te 1.2 (HESCHL) left",
+  "label": 161,
+  "fragment": "left hemisphere",
+  "faces": 1348,
+  "bbox": [
+   [
+    -58.83,
+    -14.47,
+    -3.11
+   ],
+   [
+    -46.35,
+    3.48,
+    7.34
+   ]
+  ],
+  "centroid": [
+   -53.34,
+   -7.03,
+   3.0
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip1-ips-left",
+  "name": "Area hIP1 (IPS) left",
+  "label": 163,
+  "fragment": "left hemisphere",
+  "faces": 5144,
+  "bbox": [
+   [
+    -48.67,
+    -61.12,
+    34.09
+   ],
+   [
+    -27.22,
+    -32.23,
+    56.43
+   ]
+  ],
+  "centroid": [
+   -37.91,
+   -48.59,
+   43.21
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-2-postcs-left",
+  "name": "Area 2 (PostCS) left",
+  "label": 164,
+  "fragment": "left hemisphere",
+  "faces": 4594,
+  "bbox": [
+   [
+    -54.0,
+    -41.93,
+    38.79
+   ],
+   [
+    -19.0,
+    -23.63,
+    68.53
+   ]
+  ],
+  "centroid": [
+   -39.12,
+   -33.61,
+   53.03
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-2-1-stg-left",
+  "name": "Area Te 2.1 (STG) left",
+  "label": 167,
+  "fragment": "left hemisphere",
+  "faces": 2582,
+  "bbox": [
+   [
+    -61.63,
+    -28.77,
+    -2.57
+   ],
+   [
+    -42.77,
+    -1.81,
+    12.54
+   ]
+  ],
+  "centroid": [
+   -53.77,
+   -17.83,
+   5.67
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ch-123-basal-forebrain-left",
+  "name": "Ch 123 (Basal Forebrain) left",
+  "label": 166,
+  "fragment": "left hemisphere",
+  "faces": 610,
+  "bbox": [
+   [
+    -8.14,
+    0.24,
+    -13.0
+   ],
+   [
+    -1.89,
+    7.02,
+    -4.44
+   ]
+  ],
+  "centroid": [
+   -4.48,
+   3.88,
+   -9.38
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc3d-cuneus-left",
+  "name": "Area hOc3d (Cuneus) left",
+  "label": 165,
+  "fragment": "left hemisphere",
+  "faces": 9378,
+  "bbox": [
+   [
+    -32.52,
+    -103.18,
+    -4.81
+   ],
+   [
+    0.48,
+    -75.2,
+    40.51
+   ]
+  ],
+  "centroid": [
+   -14.16,
+   -92.03,
+   22.7
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op3-poperc-left",
+  "name": "Area Op3 (POperc) left",
+  "label": 171,
+  "fragment": "left hemisphere",
+  "faces": 1488,
+  "bbox": [
+   [
+    -50.55,
+    -18.93,
+    14.22
+   ],
+   [
+    -32.96,
+    -8.96,
+    23.33
+   ]
+  ],
+  "centroid": [
+   -41.62,
+   -13.44,
+   18.86
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-7a-spl-left",
+  "name": "Area 7A (SPL) left",
+  "label": 170,
+  "fragment": "left hemisphere",
+  "faces": 15540,
+  "bbox": [
+   [
+    -39.54,
+    -78.38,
+    47.2
+   ],
+   [
+    -0.88,
+    -45.27,
+    78.03
+   ]
+  ],
+  "centroid": [
+   -19.67,
+   -60.12,
+   62.57
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "sg-thalamus-suprageniculate-nucleus-left",
+  "name": "Sg (Thalamus, suprageniculate Nucleus) left",
+  "label": 169,
+  "fragment": "left hemisphere",
+  "faces": 416,
+  "bbox": [
+   [
+    -16.44,
+    -29.02,
+    -9.59
+   ],
+   [
+    -9.02,
+    -23.76,
+    -5.05
+   ]
+  ],
+  "centroid": [
+   -12.14,
+   -26.31,
+   -7.27
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vpl-thalamus-ventral-posterior-lateral-nucleus-left",
+  "name": "VPL (Thalamus, ventral posterior lateral Nucleus) left",
+  "label": 168,
+  "fragment": "left hemisphere",
+  "faces": 1140,
+  "bbox": [
+   [
+    -23.41,
+    -29.3,
+    -4.72
+   ],
+   [
+    -15.97,
+    -21.77,
+    11.86
+   ]
+  ],
+  "centroid": [
+   -19.87,
+   -25.52,
+   3.94
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "subc-hippocampus-subicular-complex-left",
+  "name": "Subc (Hippocampus, Subicular complex) left",
+  "label": 172,
+  "fragment": "left hemisphere",
+  "faces": 6800,
+  "bbox": [
+   [
+    -33.01,
+    -45.16,
+    -35.18
+   ],
+   [
+    -10.48,
+    -2.8,
+    4.78
+   ]
+  ],
+  "centroid": [
+   -21.51,
+   -23.91,
+   -18.24
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "trs-hippocampus-transsubiculum-left",
+  "name": "TrS (Hippocampus, Transsubiculum) left",
+  "label": 173,
+  "fragment": "left hemisphere",
+  "faces": 840,
+  "bbox": [
+   [
+    -20.39,
+    -45.89,
+    -11.32
+   ],
+   [
+    -10.25,
+    -39.14,
+    -2.33
+   ]
+  ],
+  "centroid": [
+   -15.57,
+   -42.56,
+   -6.5
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ca3-hippocampus-left",
+  "name": "CA3 (Hippocampus) left",
+  "label": 174,
+  "fragment": "left hemisphere",
+  "faces": 560,
+  "bbox": [
+   [
+    -29.78,
+    -19.7,
+    -22.72
+   ],
+   [
+    -22.53,
+    -11.03,
+    -15.18
+   ]
+  ],
+  "centroid": [
+   -26.59,
+   -16.14,
+   -18.38
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-ii-gapmap-left",
+  "name": "Frontal-II (GapMap) left",
+  "label": 175,
+  "fragment": "left hemisphere",
+  "faces": 7054,
+  "bbox": [
+   [
+    -56.3,
+    1.34,
+    25.28
+   ],
+   [
+    -32.92,
+    32.7,
+    55.55
+   ]
+  ],
+  "centroid": [
+   -46.44,
+   16.55,
+   39.09
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vla-thalamus-ventral-lateral-anterior-nucleus-left",
+  "name": "VLA (Thalamus, ventral lateral anterior Nucleus) left",
+  "label": 176,
+  "fragment": "left hemisphere",
+  "faces": 356,
+  "bbox": [
+   [
+    -17.74,
+    -13.05,
+    -2.52
+   ],
+   [
+    -12.29,
+    -9.3,
+    3.63
+   ]
+  ],
+  "centroid": [
+   -15.1,
+   -11.35,
+   0.46
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sts1-sts-left",
+  "name": "Area STS1 (STS) left",
+  "label": 177,
+  "fragment": "left hemisphere",
+  "faces": 6494,
+  "bbox": [
+   [
+    -65.21,
+    -35.11,
+    -17.24
+   ],
+   [
+    -45.74,
+    -0.07,
+    4.85
+   ]
+  ],
+  "centroid": [
+   -54.62,
+   -19.57,
+   -5.41
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id9-insula-left",
+  "name": "Area Id9 (Insula) left",
+  "label": 180,
+  "fragment": "left hemisphere",
+  "faces": 1522,
+  "bbox": [
+   [
+    -45.96,
+    0.22,
+    -14.68
+   ],
+   [
+    -34.38,
+    15.35,
+    -2.07
+   ]
+  ],
+  "centroid": [
+   -40.72,
+   6.76,
+   -8.42
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-5l-spl-left",
+  "name": "Area 5L (SPL) left",
+  "label": 179,
+  "fragment": "left hemisphere",
+  "faces": 6466,
+  "bbox": [
+   [
+    -34.56,
+    -54.93,
+    43.73
+   ],
+   [
+    -5.16,
+    -33.67,
+    81.43
+   ]
+  ],
+  "centroid": [
+   -18.24,
+   -44.06,
+   68.21
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vpm-thalamus-ventral-posterior-medial-nucleus-left",
+  "name": "VPM (Thalamus, ventral posterior medial Nucleus) left",
+  "label": 178,
+  "fragment": "left hemisphere",
+  "faces": 74,
+  "bbox": [
+   [
+    -13.47,
+    -22.55,
+    -5.39
+   ],
+   [
+    -12.33,
+    -21.33,
+    -4.24
+   ]
+  ],
+  "centroid": [
+   -12.95,
+   -21.9,
+   -4.79
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "snr-midbrain-substantia-nigra-pars-reticulata-left",
+  "name": "SNR (Midbrain, Substantia Nigra pars reticulata) left",
+  "label": 181,
+  "fragment": "left hemisphere",
+  "faces": 1356,
+  "bbox": [
+   [
+    -15.0,
+    -21.25,
+    -21.03
+   ],
+   [
+    -2.32,
+    -9.82,
+    -10.81
+   ]
+  ],
+  "centroid": [
+   -8.83,
+   -16.26,
+   -16.07
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifs2-ifs-left",
+  "name": "Area IFS2 (IFS) left",
+  "label": 183,
+  "fragment": "left hemisphere",
+  "faces": 276,
+  "bbox": [
+   [
+    -47.91,
+    20.66,
+    17.34
+   ],
+   [
+    -43.96,
+    25.73,
+    20.99
+   ]
+  ],
+  "centroid": [
+   -45.78,
+   23.27,
+   19.1
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fg3-fusg-left",
+  "name": "Area FG3 (FusG) left",
+  "label": 182,
+  "fragment": "left hemisphere",
+  "faces": 6212,
+  "bbox": [
+   [
+    -42.89,
+    -63.14,
+    -27.71
+   ],
+   [
+    -21.74,
+    -29.07,
+    -2.64
+   ]
+  ],
+  "centroid": [
+   -31.32,
+   -46.51,
+   -15.52
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "av-thalamus-anteroventral-nucleus-left",
+  "name": "AV (Thalamus, anteroventral Nucleus) left",
+  "label": 184,
+  "fragment": "left hemisphere",
+  "faces": 660,
+  "bbox": [
+   [
+    -9.08,
+    -15.81,
+    11.68
+   ],
+   [
+    -2.85,
+    -5.19,
+    18.07
+   ]
+  ],
+  "centroid": [
+   -6.15,
+   -10.26,
+   14.71
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vp-ventral-pallidum-left",
+  "name": "VP (Ventral Pallidum) left",
+  "label": 185,
+  "fragment": "left hemisphere",
+  "faces": 1120,
+  "bbox": [
+   [
+    -18.06,
+    -2.25,
+    -13.61
+   ],
+   [
+    -6.26,
+    7.43,
+    -4.82
+   ]
+  ],
+  "centroid": [
+   -12.53,
+   2.0,
+   -9.07
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "nfast-cerebellum-fastigial-nucleus-left",
+  "name": "Nfast (Cerebellum, Fastigial Nucleus) left",
+  "label": 187,
+  "fragment": "left hemisphere",
+  "faces": 452,
+  "bbox": [
+   [
+    -7.06,
+    -58.7,
+    -33.34
+   ],
+   [
+    -2.15,
+    -52.09,
+    -26.85
+   ]
+  ],
+  "centroid": [
+   -4.75,
+   -55.15,
+   -29.54
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-s32-sacc-left",
+  "name": "Area s32 (sACC) left",
+  "label": 186,
+  "fragment": "left hemisphere",
+  "faces": 3326,
+  "bbox": [
+   [
+    -13.34,
+    22.31,
+    -23.85
+   ],
+   [
+    -0.95,
+    45.8,
+    -7.19
+   ]
+  ],
+  "centroid": [
+   -6.58,
+   35.59,
+   -15.6
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "mf-amygdala-left",
+  "name": "MF (Amygdala) left",
+  "label": 188,
+  "fragment": "left hemisphere",
+  "faces": 144,
+  "bbox": [
+   [
+    -18.93,
+    -9.59,
+    -17.47
+   ],
+   [
+    -17.28,
+    -7.62,
+    -14.57
+   ]
+  ],
+  "centroid": [
+   -18.21,
+   -8.62,
+   -16.23
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc5-loc-left",
+  "name": "Area hOc5 (LOC) left",
+  "label": 189,
+  "fragment": "left hemisphere",
+  "faces": 1216,
+  "bbox": [
+   [
+    -48.05,
+    -79.71,
+    -5.31
+   ],
+   [
+    -37.86,
+    -70.72,
+    8.45
+   ]
+  ],
+  "centroid": [
+   -42.94,
+   -74.69,
+   0.79
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "spf-thalamus-subparafascicular-nucleus-left",
+  "name": "sPf (Thalamus, subparafascicular Nucleus) left",
+  "label": 190,
+  "fragment": "left hemisphere",
+  "faces": 446,
+  "bbox": [
+   [
+    -9.42,
+    -22.45,
+    -7.14
+   ],
+   [
+    -3.11,
+    -15.17,
+    -3.79
+   ]
+  ],
+  "centroid": [
+   -6.05,
+   -19.0,
+   -5.44
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo1-ofc-left",
+  "name": "Area Fo1 (OFC) left",
+  "label": 192,
+  "fragment": "left hemisphere",
+  "faces": 4926,
+  "bbox": [
+   [
+    -15.25,
+    26.37,
+    -32.05
+   ],
+   [
+    -1.5,
+    58.91,
+    -18.65
+   ]
+  ],
+  "centroid": [
+   -8.01,
+   41.48,
+   -25.44
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "sf-amygdala-left",
+  "name": "SF (Amygdala) left",
+  "label": 191,
+  "fragment": "left hemisphere",
+  "faces": 1404,
+  "bbox": [
+   [
+    -21.7,
+    -9.21,
+    -29.34
+   ],
+   [
+    -12.01,
+    1.77,
+    -13.58
+   ]
+  ],
+  "centroid": [
+   -16.27,
+   -3.84,
+   -21.19
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-s24-sacc-left",
+  "name": "Area s24 (sACC) left",
+  "label": 197,
+  "fragment": "left hemisphere",
+  "faces": 2454,
+  "bbox": [
+   [
+    -9.12,
+    15.69,
+    -19.99
+   ],
+   [
+    -0.71,
+    37.75,
+    -2.52
+   ]
+  ],
+  "centroid": [
+   -4.63,
+   25.33,
+   -10.97
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifj1-ifs-precs-left",
+  "name": "Area IFJ1 (IFS, PreCS) left",
+  "label": 196,
+  "fragment": "left hemisphere",
+  "faces": 1818,
+  "bbox": [
+   [
+    -45.04,
+    10.96,
+    23.82
+   ],
+   [
+    -31.16,
+    19.13,
+    39.7
+   ]
+  ],
+  "centroid": [
+   -38.56,
+   14.6,
+   31.2
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-8d1-sfg-left",
+  "name": "Area 8d1 (SFG) left",
+  "label": 195,
+  "fragment": "left hemisphere",
+  "faces": 6110,
+  "bbox": [
+   [
+    -27.04,
+    16.16,
+    46.47
+   ],
+   [
+    -1.88,
+    42.78,
+    67.8
+   ]
+  ],
+  "centroid": [
+   -14.91,
+   28.57,
+   57.94
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vpi-thalamus-ventroposterior-inferior-nucleus-left",
+  "name": "VPi (Thalamus, ventroposterior inferior Nucleus) left",
+  "label": 194,
+  "fragment": "left hemisphere",
+  "faces": 284,
+  "bbox": [
+   [
+    -18.73,
+    -24.25,
+    -8.82
+   ],
+   [
+    -13.35,
+    -21.05,
+    -4.33
+   ]
+  ],
+  "centroid": [
+   -16.14,
+   -22.81,
+   -6.64
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vpmpc-thalamus-ventral-posterior-medial-nucleus-parvocellular-part-left",
+  "name": "VPMpc (Thalamus, ventral posterior medial Nucleus, parvocellular part) left",
+  "label": 193,
+  "fragment": "left hemisphere",
+  "faces": 132,
+  "bbox": [
+   [
+    -12.18,
+    -22.83,
+    -6.73
+   ],
+   [
+    -9.27,
+    -20.46,
+    -5.04
+   ]
+  ],
+  "centroid": [
+   -10.34,
+   -21.83,
+   -5.87
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pfop-ipl-left",
+  "name": "Area PFop (IPL) left",
+  "label": 199,
+  "fragment": "left hemisphere",
+  "faces": 3476,
+  "bbox": [
+   [
+    -69.34,
+    -32.74,
+    13.26
+   ],
+   [
+    -52.52,
+    -14.18,
+    33.7
+   ]
+  ],
+  "centroid": [
+   -62.93,
+   -23.47,
+   23.37
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc4v-lingg-left",
+  "name": "Area hOc4v (LingG) left",
+  "label": 198,
+  "fragment": "left hemisphere",
+  "faces": 6996,
+  "bbox": [
+   [
+    -44.64,
+    -92.82,
+    -21.27
+   ],
+   [
+    -15.06,
+    -54.52,
+    -1.77
+   ]
+  ],
+  "centroid": [
+   -26.89,
+   -78.6,
+   -12.73
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ph2-phg-left",
+  "name": "Area Ph2 (PhG) left",
+  "label": 201,
+  "fragment": "left hemisphere",
+  "faces": 3764,
+  "bbox": [
+   [
+    -37.23,
+    -47.02,
+    -21.68
+   ],
+   [
+    -12.35,
+    -31.32,
+    -2.52
+   ]
+  ],
+  "centroid": [
+   -26.72,
+   -39.44,
+   -12.65
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6v2-precg-left",
+  "name": "Area 6v2 (PreCG) left",
+  "label": 200,
+  "fragment": "left hemisphere",
+  "faces": 5700,
+  "bbox": [
+   [
+    -56.81,
+    -9.1,
+    30.01
+   ],
+   [
+    -33.21,
+    12.01,
+    56.85
+   ]
+  ],
+  "centroid": [
+   -45.85,
+   1.62,
+   44.24
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo2-ofc-left",
+  "name": "Area Fo2 (OFC) left",
+  "label": 203,
+  "fragment": "left hemisphere",
+  "faces": 3976,
+  "bbox": [
+   [
+    -18.22,
+    11.1,
+    -30.08
+   ],
+   [
+    -0.94,
+    31.19,
+    -13.7
+   ]
+  ],
+  "centroid": [
+   -9.4,
+   21.32,
+   -21.88
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "acbl-ventral-striatum-lateral-accumbens-left",
+  "name": "AcbL (Ventral Striatum, Lateral Accumbens) left",
+  "label": 202,
+  "fragment": "left hemisphere",
+  "faces": 852,
+  "bbox": [
+   [
+    -16.04,
+    5.22,
+    -16.14
+   ],
+   [
+    -8.11,
+    16.53,
+    -8.3
+   ]
+  ],
+  "centroid": [
+   -12.23,
+   10.74,
+   -12.13
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip7-ips-left",
+  "name": "Area hIP7 (IPS) left",
+  "label": 205,
+  "fragment": "left hemisphere",
+  "faces": 1698,
+  "bbox": [
+   [
+    -28.2,
+    -86.65,
+    19.0
+   ],
+   [
+    -22.23,
+    -72.33,
+    37.76
+   ]
+  ],
+  "centroid": [
+   -25.19,
+   -80.97,
+   28.29
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-2-2-stg-left",
+  "name": "Area Te 2.2 (STG) left",
+  "label": 204,
+  "fragment": "left hemisphere",
+  "faces": 3888,
+  "bbox": [
+   [
+    -65.62,
+    -42.15,
+    2.84
+   ],
+   [
+    -35.83,
+    -17.02,
+    21.35
+   ]
+  ],
+  "centroid": [
+   -51.68,
+   -30.13,
+   11.27
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-7pc-spl-left",
+  "name": "Area 7PC (SPL) left",
+  "label": 206,
+  "fragment": "left hemisphere",
+  "faces": 3892,
+  "bbox": [
+   [
+    -47.35,
+    -55.93,
+    51.26
+   ],
+   [
+    -26.51,
+    -39.34,
+    73.24
+   ]
+  ],
+  "centroid": [
+   -37.61,
+   -46.27,
+   61.89
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-tei-stg-left",
+  "name": "Area TeI (STG) left",
+  "label": 207,
+  "fragment": "left hemisphere",
+  "faces": 2808,
+  "bbox": [
+   [
+    -56.04,
+    -24.75,
+    -11.67
+   ],
+   [
+    -41.07,
+    15.45,
+    2.92
+   ]
+  ],
+  "centroid": [
+   -49.67,
+   -3.42,
+   -3.8
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-3b-postcg-right",
+  "name": "Area 3b (PostCG) right",
+  "label": 1,
+  "fragment": "right hemisphere",
+  "faces": 5760,
+  "bbox": [
+   [
+    29.48,
+    -31.03,
+    17.27
+   ],
+   [
+    63.99,
+    0.75,
+    64.7
+   ]
+  ],
+  "centroid": [
+   48.01,
+   -13.86,
+   40.0
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pf-ipl-right",
+  "name": "Area PF (IPL) right",
+  "label": 3,
+  "fragment": "right hemisphere",
+  "faces": 7324,
+  "bbox": [
+   [
+    49.69,
+    -41.72,
+    8.67
+   ],
+   [
+    71.03,
+    -18.46,
+    56.93
+   ]
+  ],
+  "centroid": [
+   63.53,
+   -30.96,
+   32.86
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc4la-loc-right",
+  "name": "Area hOc4la (LOC) right",
+  "label": 2,
+  "fragment": "right hemisphere",
+  "faces": 5886,
+  "bbox": [
+   [
+    34.22,
+    -84.72,
+    -18.1
+   ],
+   [
+    56.28,
+    -66.23,
+    12.83
+   ]
+  ],
+  "centroid": [
+   47.44,
+   -75.53,
+   -1.41
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-cos1-cos-right",
+  "name": "Area CoS1 (CoS) right",
+  "label": 4,
+  "fragment": "right hemisphere",
+  "faces": 876,
+  "bbox": [
+   [
+    31.32,
+    -32.66,
+    -25.02
+   ],
+   [
+    37.16,
+    -19.4,
+    -16.32
+   ]
+  ],
+  "centroid": [
+   34.72,
+   -26.45,
+   -21.23
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "astr-amygdala-right",
+  "name": "Astr (Amygdala) right",
+  "label": 5,
+  "fragment": "right hemisphere",
+  "faces": 776,
+  "bbox": [
+   [
+    24.73,
+    -10.51,
+    -18.16
+   ],
+   [
+    32.33,
+    -1.88,
+    -9.94
+   ]
+  ],
+  "centroid": [
+   28.23,
+   -6.15,
+   -13.9
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id8-insula-right",
+  "name": "Area Id8 (Insula) right",
+  "label": 6,
+  "fragment": "right hemisphere",
+  "faces": 1716,
+  "bbox": [
+   [
+    28.07,
+    15.13,
+    -11.76
+   ],
+   [
+    43.59,
+    28.89,
+    1.07
+   ]
+  ],
+  "centroid": [
+   35.62,
+   21.68,
+   -4.34
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sfg4-sfg-right",
+  "name": "Area SFG4 (SFG) right",
+  "label": 7,
+  "fragment": "right hemisphere",
+  "faces": 4122,
+  "bbox": [
+   [
+    16.3,
+    34.09,
+    28.85
+   ],
+   [
+    34.02,
+    54.66,
+    49.72
+   ]
+  ],
+  "centroid": [
+   25.61,
+   43.17,
+   37.22
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-1-postcg-right",
+  "name": "Area 1 (PostCG) right",
+  "label": 8,
+  "fragment": "right hemisphere",
+  "faces": 10352,
+  "bbox": [
+   [
+    20.34,
+    -38.42,
+    21.05
+   ],
+   [
+    68.22,
+    -0.8,
+    77.85
+   ]
+  ],
+  "centroid": [
+   48.99,
+   -19.84,
+   54.31
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "po-thalamus-posterior-nucleus-right",
+  "name": "Po (Thalamus, posterior Nucleus) right",
+  "label": 9,
+  "fragment": "right hemisphere",
+  "faces": 260,
+  "bbox": [
+   [
+    12.21,
+    -30.54,
+    -4.74
+   ],
+   [
+    16.03,
+    -26.15,
+    -1.0
+   ]
+  ],
+  "centroid": [
+   14.11,
+   -28.25,
+   -2.76
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-1-0-heschl-right",
+  "name": "Area Te 1.0 (HESCHL) right",
+  "label": 10,
+  "fragment": "right hemisphere",
+  "faces": 1680,
+  "bbox": [
+   [
+    43.2,
+    -18.35,
+    -0.19
+   ],
+   [
+    58.51,
+    -5.41,
+    11.5
+   ]
+  ],
+  "centroid": [
+   49.92,
+   -11.72,
+   5.49
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sts2-sts-right",
+  "name": "Area STS2 (STS) right",
+  "label": 11,
+  "fragment": "right hemisphere",
+  "faces": 10044,
+  "bbox": [
+   [
+    44.94,
+    -34.07,
+    -31.82
+   ],
+   [
+    70.75,
+    11.98,
+    0.21
+   ]
+  ],
+  "centroid": [
+   57.64,
+   -9.57,
+   -14.59
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ld-thalamus-lateral-dorsal-nucleus-right",
+  "name": "LD (Thalamus, lateral dorsal Nucleus) right",
+  "label": 12,
+  "fragment": "right hemisphere",
+  "faces": 768,
+  "bbox": [
+   [
+    5.08,
+    -27.58,
+    13.0
+   ],
+   [
+    12.75,
+    -15.02,
+    18.85
+   ]
+  ],
+  "centroid": [
+   8.79,
+   -21.05,
+   15.84
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6mp-sma-mesial-sfg-right",
+  "name": "Area 6mp (SMA, mesial SFG) right",
+  "label": 13,
+  "fragment": "right hemisphere",
+  "faces": 3270,
+  "bbox": [
+   [
+    0.51,
+    -19.32,
+    47.32
+   ],
+   [
+    12.5,
+    -2.67,
+    68.94
+   ]
+  ],
+  "centroid": [
+   5.5,
+   -10.84,
+   56.82
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id3-insula-right",
+  "name": "Area Id3 (Insula) right",
+  "label": 14,
+  "fragment": "right hemisphere",
+  "faces": 2194,
+  "bbox": [
+   [
+    34.29,
+    -14.74,
+    -19.12
+   ],
+   [
+    43.98,
+    1.05,
+    1.04
+   ]
+  ],
+  "centroid": [
+   39.6,
+   -6.59,
+   -8.84
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "zi-thalamus-zona-incerta-right",
+  "name": "ZI (Thalamus, zona incerta) right",
+  "label": 15,
+  "fragment": "right hemisphere",
+  "faces": 720,
+  "bbox": [
+   [
+    7.08,
+    -20.47,
+    -10.07
+   ],
+   [
+    15.18,
+    -9.37,
+    -4.18
+   ]
+  ],
+  "centroid": [
+   10.67,
+   -14.84,
+   -7.06
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "cgm-metathalamus-right",
+  "name": "CGM (Metathalamus) right",
+  "label": 16,
+  "fragment": "right hemisphere",
+  "faces": 304,
+  "bbox": [
+   [
+    13.31,
+    -28.15,
+    -9.38
+   ],
+   [
+    17.92,
+    -24.0,
+    -5.07
+   ]
+  ],
+  "centroid": [
+   15.74,
+   -26.04,
+   -6.93
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pirtb-piriformcortexmesial-temporobasal-right",
+  "name": "Area PirTB (PiriformCortexMesial, temporobasal) right",
+  "label": 17,
+  "fragment": "right hemisphere",
+  "faces": 196,
+  "bbox": [
+   [
+    26.35,
+    4.1,
+    -20.56
+   ],
+   [
+    29.7,
+    6.82,
+    -16.6
+   ]
+  ],
+  "centroid": [
+   27.99,
+   5.39,
+   -18.68
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "nrp-midbrain-nucleus-ruber-parvocellular-part-right",
+  "name": "NRp (Midbrain, Nucleus Ruber, parvocellular part) right",
+  "label": 18,
+  "fragment": "right hemisphere",
+  "faces": 838,
+  "bbox": [
+   [
+    1.65,
+    -21.79,
+    -18.86
+   ],
+   [
+    8.14,
+    -14.15,
+    -7.79
+   ]
+  ],
+  "centroid": [
+   4.58,
+   -18.12,
+   -12.88
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ti-stg-right",
+  "name": "Area TI (STG) right",
+  "label": 21,
+  "fragment": "right hemisphere",
+  "faces": 2652,
+  "bbox": [
+   [
+    41.42,
+    -17.2,
+    -21.84
+   ],
+   [
+    50.01,
+    14.87,
+    -2.33
+   ]
+  ],
+  "centroid": [
+   45.62,
+   0.64,
+   -13.01
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-p24ab-pacc-right",
+  "name": "Area p24ab (pACC) right",
+  "label": 20,
+  "fragment": "right hemisphere",
+  "faces": 3806,
+  "bbox": [
+   [
+    -0.43,
+    28.25,
+    -8.84
+   ],
+   [
+    11.46,
+    46.61,
+    23.75
+   ]
+  ],
+  "centroid": [
+   3.93,
+   38.58,
+   8.39
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pft-ipl-right",
+  "name": "Area PFt (IPL) right",
+  "label": 19,
+  "fragment": "right hemisphere",
+  "faces": 5984,
+  "bbox": [
+   [
+    39.56,
+    -35.94,
+    29.14
+   ],
+   [
+    67.91,
+    -11.77,
+    57.64
+   ]
+  ],
+  "centroid": [
+   54.7,
+   -23.04,
+   41.89
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fg5-fusg-right",
+  "name": "Area FG5 (FusG) right",
+  "label": 22,
+  "fragment": "right hemisphere",
+  "faces": 2412,
+  "bbox": [
+   [
+    28.9,
+    -32.79,
+    -35.57
+   ],
+   [
+    43.35,
+    -15.17,
+    -23.32
+   ]
+  ],
+  "centroid": [
+   36.95,
+   -23.96,
+   -28.57
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pui-thalamus-inferior-pulvinar-right",
+  "name": "PUi (Thalamus, inferior pulvinar) right",
+  "label": 24,
+  "fragment": "right hemisphere",
+  "faces": 344,
+  "bbox": [
+   [
+    18.05,
+    -30.84,
+    -6.58
+   ],
+   [
+    23.75,
+    -26.11,
+    -2.03
+   ]
+  ],
+  "centroid": [
+   20.78,
+   -28.57,
+   -4.21
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pum-thalamus-medial-pulvinar-right",
+  "name": "PUm (Thalamus, medial pulvinar) right",
+  "label": 23,
+  "fragment": "right hemisphere",
+  "faces": 1008,
+  "bbox": [
+   [
+    8.37,
+    -35.01,
+    -1.99
+   ],
+   [
+    17.13,
+    -27.75,
+    10.87
+   ]
+  ],
+  "centroid": [
+   12.82,
+   -31.13,
+   3.99
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-3-stg-right",
+  "name": "Area Te 3 (STG) right",
+  "label": 25,
+  "fragment": "right hemisphere",
+  "faces": 6914,
+  "bbox": [
+   [
+    51.43,
+    -37.41,
+    -15.76
+   ],
+   [
+    71.49,
+    17.77,
+    13.79
+   ]
+  ],
+  "centroid": [
+   63.97,
+   -9.03,
+   -0.79
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-to-occipital-gapmap-right",
+  "name": "Frontal-to-Occipital (GapMap) right",
+  "label": 27,
+  "fragment": "right hemisphere",
+  "faces": 44726,
+  "bbox": [
+   [
+    -1.01,
+    -87.79,
+    2.22
+   ],
+   [
+    27.05,
+    37.74,
+    61.68
+   ]
+  ],
+  "centroid": [
+   8.72,
+   -36.89,
+   32.97
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-mfg1-mfg-right",
+  "name": "Area MFG1 (MFG) right",
+  "label": 26,
+  "fragment": "right hemisphere",
+  "faces": 2860,
+  "bbox": [
+   [
+    31.63,
+    44.98,
+    11.7
+   ],
+   [
+    48.66,
+    60.08,
+    31.7
+   ]
+  ],
+  "centroid": [
+   39.72,
+   52.05,
+   20.71
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-7p-spl-right",
+  "name": "Area 7P (SPL) right",
+  "label": 28,
+  "fragment": "right hemisphere",
+  "faces": 7528,
+  "bbox": [
+   [
+    1.87,
+    -83.28,
+    42.61
+   ],
+   [
+    29.73,
+    -62.63,
+    70.49
+   ]
+  ],
+  "centroid": [
+   14.87,
+   -72.32,
+   55.18
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6r1-precg-right",
+  "name": "Area 6r1 (PreCG) right",
+  "label": 29,
+  "fragment": "right hemisphere",
+  "faces": 4112,
+  "bbox": [
+   [
+    44.99,
+    -2.34,
+    2.27
+   ],
+   [
+    66.44,
+    14.22,
+    25.92
+   ]
+  ],
+  "centroid": [
+   58.04,
+   7.17,
+   15.38
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6d1-precg-right",
+  "name": "Area 6d1 (PreCG) right",
+  "label": 30,
+  "fragment": "right hemisphere",
+  "faces": 7822,
+  "bbox": [
+   [
+    1.68,
+    -22.6,
+    52.39
+   ],
+   [
+    33.04,
+    -1.14,
+    79.99
+   ]
+  ],
+  "centroid": [
+   17.92,
+   -11.51,
+   69.3
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "va-thalamus-ventral-anterior-nucleus-ventral-right",
+  "name": "VA (Thalamus, ventral anterior Nucleus (ventral)) right",
+  "label": 31,
+  "fragment": "right hemisphere",
+  "faces": 1780,
+  "bbox": [
+   [
+    4.06,
+    -12.0,
+    -3.13
+   ],
+   [
+    17.15,
+    0.08,
+    12.92
+   ]
+  ],
+  "centroid": [
+   10.83,
+   -5.59,
+   5.12
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip4-ips-right",
+  "name": "Area hIP4 (IPS) right",
+  "label": 32,
+  "fragment": "right hemisphere",
+  "faces": 2538,
+  "bbox": [
+   [
+    29.39,
+    -85.02,
+    12.04
+   ],
+   [
+    43.21,
+    -71.02,
+    35.35
+   ]
+  ],
+  "centroid": [
+   35.93,
+   -78.41,
+   23.78
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op6-frontal-operculum-right",
+  "name": "Area Op6 (Frontal Operculum) right",
+  "label": 33,
+  "fragment": "right hemisphere",
+  "faces": 2298,
+  "bbox": [
+   [
+    44.13,
+    0.93,
+    -4.7
+   ],
+   [
+    62.43,
+    13.92,
+    13.15
+   ]
+  ],
+  "centroid": [
+   53.49,
+   6.84,
+   2.4
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fg2-fusg-right",
+  "name": "Area FG2 (FusG) right",
+  "label": 34,
+  "fragment": "right hemisphere",
+  "faces": 2556,
+  "bbox": [
+   [
+    37.13,
+    -76.15,
+    -21.15
+   ],
+   [
+    53.45,
+    -59.27,
+    -5.34
+   ]
+  ],
+  "centroid": [
+   45.19,
+   -66.67,
+   -14.85
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip6-ips-right",
+  "name": "Area hIP6 (IPS) right",
+  "label": 35,
+  "fragment": "right hemisphere",
+  "faces": 4006,
+  "bbox": [
+   [
+    26.89,
+    -71.37,
+    35.82
+   ],
+   [
+    45.27,
+    -52.65,
+    57.87
+   ]
+  ],
+  "centroid": [
+   36.85,
+   -62.8,
+   46.14
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "bst-basal-forebrain-bed-nucleus-right",
+  "name": "BST (Basal Forebrain, Bed Nucleus) right",
+  "label": 38,
+  "fragment": "right hemisphere",
+  "faces": 452,
+  "bbox": [
+   [
+    3.01,
+    -0.79,
+    -5.81
+   ],
+   [
+    8.27,
+    5.11,
+    1.0
+   ]
+  ],
+  "centroid": [
+   5.8,
+   2.25,
+   -2.41
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-tpj-stg-smg-right",
+  "name": "Area TPJ (STG, SMG) right",
+  "label": 37,
+  "fragment": "right hemisphere",
+  "faces": 2940,
+  "bbox": [
+   [
+    48.56,
+    -36.06,
+    7.99
+   ],
+   [
+    70.82,
+    -16.59,
+    28.1
+   ]
+  ],
+  "centroid": [
+   61.22,
+   -28.28,
+   16.16
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo5-ofc-right",
+  "name": "Area Fo5 (OFC) right",
+  "label": 36,
+  "fragment": "right hemisphere",
+  "faces": 1388,
+  "bbox": [
+   [
+    34.33,
+    51.95,
+    -15.86
+   ],
+   [
+    45.79,
+    64.66,
+    -5.21
+   ]
+  ],
+  "centroid": [
+   39.97,
+   57.53,
+   -10.83
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "am-thalamus-anteromedial-nucleus-right",
+  "name": "AM (Thalamus, anteromedial Nucleus) right",
+  "label": 39,
+  "fragment": "right hemisphere",
+  "faces": 432,
+  "bbox": [
+   [
+    0.95,
+    -7.52,
+    5.41
+   ],
+   [
+    6.19,
+    -0.96,
+    10.94
+   ]
+  ],
+  "centroid": [
+   3.27,
+   -3.9,
+   8.39
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op7-frontal-operculum-right",
+  "name": "Area Op7 (Frontal Operculum) right",
+  "label": 40,
+  "fragment": "right hemisphere",
+  "faces": 1036,
+  "bbox": [
+   [
+    32.07,
+    7.22,
+    6.18
+   ],
+   [
+    42.93,
+    18.94,
+    14.27
+   ]
+  ],
+  "centroid": [
+   37.29,
+   13.21,
+   10.79
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc6-pos-right",
+  "name": "Area hOc6 (POS) right",
+  "label": 41,
+  "fragment": "right hemisphere",
+  "faces": 1014,
+  "bbox": [
+   [
+    14.17,
+    -74.68,
+    15.4
+   ],
+   [
+    23.01,
+    -64.68,
+    26.7
+   ]
+  ],
+  "centroid": [
+   18.41,
+   -68.91,
+   20.5
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ia3-insula-right",
+  "name": "Area Ia3 (Insula) right",
+  "label": 42,
+  "fragment": "right hemisphere",
+  "faces": 680,
+  "bbox": [
+   [
+    35.94,
+    0.31,
+    -19.41
+   ],
+   [
+    42.17,
+    6.7,
+    -10.34
+   ]
+  ],
+  "centroid": [
+   38.47,
+   3.45,
+   -14.67
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ig2-insula-right",
+  "name": "Area Ig2 (Insula) right",
+  "label": 43,
+  "fragment": "right hemisphere",
+  "faces": 1264,
+  "bbox": [
+   [
+    32.52,
+    -20.22,
+    -2.45
+   ],
+   [
+    40.92,
+    -12.61,
+    13.35
+   ]
+  ],
+  "centroid": [
+   36.64,
+   -16.58,
+   5.89
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ca2-hippocampus-right",
+  "name": "CA2 (Hippocampus) right",
+  "label": 44,
+  "fragment": "right hemisphere",
+  "faces": 3356,
+  "bbox": [
+   [
+    15.96,
+    -33.85,
+    -22.34
+   ],
+   [
+    39.02,
+    -8.86,
+    -3.89
+   ]
+  ],
+  "centroid": [
+   29.72,
+   -17.75,
+   -14.27
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fp2-fpole-right",
+  "name": "Area Fp2 (FPole) right",
+  "label": 46,
+  "fragment": "right hemisphere",
+  "faces": 5836,
+  "bbox": [
+   [
+    -0.34,
+    43.17,
+    -21.86
+   ],
+   [
+    12.74,
+    71.68,
+    18.92
+   ]
+  ],
+  "centroid": [
+   4.8,
+   60.65,
+   -3.36
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vlp-thalamus-ventral-lateral-posterior-nucleus-right",
+  "name": "VLP (Thalamus, ventral lateral posterior Nucleus) right",
+  "label": 45,
+  "fragment": "right hemisphere",
+  "faces": 1176,
+  "bbox": [
+   [
+    10.55,
+    -21.05,
+    5.09
+   ],
+   [
+    18.93,
+    -10.58,
+    17.77
+   ]
+  ],
+  "centroid": [
+   14.61,
+   -16.07,
+   11.34
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "li-thalamus-limitans-nucleus-right",
+  "name": "Li (Thalamus, limitans Nucleus) right",
+  "label": 47,
+  "fragment": "right hemisphere",
+  "faces": 632,
+  "bbox": [
+   [
+    4.15,
+    -32.42,
+    -5.74
+   ],
+   [
+    10.73,
+    -23.94,
+    0.82
+   ]
+  ],
+  "centroid": [
+   7.2,
+   -27.85,
+   -2.55
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ec-hippocampal-region-entorhinal-cortex-right",
+  "name": "Area EC (Hippocampal Region, Entorhinal Cortex) right",
+  "label": 48,
+  "fragment": "right hemisphere",
+  "faces": 3028,
+  "bbox": [
+   [
+    15.01,
+    -24.86,
+    -39.23
+   ],
+   [
+    27.91,
+    6.9,
+    -21.07
+   ]
+  ],
+  "centroid": [
+   21.28,
+   -4.86,
+   -31.74
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id4-insula-right",
+  "name": "Area Id4 (Insula) right",
+  "label": 49,
+  "fragment": "right hemisphere",
+  "faces": 1950,
+  "bbox": [
+   [
+    31.88,
+    -13.6,
+    2.35
+   ],
+   [
+    44.53,
+    2.98,
+    18.99
+   ]
+  ],
+  "centroid": [
+   37.4,
+   -3.19,
+   11.09
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "tu-basal-forebrain-tuberculum-right",
+  "name": "Tu (Basal Forebrain, Tuberculum) right",
+  "label": 51,
+  "fragment": "right hemisphere",
+  "faces": 272,
+  "bbox": [
+   [
+    5.49,
+    4.78,
+    -16.65
+   ],
+   [
+    11.54,
+    8.09,
+    -13.26
+   ]
+  ],
+  "centroid": [
+   8.83,
+   6.75,
+   -14.81
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op1-poperc-right",
+  "name": "Area Op1 (POperc) right",
+  "label": 50,
+  "fragment": "right hemisphere",
+  "faces": 3376,
+  "bbox": [
+   [
+    39.71,
+    -26.84,
+    11.09
+   ],
+   [
+    63.64,
+    -9.92,
+    24.35
+   ]
+  ],
+  "centroid": [
+   50.68,
+   -18.67,
+   17.91
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id6-insula-right",
+  "name": "Area Id6 (Insula) right",
+  "label": 53,
+  "fragment": "right hemisphere",
+  "faces": 4812,
+  "bbox": [
+   [
+    28.59,
+    0.27,
+    -6.28
+   ],
+   [
+    46.04,
+    23.34,
+    16.61
+   ]
+  ],
+  "centroid": [
+   36.09,
+   11.49,
+   4.14
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "rt-thalamus-reticular-nucleus-right",
+  "name": "Rt (Thalamus, reticular Nucleus) right",
+  "label": 52,
+  "fragment": "right hemisphere",
+  "faces": 3858,
+  "bbox": [
+   [
+    14.11,
+    -31.2,
+    -7.22
+   ],
+   [
+    32.14,
+    -4.46,
+    19.08
+   ]
+  ],
+  "centroid": [
+   22.54,
+   -20.75,
+   6.96
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifs4-ifs-right",
+  "name": "Area IFS4 (IFS) right",
+  "label": 54,
+  "fragment": "right hemisphere",
+  "faces": 1600,
+  "bbox": [
+   [
+    36.47,
+    14.09,
+    27.77
+   ],
+   [
+    56.08,
+    24.14,
+    37.8
+   ]
+  ],
+  "centroid": [
+   47.11,
+   18.98,
+   32.17
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6d3-sfs-right",
+  "name": "Area 6d3 (SFS) right",
+  "label": 55,
+  "fragment": "right hemisphere",
+  "faces": 7244,
+  "bbox": [
+   [
+    17.7,
+    -12.69,
+    42.7
+   ],
+   [
+    32.49,
+    19.73,
+    71.37
+   ]
+  ],
+  "centroid": [
+   25.19,
+   4.37,
+   55.78
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ndentv-cerebellum-ventral-dentate-nucleus-right",
+  "name": "Ndentv (Cerebellum, Ventral Dentate Nucleus) right",
+  "label": 56,
+  "fragment": "right hemisphere",
+  "faces": 1040,
+  "bbox": [
+   [
+    6.8,
+    -65.64,
+    -35.86
+   ],
+   [
+    14.06,
+    -49.31,
+    -28.08
+   ]
+  ],
+  "centroid": [
+   10.59,
+   -57.59,
+   -32.23
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6v1-precg-right",
+  "name": "Area 6v1 (PreCG) right",
+  "label": 57,
+  "fragment": "right hemisphere",
+  "faces": 6222,
+  "bbox": [
+   [
+    27.16,
+    -16.0,
+    43.87
+   ],
+   [
+    47.43,
+    10.09,
+    70.31
+   ]
+  ],
+  "centroid": [
+   36.13,
+   -2.45,
+   58.73
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip2-ips-right",
+  "name": "Area hIP2 (IPS) right",
+  "label": 58,
+  "fragment": "right hemisphere",
+  "faces": 1994,
+  "bbox": [
+   [
+    40.9,
+    -46.52,
+    40.79
+   ],
+   [
+    51.12,
+    -32.98,
+    58.66
+   ]
+  ],
+  "centroid": [
+   45.49,
+   -39.26,
+   50.56
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-44-ifg-right",
+  "name": "Area 44 (IFG) right",
+  "label": 59,
+  "fragment": "right hemisphere",
+  "faces": 4544,
+  "bbox": [
+   [
+    45.46,
+    9.45,
+    -4.58
+   ],
+   [
+    62.06,
+    23.21,
+    28.65
+   ]
+  ],
+  "centroid": [
+   53.67,
+   16.18,
+   11.4
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo7-ofc-right",
+  "name": "Area Fo7 (OFC) right",
+  "label": 60,
+  "fragment": "right hemisphere",
+  "faces": 2454,
+  "bbox": [
+   [
+    28.43,
+    32.06,
+    -20.76
+   ],
+   [
+    41.93,
+    46.75,
+    -6.97
+   ]
+  ],
+  "centroid": [
+   35.42,
+   39.31,
+   -13.85
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pv-thalamus-paraventricular-nucleus-right",
+  "name": "Pv (Thalamus, paraventricular Nucleus) right",
+  "label": 61,
+  "fragment": "right hemisphere",
+  "faces": 280,
+  "bbox": [
+   [
+    0.68,
+    -6.74,
+    2.36
+   ],
+   [
+    3.09,
+    -1.33,
+    7.35
+   ]
+  ],
+  "centroid": [
+   1.79,
+   -4.1,
+   4.79
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pga-ipl-right",
+  "name": "Area PGa (IPL) right",
+  "label": 62,
+  "fragment": "right hemisphere",
+  "faces": 9534,
+  "bbox": [
+   [
+    40.79,
+    -63.48,
+    9.25
+   ],
+   [
+    69.39,
+    -37.79,
+    59.21
+   ]
+  ],
+  "centroid": [
+   54.6,
+   -52.9,
+   34.51
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pua-thalamus-anterior-pulvinar-right",
+  "name": "PUa (Thalamus, anterior pulvinar) right",
+  "label": 63,
+  "fragment": "right hemisphere",
+  "faces": 600,
+  "bbox": [
+   [
+    10.81,
+    -28.59,
+    -1.44
+   ],
+   [
+    16.19,
+    -23.13,
+    9.44
+   ]
+  ],
+  "centroid": [
+   13.73,
+   -26.1,
+   3.73
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-8d2-sfg-right",
+  "name": "Area 8d2 (SFG) right",
+  "label": 64,
+  "fragment": "right hemisphere",
+  "faces": 5642,
+  "bbox": [
+   [
+    11.2,
+    16.81,
+    30.75
+   ],
+   [
+    32.73,
+    40.7,
+    58.37
+   ]
+  ],
+  "centroid": [
+   22.7,
+   29.51,
+   45.22
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ia1-insula-right",
+  "name": "Area Ia1 (Insula) right",
+  "label": 65,
+  "fragment": "right hemisphere",
+  "faces": 796,
+  "bbox": [
+   [
+    35.73,
+    -4.36,
+    -11.75
+   ],
+   [
+    44.63,
+    3.74,
+    -3.05
+   ]
+  ],
+  "centroid": [
+   40.27,
+   -0.57,
+   -7.44
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vtm-amygdala-right",
+  "name": "VTM (Amygdala) right",
+  "label": 66,
+  "fragment": "right hemisphere",
+  "faces": 724,
+  "bbox": [
+   [
+    19.2,
+    -13.35,
+    -21.97
+   ],
+   [
+    27.8,
+    -5.55,
+    -15.34
+   ]
+  ],
+  "centroid": [
+   23.68,
+   -9.39,
+   -19.09
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op8-frontal-operculum-right",
+  "name": "Area Op8 (Frontal Operculum) right",
+  "label": 67,
+  "fragment": "right hemisphere",
+  "faces": 2574,
+  "bbox": [
+   [
+    34.4,
+    6.23,
+    -2.99
+   ],
+   [
+    49.86,
+    23.17,
+    11.51
+   ]
+  ],
+  "centroid": [
+   43.01,
+   16.19,
+   4.5
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifj2-ifs-precs-right",
+  "name": "Area IFJ2 (IFS, PreCS) right",
+  "label": 69,
+  "fragment": "right hemisphere",
+  "faces": 1224,
+  "bbox": [
+   [
+    37.13,
+    5.19,
+    19.03
+   ],
+   [
+    49.4,
+    15.47,
+    26.45
+   ]
+  ],
+  "centroid": [
+   43.53,
+   10.28,
+   22.98
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "fup-ventral-striatum-fundus-of-putamen-right",
+  "name": "FuP (Ventral Striatum, Fundus of Putamen) right",
+  "label": 68,
+  "fragment": "right hemisphere",
+  "faces": 2452,
+  "bbox": [
+   [
+    14.71,
+    -3.85,
+    -15.09
+   ],
+   [
+    31.13,
+    20.73,
+    -3.72
+   ]
+  ],
+  "centroid": [
+   22.32,
+   8.64,
+   -8.7
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-25-sacc-right",
+  "name": "Area 25 (sACC) right",
+  "label": 71,
+  "fragment": "right hemisphere",
+  "faces": 1016,
+  "bbox": [
+   [
+    0.57,
+    7.3,
+    -17.65
+   ],
+   [
+    6.03,
+    17.0,
+    -3.72
+   ]
+  ],
+  "centroid": [
+   2.99,
+   12.32,
+   -10.77
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-7m-spl-right",
+  "name": "Area 7M (SPL) right",
+  "label": 70,
+  "fragment": "right hemisphere",
+  "faces": 924,
+  "bbox": [
+   [
+    1.11,
+    -78.9,
+    34.23
+   ],
+   [
+    6.81,
+    -69.04,
+    47.64
+   ]
+  ],
+  "centroid": [
+   3.92,
+   -73.61,
+   41.03
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pfm-ipl-right",
+  "name": "Area PFm (IPL) right",
+  "label": 73,
+  "fragment": "right hemisphere",
+  "faces": 9344,
+  "bbox": [
+   [
+    44.34,
+    -54.09,
+    17.05
+   ],
+   [
+    68.63,
+    -31.36,
+    60.37
+   ]
+  ],
+  "centroid": [
+   56.8,
+   -42.92,
+   41.08
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op5-frontal-operculum-right",
+  "name": "Area Op5 (Frontal Operculum) right",
+  "label": 72,
+  "fragment": "right hemisphere",
+  "faces": 3058,
+  "bbox": [
+   [
+    35.32,
+    -8.06,
+    0.97
+   ],
+   [
+    53.86,
+    7.87,
+    19.02
+   ]
+  ],
+  "centroid": [
+   45.1,
+   0.27,
+   10.09
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "md-thalamus-mediodorsal-nucleus-right",
+  "name": "MD (Thalamus, mediodorsal Nucleus) right",
+  "label": 74,
+  "fragment": "right hemisphere",
+  "faces": 1446,
+  "bbox": [
+   [
+    1.6,
+    -25.89,
+    2.08
+   ],
+   [
+    9.45,
+    -10.04,
+    13.91
+   ]
+  ],
+  "centroid": [
+   5.49,
+   -18.02,
+   8.14
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "lb-amygdala-right",
+  "name": "LB (Amygdala) right",
+  "label": 75,
+  "fragment": "right hemisphere",
+  "faces": 1702,
+  "bbox": [
+   [
+    19.48,
+    -6.73,
+    -31.78
+   ],
+   [
+    32.71,
+    3.9,
+    -17.35
+   ]
+  ],
+  "centroid": [
+   25.84,
+   -0.99,
+   -24.83
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-4a-precg-right",
+  "name": "Area 4a (PreCG) right",
+  "label": 76,
+  "fragment": "right hemisphere",
+  "faces": 21124,
+  "bbox": [
+   [
+    0.5,
+    -44.43,
+    32.35
+   ],
+   [
+    58.23,
+    -0.46,
+    82.32
+   ]
+  ],
+  "centroid": [
+   22.68,
+   -22.65,
+   63.14
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-5m-spl-right",
+  "name": "Area 5M (SPL) right",
+  "label": 77,
+  "fragment": "right hemisphere",
+  "faces": 5632,
+  "bbox": [
+   [
+    0.6,
+    -55.63,
+    47.88
+   ],
+   [
+    16.27,
+    -29.54,
+    75.46
+   ]
+  ],
+  "centroid": [
+   7.32,
+   -43.42,
+   60.58
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op10-frontal-operculum-right",
+  "name": "Area Op10 (Frontal Operculum) right",
+  "label": 78,
+  "fragment": "right hemisphere",
+  "faces": 612,
+  "bbox": [
+   [
+    32.05,
+    25.95,
+    0.92
+   ],
+   [
+    38.61,
+    32.22,
+    9.47
+   ]
+  ],
+  "centroid": [
+   35.09,
+   28.82,
+   4.14
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pf-thalamus-parafascicular-nucleus-right",
+  "name": "Pf (Thalamus, parafascicular Nucleus) right",
+  "label": 79,
+  "fragment": "right hemisphere",
+  "faces": 312,
+  "bbox": [
+   [
+    2.96,
+    -23.67,
+    -3.87
+   ],
+   [
+    6.89,
+    -18.35,
+    -0.15
+   ]
+  ],
+  "centroid": [
+   4.89,
+   -21.31,
+   -2.07
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fp1-fpole-right",
+  "name": "Area Fp1 (FPole) right",
+  "label": 80,
+  "fragment": "right hemisphere",
+  "faces": 13874,
+  "bbox": [
+   [
+    0.62,
+    51.32,
+    -28.27
+   ],
+   [
+    34.96,
+    73.49,
+    27.57
+   ]
+  ],
+  "centroid": [
+   15.96,
+   64.96,
+   -0.54
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "pul-thalamus-lateral-pulvinar-right",
+  "name": "PUl (Thalamus, lateral pulvinar) right",
+  "label": 81,
+  "fragment": "right hemisphere",
+  "faces": 936,
+  "bbox": [
+   [
+    17.33,
+    -35.21,
+    -3.35
+   ],
+   [
+    25.2,
+    -27.27,
+    8.83
+   ]
+  ],
+  "centroid": [
+   21.11,
+   -31.36,
+   2.74
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-mfg2-mfg-right",
+  "name": "Area MFG2 (MFG) right",
+  "label": 82,
+  "fragment": "right hemisphere",
+  "faces": 4460,
+  "bbox": [
+   [
+    16.49,
+    47.44,
+    0.87
+   ],
+   [
+    46.67,
+    65.7,
+    20.47
+   ]
+  ],
+  "centroid": [
+   32.38,
+   55.89,
+   10.67
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-3a-postcg-right",
+  "name": "Area 3a (PostCG) right",
+  "label": 84,
+  "fragment": "right hemisphere",
+  "faces": 2064,
+  "bbox": [
+   [
+    32.02,
+    -21.36,
+    22.18
+   ],
+   [
+    54.45,
+    -1.55,
+    44.75
+   ]
+  ],
+  "centroid": [
+   42.17,
+   -11.58,
+   34.07
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ph1-phg-right",
+  "name": "Area Ph1 (PhG) right",
+  "label": 83,
+  "fragment": "right hemisphere",
+  "faces": 3448,
+  "bbox": [
+   [
+    16.46,
+    -65.12,
+    -18.64
+   ],
+   [
+    34.79,
+    -42.0,
+    -2.98
+   ]
+  ],
+  "centroid": [
+   26.27,
+   -53.55,
+   -9.89
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id7-insula-right",
+  "name": "Area Id7 (Insula) right",
+  "label": 86,
+  "fragment": "right hemisphere",
+  "faces": 1862,
+  "bbox": [
+   [
+    27.68,
+    21.08,
+    -4.84
+   ],
+   [
+    38.53,
+    35.08,
+    12.68
+   ]
+  ],
+  "centroid": [
+   32.1,
+   28.02,
+   2.96
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fg4-fusg-right",
+  "name": "Area FG4 (FusG) right",
+  "label": 85,
+  "fragment": "right hemisphere",
+  "faces": 6802,
+  "bbox": [
+   [
+    31.54,
+    -60.38,
+    -30.27
+   ],
+   [
+    58.3,
+    -25.52,
+    -9.28
+   ]
+  ],
+  "centroid": [
+   43.48,
+   -44.67,
+   -21.43
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ninterp-cerebellum-interposed-nucleus-right",
+  "name": "Ninterp (Cerebellum, Interposed Nucleus) right",
+  "label": 87,
+  "fragment": "right hemisphere",
+  "faces": 930,
+  "bbox": [
+   [
+    1.09,
+    -63.19,
+    -35.62
+   ],
+   [
+    9.96,
+    -51.17,
+    -26.99
+   ]
+  ],
+  "centroid": [
+   6.22,
+   -56.22,
+   -30.81
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "stn-subthalamus-right",
+  "name": "STN (Subthalamus) right",
+  "label": 88,
+  "fragment": "right hemisphere",
+  "faces": 884,
+  "bbox": [
+   [
+    5.24,
+    -18.47,
+    -12.55
+   ],
+   [
+    15.08,
+    -8.03,
+    -6.89
+   ]
+  ],
+  "centroid": [
+   10.33,
+   -12.98,
+   -10.03
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo6-ofc-right",
+  "name": "Area Fo6 (OFC) right",
+  "label": 89,
+  "fragment": "right hemisphere",
+  "faces": 4544,
+  "bbox": [
+   [
+    37.2,
+    28.5,
+    -22.4
+   ],
+   [
+    55.27,
+    55.12,
+    -3.99
+   ]
+  ],
+  "centroid": [
+   46.34,
+   42.1,
+   -13.9
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-p32-pacc-right",
+  "name": "Area p32 (pACC) right",
+  "label": 90,
+  "fragment": "right hemisphere",
+  "faces": 8960,
+  "bbox": [
+   [
+    -0.39,
+    37.91,
+    -17.67
+   ],
+   [
+    16.29,
+    63.18,
+    32.36
+   ]
+  ],
+  "centroid": [
+   6.6,
+   50.95,
+   9.33
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "cgl-metathalamus-right",
+  "name": "CGL (Metathalamus) right",
+  "label": 92,
+  "fragment": "right hemisphere",
+  "faces": 440,
+  "bbox": [
+   [
+    21.01,
+    -27.38,
+    -10.86
+   ],
+   [
+    25.78,
+    -19.15,
+    -5.95
+   ]
+  ],
+  "centroid": [
+   23.26,
+   -22.64,
+   -8.3
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc1-v1-17-calcs-right",
+  "name": "Area hOc1 (V1, 17, CalcS) right",
+  "label": 91,
+  "fragment": "right hemisphere",
+  "faces": 17996,
+  "bbox": [
+   [
+    0.5,
+    -105.49,
+    -16.89
+   ],
+   [
+    30.02,
+    -54.23,
+    17.81
+   ]
+  ],
+  "centroid": [
+   13.35,
+   -83.01,
+   2.39
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-8v1-mfg-right",
+  "name": "Area 8v1 (MFG) right",
+  "label": 95,
+  "fragment": "right hemisphere",
+  "faces": 5972,
+  "bbox": [
+   [
+    23.17,
+    8.14,
+    43.57
+   ],
+   [
+    46.41,
+    37.41,
+    64.32
+   ]
+  ],
+  "centroid": [
+   35.24,
+   21.73,
+   52.64
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ph3-phg-right",
+  "name": "Area Ph3 (PhG) right",
+  "label": 94,
+  "fragment": "right hemisphere",
+  "faces": 1830,
+  "bbox": [
+   [
+    12.4,
+    -61.83,
+    -13.81
+   ],
+   [
+    25.62,
+    -43.88,
+    -5.07
+   ]
+  ],
+  "centroid": [
+   18.6,
+   -51.59,
+   -8.99
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "snc-midbrain-substantia-nigra-pars-compacta-right",
+  "name": "SNC (Midbrain, Substantia Nigra pars compacta) right",
+  "label": 93,
+  "fragment": "right hemisphere",
+  "faces": 2048,
+  "bbox": [
+   [
+    2.62,
+    -28.27,
+    -22.23
+   ],
+   [
+    15.13,
+    -12.7,
+    -6.9
+   ]
+  ],
+  "centroid": [
+   8.92,
+   -22.18,
+   -16.16
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sfg2-sfg-right",
+  "name": "Area SFG2 (SFG) right",
+  "label": 97,
+  "fragment": "right hemisphere",
+  "faces": 7468,
+  "bbox": [
+   [
+    1.24,
+    36.7,
+    22.11
+   ],
+   [
+    26.79,
+    67.09,
+    55.78
+   ]
+  ],
+  "centroid": [
+   12.77,
+   50.94,
+   40.68
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc4lp-loc-right",
+  "name": "Area hOc4lp (LOC) right",
+  "label": 96,
+  "fragment": "right hemisphere",
+  "faces": 6126,
+  "bbox": [
+   [
+    27.29,
+    -94.83,
+    -10.27
+   ],
+   [
+    47.76,
+    -78.36,
+    30.66
+   ]
+  ],
+  "centroid": [
+   37.94,
+   -86.29,
+   7.13
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo3-ofc-right",
+  "name": "Area Fo3 (OFC) right",
+  "label": 98,
+  "fragment": "right hemisphere",
+  "faces": 9462,
+  "bbox": [
+   [
+    9.32,
+    9.99,
+    -28.21
+   ],
+   [
+    34.24,
+    60.66,
+    -8.03
+   ]
+  ],
+  "centroid": [
+   21.44,
+   34.92,
+   -20.57
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-1-1-heschl-right",
+  "name": "Area Te 1.1 (HESCHL) right",
+  "label": 99,
+  "fragment": "right hemisphere",
+  "faces": 2498,
+  "bbox": [
+   [
+    32.46,
+    -33.41,
+    2.07
+   ],
+   [
+    47.77,
+    -15.19,
+    20.02
+   ]
+  ],
+  "centroid": [
+   40.43,
+   -23.64,
+   11.38
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-mfg5-mfg-ifg-right",
+  "name": "Area MFG5 (MFG, IFG) right",
+  "label": 100,
+  "fragment": "right hemisphere",
+  "faces": 5058,
+  "bbox": [
+   [
+    34.61,
+    24.16,
+    12.05
+   ],
+   [
+    53.11,
+    44.07,
+    44.84
+   ]
+  ],
+  "centroid": [
+   45.09,
+   34.94,
+   26.68
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc2-v2-18-right",
+  "name": "Area hOc2 (V2, 18) right",
+  "label": 101,
+  "fragment": "right hemisphere",
+  "faces": 15996,
+  "bbox": [
+   [
+    1.01,
+    -103.94,
+    -18.38
+   ],
+   [
+    36.47,
+    -56.2,
+    27.69
+   ]
+  ],
+  "centroid": [
+   14.05,
+   -86.63,
+   3.43
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-mfg4-mfg-right",
+  "name": "Area MFG4 (MFG) right",
+  "label": 102,
+  "fragment": "right hemisphere",
+  "faces": 8412,
+  "bbox": [
+   [
+    23.77,
+    29.39,
+    10.32
+   ],
+   [
+    50.84,
+    50.46,
+    48.52
+   ]
+  ],
+  "centroid": [
+   36.56,
+   40.35,
+   29.42
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "lp-thalamus-lateral-posterior-nucleus-right",
+  "name": "LP (Thalamus, lateral posterior Nucleus) right",
+  "label": 103,
+  "fragment": "right hemisphere",
+  "faces": 926,
+  "bbox": [
+   [
+    12.35,
+    -32.15,
+    8.37
+   ],
+   [
+    22.09,
+    -22.12,
+    16.91
+   ]
+  ],
+  "centroid": [
+   17.6,
+   -27.32,
+   12.99
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6d2-precg-right",
+  "name": "Area 6d2 (PreCG) right",
+  "label": 104,
+  "fragment": "right hemisphere",
+  "faces": 5594,
+  "bbox": [
+   [
+    1.99,
+    -5.47,
+    56.18
+   ],
+   [
+    26.0,
+    18.25,
+    76.53
+   ]
+  ],
+  "centroid": [
+   14.37,
+   6.4,
+   68.46
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ig3-insula-right",
+  "name": "Area Ig3 (Insula) right",
+  "label": 105,
+  "fragment": "right hemisphere",
+  "faces": 1284,
+  "bbox": [
+   [
+    32.66,
+    -18.42,
+    9.39
+   ],
+   [
+    44.39,
+    -7.8,
+    18.88
+   ]
+  ],
+  "centroid": [
+   37.91,
+   -12.58,
+   13.71
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc4d-cuneus-right",
+  "name": "Area hOc4d (Cuneus) right",
+  "label": 106,
+  "fragment": "right hemisphere",
+  "faces": 5312,
+  "bbox": [
+   [
+    6.75,
+    -93.94,
+    4.36
+   ],
+   [
+    34.61,
+    -81.41,
+    43.49
+   ]
+  ],
+  "centroid": [
+   22.62,
+   -88.61,
+   25.66
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sfg3-sfg-right",
+  "name": "Area SFG3 (SFG) right",
+  "label": 107,
+  "fragment": "right hemisphere",
+  "faces": 3692,
+  "bbox": [
+   [
+    10.29,
+    47.53,
+    18.5
+   ],
+   [
+    33.67,
+    65.61,
+    36.57
+   ]
+  ],
+  "centroid": [
+   20.49,
+   56.68,
+   28.04
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6v3-precg-right",
+  "name": "Area 6v3 (PreCG) right",
+  "label": 108,
+  "fragment": "right hemisphere",
+  "faces": 5426,
+  "bbox": [
+   [
+    34.34,
+    -4.84,
+    20.54
+   ],
+   [
+    64.94,
+    15.96,
+    47.68
+   ]
+  ],
+  "centroid": [
+   55.51,
+   5.33,
+   31.42
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "nrm-midbrain-nucleus-ruber-magnocellular-part-right",
+  "name": "NRm (Midbrain, Nucleus Ruber, magnocellular part) right",
+  "label": 109,
+  "fragment": "right hemisphere",
+  "faces": 244,
+  "bbox": [
+   [
+    1.38,
+    -30.82,
+    -17.87
+   ],
+   [
+    4.98,
+    -26.26,
+    -14.43
+   ]
+  ],
+  "centroid": [
+   3.31,
+   -28.44,
+   -16.29
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo4-ofc-right",
+  "name": "Area Fo4 (OFC) right",
+  "label": 110,
+  "fragment": "right hemisphere",
+  "faces": 2828,
+  "bbox": [
+   [
+    22.93,
+    42.35,
+    -20.14
+   ],
+   [
+    40.51,
+    65.56,
+    -8.73
+   ]
+  ],
+  "centroid": [
+   31.94,
+   55.05,
+   -15.45
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifs1-ifs-right",
+  "name": "Area IFS1 (IFS) right",
+  "label": 111,
+  "fragment": "right hemisphere",
+  "faces": 2760,
+  "bbox": [
+   [
+    35.19,
+    17.37,
+    17.94
+   ],
+   [
+    56.11,
+    33.56,
+    35.19
+   ]
+  ],
+  "centroid": [
+   45.26,
+   25.92,
+   25.33
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op4-poperc-right",
+  "name": "Area Op4 (POperc) right",
+  "label": 112,
+  "fragment": "right hemisphere",
+  "faces": 4876,
+  "bbox": [
+   [
+    43.83,
+    -18.55,
+    2.74
+   ],
+   [
+    69.48,
+    3.04,
+    26.39
+   ]
+  ],
+  "centroid": [
+   60.11,
+   -7.15,
+   13.88
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ch-4-basal-forebrain-right",
+  "name": "Ch 4 (Basal Forebrain) right",
+  "label": 113,
+  "fragment": "right hemisphere",
+  "faces": 540,
+  "bbox": [
+   [
+    15.3,
+    -4.56,
+    -13.85
+   ],
+   [
+    23.59,
+    2.16,
+    -8.04
+   ]
+  ],
+  "centroid": [
+   19.41,
+   -0.91,
+   -10.73
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hpo1-pos-right",
+  "name": "Area hPO1 (POS) right",
+  "label": 114,
+  "fragment": "right hemisphere",
+  "faces": 3978,
+  "bbox": [
+   [
+    11.53,
+    -90.1,
+    23.87
+   ],
+   [
+    31.46,
+    -74.23,
+    50.35
+   ]
+  ],
+  "centroid": [
+   21.78,
+   -82.32,
+   39.39
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ndentd-cerebellum-dorsal-dentate-nucleus-right",
+  "name": "Ndentd (Cerebellum, Dorsal Dentate Nucleus) right",
+  "label": 115,
+  "fragment": "right hemisphere",
+  "faces": 1860,
+  "bbox": [
+   [
+    7.87,
+    -69.01,
+    -41.85
+   ],
+   [
+    20.1,
+    -49.87,
+    -31.75
+   ]
+  ],
+  "centroid": [
+   13.94,
+   -59.69,
+   -36.97
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifs3-ifs-right",
+  "name": "Area IFS3 (IFS) right",
+  "label": 116,
+  "fragment": "right hemisphere",
+  "faces": 1488,
+  "bbox": [
+   [
+    30.13,
+    21.41,
+    28.1
+   ],
+   [
+    46.23,
+    31.05,
+    40.55
+   ]
+  ],
+  "centroid": [
+   37.24,
+   26.95,
+   34.06
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op2-poperc-right",
+  "name": "Area Op2 (POperc) right",
+  "label": 117,
+  "fragment": "right hemisphere",
+  "faces": 1524,
+  "bbox": [
+   [
+    30.17,
+    -28.3,
+    12.59
+   ],
+   [
+    42.2,
+    -14.58,
+    23.38
+   ]
+  ],
+  "centroid": [
+   35.83,
+   -20.83,
+   19.11
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-8v2-mfg-right",
+  "name": "Area 8v2 (MFG) right",
+  "label": 118,
+  "fragment": "right hemisphere",
+  "faces": 1548,
+  "bbox": [
+   [
+    31.17,
+    19.48,
+    34.75
+   ],
+   [
+    41.03,
+    33.35,
+    45.84
+   ]
+  ],
+  "centroid": [
+   35.97,
+   27.41,
+   39.97
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "acbm-ventral-striatum-medial-accumbens-right",
+  "name": "AcbM (Ventral Striatum, Medial Accumbens) right",
+  "label": 119,
+  "fragment": "right hemisphere",
+  "faces": 546,
+  "bbox": [
+   [
+    3.45,
+    4.47,
+    -10.84
+   ],
+   [
+    8.77,
+    12.55,
+    -4.13
+   ]
+  ],
+  "centroid": [
+   5.85,
+   8.67,
+   -7.41
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "dg-hippocampus-right",
+  "name": "DG (Hippocampus) right",
+  "label": 120,
+  "fragment": "right hemisphere",
+  "faces": 894,
+  "bbox": [
+   [
+    25.4,
+    -34.81,
+    -18.62
+   ],
+   [
+    33.13,
+    -18.39,
+    -4.12
+   ]
+  ],
+  "centroid": [
+   29.91,
+   -26.78,
+   -12.07
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pgp-ipl-right",
+  "name": "Area PGp (IPL) right",
+  "label": 121,
+  "fragment": "right hemisphere",
+  "faces": 9830,
+  "bbox": [
+   [
+    32.85,
+    -83.7,
+    14.93
+   ],
+   [
+    62.61,
+    -53.7,
+    58.9
+   ]
+  ],
+  "centroid": [
+   47.65,
+   -68.13,
+   35.69
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6ma-presma-mesial-sfg-right",
+  "name": "Area 6ma (preSMA, mesial SFG) right",
+  "label": 122,
+  "fragment": "right hemisphere",
+  "faces": 4900,
+  "bbox": [
+   [
+    0.61,
+    -5.61,
+    45.03
+   ],
+   [
+    13.39,
+    19.88,
+    70.67
+   ]
+  ],
+  "centroid": [
+   5.52,
+   6.03,
+   57.03
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ig1-insula-right",
+  "name": "Area Ig1 (Insula) right",
+  "label": 123,
+  "fragment": "right hemisphere",
+  "faces": 1010,
+  "bbox": [
+   [
+    30.07,
+    -26.9,
+    1.24
+   ],
+   [
+    39.27,
+    -20.12,
+    16.82
+   ]
+  ],
+  "centroid": [
+   34.14,
+   -23.38,
+   9.33
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id10-insula-right",
+  "name": "Area Id10 (Insula) right",
+  "label": 124,
+  "fragment": "right hemisphere",
+  "faces": 2960,
+  "bbox": [
+   [
+    23.02,
+    11.46,
+    -23.99
+   ],
+   [
+    35.48,
+    28.3,
+    -2.24
+   ]
+  ],
+  "centroid": [
+   29.36,
+   19.94,
+   -13.6
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vm-thalamus-ventral-medial-nucleus-right",
+  "name": "VM (Thalamus, ventral medial Nucleus) right",
+  "label": 125,
+  "fragment": "right hemisphere",
+  "faces": 212,
+  "bbox": [
+   [
+    6.18,
+    -15.44,
+    -5.15
+   ],
+   [
+    10.36,
+    -11.57,
+    -3.02
+   ]
+  ],
+  "centroid": [
+   8.2,
+   -13.5,
+   -4.16
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-p24c-pacc-right",
+  "name": "Area p24c (pACC) right",
+  "label": 126,
+  "fragment": "right hemisphere",
+  "faces": 5052,
+  "bbox": [
+   [
+    0.35,
+    35.22,
+    -8.74
+   ],
+   [
+    16.33,
+    50.11,
+    28.49
+   ]
+  ],
+  "centroid": [
+   9.31,
+   42.89,
+   9.78
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc3v-lingg-right",
+  "name": "Area hOc3v (LingG) right",
+  "label": 127,
+  "fragment": "right hemisphere",
+  "faces": 7346,
+  "bbox": [
+   [
+    9.16,
+    -95.85,
+    -19.39
+   ],
+   [
+    43.6,
+    -62.01,
+    -0.7
+   ]
+  ],
+  "centroid": [
+   24.22,
+   -82.09,
+   -10.2
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pfcm-ipl-right",
+  "name": "Area PFcm (IPL) right",
+  "label": 128,
+  "fragment": "right hemisphere",
+  "faces": 4944,
+  "bbox": [
+   [
+    32.39,
+    -35.37,
+    16.98
+   ],
+   [
+    65.72,
+    -19.79,
+    40.93
+   ]
+  ],
+  "centroid": [
+   51.19,
+   -28.87,
+   25.47
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pirt-piriformcortexmesial-temporal-right",
+  "name": "Area PirT (PiriformCortexMesial, temporal) right",
+  "label": 130,
+  "fragment": "right hemisphere",
+  "faces": 328,
+  "bbox": [
+   [
+    21.3,
+    5.33,
+    -28.66
+   ],
+   [
+    27.45,
+    9.44,
+    -22.88
+   ]
+  ],
+  "centroid": [
+   24.56,
+   7.35,
+   -25.81
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sfs2-sfs-right",
+  "name": "Area SFS2 (SFS) right",
+  "label": 129,
+  "fragment": "right hemisphere",
+  "faces": 3356,
+  "bbox": [
+   [
+    21.06,
+    40.15,
+    12.2
+   ],
+   [
+    34.18,
+    60.4,
+    32.66
+   ]
+  ],
+  "centroid": [
+   28.33,
+   51.15,
+   22.25
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip5-ips-right",
+  "name": "Area hIP5 (IPS) right",
+  "label": 132,
+  "fragment": "right hemisphere",
+  "faces": 2686,
+  "bbox": [
+   [
+    28.0,
+    -80.37,
+    27.27
+   ],
+   [
+    37.07,
+    -62.36,
+    51.78
+   ]
+  ],
+  "centroid": [
+   32.68,
+   -71.46,
+   38.9
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "cm-thalamus-centromedian-nucleus-right",
+  "name": "CM (Thalamus, centromedian Nucleus) right",
+  "label": 131,
+  "fragment": "right hemisphere",
+  "faces": 684,
+  "bbox": [
+   [
+    6.42,
+    -26.14,
+    -4.16
+   ],
+   [
+    13.6,
+    -18.25,
+    2.26
+   ]
+  ],
+  "centroid": [
+   9.71,
+   -22.3,
+   -1.26
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sfs1-sfs-right",
+  "name": "Area SFS1 (SFS) right",
+  "label": 133,
+  "fragment": "right hemisphere",
+  "faces": 2226,
+  "bbox": [
+   [
+    20.25,
+    42.5,
+    13.36
+   ],
+   [
+    31.55,
+    64.35,
+    28.49
+   ]
+  ],
+  "centroid": [
+   25.16,
+   54.14,
+   20.37
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-to-temporal-i-gapmap-right",
+  "name": "Frontal-to-Temporal-I (GapMap) right",
+  "label": 135,
+  "fragment": "right hemisphere",
+  "faces": 4112,
+  "bbox": [
+   [
+    28.38,
+    19.78,
+    -23.89
+   ],
+   [
+    50.42,
+    35.64,
+    -2.78
+   ]
+  ],
+  "centroid": [
+   38.57,
+   27.48,
+   -13.76
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fg1-fusg-right",
+  "name": "Area FG1 (FusG) right",
+  "label": 134,
+  "fragment": "right hemisphere",
+  "faces": 3316,
+  "bbox": [
+   [
+    23.11,
+    -71.31,
+    -20.8
+   ],
+   [
+    43.61,
+    -55.8,
+    -1.78
+   ]
+  ],
+  "centroid": [
+   32.72,
+   -64.2,
+   -12.51
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "fucd-ventral-striatum-fundus-of-caudate-nucleus-right",
+  "name": "FuCd (Ventral Striatum, Fundus of Caudate Nucleus) right",
+  "label": 136,
+  "fragment": "right hemisphere",
+  "faces": 1830,
+  "bbox": [
+   [
+    3.84,
+    7.03,
+    -11.09
+   ],
+   [
+    16.28,
+    25.77,
+    -0.25
+   ]
+  ],
+  "centroid": [
+   10.78,
+   16.58,
+   -5.51
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "mv-thalamus-medioventral-nucleus-right",
+  "name": "MV (Thalamus, medioventral Nucleus) right",
+  "label": 138,
+  "fragment": "right hemisphere",
+  "faces": 368,
+  "bbox": [
+   [
+    0.71,
+    -10.85,
+    -3.91
+   ],
+   [
+    4.15,
+    -4.98,
+    2.31
+   ]
+  ],
+  "centroid": [
+   2.37,
+   -7.67,
+   -1.09
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vamc-thalamus-ventral-anterior-nucleus-magnocellular-part-right",
+  "name": "VAmc (Thalamus, ventral anterior Nucleus, magnocellular part) right",
+  "label": 137,
+  "fragment": "right hemisphere",
+  "faces": 1248,
+  "bbox": [
+   [
+    5.1,
+    -12.48,
+    -2.18
+   ],
+   [
+    12.88,
+    -3.6,
+    15.82
+   ]
+  ],
+  "centroid": [
+   8.94,
+   -8.3,
+   7.86
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-i-2-gapmap-right",
+  "name": "Frontal-I.2 (GapMap) right",
+  "label": 140,
+  "fragment": "right hemisphere",
+  "faces": 7568,
+  "bbox": [
+   [
+    -0.14,
+    13.86,
+    28.46
+   ],
+   [
+    11.43,
+    56.76,
+    64.31
+   ]
+  ],
+  "centroid": [
+   4.6,
+   33.17,
+   44.17
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip3-ips-right",
+  "name": "Area hIP3 (IPS) right",
+  "label": 139,
+  "fragment": "right hemisphere",
+  "faces": 8932,
+  "bbox": [
+   [
+    20.65,
+    -66.63,
+    36.79
+   ],
+   [
+    46.46,
+    -26.93,
+    60.38
+   ]
+  ],
+  "centroid": [
+   35.55,
+   -46.08,
+   48.2
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "cm-amygdala-right",
+  "name": "CM (Amygdala) right",
+  "label": 141,
+  "fragment": "right hemisphere",
+  "faces": 1360,
+  "bbox": [
+   [
+    15.5,
+    -11.05,
+    -16.9
+   ],
+   [
+    27.62,
+    2.83,
+    -8.83
+   ]
+  ],
+  "centroid": [
+   21.66,
+   -4.26,
+   -13.03
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-4p-precg-right",
+  "name": "Area 4p (PreCG) right",
+  "label": 142,
+  "fragment": "right hemisphere",
+  "faces": 3530,
+  "bbox": [
+   [
+    25.11,
+    -29.61,
+    29.28
+   ],
+   [
+    53.82,
+    -3.44,
+    58.88
+   ]
+  ],
+  "centroid": [
+   37.22,
+   -17.44,
+   45.92
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-33-acc-right",
+  "name": "Area 33 (ACC) right",
+  "label": 143,
+  "fragment": "right hemisphere",
+  "faces": 4218,
+  "bbox": [
+   [
+    0.6,
+    3.57,
+    -5.48
+   ],
+   [
+    8.34,
+    37.11,
+    31.48
+   ]
+  ],
+  "centroid": [
+   4.41,
+   24.09,
+   17.49
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ots1-ots-right",
+  "name": "Area OTS1 (OTS) right",
+  "label": 144,
+  "fragment": "right hemisphere",
+  "faces": 2492,
+  "bbox": [
+   [
+    39.38,
+    -41.46,
+    -28.38
+   ],
+   [
+    51.75,
+    -14.45,
+    -16.23
+   ]
+  ],
+  "centroid": [
+   45.16,
+   -28.32,
+   -22.19
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id2-insula-right",
+  "name": "Area Id2 (Insula) right",
+  "label": 145,
+  "fragment": "right hemisphere",
+  "faces": 1322,
+  "bbox": [
+   [
+    35.27,
+    -14.7,
+    -3.62
+   ],
+   [
+    45.22,
+    -2.82,
+    10.25
+   ]
+  ],
+  "centroid": [
+   41.22,
+   -9.63,
+   3.67
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ca1-hippocampus-right",
+  "name": "CA1 (Hippocampus) right",
+  "label": 146,
+  "fragment": "right hemisphere",
+  "faces": 4504,
+  "bbox": [
+   [
+    15.38,
+    -35.01,
+    -28.24
+   ],
+   [
+    38.95,
+    -3.95,
+    -5.52
+   ]
+  ],
+  "centroid": [
+   30.3,
+   -17.77,
+   -19.25
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-i-1-gapmap-right",
+  "name": "Frontal-I.1 (GapMap) right",
+  "label": 147,
+  "fragment": "right hemisphere",
+  "faces": 8816,
+  "bbox": [
+   [
+    22.81,
+    33.5,
+    -10.86
+   ],
+   [
+    52.73,
+    65.95,
+    15.1
+   ]
+  ],
+  "centroid": [
+   39.48,
+   50.4,
+   1.2
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip8-ips-right",
+  "name": "Area hIP8 (IPS) right",
+  "label": 148,
+  "fragment": "right hemisphere",
+  "faces": 4072,
+  "bbox": [
+   [
+    18.28,
+    -83.71,
+    28.34
+   ],
+   [
+    32.08,
+    -60.03,
+    53.85
+   ]
+  ],
+  "centroid": [
+   25.65,
+   -70.7,
+   42.7
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op9-frontal-operculum-right",
+  "name": "Area Op9 (Frontal Operculum) right",
+  "label": 150,
+  "fragment": "right hemisphere",
+  "faces": 4854,
+  "bbox": [
+   [
+    32.62,
+    20.36,
+    -10.97
+   ],
+   [
+    56.02,
+    36.05,
+    13.09
+   ]
+  ],
+  "centroid": [
+   45.2,
+   27.02,
+   0.45
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "if-amygdala-right",
+  "name": "IF (Amygdala) right",
+  "label": 149,
+  "fragment": "right hemisphere",
+  "faces": 924,
+  "bbox": [
+   [
+    22.46,
+    -3.68,
+    -22.59
+   ],
+   [
+    31.51,
+    4.28,
+    -14.66
+   ]
+  ],
+  "centroid": [
+   27.25,
+   0.12,
+   -18.97
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "temporal-to-parietal-gapmap-right",
+  "name": "Temporal-to-Parietal (GapMap) right",
+  "label": 152,
+  "fragment": "right hemisphere",
+  "faces": 83356,
+  "bbox": [
+   [
+    7.03,
+    -86.89,
+    -52.47
+   ],
+   [
+    72.28,
+    26.91,
+    46.3
+   ]
+  ],
+  "centroid": [
+   44.76,
+   -28.41,
+   -12.97
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vim-thalamus-ventral-intermediate-nucleus-right",
+  "name": "VIM (Thalamus, ventral intermediate Nucleus) right",
+  "label": 151,
+  "fragment": "right hemisphere",
+  "faces": 2136,
+  "bbox": [
+   [
+    6.67,
+    -22.66,
+    -7.2
+   ],
+   [
+    20.82,
+    -10.32,
+    6.46
+   ]
+  ],
+  "centroid": [
+   13.78,
+   -16.48,
+   0.16
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "hata-hippocampus-right",
+  "name": "HATA (Hippocampus) right",
+  "label": 153,
+  "fragment": "right hemisphere",
+  "faces": 830,
+  "bbox": [
+   [
+    10.13,
+    -14.2,
+    -26.75
+   ],
+   [
+    18.17,
+    -6.87,
+    -15.26
+   ]
+  ],
+  "centroid": [
+   13.98,
+   -9.97,
+   -20.87
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "tuti-basal-forebrain-terminal-islands-right",
+  "name": "TuTi (Basal Forebrain, Terminal islands) right",
+  "label": 154,
+  "fragment": "right hemisphere",
+  "faces": 1172,
+  "bbox": [
+   [
+    4.49,
+    2.87,
+    -17.07
+   ],
+   [
+    23.39,
+    9.41,
+    -9.33
+   ]
+  ],
+  "centroid": [
+   14.12,
+   5.79,
+   -13.45
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-45-ifg-right",
+  "name": "Area 45 (IFG) right",
+  "label": 155,
+  "fragment": "right hemisphere",
+  "faces": 7990,
+  "bbox": [
+   [
+    35.9,
+    16.54,
+    -6.99
+   ],
+   [
+    60.88,
+    44.57,
+    29.26
+   ]
+  ],
+  "centroid": [
+   51.85,
+   30.63,
+   11.41
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id1-insula-right",
+  "name": "Area Id1 (Insula) right",
+  "label": 160,
+  "fragment": "right hemisphere",
+  "faces": 1108,
+  "bbox": [
+   [
+    36.01,
+    -23.8,
+    -11.53
+   ],
+   [
+    43.36,
+    -10.86,
+    3.03
+   ]
+  ],
+  "centroid": [
+   39.62,
+   -17.12,
+   -3.74
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ia2-insula-right",
+  "name": "Area Ia2 (Insula) right",
+  "label": 159,
+  "fragment": "right hemisphere",
+  "faces": 528,
+  "bbox": [
+   [
+    36.96,
+    -0.66,
+    -23.9
+   ],
+   [
+    43.39,
+    6.9,
+    -18.36
+   ]
+  ],
+  "centroid": [
+   40.1,
+   3.18,
+   -20.9
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-to-temporal-ii-gapmap-right",
+  "name": "Frontal-to-Temporal-II (GapMap) right",
+  "label": 158,
+  "fragment": "right hemisphere",
+  "faces": 5474,
+  "bbox": [
+   [
+    2.67,
+    -4.07,
+    -24.35
+   ],
+   [
+    40.6,
+    18.7,
+    -7.96
+   ]
+  ],
+  "centroid": [
+   25.2,
+   8.72,
+   -16.94
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-5ci-spl-right",
+  "name": "Area 5Ci (SPL) right",
+  "label": 157,
+  "fragment": "right hemisphere",
+  "faces": 4220,
+  "bbox": [
+   [
+    5.43,
+    -46.0,
+    37.0
+   ],
+   [
+    19.26,
+    -23.38,
+    58.62
+   ]
+  ],
+  "centroid": [
+   12.99,
+   -35.87,
+   47.84
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "cl-thalamus-anterior-intralaminar-nuclei-right",
+  "name": "CL (Thalamus, anterior intralaminar nuclei) right",
+  "label": 156,
+  "fragment": "right hemisphere",
+  "faces": 2780,
+  "bbox": [
+   [
+    1.93,
+    -27.85,
+    -3.02
+   ],
+   [
+    14.49,
+    -6.2,
+    14.86
+   ]
+  ],
+  "centroid": [
+   8.19,
+   -17.03,
+   5.88
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id5-insula-right",
+  "name": "Area Id5 (Insula) right",
+  "label": 162,
+  "fragment": "right hemisphere",
+  "faces": 2166,
+  "bbox": [
+   [
+    34.08,
+    -11.1,
+    -9.83
+   ],
+   [
+    45.86,
+    6.17,
+    9.03
+   ]
+  ],
+  "centroid": [
+   39.5,
+   -2.2,
+   0.62
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-1-2-heschl-right",
+  "name": "Area Te 1.2 (HESCHL) right",
+  "label": 161,
+  "fragment": "right hemisphere",
+  "faces": 1256,
+  "bbox": [
+   [
+    48.61,
+    -7.48,
+    -4.92
+   ],
+   [
+    60.33,
+    4.65,
+    4.96
+   ]
+  ],
+  "centroid": [
+   54.7,
+   -1.8,
+   0.13
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip1-ips-right",
+  "name": "Area hIP1 (IPS) right",
+  "label": 163,
+  "fragment": "right hemisphere",
+  "faces": 2398,
+  "bbox": [
+   [
+    29.29,
+    -53.86,
+    34.92
+   ],
+   [
+    46.84,
+    -38.07,
+    50.47
+   ]
+  ],
+  "centroid": [
+   39.01,
+   -46.13,
+   42.06
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-2-postcs-right",
+  "name": "Area 2 (PostCS) right",
+  "label": 164,
+  "fragment": "right hemisphere",
+  "faces": 6362,
+  "bbox": [
+   [
+    19.35,
+    -42.7,
+    40.88
+   ],
+   [
+    59.69,
+    -15.48,
+    70.68
+   ]
+  ],
+  "centroid": [
+   37.0,
+   -31.81,
+   54.31
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-2-1-stg-right",
+  "name": "Area Te 2.1 (STG) right",
+  "label": 167,
+  "fragment": "right hemisphere",
+  "faces": 1356,
+  "bbox": [
+   [
+    48.2,
+    -19.64,
+    -0.31
+   ],
+   [
+    63.29,
+    -1.4,
+    7.45
+   ]
+  ],
+  "centroid": [
+   57.12,
+   -10.81,
+   3.25
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ch-123-basal-forebrain-right",
+  "name": "Ch 123 (Basal Forebrain) right",
+  "label": 166,
+  "fragment": "right hemisphere",
+  "faces": 748,
+  "bbox": [
+   [
+    0.66,
+    0.95,
+    -13.59
+   ],
+   [
+    7.59,
+    8.96,
+    -4.24
+   ]
+  ],
+  "centroid": [
+   3.57,
+   4.94,
+   -9.24
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc3d-cuneus-right",
+  "name": "Area hOc3d (Cuneus) right",
+  "label": 165,
+  "fragment": "right hemisphere",
+  "faces": 8076,
+  "bbox": [
+   [
+    1.35,
+    -98.85,
+    2.65
+   ],
+   [
+    36.6,
+    -71.91,
+    39.8
+   ]
+  ],
+  "centroid": [
+   15.08,
+   -87.87,
+   24.93
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-op3-poperc-right",
+  "name": "Area Op3 (POperc) right",
+  "label": 171,
+  "fragment": "right hemisphere",
+  "faces": 1640,
+  "bbox": [
+   [
+    33.05,
+    -16.42,
+    13.24
+   ],
+   [
+    49.29,
+    -4.08,
+    23.31
+   ]
+  ],
+  "centroid": [
+   41.05,
+   -10.29,
+   18.67
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-7a-spl-right",
+  "name": "Area 7A (SPL) right",
+  "label": 170,
+  "fragment": "right hemisphere",
+  "faces": 12262,
+  "bbox": [
+   [
+    1.89,
+    -72.57,
+    47.16
+   ],
+   [
+    43.98,
+    -47.07,
+    75.9
+   ]
+  ],
+  "centroid": [
+   22.77,
+   -58.94,
+   61.69
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "sg-thalamus-suprageniculate-nucleus-right",
+  "name": "Sg (Thalamus, suprageniculate Nucleus) right",
+  "label": 169,
+  "fragment": "right hemisphere",
+  "faces": 622,
+  "bbox": [
+   [
+    4.46,
+    -31.33,
+    -9.64
+   ],
+   [
+    12.83,
+    -23.19,
+    -3.88
+   ]
+  ],
+  "centroid": [
+   9.56,
+   -26.66,
+   -6.56
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vpl-thalamus-ventral-posterior-lateral-nucleus-right",
+  "name": "VPL (Thalamus, ventral posterior lateral Nucleus) right",
+  "label": 168,
+  "fragment": "right hemisphere",
+  "faces": 1316,
+  "bbox": [
+   [
+    13.89,
+    -28.29,
+    -4.05
+   ],
+   [
+    22.18,
+    -20.06,
+    12.86
+   ]
+  ],
+  "centroid": [
+   18.11,
+   -24.01,
+   4.44
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "subc-hippocampus-subicular-complex-right",
+  "name": "Subc (Hippocampus, Subicular complex) right",
+  "label": 172,
+  "fragment": "right hemisphere",
+  "faces": 6950,
+  "bbox": [
+   [
+    12.51,
+    -43.68,
+    -34.43
+   ],
+   [
+    34.29,
+    -1.8,
+    0.59
+   ]
+  ],
+  "centroid": [
+   22.53,
+   -21.61,
+   -18.87
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "trs-hippocampus-transsubiculum-right",
+  "name": "TrS (Hippocampus, Transsubiculum) right",
+  "label": 173,
+  "fragment": "right hemisphere",
+  "faces": 1332,
+  "bbox": [
+   [
+    14.12,
+    -44.98,
+    -20.38
+   ],
+   [
+    21.01,
+    -26.46,
+    -2.59
+   ]
+  ],
+  "centroid": [
+   17.52,
+   -36.02,
+   -10.38
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "ca3-hippocampus-right",
+  "name": "CA3 (Hippocampus) right",
+  "label": 174,
+  "fragment": "right hemisphere",
+  "faces": 1910,
+  "bbox": [
+   [
+    19.26,
+    -33.71,
+    -19.97
+   ],
+   [
+    32.29,
+    -9.46,
+    -4.0
+   ]
+  ],
+  "centroid": [
+   27.62,
+   -21.69,
+   -12.32
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "frontal-ii-gapmap-right",
+  "name": "Frontal-II (GapMap) right",
+  "label": 175,
+  "fragment": "right hemisphere",
+  "faces": 7340,
+  "bbox": [
+   [
+    30.63,
+    -0.25,
+    24.27
+   ],
+   [
+    54.29,
+    28.14,
+    54.55
+   ]
+  ],
+  "centroid": [
+   42.05,
+   14.75,
+   39.15
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vla-thalamus-ventral-lateral-anterior-nucleus-right",
+  "name": "VLA (Thalamus, ventral lateral anterior Nucleus) right",
+  "label": 176,
+  "fragment": "right hemisphere",
+  "faces": 248,
+  "bbox": [
+   [
+    11.5,
+    -12.07,
+    -2.84
+   ],
+   [
+    15.85,
+    -9.06,
+    1.46
+   ]
+  ],
+  "centroid": [
+   13.99,
+   -10.53,
+   -0.96
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-sts1-sts-right",
+  "name": "Area STS1 (STS) right",
+  "label": 177,
+  "fragment": "right hemisphere",
+  "faces": 6594,
+  "bbox": [
+   [
+    42.86,
+    -32.14,
+    -16.01
+   ],
+   [
+    64.27,
+    1.01,
+    5.21
+   ]
+  ],
+  "centroid": [
+   53.59,
+   -18.81,
+   -4.73
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-id9-insula-right",
+  "name": "Area Id9 (Insula) right",
+  "label": 180,
+  "fragment": "right hemisphere",
+  "faces": 1556,
+  "bbox": [
+   [
+    34.87,
+    3.27,
+    -13.71
+   ],
+   [
+    45.93,
+    18.02,
+    -3.5
+   ]
+  ],
+  "centroid": [
+   40.71,
+   10.59,
+   -8.13
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-5l-spl-right",
+  "name": "Area 5L (SPL) right",
+  "label": 179,
+  "fragment": "right hemisphere",
+  "faces": 5688,
+  "bbox": [
+   [
+    1.94,
+    -58.78,
+    58.22
+   ],
+   [
+    24.25,
+    -34.03,
+    82.29
+   ]
+  ],
+  "centroid": [
+   14.45,
+   -46.93,
+   71.99
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vpm-thalamus-ventral-posterior-medial-nucleus-right",
+  "name": "VPM (Thalamus, ventral posterior medial Nucleus) right",
+  "label": 178,
+  "fragment": "right hemisphere",
+  "faces": 48,
+  "bbox": [
+   [
+    11.61,
+    -21.62,
+    -5.05
+   ],
+   [
+    13.15,
+    -21.25,
+    -4.94
+   ]
+  ],
+  "centroid": [
+   12.33,
+   -21.43,
+   -5.0
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "snr-midbrain-substantia-nigra-pars-reticulata-right",
+  "name": "SNR (Midbrain, Substantia Nigra pars reticulata) right",
+  "label": 181,
+  "fragment": "right hemisphere",
+  "faces": 1304,
+  "bbox": [
+   [
+    3.15,
+    -22.51,
+    -20.8
+   ],
+   [
+    14.85,
+    -9.34,
+    -8.75
+   ]
+  ],
+  "centroid": [
+   9.58,
+   -15.69,
+   -15.65
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifs2-ifs-right",
+  "name": "Area IFS2 (IFS) right",
+  "label": 183,
+  "fragment": "right hemisphere",
+  "faces": 808,
+  "bbox": [
+   [
+    41.44,
+    18.74,
+    17.61
+   ],
+   [
+    48.22,
+    27.35,
+    26.79
+   ]
+  ],
+  "centroid": [
+   44.9,
+   22.09,
+   21.49
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fg3-fusg-right",
+  "name": "Area FG3 (FusG) right",
+  "label": 182,
+  "fragment": "right hemisphere",
+  "faces": 3178,
+  "bbox": [
+   [
+    23.51,
+    -58.96,
+    -26.62
+   ],
+   [
+    37.98,
+    -28.03,
+    -14.21
+   ]
+  ],
+  "centroid": [
+   30.58,
+   -42.68,
+   -19.79
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "av-thalamus-anteroventral-nucleus-right",
+  "name": "AV (Thalamus, anteroventral Nucleus) right",
+  "label": 184,
+  "fragment": "right hemisphere",
+  "faces": 732,
+  "bbox": [
+   [
+    1.36,
+    -13.92,
+    10.28
+   ],
+   [
+    8.68,
+    -2.63,
+    17.16
+   ]
+  ],
+  "centroid": [
+   5.06,
+   -8.1,
+   13.94
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vp-ventral-pallidum-right",
+  "name": "VP (Ventral Pallidum) right",
+  "label": 185,
+  "fragment": "right hemisphere",
+  "faces": 1232,
+  "bbox": [
+   [
+    6.05,
+    -2.03,
+    -12.85
+   ],
+   [
+    18.9,
+    9.38,
+    -3.87
+   ]
+  ],
+  "centroid": [
+   12.62,
+   2.84,
+   -8.42
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "nfast-cerebellum-fastigial-nucleus-right",
+  "name": "Nfast (Cerebellum, Fastigial Nucleus) right",
+  "label": 187,
+  "fragment": "right hemisphere",
+  "faces": 670,
+  "bbox": [
+   [
+    -1.21,
+    -59.6,
+    -33.95
+   ],
+   [
+    5.07,
+    -50.6,
+    -25.95
+   ]
+  ],
+  "centroid": [
+   1.87,
+   -54.7,
+   -29.48
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-s32-sacc-right",
+  "name": "Area s32 (sACC) right",
+  "label": 186,
+  "fragment": "right hemisphere",
+  "faces": 2854,
+  "bbox": [
+   [
+    -0.46,
+    22.12,
+    -24.23
+   ],
+   [
+    10.8,
+    46.45,
+    -9.02
+   ]
+  ],
+  "centroid": [
+   4.12,
+   35.29,
+   -16.14
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "mf-amygdala-right",
+  "name": "MF (Amygdala) right",
+  "label": 188,
+  "fragment": "right hemisphere",
+  "faces": 262,
+  "bbox": [
+   [
+    16.84,
+    -9.02,
+    -18.32
+   ],
+   [
+    20.62,
+    -5.02,
+    -14.59
+   ]
+  ],
+  "centroid": [
+   19.02,
+   -7.36,
+   -16.32
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc5-loc-right",
+  "name": "Area hOc5 (LOC) right",
+  "label": 189,
+  "fragment": "right hemisphere",
+  "faces": 1200,
+  "bbox": [
+   [
+    41.29,
+    -69.18,
+    -1.1
+   ],
+   [
+    53.98,
+    -60.36,
+    8.86
+   ]
+  ],
+  "centroid": [
+   47.48,
+   -64.92,
+   3.87
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "spf-thalamus-subparafascicular-nucleus-right",
+  "name": "sPf (Thalamus, subparafascicular Nucleus) right",
+  "label": 190,
+  "fragment": "right hemisphere",
+  "faces": 498,
+  "bbox": [
+   [
+    2.82,
+    -22.83,
+    -7.74
+   ],
+   [
+    8.61,
+    -14.47,
+    -3.77
+   ]
+  ],
+  "centroid": [
+   5.46,
+   -19.19,
+   -5.7
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo1-ofc-right",
+  "name": "Area Fo1 (OFC) right",
+  "label": 192,
+  "fragment": "right hemisphere",
+  "faces": 5694,
+  "bbox": [
+   [
+    -0.5,
+    26.36,
+    -32.26
+   ],
+   [
+    14.38,
+    59.19,
+    -17.17
+   ]
+  ],
+  "centroid": [
+   6.91,
+   41.54,
+   -25.15
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "sf-amygdala-right",
+  "name": "SF (Amygdala) right",
+  "label": 191,
+  "fragment": "right hemisphere",
+  "faces": 1612,
+  "bbox": [
+   [
+    10.11,
+    -8.74,
+    -29.6
+   ],
+   [
+    22.94,
+    2.74,
+    -13.23
+   ]
+  ],
+  "centroid": [
+   16.11,
+   -3.19,
+   -20.7
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-s24-sacc-right",
+  "name": "Area s24 (sACC) right",
+  "label": 197,
+  "fragment": "right hemisphere",
+  "faces": 2548,
+  "bbox": [
+   [
+    -0.47,
+    14.68,
+    -19.27
+   ],
+   [
+    8.72,
+    39.59,
+    -3.35
+   ]
+  ],
+  "centroid": [
+   3.24,
+   25.16,
+   -10.33
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ifj1-ifs-precs-right",
+  "name": "Area IFJ1 (IFS, PreCS) right",
+  "label": 196,
+  "fragment": "right hemisphere",
+  "faces": 972,
+  "bbox": [
+   [
+    33.27,
+    10.97,
+    23.73
+   ],
+   [
+    49.02,
+    19.21,
+    29.19
+   ]
+  ],
+  "centroid": [
+   41.47,
+   15.25,
+   26.28
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-8d1-sfg-right",
+  "name": "Area 8d1 (SFG) right",
+  "label": 195,
+  "fragment": "right hemisphere",
+  "faces": 5902,
+  "bbox": [
+   [
+    1.9,
+    14.92,
+    49.56
+   ],
+   [
+    26.84,
+    40.93,
+    68.28
+   ]
+  ],
+  "centroid": [
+   14.15,
+   27.1,
+   59.44
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vpi-thalamus-ventroposterior-inferior-nucleus-right",
+  "name": "VPi (Thalamus, ventroposterior inferior Nucleus) right",
+  "label": 194,
+  "fragment": "right hemisphere",
+  "faces": 364,
+  "bbox": [
+   [
+    11.66,
+    -23.95,
+    -9.03
+   ],
+   [
+    17.83,
+    -19.16,
+    -4.49
+   ]
+  ],
+  "centroid": [
+   14.99,
+   -21.71,
+   -6.95
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "vpmpc-thalamus-ventral-posterior-medial-nucleus-parvocellular-part-right",
+  "name": "VPMpc (Thalamus, ventral posterior medial Nucleus, parvocellular part) right",
+  "label": 193,
+  "fragment": "right hemisphere",
+  "faces": 156,
+  "bbox": [
+   [
+    9.08,
+    -22.56,
+    -6.98
+   ],
+   [
+    12.17,
+    -19.5,
+    -5.21
+   ]
+  ],
+  "centroid": [
+   10.27,
+   -20.91,
+   -6.19
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-pfop-ipl-right",
+  "name": "Area PFop (IPL) right",
+  "label": 199,
+  "fragment": "right hemisphere",
+  "faces": 2720,
+  "bbox": [
+   [
+    51.11,
+    -23.38,
+    18.75
+   ],
+   [
+    69.39,
+    -10.05,
+    33.28
+   ]
+  ],
+  "centroid": [
+   61.33,
+   -16.37,
+   26.5
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hoc4v-lingg-right",
+  "name": "Area hOc4v (LingG) right",
+  "label": 198,
+  "fragment": "right hemisphere",
+  "faces": 5716,
+  "bbox": [
+   [
+    20.06,
+    -88.97,
+    -19.46
+   ],
+   [
+    47.26,
+    -64.28,
+    -2.77
+   ]
+  ],
+  "centroid": [
+   32.91,
+   -77.76,
+   -12.29
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-ph2-phg-right",
+  "name": "Area Ph2 (PhG) right",
+  "label": 201,
+  "fragment": "right hemisphere",
+  "faces": 2310,
+  "bbox": [
+   [
+    22.03,
+    -45.15,
+    -20.66
+   ],
+   [
+    37.15,
+    -31.3,
+    -4.23
+   ]
+  ],
+  "centroid": [
+   30.52,
+   -38.79,
+   -13.56
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-6v2-precg-right",
+  "name": "Area 6v2 (PreCG) right",
+  "label": 200,
+  "fragment": "right hemisphere",
+  "faces": 6256,
+  "bbox": [
+   [
+    32.84,
+    -4.3,
+    24.28
+   ],
+   [
+    57.48,
+    13.99,
+    58.45
+   ]
+  ],
+  "centroid": [
+   46.0,
+   4.57,
+   41.48
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-fo2-ofc-right",
+  "name": "Area Fo2 (OFC) right",
+  "label": 203,
+  "fragment": "right hemisphere",
+  "faces": 3744,
+  "bbox": [
+   [
+    -0.39,
+    12.11,
+    -30.08
+   ],
+   [
+    16.7,
+    30.82,
+    -12.75
+   ]
+  ],
+  "centroid": [
+   7.87,
+   21.6,
+   -21.55
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "acbl-ventral-striatum-lateral-accumbens-right",
+  "name": "AcbL (Ventral Striatum, Lateral Accumbens) right",
+  "label": 202,
+  "fragment": "right hemisphere",
+  "faces": 768,
+  "bbox": [
+   [
+    7.1,
+    7.76,
+    -15.08
+   ],
+   [
+    15.15,
+    16.62,
+    -8.72
+   ]
+  ],
+  "centroid": [
+   11.12,
+   11.87,
+   -11.72
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-hip7-ips-right",
+  "name": "Area hIP7 (IPS) right",
+  "label": 205,
+  "fragment": "right hemisphere",
+  "faces": 4688,
+  "bbox": [
+   [
+    23.95,
+    -88.54,
+    13.32
+   ],
+   [
+    38.84,
+    -65.76,
+    39.73
+   ]
+  ],
+  "centroid": [
+   30.76,
+   -79.44,
+   27.36
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-te-2-2-stg-right",
+  "name": "Area Te 2.2 (STG) right",
+  "label": 204,
+  "fragment": "right hemisphere",
+  "faces": 3912,
+  "bbox": [
+   [
+    38.41,
+    -35.21,
+    0.77
+   ],
+   [
+    64.33,
+    -8.03,
+    20.84
+   ]
+  ],
+  "centroid": [
+   52.7,
+   -23.53,
+   11.57
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-7pc-spl-right",
+  "name": "Area 7PC (SPL) right",
+  "label": 206,
+  "fragment": "right hemisphere",
+  "faces": 5246,
+  "bbox": [
+   [
+    20.7,
+    -53.72,
+    45.33
+   ],
+   [
+    45.19,
+    -36.49,
+    75.37
+   ]
+  ],
+  "centroid": [
+   31.07,
+   -44.74,
+   63.97
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "area-tei-stg-right",
+  "name": "Area TeI (STG) right",
+  "label": 207,
+  "fragment": "right hemisphere",
+  "faces": 2876,
+  "bbox": [
+   [
+    42.17,
+    -20.7,
+    -15.36
+   ],
+   [
+    55.38,
+    16.99,
+    2.02
+   ]
+  ],
+  "centroid": [
+   49.29,
+   0.01,
+   -5.88
+  ],
+  "source": "Julich-Brain 3.1 (FZ Jülich) CC BY-NC-SA 4.0"
+ }
+]

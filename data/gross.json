@@ -1,0 +1,2004 @@
+[
+ {
+  "id": "fma78454-fj1730",
+  "name": "Third ventricle",
+  "fma": "FMA78454",
+  "fj": "FJ1730",
+  "bp": "BP24045",
+  "faces": 3870,
+  "bbox": [
+   [
+    -3.92,
+    -33.46,
+    -22.17
+   ],
+   [
+    4.77,
+    8.44,
+    7.51
+   ]
+  ],
+  "centroid": [
+   0.49,
+   -10.54,
+   -3.06
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma78469-fj1731",
+  "name": "Fourth ventricle",
+  "fma": "FMA78469",
+  "fj": "FJ1731",
+  "bp": "BP21438",
+  "faces": 6940,
+  "bbox": [
+   [
+    -13.77,
+    -67.59,
+    -59.06
+   ],
+   [
+    16.52,
+    -30.86,
+    -23.57
+   ]
+  ],
+  "centroid": [
+   1.38,
+   -49.45,
+   -42.33
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72670-fj1732",
+  "name": "Left angular gyrus",
+  "fma": "FMA72670",
+  "fj": "FJ1732",
+  "bp": "BP21657",
+  "faces": 3588,
+  "bbox": [
+   [
+    -68.46,
+    -97.43,
+    2.83
+   ],
+   [
+    -22.91,
+    -41.37,
+    65.8
+   ]
+  ],
+  "centroid": [
+   -43.79,
+   -68.05,
+   34.55
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72669-fj1733",
+  "name": "Right angular gyrus",
+  "fma": "FMA72669",
+  "fj": "FJ1733",
+  "bp": "BP23987",
+  "faces": 3554,
+  "bbox": [
+   [
+    25.42,
+    -95.13,
+    2.98
+   ],
+   [
+    71.41,
+    -39.09,
+    66.11
+   ]
+  ],
+  "centroid": [
+   47.29,
+   -64.62,
+   34.56
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma78467-fj1738",
+  "name": "Cerebral aqueduct",
+  "fma": "FMA78467",
+  "fj": "FJ1738",
+  "bp": "BP22739",
+  "faces": 518,
+  "bbox": [
+   [
+    -1.07,
+    -33.25,
+    -24.08
+   ],
+   [
+    2.52,
+    -20.74,
+    -6.38
+   ]
+  ],
+  "centroid": [
+   0.84,
+   -27.37,
+   -15.0
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma86464-fj1742",
+  "name": "Corpus callosum",
+  "fma": "FMA86464",
+  "fj": "FJ1742",
+  "bp": "BP21574",
+  "faces": 30232,
+  "bbox": [
+   [
+    -26.33,
+    -57.31,
+    -11.37
+   ],
+   [
+    29.16,
+    38.45,
+    30.59
+   ]
+  ],
+  "centroid": [
+   0.42,
+   -8.39,
+   14.13
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72658-fj1744",
+  "name": "Left inferior frontal gyrus",
+  "fma": "FMA72658",
+  "fj": "FJ1744",
+  "bp": "BP22402",
+  "faces": 3290,
+  "bbox": [
+   [
+    -66.06,
+    4.97,
+    -19.49
+   ],
+   [
+    -29.5,
+    57.08,
+    53.69
+   ]
+  ],
+  "centroid": [
+   -46.89,
+   27.8,
+   11.99
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72657-fj1745",
+  "name": "Right inferior frontal gyrus",
+  "fma": "FMA72657",
+  "fj": "FJ1745",
+  "bp": "BP22397",
+  "faces": 3292,
+  "bbox": [
+   [
+    27.5,
+    8.8,
+    -19.69
+   ],
+   [
+    65.83,
+    61.01,
+    53.88
+   ]
+  ],
+  "centroid": [
+   46.02,
+   31.32,
+   11.98
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72978-fj1748",
+  "name": "Left insula",
+  "fma": "FMA72978",
+  "fj": "FJ1748",
+  "bp": "BP23978",
+  "faces": 2448,
+  "bbox": [
+   [
+    -47.83,
+    -24.45,
+    -12.95
+   ],
+   [
+    -27.68,
+    30.61,
+    25.93
+   ]
+  ],
+  "centroid": [
+   -38.21,
+   3.66,
+   6.17
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72977-fj1749",
+  "name": "Right insula",
+  "fma": "FMA72977",
+  "fj": "FJ1749",
+  "bp": "BP21973",
+  "faces": 2448,
+  "bbox": [
+   [
+    27.35,
+    -21.63,
+    -12.92
+   ],
+   [
+    48.45,
+    32.96,
+    25.97
+   ]
+  ],
+  "centroid": [
+   38.47,
+   6.5,
+   6.22
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72833-fj1753",
+  "name": "Left amygdala",
+  "fma": "FMA72833",
+  "fj": "FJ1753",
+  "bp": "BP20316",
+  "faces": 382,
+  "bbox": [
+   [
+    -36.17,
+    -13.26,
+    -29.11
+   ],
+   [
+    -17.81,
+    4.36,
+    -13.78
+   ]
+  ],
+  "centroid": [
+   -27.34,
+   -2.46,
+   -20.91
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72827-fj1754",
+  "name": "Left caudate nucleus",
+  "fma": "FMA72827",
+  "fj": "FJ1754",
+  "bp": "BP23921",
+  "faces": 2544,
+  "bbox": [
+   [
+    -36.51,
+    -36.78,
+    -18.85
+   ],
+   [
+    -2.68,
+    29.44,
+    23.54
+   ]
+  ],
+  "centroid": [
+   -15.57,
+   -0.37,
+   6.06
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72831-fj1757",
+  "name": "Left globus pallidus",
+  "fma": "FMA72831",
+  "fj": "FJ1757",
+  "bp": "BP20205",
+  "faces": 7080,
+  "bbox": [
+   [
+    -31.23,
+    -19.12,
+    -11.84
+   ],
+   [
+    -13.67,
+    12.54,
+    8.35
+   ]
+  ],
+  "centroid": [
+   -24.02,
+   -2.26,
+   -2.94
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72714-fj1759",
+  "name": "Left hippocampus proper",
+  "fma": "FMA72714",
+  "fj": "FJ1759",
+  "bp": "BP24047",
+  "faces": 980,
+  "bbox": [
+   [
+    -39.2,
+    -41.05,
+    -30.8
+   ],
+   [
+    -17.48,
+    -3.53,
+    3.07
+   ]
+  ],
+  "centroid": [
+   -29.31,
+   -22.72,
+   -17.04
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma78450-fj1767",
+  "name": "Left lateral ventricle",
+  "fma": "FMA78450",
+  "fj": "FJ1767",
+  "bp": "BP21451",
+  "faces": 17968,
+  "bbox": [
+   [
+    -40.72,
+    -82.84,
+    -30.4
+   ],
+   [
+    0.18,
+    33.27,
+    26.28
+   ]
+  ],
+  "centroid": [
+   -17.32,
+   -15.5,
+   5.17
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma62004-fj1769",
+  "name": "Medulla oblongata",
+  "fma": "FMA62004",
+  "fj": "FJ1769",
+  "bp": "BP23201",
+  "faces": 6036,
+  "bbox": [
+   [
+    -12.99,
+    -77.35,
+    -88.62
+   ],
+   [
+    2.02,
+    -30.67,
+    -47.43
+   ]
+  ],
+  "centroid": [
+   -3.1,
+   -53.91,
+   -65.53
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma67943-fj1775",
+  "name": "Pons",
+  "fma": "FMA67943",
+  "fj": "FJ1775",
+  "bp": "BP22028",
+  "faces": 10304,
+  "bbox": [
+   [
+    -21.51,
+    -51.29,
+    -54.91
+   ],
+   [
+    1.27,
+    -8.74,
+    -22.66
+   ]
+  ],
+  "centroid": [
+   -8.32,
+   -31.8,
+   -37.33
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72829-fj1776",
+  "name": "Left putamen",
+  "fma": "FMA72829",
+  "fj": "FJ1776",
+  "bp": "BP20313",
+  "faces": 7056,
+  "bbox": [
+   [
+    -37.18,
+    -23.35,
+    -13.84
+   ],
+   [
+    -18.07,
+    22.71,
+    16.39
+   ]
+  ],
+  "centroid": [
+   -29.79,
+   0.81,
+   0.5
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma67944-fj1781",
+  "name": "Cerebellum",
+  "fma": "FMA67944",
+  "fj": "FJ1781",
+  "bp": "BP22033",
+  "faces": 23818,
+  "bbox": [
+   [
+    -55.35,
+    -102.26,
+    -61.46
+   ],
+   [
+    2.27,
+    -41.9,
+    -2.62
+   ]
+  ],
+  "centroid": [
+   -18.93,
+   -70.27,
+   -33.62
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma258716-fj1782",
+  "name": "Left thalamus",
+  "fma": "FMA258716",
+  "fj": "FJ1782",
+  "bp": "BP21462",
+  "faces": 1702,
+  "bbox": [
+   [
+    -24.85,
+    -37.88,
+    -9.94
+   ],
+   [
+    -0.06,
+    2.15,
+    13.88
+   ]
+  ],
+  "centroid": [
+   -12.32,
+   -18.41,
+   1.03
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72656-fj1787",
+  "name": "Left middle frontal gyrus",
+  "fma": "FMA72656",
+  "fj": "FJ1787",
+  "bp": "BP22367",
+  "faces": 3416,
+  "bbox": [
+   [
+    -53.83,
+    -4.63,
+    -12.38
+   ],
+   [
+    -16.61,
+    69.7,
+    74.5
+   ]
+  ],
+  "centroid": [
+   -34.01,
+   34.2,
+   36.0
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72655-fj1788",
+  "name": "Right middle frontal gyrus",
+  "fma": "FMA72655",
+  "fj": "FJ1788",
+  "bp": "BP20959",
+  "faces": 3326,
+  "bbox": [
+   [
+    16.08,
+    -2.9,
+    -12.49
+   ],
+   [
+    52.93,
+    71.68,
+    74.55
+   ]
+  ],
+  "centroid": [
+   32.88,
+   36.59,
+   36.15
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72686-fj1789",
+  "name": "Left middle temporal gyrus",
+  "fma": "FMA72686",
+  "fj": "FJ1789",
+  "bp": "BP22697",
+  "faces": 2710,
+  "bbox": [
+   [
+    -73.42,
+    -89.77,
+    -43.61
+   ],
+   [
+    -35.75,
+    18.54,
+    9.89
+   ]
+  ],
+  "centroid": [
+   -55.85,
+   -37.41,
+   -9.87
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72685-fj1790",
+  "name": "Right middle temporal gyrus",
+  "fma": "FMA72685",
+  "fj": "FJ1790",
+  "bp": "BP22182",
+  "faces": 2754,
+  "bbox": [
+   [
+    36.11,
+    -85.81,
+    -43.65
+   ],
+   [
+    75.29,
+    22.48,
+    9.85
+   ]
+  ],
+  "centroid": [
+   57.87,
+   -33.25,
+   -9.85
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma62033-fj1795",
+  "name": "Pineal body",
+  "fma": "FMA62033",
+  "fj": "FJ1795",
+  "bp": "BP21418",
+  "faces": 580,
+  "bbox": [
+   [
+    -2.41,
+    -41.95,
+    -8.28
+   ],
+   [
+    4.31,
+    -28.58,
+    -1.63
+   ]
+  ],
+  "centroid": [
+   0.92,
+   -35.52,
+   -5.06
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma13889-fj1796",
+  "name": "Pituitary gland",
+  "fma": "FMA13889",
+  "fj": "FJ1796",
+  "bp": "BP23814",
+  "faces": 1164,
+  "bbox": [
+   [
+    -6.35,
+    -5.59,
+    -39.26
+   ],
+   [
+    6.83,
+    4.48,
+    -24.85
+   ]
+  ],
+  "centroid": [
+   0.27,
+   -0.65,
+   -33.65
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72666-fj1797",
+  "name": "Left postcentral gyrus",
+  "fma": "FMA72666",
+  "fj": "FJ1797",
+  "bp": "BP22179",
+  "faces": 3604,
+  "bbox": [
+   [
+    -72.28,
+    -52.05,
+    11.06
+   ],
+   [
+    -0.21,
+    -1.46,
+    85.73
+   ]
+  ],
+  "centroid": [
+   -40.15,
+   -24.99,
+   50.98
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72665-fj1798",
+  "name": "Right postcentral gyrus",
+  "fma": "FMA72665",
+  "fj": "FJ1798",
+  "bp": "BP22140",
+  "faces": 3604,
+  "bbox": [
+   [
+    2.27,
+    -51.43,
+    11.19
+   ],
+   [
+    73.06,
+    3.17,
+    85.86
+   ]
+  ],
+  "centroid": [
+   41.66,
+   -21.93,
+   51.05
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72662-fj1800",
+  "name": "Left precentral gyrus",
+  "fma": "FMA72662",
+  "fj": "FJ1800",
+  "bp": "BP22183",
+  "faces": 4042,
+  "bbox": [
+   [
+    -67.93,
+    -44.71,
+    1.78
+   ],
+   [
+    -0.35,
+    12.37,
+    86.09
+   ]
+  ],
+  "centroid": [
+   -35.63,
+   -10.87,
+   50.44
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72661-fj1801",
+  "name": "Right precentral gyrus",
+  "fma": "FMA72661",
+  "fj": "FJ1801",
+  "bp": "BP22215",
+  "faces": 4042,
+  "bbox": [
+   [
+    2.03,
+    -43.52,
+    1.73
+   ],
+   [
+    68.22,
+    15.34,
+    86.02
+   ]
+  ],
+  "centroid": [
+   36.49,
+   -8.21,
+   50.5
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72826-fj1802",
+  "name": "Right caudate nucleus",
+  "fma": "FMA72826",
+  "fj": "FJ1802",
+  "bp": "BP20207",
+  "faces": 2570,
+  "bbox": [
+   [
+    2.76,
+    -34.73,
+    -18.83
+   ],
+   [
+    37.08,
+    30.58,
+    23.54
+   ]
+  ],
+  "centroid": [
+   16.05,
+   0.86,
+   6.03
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72830-fj1805",
+  "name": "Right globus pallidus",
+  "fma": "FMA72830",
+  "fj": "FJ1805",
+  "bp": "BP20297",
+  "faces": 5344,
+  "bbox": [
+   [
+    14.05,
+    -16.84,
+    -11.82
+   ],
+   [
+    32.36,
+    14.0,
+    8.37
+   ]
+  ],
+  "centroid": [
+   24.57,
+   -0.44,
+   -2.92
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72713-fj1807",
+  "name": "Right hippocampus proper",
+  "fma": "FMA72713",
+  "fj": "FJ1807",
+  "bp": "BP24044",
+  "faces": 1020,
+  "bbox": [
+   [
+    19.53,
+    -38.97,
+    -30.78
+   ],
+   [
+    40.61,
+    -1.47,
+    3.09
+   ]
+  ],
+  "centroid": [
+   30.79,
+   -20.48,
+   -17.03
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma78449-fj1814",
+  "name": "Right lateral ventricle",
+  "fma": "FMA78449",
+  "fj": "FJ1814",
+  "bp": "BP22737",
+  "faces": 18016,
+  "bbox": [
+   [
+    0.22,
+    -81.52,
+    -30.37
+   ],
+   [
+    42.31,
+    34.47,
+    26.29
+   ]
+  ],
+  "centroid": [
+   18.46,
+   -14.1,
+   5.2
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma67943-fj1822",
+  "name": "Pons",
+  "fma": "FMA67943",
+  "fj": "FJ1822",
+  "bp": "BP22028",
+  "faces": 10346,
+  "bbox": [
+   [
+    0.52,
+    -50.23,
+    -54.9
+   ],
+   [
+    23.74,
+    -8.2,
+    -22.68
+   ]
+  ],
+  "centroid": [
+   10.26,
+   -31.11,
+   -37.32
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72828-fj1823",
+  "name": "Right putamen",
+  "fma": "FMA72828",
+  "fj": "FJ1823",
+  "bp": "BP20196",
+  "faces": 7064,
+  "bbox": [
+   [
+    17.99,
+    -20.82,
+    -13.82
+   ],
+   [
+    38.04,
+    24.64,
+    16.42
+   ]
+  ],
+  "centroid": [
+   30.19,
+   3.03,
+   0.53
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma258714-fj1827",
+  "name": "Right thalamus",
+  "fma": "FMA258714",
+  "fj": "FJ1827",
+  "bp": "BP21533",
+  "faces": 758,
+  "bbox": [
+   [
+    1.17,
+    -36.33,
+    -9.9
+   ],
+   [
+    26.53,
+    2.77,
+    13.83
+   ]
+  ],
+  "centroid": [
+   13.62,
+   -17.43,
+   1.04
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72832-fj1829",
+  "name": "Right amygdala",
+  "fma": "FMA72832",
+  "fj": "FJ1829",
+  "bp": "BP20277",
+  "faces": 384,
+  "bbox": [
+   [
+    18.4,
+    -11.14,
+    -29.12
+   ],
+   [
+    36.7,
+    6.59,
+    -13.68
+   ]
+  ],
+  "centroid": [
+   27.93,
+   -0.41,
+   -20.89
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma67944-fj1830",
+  "name": "Cerebellum",
+  "fma": "FMA67944",
+  "fj": "FJ1830",
+  "bp": "BP22033",
+  "faces": 23882,
+  "bbox": [
+   [
+    1.33,
+    -101.18,
+    -61.44
+   ],
+   [
+    58.8,
+    -40.18,
+    -2.62
+   ]
+  ],
+  "centroid": [
+   22.62,
+   -68.74,
+   -33.6
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma62004-fj1831",
+  "name": "Medulla oblongata",
+  "fma": "FMA62004",
+  "fj": "FJ1831",
+  "bp": "BP23201",
+  "faces": 6060,
+  "bbox": [
+   [
+    1.0,
+    -77.27,
+    -88.61
+   ],
+   [
+    15.65,
+    -30.53,
+    -47.41
+   ]
+  ],
+  "centroid": [
+   6.08,
+   -53.58,
+   -65.52
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72654-fj1833",
+  "name": "Left superior frontal gyrus",
+  "fma": "FMA72654",
+  "fj": "FJ1833",
+  "bp": "BP22376",
+  "faces": 6452,
+  "bbox": [
+   [
+    -34.36,
+    -31.8,
+    -21.57
+   ],
+   [
+    -0.32,
+    79.34,
+    87.11
+   ]
+  ],
+  "centroid": [
+   -13.56,
+   32.73,
+   40.41
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72653-fj1834",
+  "name": "Right superior frontal gyrus",
+  "fma": "FMA72653",
+  "fj": "FJ1834",
+  "bp": "BP23996",
+  "faces": 6450,
+  "bbox": [
+   [
+    0.03,
+    -30.58,
+    -21.58
+   ],
+   [
+    35.07,
+    80.37,
+    86.98
+   ]
+  ],
+  "centroid": [
+   12.51,
+   33.68,
+   40.46
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72668-fj1841",
+  "name": "Left supramarginal gyrus",
+  "fma": "FMA72668",
+  "fj": "FJ1841",
+  "bp": "BP22180",
+  "faces": 2344,
+  "bbox": [
+   [
+    -73.59,
+    -54.53,
+    16.21
+   ],
+   [
+    -24.26,
+    -16.95,
+    63.65
+   ]
+  ],
+  "centroid": [
+   -53.98,
+   -35.97,
+   36.09
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72667-fj1842",
+  "name": "Right supramarginal gyrus",
+  "fma": "FMA72667",
+  "fj": "FJ1842",
+  "bp": "BP22255",
+  "faces": 2314,
+  "bbox": [
+   [
+    26.68,
+    -49.62,
+    16.3
+   ],
+   [
+    75.09,
+    -14.19,
+    63.48
+   ]
+  ],
+  "centroid": [
+   55.95,
+   -31.83,
+   36.18
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma256198-fj7465m",
+  "name": "Right anterior orbital gyrus",
+  "fma": "FMA256198",
+  "fj": "FJ7465M",
+  "bp": "BP29916",
+  "faces": 10090,
+  "bbox": [
+   [
+    -0.29,
+    33.38,
+    -34.4
+   ],
+   [
+    25.58,
+    68.69,
+    -16.88
+   ]
+  ],
+  "centroid": [
+   11.34,
+   51.74,
+   -25.19
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma256200-fj7465",
+  "name": "Left anterior orbital gyrus",
+  "fma": "FMA256200",
+  "fj": "FJ7465",
+  "bp": "BP29911",
+  "faces": 10090,
+  "bbox": [
+   [
+    -28.18,
+    32.26,
+    -34.41
+   ],
+   [
+    -2.99,
+    67.77,
+    -16.9
+   ]
+  ],
+  "centroid": [
+   -14.57,
+   50.77,
+   -25.2
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72756-fj7466m",
+  "name": "Right lateral orbital gyrus",
+  "fma": "FMA72756",
+  "fj": "FJ7466M",
+  "bp": "BP29920",
+  "faces": 8840,
+  "bbox": [
+   [
+    10.77,
+    20.94,
+    -28.95
+   ],
+   [
+    42.98,
+    68.92,
+    -2.92
+   ]
+  ],
+  "centroid": [
+   28.65,
+   44.81,
+   -16.96
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72757-fj7466",
+  "name": "Left lateral orbital gyrus",
+  "fma": "FMA72757",
+  "fj": "FJ7466",
+  "bp": "BP29925",
+  "faces": 8840,
+  "bbox": [
+   [
+    -44.86,
+    17.97,
+    -28.96
+   ],
+   [
+    -14.71,
+    67.74,
+    -2.94
+   ]
+  ],
+  "centroid": [
+   -31.53,
+   42.55,
+   -17.0
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72758-fj7467m",
+  "name": "Right medial orbital gyrus",
+  "fma": "FMA72758",
+  "fj": "FJ7467M",
+  "bp": "BP29929",
+  "faces": 9508,
+  "bbox": [
+   [
+    0.06,
+    -0.96,
+    -31.99
+   ],
+   [
+    33.55,
+    44.92,
+    -6.07
+   ]
+  ],
+  "centroid": [
+   12.8,
+   17.89,
+   -20.95
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72759-fj7467",
+  "name": "Left medial orbital gyrus",
+  "fma": "FMA72759",
+  "fj": "FJ7467",
+  "bp": "BP29924",
+  "faces": 9508,
+  "bbox": [
+   [
+    -34.56,
+    -3.31,
+    -32.0
+   ],
+   [
+    -1.75,
+    44.21,
+    -6.07
+   ]
+  ],
+  "centroid": [
+   -14.5,
+   16.87,
+   -20.97
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma80187-fj7468m",
+  "name": "Right posterior orbital gyrus",
+  "fma": "FMA80187",
+  "fj": "FJ7468M",
+  "bp": "BP29918",
+  "faces": 8566,
+  "bbox": [
+   [
+    13.56,
+    11.82,
+    -28.07
+   ],
+   [
+    38.89,
+    38.43,
+    -10.78
+   ]
+  ],
+  "centroid": [
+   25.97,
+   25.84,
+   -21.61
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma80188-fj7468",
+  "name": "Left posterior orbital gyrus",
+  "fma": "FMA80188",
+  "fj": "FJ7468",
+  "bp": "BP29931",
+  "faces": 8566,
+  "bbox": [
+   [
+    -40.69,
+    9.76,
+    -28.1
+   ],
+   [
+    -15.94,
+    36.43,
+    -10.81
+   ]
+  ],
+  "centroid": [
+   -28.0,
+   23.82,
+   -21.63
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72659-fj7469m",
+  "name": "Right straight gyrus",
+  "fma": "FMA72659",
+  "fj": "FJ7469M",
+  "bp": "BP29910",
+  "faces": 12802,
+  "bbox": [
+   [
+    -0.53,
+    8.87,
+    -34.06
+   ],
+   [
+    14.2,
+    61.43,
+    -12.27
+   ]
+  ],
+  "centroid": [
+   5.11,
+   34.83,
+   -24.0
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72660-fj7469",
+  "name": "Left straight gyrus",
+  "fma": "FMA72660",
+  "fj": "FJ7469",
+  "bp": "BP29922",
+  "faces": 12802,
+  "bbox": [
+   [
+    -16.35,
+    8.31,
+    -34.08
+   ],
+   [
+    -1.82,
+    60.97,
+    -12.26
+   ]
+  ],
+  "centroid": [
+   -7.57,
+   34.36,
+   -24.01
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72717-fj7470m",
+  "name": "Right cingulate gyrus",
+  "fma": "FMA72717",
+  "fj": "FJ7470M",
+  "bp": "BP23974",
+  "faces": 40600,
+  "bbox": [
+   [
+    -0.5,
+    -63.82,
+    -17.26
+   ],
+   [
+    23.81,
+    50.03,
+    47.62
+   ]
+  ],
+  "centroid": [
+   6.0,
+   -4.96,
+   22.51
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72718-fj7470",
+  "name": "Left cingulate gyrus",
+  "fma": "FMA72718",
+  "fj": "FJ7470",
+  "bp": "BP20829",
+  "faces": 40600,
+  "bbox": [
+   [
+    -21.98,
+    -65.2,
+    -17.28
+   ],
+   [
+    0.48,
+    49.63,
+    47.65
+   ]
+  ],
+  "centroid": [
+   -6.7,
+   -5.47,
+   22.51
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72689-fj7472m",
+  "name": "Right fusiform gyrus",
+  "fma": "FMA72689",
+  "fj": "FJ7472M",
+  "bp": "BP24018",
+  "faces": 26110,
+  "bbox": [
+   [
+    7.97,
+    -105.24,
+    -38.13
+   ],
+   [
+    45.46,
+    -12.57,
+    6.54
+   ]
+  ],
+  "centroid": [
+   26.19,
+   -58.58,
+   -14.95
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72690-fj7472",
+  "name": "Left fusiform gyrus",
+  "fma": "FMA72690",
+  "fj": "FJ7472",
+  "bp": "BP20995",
+  "faces": 26110,
+  "bbox": [
+   [
+    -44.28,
+    -106.06,
+    -38.16
+   ],
+   [
+    -5.03,
+    -15.42,
+    6.54
+   ]
+  ],
+  "centroid": [
+   -24.38,
+   -60.5,
+   -14.97
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72687-fj7473m",
+  "name": "Right inferior temporal gyrus",
+  "fma": "FMA72687",
+  "fj": "FJ7473M",
+  "bp": "BP22176",
+  "faces": 30002,
+  "bbox": [
+   [
+    17.77,
+    -78.78,
+    -48.63
+   ],
+   [
+    65.4,
+    15.22,
+    -2.91
+   ]
+  ],
+  "centroid": [
+   44.23,
+   -25.7,
+   -25.69
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72688-fj7473",
+  "name": "Left inferior temporal gyrus",
+  "fma": "FMA72688",
+  "fj": "FJ7473",
+  "bp": "BP22696",
+  "faces": 30002,
+  "bbox": [
+   [
+    -64.37,
+    -81.73,
+    -48.7
+   ],
+   [
+    -18.78,
+    12.96,
+    -2.92
+   ]
+  ],
+  "centroid": [
+   -43.88,
+   -28.95,
+   -25.75
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72677-fj7474m",
+  "name": "Right lateral occipital gyrus",
+  "fma": "FMA72677",
+  "fj": "FJ7474M",
+  "bp": "BP29928",
+  "faces": 18146,
+  "bbox": [
+   [
+    4.33,
+    -111.67,
+    -17.93
+   ],
+   [
+    48.17,
+    -70.51,
+    15.07
+   ]
+  ],
+  "centroid": [
+   27.54,
+   -93.33,
+   -3.52
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72678-fj7474",
+  "name": "Left lateral occipital gyrus",
+  "fma": "FMA72678",
+  "fj": "FJ7474",
+  "bp": "BP29927",
+  "faces": 18146,
+  "bbox": [
+   [
+    -45.02,
+    -112.77,
+    -17.97
+   ],
+   [
+    -0.47,
+    -72.68,
+    15.04
+   ]
+  ],
+  "centroid": [
+   -24.17,
+   -95.26,
+   -3.54
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72681-fj7475m",
+  "name": "Right lingual gyrus",
+  "fma": "FMA72681",
+  "fj": "FJ7475M",
+  "bp": "BP29912",
+  "faces": 9370,
+  "bbox": [
+   [
+    0.18,
+    -107.69,
+    -15.83
+   ],
+   [
+    15.57,
+    -59.82,
+    11.01
+   ]
+  ],
+  "centroid": [
+   7.85,
+   -83.5,
+   -2.55
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72682-fj7475",
+  "name": "Left lingual gyrus",
+  "fma": "FMA72682",
+  "fj": "FJ7475",
+  "bp": "BP29917",
+  "faces": 9370,
+  "bbox": [
+   [
+    -12.07,
+    -108.4,
+    -15.85
+   ],
+   [
+    3.02,
+    -60.55,
+    11.03
+   ]
+  ],
+  "centroid": [
+   -4.96,
+   -83.97,
+   -2.56
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72705-fj7476m",
+  "name": "Right parahippocampal gyrus",
+  "fma": "FMA72705",
+  "fj": "FJ7476M",
+  "bp": "BP22184",
+  "faces": 8324,
+  "bbox": [
+   [
+    5.43,
+    -62.38,
+    -42.97
+   ],
+   [
+    36.42,
+    4.27,
+    12.82
+   ]
+  ],
+  "centroid": [
+   21.2,
+   -29.46,
+   -18.18
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72706-fj7476",
+  "name": "Left parahippocampal gyrus",
+  "fma": "FMA72706",
+  "fj": "FJ7476",
+  "bp": "BP22707",
+  "faces": 8324,
+  "bbox": [
+   [
+    -36.68,
+    -64.02,
+    -43.0
+   ],
+   [
+    -3.84,
+    2.77,
+    12.8
+   ]
+  ],
+  "centroid": [
+   -20.72,
+   -31.0,
+   -18.22
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72675-fj7478m",
+  "name": "Right superior occipital gyrus",
+  "fma": "FMA72675",
+  "fj": "FJ7478M",
+  "bp": "BP29921",
+  "faces": 12714,
+  "bbox": [
+   [
+    6.04,
+    -111.38,
+    2.12
+   ],
+   [
+    43.26,
+    -86.26,
+    33.36
+   ]
+  ],
+  "centroid": [
+   23.8,
+   -98.86,
+   17.16
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72676-fj7478",
+  "name": "Left superior occipital gyrus",
+  "fma": "FMA72676",
+  "fj": "FJ7478",
+  "bp": "BP29923",
+  "faces": 12714,
+  "bbox": [
+   [
+    -39.99,
+    -112.41,
+    2.1
+   ],
+   [
+    -2.08,
+    -87.86,
+    33.35
+   ]
+  ],
+  "centroid": [
+   -20.2,
+   -100.5,
+   17.13
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72683-fj7479m",
+  "name": "Right superior temporal gyrus",
+  "fma": "FMA72683",
+  "fj": "FJ7479M",
+  "bp": "BP29913",
+  "faces": 13278,
+  "bbox": [
+   [
+    27.89,
+    -75.57,
+    -42.32
+   ],
+   [
+    75.01,
+    27.37,
+    27.3
+   ]
+  ],
+  "centroid": [
+   54.65,
+   -18.25,
+   2.87
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72684-fj7479",
+  "name": "Left superior temporal gyrus",
+  "fma": "FMA72684",
+  "fj": "FJ7479",
+  "bp": "BP29914",
+  "faces": 13278,
+  "bbox": [
+   [
+    -74.29,
+    -79.75,
+    -42.38
+   ],
+   [
+    -29.45,
+    24.07,
+    27.29
+   ]
+  ],
+  "centroid": [
+   -54.64,
+   -22.34,
+   2.81
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72924-fj7498m",
+  "name": "Right fornix of forebrain",
+  "fma": "FMA72924",
+  "fj": "FJ7498M",
+  "bp": "BP24080",
+  "faces": 4782,
+  "bbox": [
+   [
+    -1.16,
+    -38.86,
+    -23.65
+   ],
+   [
+    33.05,
+    7.69,
+    14.57
+   ]
+  ],
+  "centroid": [
+   13.16,
+   -16.6,
+   0.35
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72925-fj7498",
+  "name": "Left fornix of forebrain",
+  "fma": "FMA72925",
+  "fj": "FJ7498",
+  "bp": "BP23782",
+  "faces": 4782,
+  "bbox": [
+   [
+    -32.91,
+    -40.51,
+    -23.68
+   ],
+   [
+    0.41,
+    7.52,
+    14.57
+   ]
+  ],
+  "centroid": [
+   -13.3,
+   -17.6,
+   0.32
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50878-fj7501m",
+  "name": "Left optic nerve",
+  "fma": "FMA50878",
+  "fj": "FJ7501M",
+  "bp": "BP23214",
+  "faces": 1506,
+  "bbox": [
+   [
+    -34.67,
+    4.06,
+    -53.69
+   ],
+   [
+    -4.7,
+    32.56,
+    -23.31
+   ]
+  ],
+  "centroid": [
+   -19.61,
+   17.16,
+   -39.08
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50875-fj7501",
+  "name": "Right optic nerve",
+  "fma": "FMA50875",
+  "fj": "FJ7501",
+  "bp": "BP23301",
+  "faces": 1506,
+  "bbox": [
+   [
+    3.47,
+    4.67,
+    -53.67
+   ],
+   [
+    32.32,
+    34.93,
+    -23.31
+   ]
+  ],
+  "centroid": [
+   17.93,
+   18.58,
+   -39.08
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma67936-fj7502m",
+  "name": "Left optic tract",
+  "fma": "FMA67936",
+  "fj": "FJ7502M",
+  "bp": "BP23128",
+  "faces": 912,
+  "bbox": [
+   [
+    -27.84,
+    -32.51,
+    -20.83
+   ],
+   [
+    -6.79,
+    2.13,
+    -8.78
+   ]
+  ],
+  "centroid": [
+   -19.92,
+   -17.03,
+   -14.98
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma62382-fj7502",
+  "name": "Right optic tract",
+  "fma": "FMA62382",
+  "fj": "FJ7502",
+  "bp": "BP23107",
+  "faces": 912,
+  "bbox": [
+   [
+    5.89,
+    -30.96,
+    -20.82
+   ],
+   [
+    27.81,
+    2.8,
+    -8.73
+   ]
+  ],
+  "centroid": [
+   19.77,
+   -15.59,
+   -14.95
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma62045-fj7503",
+  "name": "Optic chiasm",
+  "fma": "FMA62045",
+  "fj": "FJ7503",
+  "bp": "BP22996",
+  "faces": 1464,
+  "bbox": [
+   [
+    -0.09,
+    -0.42,
+    -27.33
+   ],
+   [
+    8.64,
+    8.67,
+    -16.25
+   ]
+  ],
+  "centroid": [
+   3.85,
+   3.65,
+   -21.78
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ }
+]

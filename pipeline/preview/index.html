@@ -1,0 +1,60 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Neuro Atlas — pipeline preview</title>
+<style>html,body{margin:0;height:100%;background:#0b0c10;color:#ddd;font:12px system-ui}
+#hud{position:fixed;left:10px;top:10px;white-space:pre;pointer-events:none}</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"}}</script>
+</head><body><div id="hud">loading…</div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const q = new URLSearchParams(location.search);
+const layers = (q.get('layers') || 'gross,julich').split(',');
+const opacityOf = Object.fromEntries((q.get('opacity') || '').split(',').filter(Boolean).map(kv => { const [k, v] = kv.split(':'); return [k, +v]; }));
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(devicePixelRatio); renderer.setSize(innerWidth, innerHeight);
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(35, innerWidth / innerHeight, 1, 5000);
+const ctl = new OrbitControls(cam, renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x334455, 1.2));
+const sun = new THREE.DirectionalLight(0xffffff, 1.5); sun.position.set(200, 300, 400); scene.add(sun);
+scene.add(new THREE.AxesHelper(100)); // RAS: red=+X right, green=+Y anterior, blue=+Z superior
+
+const hud = document.getElementById('hud');
+const loader = new GLTFLoader();
+const root = new THREE.Group(); scene.add(root);
+const stats = {};
+const palette = { gross: 0xd8c3b0, julich: 0x4aa3ff, tracts: 0xffb347 };
+window.__parts = [];
+
+async function loadLayer(layer) {
+  const cat = await (await fetch(`../../data/${layer}.json`)).json();
+  stats[layer] = 0;
+  await Promise.all(cat.map(p => new Promise(res => loader.load(`../../public/meshes/${layer}/${p.id}.glb`, g => {
+    g.scene.traverse(o => { if (o.isMesh) { if (!o.geometry.attributes.normal) o.geometry.computeVertexNormals();
+      const h = (Math.abs(hash(p.id)) % 40 - 20) / 400;
+      const c = new THREE.Color(palette[layer] ?? 0xcccccc).offsetHSL(h, 0, 0);
+      o.material = new THREE.MeshStandardMaterial({ color: c, roughness: 0.6, metalness: 0, transparent: (opacityOf[layer] ?? 1) < 1, opacity: opacityOf[layer] ?? 1, depthWrite: (opacityOf[layer] ?? 1) >= 1, side: THREE.DoubleSide });
+      o.userData = { layer, ...p }; window.__parts.push(o); stats[layer]++;
+    }});
+    root.add(g.scene); res();
+  }, undefined, e => { console.warn('missing', layer, p.id); res(); }))));
+}
+function hash(s) { let h = 0; for (const ch of s) h = (h * 31 + ch.charCodeAt(0)) | 0; return h; }
+
+for (const l of layers) await loadLayer(l);
+const box = new THREE.Box3().setFromObject(root); const size = box.getSize(new THREE.Vector3()); const c = box.getCenter(new THREE.Vector3());
+const view = q.get('view') || 'lateral';
+const dist = Math.max(size.x, size.y, size.z) * 1.9;
+if (view === 'lateral') cam.position.set(c.x + dist, c.y, c.z);
+else if (view === 'front') cam.position.set(c.x, c.y + dist, c.z);
+else if (view === 'top') cam.position.set(c.x, c.y, c.z + dist);
+else cam.position.set(c.x + dist * .6, c.y - dist * .5, c.z + dist * .5);
+cam.up.set(0, 0, 1); ctl.target.copy(c); ctl.update();
+hud.textContent = `layers ${JSON.stringify(stats)}\nbbox min ${box.min.toArray().map(v => v.toFixed(0))} max ${box.max.toArray().map(v => v.toFixed(0))}\nview ${view}`;
+window.__ready = true;
+renderer.setAnimationLoop(() => renderer.render(scene, cam));
+</script></body></html>

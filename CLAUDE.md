@@ -41,8 +41,28 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
 ## 3. Hozirgi holat
 
 - ✅ 0-bosqich: manbalar auditi (`PLAN.md` 1-bo'lim).
-- ⬜ 1-bosqich: pipeline sinovi — KEYINGI QADAM.
-- ⬜ 2–7.
+- ✅ 1-bosqich: pipeline sinovi (2026-09-19) — brauzerda tasdiqlangan:
+  - `pipeline/fetch_bp3d.py` — BodyParts3D 4.3 OBJ'larni GitHub LFS
+    mirror'dan (olivercase/body_parts_3d_api) yuklaydi; fayl nomidagi FMA id
+    ishonchli, MANIFEST.csv'dagi `fma_id` esa yo'q (ota-konsept).
+  - `pipeline/bp3d_to_glb.py` — OBJ → GLB. BodyParts3D freymi: mm, +X chap,
+    +Y orqa, +Z yuqori, z≈1500 (oyoqdan). `TO_RAS` flip + `align_bp3d.json`
+    affine bilan MNI152'ga o'tkaziladi.
+  - `pipeline/julich_to_glb.py` — siibra orqali Julich-Brain 3.1 MNI152
+    labelled map (2 fragment: chap/o'ng yarim shar, 414 hudud) → marching
+    cubes → Taubin silliqlash → GLB. Birinchi ishga tushishda siibra ~7 min
+    konfiguratsiya yuklaydi (keyin kesh).
+  - `pipeline/align_bp3d.py` — 20 landmark juftligi (po'stloq osti + Julich
+    to'liq qoplaydigan gyruslar) bo'yicha 12-parametrli affine, RMS 5.3 mm.
+    Julich faqat qisman qoplaydigan gyruslar (parahippocampal, lingual,
+    fusiform, STG) landmark sifatida YARAMAYDI (10–24 mm xato) — chiqarilgan.
+  - `pipeline/preview/index.html` — minimal Three.js viewer
+    (`?layers=gross,julich&opacity=gross:0.22&view=lateral|front|top`),
+    `python3 -m http.server 3018` bilan ochiladi.
+  - Muhim: trimesh `export(file_type='glb')` normal yozmaydi → mesh qora
+    ko'rinadi. `include_normals=True` shart.
+- ⬜ 2-bosqich: ilova skeleti — KEYINGI QADAM.
+- ⬜ 3–7.
 
 ## 4. Ma'lum xatolar tarixi
 

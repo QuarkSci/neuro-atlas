@@ -98,7 +98,7 @@ glasser | julich`), tizim emas.
 | # | Bosqich | Tayyor mezoni |
 |---|---|---|
 | 0 | Manbalar auditi | ✅ jadval yuqorida; `?` lar 1-bosqichda hal qilinadi |
-| 1 | Pipeline sinovi | Z-Anatomy/BodyParts3D bosh qismi → glTF; 1 ta NIfTI atlas (Julich) → meshlar; ikkalasi bir fazoda ustma-ust tushishi screenshot bilan tasdiqlangan |
+| 1 | Pipeline sinovi | ✅ 2026-09-19: BodyParts3D 77 qism + Julich 414 hudud → GLB, MNI fazosida ustma-ust (RMS 5.3 mm), brauzerda tasdiqlangan |
 | 2 | Ilova skeleti | Falcon UI/scene ko'chirilgan, 100 ta qism yuklanadi, tanlash/hover/Inspector/qidiruv ishlaydi |
 | 3 | To'liq import | Barcha qatlamlar, ierarxiya, 1700+ qism, 60 fps desktop / 30 fps telefon |
 | 4 | Kesim + qatlamlar | 3 tekislik, MNI koordinata, parcellation almashtirish |
