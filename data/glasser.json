@@ -1,0 +1,9002 @@
+[
+ {
+  "id": "primary-visual-cortex-left",
+  "name": "Primary visual cortex",
+  "side": "left",
+  "label": 1,
+  "faces": 18034,
+  "bbox": [
+   [
+    -31.94,
+    -107.45,
+    -21.43
+   ],
+   [
+    -0.5,
+    -54.09,
+    15.61
+   ]
+  ],
+  "centroid": [
+   -13.27,
+   -85.0,
+   -0.67
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "primary-visual-cortex-right",
+  "name": "Primary visual cortex",
+  "side": "right",
+  "label": 1,
+  "faces": 15660,
+  "bbox": [
+   [
+    -0.5,
+    -105.5,
+    -18.6
+   ],
+   [
+    27.17,
+    -46.05,
+    16.46
+   ]
+  ],
+  "centroid": [
+   9.63,
+   -81.8,
+   1.57
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-superior-temporal-area-left",
+  "name": "Medial superior temporal area",
+  "side": "left",
+  "label": 2,
+  "faces": 1084,
+  "bbox": [
+   [
+    -49.76,
+    -74.56,
+    -2.76
+   ],
+   [
+    -40.84,
+    -62.45,
+    9.93
+   ]
+  ],
+  "centroid": [
+   -44.69,
+   -68.75,
+   2.56
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-superior-temporal-area-right",
+  "name": "Medial superior temporal area",
+  "side": "right",
+  "label": 2,
+  "faces": 972,
+  "bbox": [
+   [
+    35.88,
+    -70.67,
+    -2.79
+   ],
+   [
+    43.41,
+    -60.2,
+    7.77
+   ]
+  ],
+  "centroid": [
+   39.74,
+   -65.51,
+   2.73
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "sixth-visual-area-left",
+  "name": "Sixth Visual Area",
+  "side": "left",
+  "label": 3,
+  "faces": 2860,
+  "bbox": [
+   [
+    -23.97,
+    -92.57,
+    15.29
+   ],
+   [
+    -9.42,
+    -70.24,
+    41.67
+   ]
+  ],
+  "centroid": [
+   -16.33,
+   -79.7,
+   30.12
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "sixth-visual-area-right",
+  "name": "Sixth Visual Area",
+  "side": "right",
+  "label": 3,
+  "faces": 2978,
+  "bbox": [
+   [
+    4.25,
+    -87.0,
+    17.08
+   ],
+   [
+    20.75,
+    -65.9,
+    43.68
+   ]
+  ],
+  "centroid": [
+   13.26,
+   -76.95,
+   30.97
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "second-visual-area-left",
+  "name": "Second Visual Area",
+  "side": "left",
+  "label": 4,
+  "faces": 20000,
+  "bbox": [
+   [
+    -37.6,
+    -107.44,
+    -21.29
+   ],
+   [
+    -0.5,
+    -38.46,
+    27.74
+   ]
+  ],
+  "centroid": [
+   -14.42,
+   -81.31,
+   1.8
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "second-visual-area-right",
+  "name": "Second Visual Area",
+  "side": "right",
+  "label": 4,
+  "faces": 19716,
+  "bbox": [
+   [
+    -0.5,
+    -105.47,
+    -21.4
+   ],
+   [
+    31.2,
+    -36.11,
+    25.89
+   ]
+  ],
+  "centroid": [
+   9.73,
+   -80.26,
+   1.63
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "third-visual-area-left",
+  "name": "Third Visual Area",
+  "side": "left",
+  "label": 5,
+  "faces": 13510,
+  "bbox": [
+   [
+    -41.74,
+    -104.59,
+    -22.98
+   ],
+   [
+    -0.5,
+    -58.42,
+    39.78
+   ]
+  ],
+  "centroid": [
+   -20.12,
+   -86.0,
+   5.69
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "third-visual-area-right",
+  "name": "Third Visual Area",
+  "side": "right",
+  "label": 5,
+  "faces": 13228,
+  "bbox": [
+   [
+    -0.5,
+    -100.82,
+    -19.44
+   ],
+   [
+    34.94,
+    -61.61,
+    39.72
+   ]
+  ],
+  "centroid": [
+   15.6,
+   -85.7,
+   4.95
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "forth-visual-area-left",
+  "name": "Forth Visual Area",
+  "side": "left",
+  "label": 6,
+  "faces": 8842,
+  "bbox": [
+   [
+    -46.11,
+    -100.62,
+    -23.34
+   ],
+   [
+    -23.01,
+    -56.22,
+    21.67
+   ]
+  ],
+  "centroid": [
+   -33.66,
+   -83.6,
+   -5.08
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "forth-visual-area-right",
+  "name": "Forth Visual Area",
+  "side": "right",
+  "label": 6,
+  "faces": 7348,
+  "bbox": [
+   [
+    16.21,
+    -96.62,
+    -21.01
+   ],
+   [
+    38.78,
+    -62.24,
+    24.13
+   ]
+  ],
+  "centroid": [
+   27.53,
+   -84.46,
+   -1.92
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "eighth-visual-area-left",
+  "name": "Eighth Visual Area",
+  "side": "left",
+  "label": 7,
+  "faces": 2764,
+  "bbox": [
+   [
+    -46.01,
+    -79.32,
+    -25.24
+   ],
+   [
+    -26.81,
+    -65.99,
+    -8.04
+   ]
+  ],
+  "centroid": [
+   -35.45,
+   -72.58,
+   -17.59
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "eighth-visual-area-right",
+  "name": "Eighth Visual Area",
+  "side": "right",
+  "label": 7,
+  "faces": 2124,
+  "bbox": [
+   [
+    18.39,
+    -79.17,
+    -23.01
+   ],
+   [
+    32.97,
+    -65.82,
+    -9.98
+   ]
+  ],
+  "centroid": [
+   26.13,
+   -72.06,
+   -15.9
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "primary-motor-cortex-left",
+  "name": "Primary Motor Cortex",
+  "side": "left",
+  "label": 8,
+  "faces": 16634,
+  "bbox": [
+   [
+    -68.11,
+    -37.05,
+    14.97
+   ],
+   [
+    -0.51,
+    0.36,
+    80.38
+   ]
+  ],
+  "centroid": [
+   -28.18,
+   -20.92,
+   55.62
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "primary-motor-cortex-right",
+  "name": "Primary Motor Cortex",
+  "side": "right",
+  "label": 8,
+  "faces": 15516,
+  "bbox": [
+   [
+    -0.5,
+    -34.57,
+    13.39
+   ],
+   [
+    62.9,
+    1.76,
+    80.46
+   ]
+  ],
+  "centroid": [
+   26.8,
+   -18.22,
+   54.43
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "primary-sensory-cortex-left",
+  "name": "Primary Sensory Cortex",
+  "side": "left",
+  "label": 9,
+  "faces": 12344,
+  "bbox": [
+   [
+    -70.11,
+    -44.56,
+    16.8
+   ],
+   [
+    -1.03,
+    -3.82,
+    79.92
+   ]
+  ],
+  "centroid": [
+   -41.24,
+   -22.93,
+   51.89
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "primary-sensory-cortex-right",
+  "name": "Primary Sensory Cortex",
+  "side": "right",
+  "label": 9,
+  "faces": 9638,
+  "bbox": [
+   [
+    -0.18,
+    -38.81,
+    21.06
+   ],
+   [
+    62.57,
+    -3.8,
+    79.67
+   ]
+  ],
+  "centroid": [
+   32.96,
+   -22.01,
+   53.31
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "frontal-eye-field-left",
+  "name": "Frontal Eye Field",
+  "side": "left",
+  "label": 10,
+  "faces": 2560,
+  "bbox": [
+   [
+    -56.12,
+    -15.01,
+    43.17
+   ],
+   [
+    -33.25,
+    3.75,
+    56.33
+   ]
+  ],
+  "centroid": [
+   -45.72,
+   -6.58,
+   50.1
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "frontal-eye-field-right",
+  "name": "Frontal Eye Field",
+  "side": "right",
+  "label": 10,
+  "faces": 3244,
+  "bbox": [
+   [
+    28.02,
+    -12.96,
+    43.25
+   ],
+   [
+    50.76,
+    6.11,
+    57.82
+   ]
+  ],
+  "centroid": [
+   40.09,
+   -2.72,
+   51.05
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "premotor-eye-field-left",
+  "name": "Premotor Eye Field",
+  "side": "left",
+  "label": 11,
+  "faces": 1788,
+  "bbox": [
+   [
+    -62.09,
+    -4.65,
+    31.36
+   ],
+   [
+    -41.41,
+    5.58,
+    44.08
+   ]
+  ],
+  "centroid": [
+   -51.35,
+   -0.2,
+   38.14
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "premotor-eye-field-right",
+  "name": "Premotor Eye Field",
+  "side": "right",
+  "label": 11,
+  "faces": 1756,
+  "bbox": [
+   [
+    32.25,
+    -1.48,
+    29.44
+   ],
+   [
+    52.61,
+    7.56,
+    41.76
+   ]
+  ],
+  "centroid": [
+   41.25,
+   2.3,
+   36.03
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-55b-left",
+  "name": "Area 55b",
+  "side": "left",
+  "label": 12,
+  "faces": 4018,
+  "bbox": [
+   [
+    -62.35,
+    -14.68,
+    37.43
+   ],
+   [
+    -38.89,
+    8.36,
+    54.44
+   ]
+  ],
+  "centroid": [
+   -52.72,
+   -1.02,
+   46.55
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-55b-right",
+  "name": "Area 55b",
+  "side": "right",
+  "label": 12,
+  "faces": 3260,
+  "bbox": [
+   [
+    31.84,
+    -11.05,
+    37.46
+   ],
+   [
+    55.11,
+    8.44,
+    51.8
+   ]
+  ],
+  "centroid": [
+   45.75,
+   1.19,
+   44.89
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-v3a-left",
+  "name": "Area V3A",
+  "side": "left",
+  "label": 13,
+  "faces": 2996,
+  "bbox": [
+   [
+    -29.7,
+    -100.97,
+    14.88
+   ],
+   [
+    -11.06,
+    -82.25,
+    37.78
+   ]
+  ],
+  "centroid": [
+   -19.7,
+   -90.93,
+   24.83
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-v3a-right",
+  "name": "Area V3A",
+  "side": "right",
+  "label": 13,
+  "faces": 4114,
+  "bbox": [
+   [
+    0.4,
+    -94.65,
+    15.43
+   ],
+   [
+    24.59,
+    -80.1,
+    43.93
+   ]
+  ],
+  "centroid": [
+   11.76,
+   -88.89,
+   30.86
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "retrosplenial-complex-left",
+  "name": "RetroSplenial Complex",
+  "side": "left",
+  "label": 14,
+  "faces": 4434,
+  "bbox": [
+   [
+    -17.77,
+    -53.21,
+    -1.15
+   ],
+   [
+    -0.7,
+    -2.42,
+    33.93
+   ]
+  ],
+  "centroid": [
+   -6.7,
+   -36.45,
+   20.55
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "retrosplenial-complex-right",
+  "name": "RetroSplenial Complex",
+  "side": "right",
+  "label": 14,
+  "faces": 2456,
+  "bbox": [
+   [
+    -0.35,
+    -53.26,
+    -1.28
+   ],
+   [
+    10.82,
+    -10.43,
+    32.04
+   ]
+  ],
+  "centroid": [
+   2.95,
+   -42.85,
+   14.87
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parieto-occipital-sulcus-area-2-left",
+  "name": "Parieto-Occipital Sulcus Area 2",
+  "side": "left",
+  "label": 15,
+  "faces": 5750,
+  "bbox": [
+   [
+    -25.57,
+    -83.3,
+    21.24
+   ],
+   [
+    -0.62,
+    -60.2,
+    47.6
+   ]
+  ],
+  "centroid": [
+   -11.73,
+   -71.74,
+   34.59
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parieto-occipital-sulcus-area-2-right",
+  "name": "Parieto-Occipital Sulcus Area 2",
+  "side": "right",
+  "label": 15,
+  "faces": 5324,
+  "bbox": [
+   [
+    -0.47,
+    -81.45,
+    20.96
+   ],
+   [
+    18.63,
+    -58.42,
+    53.58
+   ]
+  ],
+  "centroid": [
+   7.73,
+   -71.0,
+   35.65
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "seventh-visual-area-left",
+  "name": "Seventh Visual Area",
+  "side": "left",
+  "label": 16,
+  "faces": 2146,
+  "bbox": [
+   [
+    -32.48,
+    -93.39,
+    17.4
+   ],
+   [
+    -22.83,
+    -75.91,
+    34.04
+   ]
+  ],
+  "centroid": [
+   -28.77,
+   -85.5,
+   26.3
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "seventh-visual-area-right",
+  "name": "Seventh Visual Area",
+  "side": "right",
+  "label": 16,
+  "faces": 2328,
+  "bbox": [
+   [
+    16.46,
+    -91.33,
+    19.25
+   ],
+   [
+    27.47,
+    -71.96,
+    37.94
+   ]
+  ],
+  "centroid": [
+   24.59,
+   -83.81,
+   29.79
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "intraparietal-sulcus-area-1-left",
+  "name": "IntraParietal Sulcus Area 1",
+  "side": "left",
+  "label": 17,
+  "faces": 2202,
+  "bbox": [
+   [
+    -31.93,
+    -82.93,
+    21.47
+   ],
+   [
+    -23.13,
+    -66.31,
+    47.58
+   ]
+  ],
+  "centroid": [
+   -27.95,
+   -74.83,
+   36.36
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "intraparietal-sulcus-area-1-right",
+  "name": "IntraParietal Sulcus Area 1",
+  "side": "right",
+  "label": 17,
+  "faces": 1968,
+  "bbox": [
+   [
+    18.07,
+    -80.91,
+    25.29
+   ],
+   [
+    27.18,
+    -64.21,
+    47.8
+   ]
+  ],
+  "centroid": [
+   23.12,
+   -71.23,
+   39.26
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "fusiform-face-complex-left",
+  "name": "Fusiform Face Complex",
+  "side": "left",
+  "label": 18,
+  "faces": 5892,
+  "bbox": [
+   [
+    -54.36,
+    -79.14,
+    -31.29
+   ],
+   [
+    -37.08,
+    -40.15,
+    -11.93
+   ]
+  ],
+  "centroid": [
+   -46.11,
+   -59.31,
+   -21.58
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "fusiform-face-complex-right",
+  "name": "Fusiform Face Complex",
+  "side": "right",
+  "label": 18,
+  "faces": 5566,
+  "bbox": [
+   [
+    26.39,
+    -74.63,
+    -29.38
+   ],
+   [
+    44.83,
+    -38.27,
+    -11.85
+   ]
+  ],
+  "centroid": [
+   36.29,
+   -56.2,
+   -21.3
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-v3b-left",
+  "name": "Area V3B",
+  "side": "left",
+  "label": 19,
+  "faces": 578,
+  "bbox": [
+   [
+    -35.74,
+    -85.02,
+    13.24
+   ],
+   [
+    -27.44,
+    -76.38,
+    19.62
+   ]
+  ],
+  "centroid": [
+   -31.31,
+   -81.93,
+   16.19
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-v3b-right",
+  "name": "Area V3B",
+  "side": "right",
+  "label": 19,
+  "faces": 1106,
+  "bbox": [
+   [
+    20.41,
+    -82.94,
+    15.21
+   ],
+   [
+    30.59,
+    -70.42,
+    23.82
+   ]
+  ],
+  "centroid": [
+   26.03,
+   -77.61,
+   19.64
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "lateral-occipital-area-1-left",
+  "name": "Lateral Occipital Area 1",
+  "side": "left",
+  "label": 20,
+  "faces": 1842,
+  "bbox": [
+   [
+    -53.77,
+    -93.11,
+    -3.29
+   ],
+   [
+    -37.17,
+    -80.35,
+    7.81
+   ]
+  ],
+  "centroid": [
+   -44.83,
+   -87.25,
+   2.65
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "lateral-occipital-area-1-right",
+  "name": "Lateral Occipital Area 1",
+  "side": "right",
+  "label": 20,
+  "faces": 1612,
+  "bbox": [
+   [
+    28.09,
+    -92.62,
+    -2.55
+   ],
+   [
+    44.57,
+    -76.07,
+    7.82
+   ]
+  ],
+  "centroid": [
+   36.0,
+   -84.44,
+   3.21
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "lateral-occipital-area-2-left",
+  "name": "Lateral Occipital Area 2",
+  "side": "left",
+  "label": 21,
+  "faces": 2184,
+  "bbox": [
+   [
+    -54.32,
+    -92.66,
+    -13.03
+   ],
+   [
+    -43.26,
+    -70.08,
+    -0.41
+   ]
+  ],
+  "centroid": [
+   -49.26,
+   -81.97,
+   -8.25
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "lateral-occipital-area-2-right",
+  "name": "Lateral Occipital Area 2",
+  "side": "right",
+  "label": 21,
+  "faces": 1490,
+  "bbox": [
+   [
+    36.45,
+    -91.0,
+    -12.57
+   ],
+   [
+    48.58,
+    -73.96,
+    -0.02
+   ]
+  ],
+  "centroid": [
+   42.68,
+   -82.02,
+   -6.2
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "posterior-inferotemporal-complex-left",
+  "name": "Posterior InferoTemporal Complex",
+  "side": "left",
+  "label": 22,
+  "faces": 1826,
+  "bbox": [
+   [
+    -54.09,
+    -88.57,
+    -21.17
+   ],
+   [
+    -39.24,
+    -74.02,
+    -10.18
+   ]
+  ],
+  "centroid": [
+   -46.49,
+   -80.62,
+   -15.48
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "posterior-inferotemporal-complex-right",
+  "name": "Posterior InferoTemporal Complex",
+  "side": "right",
+  "label": 22,
+  "faces": 2520,
+  "bbox": [
+   [
+    30.1,
+    -90.59,
+    -23.02
+   ],
+   [
+    48.9,
+    -72.29,
+    -6.42
+   ]
+  ],
+  "centroid": [
+   39.6,
+   -79.76,
+   -15.1
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "middle-temporal-area-left",
+  "name": "Middle Temporal Area",
+  "side": "left",
+  "label": 23,
+  "faces": 1964,
+  "bbox": [
+   [
+    -58.17,
+    -78.93,
+    -0.92
+   ],
+   [
+    -41.07,
+    -67.83,
+    12.18
+   ]
+  ],
+  "centroid": [
+   -50.32,
+   -73.36,
+   5.09
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "middle-temporal-area-right",
+  "name": "Middle Temporal Area",
+  "side": "right",
+  "label": 23,
+  "faces": 1892,
+  "bbox": [
+   [
+    39.95,
+    -78.71,
+    -0.96
+   ],
+   [
+    52.82,
+    -64.46,
+    13.9
+   ]
+  ],
+  "centroid": [
+   46.76,
+   -71.21,
+   5.96
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "primary-auditory-cortex-left",
+  "name": "Primary Auditory Cortex",
+  "side": "left",
+  "label": 24,
+  "faces": 2074,
+  "bbox": [
+   [
+    -57.77,
+    -32.54,
+    5.05
+   ],
+   [
+    -39.11,
+    -14.41,
+    16.15
+   ]
+  ],
+  "centroid": [
+   -48.96,
+   -24.48,
+   9.91
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "primary-auditory-cortex-right",
+  "name": "Primary Auditory Cortex",
+  "side": "right",
+  "label": 24,
+  "faces": 1538,
+  "bbox": [
+   [
+    32.23,
+    -30.92,
+    3.42
+   ],
+   [
+    52.56,
+    -16.07,
+    16.08
+   ]
+  ],
+  "centroid": [
+   41.49,
+   -22.44,
+   10.58
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "perisylvian-language-area-left",
+  "name": "PeriSylvian Language Area",
+  "side": "left",
+  "label": 25,
+  "faces": 3592,
+  "bbox": [
+   [
+    -70.49,
+    -59.32,
+    12.8
+   ],
+   [
+    -49.08,
+    -35.62,
+    33.64
+   ]
+  ],
+  "centroid": [
+   -62.61,
+   -46.53,
+   22.16
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "perisylvian-language-area-right",
+  "name": "PeriSylvian Language Area",
+  "side": "right",
+  "label": 25,
+  "faces": 3964,
+  "bbox": [
+   [
+    48.08,
+    -51.13,
+    12.87
+   ],
+   [
+    67.13,
+    -28.39,
+    30.4
+   ]
+  ],
+  "centroid": [
+   59.4,
+   -38.98,
+   21.45
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "superior-frontal-language-area-left",
+  "name": "Superior Frontal Language Area",
+  "side": "left",
+  "label": 26,
+  "faces": 6034,
+  "bbox": [
+   [
+    -23.56,
+    -2.58,
+    52.69
+   ],
+   [
+    -0.73,
+    31.83,
+    73.58
+   ]
+  ],
+  "centroid": [
+   -10.33,
+   16.85,
+   62.25
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "superior-frontal-language-area-right",
+  "name": "Superior Frontal Language Area",
+  "side": "right",
+  "label": 26,
+  "faces": 3926,
+  "bbox": [
+   [
+    -0.43,
+    -3.09,
+    53.09
+   ],
+   [
+    13.14,
+    29.77,
+    74.16
+   ]
+  ],
+  "centroid": [
+   4.68,
+   15.39,
+   64.74
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "precuneus-visual-area-left",
+  "name": "PreCuneus Visual Area",
+  "side": "left",
+  "label": 27,
+  "faces": 4048,
+  "bbox": [
+   [
+    -16.05,
+    -62.58,
+    37.42
+   ],
+   [
+    -0.51,
+    -41.81,
+    57.54
+   ]
+  ],
+  "centroid": [
+   -6.84,
+   -51.34,
+   47.81
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "precuneus-visual-area-right",
+  "name": "PreCuneus Visual Area",
+  "side": "right",
+  "label": 27,
+  "faces": 2156,
+  "bbox": [
+   [
+    -0.5,
+    -62.55,
+    39.41
+   ],
+   [
+    9.18,
+    -42.07,
+    56.14
+   ]
+  ],
+  "centroid": [
+   2.74,
+   -52.06,
+   48.33
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "superior-temporal-visual-area-left",
+  "name": "Superior Temporal Visual Area",
+  "side": "left",
+  "label": 28,
+  "faces": 3826,
+  "bbox": [
+   [
+    -74.31,
+    -61.15,
+    5.21
+   ],
+   [
+    -51.04,
+    -36.07,
+    21.56
+   ]
+  ],
+  "centroid": [
+   -65.02,
+   -48.93,
+   13.71
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "superior-temporal-visual-area-right",
+  "name": "Superior Temporal Visual Area",
+  "side": "right",
+  "label": 28,
+  "faces": 3102,
+  "bbox": [
+   [
+    40.42,
+    -51.15,
+    6.6
+   ],
+   [
+    67.0,
+    -36.17,
+    21.97
+   ]
+  ],
+  "centroid": [
+   54.43,
+   -43.6,
+   13.71
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-area-7p-left",
+  "name": "Medial Area 7P",
+  "side": "left",
+  "label": 29,
+  "faces": 3526,
+  "bbox": [
+   [
+    -16.11,
+    -78.59,
+    41.33
+   ],
+   [
+    -0.51,
+    -56.16,
+    55.92
+   ]
+  ],
+  "centroid": [
+   -7.14,
+   -66.88,
+   48.76
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-area-7p-right",
+  "name": "Medial Area 7P",
+  "side": "right",
+  "label": 29,
+  "faces": 1890,
+  "bbox": [
+   [
+    -0.5,
+    -76.78,
+    41.2
+   ],
+   [
+    7.0,
+    -59.96,
+    55.8
+   ]
+  ],
+  "centroid": [
+   2.28,
+   -67.16,
+   49.14
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-7m-left",
+  "name": "Area 7m",
+  "side": "left",
+  "label": 30,
+  "faces": 4440,
+  "bbox": [
+   [
+    -13.73,
+    -72.75,
+    20.57
+   ],
+   [
+    -0.5,
+    -51.83,
+    44.11
+   ]
+  ],
+  "centroid": [
+   -5.46,
+   -61.81,
+   32.68
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-7m-right",
+  "name": "Area 7m",
+  "side": "right",
+  "label": 30,
+  "faces": 2284,
+  "bbox": [
+   [
+    -0.5,
+    -68.76,
+    23.41
+   ],
+   [
+    7.31,
+    -52.01,
+    43.78
+   ]
+  ],
+  "centroid": [
+   1.96,
+   -60.22,
+   34.03
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parieto-occipital-sulcus-area-1-left",
+  "name": "Parieto-Occipital Sulcus Area 1",
+  "side": "left",
+  "label": 31,
+  "faces": 4992,
+  "bbox": [
+   [
+    -25.91,
+    -70.59,
+    -0.6
+   ],
+   [
+    -0.59,
+    -50.05,
+    23.82
+   ]
+  ],
+  "centroid": [
+   -13.54,
+   -60.73,
+   13.22
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parieto-occipital-sulcus-area-1-right",
+  "name": "Parieto-Occipital Sulcus Area 1",
+  "side": "right",
+  "label": 31,
+  "faces": 4084,
+  "bbox": [
+   [
+    -0.41,
+    -68.81,
+    -0.58
+   ],
+   [
+    18.9,
+    -48.38,
+    25.81
+   ]
+  ],
+  "centroid": [
+   8.08,
+   -58.62,
+   14.04
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-23d-left",
+  "name": "Area 23d",
+  "side": "left",
+  "label": 32,
+  "faces": 3266,
+  "bbox": [
+   [
+    -10.0,
+    -35.11,
+    29.21
+   ],
+   [
+    -0.5,
+    -4.43,
+    46.18
+   ]
+  ],
+  "centroid": [
+   -3.96,
+   -21.53,
+   38.12
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-23d-right",
+  "name": "Area 23d",
+  "side": "right",
+  "label": 32,
+  "faces": 1856,
+  "bbox": [
+   [
+    -0.5,
+    -34.74,
+    31.24
+   ],
+   [
+    4.92,
+    -6.26,
+    46.11
+   ]
+  ],
+  "centroid": [
+   0.87,
+   -23.7,
+   38.87
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ventral-23-a-b-left",
+  "name": "Area Ventral 23 a + b",
+  "side": "left",
+  "label": 33,
+  "faces": 2848,
+  "bbox": [
+   [
+    -12.4,
+    -63.31,
+    7.09
+   ],
+   [
+    -0.5,
+    -46.41,
+    25.74
+   ]
+  ],
+  "centroid": [
+   -5.4,
+   -55.44,
+   17.48
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ventral-23-a-b-right",
+  "name": "Area Ventral 23 a + b",
+  "side": "right",
+  "label": 33,
+  "faces": 1308,
+  "bbox": [
+   [
+    -0.49,
+    -58.76,
+    7.43
+   ],
+   [
+    6.6,
+    -48.41,
+    25.93
+   ]
+  ],
+  "centroid": [
+   1.72,
+   -53.77,
+   18.22
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-dorsal-23-a-b-left",
+  "name": "Area Dorsal 23 a + b",
+  "side": "left",
+  "label": 34,
+  "faces": 3188,
+  "bbox": [
+   [
+    -9.81,
+    -56.72,
+    19.4
+   ],
+   [
+    -0.51,
+    -27.64,
+    39.91
+   ]
+  ],
+  "centroid": [
+   -4.78,
+   -41.6,
+   30.78
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-dorsal-23-a-b-right",
+  "name": "Area Dorsal 23 a + b",
+  "side": "right",
+  "label": 34,
+  "faces": 892,
+  "bbox": [
+   [
+    -0.45,
+    -50.54,
+    25.28
+   ],
+   [
+    3.22,
+    -31.84,
+    38.1
+   ]
+  ],
+  "centroid": [
+   0.85,
+   -39.52,
+   32.0
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-31p-ventral-left",
+  "name": "Area 31p Ventral",
+  "side": "left",
+  "label": 35,
+  "faces": 3098,
+  "bbox": [
+   [
+    -19.71,
+    -56.93,
+    23.24
+   ],
+   [
+    -0.93,
+    -34.06,
+    39.94
+   ]
+  ],
+  "centroid": [
+   -10.3,
+   -46.0,
+   32.78
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-31p-ventral-right",
+  "name": "Area 31p Ventral",
+  "side": "right",
+  "label": 35,
+  "faces": 2226,
+  "bbox": [
+   [
+    -0.44,
+    -53.38,
+    25.41
+   ],
+   [
+    13.13,
+    -34.25,
+    40.12
+   ]
+  ],
+  "centroid": [
+   5.1,
+   -45.18,
+   33.42
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-5m-left",
+  "name": "Area 5m",
+  "side": "left",
+  "label": 36,
+  "faces": 4046,
+  "bbox": [
+   [
+    -17.6,
+    -47.32,
+    47.27
+   ],
+   [
+    -0.52,
+    -31.85,
+    73.74
+   ]
+  ],
+  "centroid": [
+   -7.3,
+   -39.38,
+   60.69
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-5m-right",
+  "name": "Area 5m",
+  "side": "right",
+  "label": 36,
+  "faces": 3030,
+  "bbox": [
+   [
+    -0.49,
+    -45.4,
+    47.23
+   ],
+   [
+    9.14,
+    -32.29,
+    79.94
+   ]
+  ],
+  "centroid": [
+   2.91,
+   -39.98,
+   60.74
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-5m-ventral-left",
+  "name": "Area 5m ventral",
+  "side": "left",
+  "label": 37,
+  "faces": 3170,
+  "bbox": [
+   [
+    -22.34,
+    -51.12,
+    37.24
+   ],
+   [
+    -0.76,
+    -20.44,
+    61.53
+   ]
+  ],
+  "centroid": [
+   -16.95,
+   -37.91,
+   48.43
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-5m-ventral-right",
+  "name": "Area 5m ventral",
+  "side": "right",
+  "label": 37,
+  "faces": 3320,
+  "bbox": [
+   [
+    -0.31,
+    -51.26,
+    40.78
+   ],
+   [
+    15.2,
+    -22.44,
+    63.95
+   ]
+  ],
+  "centroid": [
+   9.09,
+   -39.14,
+   51.33
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-23c-left",
+  "name": "Area 23c",
+  "side": "left",
+  "label": 38,
+  "faces": 4678,
+  "bbox": [
+   [
+    -21.58,
+    -48.73,
+    34.69
+   ],
+   [
+    -0.94,
+    -4.43,
+    51.56
+   ]
+  ],
+  "centroid": [
+   -13.3,
+   -28.56,
+   42.18
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-23c-right",
+  "name": "Area 23c",
+  "side": "right",
+  "label": 38,
+  "faces": 4312,
+  "bbox": [
+   [
+    -0.32,
+    -48.71,
+    36.58
+   ],
+   [
+    15.0,
+    -7.83,
+    51.9
+   ]
+  ],
+  "centroid": [
+   6.79,
+   -30.92,
+   42.24
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-5l-left",
+  "name": "Area 5L",
+  "side": "left",
+  "label": 39,
+  "faces": 4162,
+  "bbox": [
+   [
+    -26.33,
+    -58.6,
+    55.25
+   ],
+   [
+    -6.83,
+    -37.9,
+    80.3
+   ]
+  ],
+  "centroid": [
+   -17.22,
+   -47.4,
+   70.65
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-5l-right",
+  "name": "Area 5L",
+  "side": "right",
+  "label": 39,
+  "faces": 4618,
+  "bbox": [
+   [
+    0.07,
+    -58.61,
+    57.24
+   ],
+   [
+    18.81,
+    -35.95,
+    82.11
+   ]
+  ],
+  "centroid": [
+   9.78,
+   -45.84,
+   72.39
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "dorsal-area-24d-left",
+  "name": "Dorsal Area 24d",
+  "side": "left",
+  "label": 40,
+  "faces": 5226,
+  "bbox": [
+   [
+    -19.6,
+    -36.75,
+    39.26
+   ],
+   [
+    -0.51,
+    -0.11,
+    59.53
+   ]
+  ],
+  "centroid": [
+   -7.84,
+   -17.9,
+   49.14
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "dorsal-area-24d-right",
+  "name": "Dorsal Area 24d",
+  "side": "right",
+  "label": 40,
+  "faces": 3500,
+  "bbox": [
+   [
+    -0.5,
+    -34.9,
+    39.43
+   ],
+   [
+    11.44,
+    1.74,
+    57.74
+   ]
+  ],
+  "centroid": [
+   3.74,
+   -17.63,
+   49.16
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "lateral-area-7a-left",
+  "name": "Lateral Area 7A",
+  "side": "left",
+  "label": 41,
+  "faces": 1836,
+  "bbox": [
+   [
+    -17.8,
+    -11.03,
+    36.63
+   ],
+   [
+    -7.24,
+    7.58,
+    50.05
+   ]
+  ],
+  "centroid": [
+   -12.81,
+   -2.5,
+   42.69
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "lateral-area-7a-right",
+  "name": "Lateral Area 7A",
+  "side": "right",
+  "label": 41,
+  "faces": 2044,
+  "bbox": [
+   [
+    0.49,
+    -14.75,
+    39.04
+   ],
+   [
+    10.92,
+    4.0,
+    49.78
+   ]
+  ],
+  "centroid": [
+   6.4,
+   -5.1,
+   44.48
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "supplementary-and-cingulate-eye-field-left",
+  "name": "Supplementary and Cingulate Eye Field",
+  "side": "left",
+  "label": 42,
+  "faces": 3936,
+  "bbox": [
+   [
+    -33.54,
+    -61.13,
+    56.78
+   ],
+   [
+    -9.45,
+    -44.41,
+    73.94
+   ]
+  ],
+  "centroid": [
+   -23.05,
+   -54.37,
+   65.94
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "supplementary-and-cingulate-eye-field-right",
+  "name": "Supplementary and Cingulate Eye Field",
+  "side": "right",
+  "label": 42,
+  "faces": 3550,
+  "bbox": [
+   [
+    8.36,
+    -64.79,
+    56.82
+   ],
+   [
+    24.93,
+    -42.29,
+    73.54
+   ]
+  ],
+  "centroid": [
+   17.29,
+   -53.83,
+   65.13
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-6m-anterior-left",
+  "name": "Area 6m Anterior",
+  "side": "left",
+  "label": 43,
+  "faces": 6502,
+  "bbox": [
+   [
+    -16.11,
+    -12.57,
+    38.95
+   ],
+   [
+    -0.53,
+    19.97,
+    73.76
+   ]
+  ],
+  "centroid": [
+   -7.84,
+   2.38,
+   56.22
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-6m-anterior-right",
+  "name": "Area 6m Anterior",
+  "side": "right",
+  "label": 43,
+  "faces": 3582,
+  "bbox": [
+   [
+    -0.5,
+    -9.42,
+    44.82
+   ],
+   [
+    8.61,
+    15.71,
+    71.54
+   ]
+  ],
+  "centroid": [
+   2.55,
+   2.27,
+   57.14
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-6m-anterior-left",
+  "name": "Medial 6m anterior",
+  "side": "left",
+  "label": 44,
+  "faces": 6210,
+  "bbox": [
+   [
+    -30.38,
+    -8.95,
+    53.44
+   ],
+   [
+    -9.22,
+    17.91,
+    76.46
+   ]
+  ],
+  "centroid": [
+   -21.55,
+   3.62,
+   66.86
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-6m-anterior-right",
+  "name": "Medial 6m anterior",
+  "side": "right",
+  "label": 44,
+  "faces": 6440,
+  "bbox": [
+   [
+    2.11,
+    -7.23,
+    51.05
+   ],
+   [
+    27.18,
+    17.76,
+    75.95
+   ]
+  ],
+  "centroid": [
+   16.52,
+   4.22,
+   64.98
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-area-7a-left",
+  "name": "Medial Area 7A",
+  "side": "left",
+  "label": 45,
+  "faces": 5358,
+  "bbox": [
+   [
+    -19.79,
+    -74.61,
+    50.71
+   ],
+   [
+    -0.52,
+    -46.17,
+    68.03
+   ]
+  ],
+  "centroid": [
+   -9.0,
+   -59.58,
+   59.95
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-area-7a-right",
+  "name": "Medial Area 7A",
+  "side": "right",
+  "label": 45,
+  "faces": 3802,
+  "bbox": [
+   [
+    -0.5,
+    -72.76,
+    52.74
+   ],
+   [
+    13.12,
+    -48.26,
+    69.62
+   ]
+  ],
+  "centroid": [
+   4.46,
+   -61.24,
+   61.38
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "lateral-area-7p-left",
+  "name": "Lateral Area 7P",
+  "side": "left",
+  "label": 46,
+  "faces": 3448,
+  "bbox": [
+   [
+    -24.08,
+    -82.79,
+    43.36
+   ],
+   [
+    -5.43,
+    -66.3,
+    63.9
+   ]
+  ],
+  "centroid": [
+   -15.73,
+   -74.61,
+   52.4
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "lateral-area-7p-right",
+  "name": "Lateral Area 7P",
+  "side": "right",
+  "label": 46,
+  "faces": 2490,
+  "bbox": [
+   [
+    0.41,
+    -78.9,
+    45.26
+   ],
+   [
+    18.75,
+    -64.29,
+    61.63
+   ]
+  ],
+  "centroid": [
+   9.74,
+   -73.62,
+   53.74
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-7pc-left",
+  "name": "Area 7PC",
+  "side": "left",
+  "label": 47,
+  "faces": 5200,
+  "bbox": [
+   [
+    -48.21,
+    -61.21,
+    45.38
+   ],
+   [
+    -29.29,
+    -41.7,
+    70.18
+   ]
+  ],
+  "centroid": [
+   -40.6,
+   -50.42,
+   58.86
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-7pc-right",
+  "name": "Area 7PC",
+  "side": "right",
+  "label": 47,
+  "faces": 5056,
+  "bbox": [
+   [
+    22.11,
+    -62.75,
+    49.02
+   ],
+   [
+    39.49,
+    -39.68,
+    70.41
+   ]
+  ],
+  "centroid": [
+   31.63,
+   -49.41,
+   61.56
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-lateral-intraparietal-ventral-left",
+  "name": "Area Lateral IntraParietal ventral",
+  "side": "left",
+  "label": 48,
+  "faces": 2402,
+  "bbox": [
+   [
+    -39.65,
+    -63.05,
+    43.4
+   ],
+   [
+    -27.27,
+    -48.02,
+    63.72
+   ]
+  ],
+  "centroid": [
+   -33.44,
+   -56.24,
+   52.81
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-lateral-intraparietal-ventral-right",
+  "name": "Area Lateral IntraParietal ventral",
+  "side": "right",
+  "label": 48,
+  "faces": 1940,
+  "bbox": [
+   [
+    18.2,
+    -60.99,
+    45.09
+   ],
+   [
+    33.1,
+    -50.23,
+    58.31
+   ]
+  ],
+  "centroid": [
+   25.5,
+   -55.61,
+   52.25
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventral-intraparietal-complex-left",
+  "name": "Ventral IntraParietal Complex",
+  "side": "left",
+  "label": 49,
+  "faces": 3634,
+  "bbox": [
+   [
+    -33.8,
+    -72.8,
+    50.72
+   ],
+   [
+    -16.95,
+    -59.7,
+    69.82
+   ]
+  ],
+  "centroid": [
+   -24.79,
+   -65.76,
+   60.73
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventral-intraparietal-complex-right",
+  "name": "Ventral IntraParietal Complex",
+  "side": "right",
+  "label": 49,
+  "faces": 2870,
+  "bbox": [
+   [
+    8.38,
+    -68.77,
+    51.11
+   ],
+   [
+    24.82,
+    -55.99,
+    70.14
+   ]
+  ],
+  "centroid": [
+   16.63,
+   -62.37,
+   62.76
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-intraparietal-area-left",
+  "name": "Medial IntraParietal Area",
+  "side": "left",
+  "label": 50,
+  "faces": 1700,
+  "bbox": [
+   [
+    -31.54,
+    -72.61,
+    31.06
+   ],
+   [
+    -19.25,
+    -61.68,
+    50.4
+   ]
+  ],
+  "centroid": [
+   -25.7,
+   -66.09,
+   43.37
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-intraparietal-area-right",
+  "name": "Medial IntraParietal Area",
+  "side": "right",
+  "label": 50,
+  "faces": 2034,
+  "bbox": [
+   [
+    10.24,
+    -72.58,
+    33.08
+   ],
+   [
+    27.13,
+    -61.66,
+    55.79
+   ]
+  ],
+  "centroid": [
+   19.69,
+   -66.29,
+   45.23
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-1-left",
+  "name": "Area 1",
+  "side": "left",
+  "label": 51,
+  "faces": 12772,
+  "bbox": [
+   [
+    -72.31,
+    -47.26,
+    9.05
+   ],
+   [
+    -7.1,
+    -3.76,
+    80.29
+   ]
+  ],
+  "centroid": [
+   -49.09,
+   -26.42,
+   55.12
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-1-right",
+  "name": "Area 1",
+  "side": "right",
+  "label": 51,
+  "faces": 12486,
+  "bbox": [
+   [
+    4.34,
+    -41.09,
+    14.83
+   ],
+   [
+    65.45,
+    -2.24,
+    82.04
+   ]
+  ],
+  "centroid": [
+   42.85,
+   -24.14,
+   54.98
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-2-left",
+  "name": "Area 2",
+  "side": "left",
+  "label": 52,
+  "faces": 7720,
+  "bbox": [
+   [
+    -67.92,
+    -45.33,
+    29.25
+   ],
+   [
+    -20.98,
+    -14.24,
+    75.63
+   ]
+  ],
+  "centroid": [
+   -43.62,
+   -33.4,
+   49.55
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-2-right",
+  "name": "Area 2",
+  "side": "right",
+  "label": 52,
+  "faces": 7660,
+  "bbox": [
+   [
+    13.75,
+    -44.8,
+    31.04
+   ],
+   [
+    60.94,
+    -13.7,
+    71.54
+   ]
+  ],
+  "centroid": [
+   36.25,
+   -31.23,
+   48.67
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-3a-left",
+  "name": "Area 3a",
+  "side": "left",
+  "label": 53,
+  "faces": 2890,
+  "bbox": [
+   [
+    -69.95,
+    -40.56,
+    9.09
+   ],
+   [
+    -1.04,
+    -2.45,
+    73.57
+   ]
+  ],
+  "centroid": [
+   -42.87,
+   -19.41,
+   37.9
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-3a-right",
+  "name": "Area 3a",
+  "side": "right",
+  "label": 53,
+  "faces": 2750,
+  "bbox": [
+   [
+    0.26,
+    -36.54,
+    11.28
+   ],
+   [
+    60.7,
+    -4.06,
+    75.58
+   ]
+  ],
+  "centroid": [
+   26.73,
+   -22.46,
+   47.12
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "dorsal-area-6-left",
+  "name": "Dorsal area 6",
+  "side": "left",
+  "label": 54,
+  "faces": 5260,
+  "bbox": [
+   [
+    -51.75,
+    -24.58,
+    55.05
+   ],
+   [
+    -25.2,
+    -1.82,
+    76.28
+   ]
+  ],
+  "centroid": [
+   -38.53,
+   -13.04,
+   64.49
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "dorsal-area-6-right",
+  "name": "Dorsal area 6",
+  "side": "right",
+  "label": 54,
+  "faces": 4622,
+  "bbox": [
+   [
+    22.07,
+    -22.73,
+    52.98
+   ],
+   [
+    44.78,
+    -1.77,
+    74.21
+   ]
+  ],
+  "centroid": [
+   32.95,
+   -11.33,
+   62.99
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-6mp-left",
+  "name": "Area 6mp",
+  "side": "left",
+  "label": 55,
+  "faces": 5966,
+  "bbox": [
+   [
+    -28.14,
+    -22.94,
+    53.0
+   ],
+   [
+    -0.99,
+    -6.24,
+    79.78
+   ]
+  ],
+  "centroid": [
+   -14.45,
+   -14.54,
+   68.37
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-6mp-right",
+  "name": "Area 6mp",
+  "side": "right",
+  "label": 55,
+  "faces": 5426,
+  "bbox": [
+   [
+    -0.46,
+    -20.55,
+    54.85
+   ],
+   [
+    26.73,
+    -4.31,
+    76.37
+   ]
+  ],
+  "centroid": [
+   11.88,
+   -12.27,
+   67.07
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventral-area-6-left",
+  "name": "Ventral Area 6",
+  "side": "left",
+  "label": 56,
+  "faces": 3260,
+  "bbox": [
+   [
+    -68.46,
+    -10.54,
+    17.4
+   ],
+   [
+    -55.28,
+    12.34,
+    43.9
+   ]
+  ],
+  "centroid": [
+   -63.06,
+   3.09,
+   31.68
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventral-area-6-right",
+  "name": "Ventral Area 6",
+  "side": "right",
+  "label": 56,
+  "faces": 5032,
+  "bbox": [
+   [
+    45.78,
+    -8.74,
+    16.92
+   ],
+   [
+    63.06,
+    14.44,
+    44.01
+   ]
+  ],
+  "centroid": [
+   54.74,
+   5.2,
+   29.83
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-24-left",
+  "name": "Area Posterior 24",
+  "side": "left",
+  "label": 57,
+  "faces": 3106,
+  "bbox": [
+   [
+    -11.59,
+    -16.75,
+    32.8
+   ],
+   [
+    -0.51,
+    11.75,
+    46.18
+   ]
+  ],
+  "centroid": [
+   -4.53,
+   -1.35,
+   39.96
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-24-right",
+  "name": "Area Posterior 24",
+  "side": "right",
+  "label": 57,
+  "faces": 2098,
+  "bbox": [
+   [
+    -0.49,
+    -20.92,
+    35.16
+   ],
+   [
+    6.91,
+    9.56,
+    47.59
+   ]
+  ],
+  "centroid": [
+   1.66,
+   -4.51,
+   41.51
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-33-prime-left",
+  "name": "Area 33 prime",
+  "side": "left",
+  "label": 58,
+  "faces": 2400,
+  "bbox": [
+   [
+    -9.55,
+    -4.75,
+    18.82
+   ],
+   [
+    -0.67,
+    27.99,
+    36.14
+   ]
+  ],
+  "centroid": [
+   -4.0,
+   12.05,
+   28.0
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-33-prime-right",
+  "name": "Area 33 prime",
+  "side": "right",
+  "label": 58,
+  "faces": 956,
+  "bbox": [
+   [
+    -0.31,
+    -4.57,
+    19.26
+   ],
+   [
+    2.57,
+    25.95,
+    35.87
+   ]
+  ],
+  "centroid": [
+   0.54,
+   11.21,
+   29.03
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "anterior-24-prime-left",
+  "name": "Anterior 24 prime",
+  "side": "left",
+  "label": 59,
+  "faces": 3238,
+  "bbox": [
+   [
+    -13.9,
+    7.03,
+    21.07
+   ],
+   [
+    -0.52,
+    29.76,
+    41.54
+   ]
+  ],
+  "centroid": [
+   -5.76,
+   18.81,
+   31.31
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "anterior-24-prime-right",
+  "name": "Anterior 24 prime",
+  "side": "right",
+  "label": 59,
+  "faces": 1856,
+  "bbox": [
+   [
+    -0.48,
+    4.88,
+    23.43
+   ],
+   [
+    6.75,
+    27.92,
+    43.58
+   ]
+  ],
+  "centroid": [
+   1.73,
+   16.42,
+   34.12
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-p32-prime-left",
+  "name": "Area p32 prime",
+  "side": "left",
+  "label": 60,
+  "faces": 2206,
+  "bbox": [
+   [
+    -16.38,
+    3.34,
+    26.68
+   ],
+   [
+    -7.22,
+    23.91,
+    45.61
+   ]
+  ],
+  "centroid": [
+   -12.6,
+   13.75,
+   36.35
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-p32-prime-right",
+  "name": "Area p32 prime",
+  "side": "right",
+  "label": 60,
+  "faces": 2392,
+  "bbox": [
+   [
+    0.09,
+    2.97,
+    28.91
+   ],
+   [
+    10.59,
+    23.58,
+    47.75
+   ]
+  ],
+  "centroid": [
+   5.8,
+   12.6,
+   38.59
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-a24-left",
+  "name": "Area a24",
+  "side": "left",
+  "label": 61,
+  "faces": 3824,
+  "bbox": [
+   [
+    -12.21,
+    26.8,
+    -13.09
+   ],
+   [
+    -0.5,
+    48.38,
+    11.76
+   ]
+  ],
+  "centroid": [
+   -5.51,
+   38.95,
+   -2.15
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-a24-right",
+  "name": "Area a24",
+  "side": "right",
+  "label": 61,
+  "faces": 2236,
+  "bbox": [
+   [
+    -0.5,
+    27.25,
+    -10.56
+   ],
+   [
+    10.59,
+    47.81,
+    11.6
+   ]
+  ],
+  "centroid": [
+   2.31,
+   39.9,
+   0.73
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-dorsal-32-left",
+  "name": "Area dorsal 32",
+  "side": "left",
+  "label": 62,
+  "faces": 3650,
+  "bbox": [
+   [
+    -18.38,
+    27.34,
+    9.23
+   ],
+   [
+    -0.8,
+    47.58,
+    34.19
+   ]
+  ],
+  "centroid": [
+   -9.85,
+   38.5,
+   24.07
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-dorsal-32-right",
+  "name": "Area dorsal 32",
+  "side": "right",
+  "label": 62,
+  "faces": 2808,
+  "bbox": [
+   [
+    -0.35,
+    26.95,
+    10.86
+   ],
+   [
+    11.4,
+    43.94,
+    34.31
+   ]
+  ],
+  "centroid": [
+   5.55,
+   36.72,
+   24.07
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-8bm-left",
+  "name": "Area 8BM",
+  "side": "left",
+  "label": 63,
+  "faces": 7676,
+  "bbox": [
+   [
+    -14.31,
+    13.24,
+    29.07
+   ],
+   [
+    -0.5,
+    47.57,
+    59.78
+   ]
+  ],
+  "centroid": [
+   -5.71,
+   29.02,
+   43.09
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-8bm-right",
+  "name": "Area 8BM",
+  "side": "right",
+  "label": 63,
+  "faces": 4332,
+  "bbox": [
+   [
+    -0.5,
+    13.01,
+    30.87
+   ],
+   [
+    6.84,
+    44.33,
+    59.95
+   ]
+  ],
+  "centroid": [
+   1.91,
+   27.69,
+   44.85
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-p32-left",
+  "name": "Area p32",
+  "side": "left",
+  "label": 64,
+  "faces": 2228,
+  "bbox": [
+   [
+    -18.19,
+    35.41,
+    -9.02
+   ],
+   [
+    -7.21,
+    54.05,
+    7.81
+   ]
+  ],
+  "centroid": [
+   -13.66,
+   45.37,
+   -2.06
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-p32-right",
+  "name": "Area p32",
+  "side": "right",
+  "label": 64,
+  "faces": 1932,
+  "bbox": [
+   [
+    2.22,
+    35.41,
+    -12.57
+   ],
+   [
+    12.63,
+    54.1,
+    5.73
+   ]
+  ],
+  "centroid": [
+   7.02,
+   44.91,
+   -2.1
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-10r-left",
+  "name": "Area 10r",
+  "side": "left",
+  "label": 65,
+  "faces": 4376,
+  "bbox": [
+   [
+    -16.4,
+    37.24,
+    -20.55
+   ],
+   [
+    -0.51,
+    61.57,
+    1.95
+   ]
+  ],
+  "centroid": [
+   -7.92,
+   48.04,
+   -8.62
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-10r-right",
+  "name": "Area 10r",
+  "side": "right",
+  "label": 65,
+  "faces": 2414,
+  "bbox": [
+   [
+    -0.49,
+    38.98,
+    -17.11
+   ],
+   [
+    7.14,
+    57.77,
+    0.34
+   ]
+  ],
+  "centroid": [
+   3.01,
+   47.5,
+   -8.0
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-47m-left",
+  "name": "Area 47m",
+  "side": "left",
+  "label": 66,
+  "faces": 1794,
+  "bbox": [
+   [
+    -47.83,
+    24.85,
+    -23.07
+   ],
+   [
+    -31.09,
+    36.3,
+    -10.19
+   ]
+  ],
+  "centroid": [
+   -39.48,
+   31.36,
+   -17.1
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-47m-right",
+  "name": "Area 47m",
+  "side": "right",
+  "label": 66,
+  "faces": 2030,
+  "bbox": [
+   [
+    23.85,
+    23.29,
+    -25.06
+   ],
+   [
+    39.11,
+    36.35,
+    -10.39
+   ]
+  ],
+  "centroid": [
+   31.35,
+   30.68,
+   -18.49
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-8av-left",
+  "name": "Area 8Av",
+  "side": "left",
+  "label": 67,
+  "faces": 6910,
+  "bbox": [
+   [
+    -54.01,
+    1.25,
+    35.08
+   ],
+   [
+    -30.98,
+    31.76,
+    62.34
+   ]
+  ],
+  "centroid": [
+   -42.08,
+   17.17,
+   49.85
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-8av-right",
+  "name": "Area 8Av",
+  "side": "right",
+  "label": 67,
+  "faces": 5952,
+  "bbox": [
+   [
+    23.67,
+    4.85,
+    35.24
+   ],
+   [
+    45.39,
+    35.93,
+    56.1
+   ]
+  ],
+  "centroid": [
+   36.16,
+   20.58,
+   46.86
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-8ad-left",
+  "name": "Area 8Ad",
+  "side": "left",
+  "label": 68,
+  "faces": 4620,
+  "bbox": [
+   [
+    -34.37,
+    11.25,
+    31.42
+   ],
+   [
+    -17.48,
+    45.75,
+    52.16
+   ]
+  ],
+  "centroid": [
+   -26.85,
+   28.41,
+   43.66
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-8ad-right",
+  "name": "Area 8Ad",
+  "side": "right",
+  "label": 68,
+  "faces": 3778,
+  "bbox": [
+   [
+    14.37,
+    15.01,
+    33.12
+   ],
+   [
+    26.92,
+    43.81,
+    55.66
+   ]
+  ],
+  "centroid": [
+   20.03,
+   28.3,
+   44.43
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-9-middle-left",
+  "name": "Area 9 Middle",
+  "side": "left",
+  "label": 69,
+  "faces": 9818,
+  "bbox": [
+   [
+    -18.25,
+    40.68,
+    1.26
+   ],
+   [
+    -0.5,
+    65.71,
+    47.81
+   ]
+  ],
+  "centroid": [
+   -7.01,
+   52.12,
+   23.59
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-9-middle-right",
+  "name": "Area 9 Middle",
+  "side": "right",
+  "label": 69,
+  "faces": 7338,
+  "bbox": [
+   [
+    -0.5,
+    39.39,
+    1.01
+   ],
+   [
+    11.41,
+    68.17,
+    43.99
+   ]
+  ],
+  "centroid": [
+   3.29,
+   52.44,
+   22.08
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-8b-lateral-left",
+  "name": "Area 8B Lateral",
+  "side": "left",
+  "label": 70,
+  "faces": 5636,
+  "bbox": [
+   [
+    -29.74,
+    23.26,
+    37.46
+   ],
+   [
+    -0.53,
+    51.53,
+    60.36
+   ]
+  ],
+  "centroid": [
+   -12.81,
+   37.62,
+   51.51
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-8b-lateral-right",
+  "name": "Area 8B Lateral",
+  "side": "right",
+  "label": 70,
+  "faces": 6218,
+  "bbox": [
+   [
+    -0.49,
+    24.98,
+    37.42
+   ],
+   [
+    22.76,
+    53.91,
+    62.06
+   ]
+  ],
+  "centroid": [
+   9.1,
+   38.83,
+   50.78
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-9-posterior-left",
+  "name": "Area 9 Posterior",
+  "side": "left",
+  "label": 71,
+  "faces": 4116,
+  "bbox": [
+   [
+    -34.21,
+    33.08,
+    31.27
+   ],
+   [
+    -12.76,
+    57.56,
+    47.62
+   ]
+  ],
+  "centroid": [
+   -22.86,
+   45.75,
+   38.28
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-9-posterior-right",
+  "name": "Area 9 Posterior",
+  "side": "right",
+  "label": 71,
+  "faces": 4168,
+  "bbox": [
+   [
+    5.95,
+    33.2,
+    25.35
+   ],
+   [
+    26.76,
+    59.6,
+    43.8
+   ]
+  ],
+  "centroid": [
+   16.2,
+   47.51,
+   34.89
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-10d-left",
+  "name": "Area 10d",
+  "side": "left",
+  "label": 72,
+  "faces": 8036,
+  "bbox": [
+   [
+    -30.0,
+    51.24,
+    -9.1
+   ],
+   [
+    -0.59,
+    72.35,
+    26.05
+   ]
+  ],
+  "centroid": [
+   -13.52,
+   63.98,
+   7.72
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-10d-right",
+  "name": "Area 10d",
+  "side": "right",
+  "label": 72,
+  "faces": 4766,
+  "bbox": [
+   [
+    -0.5,
+    52.91,
+    -4.57
+   ],
+   [
+    17.32,
+    72.47,
+    19.92
+   ]
+  ],
+  "centroid": [
+   6.9,
+   65.27,
+   6.02
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-8c-left",
+  "name": "Area 8C",
+  "side": "left",
+  "label": 73,
+  "faces": 4914,
+  "bbox": [
+   [
+    -56.31,
+    -2.54,
+    25.19
+   ],
+   [
+    -35.44,
+    31.76,
+    44.14
+   ]
+  ],
+  "centroid": [
+   -46.05,
+   17.11,
+   34.58
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-8c-right",
+  "name": "Area 8C",
+  "side": "right",
+  "label": 73,
+  "faces": 3994,
+  "bbox": [
+   [
+    27.82,
+    3.45,
+    25.04
+   ],
+   [
+    44.73,
+    33.77,
+    41.96
+   ]
+  ],
+  "centroid": [
+   36.24,
+   18.25,
+   34.24
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-44-left",
+  "name": "Area 44",
+  "side": "left",
+  "label": 74,
+  "faces": 4620,
+  "bbox": [
+   [
+    -64.47,
+    7.19,
+    -0.93
+   ],
+   [
+    -43.08,
+    22.08,
+    27.72
+   ]
+  ],
+  "centroid": [
+   -56.24,
+   14.87,
+   11.87
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-44-right",
+  "name": "Area 44",
+  "side": "right",
+  "label": 74,
+  "faces": 5180,
+  "bbox": [
+   [
+    36.39,
+    9.35,
+    -4.75
+   ],
+   [
+    57.49,
+    27.57,
+    26.32
+   ]
+  ],
+  "centroid": [
+   50.03,
+   16.97,
+   11.72
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-45-left",
+  "name": "Area 45",
+  "side": "left",
+  "label": 75,
+  "faces": 5018,
+  "bbox": [
+   [
+    -64.18,
+    17.34,
+    -8.73
+   ],
+   [
+    -39.39,
+    35.94,
+    17.59
+   ]
+  ],
+  "centroid": [
+   -53.45,
+   25.93,
+   2.08
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-45-right",
+  "name": "Area 45",
+  "side": "right",
+  "label": 75,
+  "faces": 3250,
+  "bbox": [
+   [
+    37.85,
+    18.9,
+    -7.37
+   ],
+   [
+    56.98,
+    33.55,
+    13.92
+   ]
+  ],
+  "centroid": [
+   47.96,
+   25.18,
+   2.3
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-47l-left",
+  "name": "Area 47L",
+  "side": "left",
+  "label": 76,
+  "faces": 3784,
+  "bbox": [
+   [
+    -58.41,
+    19.04,
+    -21.01
+   ],
+   [
+    -38.82,
+    39.94,
+    -2.39
+   ]
+  ],
+  "centroid": [
+   -49.24,
+   28.96,
+   -11.43
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-47l-right",
+  "name": "Area 47L",
+  "side": "right",
+  "label": 76,
+  "faces": 3398,
+  "bbox": [
+   [
+    34.07,
+    21.01,
+    -21.42
+   ],
+   [
+    51.19,
+    40.3,
+    -3.99
+   ]
+  ],
+  "centroid": [
+   43.06,
+   31.34,
+   -13.21
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-anterior-47r-left",
+  "name": "Area anterior 47R",
+  "side": "left",
+  "label": 77,
+  "faces": 7790,
+  "bbox": [
+   [
+    -56.15,
+    29.27,
+    -21.48
+   ],
+   [
+    -33.45,
+    63.77,
+    3.72
+   ]
+  ],
+  "centroid": [
+   -43.84,
+   47.85,
+   -11.39
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-anterior-47r-right",
+  "name": "Area anterior 47R",
+  "side": "right",
+  "label": 77,
+  "faces": 7176,
+  "bbox": [
+   [
+    24.07,
+    33.29,
+    -21.45
+   ],
+   [
+    48.66,
+    61.98,
+    6.34
+   ]
+  ],
+  "centroid": [
+   36.44,
+   49.37,
+   -8.68
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "rostral-area-6-left",
+  "name": "Rostral Area 6",
+  "side": "left",
+  "label": 78,
+  "faces": 5096,
+  "bbox": [
+   [
+    -67.61,
+    0.58,
+    -5.05
+   ],
+   [
+    -46.89,
+    12.1,
+    36.09
+   ]
+  ],
+  "centroid": [
+   -56.78,
+   6.74,
+   16.68
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "rostral-area-6-right",
+  "name": "Rostral Area 6",
+  "side": "right",
+  "label": 78,
+  "faces": 5046,
+  "bbox": [
+   [
+    36.41,
+    1.4,
+    -4.92
+   ],
+   [
+    58.99,
+    15.77,
+    35.65
+   ]
+  ],
+  "centroid": [
+   47.89,
+   8.63,
+   14.7
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ifja-left",
+  "name": "Area IFJa",
+  "side": "left",
+  "label": 79,
+  "faces": 2140,
+  "bbox": [
+   [
+    -55.91,
+    5.24,
+    18.86
+   ],
+   [
+    -34.88,
+    17.99,
+    30.37
+   ]
+  ],
+  "centroid": [
+   -46.14,
+   11.43,
+   25.83
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ifja-right",
+  "name": "Area IFJa",
+  "side": "right",
+  "label": 79,
+  "faces": 1414,
+  "bbox": [
+   [
+    30.3,
+    11.2,
+    17.29
+   ],
+   [
+    48.59,
+    23.93,
+    27.59
+   ]
+  ],
+  "centroid": [
+   39.09,
+   18.62,
+   22.97
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ifjp-left",
+  "name": "Area IFJp",
+  "side": "left",
+  "label": 80,
+  "faces": 1346,
+  "bbox": [
+   [
+    -49.53,
+    -0.79,
+    21.18
+   ],
+   [
+    -35.21,
+    7.54,
+    33.59
+   ]
+  ],
+  "centroid": [
+   -43.15,
+   3.34,
+   28.14
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ifjp-right",
+  "name": "Area IFJp",
+  "side": "right",
+  "label": 80,
+  "faces": 1020,
+  "bbox": [
+   [
+    28.07,
+    3.41,
+    21.42
+   ],
+   [
+    38.94,
+    13.58,
+    32.01
+   ]
+  ],
+  "centroid": [
+   33.75,
+   8.35,
+   26.95
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ifsp-left",
+  "name": "Area IFSp",
+  "side": "left",
+  "label": 81,
+  "faces": 2782,
+  "bbox": [
+   [
+    -62.21,
+    15.34,
+    13.26
+   ],
+   [
+    -39.39,
+    30.13,
+    28.27
+   ]
+  ],
+  "centroid": [
+   -52.6,
+   22.36,
+   21.02
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ifsp-right",
+  "name": "Area IFSp",
+  "side": "right",
+  "label": 81,
+  "faces": 3092,
+  "bbox": [
+   [
+    34.22,
+    19.0,
+    7.26
+   ],
+   [
+    54.98,
+    33.61,
+    27.75
+   ]
+  ],
+  "centroid": [
+   45.54,
+   26.79,
+   18.11
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ifsa-left",
+  "name": "Area IFSa",
+  "side": "left",
+  "label": 82,
+  "faces": 3288,
+  "bbox": [
+   [
+    -61.65,
+    23.08,
+    0.64
+   ],
+   [
+    -38.99,
+    39.71,
+    21.76
+   ]
+  ],
+  "centroid": [
+   -50.81,
+   32.15,
+   11.01
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ifsa-right",
+  "name": "Area IFSa",
+  "side": "right",
+  "label": 82,
+  "faces": 3242,
+  "bbox": [
+   [
+    32.08,
+    27.22,
+    -4.91
+   ],
+   [
+    55.36,
+    40.4,
+    15.6
+   ]
+  ],
+  "centroid": [
+   45.7,
+   35.17,
+   5.7
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-9-46v-left",
+  "name": "Area posterior 9-46v",
+  "side": "left",
+  "label": 83,
+  "faces": 3818,
+  "bbox": [
+   [
+    -56.24,
+    19.36,
+    16.91
+   ],
+   [
+    -39.43,
+    37.64,
+    38.2
+   ]
+  ],
+  "centroid": [
+   -49.18,
+   29.58,
+   27.54
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-9-46v-right",
+  "name": "Area posterior 9-46v",
+  "side": "right",
+  "label": 83,
+  "faces": 5800,
+  "bbox": [
+   [
+    32.25,
+    17.23,
+    13.42
+   ],
+   [
+    51.38,
+    42.12,
+    38.17
+   ]
+  ],
+  "centroid": [
+   42.57,
+   30.68,
+   27.62
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-46-left",
+  "name": "Area 46",
+  "side": "left",
+  "label": 84,
+  "faces": 5962,
+  "bbox": [
+   [
+    -52.38,
+    25.38,
+    13.0
+   ],
+   [
+    -28.87,
+    49.61,
+    45.77
+   ]
+  ],
+  "centroid": [
+   -41.81,
+   37.73,
+   28.37
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-46-right",
+  "name": "Area 46",
+  "side": "right",
+  "label": 84,
+  "faces": 4950,
+  "bbox": [
+   [
+    20.25,
+    25.4,
+    11.06
+   ],
+   [
+    44.77,
+    50.12,
+    43.57
+   ]
+  ],
+  "centroid": [
+   32.73,
+   38.14,
+   28.49
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-anterior-9-46v-left",
+  "name": "Area anterior 9-46v",
+  "side": "left",
+  "label": 85,
+  "faces": 4538,
+  "bbox": [
+   [
+    -50.39,
+    35.45,
+    0.7
+   ],
+   [
+    -30.95,
+    59.98,
+    19.96
+   ]
+  ],
+  "centroid": [
+   -42.26,
+   49.15,
+   8.68
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-anterior-9-46v-right",
+  "name": "Area anterior 9-46v",
+  "side": "right",
+  "label": 85,
+  "faces": 3864,
+  "bbox": [
+   [
+    27.85,
+    37.21,
+    3.18
+   ],
+   [
+    44.95,
+    58.45,
+    21.79
+   ]
+  ],
+  "centroid": [
+   37.23,
+   48.97,
+   11.16
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-9-46d-left",
+  "name": "Area 9-46d",
+  "side": "left",
+  "label": 86,
+  "faces": 5530,
+  "bbox": [
+   [
+    -47.57,
+    27.43,
+    7.25
+   ],
+   [
+    -25.07,
+    57.76,
+    41.75
+   ]
+  ],
+  "centroid": [
+   -34.19,
+   44.95,
+   22.54
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-9-46d-right",
+  "name": "Area 9-46d",
+  "side": "right",
+  "label": 86,
+  "faces": 5560,
+  "bbox": [
+   [
+    17.82,
+    30.89,
+    9.35
+   ],
+   [
+    37.06,
+    56.08,
+    38.29
+   ]
+  ],
+  "centroid": [
+   26.15,
+   46.17,
+   24.6
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-9-anterior-left",
+  "name": "Area 9 anterior",
+  "side": "left",
+  "label": 87,
+  "faces": 6132,
+  "bbox": [
+   [
+    -34.21,
+    41.24,
+    11.19
+   ],
+   [
+    -11.2,
+    65.74,
+    36.04
+   ]
+  ],
+  "centroid": [
+   -24.96,
+   54.86,
+   25.24
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-9-anterior-right",
+  "name": "Area 9 anterior",
+  "side": "right",
+  "label": 87,
+  "faces": 5188,
+  "bbox": [
+   [
+    2.0,
+    51.04,
+    12.62
+   ],
+   [
+    27.02,
+    68.31,
+    34.02
+   ]
+  ],
+  "centroid": [
+   16.0,
+   59.69,
+   22.15
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-10v-left",
+  "name": "Area 10v",
+  "side": "left",
+  "label": 88,
+  "faces": 8974,
+  "bbox": [
+   [
+    -13.56,
+    22.87,
+    -31.32
+   ],
+   [
+    -0.5,
+    70.19,
+    -0.07
+   ]
+  ],
+  "centroid": [
+   -5.13,
+   49.75,
+   -18.43
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-10v-right",
+  "name": "Area 10v",
+  "side": "right",
+  "label": 88,
+  "faces": 4232,
+  "bbox": [
+   [
+    -0.5,
+    23.21,
+    -28.74
+   ],
+   [
+    7.23,
+    67.78,
+    -1.81
+   ]
+  ],
+  "centroid": [
+   1.69,
+   50.95,
+   -15.32
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-anterior-10p-left",
+  "name": "Area anterior 10p",
+  "side": "left",
+  "label": 89,
+  "faces": 2750,
+  "bbox": [
+   [
+    -37.61,
+    47.34,
+    -18.58
+   ],
+   [
+    -20.91,
+    66.41,
+    3.66
+   ]
+  ],
+  "centroid": [
+   -29.3,
+   59.11,
+   -7.5
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-anterior-10p-right",
+  "name": "Area anterior 10p",
+  "side": "right",
+  "label": 89,
+  "faces": 2924,
+  "bbox": [
+   [
+    12.26,
+    51.09,
+    -18.9
+   ],
+   [
+    35.01,
+    67.58,
+    -1.88
+   ]
+  ],
+  "centroid": [
+   24.06,
+   60.24,
+   -8.72
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "polar-10p-left",
+  "name": "Polar 10p",
+  "side": "left",
+  "label": 90,
+  "faces": 5102,
+  "bbox": [
+   [
+    -24.2,
+    47.0,
+    -29.15
+   ],
+   [
+    -0.93,
+    72.17,
+    -4.0
+   ]
+  ],
+  "centroid": [
+   -15.62,
+   60.3,
+   -17.84
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "polar-10p-right",
+  "name": "Polar 10p",
+  "side": "right",
+  "label": 90,
+  "faces": 6634,
+  "bbox": [
+   [
+    -0.4,
+    42.95,
+    -29.42
+   ],
+   [
+    21.2,
+    72.18,
+    -0.39
+   ]
+  ],
+  "centroid": [
+   9.38,
+   59.92,
+   -17.02
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-11-left",
+  "name": "Area 11",
+  "side": "left",
+  "label": 91,
+  "faces": 4536,
+  "bbox": [
+   [
+    -39.58,
+    33.25,
+    -24.75
+   ],
+   [
+    -18.95,
+    63.97,
+    -7.94
+   ]
+  ],
+  "centroid": [
+   -29.46,
+   46.97,
+   -16.45
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-11-right",
+  "name": "Area 11",
+  "side": "right",
+  "label": 91,
+  "faces": 5352,
+  "bbox": [
+   [
+    11.77,
+    29.42,
+    -27.08
+   ],
+   [
+    36.77,
+    61.62,
+    -10.07
+   ]
+  ],
+  "centroid": [
+   23.25,
+   44.27,
+   -17.49
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-13-left",
+  "name": "Area 13",
+  "side": "left",
+  "label": 92,
+  "faces": 3532,
+  "bbox": [
+   [
+    -36.11,
+    12.75,
+    -28.65
+   ],
+   [
+    -19.22,
+    37.9,
+    -10.38
+   ]
+  ],
+  "centroid": [
+   -26.78,
+   25.99,
+   -21.74
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-13-right",
+  "name": "Area 13",
+  "side": "right",
+  "label": 92,
+  "faces": 2988,
+  "bbox": [
+   [
+    10.25,
+    11.24,
+    -28.61
+   ],
+   [
+    25.1,
+    33.75,
+    -12.22
+   ]
+  ],
+  "centroid": [
+   17.8,
+   23.86,
+   -21.75
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "orbital-frontal-complex-left",
+  "name": "Orbital Frontal Complex",
+  "side": "left",
+  "label": 93,
+  "faces": 6900,
+  "bbox": [
+   [
+    -21.63,
+    10.83,
+    -31.32
+   ],
+   [
+    -0.51,
+    50.11,
+    -14.42
+   ]
+  ],
+  "centroid": [
+   -11.45,
+   30.29,
+   -25.28
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "orbital-frontal-complex-right",
+  "name": "Orbital Frontal Complex",
+  "side": "right",
+  "label": 93,
+  "faces": 4296,
+  "bbox": [
+   [
+    -0.39,
+    12.86,
+    -32.78
+   ],
+   [
+    14.51,
+    47.92,
+    -15.87
+   ]
+  ],
+  "centroid": [
+   5.87,
+   30.59,
+   -24.98
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-47s-left",
+  "name": "Area 47s",
+  "side": "left",
+  "label": 94,
+  "faces": 3538,
+  "bbox": [
+   [
+    -47.61,
+    10.86,
+    -29.22
+   ],
+   [
+    -27.34,
+    31.95,
+    -10.17
+   ]
+  ],
+  "centroid": [
+   -36.44,
+   19.8,
+   -19.83
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-47s-right",
+  "name": "Area 47s",
+  "side": "right",
+  "label": 94,
+  "faces": 3206,
+  "bbox": [
+   [
+    19.61,
+    11.25,
+    -29.05
+   ],
+   [
+    42.72,
+    25.99,
+    -9.82
+   ]
+  ],
+  "centroid": [
+   28.91,
+   20.37,
+   -19.1
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-lateral-intraparietal-dorsal-left",
+  "name": "Area Lateral IntraParietal dorsal",
+  "side": "left",
+  "label": 95,
+  "faces": 1112,
+  "bbox": [
+   [
+    -36.11,
+    -64.71,
+    36.81
+   ],
+   [
+    -28.89,
+    -46.28,
+    47.55
+   ]
+  ],
+  "centroid": [
+   -32.77,
+   -53.56,
+   41.4
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-lateral-intraparietal-dorsal-right",
+  "name": "Area Lateral IntraParietal dorsal",
+  "side": "right",
+  "label": 95,
+  "faces": 898,
+  "bbox": [
+   [
+    22.25,
+    -59.07,
+    37.34
+   ],
+   [
+    29.19,
+    -48.34,
+    49.74
+   ]
+  ],
+  "centroid": [
+   26.6,
+   -53.76,
+   43.08
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-6-anterior-left",
+  "name": "Area 6 anterior",
+  "side": "left",
+  "label": 96,
+  "faces": 4840,
+  "bbox": [
+   [
+    -43.61,
+    -15.33,
+    44.7
+   ],
+   [
+    -21.29,
+    15.9,
+    67.54
+   ]
+  ],
+  "centroid": [
+   -29.38,
+   -3.21,
+   54.2
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-6-anterior-right",
+  "name": "Area 6 anterior",
+  "side": "right",
+  "label": 96,
+  "faces": 4316,
+  "bbox": [
+   [
+    15.71,
+    -13.26,
+    43.08
+   ],
+   [
+    35.23,
+    13.7,
+    61.64
+   ]
+  ],
+  "centroid": [
+   23.91,
+   -1.02,
+   52.55
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "inferior-6-8-transitional-area-left",
+  "name": "Inferior 6-8 Transitional Area",
+  "side": "left",
+  "label": 97,
+  "faces": 3440,
+  "bbox": [
+   [
+    -47.99,
+    -4.63,
+    43.37
+   ],
+   [
+    -25.27,
+    15.57,
+    62.33
+   ]
+  ],
+  "centroid": [
+   -34.87,
+   5.88,
+   54.78
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "inferior-6-8-transitional-area-right",
+  "name": "Inferior 6-8 Transitional Area",
+  "side": "right",
+  "label": 97,
+  "faces": 3566,
+  "bbox": [
+   [
+    18.42,
+    -0.81,
+    43.19
+   ],
+   [
+    42.63,
+    18.09,
+    64.16
+   ]
+  ],
+  "centroid": [
+   31.37,
+   10.04,
+   56.06
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "superior-6-8-transitional-area-left",
+  "name": "Superior 6-8 Transitional Area",
+  "side": "left",
+  "label": 98,
+  "faces": 3332,
+  "bbox": [
+   [
+    -34.32,
+    13.35,
+    46.83
+   ],
+   [
+    -18.81,
+    32.2,
+    64.26
+   ]
+  ],
+  "centroid": [
+   -27.21,
+   22.24,
+   55.55
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "superior-6-8-transitional-area-right",
+  "name": "Superior 6-8 Transitional Area",
+  "side": "right",
+  "label": 98,
+  "faces": 3202,
+  "bbox": [
+   [
+    8.42,
+    12.7,
+    46.81
+   ],
+   [
+    25.28,
+    28.06,
+    65.75
+   ]
+  ],
+  "centroid": [
+   18.66,
+   19.43,
+   56.82
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-43-left",
+  "name": "Area 43",
+  "side": "left",
+  "label": 99,
+  "faces": 2776,
+  "bbox": [
+   [
+    -68.47,
+    -8.77,
+    -0.75
+   ],
+   [
+    -49.09,
+    7.75,
+    19.61
+   ]
+  ],
+  "centroid": [
+   -61.29,
+   -0.85,
+   7.61
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-43-right",
+  "name": "Area 43",
+  "side": "right",
+  "label": 99,
+  "faces": 3864,
+  "bbox": [
+   [
+    40.28,
+    -12.61,
+    0.66
+   ],
+   [
+    63.2,
+    11.76,
+    18.11
+   ]
+  ],
+  "centroid": [
+   54.11,
+   -1.22,
+   8.49
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-op4-pv-left",
+  "name": "Area OP4/PV",
+  "side": "left",
+  "label": 100,
+  "faces": 4794,
+  "bbox": [
+   [
+    -72.47,
+    -23.13,
+    3.39
+   ],
+   [
+    -49.41,
+    -2.26,
+    27.59
+   ]
+  ],
+  "centroid": [
+   -62.85,
+   -14.39,
+   13.54
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-op4-pv-right",
+  "name": "Area OP4/PV",
+  "side": "right",
+  "label": 100,
+  "faces": 5076,
+  "bbox": [
+   [
+    40.03,
+    -26.6,
+    5.18
+   ],
+   [
+    65.42,
+    -4.0,
+    23.93
+   ]
+  ],
+  "centroid": [
+   55.27,
+   -14.98,
+   14.17
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-op1-sii-left",
+  "name": "Area OP1/SII",
+  "side": "left",
+  "label": 101,
+  "faces": 2990,
+  "bbox": [
+   [
+    -59.82,
+    -32.93,
+    8.68
+   ],
+   [
+    -40.99,
+    -14.2,
+    23.97
+   ]
+  ],
+  "centroid": [
+   -50.42,
+   -23.14,
+   16.17
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-op1-sii-right",
+  "name": "Area OP1/SII",
+  "side": "right",
+  "label": 101,
+  "faces": 2050,
+  "bbox": [
+   [
+    33.74,
+    -28.82,
+    10.97
+   ],
+   [
+    50.99,
+    -15.94,
+    22.28
+   ]
+  ],
+  "centroid": [
+   41.65,
+   -22.44,
+   16.24
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-op2-3-vs-left",
+  "name": "Area OP2-3/VS",
+  "side": "left",
+  "label": 102,
+  "faces": 2380,
+  "bbox": [
+   [
+    -51.61,
+    -27.21,
+    7.08
+   ],
+   [
+    -34.97,
+    -8.24,
+    22.34
+   ]
+  ],
+  "centroid": [
+   -43.4,
+   -17.01,
+   16.41
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-op2-3-vs-right",
+  "name": "Area OP2-3/VS",
+  "side": "right",
+  "label": 102,
+  "faces": 2162,
+  "bbox": [
+   [
+    27.66,
+    -26.77,
+    9.24
+   ],
+   [
+    43.22,
+    -8.39,
+    22.46
+   ]
+  ],
+  "centroid": [
+   35.78,
+   -16.05,
+   17.15
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-52-left",
+  "name": "Area 52",
+  "side": "left",
+  "label": 103,
+  "faces": 1336,
+  "bbox": [
+   [
+    -51.71,
+    -28.88,
+    -10.71
+   ],
+   [
+    -33.44,
+    -14.43,
+    13.81
+   ]
+  ],
+  "centroid": [
+   -42.0,
+   -22.78,
+   0.11
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-52-right",
+  "name": "Area 52",
+  "side": "right",
+  "label": 103,
+  "faces": 784,
+  "bbox": [
+   [
+    28.07,
+    -25.19,
+    -4.76
+   ],
+   [
+    46.61,
+    -16.24,
+    13.57
+   ]
+  ],
+  "centroid": [
+   33.94,
+   -23.13,
+   4.33
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "retroinsular-cortex-left",
+  "name": "RetroInsular Cortex",
+  "side": "left",
+  "label": 104,
+  "faces": 2232,
+  "bbox": [
+   [
+    -55.71,
+    -41.36,
+    11.17
+   ],
+   [
+    -32.96,
+    -26.2,
+    23.79
+   ]
+  ],
+  "centroid": [
+   -42.38,
+   -34.18,
+   17.26
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "retroinsular-cortex-right",
+  "name": "RetroInsular Cortex",
+  "side": "right",
+  "label": 104,
+  "faces": 1952,
+  "bbox": [
+   [
+    28.09,
+    -38.84,
+    12.99
+   ],
+   [
+    52.51,
+    -24.41,
+    22.3
+   ]
+  ],
+  "centroid": [
+   38.28,
+   -31.55,
+   17.35
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pfcm-left",
+  "name": "Area PFcm",
+  "side": "left",
+  "label": 105,
+  "faces": 3370,
+  "bbox": [
+   [
+    -65.6,
+    -44.56,
+    10.67
+   ],
+   [
+    -45.17,
+    -20.09,
+    27.75
+   ]
+  ],
+  "centroid": [
+   -54.8,
+   -31.8,
+   17.96
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pfcm-right",
+  "name": "Area PFcm",
+  "side": "right",
+  "label": 105,
+  "faces": 2450,
+  "bbox": [
+   [
+    36.21,
+    -35.36,
+    13.22
+   ],
+   [
+    54.82,
+    -20.06,
+    27.75
+   ]
+  ],
+  "centroid": [
+   45.36,
+   -28.72,
+   20.01
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "posterior-insular-area-2-left",
+  "name": "Posterior Insular Area 2",
+  "side": "left",
+  "label": 106,
+  "faces": 3970,
+  "bbox": [
+   [
+    -49.96,
+    -19.04,
+    -16.57
+   ],
+   [
+    -37.24,
+    8.05,
+    11.61
+   ]
+  ],
+  "centroid": [
+   -43.93,
+   -5.02,
+   -2.17
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "posterior-insular-area-2-right",
+  "name": "Posterior Insular Area 2",
+  "side": "right",
+  "label": 106,
+  "faces": 3842,
+  "bbox": [
+   [
+    30.42,
+    -20.53,
+    -12.95
+   ],
+   [
+    42.9,
+    7.9,
+    11.94
+   ]
+  ],
+  "centroid": [
+   37.25,
+   -5.53,
+   -0.55
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ta2-left",
+  "name": "Area TA2",
+  "side": "left",
+  "label": 107,
+  "faces": 3256,
+  "bbox": [
+   [
+    -63.74,
+    -14.68,
+    -16.66
+   ],
+   [
+    -47.43,
+    12.02,
+    -0.09
+   ]
+  ],
+  "centroid": [
+   -54.39,
+   0.39,
+   -7.76
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ta2-right",
+  "name": "Area TA2",
+  "side": "right",
+  "label": 107,
+  "faces": 4134,
+  "bbox": [
+   [
+    42.02,
+    -16.8,
+    -14.81
+   ],
+   [
+    58.57,
+    13.78,
+    1.95
+   ]
+  ],
+  "centroid": [
+   48.38,
+   -0.2,
+   -6.93
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "frontal-opercular-area-4-left",
+  "name": "Frontal OPercular Area 4",
+  "side": "left",
+  "label": 108,
+  "faces": 3934,
+  "bbox": [
+   [
+    -59.54,
+    1.24,
+    -6.6
+   ],
+   [
+    -31.07,
+    23.77,
+    13.93
+   ]
+  ],
+  "centroid": [
+   -44.02,
+   11.94,
+   4.5
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "frontal-opercular-area-4-right",
+  "name": "Frontal OPercular Area 4",
+  "side": "right",
+  "label": 108,
+  "faces": 3132,
+  "bbox": [
+   [
+    25.54,
+    1.44,
+    -6.6
+   ],
+   [
+    50.56,
+    23.54,
+    13.61
+   ]
+  ],
+  "centroid": [
+   36.1,
+   12.47,
+   5.19
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "middle-insular-area-left",
+  "name": "Middle Insular Area",
+  "side": "left",
+  "label": 109,
+  "faces": 3644,
+  "bbox": [
+   [
+    -48.25,
+    -6.57,
+    -8.75
+   ],
+   [
+    -32.89,
+    22.2,
+    9.63
+   ]
+  ],
+  "centroid": [
+   -40.94,
+   9.03,
+   0.86
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "middle-insular-area-right",
+  "name": "Middle Insular Area",
+  "side": "right",
+  "label": 109,
+  "faces": 3296,
+  "bbox": [
+   [
+    27.94,
+    -3.12,
+    -6.93
+   ],
+   [
+    42.61,
+    21.56,
+    10.21
+   ]
+  ],
+  "centroid": [
+   35.29,
+   8.06,
+   1.24
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "pirform-cortex-left",
+  "name": "Pirform Cortex",
+  "side": "left",
+  "label": 110,
+  "faces": 2504,
+  "bbox": [
+   [
+    -43.91,
+    -2.76,
+    -26.54
+   ],
+   [
+    -23.41,
+    10.23,
+    -11.89
+   ]
+  ],
+  "centroid": [
+   -33.83,
+   3.93,
+   -18.92
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "pirform-cortex-right",
+  "name": "Pirform Cortex",
+  "side": "right",
+  "label": 110,
+  "faces": 3334,
+  "bbox": [
+   [
+    17.96,
+    -2.8,
+    -28.91
+   ],
+   [
+    40.8,
+    10.19,
+    -11.78
+   ]
+  ],
+  "centroid": [
+   29.37,
+   3.89,
+   -18.86
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "anterior-ventral-insular-area-left",
+  "name": "Anterior Ventral Insular Area",
+  "side": "left",
+  "label": 111,
+  "faces": 2518,
+  "bbox": [
+   [
+    -43.52,
+    16.86,
+    -12.75
+   ],
+   [
+    -30.51,
+    29.98,
+    6.35
+   ]
+  ],
+  "centroid": [
+   -35.55,
+   22.99,
+   -3.64
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "anterior-ventral-insular-area-right",
+  "name": "Anterior Ventral Insular Area",
+  "side": "right",
+  "label": 111,
+  "faces": 2966,
+  "bbox": [
+   [
+    23.55,
+    15.41,
+    -11.12
+   ],
+   [
+    40.68,
+    31.95,
+    5.92
+   ]
+  ],
+  "centroid": [
+   31.1,
+   23.2,
+   -3.81
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "anterior-agranular-insula-complex-left",
+  "name": "Anterior Agranular Insula Complex",
+  "side": "left",
+  "label": 112,
+  "faces": 2988,
+  "bbox": [
+   [
+    -47.92,
+    3.45,
+    -22.91
+   ],
+   [
+    -27.09,
+    21.63,
+    -4.07
+   ]
+  ],
+  "centroid": [
+   -38.25,
+   12.95,
+   -12.98
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "anterior-agranular-insula-complex-right",
+  "name": "Anterior Agranular Insula Complex",
+  "side": "right",
+  "label": 112,
+  "faces": 2730,
+  "bbox": [
+   [
+    20.01,
+    5.45,
+    -24.71
+   ],
+   [
+    41.4,
+    20.19,
+    -4.38
+   ]
+  ],
+  "centroid": [
+   32.09,
+   14.09,
+   -12.85
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "frontal-opercular-area-1-left",
+  "name": "Frontal OPercular Area 1",
+  "side": "left",
+  "label": 113,
+  "faces": 1986,
+  "bbox": [
+   [
+    -63.93,
+    -3.3,
+    -4.76
+   ],
+   [
+    -45.01,
+    7.61,
+    11.55
+   ]
+  ],
+  "centroid": [
+   -53.75,
+   1.96,
+   2.34
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "frontal-opercular-area-1-right",
+  "name": "Frontal OPercular Area 1",
+  "side": "right",
+  "label": 113,
+  "faces": 2460,
+  "bbox": [
+   [
+    36.26,
+    -5.01,
+    -6.58
+   ],
+   [
+    52.75,
+    10.14,
+    13.93
+   ]
+  ],
+  "centroid": [
+   44.73,
+   2.26,
+   3.74
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "frontal-opercular-area-3-left",
+  "name": "Frontal OPercular Area 3",
+  "side": "left",
+  "label": 114,
+  "faces": 1346,
+  "bbox": [
+   [
+    -44.01,
+    -4.93,
+    7.35
+   ],
+   [
+    -33.46,
+    11.76,
+    16.2
+   ]
+  ],
+  "centroid": [
+   -38.91,
+   2.58,
+   11.74
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "frontal-opercular-area-3-right",
+  "name": "Frontal OPercular Area 3",
+  "side": "right",
+  "label": 114,
+  "faces": 1412,
+  "bbox": [
+   [
+    27.73,
+    -4.71,
+    5.04
+   ],
+   [
+    36.8,
+    15.54,
+    16.14
+   ]
+  ],
+  "centroid": [
+   31.68,
+   5.55,
+   11.14
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "frontal-opercular-area-2-left",
+  "name": "Frontal OPercular Area 2",
+  "side": "left",
+  "label": 115,
+  "faces": 1684,
+  "bbox": [
+   [
+    -52.17,
+    -10.57,
+    5.25
+   ],
+   [
+    -38.76,
+    1.89,
+    18.41
+   ]
+  ],
+  "centroid": [
+   -45.8,
+   -4.67,
+   12.63
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "frontal-opercular-area-2-right",
+  "name": "Frontal OPercular Area 2",
+  "side": "right",
+  "label": 115,
+  "faces": 1544,
+  "bbox": [
+   [
+    30.2,
+    -10.62,
+    7.25
+   ],
+   [
+    43.26,
+    2.01,
+    18.44
+   ]
+  ],
+  "centroid": [
+   37.27,
+   -4.44,
+   13.82
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pft-left",
+  "name": "Area PFt",
+  "side": "left",
+  "label": 116,
+  "faces": 2894,
+  "bbox": [
+   [
+    -64.27,
+    -42.58,
+    28.86
+   ],
+   [
+    -44.89,
+    -16.42,
+    47.95
+   ]
+  ],
+  "centroid": [
+   -54.14,
+   -30.41,
+   38.08
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pft-right",
+  "name": "Area PFt",
+  "side": "right",
+  "label": 116,
+  "faces": 3294,
+  "bbox": [
+   [
+    37.99,
+    -35.11,
+    29.39
+   ],
+   [
+    58.78,
+    -16.21,
+    52.13
+   ]
+  ],
+  "centroid": [
+   48.77,
+   -26.48,
+   41.63
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "anterior-intraparietal-area-left",
+  "name": "Anterior IntraParietal Area",
+  "side": "left",
+  "label": 117,
+  "faces": 3136,
+  "bbox": [
+   [
+    -49.53,
+    -55.26,
+    34.79
+   ],
+   [
+    -32.79,
+    -28.38,
+    49.7
+   ]
+  ],
+  "centroid": [
+   -39.82,
+   -44.17,
+   41.72
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "anterior-intraparietal-area-right",
+  "name": "Anterior IntraParietal Area",
+  "side": "right",
+  "label": 117,
+  "faces": 3352,
+  "bbox": [
+   [
+    25.83,
+    -54.65,
+    34.88
+   ],
+   [
+    43.01,
+    -30.17,
+    54.04
+   ]
+  ],
+  "centroid": [
+   33.88,
+   -43.36,
+   43.57
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "entorhinal-cortex-left",
+  "name": "Entorhinal Cortex",
+  "side": "left",
+  "label": 118,
+  "faces": 3646,
+  "bbox": [
+   [
+    -31.76,
+    -26.54,
+    -38.59
+   ],
+   [
+    -15.39,
+    -2.07,
+    -19.73
+   ]
+  ],
+  "centroid": [
+   -23.34,
+   -12.71,
+   -28.39
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "entorhinal-cortex-right",
+  "name": "Entorhinal Cortex",
+  "side": "right",
+  "label": 118,
+  "faces": 3454,
+  "bbox": [
+   [
+    9.88,
+    -26.76,
+    -34.99
+   ],
+   [
+    23.15,
+    -3.79,
+    -18.05
+   ]
+  ],
+  "centroid": [
+   16.59,
+   -13.68,
+   -26.28
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "presubiculum-left",
+  "name": "PreSubiculum",
+  "side": "left",
+  "label": 119,
+  "faces": 4660,
+  "bbox": [
+   [
+    -31.76,
+    -50.59,
+    -26.84
+   ],
+   [
+    -13.24,
+    -14.05,
+    1.57
+   ]
+  ],
+  "centroid": [
+   -23.09,
+   -31.14,
+   -12.74
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "presubiculum-right",
+  "name": "PreSubiculum",
+  "side": "right",
+  "label": 119,
+  "faces": 4238,
+  "bbox": [
+   [
+    6.02,
+    -46.75,
+    -22.62
+   ],
+   [
+    26.61,
+    -18.06,
+    1.66
+   ]
+  ],
+  "centroid": [
+   16.53,
+   -32.29,
+   -10.31
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "hippocampus-left",
+  "name": "Hippocampus",
+  "side": "left",
+  "label": 120,
+  "faces": 4850,
+  "bbox": [
+   [
+    -41.65,
+    -44.81,
+    -30.58
+   ],
+   [
+    -19.42,
+    -9.84,
+    -0.06
+   ]
+  ],
+  "centroid": [
+   -33.42,
+   -27.71,
+   -15.54
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "hippocampus-right",
+  "name": "Hippocampus",
+  "side": "right",
+  "label": 120,
+  "faces": 4302,
+  "bbox": [
+   [
+    12.43,
+    -42.77,
+    -28.64
+   ],
+   [
+    34.63,
+    -8.4,
+    -0.13
+   ]
+  ],
+  "centroid": [
+   26.92,
+   -24.67,
+   -16.7
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "prostraite-area-left",
+  "name": "ProStraite Area",
+  "side": "left",
+  "label": 121,
+  "faces": 2628,
+  "bbox": [
+   [
+    -32.13,
+    -66.57,
+    -6.93
+   ],
+   [
+    -15.1,
+    -42.24,
+    8.45
+   ]
+  ],
+  "centroid": [
+   -24.08,
+   -54.64,
+   1.07
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "prostraite-area-right",
+  "name": "ProStraite Area",
+  "side": "right",
+  "label": 121,
+  "faces": 2440,
+  "bbox": [
+   [
+    9.8,
+    -60.77,
+    -8.64
+   ],
+   [
+    26.61,
+    -39.89,
+    8.3
+   ]
+  ],
+  "centroid": [
+   17.17,
+   -50.77,
+   1.13
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "perirhinal-ectorhinal-cortex-left",
+  "name": "Perirhinal Ectorhinal Cortex",
+  "side": "left",
+  "label": 122,
+  "faces": 6376,
+  "bbox": [
+   [
+    -43.69,
+    -28.91,
+    -48.74
+   ],
+   [
+    -18.73,
+    5.59,
+    -20.23
+   ]
+  ],
+  "centroid": [
+   -31.24,
+   -9.04,
+   -33.79
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "perirhinal-ectorhinal-cortex-right",
+  "name": "Perirhinal Ectorhinal Cortex",
+  "side": "right",
+  "label": 122,
+  "faces": 6670,
+  "bbox": [
+   [
+    11.64,
+    -28.94,
+    -44.55
+   ],
+   [
+    37.36,
+    7.77,
+    -22.32
+   ]
+  ],
+  "centroid": [
+   24.0,
+   -9.71,
+   -33.32
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-stga-left",
+  "name": "Area STGa",
+  "side": "left",
+  "label": 123,
+  "faces": 3358,
+  "bbox": [
+   [
+    -64.07,
+    2.65,
+    -27.02
+   ],
+   [
+    -46.79,
+    20.01,
+    -8.4
+   ]
+  ],
+  "centroid": [
+   -55.66,
+   10.71,
+   -17.95
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-stga-right",
+  "name": "Area STGa",
+  "side": "right",
+  "label": 123,
+  "faces": 3332,
+  "bbox": [
+   [
+    41.76,
+    1.41,
+    -28.92
+   ],
+   [
+    56.89,
+    19.94,
+    -10.07
+   ]
+  ],
+  "centroid": [
+   48.3,
+   10.44,
+   -18.94
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parabelt-complex-left",
+  "name": "ParaBelt Complex",
+  "side": "left",
+  "label": 124,
+  "faces": 3608,
+  "bbox": [
+   [
+    -69.62,
+    -36.66,
+    -2.84
+   ],
+   [
+    -45.34,
+    -4.17,
+    13.78
+   ]
+  ],
+  "centroid": [
+   -58.8,
+   -23.52,
+   5.68
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parabelt-complex-right",
+  "name": "ParaBelt Complex",
+  "side": "right",
+  "label": 124,
+  "faces": 2750,
+  "bbox": [
+   [
+    42.48,
+    -30.92,
+    -4.71
+   ],
+   [
+    62.76,
+    -2.08,
+    13.98
+   ]
+  ],
+  "centroid": [
+   54.42,
+   -18.02,
+   6.73
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "auditory-5-complex-left",
+  "name": "Auditory 5 Complex",
+  "side": "left",
+  "label": 125,
+  "faces": 5366,
+  "bbox": [
+   [
+    -74.13,
+    -38.83,
+    -14.58
+   ],
+   [
+    -58.86,
+    11.54,
+    5.65
+   ]
+  ],
+  "centroid": [
+   -66.18,
+   -15.7,
+   -4.91
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "auditory-5-complex-right",
+  "name": "Auditory 5 Complex",
+  "side": "right",
+  "label": 125,
+  "faces": 5542,
+  "bbox": [
+   [
+    49.74,
+    -37.13,
+    -14.91
+   ],
+   [
+    67.42,
+    11.56,
+    4.22
+   ]
+  ],
+  "centroid": [
+   58.99,
+   -16.57,
+   -4.8
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parahippocampal-area-1-left",
+  "name": "ParaHippocampal Area 1",
+  "side": "left",
+  "label": 126,
+  "faces": 4202,
+  "bbox": [
+   [
+    -33.59,
+    -47.33,
+    -31.12
+   ],
+   [
+    -15.2,
+    -23.96,
+    -6.38
+   ]
+  ],
+  "centroid": [
+   -24.44,
+   -36.92,
+   -18.31
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parahippocampal-area-1-right",
+  "name": "ParaHippocampal Area 1",
+  "side": "right",
+  "label": 126,
+  "faces": 3854,
+  "bbox": [
+   [
+    8.44,
+    -45.41,
+    -30.72
+   ],
+   [
+    25.23,
+    -24.08,
+    -7.87
+   ]
+  ],
+  "centroid": [
+   17.88,
+   -35.59,
+   -18.23
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parahippocampal-area-3-left",
+  "name": "ParaHippocampal Area 3",
+  "side": "left",
+  "label": 127,
+  "faces": 4302,
+  "bbox": [
+   [
+    -41.62,
+    -52.57,
+    -32.91
+   ],
+   [
+    -25.45,
+    -22.44,
+    -6.45
+   ]
+  ],
+  "centroid": [
+   -34.7,
+   -38.89,
+   -18.8
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parahippocampal-area-3-right",
+  "name": "ParaHippocampal Area 3",
+  "side": "right",
+  "label": 127,
+  "faces": 2326,
+  "bbox": [
+   [
+    25.9,
+    -52.57,
+    -26.59
+   ],
+   [
+    36.84,
+    -22.41,
+    -9.84
+   ]
+  ],
+  "centroid": [
+   30.31,
+   -36.92,
+   -18.31
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-stsd-anterior-left",
+  "name": "Area STSd Anterior",
+  "side": "left",
+  "label": 128,
+  "faces": 4046,
+  "bbox": [
+   [
+    -67.59,
+    -23.02,
+    -25.18
+   ],
+   [
+    -51.25,
+    6.1,
+    -4.08
+   ]
+  ],
+  "centroid": [
+   -58.62,
+   -7.56,
+   -13.98
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-stsd-anterior-right",
+  "name": "Area STSd Anterior",
+  "side": "right",
+  "label": 128,
+  "faces": 4520,
+  "bbox": [
+   [
+    42.07,
+    -21.13,
+    -28.53
+   ],
+   [
+    60.57,
+    7.63,
+    -4.16
+   ]
+  ],
+  "centroid": [
+   50.48,
+   -6.58,
+   -15.13
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-stsd-posterior-left",
+  "name": "Area STSd Posterior",
+  "side": "left",
+  "label": 129,
+  "faces": 3042,
+  "bbox": [
+   [
+    -63.77,
+    -48.59,
+    -9.2
+   ],
+   [
+    -49.02,
+    -20.25,
+    6.04
+   ]
+  ],
+  "centroid": [
+   -56.28,
+   -33.06,
+   -2.0
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-stsd-posterior-right",
+  "name": "Area STSd Posterior",
+  "side": "right",
+  "label": 129,
+  "faces": 2798,
+  "bbox": [
+   [
+    39.8,
+    -39.29,
+    -10.94
+   ],
+   [
+    54.66,
+    -16.39,
+    3.71
+   ]
+  ],
+  "centroid": [
+   46.48,
+   -28.66,
+   -3.25
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-stsv-posterior-left",
+  "name": "Area STSv Posterior",
+  "side": "left",
+  "label": 130,
+  "faces": 3316,
+  "bbox": [
+   [
+    -69.54,
+    -50.82,
+    -14.79
+   ],
+   [
+    -51.42,
+    -22.06,
+    5.58
+   ]
+  ],
+  "centroid": [
+   -60.98,
+   -35.74,
+   -5.98
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-stsv-posterior-right",
+  "name": "Area STSv Posterior",
+  "side": "right",
+  "label": 130,
+  "faces": 3894,
+  "bbox": [
+   [
+    48.02,
+    -46.81,
+    -14.74
+   ],
+   [
+    67.14,
+    -18.06,
+    1.97
+   ]
+  ],
+  "centroid": [
+   58.39,
+   -31.71,
+   -6.18
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-tg-dorsal-left",
+  "name": "Area TG Dorsal",
+  "side": "left",
+  "label": 131,
+  "faces": 13106,
+  "bbox": [
+   [
+    -66.0,
+    -7.22,
+    -48.77
+   ],
+   [
+    -24.55,
+    24.46,
+    -20.07
+   ]
+  ],
+  "centroid": [
+   -44.25,
+   9.06,
+   -33.87
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-tg-dorsal-right",
+  "name": "Area TG Dorsal",
+  "side": "right",
+  "label": 131,
+  "faces": 13396,
+  "bbox": [
+   [
+    14.4,
+    -1.12,
+    -50.58
+   ],
+   [
+    56.59,
+    26.11,
+    -16.23
+   ]
+  ],
+  "centroid": [
+   35.93,
+   11.28,
+   -34.44
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-te1-anterior-left",
+  "name": "Area TE1 Anterior",
+  "side": "left",
+  "label": 132,
+  "faces": 6364,
+  "bbox": [
+   [
+    -74.29,
+    -24.58,
+    -36.71
+   ],
+   [
+    -53.42,
+    3.64,
+    -7.98
+   ]
+  ],
+  "centroid": [
+   -65.02,
+   -11.55,
+   -22.39
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-te1-anterior-right",
+  "name": "Area TE1 Anterior",
+  "side": "right",
+  "label": 132,
+  "faces": 5314,
+  "bbox": [
+   [
+    46.39,
+    -20.75,
+    -39.03
+   ],
+   [
+    67.3,
+    7.66,
+    -11.97
+   ]
+  ],
+  "centroid": [
+   57.88,
+   -7.14,
+   -25.35
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-te1-posterior-left",
+  "name": "Area TE1 Posterior",
+  "side": "left",
+  "label": 133,
+  "faces": 7008,
+  "bbox": [
+   [
+    -74.37,
+    -62.58,
+    -28.77
+   ],
+   [
+    -53.34,
+    -34.23,
+    5.79
+   ]
+  ],
+  "centroid": [
+   -64.72,
+   -47.01,
+   -13.34
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-te1-posterior-right",
+  "name": "Area TE1 Posterior",
+  "side": "right",
+  "label": 133,
+  "faces": 6804,
+  "bbox": [
+   [
+    45.79,
+    -57.12,
+    -29.04
+   ],
+   [
+    67.48,
+    -33.68,
+    5.59
+   ]
+  ],
+  "centroid": [
+   57.99,
+   -45.37,
+   -13.93
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-te2-anterior-left",
+  "name": "Area TE2 Anterior",
+  "side": "left",
+  "label": 134,
+  "faces": 6534,
+  "bbox": [
+   [
+    -66.08,
+    -44.93,
+    -43.19
+   ],
+   [
+    -48.85,
+    -2.43,
+    -21.71
+   ]
+  ],
+  "centroid": [
+   -57.98,
+   -22.26,
+   -30.97
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-te2-anterior-right",
+  "name": "Area TE2 Anterior",
+  "side": "right",
+  "label": 134,
+  "faces": 7458,
+  "bbox": [
+   [
+    40.07,
+    -47.11,
+    -45.05
+   ],
+   [
+    62.81,
+    1.61,
+    -18.37
+   ]
+  ],
+  "centroid": [
+   51.78,
+   -21.08,
+   -30.69
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-tf-left",
+  "name": "Area TF",
+  "side": "left",
+  "label": 135,
+  "faces": 6114,
+  "bbox": [
+   [
+    -52.21,
+    -42.98,
+    -46.56
+   ],
+   [
+    -33.49,
+    -4.44,
+    -19.64
+   ]
+  ],
+  "centroid": [
+   -43.32,
+   -23.03,
+   -30.68
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-tf-right",
+  "name": "Area TF",
+  "side": "right",
+  "label": 135,
+  "faces": 6162,
+  "bbox": [
+   [
+    27.68,
+    -43.05,
+    -42.72
+   ],
+   [
+    48.93,
+    -3.75,
+    -18.42
+   ]
+  ],
+  "centroid": [
+   37.7,
+   -23.59,
+   -29.5
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-te2-posterior-left",
+  "name": "Area TE2 Posterior",
+  "side": "left",
+  "label": 136,
+  "faces": 4286,
+  "bbox": [
+   [
+    -63.66,
+    -54.76,
+    -32.6
+   ],
+   [
+    -42.76,
+    -24.28,
+    -10.18
+   ]
+  ],
+  "centroid": [
+   -50.91,
+   -41.94,
+   -22.98
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-te2-posterior-right",
+  "name": "Area TE2 Posterior",
+  "side": "right",
+  "label": 136,
+  "faces": 4144,
+  "bbox": [
+   [
+    35.7,
+    -56.61,
+    -31.27
+   ],
+   [
+    51.11,
+    -24.23,
+    -9.74
+   ]
+  ],
+  "centroid": [
+   43.89,
+   -41.77,
+   -21.37
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pht-left",
+  "name": "Area PHT",
+  "side": "left",
+  "label": 137,
+  "faces": 5200,
+  "bbox": [
+   [
+    -72.22,
+    -69.05,
+    -19.03
+   ],
+   [
+    -55.29,
+    -48.19,
+    12.19
+   ]
+  ],
+  "centroid": [
+   -63.3,
+   -58.5,
+   -0.87
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pht-right",
+  "name": "Area PHT",
+  "side": "right",
+  "label": 137,
+  "faces": 4990,
+  "bbox": [
+   [
+    46.43,
+    -63.11,
+    -24.61
+   ],
+   [
+    65.16,
+    -42.25,
+    9.81
+   ]
+  ],
+  "centroid": [
+   56.22,
+   -54.4,
+   -5.65
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ph-left",
+  "name": "Area PH",
+  "side": "left",
+  "label": 138,
+  "faces": 4152,
+  "bbox": [
+   [
+    -61.77,
+    -72.81,
+    -24.75
+   ],
+   [
+    -41.36,
+    -50.05,
+    -3.58
+   ]
+  ],
+  "centroid": [
+   -51.07,
+   -60.98,
+   -11.98
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-ph-right",
+  "name": "Area PH",
+  "side": "right",
+  "label": 138,
+  "faces": 4426,
+  "bbox": [
+   [
+    33.95,
+    -74.77,
+    -21.1
+   ],
+   [
+    58.61,
+    -54.27,
+    -2.39
+   ]
+  ],
+  "centroid": [
+   46.0,
+   -63.64,
+   -12.43
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-temporoparietooccipital-junction-1-left",
+  "name": "Area TemporoParietoOccipital Junction 1",
+  "side": "left",
+  "label": 139,
+  "faces": 2850,
+  "bbox": [
+   [
+    -73.76,
+    -52.76,
+    0.62
+   ],
+   [
+    -47.26,
+    -34.24,
+    14.07
+   ]
+  ],
+  "centroid": [
+   -60.41,
+   -43.61,
+   6.09
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-temporoparietooccipital-junction-1-right",
+  "name": "Area TemporoParietoOccipital Junction 1",
+  "side": "right",
+  "label": 139,
+  "faces": 4950,
+  "bbox": [
+   [
+    39.77,
+    -54.99,
+    -0.55
+   ],
+   [
+    67.3,
+    -32.22,
+    15.92
+   ]
+  ],
+  "centroid": [
+   52.3,
+   -42.6,
+   7.23
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-temporoparietooccipital-junction-2-left",
+  "name": "Area TemporoParietoOccipital Junction 2",
+  "side": "left",
+  "label": 140,
+  "faces": 2692,
+  "bbox": [
+   [
+    -62.19,
+    -71.15,
+    4.74
+   ],
+   [
+    -45.23,
+    -54.18,
+    16.32
+   ]
+  ],
+  "centroid": [
+   -54.36,
+   -62.84,
+   10.67
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-temporoparietooccipital-junction-2-right",
+  "name": "Area TemporoParietoOccipital Junction 2",
+  "side": "right",
+  "label": 140,
+  "faces": 3698,
+  "bbox": [
+   [
+    38.45,
+    -67.49,
+    -3.19
+   ],
+   [
+    61.18,
+    -51.87,
+    16.14
+   ]
+  ],
+  "centroid": [
+   51.28,
+   -60.3,
+   6.75
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-temporoparietooccipital-junction-3-left",
+  "name": "Area TemporoParietoOccipital Junction 3",
+  "side": "left",
+  "label": 141,
+  "faces": 1656,
+  "bbox": [
+   [
+    -55.94,
+    -78.55,
+    9.02
+   ],
+   [
+    -40.7,
+    -63.9,
+    20.12
+   ]
+  ],
+  "centroid": [
+   -47.48,
+   -70.89,
+   14.96
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-temporoparietooccipital-junction-3-right",
+  "name": "Area TemporoParietoOccipital Junction 3",
+  "side": "right",
+  "label": 141,
+  "faces": 1424,
+  "bbox": [
+   [
+    35.7,
+    -73.13,
+    9.33
+   ],
+   [
+    46.76,
+    -55.84,
+    17.74
+   ]
+  ],
+  "centroid": [
+   39.99,
+   -65.35,
+   13.67
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "dorsal-transitional-visual-area-left",
+  "name": "Dorsal Transitional Visual Area",
+  "side": "left",
+  "label": 142,
+  "faces": 3290,
+  "bbox": [
+   [
+    -27.66,
+    -84.98,
+    7.11
+   ],
+   [
+    -15.25,
+    -58.42,
+    50.07
+   ]
+  ],
+  "centroid": [
+   -21.43,
+   -72.78,
+   29.01
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "dorsal-transitional-visual-area-right",
+  "name": "Dorsal Transitional Visual Area",
+  "side": "right",
+  "label": 142,
+  "faces": 3894,
+  "bbox": [
+   [
+    9.96,
+    -82.92,
+    5.44
+   ],
+   [
+    22.98,
+    -56.07,
+    50.11
+   ]
+  ],
+  "centroid": [
+   16.22,
+   -68.43,
+   27.91
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pgp-left",
+  "name": "Area PGp",
+  "side": "left",
+  "label": 143,
+  "faces": 4160,
+  "bbox": [
+   [
+    -52.47,
+    -92.78,
+    10.71
+   ],
+   [
+    -32.97,
+    -72.18,
+    33.58
+   ]
+  ],
+  "centroid": [
+   -44.07,
+   -83.47,
+   21.73
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pgp-right",
+  "name": "Area PGp",
+  "side": "right",
+  "label": 143,
+  "faces": 4962,
+  "bbox": [
+   [
+    26.25,
+    -89.26,
+    10.7
+   ],
+   [
+    48.64,
+    -67.83,
+    37.8
+   ]
+  ],
+  "centroid": [
+   38.36,
+   -80.45,
+   22.76
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-intraparietal-2-left",
+  "name": "Area IntraParietal 2",
+  "side": "left",
+  "label": 144,
+  "faces": 2212,
+  "bbox": [
+   [
+    -53.92,
+    -62.59,
+    34.79
+   ],
+   [
+    -34.96,
+    -41.71,
+    47.75
+   ]
+  ],
+  "centroid": [
+   -44.09,
+   -50.03,
+   40.63
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-intraparietal-2-right",
+  "name": "Area IntraParietal 2",
+  "side": "right",
+  "label": 144,
+  "faces": 2158,
+  "bbox": [
+   [
+    30.29,
+    -58.72,
+    35.2
+   ],
+   [
+    52.57,
+    -34.45,
+    53.84
+   ]
+  ],
+  "centroid": [
+   38.96,
+   -46.9,
+   43.52
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-intraparietal-1-left",
+  "name": "Area IntraParietal 1",
+  "side": "left",
+  "label": 145,
+  "faces": 3600,
+  "bbox": [
+   [
+    -40.36,
+    -83.0,
+    30.61
+   ],
+   [
+    -26.91,
+    -57.88,
+    51.58
+   ]
+  ],
+  "centroid": [
+   -33.46,
+   -70.26,
+   39.43
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-intraparietal-1-right",
+  "name": "Area IntraParietal 1",
+  "side": "right",
+  "label": 145,
+  "faces": 4296,
+  "bbox": [
+   [
+    24.19,
+    -82.75,
+    33.39
+   ],
+   [
+    37.06,
+    -52.43,
+    53.64
+   ]
+  ],
+  "centroid": [
+   30.39,
+   -68.05,
+   43.35
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-intraparietal-0-left",
+  "name": "Area IntraParietal 0",
+  "side": "left",
+  "label": 146,
+  "faces": 2508,
+  "bbox": [
+   [
+    -43.79,
+    -92.91,
+    15.42
+   ],
+   [
+    -29.42,
+    -65.91,
+    31.67
+   ]
+  ],
+  "centroid": [
+   -34.75,
+   -79.92,
+   24.05
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-intraparietal-0-right",
+  "name": "Area IntraParietal 0",
+  "side": "right",
+  "label": 146,
+  "faces": 2786,
+  "bbox": [
+   [
+    25.62,
+    -89.01,
+    17.39
+   ],
+   [
+    35.11,
+    -62.42,
+    37.72
+   ]
+  ],
+  "centroid": [
+   29.74,
+   -75.9,
+   27.38
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pf-opercular-left",
+  "name": "Area PF Opercular",
+  "side": "left",
+  "label": 147,
+  "faces": 3390,
+  "bbox": [
+   [
+    -72.49,
+    -33.0,
+    12.88
+   ],
+   [
+    -59.22,
+    -12.41,
+    33.58
+   ]
+  ],
+  "centroid": [
+   -66.69,
+   -24.28,
+   24.35
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pf-opercular-right",
+  "name": "Area PF Opercular",
+  "side": "right",
+  "label": 147,
+  "faces": 3400,
+  "bbox": [
+   [
+    52.01,
+    -31.17,
+    17.08
+   ],
+   [
+    64.81,
+    -12.06,
+    35.83
+   ]
+  ],
+  "centroid": [
+   58.4,
+   -22.31,
+   26.03
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pf-complex-left",
+  "name": "Area PF Complex",
+  "side": "left",
+  "label": 148,
+  "faces": 10422,
+  "bbox": [
+   [
+    -72.48,
+    -54.74,
+    17.23
+   ],
+   [
+    -48.71,
+    -24.21,
+    52.32
+   ]
+  ],
+  "centroid": [
+   -61.63,
+   -39.43,
+   36.53
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pf-complex-right",
+  "name": "Area PF Complex",
+  "side": "right",
+  "label": 148,
+  "faces": 7006,
+  "bbox": [
+   [
+    42.4,
+    -47.3,
+    21.08
+   ],
+   [
+    65.44,
+    -20.37,
+    54.3
+   ]
+  ],
+  "centroid": [
+   56.4,
+   -33.89,
+   36.74
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pfm-complex-left",
+  "name": "Area PFm Complex",
+  "side": "left",
+  "label": 149,
+  "faces": 9554,
+  "bbox": [
+   [
+    -63.91,
+    -73.25,
+    18.64
+   ],
+   [
+    -33.33,
+    -47.51,
+    53.65
+   ]
+  ],
+  "centroid": [
+   -51.89,
+   -60.22,
+   40.67
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pfm-complex-right",
+  "name": "Area PFm Complex",
+  "side": "right",
+  "label": 149,
+  "faces": 7878,
+  "bbox": [
+   [
+    35.94,
+    -66.69,
+    19.45
+   ],
+   [
+    59.47,
+    -37.93,
+    52.38
+   ]
+  ],
+  "centroid": [
+   50.33,
+   -50.97,
+   38.88
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pgi-left",
+  "name": "Area PGi",
+  "side": "left",
+  "label": 150,
+  "faces": 4370,
+  "bbox": [
+   [
+    -59.9,
+    -72.8,
+    11.29
+   ],
+   [
+    -40.7,
+    -48.41,
+    31.81
+   ]
+  ],
+  "centroid": [
+   -49.98,
+   -60.22,
+   21.53
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pgi-right",
+  "name": "Area PGi",
+  "side": "right",
+  "label": 150,
+  "faces": 5390,
+  "bbox": [
+   [
+    36.05,
+    -72.81,
+    12.63
+   ],
+   [
+    53.42,
+    -44.09,
+    34.1
+   ]
+  ],
+  "centroid": [
+   45.35,
+   -59.41,
+   22.86
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pgs-left",
+  "name": "Area PGs",
+  "side": "left",
+  "label": 151,
+  "faces": 7370,
+  "bbox": [
+   [
+    -56.48,
+    -87.38,
+    19.42
+   ],
+   [
+    -31.2,
+    -61.56,
+    52.17
+   ]
+  ],
+  "centroid": [
+   -44.72,
+   -75.14,
+   35.86
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-pgs-right",
+  "name": "Area PGs",
+  "side": "right",
+  "label": 151,
+  "faces": 6622,
+  "bbox": [
+   [
+    30.4,
+    -84.6,
+    25.29
+   ],
+   [
+    52.71,
+    -52.36,
+    54.14
+   ]
+  ],
+  "centroid": [
+   40.88,
+   -68.22,
+   39.69
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-v6a-left",
+  "name": "Area V6A",
+  "side": "left",
+  "label": 152,
+  "faces": 2104,
+  "bbox": [
+   [
+    -30.33,
+    -93.27,
+    33.01
+   ],
+   [
+    -15.25,
+    -78.43,
+    45.93
+   ]
+  ],
+  "centroid": [
+   -23.35,
+   -87.11,
+   38.82
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-v6a-right",
+  "name": "Area V6A",
+  "side": "right",
+  "label": 152,
+  "faces": 2584,
+  "bbox": [
+   [
+    12.27,
+    -90.57,
+    35.43
+   ],
+   [
+    27.27,
+    -76.08,
+    50.0
+   ]
+  ],
+  "centroid": [
+   19.76,
+   -83.08,
+   43.32
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventromedial-visual-area-1-left",
+  "name": "VentroMedial Visual Area 1",
+  "side": "left",
+  "label": 153,
+  "faces": 3108,
+  "bbox": [
+   [
+    -32.12,
+    -62.9,
+    -16.78
+   ],
+   [
+    -11.39,
+    -43.9,
+    -3.79
+   ]
+  ],
+  "centroid": [
+   -21.44,
+   -53.55,
+   -9.23
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventromedial-visual-area-1-right",
+  "name": "VentroMedial Visual Area 1",
+  "side": "right",
+  "label": 153,
+  "faces": 3750,
+  "bbox": [
+   [
+    3.81,
+    -64.76,
+    -17.18
+   ],
+   [
+    26.63,
+    -43.86,
+    -2.05
+   ]
+  ],
+  "centroid": [
+   14.03,
+   -52.96,
+   -9.68
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventromedial-visual-area-3-left",
+  "name": "VentroMedial Visual Area 3",
+  "side": "left",
+  "label": 154,
+  "faces": 1694,
+  "bbox": [
+   [
+    -36.11,
+    -68.9,
+    -17.17
+   ],
+   [
+    -27.09,
+    -50.39,
+    -4.43
+   ]
+  ],
+  "centroid": [
+   -31.92,
+   -60.13,
+   -11.24
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventromedial-visual-area-3-right",
+  "name": "VentroMedial Visual Area 3",
+  "side": "right",
+  "label": 154,
+  "faces": 1780,
+  "bbox": [
+   [
+    17.82,
+    -70.72,
+    -17.18
+   ],
+   [
+    29.11,
+    -50.09,
+    -4.34
+   ]
+  ],
+  "centroid": [
+   23.71,
+   -59.79,
+   -11.02
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parahippocampal-area-2-left",
+  "name": "ParaHippocampal Area 2",
+  "side": "left",
+  "label": 155,
+  "faces": 1794,
+  "bbox": [
+   [
+    -39.92,
+    -46.6,
+    -25.22
+   ],
+   [
+    -29.41,
+    -25.87,
+    -6.43
+   ]
+  ],
+  "centroid": [
+   -34.16,
+   -36.37,
+   -15.71
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "parahippocampal-area-2-right",
+  "name": "ParaHippocampal Area 2",
+  "side": "right",
+  "label": 155,
+  "faces": 2174,
+  "bbox": [
+   [
+    22.07,
+    -45.04,
+    -25.16
+   ],
+   [
+    32.99,
+    -24.18,
+    -6.25
+   ]
+  ],
+  "centroid": [
+   27.67,
+   -35.17,
+   -15.86
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-v4t-left",
+  "name": "Area V4t",
+  "side": "left",
+  "label": 156,
+  "faces": 1202,
+  "bbox": [
+   [
+    -54.04,
+    -82.92,
+    -7.04
+   ],
+   [
+    -43.38,
+    -71.91,
+    2.15
+   ]
+  ],
+  "centroid": [
+   -49.16,
+   -77.19,
+   -2.07
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-v4t-right",
+  "name": "Area V4t",
+  "side": "right",
+  "label": 156,
+  "faces": 1282,
+  "bbox": [
+   [
+    36.03,
+    -83.05,
+    -8.93
+   ],
+   [
+    49.21,
+    -72.09,
+    3.94
+   ]
+  ],
+  "centroid": [
+   43.25,
+   -77.65,
+   -3.32
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-fst-left",
+  "name": "Area FST",
+  "side": "left",
+  "label": 157,
+  "faces": 2056,
+  "bbox": [
+   [
+    -59.56,
+    -72.76,
+    -10.68
+   ],
+   [
+    -43.39,
+    -58.11,
+    6.03
+   ]
+  ],
+  "centroid": [
+   -51.7,
+   -65.7,
+   -2.53
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-fst-right",
+  "name": "Area FST",
+  "side": "right",
+  "label": 157,
+  "faces": 1976,
+  "bbox": [
+   [
+    35.95,
+    -72.76,
+    -10.79
+   ],
+   [
+    48.95,
+    -54.19,
+    2.13
+   ]
+  ],
+  "centroid": [
+   42.08,
+   -65.26,
+   -3.84
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-v3cd-left",
+  "name": "Area V3CD",
+  "side": "left",
+  "label": 158,
+  "faces": 2056,
+  "bbox": [
+   [
+    -46.11,
+    -95.09,
+    3.06
+   ],
+   [
+    -32.96,
+    -80.1,
+    18.11
+   ]
+  ],
+  "centroid": [
+   -39.55,
+   -88.23,
+   10.28
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-v3cd-right",
+  "name": "Area V3CD",
+  "side": "right",
+  "label": 158,
+  "faces": 1842,
+  "bbox": [
+   [
+    24.04,
+    -91.16,
+    5.03
+   ],
+   [
+    37.17,
+    -79.63,
+    20.32
+   ]
+  ],
+  "centroid": [
+   31.37,
+   -85.56,
+   13.71
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-lateral-occipital-3-left",
+  "name": "Area Lateral Occipital 3",
+  "side": "left",
+  "label": 159,
+  "faces": 2226,
+  "bbox": [
+   [
+    -58.4,
+    -88.58,
+    0.83
+   ],
+   [
+    -41.28,
+    -72.42,
+    16.18
+   ]
+  ],
+  "centroid": [
+   -51.8,
+   -80.62,
+   8.93
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-lateral-occipital-3-right",
+  "name": "Area Lateral Occipital 3",
+  "side": "right",
+  "label": 159,
+  "faces": 2550,
+  "bbox": [
+   [
+    32.4,
+    -85.26,
+    2.94
+   ],
+   [
+    52.59,
+    -69.98,
+    16.03
+   ]
+  ],
+  "centroid": [
+   42.87,
+   -77.94,
+   9.09
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventromedial-visual-area-2-left",
+  "name": "VentroMedial Visual Area 2",
+  "side": "left",
+  "label": 160,
+  "faces": 1444,
+  "bbox": [
+   [
+    -37.99,
+    -60.57,
+    -11.25
+   ],
+   [
+    -24.89,
+    -43.96,
+    -3.61
+   ]
+  ],
+  "centroid": [
+   -31.85,
+   -53.03,
+   -6.93
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventromedial-visual-area-2-right",
+  "name": "VentroMedial Visual Area 2",
+  "side": "right",
+  "label": 160,
+  "faces": 1496,
+  "bbox": [
+   [
+    18.29,
+    -63.1,
+    -11.15
+   ],
+   [
+    31.17,
+    -44.07,
+    -3.62
+   ]
+  ],
+  "centroid": [
+   25.25,
+   -53.84,
+   -7.05
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-31pd-left",
+  "name": "Area 31pd",
+  "side": "left",
+  "label": 161,
+  "faces": 2322,
+  "bbox": [
+   [
+    -20.33,
+    -60.75,
+    23.17
+   ],
+   [
+    -7.42,
+    -40.31,
+    41.75
+   ]
+  ],
+  "centroid": [
+   -14.09,
+   -51.72,
+   34.1
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-31pd-right",
+  "name": "Area 31pd",
+  "side": "right",
+  "label": 161,
+  "faces": 1362,
+  "bbox": [
+   [
+    2.44,
+    -55.32,
+    24.98
+   ],
+   [
+    13.26,
+    -45.74,
+    43.59
+   ]
+  ],
+  "centroid": [
+   8.21,
+   -51.51,
+   35.63
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-31a-left",
+  "name": "Area 31a",
+  "side": "left",
+  "label": 162,
+  "faces": 2722,
+  "bbox": [
+   [
+    -13.93,
+    -50.8,
+    36.59
+   ],
+   [
+    -0.51,
+    -29.69,
+    48.33
+   ]
+  ],
+  "centroid": [
+   -6.34,
+   -39.78,
+   42.19
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-31a-right",
+  "name": "Area 31a",
+  "side": "right",
+  "label": 162,
+  "faces": 1452,
+  "bbox": [
+   [
+    -0.46,
+    -51.36,
+    34.7
+   ],
+   [
+    8.66,
+    -34.26,
+    48.13
+   ]
+  ],
+  "centroid": [
+   2.52,
+   -44.03,
+   40.56
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventral-visual-complex-left",
+  "name": "Ventral Visual Complex",
+  "side": "left",
+  "label": 163,
+  "faces": 5866,
+  "bbox": [
+   [
+    -46.02,
+    -67.41,
+    -32.61
+   ],
+   [
+    -22.63,
+    -33.62,
+    -12.24
+   ]
+  ],
+  "centroid": [
+   -33.5,
+   -52.37,
+   -21.5
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "ventral-visual-complex-right",
+  "name": "Ventral Visual Complex",
+  "side": "right",
+  "label": 163,
+  "faces": 5340,
+  "bbox": [
+   [
+    17.6,
+    -67.15,
+    -30.82
+   ],
+   [
+    34.91,
+    -28.3,
+    -11.94
+   ]
+  ],
+  "centroid": [
+   25.29,
+   -49.03,
+   -20.46
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-25-left",
+  "name": "Area 25",
+  "side": "left",
+  "label": 164,
+  "faces": 2462,
+  "bbox": [
+   [
+    -12.11,
+    11.38,
+    -22.97
+   ],
+   [
+    -0.52,
+    29.92,
+    -6.43
+   ]
+  ],
+  "centroid": [
+   -6.03,
+   22.04,
+   -14.79
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-25-right",
+  "name": "Area 25",
+  "side": "right",
+  "label": 164,
+  "faces": 1312,
+  "bbox": [
+   [
+    -0.49,
+    9.26,
+    -21.13
+   ],
+   [
+    4.92,
+    26.01,
+    -6.46
+   ]
+  ],
+  "centroid": [
+   1.51,
+   18.23,
+   -15.0
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-s32-left",
+  "name": "Area s32",
+  "side": "left",
+  "label": 165,
+  "faces": 2018,
+  "bbox": [
+   [
+    -15.9,
+    26.97,
+    -21.24
+   ],
+   [
+    -0.54,
+    39.79,
+    -7.88
+   ]
+  ],
+  "centroid": [
+   -8.0,
+   33.54,
+   -15.12
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-s32-right",
+  "name": "Area s32",
+  "side": "right",
+  "label": 165,
+  "faces": 1174,
+  "bbox": [
+   [
+    -0.46,
+    25.09,
+    -18.75
+   ],
+   [
+    6.76,
+    39.57,
+    -8.07
+   ]
+  ],
+  "centroid": [
+   2.13,
+   32.6,
+   -12.91
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "posterior-ofc-complex-left",
+  "name": "Posterior OFC Complex",
+  "side": "left",
+  "label": 166,
+  "faces": 3508,
+  "bbox": [
+   [
+    -29.6,
+    4.96,
+    -29.14
+   ],
+   [
+    -1.03,
+    19.96,
+    -12.23
+   ]
+  ],
+  "centroid": [
+   -16.67,
+   12.17,
+   -20.69
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "posterior-ofc-complex-right",
+  "name": "Posterior OFC Complex",
+  "side": "right",
+  "label": 166,
+  "faces": 3628,
+  "bbox": [
+   [
+    -0.18,
+    1.19,
+    -27.17
+   ],
+   [
+    22.78,
+    22.17,
+    -12.16
+   ]
+  ],
+  "centroid": [
+   10.86,
+   11.77,
+   -20.04
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-insular-1-left",
+  "name": "Area Posterior Insular 1",
+  "side": "left",
+  "label": 167,
+  "faces": 3032,
+  "bbox": [
+   [
+    -47.9,
+    -24.57,
+    -21.0
+   ],
+   [
+    -36.88,
+    -0.07,
+    8.09
+   ]
+  ],
+  "centroid": [
+   -42.37,
+   -12.9,
+   -4.9
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-insular-1-right",
+  "name": "Area Posterior Insular 1",
+  "side": "right",
+  "label": 167,
+  "faces": 3032,
+  "bbox": [
+   [
+    29.64,
+    -23.37,
+    -20.62
+   ],
+   [
+    40.91,
+    -1.86,
+    9.93
+   ]
+  ],
+  "centroid": [
+   35.73,
+   -13.65,
+   -3.33
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "insular-granular-complex-left",
+  "name": "Insular Granular Complex",
+  "side": "left",
+  "label": 168,
+  "faces": 1938,
+  "bbox": [
+   [
+    -45.58,
+    -26.63,
+    5.42
+   ],
+   [
+    -34.91,
+    -6.08,
+    18.19
+   ]
+  ],
+  "centroid": [
+   -39.52,
+   -16.33,
+   12.41
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "insular-granular-complex-right",
+  "name": "Insular Granular Complex",
+  "side": "right",
+  "label": 168,
+  "faces": 1858,
+  "bbox": [
+   [
+    28.4,
+    -24.93,
+    8.83
+   ],
+   [
+    38.73,
+    -4.26,
+    18.31
+   ]
+  ],
+  "centroid": [
+   33.04,
+   -14.27,
+   13.2
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-frontal-opercular-5-left",
+  "name": "Area Frontal Opercular 5",
+  "side": "left",
+  "label": 169,
+  "faces": 2350,
+  "bbox": [
+   [
+    -45.76,
+    15.08,
+    -5.02
+   ],
+   [
+    -31.02,
+    33.65,
+    11.93
+   ]
+  ],
+  "centroid": [
+   -38.37,
+   25.1,
+   4.25
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-frontal-opercular-5-right",
+  "name": "Area Frontal Opercular 5",
+  "side": "right",
+  "label": 169,
+  "faces": 2814,
+  "bbox": [
+   [
+    25.76,
+    16.99,
+    -8.93
+   ],
+   [
+    40.81,
+    33.79,
+    12.15
+   ]
+  ],
+  "centroid": [
+   33.95,
+   25.88,
+   2.97
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-10p-left",
+  "name": "Area Posterior 10p",
+  "side": "left",
+  "label": 170,
+  "faces": 4174,
+  "bbox": [
+   [
+    -34.33,
+    47.42,
+    -10.59
+   ],
+   [
+    -21.08,
+    69.91,
+    14.12
+   ]
+  ],
+  "centroid": [
+   -27.85,
+   61.07,
+   3.74
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-10p-right",
+  "name": "Area Posterior 10p",
+  "side": "right",
+  "label": 170,
+  "faces": 3722,
+  "bbox": [
+   [
+    14.36,
+    49.01,
+    -4.92
+   ],
+   [
+    32.62,
+    70.01,
+    13.94
+   ]
+  ],
+  "centroid": [
+   22.32,
+   60.22,
+   4.78
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-47r-left",
+  "name": "Area Posterior 47r",
+  "side": "left",
+  "label": 171,
+  "faces": 3226,
+  "bbox": [
+   [
+    -59.78,
+    33.24,
+    -6.78
+   ],
+   [
+    -39.1,
+    48.02,
+    11.55
+   ]
+  ],
+  "centroid": [
+   -48.48,
+   40.66,
+   0.82
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-47r-right",
+  "name": "Area Posterior 47r",
+  "side": "right",
+  "label": 171,
+  "faces": 3708,
+  "bbox": [
+   [
+    32.24,
+    33.02,
+    -14.72
+   ],
+   [
+    52.77,
+    51.9,
+    7.92
+   ]
+  ],
+  "centroid": [
+   42.96,
+   42.02,
+   -3.24
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-tg-ventral-left",
+  "name": "Area TG ventral",
+  "side": "left",
+  "label": 172,
+  "faces": 5128,
+  "bbox": [
+   [
+    -58.07,
+    -15.29,
+    -51.48
+   ],
+   [
+    -24.81,
+    8.01,
+    -34.44
+   ]
+  ],
+  "centroid": [
+   -42.47,
+   -3.47,
+   -45.06
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-tg-ventral-right",
+  "name": "Area TG ventral",
+  "side": "right",
+  "label": 172,
+  "faces": 5336,
+  "bbox": [
+   [
+    15.91,
+    -15.21,
+    -51.5
+   ],
+   [
+    50.58,
+    6.41,
+    -35.99
+   ]
+  ],
+  "centroid": [
+   33.52,
+   -3.59,
+   -44.46
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-belt-complex-left",
+  "name": "Medial Belt Complex",
+  "side": "left",
+  "label": 173,
+  "faces": 2954,
+  "bbox": [
+   [
+    -57.61,
+    -28.95,
+    -6.8
+   ],
+   [
+    -37.22,
+    -4.26,
+    13.61
+   ]
+  ],
+  "centroid": [
+   -48.07,
+   -17.46,
+   1.9
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "medial-belt-complex-right",
+  "name": "Medial Belt Complex",
+  "side": "right",
+  "label": 173,
+  "faces": 2058,
+  "bbox": [
+   [
+    28.46,
+    -27.14,
+    -2.75
+   ],
+   [
+    52.81,
+    -9.83,
+    11.76
+   ]
+  ],
+  "centroid": [
+   42.03,
+   -17.28,
+   4.37
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "lateral-belt-complex-left",
+  "name": "Lateral Belt Complex",
+  "side": "left",
+  "label": 174,
+  "faces": 1986,
+  "bbox": [
+   [
+    -61.73,
+    -36.65,
+    -2.71
+   ],
+   [
+    -39.01,
+    -12.41,
+    15.57
+   ]
+  ],
+  "centroid": [
+   -51.25,
+   -25.63,
+   7.06
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "lateral-belt-complex-right",
+  "name": "Lateral Belt Complex",
+  "side": "right",
+  "label": 174,
+  "faces": 1448,
+  "bbox": [
+   [
+    36.07,
+    -32.75,
+    1.24
+   ],
+   [
+    54.61,
+    -16.08,
+    14.29
+   ]
+  ],
+  "centroid": [
+   44.67,
+   -25.43,
+   9.6
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "auditory-4-complex-left",
+  "name": "Auditory 4 Complex",
+  "side": "left",
+  "label": 175,
+  "faces": 5342,
+  "bbox": [
+   [
+    -74.49,
+    -40.59,
+    -4.81
+   ],
+   [
+    -57.44,
+    1.92,
+    16.26
+   ]
+  ],
+  "centroid": [
+   -68.31,
+   -21.61,
+   5.71
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "auditory-4-complex-right",
+  "name": "Auditory 4 Complex",
+  "side": "right",
+  "label": 175,
+  "faces": 4584,
+  "bbox": [
+   [
+    52.43,
+    -36.58,
+    -6.57
+   ],
+   [
+    67.47,
+    5.91,
+    17.97
+   ]
+  ],
+  "centroid": [
+   61.78,
+   -17.05,
+   5.34
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-stsv-anterior-left",
+  "name": "Area STSv Anterior",
+  "side": "left",
+  "label": 176,
+  "faces": 2320,
+  "bbox": [
+   [
+    -63.61,
+    -25.1,
+    -28.57
+   ],
+   [
+    -51.0,
+    0.18,
+    -9.81
+   ]
+  ],
+  "centroid": [
+   -55.83,
+   -13.01,
+   -17.15
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-stsv-anterior-right",
+  "name": "Area STSv Anterior",
+  "side": "right",
+  "label": 176,
+  "faces": 3708,
+  "bbox": [
+   [
+    42.29,
+    -24.91,
+    -25.32
+   ],
+   [
+    67.05,
+    -0.1,
+    -8.0
+   ]
+  ],
+  "centroid": [
+   54.69,
+   -13.16,
+   -15.92
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-te1-middle-left",
+  "name": "Area TE1 Middle",
+  "side": "left",
+  "label": 177,
+  "faces": 4360,
+  "bbox": [
+   [
+    -74.5,
+    -40.6,
+    -28.74
+   ],
+   [
+    -53.39,
+    -17.94,
+    -6.06
+   ]
+  ],
+  "centroid": [
+   -67.33,
+   -29.07,
+   -17.85
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-te1-middle-right",
+  "name": "Area TE1 Middle",
+  "side": "right",
+  "label": 177,
+  "faces": 3866,
+  "bbox": [
+   [
+    48.36,
+    -38.62,
+    -26.63
+   ],
+   [
+    67.49,
+    -18.08,
+    -5.92
+   ]
+  ],
+  "centroid": [
+   59.7,
+   -28.06,
+   -17.73
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "para-insular-area-left",
+  "name": "Para-Insular Area",
+  "side": "left",
+  "label": 178,
+  "faces": 2124,
+  "bbox": [
+   [
+    -53.62,
+    -16.63,
+    -24.59
+   ],
+   [
+    -43.27,
+    7.71,
+    -6.45
+   ]
+  ],
+  "centroid": [
+   -47.87,
+   -3.84,
+   -15.9
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "para-insular-area-right",
+  "name": "Para-Insular Area",
+  "side": "right",
+  "label": 178,
+  "faces": 3018,
+  "bbox": [
+   [
+    38.32,
+    -20.54,
+    -24.56
+   ],
+   [
+    47.01,
+    8.0,
+    -4.09
+   ]
+  ],
+  "centroid": [
+   42.8,
+   -5.21,
+   -14.12
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-anterior-32-prime-left",
+  "name": "Area Anterior 32 Prime",
+  "side": "left",
+  "label": 179,
+  "faces": 2414,
+  "bbox": [
+   [
+    -17.57,
+    19.42,
+    14.9
+   ],
+   [
+    -1.29,
+    38.1,
+    36.06
+   ]
+  ],
+  "centroid": [
+   -12.55,
+   29.23,
+   25.52
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-anterior-32-prime-right",
+  "name": "Area Anterior 32 Prime",
+  "side": "right",
+  "label": 179,
+  "faces": 2396,
+  "bbox": [
+   [
+    -0.05,
+    17.31,
+    17.42
+   ],
+   [
+    10.97,
+    36.25,
+    40.08
+   ]
+  ],
+  "centroid": [
+   5.41,
+   27.45,
+   28.64
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-24-left",
+  "name": "Area Posterior 24",
+  "side": "left",
+  "label": 180,
+  "faces": 3470,
+  "bbox": [
+   [
+    -11.62,
+    26.99,
+    3.44
+   ],
+   [
+    -0.5,
+    45.75,
+    29.77
+   ]
+  ],
+  "centroid": [
+   -4.78,
+   35.67,
+   16.38
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ },
+ {
+  "id": "area-posterior-24-right",
+  "name": "Area Posterior 24",
+  "side": "right",
+  "label": 180,
+  "faces": 2056,
+  "bbox": [
+   [
+    -0.5,
+    27.0,
+    4.87
+   ],
+   [
+    5.07,
+    44.15,
+    29.81
+   ]
+  ],
+  "centroid": [
+   1.54,
+   35.4,
+   15.8
+  ],
+  "source": "HCP-MMP1.0 (Glasser et al. 2016, via neuroparc) · WU-Minn HCP Open Access Data Use Terms"
+ }
+]

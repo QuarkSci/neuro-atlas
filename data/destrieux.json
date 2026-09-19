@@ -1,0 +1,3702 @@
+[
+ {
+  "id": "fronto-marginal-gyrus-sulcus-left",
+  "name": "Fronto-marginal gyrus + sulcus",
+  "side": "left",
+  "label": 1,
+  "faces": 5100,
+  "bbox": [
+   [
+    -38.94,
+    45.94,
+    -21.06
+   ],
+   [
+    -7.89,
+    63.38,
+    7.92
+   ]
+  ],
+  "centroid": [
+   -23.86,
+   55.97,
+   -8.44
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "fronto-marginal-gyrus-sulcus-right",
+  "name": "Fronto-marginal gyrus + sulcus",
+  "side": "right",
+  "label": 1,
+  "faces": 5266,
+  "bbox": [
+   [
+    0.55,
+    47.85,
+    -21.12
+   ],
+   [
+    39.55,
+    63.46,
+    3.91
+   ]
+  ],
+  "centroid": [
+   20.73,
+   57.05,
+   -9.89
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-occipital-gyrus-sulcus-left",
+  "name": "Inferior occipital gyrus + sulcus",
+  "side": "left",
+  "label": 2,
+  "faces": 5074,
+  "bbox": [
+   [
+    -49.45,
+    -95.63,
+    -21.02
+   ],
+   [
+    -19.85,
+    -68.88,
+    -1.68
+   ]
+  ],
+  "centroid": [
+   -37.2,
+   -82.78,
+   -12.23
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-occipital-gyrus-sulcus-right",
+  "name": "Inferior occipital gyrus + sulcus",
+  "side": "right",
+  "label": 2,
+  "faces": 6178,
+  "bbox": [
+   [
+    25.45,
+    -95.63,
+    -19.49
+   ],
+   [
+    50.49,
+    -60.85,
+    -0.24
+   ]
+  ],
+  "centroid": [
+   40.78,
+   -78.65,
+   -11.31
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "paracentral-lobule-sulcus-left",
+  "name": "Paracentral lobule + sulcus",
+  "side": "left",
+  "label": 3,
+  "faces": 8744,
+  "bbox": [
+   [
+    -23.21,
+    -48.28,
+    47.23
+   ],
+   [
+    -0.5,
+    -11.24,
+    80.42
+   ]
+  ],
+  "centroid": [
+   -8.96,
+   -33.54,
+   68.06
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "paracentral-lobule-sulcus-right",
+  "name": "Paracentral lobule + sulcus",
+  "side": "right",
+  "label": 3,
+  "faces": 7352,
+  "bbox": [
+   [
+    -0.5,
+    -46.13,
+    48.79
+   ],
+   [
+    19.76,
+    -17.09,
+    80.49
+   ]
+  ],
+  "centroid": [
+   6.82,
+   -33.58,
+   67.72
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "subcentral-gyrus-sulci-left",
+  "name": "Subcentral gyrus + sulci",
+  "side": "left",
+  "label": 4,
+  "faces": 8152,
+  "bbox": [
+   [
+    -69.32,
+    -27.82,
+    4.61
+   ],
+   [
+    -40.08,
+    9.26,
+    29.75
+   ]
+  ],
+  "centroid": [
+   -56.58,
+   -11.4,
+   15.46
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "subcentral-gyrus-sulci-right",
+  "name": "Subcentral gyrus + sulci",
+  "side": "right",
+  "label": 4,
+  "faces": 6786,
+  "bbox": [
+   [
+    39.0,
+    -26.32,
+    6.53
+   ],
+   [
+    68.49,
+    9.04,
+    30.01
+   ]
+  ],
+  "centroid": [
+   55.65,
+   -10.5,
+   16.24
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "transverse-frontopolar-gyri-sulci-left",
+  "name": "Transverse frontopolar gyri + sulci",
+  "side": "left",
+  "label": 5,
+  "faces": 4146,
+  "bbox": [
+   [
+    -27.03,
+    52.24,
+    -13.15
+   ],
+   [
+    -1.82,
+    69.49,
+    9.91
+   ]
+  ],
+  "centroid": [
+   -14.74,
+   62.87,
+   -0.92
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "transverse-frontopolar-gyri-sulci-right",
+  "name": "Transverse frontopolar gyri + sulci",
+  "side": "right",
+  "label": 5,
+  "faces": 5698,
+  "bbox": [
+   [
+    1.23,
+    52.23,
+    -15.13
+   ],
+   [
+    28.44,
+    69.49,
+    15.91
+   ]
+  ],
+  "centroid": [
+   15.44,
+   62.34,
+   1.18
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-gyrus-sulcus-anterior-part-left",
+  "name": "Cingulate gyrus + sulcus anterior part",
+  "side": "left",
+  "label": 6,
+  "faces": 7374,
+  "bbox": [
+   [
+    -15.47,
+    24.09,
+    -12.6
+   ],
+   [
+    -1.5,
+    53.02,
+    35.58
+   ]
+  ],
+  "centroid": [
+   -8.52,
+   38.04,
+   9.69
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-gyrus-sulcus-anterior-part-right",
+  "name": "Cingulate gyrus + sulcus anterior part",
+  "side": "right",
+  "label": 6,
+  "faces": 9326,
+  "bbox": [
+   [
+    0.51,
+    21.62,
+    -15.36
+   ],
+   [
+    16.46,
+    54.81,
+    35.63
+   ]
+  ],
+  "centroid": [
+   7.82,
+   37.82,
+   7.81
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-gyrus-sulcus-middle-anterior-part-left",
+  "name": "Cingulate gyrus + sulcus middle-anterior part",
+  "side": "left",
+  "label": 7,
+  "faces": 5674,
+  "bbox": [
+   [
+    -15.35,
+    -1.76,
+    19.05
+   ],
+   [
+    -0.79,
+    30.92,
+    51.92
+   ]
+  ],
+  "centroid": [
+   -7.72,
+   15.07,
+   35.55
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-gyrus-sulcus-middle-anterior-part-right",
+  "name": "Cingulate gyrus + sulcus middle-anterior part",
+  "side": "right",
+  "label": 7,
+  "faces": 6036,
+  "bbox": [
+   [
+    -0.21,
+    -0.32,
+    19.01
+   ],
+   [
+    14.42,
+    31.02,
+    54.01
+   ]
+  ],
+  "centroid": [
+   7.15,
+   15.59,
+   36.14
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-gyrus-sulcus-middle-posterior-part-left",
+  "name": "Cingulate gyrus + sulcus middle-posterior part",
+  "side": "left",
+  "label": 8,
+  "faces": 5268,
+  "bbox": [
+   [
+    -17.44,
+    -26.28,
+    30.93
+   ],
+   [
+    -0.5,
+    6.31,
+    51.76
+   ]
+  ],
+  "centroid": [
+   -7.62,
+   -11.86,
+   40.96
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-gyrus-sulcus-middle-posterior-part-right",
+  "name": "Cingulate gyrus + sulcus middle-posterior part",
+  "side": "right",
+  "label": 8,
+  "faces": 6038,
+  "bbox": [
+   [
+    -0.5,
+    -26.03,
+    29.38
+   ],
+   [
+    16.33,
+    6.93,
+    57.81
+   ]
+  ],
+  "centroid": [
+   6.36,
+   -10.52,
+   42.38
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-gyrus-posterior-dorsal-part-left",
+  "name": "Cingulate gyrus posterior-dorsal part",
+  "side": "left",
+  "label": 9,
+  "faces": 4352,
+  "bbox": [
+   [
+    -10.76,
+    -56.23,
+    16.82
+   ],
+   [
+    -0.51,
+    -22.65,
+    46.32
+   ]
+  ],
+  "centroid": [
+   -4.31,
+   -39.6,
+   31.34
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-gyrus-posterior-dorsal-part-right",
+  "name": "Cingulate gyrus posterior-dorsal part",
+  "side": "right",
+  "label": 9,
+  "faces": 4346,
+  "bbox": [
+   [
+    -0.49,
+    -54.46,
+    16.77
+   ],
+   [
+    9.53,
+    -22.96,
+    47.93
+   ]
+  ],
+  "centroid": [
+   3.24,
+   -39.45,
+   32.82
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-gyrus-posterior-ventral-part-left",
+  "name": "Cingulate gyrus posterior-ventral part",
+  "side": "left",
+  "label": 10,
+  "faces": 2316,
+  "bbox": [
+   [
+    -15.14,
+    -56.05,
+    -4.93
+   ],
+   [
+    -1.64,
+    -39.1,
+    17.77
+   ]
+  ],
+  "centroid": [
+   -8.21,
+   -48.84,
+   5.63
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-gyrus-posterior-ventral-part-right",
+  "name": "Cingulate gyrus posterior-ventral part",
+  "side": "right",
+  "label": 10,
+  "faces": 2700,
+  "bbox": [
+   [
+    0.56,
+    -59.93,
+    -3.17
+   ],
+   [
+    16.05,
+    -39.24,
+    16.36
+   ]
+  ],
+  "centroid": [
+   7.82,
+   -50.29,
+   7.01
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cuneus-left",
+  "name": "Cuneus",
+  "side": "left",
+  "label": 11,
+  "faces": 6916,
+  "bbox": [
+   [
+    -15.18,
+    -103.99,
+    3.02
+   ],
+   [
+    -0.6,
+    -64.55,
+    37.75
+   ]
+  ],
+  "centroid": [
+   -6.13,
+   -82.57,
+   17.52
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cuneus-right",
+  "name": "Cuneus",
+  "side": "right",
+  "label": 11,
+  "faces": 7332,
+  "bbox": [
+   [
+    -0.41,
+    -96.0,
+    4.53
+   ],
+   [
+    16.26,
+    -61.09,
+    41.76
+   ]
+  ],
+  "centroid": [
+   6.08,
+   -79.3,
+   19.28
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-frontal-gyrus-opercular-part-left",
+  "name": "Inferior frontal gyrus opercular part",
+  "side": "left",
+  "label": 12,
+  "faces": 8192,
+  "bbox": [
+   [
+    -62.63,
+    -7.61,
+    -3.49
+   ],
+   [
+    -34.41,
+    27.0,
+    28.38
+   ]
+  ],
+  "centroid": [
+   -50.11,
+   11.19,
+   10.33
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-frontal-gyrus-opercular-part-right",
+  "name": "Inferior frontal gyrus opercular part",
+  "side": "right",
+  "label": 12,
+  "faces": 7740,
+  "bbox": [
+   [
+    36.99,
+    -11.66,
+    -3.44
+   ],
+   [
+    62.19,
+    24.62,
+    25.92
+   ]
+  ],
+  "centroid": [
+   50.04,
+   8.12,
+   9.3
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-frontal-gyrus-orbital-part-left",
+  "name": "Inferior frontal gyrus orbital part",
+  "side": "left",
+  "label": 13,
+  "faces": 2748,
+  "bbox": [
+   [
+    -53.36,
+    22.01,
+    -19.21
+   ],
+   [
+    -30.26,
+    40.59,
+    0.09
+   ]
+  ],
+  "centroid": [
+   -44.27,
+   29.93,
+   -9.42
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-frontal-gyrus-orbital-part-right",
+  "name": "Inferior frontal gyrus orbital part",
+  "side": "right",
+  "label": 13,
+  "faces": 1932,
+  "bbox": [
+   [
+    37.04,
+    26.07,
+    -15.01
+   ],
+   [
+    54.35,
+    40.77,
+    -0.08
+   ]
+  ],
+  "centroid": [
+   47.73,
+   32.14,
+   -7.11
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-frontal-gyrus-triangular-part-left",
+  "name": "Inferior frontal gyrus triangular part",
+  "side": "left",
+  "label": 14,
+  "faces": 4760,
+  "bbox": [
+   [
+    -59.23,
+    17.65,
+    -7.12
+   ],
+   [
+    -38.08,
+    41.21,
+    17.75
+   ]
+  ],
+  "centroid": [
+   -49.91,
+   29.54,
+   4.69
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-frontal-gyrus-triangular-part-right",
+  "name": "Inferior frontal gyrus triangular part",
+  "side": "right",
+  "label": 14,
+  "faces": 4840,
+  "bbox": [
+   [
+    44.66,
+    17.83,
+    -5.15
+   ],
+   [
+    59.76,
+    41.13,
+    24.35
+   ]
+  ],
+  "centroid": [
+   51.42,
+   28.35,
+   8.12
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-frontal-gyrus-left",
+  "name": "Middle frontal gyrus",
+  "side": "left",
+  "label": 15,
+  "faces": 18228,
+  "bbox": [
+   [
+    -51.21,
+    -3.99,
+    -1.15
+   ],
+   [
+    -16.36,
+    65.15,
+    60.5
+   ]
+  ],
+  "centroid": [
+   -35.8,
+   32.47,
+   32.28
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-frontal-gyrus-right",
+  "name": "Middle frontal gyrus",
+  "side": "right",
+  "label": 15,
+  "faces": 17870,
+  "bbox": [
+   [
+    17.2,
+    -2.15,
+    -1.43
+   ],
+   [
+    52.42,
+    63.04,
+    62.14
+   ]
+  ],
+  "centroid": [
+   36.36,
+   32.83,
+   31.95
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-frontal-gyrus-left",
+  "name": "Superior frontal gyrus",
+  "side": "left",
+  "label": 16,
+  "faces": 20000,
+  "bbox": [
+   [
+    -29.41,
+    -31.82,
+    -2.79
+   ],
+   [
+    -1.5,
+    69.42,
+    74.49
+   ]
+  ],
+  "centroid": [
+   -10.55,
+   24.2,
+   45.43
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-frontal-gyrus-right",
+  "name": "Superior frontal gyrus",
+  "side": "right",
+  "label": 16,
+  "faces": 20000,
+  "bbox": [
+   [
+    0.51,
+    -31.57,
+    -10.96
+   ],
+   [
+    28.35,
+    68.81,
+    75.8
+   ]
+  ],
+  "centroid": [
+   9.72,
+   25.61,
+   44.72
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "insula-insular-gyrus-central-sulcus-left",
+  "name": "Insula insular gyrus + central sulcus",
+  "side": "left",
+  "label": 17,
+  "faces": 4296,
+  "bbox": [
+   [
+    -44.65,
+    -25.58,
+    -19.35
+   ],
+   [
+    -33.68,
+    8.57,
+    16.19
+   ]
+  ],
+  "centroid": [
+   -38.92,
+   -8.04,
+   -0.42
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "insula-insular-gyrus-central-sulcus-right",
+  "name": "Insula insular gyrus + central sulcus",
+  "side": "right",
+  "label": 17,
+  "faces": 3628,
+  "bbox": [
+   [
+    34.56,
+    -19.78,
+    -19.18
+   ],
+   [
+    44.2,
+    8.6,
+    13.65
+   ]
+  ],
+  "centroid": [
+   39.05,
+   -5.17,
+   -2.48
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "insular-gyri-short-left",
+  "name": "Insular gyri short",
+  "side": "left",
+  "label": 18,
+  "faces": 5074,
+  "bbox": [
+   [
+    -43.48,
+    -9.61,
+    -18.78
+   ],
+   [
+    -28.32,
+    24.82,
+    12.17
+   ]
+  ],
+  "centroid": [
+   -37.42,
+   8.81,
+   -2.61
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "insular-gyri-short-right",
+  "name": "Insular gyri short",
+  "side": "right",
+  "label": 18,
+  "faces": 4498,
+  "bbox": [
+   [
+    29.22,
+    -7.75,
+    -16.76
+   ],
+   [
+    44.38,
+    24.79,
+    11.76
+   ]
+  ],
+  "centroid": [
+   38.12,
+   9.22,
+   -1.86
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-occipital-gyrus-left",
+  "name": "Middle occipital gyrus",
+  "side": "left",
+  "label": 19,
+  "faces": 9384,
+  "bbox": [
+   [
+    -53.46,
+    -100.13,
+    -10.75
+   ],
+   [
+    -23.89,
+    -68.8,
+    32.22
+   ]
+  ],
+  "centroid": [
+   -39.58,
+   -84.89,
+   11.08
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-occipital-gyrus-right",
+  "name": "Middle occipital gyrus",
+  "side": "right",
+  "label": 19,
+  "faces": 9766,
+  "bbox": [
+   [
+    24.82,
+    -98.0,
+    -5.45
+   ],
+   [
+    53.79,
+    -66.98,
+    37.62
+   ]
+  ],
+  "centroid": [
+   39.53,
+   -82.28,
+   13.79
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-occipital-gyrus-left",
+  "name": "Superior occipital gyrus",
+  "side": "left",
+  "label": 20,
+  "faces": 6060,
+  "bbox": [
+   [
+    -27.36,
+    -100.36,
+    9.38
+   ],
+   [
+    -3.79,
+    -77.23,
+    44.17
+   ]
+  ],
+  "centroid": [
+   -15.42,
+   -89.27,
+   27.94
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-occipital-gyrus-right",
+  "name": "Superior occipital gyrus",
+  "side": "right",
+  "label": 20,
+  "faces": 8046,
+  "bbox": [
+   [
+    2.78,
+    -100.06,
+    13.04
+   ],
+   [
+    29.62,
+    -68.84,
+    48.46
+   ]
+  ],
+  "centroid": [
+   18.61,
+   -85.74,
+   31.6
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-occipito-temporal-gyrus-left",
+  "name": "Lateral occipito-temporal gyrus",
+  "side": "left",
+  "label": 21,
+  "faces": 9004,
+  "bbox": [
+   [
+    -49.32,
+    -78.09,
+    -29.48
+   ],
+   [
+    -21.81,
+    -27.2,
+    -9.76
+   ]
+  ],
+  "centroid": [
+   -35.12,
+   -54.52,
+   -19.16
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-occipito-temporal-gyrus-right",
+  "name": "Lateral occipito-temporal gyrus",
+  "side": "right",
+  "label": 21,
+  "faces": 8380,
+  "bbox": [
+   [
+    22.63,
+    -83.96,
+    -29.48
+   ],
+   [
+    45.84,
+    -22.96,
+    -9.69
+   ]
+  ],
+  "centroid": [
+   33.38,
+   -52.16,
+   -18.62
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lingual-gyrus-left",
+  "name": "Lingual gyrus",
+  "side": "left",
+  "label": 22,
+  "faces": 11242,
+  "bbox": [
+   [
+    -25.12,
+    -97.6,
+    -17.27
+   ],
+   [
+    -1.5,
+    -42.98,
+    8.49
+   ]
+  ],
+  "centroid": [
+   -11.78,
+   -72.76,
+   -5.35
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lingual-gyrus-right",
+  "name": "Lingual gyrus",
+  "side": "right",
+  "label": 22,
+  "faces": 10968,
+  "bbox": [
+   [
+    0.5,
+    -90.33,
+    -17.37
+   ],
+   [
+    25.64,
+    -34.95,
+    10.45
+   ]
+  ],
+  "centroid": [
+   11.31,
+   -67.22,
+   -4.41
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "parahippocampal-gyrus-left",
+  "name": "Parahippocampal gyrus",
+  "side": "left",
+  "label": 23,
+  "faces": 10172,
+  "bbox": [
+   [
+    -36.93,
+    -45.77,
+    -39.47
+   ],
+   [
+    -11.54,
+    6.58,
+    -0.39
+   ]
+  ],
+  "centroid": [
+   -23.51,
+   -19.8,
+   -24.25
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "parahippocampal-gyrus-right",
+  "name": "Parahippocampal gyrus",
+  "side": "right",
+  "label": 23,
+  "faces": 10130,
+  "bbox": [
+   [
+    11.21,
+    -43.59,
+    -40.6
+   ],
+   [
+    40.09,
+    6.97,
+    0.05
+   ]
+  ],
+  "centroid": [
+   24.39,
+   -17.94,
+   -24.69
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "orbital-gyri-left",
+  "name": "Orbital gyri",
+  "side": "left",
+  "label": 24,
+  "faces": 13974,
+  "bbox": [
+   [
+    -51.06,
+    4.46,
+    -27.41
+   ],
+   [
+    -7.79,
+    59.0,
+    1.57
+   ]
+  ],
+  "centroid": [
+   -28.12,
+   35.07,
+   -17.0
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "orbital-gyri-right",
+  "name": "Orbital gyri",
+  "side": "right",
+  "label": 24,
+  "faces": 15740,
+  "bbox": [
+   [
+    1.26,
+    5.78,
+    -29.4
+   ],
+   [
+    51.58,
+    60.6,
+    -1.58
+   ]
+  ],
+  "centroid": [
+   27.69,
+   34.78,
+   -17.07
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "angular-gyrus-left",
+  "name": "Angular gyrus",
+  "side": "left",
+  "label": 25,
+  "faces": 11292,
+  "bbox": [
+   [
+    -61.21,
+    -85.94,
+    11.42
+   ],
+   [
+    -26.06,
+    -50.82,
+    52.18
+   ]
+  ],
+  "centroid": [
+   -43.92,
+   -66.97,
+   35.92
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "angular-gyrus-right",
+  "name": "Angular gyrus",
+  "side": "right",
+  "label": 25,
+  "faces": 9420,
+  "bbox": [
+   [
+    29.08,
+    -81.92,
+    19.18
+   ],
+   [
+    60.37,
+    -45.36,
+    52.46
+   ]
+  ],
+  "centroid": [
+   45.29,
+   -62.4,
+   38.62
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "supramarginal-gyrus-left",
+  "name": "Supramarginal gyrus",
+  "side": "left",
+  "label": 26,
+  "faces": 12498,
+  "bbox": [
+   [
+    -68.8,
+    -56.45,
+    12.69
+   ],
+   [
+    -38.46,
+    -19.23,
+    50.49
+   ]
+  ],
+  "centroid": [
+   -55.85,
+   -37.63,
+   30.61
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "supramarginal-gyrus-right",
+  "name": "Supramarginal gyrus",
+  "side": "right",
+  "label": 26,
+  "faces": 12944,
+  "bbox": [
+   [
+    40.74,
+    -48.38,
+    11.01
+   ],
+   [
+    69.94,
+    -14.9,
+    52.37
+   ]
+  ],
+  "centroid": [
+   56.91,
+   -32.88,
+   30.88
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-parietal-lobule-left",
+  "name": "Superior parietal lobule",
+  "side": "left",
+  "label": 27,
+  "faces": 12040,
+  "bbox": [
+   [
+    -42.81,
+    -83.81,
+    36.87
+   ],
+   [
+    -3.93,
+    -42.99,
+    76.18
+   ]
+  ],
+  "centroid": [
+   -21.75,
+   -61.19,
+   57.79
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-parietal-lobule-right",
+  "name": "Superior parietal lobule",
+  "side": "right",
+  "label": 27,
+  "faces": 10050,
+  "bbox": [
+   [
+    6.69,
+    -79.82,
+    39.41
+   ],
+   [
+    40.45,
+    -40.59,
+    77.81
+   ]
+  ],
+  "centroid": [
+   21.5,
+   -57.24,
+   60.52
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "postcentral-gyrus-left",
+  "name": "Postcentral gyrus",
+  "side": "left",
+  "label": 28,
+  "faces": 12010,
+  "bbox": [
+   [
+    -67.19,
+    -40.09,
+    22.89
+   ],
+   [
+    -10.44,
+    -4.87,
+    78.32
+   ]
+  ],
+  "centroid": [
+   -44.85,
+   -25.14,
+   53.62
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "postcentral-gyrus-right",
+  "name": "Postcentral gyrus",
+  "side": "right",
+  "label": 28,
+  "faces": 11494,
+  "bbox": [
+   [
+    10.71,
+    -39.94,
+    21.22
+   ],
+   [
+    67.61,
+    -4.54,
+    78.27
+   ]
+  ],
+  "centroid": [
+   43.35,
+   -23.99,
+   54.24
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precentral-gyrus-left",
+  "name": "Precentral gyrus",
+  "side": "left",
+  "label": 29,
+  "faces": 15938,
+  "bbox": [
+   [
+    -65.4,
+    -31.75,
+    14.57
+   ],
+   [
+    -10.38,
+    11.26,
+    78.35
+   ]
+  ],
+  "centroid": [
+   -42.57,
+   -9.81,
+   50.67
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precentral-gyrus-right",
+  "name": "Precentral gyrus",
+  "side": "right",
+  "label": 29,
+  "faces": 15784,
+  "bbox": [
+   [
+    8.66,
+    -29.94,
+    12.88
+   ],
+   [
+    64.49,
+    11.5,
+    78.4
+   ]
+  ],
+  "centroid": [
+   41.16,
+   -8.55,
+   50.55
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precuneus-left",
+  "name": "Precuneus",
+  "side": "left",
+  "label": 30,
+  "faces": 12130,
+  "bbox": [
+   [
+    -16.9,
+    -79.61,
+    4.83
+   ],
+   [
+    -0.54,
+    -31.0,
+    74.21
+   ]
+  ],
+  "centroid": [
+   -6.66,
+   -57.75,
+   41.19
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precuneus-right",
+  "name": "Precuneus",
+  "side": "right",
+  "label": 30,
+  "faces": 11956,
+  "bbox": [
+   [
+    -0.46,
+    -78.47,
+    9.41
+   ],
+   [
+    14.12,
+    -38.75,
+    75.76
+   ]
+  ],
+  "centroid": [
+   5.86,
+   -59.27,
+   44.02
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "straight-gyrus-left",
+  "name": "Straight gyrus",
+  "side": "left",
+  "label": 31,
+  "faces": 6860,
+  "bbox": [
+   [
+    -12.84,
+    6.09,
+    -29.4
+   ],
+   [
+    -1.5,
+    65.22,
+    -5.72
+   ]
+  ],
+  "centroid": [
+   -5.63,
+   38.22,
+   -19.3
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "straight-gyrus-right",
+  "name": "Straight gyrus",
+  "side": "right",
+  "label": 31,
+  "faces": 5180,
+  "bbox": [
+   [
+    0.5,
+    8.17,
+    -29.13
+   ],
+   [
+    12.15,
+    57.12,
+    -6.45
+   ]
+  ],
+  "centroid": [
+   5.1,
+   33.24,
+   -20.14
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "subcallosal-area-gyrus-left",
+  "name": "Subcallosal area + gyrus",
+  "side": "left",
+  "label": 32,
+  "faces": 1372,
+  "bbox": [
+   [
+    -8.59,
+    5.71,
+    -16.56
+   ],
+   [
+    -1.58,
+    26.57,
+    -4.36
+   ]
+  ],
+  "centroid": [
+   -4.64,
+   14.52,
+   -9.55
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "subcallosal-area-gyrus-right",
+  "name": "Subcallosal area + gyrus",
+  "side": "right",
+  "label": 32,
+  "faces": 1372,
+  "bbox": [
+   [
+    0.65,
+    6.1,
+    -20.59
+   ],
+   [
+    8.42,
+    21.36,
+    -6.25
+   ]
+  ],
+  "centroid": [
+   4.91,
+   13.96,
+   -12.8
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "anterior-transverse-temporal-gyrus-left",
+  "name": "Anterior transverse temporal gyrus",
+  "side": "left",
+  "label": 33,
+  "faces": 3698,
+  "bbox": [
+   [
+    -59.08,
+    -33.59,
+    -2.61
+   ],
+   [
+    -35.96,
+    -4.97,
+    15.62
+   ]
+  ],
+  "centroid": [
+   -48.03,
+   -19.81,
+   6.42
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "anterior-transverse-temporal-gyrus-right",
+  "name": "Anterior transverse temporal gyrus",
+  "side": "right",
+  "label": 33,
+  "faces": 3202,
+  "bbox": [
+   [
+    36.81,
+    -30.18,
+    -1.3
+   ],
+   [
+    58.24,
+    -4.99,
+    15.93
+   ]
+  ],
+  "centroid": [
+   47.55,
+   -17.77,
+   6.65
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-temporal-gyrus-lateral-aspect-left",
+  "name": "Superior temporal gyrus lateral aspect",
+  "side": "left",
+  "label": 34,
+  "faces": 13358,
+  "bbox": [
+   [
+    -71.45,
+    -55.58,
+    -33.13
+   ],
+   [
+    -38.32,
+    19.46,
+    19.99
+   ]
+  ],
+  "centroid": [
+   -58.47,
+   -13.0,
+   -5.13
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-temporal-gyrus-lateral-aspect-right",
+  "name": "Superior temporal gyrus lateral aspect",
+  "side": "right",
+  "label": 34,
+  "faces": 11420,
+  "bbox": [
+   [
+    41.09,
+    -42.32,
+    -30.6
+   ],
+   [
+    72.05,
+    21.13,
+    16.0
+   ]
+  ],
+  "centroid": [
+   59.0,
+   -9.91,
+   -5.01
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-temporal-gyrus-planum-polare-left",
+  "name": "Superior temporal gyrus planum polare",
+  "side": "left",
+  "label": 35,
+  "faces": 4684,
+  "bbox": [
+   [
+    -54.61,
+    -11.77,
+    -34.61
+   ],
+   [
+    -28.08,
+    13.1,
+    -0.04
+   ]
+  ],
+  "centroid": [
+   -41.8,
+   3.28,
+   -19.02
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-temporal-gyrus-planum-polare-right",
+  "name": "Superior temporal gyrus planum polare",
+  "side": "right",
+  "label": 35,
+  "faces": 4468,
+  "bbox": [
+   [
+    27.29,
+    -9.54,
+    -33.16
+   ],
+   [
+    55.78,
+    15.0,
+    1.68
+   ]
+  ],
+  "centroid": [
+   43.17,
+   4.35,
+   -17.86
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "planum-temporale-left",
+  "name": "Planum temporale",
+  "side": "left",
+  "label": 36,
+  "faces": 5308,
+  "bbox": [
+   [
+    -66.72,
+    -50.41,
+    1.22
+   ],
+   [
+    -49.62,
+    -17.22,
+    35.91
+   ]
+  ],
+  "centroid": [
+   -57.89,
+   -38.0,
+   17.05
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "planum-temporale-right",
+  "name": "Planum temporale",
+  "side": "right",
+  "label": 36,
+  "faces": 3804,
+  "bbox": [
+   [
+    49.32,
+    -40.46,
+    4.81
+   ],
+   [
+    65.59,
+    -19.24,
+    35.83
+   ]
+  ],
+  "centroid": [
+   57.39,
+   -32.09,
+   17.86
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-temporal-gyrus-left",
+  "name": "Inferior temporal gyrus",
+  "side": "left",
+  "label": 37,
+  "faces": 12202,
+  "bbox": [
+   [
+    -63.45,
+    -69.8,
+    -47.3
+   ],
+   [
+    -36.08,
+    -1.0,
+    1.57
+   ]
+  ],
+  "centroid": [
+   -51.79,
+   -35.28,
+   -25.58
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-temporal-gyrus-right",
+  "name": "Inferior temporal gyrus",
+  "side": "right",
+  "label": 37,
+  "faces": 12318,
+  "bbox": [
+   [
+    38.71,
+    -66.16,
+    -46.75
+   ],
+   [
+    64.19,
+    -1.18,
+    -0.28
+   ]
+  ],
+  "centroid": [
+   52.46,
+   -33.84,
+   -25.14
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-temporal-gyrus-left",
+  "name": "Middle temporal gyrus",
+  "side": "left",
+  "label": 38,
+  "faces": 13826,
+  "bbox": [
+   [
+    -71.32,
+    -68.45,
+    -37.14
+   ],
+   [
+    -45.74,
+    7.14,
+    15.63
+   ]
+  ],
+  "centroid": [
+   -59.89,
+   -31.25,
+   -12.65
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-temporal-gyrus-right",
+  "name": "Middle temporal gyrus",
+  "side": "right",
+  "label": 38,
+  "faces": 14498,
+  "bbox": [
+   [
+    47.09,
+    -66.24,
+    -37.24
+   ],
+   [
+    70.49,
+    9.16,
+    13.77
+   ]
+  ],
+  "centroid": [
+   60.19,
+   -28.99,
+   -12.58
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "anterior-segment-of-lateral-sulcus-horizontal-ramus-left",
+  "name": "Anterior segment of lateral sulcus horizontal ramus",
+  "side": "left",
+  "label": 39,
+  "faces": 1212,
+  "bbox": [
+   [
+    -45.19,
+    28.05,
+    -9.08
+   ],
+   [
+    -30.25,
+    33.45,
+    3.83
+   ]
+  ],
+  "centroid": [
+   -38.3,
+   31.16,
+   -1.98
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "anterior-segment-of-lateral-sulcus-horizontal-ramus-right",
+  "name": "Anterior segment of lateral sulcus horizontal ramus",
+  "side": "right",
+  "label": 39,
+  "faces": 1692,
+  "bbox": [
+   [
+    32.83,
+    21.97,
+    -5.11
+   ],
+   [
+    47.77,
+    33.25,
+    8.17
+   ]
+  ],
+  "centroid": [
+   40.95,
+   27.95,
+   2.12
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "anterior-segment-of-lateral-sulcus-vertical-ramus-left",
+  "name": "Anterior segment of lateral sulcus vertical ramus",
+  "side": "left",
+  "label": 40,
+  "faces": 1698,
+  "bbox": [
+   [
+    -51.05,
+    13.87,
+    1.22
+   ],
+   [
+    -35.89,
+    27.22,
+    12.29
+   ]
+  ],
+  "centroid": [
+   -43.87,
+   20.9,
+   7.61
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "anterior-segment-of-lateral-sulcus-vertical-ramus-right",
+  "name": "Anterior segment of lateral sulcus vertical ramus",
+  "side": "right",
+  "label": 40,
+  "faces": 1196,
+  "bbox": [
+   [
+    37.24,
+    15.9,
+    4.64
+   ],
+   [
+    51.73,
+    24.82,
+    14.14
+   ]
+  ],
+  "centroid": [
+   44.81,
+   20.31,
+   9.14
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-sulcus-posterior-ramus-left",
+  "name": "Lateral sulcus posterior ramus",
+  "side": "left",
+  "label": 41,
+  "faces": 4648,
+  "bbox": [
+   [
+    -51.39,
+    -46.17,
+    3.43
+   ],
+   [
+    -29.82,
+    -21.09,
+    30.04
+   ]
+  ],
+  "centroid": [
+   -41.6,
+   -34.34,
+   17.32
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-sulcus-posterior-ramus-right",
+  "name": "Lateral sulcus posterior ramus",
+  "side": "right",
+  "label": 41,
+  "faces": 6028,
+  "bbox": [
+   [
+    30.52,
+    -40.13,
+    5.01
+   ],
+   [
+    54.22,
+    -11.1,
+    32.1
+   ]
+  ],
+  "centroid": [
+   40.59,
+   -28.34,
+   17.76
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "occipital-pole-left",
+  "name": "Occipital pole",
+  "side": "left",
+  "label": 43,
+  "faces": 8466,
+  "bbox": [
+   [
+    -33.21,
+    -106.48,
+    -19.45
+   ],
+   [
+    -4.24,
+    -87.08,
+    20.21
+   ]
+  ],
+  "centroid": [
+   -19.18,
+   -98.55,
+   -2.43
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "occipital-pole-right",
+  "name": "Occipital pole",
+  "side": "right",
+  "label": 43,
+  "faces": 11656,
+  "bbox": [
+   [
+    0.87,
+    -106.47,
+    -17.49
+   ],
+   [
+    35.56,
+    -78.86,
+    18.38
+   ]
+  ],
+  "centroid": [
+   17.39,
+   -95.68,
+   -1.62
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "temporal-pole-left",
+  "name": "Temporal pole",
+  "side": "left",
+  "label": 44,
+  "faces": 8686,
+  "bbox": [
+   [
+    -54.54,
+    -11.81,
+    -47.48
+   ],
+   [
+    -19.52,
+    21.43,
+    -25.9
+   ]
+  ],
+  "centroid": [
+   -35.54,
+   5.79,
+   -37.08
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "temporal-pole-right",
+  "name": "Temporal pole",
+  "side": "right",
+  "label": 44,
+  "faces": 9556,
+  "bbox": [
+   [
+    20.54,
+    -11.64,
+    -49.21
+   ],
+   [
+    54.34,
+    22.65,
+    -22.29
+   ]
+  ],
+  "centroid": [
+   37.36,
+   6.69,
+   -36.6
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "calcarine-sulcus-left",
+  "name": "Calcarine sulcus",
+  "side": "left",
+  "label": 45,
+  "faces": 7190,
+  "bbox": [
+   [
+    -27.47,
+    -95.62,
+    -6.77
+   ],
+   [
+    -6.39,
+    -43.41,
+    14.48
+   ]
+  ],
+  "centroid": [
+   -16.31,
+   -68.06,
+   4.95
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "calcarine-sulcus-right",
+  "name": "Calcarine sulcus",
+  "side": "right",
+  "label": 45,
+  "faces": 7026,
+  "bbox": [
+   [
+    6.81,
+    -91.62,
+    -6.93
+   ],
+   [
+    29.94,
+    -41.46,
+    16.44
+   ]
+  ],
+  "centroid": [
+   16.89,
+   -65.33,
+   5.89
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "central-sulcus-left",
+  "name": "Central sulcus",
+  "side": "left",
+  "label": 46,
+  "faces": 11010,
+  "bbox": [
+   [
+    -60.61,
+    -38.3,
+    17.2
+   ],
+   [
+    -7.83,
+    -2.99,
+    68.3
+   ]
+  ],
+  "centroid": [
+   -36.73,
+   -21.29,
+   46.3
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "central-sulcus-right",
+  "name": "Central sulcus",
+  "side": "right",
+  "label": 46,
+  "faces": 11012,
+  "bbox": [
+   [
+    6.96,
+    -37.59,
+    17.4
+   ],
+   [
+    58.18,
+    -1.23,
+    68.37
+   ]
+  ],
+  "centroid": [
+   35.35,
+   -20.15,
+   46.8
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-sulcus-marginal-branch-left",
+  "name": "Cingulate sulcus marginal branch",
+  "side": "left",
+  "label": 47,
+  "faces": 4072,
+  "bbox": [
+   [
+    -19.47,
+    -50.0,
+    36.53
+   ],
+   [
+    -6.06,
+    -24.59,
+    64.08
+   ]
+  ],
+  "centroid": [
+   -14.27,
+   -37.57,
+   47.93
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cingulate-sulcus-marginal-branch-right",
+  "name": "Cingulate sulcus marginal branch",
+  "side": "right",
+  "label": 47,
+  "faces": 4876,
+  "bbox": [
+   [
+    5.23,
+    -50.18,
+    36.53
+   ],
+   [
+    18.48,
+    -22.83,
+    64.13
+   ]
+  ],
+  "centroid": [
+   12.34,
+   -37.13,
+   48.12
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "insula-circular-sulcus-anterior-part-left",
+  "name": "Insula circular sulcus anterior part",
+  "side": "left",
+  "label": 48,
+  "faces": 2610,
+  "bbox": [
+   [
+    -40.61,
+    12.17,
+    -17.17
+   ],
+   [
+    -24.08,
+    29.12,
+    0.26
+   ]
+  ],
+  "centroid": [
+   -30.6,
+   21.24,
+   -8.99
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "insula-circular-sulcus-anterior-part-right",
+  "name": "Insula circular sulcus anterior part",
+  "side": "right",
+  "label": 48,
+  "faces": 2876,
+  "bbox": [
+   [
+    24.73,
+    12.08,
+    -15.36
+   ],
+   [
+    41.67,
+    31.15,
+    4.15
+   ]
+  ],
+  "centroid": [
+   31.7,
+   22.59,
+   -6.43
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "insula-circular-sulcus-inferior-part-left",
+  "name": "Insula circular sulcus inferior part",
+  "side": "left",
+  "label": 49,
+  "faces": 7170,
+  "bbox": [
+   [
+    -51.3,
+    -30.3,
+    -25.17
+   ],
+   [
+    -31.54,
+    7.23,
+    13.83
+   ]
+  ],
+  "centroid": [
+   -41.39,
+   -12.85,
+   -6.77
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "insula-circular-sulcus-inferior-part-right",
+  "name": "Insula circular sulcus inferior part",
+  "side": "right",
+  "label": 49,
+  "faces": 6160,
+  "bbox": [
+   [
+    32.71,
+    -27.81,
+    -24.78
+   ],
+   [
+    52.29,
+    6.94,
+    8.21
+   ]
+  ],
+  "centroid": [
+   42.52,
+   -11.07,
+   -7.52
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "insula-circular-sulcus-superior-part-left",
+  "name": "Insula circular sulcus superior part",
+  "side": "left",
+  "label": 50,
+  "faces": 7200,
+  "bbox": [
+   [
+    -49.12,
+    -22.24,
+    -0.92
+   ],
+   [
+    -27.54,
+    31.35,
+    22.44
+   ]
+  ],
+  "centroid": [
+   -36.57,
+   5.44,
+   10.88
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "insula-circular-sulcus-superior-part-right",
+  "name": "Insula circular sulcus superior part",
+  "side": "right",
+  "label": 50,
+  "faces": 5884,
+  "bbox": [
+   [
+    28.57,
+    -15.61,
+    -0.8
+   ],
+   [
+    49.67,
+    30.75,
+    20.32
+   ]
+  ],
+  "centroid": [
+   36.35,
+   6.3,
+   10.5
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "anterior-transverse-collateral-sulcus-left",
+  "name": "Anterior transverse collateral sulcus",
+  "side": "left",
+  "label": 51,
+  "faces": 3368,
+  "bbox": [
+   [
+    -48.79,
+    -39.58,
+    -35.18
+   ],
+   [
+    -34.23,
+    -8.67,
+    -19.53
+   ]
+  ],
+  "centroid": [
+   -41.16,
+   -22.72,
+   -26.29
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "anterior-transverse-collateral-sulcus-right",
+  "name": "Anterior transverse collateral sulcus",
+  "side": "right",
+  "label": 51,
+  "faces": 3358,
+  "bbox": [
+   [
+    35.01,
+    -39.55,
+    -35.11
+   ],
+   [
+    49.79,
+    -5.08,
+    -18.09
+   ]
+  ],
+  "centroid": [
+   42.11,
+   -21.73,
+   -25.74
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "posterior-transverse-collateral-sulcus-left",
+  "name": "Posterior transverse collateral sulcus",
+  "side": "left",
+  "label": 52,
+  "faces": 1170,
+  "bbox": [
+   [
+    -32.77,
+    -84.17,
+    -12.76
+   ],
+   [
+    -18.25,
+    -74.7,
+    -3.63
+   ]
+  ],
+  "centroid": [
+   -25.24,
+   -79.11,
+   -7.85
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "posterior-transverse-collateral-sulcus-right",
+  "name": "Posterior transverse collateral sulcus",
+  "side": "right",
+  "label": 52,
+  "faces": 1324,
+  "bbox": [
+   [
+    20.85,
+    -85.98,
+    -12.63
+   ],
+   [
+    32.01,
+    -71.1,
+    -4.07
+   ]
+  ],
+  "centroid": [
+   25.58,
+   -78.58,
+   -8.31
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-frontal-sulcus-left",
+  "name": "Inferior frontal sulcus",
+  "side": "left",
+  "label": 53,
+  "faces": 5970,
+  "bbox": [
+   [
+    -47.03,
+    5.61,
+    3.21
+   ],
+   [
+    -31.94,
+    43.05,
+    37.95
+   ]
+  ],
+  "centroid": [
+   -39.99,
+   23.01,
+   21.29
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-frontal-sulcus-right",
+  "name": "Inferior frontal sulcus",
+  "side": "right",
+  "label": 53,
+  "faces": 5954,
+  "bbox": [
+   [
+    30.74,
+    8.2,
+    2.99
+   ],
+   [
+    46.39,
+    44.57,
+    41.78
+   ]
+  ],
+  "centroid": [
+   39.33,
+   24.66,
+   21.68
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-frontal-sulcus-left",
+  "name": "Middle frontal sulcus",
+  "side": "left",
+  "label": 54,
+  "faces": 4464,
+  "bbox": [
+   [
+    -36.61,
+    29.81,
+    1.42
+   ],
+   [
+    -21.51,
+    54.92,
+    34.28
+   ]
+  ],
+  "centroid": [
+   -27.72,
+   42.42,
+   20.23
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-frontal-sulcus-right",
+  "name": "Middle frontal sulcus",
+  "side": "right",
+  "label": 54,
+  "faces": 5100,
+  "bbox": [
+   [
+    21.06,
+    25.85,
+    -1.12
+   ],
+   [
+    37.98,
+    53.39,
+    38.32
+   ]
+  ],
+  "centroid": [
+   28.48,
+   41.47,
+   21.21
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-frontal-sulcus-left",
+  "name": "Superior frontal sulcus",
+  "side": "left",
+  "label": 55,
+  "faces": 7762,
+  "bbox": [
+   [
+    -33.21,
+    -6.31,
+    25.11
+   ],
+   [
+    -16.02,
+    44.68,
+    62.25
+   ]
+  ],
+  "centroid": [
+   -24.34,
+   18.49,
+   44.52
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-frontal-sulcus-right",
+  "name": "Superior frontal sulcus",
+  "side": "right",
+  "label": 55,
+  "faces": 6402,
+  "bbox": [
+   [
+    16.91,
+    -6.1,
+    30.63
+   ],
+   [
+    32.0,
+    44.78,
+    60.26
+   ]
+  ],
+  "centroid": [
+   23.6,
+   18.64,
+   45.77
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "sulcus-intermedius-primus-left",
+  "name": "Sulcus intermedius primus",
+  "side": "left",
+  "label": 56,
+  "faces": 924,
+  "bbox": [
+   [
+    -55.12,
+    -57.63,
+    23.44
+   ],
+   [
+    -47.61,
+    -49.03,
+    37.75
+   ]
+  ],
+  "centroid": [
+   -51.17,
+   -53.15,
+   30.96
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "sulcus-intermedius-primus-right",
+  "name": "Sulcus intermedius primus",
+  "side": "right",
+  "label": 56,
+  "faces": 2024,
+  "bbox": [
+   [
+    38.95,
+    -50.0,
+    11.42
+   ],
+   [
+    60.28,
+    -39.24,
+    41.79
+   ]
+  ],
+  "centroid": [
+   49.42,
+   -45.0,
+   31.99
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "intraparietal-sulcus-transverse-parietal-sulci-left",
+  "name": "Intraparietal sulcus + transverse parietal sulci",
+  "side": "left",
+  "label": 57,
+  "faces": 8838,
+  "bbox": [
+   [
+    -48.54,
+    -80.26,
+    23.24
+   ],
+   [
+    -16.06,
+    -43.23,
+    54.29
+   ]
+  ],
+  "centroid": [
+   -29.78,
+   -60.58,
+   39.61
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "intraparietal-sulcus-transverse-parietal-sulci-right",
+  "name": "Intraparietal sulcus + transverse parietal sulci",
+  "side": "right",
+  "label": 57,
+  "faces": 7886,
+  "bbox": [
+   [
+    16.89,
+    -72.19,
+    27.25
+   ],
+   [
+    42.3,
+    -39.22,
+    58.29
+   ]
+  ],
+  "centroid": [
+   29.37,
+   -57.27,
+   43.71
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-occipital-lunatus-sulcus-left",
+  "name": "Middle occipital + lunatus sulcus",
+  "side": "left",
+  "label": 58,
+  "faces": 2956,
+  "bbox": [
+   [
+    -43.05,
+    -98.12,
+    -5.21
+   ],
+   [
+    -21.68,
+    -76.68,
+    14.07
+   ]
+  ],
+  "centroid": [
+   -31.59,
+   -87.05,
+   4.14
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-occipital-lunatus-sulcus-right",
+  "name": "Middle occipital + lunatus sulcus",
+  "side": "right",
+  "label": 58,
+  "faces": 2636,
+  "bbox": [
+   [
+    24.58,
+    -92.39,
+    -1.29
+   ],
+   [
+    43.76,
+    -74.62,
+    15.77
+   ]
+  ],
+  "centroid": [
+   33.12,
+   -83.3,
+   6.9
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-transverse-occipital-sulcus-left",
+  "name": "Superior + transverse occipital sulcus",
+  "side": "left",
+  "label": 59,
+  "faces": 3628,
+  "bbox": [
+   [
+    -37.0,
+    -93.94,
+    12.51
+   ],
+   [
+    -17.71,
+    -67.23,
+    28.35
+   ]
+  ],
+  "centroid": [
+   -27.63,
+   -81.3,
+   19.29
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-transverse-occipital-sulcus-right",
+  "name": "Superior + transverse occipital sulcus",
+  "side": "right",
+  "label": 59,
+  "faces": 4284,
+  "bbox": [
+   [
+    14.83,
+    -90.34,
+    12.66
+   ],
+   [
+    36.35,
+    -63.43,
+    35.56
+   ]
+  ],
+  "centroid": [
+   27.44,
+   -77.66,
+   22.79
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "anterior-occipital-sulcus-preoccipital-notch-left",
+  "name": "Anterior occipital sulcus + preoccipital notch",
+  "side": "left",
+  "label": 60,
+  "faces": 2334,
+  "bbox": [
+   [
+    -50.59,
+    -79.58,
+    -11.05
+   ],
+   [
+    -39.51,
+    -61.25,
+    8.2
+   ]
+  ],
+  "centroid": [
+   -43.7,
+   -69.4,
+   0.78
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "anterior-occipital-sulcus-preoccipital-notch-right",
+  "name": "Anterior occipital sulcus + preoccipital notch",
+  "side": "right",
+  "label": 60,
+  "faces": 1816,
+  "bbox": [
+   [
+    38.55,
+    -73.91,
+    -2.96
+   ],
+   [
+    48.25,
+    -60.84,
+    11.64
+   ]
+  ],
+  "centroid": [
+   43.17,
+   -66.75,
+   3.47
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-occipito-temporal-sulcus-left",
+  "name": "Lateral occipito-temporal sulcus",
+  "side": "left",
+  "label": 61,
+  "faces": 2796,
+  "bbox": [
+   [
+    -50.6,
+    -67.92,
+    -26.58
+   ],
+   [
+    -38.39,
+    -38.79,
+    -4.45
+   ]
+  ],
+  "centroid": [
+   -43.6,
+   -52.09,
+   -13.98
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-occipito-temporal-sulcus-right",
+  "name": "Lateral occipito-temporal sulcus",
+  "side": "right",
+  "label": 61,
+  "faces": 2380,
+  "bbox": [
+   [
+    38.62,
+    -65.91,
+    -22.74
+   ],
+   [
+    48.06,
+    -34.99,
+    -6.39
+   ]
+  ],
+  "centroid": [
+   43.4,
+   -50.84,
+   -14.27
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "collateral-lingual-sulcus-left",
+  "name": "Collateral + lingual sulcus",
+  "side": "left",
+  "label": 62,
+  "faces": 6254,
+  "bbox": [
+   [
+    -38.94,
+    -74.37,
+    -26.92
+   ],
+   [
+    -16.42,
+    -23.25,
+    -3.53
+   ]
+  ],
+  "centroid": [
+   -29.26,
+   -49.85,
+   -11.23
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "collateral-lingual-sulcus-right",
+  "name": "Collateral + lingual sulcus",
+  "side": "right",
+  "label": 62,
+  "faces": 6220,
+  "bbox": [
+   [
+    18.8,
+    -74.18,
+    -28.75
+   ],
+   [
+    38.38,
+    -19.41,
+    -1.67
+   ]
+  ],
+  "centroid": [
+   29.72,
+   -48.05,
+   -11.57
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-orbital-sulcus-left",
+  "name": "Lateral orbital sulcus",
+  "side": "left",
+  "label": 63,
+  "faces": 1340,
+  "bbox": [
+   [
+    -46.94,
+    35.67,
+    -9.0
+   ],
+   [
+    -37.53,
+    48.91,
+    4.15
+   ]
+  ],
+  "centroid": [
+   -41.21,
+   41.13,
+   -2.24
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-orbital-sulcus-right",
+  "name": "Lateral orbital sulcus",
+  "side": "right",
+  "label": 63,
+  "faces": 1324,
+  "bbox": [
+   [
+    36.74,
+    34.4,
+    -8.91
+   ],
+   [
+    47.62,
+    45.26,
+    5.61
+   ]
+  ],
+  "centroid": [
+   42.29,
+   40.0,
+   -1.76
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "olfactory-sulcus-left",
+  "name": "Olfactory sulcus",
+  "side": "left",
+  "label": 64,
+  "faces": 2828,
+  "bbox": [
+   [
+    -22.58,
+    4.2,
+    -24.64
+   ],
+   [
+    -7.8,
+    48.57,
+    -12.2
+   ]
+  ],
+  "centroid": [
+   -13.31,
+   23.73,
+   -18.05
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "olfactory-sulcus-right",
+  "name": "Olfactory sulcus",
+  "side": "right",
+  "label": 64,
+  "faces": 2866,
+  "bbox": [
+   [
+    7.4,
+    4.21,
+    -22.79
+   ],
+   [
+    21.66,
+    46.77,
+    -11.63
+   ]
+  ],
+  "centroid": [
+   13.26,
+   23.24,
+   -17.23
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "orbital-sulci-left",
+  "name": "Orbital sulci",
+  "side": "left",
+  "label": 65,
+  "faces": 3964,
+  "bbox": [
+   [
+    -39.15,
+    18.25,
+    -19.31
+   ],
+   [
+    -16.42,
+    49.01,
+    -5.61
+   ]
+  ],
+  "centroid": [
+   -26.41,
+   35.33,
+   -12.82
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "orbital-sulci-right",
+  "name": "Orbital sulci",
+  "side": "right",
+  "label": 65,
+  "faces": 4668,
+  "bbox": [
+   [
+    16.98,
+    18.19,
+    -21.18
+   ],
+   [
+    39.78,
+    49.28,
+    -5.53
+   ]
+  ],
+  "centroid": [
+   25.62,
+   35.19,
+   -13.31
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "parieto-occipital-sulcus-left",
+  "name": "Parieto-occipital sulcus",
+  "side": "left",
+  "label": 66,
+  "faces": 5888,
+  "bbox": [
+   [
+    -23.48,
+    -82.37,
+    5.43
+   ],
+   [
+    -8.0,
+    -56.6,
+    40.17
+   ]
+  ],
+  "centroid": [
+   -15.73,
+   -69.07,
+   23.88
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "parieto-occipital-sulcus-right",
+  "name": "Parieto-occipital sulcus",
+  "side": "right",
+  "label": 66,
+  "faces": 6608,
+  "bbox": [
+   [
+    7.39,
+    -83.73,
+    8.95
+   ],
+   [
+    24.49,
+    -54.57,
+    41.75
+   ]
+  ],
+  "centroid": [
+   16.36,
+   -67.93,
+   25.33
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "pericallosal-sulcus-left",
+  "name": "Pericallosal sulcus",
+  "side": "left",
+  "label": 67,
+  "faces": 7122,
+  "bbox": [
+   [
+    -10.99,
+    -50.31,
+    -7.33
+   ],
+   [
+    -1.55,
+    35.36,
+    34.22
+   ]
+  ],
+  "centroid": [
+   -5.32,
+   -4.74,
+   19.98
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "pericallosal-sulcus-right",
+  "name": "Pericallosal sulcus",
+  "side": "right",
+  "label": 67,
+  "faces": 7336,
+  "bbox": [
+   [
+    0.85,
+    -49.95,
+    -7.34
+   ],
+   [
+    13.71,
+    35.39,
+    34.32
+   ]
+  ],
+  "centroid": [
+   5.69,
+   -3.93,
+   20.74
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "postcentral-sulcus-left",
+  "name": "Postcentral sulcus",
+  "side": "left",
+  "label": 68,
+  "faces": 8306,
+  "bbox": [
+   [
+    -58.77,
+    -50.09,
+    28.79
+   ],
+   [
+    -18.25,
+    -19.1,
+    67.94
+   ]
+  ],
+  "centroid": [
+   -37.89,
+   -36.13,
+   46.61
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "postcentral-sulcus-right",
+  "name": "Postcentral sulcus",
+  "side": "right",
+  "label": 68,
+  "faces": 7410,
+  "bbox": [
+   [
+    15.23,
+    -47.77,
+    29.42
+   ],
+   [
+    58.04,
+    -16.98,
+    68.39
+   ]
+  ],
+  "centroid": [
+   36.17,
+   -33.94,
+   47.5
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precentral-sulcus-inferior-part-left",
+  "name": "Precentral sulcus inferior part",
+  "side": "left",
+  "label": 69,
+  "faces": 5052,
+  "bbox": [
+   [
+    -54.82,
+    -4.46,
+    7.42
+   ],
+   [
+    -33.72,
+    12.59,
+    45.91
+   ]
+  ],
+  "centroid": [
+   -44.5,
+   3.62,
+   27.84
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precentral-sulcus-inferior-part-right",
+  "name": "Precentral sulcus inferior part",
+  "side": "right",
+  "label": 69,
+  "faces": 5080,
+  "bbox": [
+   [
+    30.83,
+    -2.46,
+    9.24
+   ],
+   [
+    53.96,
+    15.05,
+    47.96
+   ]
+  ],
+  "centroid": [
+   42.82,
+   5.36,
+   29.08
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precentral-sulcus-superior-part-left",
+  "name": "Precentral sulcus superior part",
+  "side": "left",
+  "label": 70,
+  "faces": 4572,
+  "bbox": [
+   [
+    -46.81,
+    -19.58,
+    42.53
+   ],
+   [
+    -13.89,
+    1.21,
+    67.63
+   ]
+  ],
+  "centroid": [
+   -28.99,
+   -8.97,
+   52.91
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precentral-sulcus-superior-part-right",
+  "name": "Precentral sulcus superior part",
+  "side": "right",
+  "label": 70,
+  "faces": 4850,
+  "bbox": [
+   [
+    12.87,
+    -17.81,
+    42.61
+   ],
+   [
+    42.18,
+    2.95,
+    67.61
+   ]
+  ],
+  "centroid": [
+   26.92,
+   -8.35,
+   54.1
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "suborbital-sulcus-left",
+  "name": "Suborbital sulcus",
+  "side": "left",
+  "label": 71,
+  "faces": 3714,
+  "bbox": [
+   [
+    -14.56,
+    14.07,
+    -17.21
+   ],
+   [
+    -1.82,
+    58.92,
+    -0.2
+   ]
+  ],
+  "centroid": [
+   -7.76,
+   38.73,
+   -9.87
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "suborbital-sulcus-right",
+  "name": "Suborbital sulcus",
+  "side": "right",
+  "label": 71,
+  "faces": 2354,
+  "bbox": [
+   [
+    1.22,
+    18.44,
+    -19.02
+   ],
+   [
+    12.32,
+    57.04,
+    -4.08
+   ]
+  ],
+  "centroid": [
+   7.26,
+   39.76,
+   -12.77
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "subparietal-sulcus-left",
+  "name": "Subparietal sulcus",
+  "side": "left",
+  "label": 72,
+  "faces": 3842,
+  "bbox": [
+   [
+    -17.44,
+    -60.02,
+    23.01
+   ],
+   [
+    -3.96,
+    -35.23,
+    46.29
+   ]
+  ],
+  "centroid": [
+   -10.62,
+   -49.24,
+   35.84
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "subparietal-sulcus-right",
+  "name": "Subparietal sulcus",
+  "side": "right",
+  "label": 72,
+  "faces": 3710,
+  "bbox": [
+   [
+    1.46,
+    -60.11,
+    23.11
+   ],
+   [
+    16.37,
+    -35.23,
+    51.77
+   ]
+  ],
+  "centroid": [
+   9.19,
+   -49.36,
+   36.98
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-temporal-sulcus-left",
+  "name": "Inferior temporal sulcus",
+  "side": "left",
+  "label": 73,
+  "faces": 4478,
+  "bbox": [
+   [
+    -59.13,
+    -68.21,
+    -32.57
+   ],
+   [
+    -39.88,
+    -7.4,
+    6.0
+   ]
+  ],
+  "centroid": [
+   -51.87,
+   -38.92,
+   -15.23
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-temporal-sulcus-right",
+  "name": "Inferior temporal sulcus",
+  "side": "right",
+  "label": 73,
+  "faces": 3876,
+  "bbox": [
+   [
+    41.42,
+    -63.75,
+    -32.91
+   ],
+   [
+    57.78,
+    -3.41,
+    4.01
+   ]
+  ],
+  "centroid": [
+   52.06,
+   -35.05,
+   -15.4
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-temporal-sulcus-left",
+  "name": "Superior temporal sulcus",
+  "side": "left",
+  "label": 74,
+  "faces": 13652,
+  "bbox": [
+   [
+    -60.6,
+    -75.59,
+    -25.23
+   ],
+   [
+    -37.53,
+    -2.64,
+    36.33
+   ]
+  ],
+  "centroid": [
+   -49.85,
+   -42.66,
+   4.61
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-temporal-sulcus-right",
+  "name": "Superior temporal sulcus",
+  "side": "right",
+  "label": 74,
+  "faces": 16736,
+  "bbox": [
+   [
+    36.51,
+    -73.64,
+    -26.75
+   ],
+   [
+    60.12,
+    2.56,
+    35.75
+   ]
+  ],
+  "centroid": [
+   49.69,
+   -39.34,
+   4.2
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "transverse-temporal-sulcus-left",
+  "name": "Transverse temporal sulcus",
+  "side": "left",
+  "label": 75,
+  "faces": 1740,
+  "bbox": [
+   [
+    -60.76,
+    -34.11,
+    0.53
+   ],
+   [
+    -39.96,
+    -16.84,
+    8.09
+   ]
+  ],
+  "centroid": [
+   -51.02,
+   -26.02,
+   3.57
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "transverse-temporal-sulcus-right",
+  "name": "Transverse temporal sulcus",
+  "side": "right",
+  "label": 75,
+  "faces": 1698,
+  "bbox": [
+   [
+    41.44,
+    -31.77,
+    0.87
+   ],
+   [
+    60.21,
+    -12.87,
+    11.78
+   ]
+  ],
+  "centroid": [
+   52.01,
+   -22.53,
+   5.83
+  ],
+  "source": "Destrieux 2009 atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ }
+]

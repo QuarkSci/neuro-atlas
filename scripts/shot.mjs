@@ -20,7 +20,7 @@ const width = +opt('w', 1280),
   height = +opt('h', 800)
 const setup = opt('setup', '')
 const wait = +opt('wait', 1500)
-const url = opt('url', 'http://localhost:3017/')
+const url = opt('url', 'http://localhost:3019/')
 const theme = opt('theme', '')
 const lang = opt('lang', '')
 
@@ -37,8 +37,8 @@ try {
     if (m.type() === 'error') console.error('[console]', m.text())
   })
   await page.evaluateOnNewDocument((theme, lang) => {
-    if (theme) localStorage.setItem('fa:theme', theme)
-    if (lang) localStorage.setItem('fa:lang', lang)
+    if (theme) localStorage.setItem('na:theme', theme)
+    if (lang) localStorage.setItem('na:lang', lang)
   }, theme, lang)
   await page.goto(url, { waitUntil: 'networkidle0' })
   await page.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })

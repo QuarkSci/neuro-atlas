@@ -1,5 +1,5 @@
 import * as T from 'three'
-import type { SystemId } from '@/data/types'
+import type { LayerId, SystemId } from '@/data/types'
 
 interface Preset {
   color: string
@@ -26,8 +26,17 @@ const PRESETS: Record<SystemId, Preset> = {
   skull: { color: '#ded7c6', roughness: 0.8 },
 }
 
-/** Cytoarchitectonic areas read as a cooler, denser material than the gross tissue they sit in. */
-const JULICH_TINT = new T.Color('#5aa8ff')
+/** Each parcellation gets its own tint so overlapping layers stay tellable apart. */
+export const LAYER_COLORS: Record<LayerId, string> = {
+  gross: '#d9b4a4',
+  julich: '#5aa8ff',
+  brodmann: '#ff8a5a',
+  desikan: '#7ad48f',
+  destrieux: '#c78bff',
+  glasser: '#ffd35a',
+  jhu: '#f4f0e6',
+}
+const LAYER_TINT: Partial<Record<LayerId, T.Color>> = Object.fromEntries(Object.entries(LAYER_COLORS).filter(([k]) => k !== 'gross').map(([k, v]) => [k, new T.Color(v)]))
 
 export const HIGHLIGHT = new T.Color('#0088ff')
 export const HOVER = new T.Color('#9fd0ff')
@@ -37,12 +46,22 @@ export interface PartMaterial extends T.MeshPhysicalMaterial {
 }
 
 /** One physically-based material per part so selection and hover can tint individually. */
-export function createPartMaterial(system: SystemId, julich: boolean, seed: number): PartMaterial {
+export function createPartMaterial(system: SystemId, layer: LayerId, seed: number): PartMaterial {
   const p = PRESETS[system]
   const base = new T.Color(p.color)
-  // Neighbouring structures get slightly different shades so borders read.
-  base.offsetHSL(((seed % 17) - 8) / 300, 0, ((seed % 7) - 3) / 60)
-  if (julich) base.lerp(JULICH_TINT, 0.55)
+  const tintColor = LAYER_TINT[layer]
+  if (tintColor) {
+    // Parcellation areas must be tellable apart at a glance: spread hues
+    // around the layer's own colour (golden-ratio stepping keeps neighbours
+    // apart) with a little lightness variation, like a printed atlas.
+    const hsl = { h: 0, s: 0, l: 0 }
+    tintColor.getHSL(hsl)
+    const step = (seed * 0.6180339887) % 1
+    base.setHSL((hsl.h + (step - 0.5) * 0.38 + 1) % 1, 0.62, 0.46 + (((seed * 7) % 5) - 2) * 0.04)
+  } else {
+    // Neighbouring gross structures get slightly different shades so borders read.
+    base.offsetHSL(((seed % 17) - 8) / 300, 0, ((seed % 7) - 3) / 60)
+  }
   const m = new T.MeshPhysicalMaterial({
     color: base,
     metalness: p.metalness ?? 0,

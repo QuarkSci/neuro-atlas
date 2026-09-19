@@ -1,0 +1,1752 @@
+[
+ {
+  "id": "white-matter-left",
+  "name": "white matter",
+  "side": "left",
+  "label": 1,
+  "faces": 20000,
+  "bbox": [
+   [
+    -46.92,
+    -48.13,
+    -32.4
+   ],
+   [
+    3.87,
+    37.16,
+    29.79
+   ]
+  ],
+  "centroid": [
+   -16.53,
+   -10.42,
+   0.28
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "banks-superior-temporal-sulcus-left",
+  "name": "Banks superior temporal sulcus",
+  "side": "left",
+  "label": 2,
+  "faces": 14978,
+  "bbox": [
+   [
+    -63.77,
+    -62.16,
+    -7.75
+   ],
+   [
+    -27.42,
+    -23.5,
+    29.29
+   ]
+  ],
+  "centroid": [
+   -47.85,
+   -45.41,
+   8.15
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "caudal-anterior-cingulate-cortex-left",
+  "name": "caudal anterior cingulate cortex",
+  "side": "left",
+  "label": 3,
+  "faces": 11398,
+  "bbox": [
+   [
+    -19.84,
+    1.62,
+    9.49
+   ],
+   [
+    0.63,
+    44.65,
+    45.0
+   ]
+  ],
+  "centroid": [
+   -8.06,
+   20.76,
+   24.45
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "caudal-middle-frontal-gyrus-left",
+  "name": "caudal middle frontal gyrus",
+  "side": "left",
+  "label": 4,
+  "faces": 20000,
+  "bbox": [
+   [
+    -55.1,
+    -13.85,
+    19.8
+   ],
+   [
+    -16.08,
+    36.47,
+    69.36
+   ]
+  ],
+  "centroid": [
+   -32.66,
+   10.35,
+   41.61
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "corpus-calosum-left",
+  "name": "corpus calosum",
+  "side": "left",
+  "label": 5,
+  "faces": 20000,
+  "bbox": [
+   [
+    -18.88,
+    -48.05,
+    -9.75
+   ],
+   [
+    1.78,
+    41.51,
+    33.66
+   ]
+  ],
+  "centroid": [
+   -7.62,
+   -3.62,
+   19.42
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cuneus-cortex-left",
+  "name": "cuneus cortex",
+  "side": "left",
+  "label": 6,
+  "faces": 15634,
+  "bbox": [
+   [
+    -24.0,
+    -101.58,
+    -0.61
+   ],
+   [
+    4.03,
+    -60.68,
+    47.34
+   ]
+  ],
+  "centroid": [
+   -7.11,
+   -82.03,
+   21.75
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "entorhinal-cortex-left",
+  "name": "entorhinal cortex",
+  "side": "left",
+  "label": 7,
+  "faces": 18800,
+  "bbox": [
+   [
+    -36.76,
+    -38.36,
+    -48.64
+   ],
+   [
+    2.27,
+    9.39,
+    -16.0
+   ]
+  ],
+  "centroid": [
+   -15.89,
+   -12.98,
+   -33.37
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "fusiform-gyrus-left",
+  "name": "fusiform gyrus",
+  "side": "left",
+  "label": 8,
+  "faces": 20000,
+  "bbox": [
+   [
+    -54.55,
+    -91.27,
+    -50.99
+   ],
+   [
+    -9.72,
+    6.99,
+    8.16
+   ]
+  ],
+  "centroid": [
+   -32.86,
+   -49.24,
+   -24.65
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-parietal-cortex-left",
+  "name": "inferior parietal cortex",
+  "side": "left",
+  "label": 9,
+  "faces": 20000,
+  "bbox": [
+   [
+    -61.68,
+    -93.55,
+    -4.58
+   ],
+   [
+    -19.37,
+    -40.65,
+    60.72
+   ]
+  ],
+  "centroid": [
+   -39.42,
+   -65.19,
+   29.43
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-temporal-gyrus-left",
+  "name": "inferior temporal gyrus",
+  "side": "left",
+  "label": 10,
+  "faces": 20000,
+  "bbox": [
+   [
+    -67.87,
+    -76.18,
+    -50.86
+   ],
+   [
+    -10.59,
+    9.42,
+    7.45
+   ]
+  ],
+  "centroid": [
+   -47.14,
+   -36.33,
+   -23.94
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "isthmus-cingulate-cortex-left",
+  "name": "isthmus-cingulate cortex",
+  "side": "left",
+  "label": 11,
+  "faces": 20000,
+  "bbox": [
+   [
+    -31.41,
+    -66.65,
+    -23.15
+   ],
+   [
+    5.32,
+    17.66,
+    50.76
+   ]
+  ],
+  "centroid": [
+   -9.21,
+   -44.49,
+   15.37
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-occipital-cortex-left",
+  "name": "lateral occipital cortex",
+  "side": "left",
+  "label": 12,
+  "faces": 20000,
+  "bbox": [
+   [
+    -56.58,
+    -106.5,
+    -42.48
+   ],
+   [
+    8.73,
+    -55.36,
+    34.78
+   ]
+  ],
+  "centroid": [
+   -24.54,
+   -87.91,
+   -4.1
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-orbitofrontal-cortex-left",
+  "name": "lateral orbitofrontal cortex",
+  "side": "left",
+  "label": 13,
+  "faces": 20000,
+  "bbox": [
+   [
+    -44.44,
+    6.12,
+    -32.67
+   ],
+   [
+    -2.65,
+    69.06,
+    12.76
+   ]
+  ],
+  "centroid": [
+   -21.42,
+   35.51,
+   -13.83
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lingual-gyrus-left",
+  "name": "lingual gyrus",
+  "side": "left",
+  "label": 14,
+  "faces": 20000,
+  "bbox": [
+   [
+    -34.7,
+    -98.45,
+    -38.76
+   ],
+   [
+    8.22,
+    5.01,
+    9.78
+   ]
+  ],
+  "centroid": [
+   -11.29,
+   -69.62,
+   -13.97
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "medial-orbitofrontal-cortex-left",
+  "name": "medial orbitofrontal cortex",
+  "side": "left",
+  "label": 15,
+  "faces": 18168,
+  "bbox": [
+   [
+    -20.57,
+    -1.0,
+    -33.51
+   ],
+   [
+    1.82,
+    64.18,
+    2.9
+   ]
+  ],
+  "centroid": [
+   -6.34,
+   34.09,
+   -16.95
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-temporal-gyrus-left",
+  "name": "middle temporal gyrus",
+  "side": "left",
+  "label": 16,
+  "faces": 20000,
+  "bbox": [
+   [
+    -70.49,
+    -77.74,
+    -45.37
+   ],
+   [
+    -29.62,
+    17.68,
+    21.59
+   ]
+  ],
+  "centroid": [
+   -54.95,
+   -31.11,
+   -11.03
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "parahippocampal-gyrus-left",
+  "name": "parahippocampal gyrus",
+  "side": "left",
+  "label": 17,
+  "faces": 20000,
+  "bbox": [
+   [
+    -36.62,
+    -49.4,
+    -45.71
+   ],
+   [
+    2.45,
+    -11.25,
+    5.16
+   ]
+  ],
+  "centroid": [
+   -16.19,
+   -32.3,
+   -17.76
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "paracentral-lobule-left",
+  "name": "paracentral lobule",
+  "side": "left",
+  "label": 18,
+  "faces": 20000,
+  "bbox": [
+   [
+    -25.72,
+    -48.36,
+    25.05
+   ],
+   [
+    2.15,
+    -5.65,
+    79.63
+   ]
+  ],
+  "centroid": [
+   -9.44,
+   -26.82,
+   56.43
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "pars-opercularis-left",
+  "name": "pars opercularis",
+  "side": "left",
+  "label": 19,
+  "faces": 17498,
+  "bbox": [
+   [
+    -61.09,
+    -3.0,
+    -8.42
+   ],
+   [
+    -17.61,
+    38.33,
+    33.39
+   ]
+  ],
+  "centroid": [
+   -44.12,
+   17.5,
+   14.28
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "pars-orbitalis-left",
+  "name": "pars orbitalis",
+  "side": "left",
+  "label": 20,
+  "faces": 11706,
+  "bbox": [
+   [
+    -52.85,
+    14.0,
+    -21.23
+   ],
+   [
+    -25.85,
+    65.72,
+    6.25
+   ]
+  ],
+  "centroid": [
+   -39.84,
+   42.87,
+   -10.21
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "pars-triangularis-left",
+  "name": "pars triangularis",
+  "side": "left",
+  "label": 21,
+  "faces": 15608,
+  "bbox": [
+   [
+    -57.31,
+    18.31,
+    -11.8
+   ],
+   [
+    -13.92,
+    53.0,
+    20.16
+   ]
+  ],
+  "centroid": [
+   -40.33,
+   33.84,
+   3.64
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "pericalcarine-cortex-left",
+  "name": "pericalcarine cortex",
+  "side": "left",
+  "label": 22,
+  "faces": 15834,
+  "bbox": [
+   [
+    -30.63,
+    -100.0,
+    -12.55
+   ],
+   [
+    3.56,
+    -43.6,
+    20.46
+   ]
+  ],
+  "centroid": [
+   -10.34,
+   -81.77,
+   5.0
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "postcentral-gyrus-left",
+  "name": "postcentral gyrus",
+  "side": "left",
+  "label": 23,
+  "faces": 20000,
+  "bbox": [
+   [
+    -68.47,
+    -50.51,
+    4.9
+   ],
+   [
+    0.07,
+    -0.64,
+    80.5
+   ]
+  ],
+  "centroid": [
+   -38.37,
+   -25.79,
+   46.13
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "posterior-cingulate-cortex-left",
+  "name": "posterior-cingulate cortex",
+  "side": "left",
+  "label": 24,
+  "faces": 17314,
+  "bbox": [
+   [
+    -24.12,
+    -48.0,
+    21.74
+   ],
+   [
+    1.77,
+    6.65,
+    50.09
+   ]
+  ],
+  "centroid": [
+   -9.91,
+   -17.63,
+   35.97
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precentral-gyrus-left",
+  "name": "precentral gyrus",
+  "side": "left",
+  "label": 25,
+  "faces": 20000,
+  "bbox": [
+   [
+    -64.76,
+    -46.06,
+    -3.88
+   ],
+   [
+    0.06,
+    13.9,
+    79.88
+   ]
+  ],
+  "centroid": [
+   -35.83,
+   -11.13,
+   42.98
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precuneus-cortex-left",
+  "name": "precuneus cortex",
+  "side": "left",
+  "label": 26,
+  "faces": 20000,
+  "bbox": [
+   [
+    -30.45,
+    -86.84,
+    -19.65
+   ],
+   [
+    2.73,
+    13.64,
+    68.77
+   ]
+  ],
+  "centroid": [
+   -12.16,
+   -53.34,
+   31.34
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "rostral-anterior-cingulate-cortex-left",
+  "name": "rostral anterior cingulate cortex",
+  "side": "left",
+  "label": 27,
+  "faces": 12198,
+  "bbox": [
+   [
+    -21.69,
+    17.0,
+    -13.93
+   ],
+   [
+    1.71,
+    58.31,
+    22.63
+   ]
+  ],
+  "centroid": [
+   -7.58,
+   37.75,
+   1.83
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "rostral-middle-frontal-gyrus-left",
+  "name": "rostral middle frontal gyrus",
+  "side": "left",
+  "label": 28,
+  "faces": 20000,
+  "bbox": [
+   [
+    -52.68,
+    11.4,
+    -14.93
+   ],
+   [
+    -8.55,
+    68.33,
+    47.84
+   ]
+  ],
+  "centroid": [
+   -30.16,
+   42.06,
+   16.94
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-frontal-gyrus-left",
+  "name": "superior frontal gyrus",
+  "side": "left",
+  "label": 29,
+  "faces": 20000,
+  "bbox": [
+   [
+    -30.83,
+    -19.5,
+    -5.49
+   ],
+   [
+    2.84,
+    72.44,
+    79.75
+   ]
+  ],
+  "centroid": [
+   -12.3,
+   27.85,
+   39.47
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-parietal-cortex-left",
+  "name": "superior parietal cortex",
+  "side": "left",
+  "label": 30,
+  "faces": 20000,
+  "bbox": [
+   [
+    -43.76,
+    -93.8,
+    -15.66
+   ],
+   [
+    3.35,
+    -9.13,
+    78.3
+   ]
+  ],
+  "centroid": [
+   -22.12,
+   -62.48,
+   44.88
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-temporal-gyrus-left",
+  "name": "superior temporal gyrus",
+  "side": "left",
+  "label": 31,
+  "faces": 20000,
+  "bbox": [
+   [
+    -70.38,
+    -63.66,
+    -33.2
+   ],
+   [
+    -22.56,
+    26.9,
+    30.21
+   ]
+  ],
+  "centroid": [
+   -49.68,
+   -18.66,
+   -1.27
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "supramarginal-gyrus-left",
+  "name": "supramarginal gyrus",
+  "side": "left",
+  "label": 32,
+  "faces": 20000,
+  "bbox": [
+   [
+    -68.5,
+    -63.47,
+    10.98
+   ],
+   [
+    -17.06,
+    -13.39,
+    63.36
+   ]
+  ],
+  "centroid": [
+   -49.16,
+   -36.23,
+   32.07
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "frontal-pole-left",
+  "name": "frontal pole",
+  "side": "left",
+  "label": 33,
+  "faces": 5258,
+  "bbox": [
+   [
+    -25.63,
+    58.78,
+    -23.54
+   ],
+   [
+    0.12,
+    72.71,
+    6.41
+   ]
+  ],
+  "centroid": [
+   -9.64,
+   66.97,
+   -6.27
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "temporal-pole-left",
+  "name": "temporal pole",
+  "side": "left",
+  "label": 34,
+  "faces": 10560,
+  "bbox": [
+   [
+    -46.39,
+    -0.0,
+    -47.88
+   ],
+   [
+    -3.29,
+    26.09,
+    -17.41
+   ]
+  ],
+  "centroid": [
+   -27.75,
+   11.93,
+   -35.61
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "transverse-temporal-cortex-left",
+  "name": "transverse temporal cortex",
+  "side": "left",
+  "label": 35,
+  "faces": 7840,
+  "bbox": [
+   [
+    -59.01,
+    -38.76,
+    -3.51
+   ],
+   [
+    -24.79,
+    -3.47,
+    18.35
+   ]
+  ],
+  "centroid": [
+   -43.21,
+   -21.82,
+   6.41
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "white-matter-right",
+  "name": "white matter",
+  "side": "right",
+  "label": 36,
+  "faces": 20000,
+  "bbox": [
+   [
+    -1.25,
+    -45.81,
+    -31.21
+   ],
+   [
+    47.39,
+    36.61,
+    31.06
+   ]
+  ],
+  "centroid": [
+   18.27,
+   -6.41,
+   3.16
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "banks-superior-temporal-sulcus-right",
+  "name": "Banks superior temporal sulcus",
+  "side": "right",
+  "label": 37,
+  "faces": 15510,
+  "bbox": [
+   [
+    27.73,
+    -55.0,
+    -11.0
+   ],
+   [
+    65.19,
+    -17.95,
+    26.56
+   ]
+  ],
+  "centroid": [
+   49.42,
+   -38.42,
+   6.4
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "caudal-anterior-cingulate-cortex-right",
+  "name": "caudal anterior cingulate cortex",
+  "side": "right",
+  "label": 38,
+  "faces": 10472,
+  "bbox": [
+   [
+    -1.16,
+    -0.0,
+    12.32
+   ],
+   [
+    19.04,
+    44.0,
+    46.0
+   ]
+  ],
+  "centroid": [
+   6.59,
+   20.88,
+   27.68
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "caudal-middle-frontal-gyrus-right",
+  "name": "caudal middle frontal gyrus",
+  "side": "right",
+  "label": 39,
+  "faces": 20000,
+  "bbox": [
+   [
+    16.07,
+    -10.99,
+    17.13
+   ],
+   [
+    56.91,
+    42.2,
+    69.3
+   ]
+  ],
+  "centroid": [
+   32.99,
+   12.79,
+   42.03
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "corpus-calosum-right",
+  "name": "corpus calosum",
+  "side": "right",
+  "label": 40,
+  "faces": 20000,
+  "bbox": [
+   [
+    -0.43,
+    -44.35,
+    -12.35
+   ],
+   [
+    22.24,
+    40.33,
+    32.65
+   ]
+  ],
+  "centroid": [
+   9.58,
+   -0.76,
+   16.62
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "cuneus-cortex-right",
+  "name": "cuneus cortex",
+  "side": "right",
+  "label": 41,
+  "faces": 17708,
+  "bbox": [
+   [
+    -0.2,
+    -98.56,
+    1.39
+   ],
+   [
+    26.0,
+    -43.53,
+    48.56
+   ]
+  ],
+  "centroid": [
+   10.08,
+   -80.19,
+   23.92
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "entorhinal-cortex-right",
+  "name": "entorhinal cortex",
+  "side": "right",
+  "label": 42,
+  "faces": 17644,
+  "bbox": [
+   [
+    -2.4,
+    -29.21,
+    -48.65
+   ],
+   [
+    36.09,
+    7.27,
+    -10.0
+   ]
+  ],
+  "centroid": [
+   15.12,
+   -8.43,
+   -31.76
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "fusiform-gyrus-right",
+  "name": "fusiform gyrus",
+  "side": "right",
+  "label": 43,
+  "faces": 20000,
+  "bbox": [
+   [
+    9.42,
+    -96.72,
+    -51.66
+   ],
+   [
+    57.76,
+    12.4,
+    6.57
+   ]
+  ],
+  "centroid": [
+   33.51,
+   -48.87,
+   -25.25
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-parietal-cortex-right",
+  "name": "inferior parietal cortex",
+  "side": "right",
+  "label": 44,
+  "faces": 20000,
+  "bbox": [
+   [
+    26.39,
+    -87.55,
+    0.37
+   ],
+   [
+    67.76,
+    -31.78,
+    62.15
+   ]
+  ],
+  "centroid": [
+   44.29,
+   -58.21,
+   30.62
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "inferior-temporal-gyrus-right",
+  "name": "inferior temporal gyrus",
+  "side": "right",
+  "label": 45,
+  "faces": 20000,
+  "bbox": [
+   [
+    30.45,
+    -69.3,
+    -49.32
+   ],
+   [
+    69.63,
+    15.34,
+    6.45
+   ]
+  ],
+  "centroid": [
+   50.34,
+   -30.25,
+   -26.31
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "isthmus-cingulate-cortex-right",
+  "name": "isthmus-cingulate cortex",
+  "side": "right",
+  "label": 46,
+  "faces": 20000,
+  "bbox": [
+   [
+    -4.44,
+    -59.68,
+    -16.16
+   ],
+   [
+    33.35,
+    21.62,
+    49.43
+   ]
+  ],
+  "centroid": [
+   9.84,
+   -34.89,
+   17.37
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-occipital-cortex-right",
+  "name": "lateral occipital cortex",
+  "side": "right",
+  "label": 47,
+  "faces": 20000,
+  "bbox": [
+   [
+    2.65,
+    -105.42,
+    -36.43
+   ],
+   [
+    58.72,
+    -40.66,
+    30.07
+   ]
+  ],
+  "centroid": [
+   30.08,
+   -85.13,
+   1.12
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lateral-orbitofrontal-cortex-right",
+  "name": "lateral orbitofrontal cortex",
+  "side": "right",
+  "label": 48,
+  "faces": 20000,
+  "bbox": [
+   [
+    4.18,
+    5.16,
+    -28.91
+   ],
+   [
+    45.9,
+    68.81,
+    13.52
+   ]
+  ],
+  "centroid": [
+   23.29,
+   33.51,
+   -13.5
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "lingual-gyrus-right",
+  "name": "lingual gyrus",
+  "side": "right",
+  "label": 49,
+  "faces": 20000,
+  "bbox": [
+   [
+    -2.46,
+    -98.48,
+    -34.72
+   ],
+   [
+    35.27,
+    -33.1,
+    13.38
+   ]
+  ],
+  "centroid": [
+   13.08,
+   -65.76,
+   -11.66
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "medial-orbitofrontal-cortex-right",
+  "name": "medial orbitofrontal cortex",
+  "side": "right",
+  "label": 50,
+  "faces": 18576,
+  "bbox": [
+   [
+    -2.67,
+    -0.42,
+    -34.83
+   ],
+   [
+    21.34,
+    64.5,
+    3.38
+   ]
+  ],
+  "centroid": [
+   7.24,
+   35.19,
+   -14.74
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "middle-temporal-gyrus-right",
+  "name": "middle temporal gyrus",
+  "side": "right",
+  "label": 51,
+  "faces": 20000,
+  "bbox": [
+   [
+    28.29,
+    -71.64,
+    -46.15
+   ],
+   [
+    72.35,
+    20.74,
+    18.35
+   ]
+  ],
+  "centroid": [
+   56.23,
+   -26.99,
+   -11.64
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "parahippocampal-gyrus-right",
+  "name": "parahippocampal gyrus",
+  "side": "right",
+  "label": 52,
+  "faces": 20000,
+  "bbox": [
+   [
+    -0.52,
+    -46.7,
+    -48.48
+   ],
+   [
+    40.64,
+    -8.75,
+    8.31
+   ]
+  ],
+  "centroid": [
+   17.66,
+   -28.59,
+   -18.54
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "paracentral-lobule-right",
+  "name": "paracentral lobule",
+  "side": "right",
+  "label": 53,
+  "faces": 20000,
+  "bbox": [
+   [
+    -0.65,
+    -49.44,
+    25.29
+   ],
+   [
+    26.16,
+    -5.62,
+    78.54
+   ]
+  ],
+  "centroid": [
+   11.02,
+   -27.11,
+   54.79
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "pars-opercularis-right",
+  "name": "pars opercularis",
+  "side": "right",
+  "label": 54,
+  "faces": 15852,
+  "bbox": [
+   [
+    18.44,
+    -2.0,
+    -13.0
+   ],
+   [
+    64.09,
+    28.2,
+    37.48
+   ]
+  ],
+  "centroid": [
+   46.09,
+   15.16,
+   14.67
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "pars-orbitalis-right",
+  "name": "pars orbitalis",
+  "side": "right",
+  "label": 55,
+  "faces": 12494,
+  "bbox": [
+   [
+    25.44,
+    19.55,
+    -23.0
+   ],
+   [
+    55.67,
+    65.86,
+    8.34
+   ]
+  ],
+  "centroid": [
+   41.84,
+   44.89,
+   -9.08
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "pars-triangularis-right",
+  "name": "pars triangularis",
+  "side": "right",
+  "label": 56,
+  "faces": 16166,
+  "bbox": [
+   [
+    16.0,
+    15.84,
+    -13.0
+   ],
+   [
+    62.28,
+    48.37,
+    34.23
+   ]
+  ],
+  "centroid": [
+   44.82,
+   29.73,
+   7.91
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "pericalcarine-cortex-right",
+  "name": "pericalcarine cortex",
+  "side": "right",
+  "label": 57,
+  "faces": 17038,
+  "bbox": [
+   [
+    0.49,
+    -100.0,
+    -10.0
+   ],
+   [
+    35.4,
+    -51.09,
+    22.21
+   ]
+  ],
+  "centroid": [
+   15.36,
+   -77.88,
+   7.21
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "postcentral-gyrus-right",
+  "name": "postcentral gyrus",
+  "side": "right",
+  "label": 58,
+  "faces": 20000,
+  "bbox": [
+   [
+    1.13,
+    -46.42,
+    5.56
+   ],
+   [
+    69.5,
+    2.7,
+    81.21
+   ]
+  ],
+  "centroid": [
+   42.09,
+   -21.04,
+   45.05
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "posterior-cingulate-cortex-right",
+  "name": "posterior-cingulate cortex",
+  "side": "right",
+  "label": 59,
+  "faces": 16312,
+  "bbox": [
+   [
+    -1.47,
+    -37.43,
+    23.26
+   ],
+   [
+    23.0,
+    8.0,
+    62.0
+   ]
+  ],
+  "centroid": [
+   10.11,
+   -12.97,
+   38.93
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precentral-gyrus-right",
+  "name": "precentral gyrus",
+  "side": "right",
+  "label": 60,
+  "faces": 20000,
+  "bbox": [
+   [
+    3.55,
+    -36.33,
+    -2.28
+   ],
+   [
+    66.46,
+    15.95,
+    79.95
+   ]
+  ],
+  "centroid": [
+   36.58,
+   -8.51,
+   43.03
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "precuneus-cortex-right",
+  "name": "precuneus cortex",
+  "side": "right",
+  "label": 61,
+  "faces": 20000,
+  "bbox": [
+   [
+    -1.22,
+    -85.36,
+    -18.29
+   ],
+   [
+    35.49,
+    16.48,
+    74.45
+   ]
+  ],
+  "centroid": [
+   14.69,
+   -48.09,
+   28.48
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "rostral-anterior-cingulate-cortex-right",
+  "name": "rostral anterior cingulate cortex",
+  "side": "right",
+  "label": 62,
+  "faces": 10250,
+  "bbox": [
+   [
+    -1.48,
+    17.63,
+    -11.22
+   ],
+   [
+    23.02,
+    49.83,
+    19.57
+   ]
+  ],
+  "centroid": [
+   8.79,
+   35.04,
+   2.77
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "rostral-middle-frontal-gyrus-right",
+  "name": "rostral middle frontal gyrus",
+  "side": "right",
+  "label": 63,
+  "faces": 20000,
+  "bbox": [
+   [
+    10.3,
+    19.34,
+    -14.53
+   ],
+   [
+    56.21,
+    72.08,
+    47.41
+   ]
+  ],
+  "centroid": [
+   31.67,
+   44.18,
+   18.03
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-frontal-gyrus-right",
+  "name": "superior frontal gyrus",
+  "side": "right",
+  "label": 64,
+  "faces": 20000,
+  "bbox": [
+   [
+    -0.72,
+    -15.76,
+    -7.27
+   ],
+   [
+    32.43,
+    73.5,
+    77.76
+   ]
+  ],
+  "centroid": [
+   13.69,
+   30.81,
+   37.76
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-parietal-cortex-right",
+  "name": "superior parietal cortex",
+  "side": "right",
+  "label": 65,
+  "faces": 20000,
+  "bbox": [
+   [
+    0.75,
+    -93.72,
+    10.6
+   ],
+   [
+    48.15,
+    -18.69,
+    79.87
+   ]
+  ],
+  "centroid": [
+   24.84,
+   -59.93,
+   46.67
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "superior-temporal-gyrus-right",
+  "name": "superior temporal gyrus",
+  "side": "right",
+  "label": 66,
+  "faces": 20000,
+  "bbox": [
+   [
+    27.88,
+    -51.57,
+    -41.31
+   ],
+   [
+    71.5,
+    28.27,
+    26.39
+   ]
+  ],
+  "centroid": [
+   52.64,
+   -11.11,
+   -3.93
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "supramarginal-gyrus-right",
+  "name": "supramarginal gyrus",
+  "side": "right",
+  "label": 67,
+  "faces": 20000,
+  "bbox": [
+   [
+    17.25,
+    -48.96,
+    7.58
+   ],
+   [
+    69.5,
+    -10.16,
+    60.34
+   ]
+  ],
+  "centroid": [
+   48.9,
+   -30.97,
+   33.19
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "frontal-pole-right",
+  "name": "frontal pole",
+  "side": "right",
+  "label": 68,
+  "faces": 5778,
+  "bbox": [
+   [
+    -0.11,
+    56.55,
+    -26.82
+   ],
+   [
+    19.68,
+    72.21,
+    1.34
+   ]
+  ],
+  "centroid": [
+   8.41,
+   64.74,
+   -11.37
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "temporal-pole-right",
+  "name": "temporal pole",
+  "side": "right",
+  "label": 69,
+  "faces": 10514,
+  "bbox": [
+   [
+    3.0,
+    0.35,
+    -48.82
+   ],
+   [
+    44.67,
+    27.72,
+    -16.17
+   ]
+  ],
+  "centroid": [
+   27.54,
+   13.08,
+   -34.64
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ },
+ {
+  "id": "transverse-temporal-cortex-right",
+  "name": "transverse temporal cortex",
+  "side": "right",
+  "label": 70,
+  "faces": 6092,
+  "bbox": [
+   [
+    28.31,
+    -32.75,
+    -1.06
+   ],
+   [
+    58.5,
+    -1.75,
+    18.58
+   ]
+  ],
+  "centroid": [
+   44.87,
+   -18.84,
+   7.53
+  ],
+  "source": "Desikan-Killiany atlas (FreeSurfer, via neuroparc) · FreeSurfer licence"
+ }
+]

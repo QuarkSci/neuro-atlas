@@ -1,0 +1,1202 @@
+[
+ {
+  "id": "middle-cerebellar-peduncle-midline",
+  "name": "Middle Cerebellar Peduncle",
+  "side": "midline",
+  "label": 1,
+  "faces": 17192,
+  "bbox": [
+   [
+    -34.3,
+    -66.01,
+    -43.5
+   ],
+   [
+    35.28,
+    -14.54,
+    -24.68
+   ]
+  ],
+  "centroid": [
+   0.48,
+   -38.31,
+   -35.2
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "pontine-crossing-tract-midline",
+  "name": "Pontine Crossing Tract",
+  "side": "midline",
+  "label": 2,
+  "faces": 2520,
+  "bbox": [
+   [
+    -10.06,
+    -33.41,
+    -39.02
+   ],
+   [
+    11.03,
+    -21.1,
+    -22.71
+   ]
+  ],
+  "centroid": [
+   0.48,
+   -29.28,
+   -30.81
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "corpus-callosum-genu-midline",
+  "name": "Corpus Callosum Genu",
+  "side": "midline",
+  "label": 3,
+  "faces": 10904,
+  "bbox": [
+   [
+    -18.94,
+    15.03,
+    -8.21
+   ],
+   [
+    20.01,
+    39.32,
+    27.16
+   ]
+  ],
+  "centroid": [
+   0.29,
+   26.24,
+   7.62
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "body-of-corpus-callosum-midline",
+  "name": "Body of corpus callosum",
+  "side": "midline",
+  "label": 4,
+  "faces": 17012,
+  "bbox": [
+   [
+    -18.63,
+    -30.5,
+    12.17
+   ],
+   [
+    19.68,
+    19.5,
+    39.54
+   ]
+  ],
+  "centroid": [
+   0.55,
+   -5.63,
+   27.31
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "corpus-callosum-splenium-midline",
+  "name": "Corpus Callosum Splenium",
+  "side": "midline",
+  "label": 5,
+  "faces": 13096,
+  "bbox": [
+   [
+    -26.16,
+    -67.47,
+    6.5
+   ],
+   [
+    29.69,
+    -30.5,
+    33.23
+   ]
+  ],
+  "centroid": [
+   0.69,
+   -43.17,
+   17.75
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "fornix-column-body-midline",
+  "name": "Fornix Column + Body",
+  "side": "midline",
+  "label": 6,
+  "faces": 1650,
+  "bbox": [
+   [
+    -1.84,
+    -20.14,
+    1.35
+   ],
+   [
+    2.84,
+    3.66,
+    19.93
+   ]
+  ],
+  "centroid": [
+   0.52,
+   -6.29,
+   12.93
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "corticospinal-tract-right",
+  "name": "Corticospinal Tract",
+  "side": "right",
+  "label": 7,
+  "faces": 2504,
+  "bbox": [
+   [
+    1.93,
+    -36.65,
+    -54.9
+   ],
+   [
+    13.07,
+    -16.51,
+    -21.55
+   ]
+  ],
+  "centroid": [
+   6.89,
+   -25.38,
+   -33.7
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "corticospinal-tract-left",
+  "name": "Corticospinal Tract",
+  "side": "left",
+  "label": 8,
+  "faces": 2528,
+  "bbox": [
+   [
+    -12.08,
+    -36.69,
+    -54.99
+   ],
+   [
+    -0.2,
+    -17.13,
+    -21.53
+   ]
+  ],
+  "centroid": [
+   -5.83,
+   -25.51,
+   -33.91
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "medial-lemniscus-right",
+  "name": "Medial Lemniscus",
+  "side": "right",
+  "label": 9,
+  "faces": 1316,
+  "bbox": [
+   [
+    1.68,
+    -40.37,
+    -44.46
+   ],
+   [
+    9.99,
+    -32.35,
+    -24.75
+   ]
+  ],
+  "centroid": [
+   5.61,
+   -36.63,
+   -33.39
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "medial-lemniscus-left",
+  "name": "Medial Lemniscus",
+  "side": "left",
+  "label": 10,
+  "faces": 1344,
+  "bbox": [
+   [
+    -8.96,
+    -40.39,
+    -44.36
+   ],
+   [
+    -0.07,
+    -32.37,
+    -24.76
+   ]
+  ],
+  "centroid": [
+   -4.55,
+   -36.63,
+   -33.41
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "inferior-cerebellar-peduncle-right",
+  "name": "Inferior Cerebellar Peduncle",
+  "side": "right",
+  "label": 11,
+  "faces": 2168,
+  "bbox": [
+   [
+    3.94,
+    -54.43,
+    -55.24
+   ],
+   [
+    13.89,
+    -38.89,
+    -20.79
+   ]
+  ],
+  "centroid": [
+   9.42,
+   -44.45,
+   -37.16
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "inferior-cerebellar-peduncle-left",
+  "name": "Inferior Cerebellar Peduncle",
+  "side": "left",
+  "label": 12,
+  "faces": 2168,
+  "bbox": [
+   [
+    -12.92,
+    -54.4,
+    -55.22
+   ],
+   [
+    -2.95,
+    -38.87,
+    -20.84
+   ]
+  ],
+  "centroid": [
+   -8.42,
+   -44.43,
+   -37.23
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "superior-cerebellar-peduncle-right",
+  "name": "Superior Cerebellar Peduncle",
+  "side": "right",
+  "label": 13,
+  "faces": 2064,
+  "bbox": [
+   [
+    3.03,
+    -53.96,
+    -34.02
+   ],
+   [
+    10.2,
+    -28.19,
+    -15.2
+   ]
+  ],
+  "centroid": [
+   6.51,
+   -41.73,
+   -24.67
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "superior-cerebellar-peduncle-left",
+  "name": "Superior Cerebellar Peduncle",
+  "side": "left",
+  "label": 14,
+  "faces": 2064,
+  "bbox": [
+   [
+    -9.19,
+    -53.96,
+    -34.0
+   ],
+   [
+    -2.04,
+    -28.19,
+    -15.21
+   ]
+  ],
+  "centroid": [
+   -5.51,
+   -41.72,
+   -24.66
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "cerebral-peduncle-right",
+  "name": "Cerebral Peduncle",
+  "side": "right",
+  "label": 15,
+  "faces": 3328,
+  "bbox": [
+   [
+    4.9,
+    -30.46,
+    -21.47
+   ],
+   [
+    22.6,
+    -6.33,
+    -4.52
+   ]
+  ],
+  "centroid": [
+   13.13,
+   -18.36,
+   -12.42
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "cerebral-peduncle-left",
+  "name": "Cerebral Peduncle",
+  "side": "left",
+  "label": 16,
+  "faces": 3328,
+  "bbox": [
+   [
+    -21.6,
+    -30.44,
+    -21.49
+   ],
+   [
+    -3.92,
+    -6.34,
+    -4.51
+   ]
+  ],
+  "centroid": [
+   -12.14,
+   -18.35,
+   -12.4
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "internal-capsule-anterior-limb-right",
+  "name": "Internal Capsule Anterior Limb",
+  "side": "right",
+  "label": 17,
+  "faces": 4640,
+  "bbox": [
+   [
+    8.97,
+    -7.45,
+    -4.84
+   ],
+   [
+    25.12,
+    22.8,
+    18.48
+   ]
+  ],
+  "centroid": [
+   18.15,
+   7.8,
+   8.03
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "internal-capsule-anterior-limb-left",
+  "name": "Internal Capsule Anterior Limb",
+  "side": "left",
+  "label": 18,
+  "faces": 4638,
+  "bbox": [
+   [
+    -24.12,
+    -7.52,
+    -4.83
+   ],
+   [
+    -8.28,
+    22.81,
+    18.47
+   ]
+  ],
+  "centroid": [
+   -17.24,
+   7.74,
+   8.04
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "internal-capsule-posterior-limb-right",
+  "name": "Internal Capsule Posterior Limb",
+  "side": "right",
+  "label": 19,
+  "faces": 4834,
+  "bbox": [
+   [
+    8.95,
+    -26.96,
+    -4.39
+   ],
+   [
+    28.49,
+    -1.09,
+    18.48
+   ]
+  ],
+  "centroid": [
+   20.2,
+   -13.01,
+   7.55
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "internal-capsule-posterior-limb-left",
+  "name": "Internal Capsule Posterior Limb",
+  "side": "left",
+  "label": 20,
+  "faces": 4826,
+  "bbox": [
+   [
+    -27.49,
+    -26.98,
+    -4.47
+   ],
+   [
+    -7.95,
+    -1.11,
+    18.49
+   ]
+  ],
+  "centroid": [
+   -19.19,
+   -13.02,
+   7.51
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "internal-capsule-retrolenticular-part-right",
+  "name": "Internal Capsule Retrolenticular Part",
+  "side": "right",
+  "label": 21,
+  "faces": 4062,
+  "bbox": [
+   [
+    23.12,
+    -38.4,
+    -3.38
+   ],
+   [
+    41.61,
+    -18.02,
+    18.36
+   ]
+  ],
+  "centroid": [
+   31.57,
+   -29.35,
+   6.05
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "internal-capsule-retrolenticular-part-left",
+  "name": "Internal Capsule Retrolenticular Part",
+  "side": "left",
+  "label": 22,
+  "faces": 4002,
+  "bbox": [
+   [
+    -40.61,
+    -38.37,
+    -3.46
+   ],
+   [
+    -22.12,
+    -18.02,
+    18.36
+   ]
+  ],
+  "centroid": [
+   -30.26,
+   -29.42,
+   5.77
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "anterior-corona-radiata-right",
+  "name": "Anterior Corona Radiata",
+  "side": "right",
+  "label": 23,
+  "faces": 8052,
+  "bbox": [
+   [
+    11.14,
+    10.72,
+    -13.18
+   ],
+   [
+    28.47,
+    43.44,
+    34.66
+   ]
+  ],
+  "centroid": [
+   21.22,
+   27.54,
+   9.73
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "anterior-corona-radiata-left",
+  "name": "Anterior Corona Radiata",
+  "side": "left",
+  "label": 24,
+  "faces": 8044,
+  "bbox": [
+   [
+    -27.47,
+    10.7,
+    -13.24
+   ],
+   [
+    -10.15,
+    43.44,
+    34.62
+   ]
+  ],
+  "centroid": [
+   -20.23,
+   27.54,
+   9.7
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "superior-corona-radiata-right",
+  "name": "Superior Corona Radiata",
+  "side": "right",
+  "label": 25,
+  "faces": 8024,
+  "bbox": [
+   [
+    15.13,
+    -31.62,
+    18.5
+   ],
+   [
+    32.46,
+    16.48,
+    43.57
+   ]
+  ],
+  "centroid": [
+   23.44,
+   -7.19,
+   30.46
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "superior-corona-radiata-left",
+  "name": "Superior Corona Radiata",
+  "side": "left",
+  "label": 26,
+  "faces": 8020,
+  "bbox": [
+   [
+    -31.46,
+    -30.69,
+    18.5
+   ],
+   [
+    -14.16,
+    16.42,
+    43.58
+   ]
+  ],
+  "centroid": [
+   -22.46,
+   -7.13,
+   30.43
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "posterior-corona-radiata-right",
+  "name": "Posterior Corona Radiata",
+  "side": "right",
+  "label": 27,
+  "faces": 5838,
+  "bbox": [
+   [
+    17.32,
+    -63.59,
+    18.56
+   ],
+   [
+    34.11,
+    -22.95,
+    40.24
+   ]
+  ],
+  "centroid": [
+   25.59,
+   -39.15,
+   27.45
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "posterior-corona-radiata-left",
+  "name": "Posterior Corona Radiata",
+  "side": "left",
+  "label": 28,
+  "faces": 5764,
+  "bbox": [
+   [
+    -33.05,
+    -63.61,
+    18.57
+   ],
+   [
+    -16.63,
+    -22.95,
+    40.24
+   ]
+  ],
+  "centroid": [
+   -24.52,
+   -39.11,
+   27.52
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "posterior-thalamic-optic-radiation-right",
+  "name": "Posterior Thalamic + Optic Radiation",
+  "side": "right",
+  "label": 29,
+  "faces": 5328,
+  "bbox": [
+   [
+    26.64,
+    -72.67,
+    -3.46
+   ],
+   [
+    41.25,
+    -38.53,
+    18.47
+   ]
+  ],
+  "centroid": [
+   33.9,
+   -54.05,
+   7.34
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "posterior-thalamic-optic-radiation-left",
+  "name": "Posterior Thalamic + Optic Radiation",
+  "side": "left",
+  "label": 30,
+  "faces": 5484,
+  "bbox": [
+   [
+    -40.31,
+    -72.76,
+    -3.41
+   ],
+   [
+    -25.07,
+    -38.58,
+    18.45
+   ]
+  ],
+  "centroid": [
+   -32.57,
+   -54.16,
+   7.35
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "sagittal-stratum-right",
+  "name": "Sagittal Stratum",
+  "side": "right",
+  "label": 31,
+  "faces": 3860,
+  "bbox": [
+   [
+    33.43,
+    -57.54,
+    -18.48
+   ],
+   [
+    45.82,
+    -9.49,
+    -3.57
+   ]
+  ],
+  "centroid": [
+   39.51,
+   -31.46,
+   -9.37
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "sagittal-stratum-left",
+  "name": "Sagittal Stratum",
+  "side": "left",
+  "label": 32,
+  "faces": 3876,
+  "bbox": [
+   [
+    -44.82,
+    -57.59,
+    -18.48
+   ],
+   [
+    -31.91,
+    -9.49,
+    -3.55
+   ]
+  ],
+  "centroid": [
+   -38.48,
+   -31.29,
+   -9.36
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "external-capsule-right",
+  "name": "External Capsule",
+  "side": "right",
+  "label": 33,
+  "faces": 8740,
+  "bbox": [
+   [
+    15.87,
+    -22.48,
+    -13.31
+   ],
+   [
+    37.06,
+    21.98,
+    18.27
+   ]
+  ],
+  "centroid": [
+   30.31,
+   0.17,
+   1.82
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "external-capsule-left",
+  "name": "External Capsule",
+  "side": "left",
+  "label": 34,
+  "faces": 8716,
+  "bbox": [
+   [
+    -36.07,
+    -22.4,
+    -13.23
+   ],
+   [
+    -15.42,
+    21.99,
+    18.3
+   ]
+  ],
+  "centroid": [
+   -29.28,
+   0.21,
+   1.84
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "cingulum-cingulate-gyrus-right",
+  "name": "Cingulum (Cingulate Gyrus)",
+  "side": "right",
+  "label": 35,
+  "faces": 5308,
+  "bbox": [
+   [
+    4.62,
+    -50.16,
+    9.3
+   ],
+   [
+    12.06,
+    34.86,
+    39.16
+   ]
+  ],
+  "centroid": [
+   8.25,
+   -11.3,
+   29.38
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "cingulum-cingulate-gyrus-left",
+  "name": "Cingulum (Cingulate Gyrus)",
+  "side": "left",
+  "label": 36,
+  "faces": 5768,
+  "bbox": [
+   [
+    -11.35,
+    -52.76,
+    10.14
+   ],
+   [
+    -3.63,
+    35.54,
+    39.26
+   ]
+  ],
+  "centroid": [
+   -7.34,
+   -10.57,
+   29.15
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "cingulum-hippocampus-right",
+  "name": "Cingulum (Hippocampus)",
+  "side": "right",
+  "label": 37,
+  "faces": 2958,
+  "bbox": [
+   [
+    9.29,
+    -47.93,
+    -27.41
+   ],
+   [
+    29.73,
+    -13.66,
+    9.03
+   ]
+  ],
+  "centroid": [
+   21.58,
+   -30.18,
+   -12.86
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "cingulum-hippocampus-left",
+  "name": "Cingulum (Hippocampus)",
+  "side": "left",
+  "label": 38,
+  "faces": 2856,
+  "bbox": [
+   [
+    -26.81,
+    -49.86,
+    -27.3
+   ],
+   [
+    -8.66,
+    -16.29,
+    8.85
+   ]
+  ],
+  "centroid": [
+   -19.29,
+   -32.75,
+   -11.9
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "fornix-cres-stria-terminalis-right",
+  "name": "Fornix (Cres) + Stria Terminalis",
+  "side": "right",
+  "label": 39,
+  "faces": 2524,
+  "bbox": [
+   [
+    20.77,
+    -35.34,
+    -19.18
+   ],
+   [
+    35.92,
+    -6.41,
+    8.98
+   ]
+  ],
+  "centroid": [
+   29.12,
+   -23.69,
+   -6.29
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "fornix-cres-stria-terminalis-left",
+  "name": "Fornix (Cres) + Stria Terminalis",
+  "side": "left",
+  "label": 40,
+  "faces": 2504,
+  "bbox": [
+   [
+    -34.94,
+    -35.26,
+    -19.15
+   ],
+   [
+    -20.27,
+    -6.43,
+    8.94
+   ]
+  ],
+  "centroid": [
+   -28.21,
+   -23.61,
+   -6.41
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "superior-longitudinal-fasciculus-right",
+  "name": "Superior Longitudinal Fasciculus",
+  "side": "right",
+  "label": 41,
+  "faces": 9946,
+  "bbox": [
+   [
+    27.3,
+    -59.22,
+    2.09
+   ],
+   [
+    47.63,
+    10.84,
+    40.96
+   ]
+  ],
+  "centroid": [
+   36.37,
+   -26.76,
+   24.76
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "superior-longitudinal-fasciculus-left",
+  "name": "Superior Longitudinal Fasciculus",
+  "side": "left",
+  "label": 42,
+  "faces": 9958,
+  "bbox": [
+   [
+    -46.57,
+    -59.17,
+    2.1
+   ],
+   [
+    -26.29,
+    10.8,
+    40.96
+   ]
+  ],
+  "centroid": [
+   -35.37,
+   -26.74,
+   24.75
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "superior-fronto-occipital-fasciculus-right",
+  "name": "Superior Fronto-occipital Fasciculus",
+  "side": "right",
+  "label": 43,
+  "faces": 1120,
+  "bbox": [
+   [
+    18.43,
+    -10.58,
+    18.68
+   ],
+   [
+    23.36,
+    16.1,
+    24.11
+   ]
+  ],
+  "centroid": [
+   21.2,
+   2.03,
+   21.11
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "superior-fronto-occipital-fasciculus-left",
+  "name": "Superior Fronto-occipital Fasciculus",
+  "side": "left",
+  "label": 44,
+  "faces": 1120,
+  "bbox": [
+   [
+    -22.36,
+    -10.6,
+    18.73
+   ],
+   [
+    -17.39,
+    16.1,
+    24.11
+   ]
+  ],
+  "centroid": [
+   -20.2,
+   2.05,
+   21.12
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "uncinate-fasciculus-right",
+  "name": "Uncinate Fasciculus",
+  "side": "right",
+  "label": 45,
+  "faces": 852,
+  "bbox": [
+   [
+    30.32,
+    -3.54,
+    -21.17
+   ],
+   [
+    37.97,
+    6.6,
+    -11.62
+   ]
+  ],
+  "centroid": [
+   33.96,
+   1.18,
+   -15.73
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "uncinate-fasciculus-left",
+  "name": "Uncinate Fasciculus",
+  "side": "left",
+  "label": 46,
+  "faces": 892,
+  "bbox": [
+   [
+    -37.14,
+    -5.54,
+    -21.29
+   ],
+   [
+    -29.2,
+    3.44,
+    -11.57
+   ]
+  ],
+  "centroid": [
+   -33.46,
+   -1.09,
+   -15.87
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "tapetum-right",
+  "name": "Tapetum",
+  "side": "right",
+  "label": 47,
+  "faces": 1476,
+  "bbox": [
+   [
+    23.39,
+    -51.89,
+    6.94
+   ],
+   [
+    33.41,
+    -35.43,
+    22.24
+   ]
+  ],
+  "centroid": [
+   29.38,
+   -44.44,
+   14.62
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ },
+ {
+  "id": "tapetum-left",
+  "name": "Tapetum",
+  "side": "left",
+  "label": 48,
+  "faces": 1474,
+  "bbox": [
+   [
+    -31.25,
+    -53.73,
+    6.93
+   ],
+   [
+    -22.04,
+    -39.61,
+    22.19
+   ]
+  ],
+  "centroid": [
+   -27.03,
+   -46.58,
+   14.34
+  ],
+  "source": "JHU ICBM-DTI-81 white-matter labels (via neuroparc) · FSL licence, non-commercial"
+ }
+]

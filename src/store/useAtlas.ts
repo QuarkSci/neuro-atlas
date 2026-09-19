@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import type { LayerId, SystemId } from '@/data/types'
-import { ALL_LAYER_IDS, ALL_SYSTEM_IDS } from '@/data'
+import { ALL_SYSTEM_IDS, LAYER_BY_ID } from '@/data'
 
 export type Lang = 'en' | 'uz'
 export type View = 'three-quarter' | 'lateral' | 'front' | 'top'
@@ -77,9 +77,13 @@ const initialLang = (): Lang => {
   return navigator.language?.toLowerCase().startsWith('uz') ? 'uz' : 'en'
 }
 
+/** The skull and dura wrap everything else, so they start hidden. */
+const DEFAULT_VISIBLE = ALL_SYSTEM_IDS.filter((id) => id !== 'skull' && id !== 'meninges')
+
 const sceneDefaults = {
-  visible: ALL_SYSTEM_IDS,
-  layers: ALL_LAYER_IDS,
+  visible: DEFAULT_VISIBLE,
+  // Gross anatomy only; parcellations tile the same cortex and are opted into.
+  layers: ['gross'] as LayerId[],
   selected: [] as string[],
   focus: null as Focus | null,
   isolate: false,
@@ -120,7 +124,11 @@ export const useAtlas = create<AtlasState>((set) => ({
   showOnly: (ids) => set({ visible: ids, selected: [], focus: null, isolate: false, inspectorOpen: false }),
   toggleLayer: (id) =>
     set((s) => ({
-      layers: s.layers.includes(id) ? s.layers.filter((x) => x !== id) : [...s.layers, id],
+      // Cortical parcellations tile the same surface, so switching one on
+      // replaces whichever other parcellation was showing.
+      layers: s.layers.includes(id)
+        ? s.layers.filter((x) => x !== id)
+        : [...s.layers.filter((x) => !(LAYER_BY_ID.get(id)?.parcellation && LAYER_BY_ID.get(x)?.parcellation)), id],
       selected: [],
       focus: null,
       isolate: false,

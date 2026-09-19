@@ -4,7 +4,7 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-09-19 (2-bosqich: ilova skeleti ishlaydi).
+> Oxirgi yangilanish: 2026-09-20 (3-bosqich: to'liq import, 1571 qism).
 
 ## 1. Loyiha nima
 
@@ -85,10 +85,43 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     bo'lsa hamon 3017 ni o'qiydi — bunda `npm run dev` fonda ishga tushirib
     `navigate` bilan ochish kerak. Brauzer pane screenshot'i ba'zan bir
     qadam kechikadi — `wait` qo'shib qayta oling.
-- ⬜ 3-bosqich: to'liq import — KEYINGI QADAM (qolgan BodyParts3D bosh
-  qismlari: tomirlar, bosh nervlari, meninges, bosh suyagi; Brodmann; DK/
-  Destrieux; Glasser; traktlar; performance).
-- ⬜ 4–7.
+- ✅ Chuqurlik (peel) rejimi (2026-09-19): pastki tablar Tarqatish/Chuqurlik,
+  `DEPTH_LEVELS` qobiqlari (`data/index.ts`), har qobiq bir qadamda
+  shaffoflashib yo'qoladi, damp tugagach kamera qayta kadrlanadi.
+- ✅ 3-bosqich: to'liq import (2026-09-20) — 1571 qism, 7 qatlam:
+  - gross 355 (BodyParts3D: miya + tomirlar 178 + bosh nervlari 29 +
+    bosh suyagi 22 + pardalar 4 + gipotalamus yadrolari, qizil yadro,
+    substantia nigra, subtalamik yadro…). `pipeline/bp3d_phase3.txt` —
+    tanlov manifest `fma_id` oilalari + nom regex bilan (`bp3d_to_glb.py`
+    bir nomli segmentlarni birlashtiradi — tomirlar 5–20 fayl; ko'zguli
+    juftlik bo'lsa chap/o'ng; MAX_FACES 24000 decimatsiya,
+    fast-simplification).
+  - julich 508, brodmann 82, desikan 70, destrieux 148, glasser 360,
+    jhu 48 — `pipeline/volume_to_glb.py <atlas>` neuroparc (neurodata,
+    MNI152NLin6 1 mm) NIfTI'laridan; "simmetrik" atlaslar (Brodmann,
+    Glasser, Destrieux) yarim sharlarni bir label bilan beradi — x<0
+    bo'yicha chap/o'ngga bo'linadi. Fayllar `data/raw/neuroparc/`.
+  - Qatlamlar **talab bo'yicha yuklanadi** (`SceneView.tsx` `loadLayer`,
+    `BrainScene.addGeometries`): boshida faqat gross (38 MB), qatlam
+    yoqilganda yoki undagi qism tanlanganda qolgani. `last = null`
+    qayta-visibility uchun; `framedOnce` bayrog'i kamerani qayta
+    kadrlashdan saqlaydi.
+  - Po'stloq parcellation'lari (`Layer.parcellation`) o'zaro istisno
+    (`toggleLayer`), yoqilganda gross po'stloq (`GROSS_CORTEX_IDS`)
+    yashiriladi — parcellation po'stloq o'rnini bosadi.
+  - Parcellation maydonlari ranglari golden-ratio hue tarqalishi bilan
+    (`materials.ts`), qatlam rangi atrofida; `LAYER_COLORS` UI swatch'lar.
+  - Kamera `modelBox` faqat miya tizimlaridan (`BRAIN_SYSTEMS`) — jugular
+    vena bo'yingacha tushadi, aks holda miya kichrayib qolardi. Bosh
+    suyagi va pardalar sukut bo'yicha yashirin (`DEFAULT_VISIBLE`).
+  - `scripts/shot.mjs` port 3019, `na:lang`. Brauzer pane'da foydalanuvchi
+    ishlayotgan bo'lsa headless screenshot ishlating.
+- ⬜ 4-bosqich: kesim (3 tekislik + MNI koordinata) — parcellation
+  almashtirish 3-bosqichda qilindi.
+- ⬜ 5-bosqich: kontent — KEYINGI QADAM (foydalanuvchi so'radi: har bir
+  qismning vazifasi, kichik kurs talabalari tushunadigan, aniq manbaga
+  tayangan).
+- ⬜ 6–7.
 
 ## 4. Ma'lum xatolar tarixi
 

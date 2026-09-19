@@ -29,7 +29,8 @@ yuklab olishda qayta tekshiriladi.
 | **Gross anatomiya** (gyrus/sulcus, yadrolar, miya ustuni, miyacha, qorinchalar, bosh nervlar, tomirlar, sinuslar, meninges, bosh suyagi) | BodyParts3D / Anatomography 4.3 (DBCLS, Yaponiya), OBJ, FMA identifikatorlari bilan | **CC BY-SA 2.1 JP** | ✅ mos | 3210 mesh (butun tana) → nerv tizimi + bosh ~600 |
 | Gross anatomiya — tozalangan/yaxshilangan versiya | Z-Anatomy (BodyParts3D'dan olingan, Blender) | **CC BY-SA 4.0** | ✅ mos — birinchi navbatda SHU (sifatliroq) | — |
 | **Brodmann** | Talairach atlas "ba" darajasi (nilearn `fetch_atlas_talairach`) — Talairach fazosi, MNI'ga transformatsiya kerak | ochiq (Talairach Daemon) `?` | ⚠ tekshirish | 52×2 |
-| Brodmann (alternativ) | Julich-Brain'dan Brodmann'ga mos sitoarxitektonik hududlar (BA1,2,3a,3b,4a,4p,6,17,18,44,45…) | CC BY-NC-SA 4.0 | ✅ mos | — |
+| ~~Brodmann (alternativ)~~ | (kerak bo'lmadi — neuroparc Brodmann ishlatildi) |
+| Brodmann (alternativ, eski) | Julich-Brain'dan Brodmann'ga mos sitoarxitektonik hududlar (BA1,2,3a,3b,4a,4p,6,17,18,44,45…) | CC BY-NC-SA 4.0 | ✅ mos | — |
 | **Desikan-Killiany / Destrieux** | FreeSurfer `fsaverage` aparc — FreeSurfer litsenziyasi ro'yxatdan o'tishni talab qiladi; MNI'dagi qayta tarqatilgan nusxa: G-Node "FreeSurfer parcellations in MNI space" | FS: registratsiya; G-Node `?` | ⚠ tekshirish | 68 / 148 |
 | **Glasser HCP-MMP1** | BALSA / Kevin Weiner MNI versiyasi | WU-Minn HCP Open Access Data Use Terms — qayta tarqatish shu shartlar ostida mumkin, attribution shart | ✅ mos (shartlar ATTRIBUTION'da) | 360 |
 | **Julich-Brain v3.x** (sitoarxitektonika, ~300 hudud, MNI152 + fsaverage) | EBRAINS / siibra | **CC BY-NC-SA 4.0** | ✅ mos | ~300 |
@@ -100,7 +101,7 @@ glasser | julich`), tizim emas.
 | 0 | Manbalar auditi | ✅ jadval yuqorida; `?` lar 1-bosqichda hal qilinadi |
 | 1 | Pipeline sinovi | ✅ 2026-09-19: BodyParts3D 77 qism + Julich 414 hudud → GLB, MNI fazosida ustma-ust (RMS 5.3 mm), brauzerda tasdiqlangan |
 | 2 | Ilova skeleti | ✅ 2026-09-19: Falcon UI/scene ko'chirildi, 585 qism, barcha asosiy interaktivlik brauzerda tasdiqlangan |
-| 3 | To'liq import | Barcha qatlamlar, ierarxiya, 1700+ qism, 60 fps desktop / 30 fps telefon |
+| 3 | To'liq import | ✅ 2026-09-20: 1571 qism, 7 qatlam (gross 355 + Julich 508 + Brodmann 82 + Desikan 70 + Destrieux 148 + Glasser 360 + JHU 48), qatlamlar talab bo'yicha yuklanadi, parcellation almashtirish |
 | 4 | Kesim + qatlamlar | 3 tekislik, MNI koordinata, parcellation almashtirish |
 | 5 | Kontent | parts.json skeleton (nom uz/en/la, tizim, funksiya, klinik ahamiyat, manba) → foydalanuvchi ko'rib chiqadi |
 | 6 | Deploy | Pages, meshlar GitHub Release'da, README, ATTRIBUTION.md |

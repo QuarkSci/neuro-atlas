@@ -1,11 +1,2442 @@
 [
  {
+  "id": "fma52622-fj1363",
+  "name": "Right ophthalmic nerve",
+  "fma": "FMA52622",
+  "fj": "FJ1363",
+  "bp": "BP20226",
+  "faces": 2770,
+  "segments": 2,
+  "bbox": [
+   [
+    18.84,
+    -25.34,
+    -38.21
+   ],
+   [
+    24.99,
+    16.94,
+    -34.98
+   ]
+  ],
+  "centroid": [
+   21.48,
+   -2.2,
+   -36.44
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50881-fj4039",
+  "name": "Right trochlear nerve",
+  "fma": "FMA50881",
+  "fj": "FJ4039",
+  "bp": "BP23210",
+  "faces": 7584,
+  "segments": 2,
+  "bbox": [
+   [
+    0.16,
+    -38.53,
+    -42.71
+   ],
+   [
+    21.43,
+    56.58,
+    -21.44
+   ]
+  ],
+  "centroid": [
+   16.3,
+   0.62,
+   -32.76
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50030-fj1654m",
+  "name": "Left anterior cerebral artery",
+  "fma": "FMA50030",
+  "fj": "FJ1654M",
+  "bp": "BP21083",
+  "faces": 400,
+  "segments": 1,
+  "bbox": [
+   [
+    -17.14,
+    5.91,
+    -27.65
+   ],
+   [
+    -1.95,
+    22.13,
+    -15.16
+   ]
+  ],
+  "centroid": [
+   -7.51,
+   12.05,
+   -22.65
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50029-fj5021",
+  "name": "Right anterior cerebral artery",
+  "fma": "FMA50029",
+  "fj": "FJ5021",
+  "bp": "BP21122",
+  "faces": 848,
+  "segments": 2,
+  "bbox": [
+   [
+    0.41,
+    6.1,
+    -27.64
+   ],
+   [
+    15.86,
+    22.41,
+    -15.15
+   ]
+  ],
+  "centroid": [
+   5.84,
+   12.83,
+   -22.63
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50169-fj4977",
+  "name": "Anterior communicating artery",
+  "fma": "FMA50169",
+  "fj": "FJ4977",
+  "bp": "BP22478",
+  "faces": 402,
+  "segments": 3,
+  "bbox": [
+   [
+    -3.75,
+    9.01,
+    -25.85
+   ],
+   [
+    3.79,
+    27.62,
+    -6.57
+   ]
+  ],
+  "centroid": [
+   -0.13,
+   14.61,
+   -22.32
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50544-fj1656m",
+  "name": "Left anterior inferior cerebellar artery",
+  "fma": "FMA50544",
+  "fj": "FJ1656M",
+  "bp": "BP22939",
+  "faces": 766,
+  "segments": 1,
+  "bbox": [
+   [
+    -37.5,
+    -53.07,
+    -54.92
+   ],
+   [
+    0.84,
+    -24.19,
+    -40.18
+   ]
+  ],
+  "centroid": [
+   -14.88,
+   -37.68,
+   -49.3
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50544-fj1656",
+  "name": "Right anterior inferior cerebellar artery",
+  "fma": "FMA50544",
+  "fj": "FJ1656",
+  "bp": "BP22939",
+  "faces": 766,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.55,
+    -50.22,
+    -54.91
+   ],
+   [
+    38.96,
+    -23.91,
+    -40.15
+   ]
+  ],
+  "centroid": [
+   15.69,
+   -36.54,
+   -49.27
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50089-fj1658m",
+  "name": "Left anterior choroidal artery",
+  "fma": "FMA50089",
+  "fj": "FJ1658M",
+  "bp": "BP21059",
+  "faces": 418,
+  "segments": 1,
+  "bbox": [
+   [
+    -36.36,
+    -38.5,
+    -28.49
+   ],
+   [
+    -12.46,
+    3.99,
+    -1.07
+   ]
+  ],
+  "centroid": [
+   -27.55,
+   -10.71,
+   -19.62
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50384-fj1659m",
+  "name": "Left anterior temporal artery",
+  "fma": "FMA50384",
+  "fj": "FJ1659M",
+  "bp": "BP21269",
+  "faces": 1214,
+  "segments": 1,
+  "bbox": [
+   [
+    -73.19,
+    -31.48,
+    -41.99
+   ],
+   [
+    -51.38,
+    14.84,
+    2.08
+   ]
+  ],
+  "centroid": [
+   -64.17,
+   0.54,
+   -16.49
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50383-fj4982",
+  "name": "Right anterior temporal artery",
+  "fma": "FMA50383",
+  "fj": "FJ4982",
+  "bp": "BP22068",
+  "faces": 2602,
+  "segments": 2,
+  "bbox": [
+   [
+    50.42,
+    -26.45,
+    -41.94
+   ],
+   [
+    73.13,
+    19.43,
+    2.13
+   ]
+  ],
+  "centroid": [
+   63.39,
+   4.8,
+   -16.22
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50370-fj1694m",
+  "name": "Insular part of left middle cerebral artery",
+  "fma": "FMA50370",
+  "fj": "FJ1694M",
+  "bp": "BP23173",
+  "faces": 5860,
+  "segments": 2,
+  "bbox": [
+   [
+    -57.23,
+    -22.46,
+    -18.03
+   ],
+   [
+    -39.19,
+    14.42,
+    21.05
+   ]
+  ],
+  "centroid": [
+   -46.51,
+   -7.92,
+   3.4
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50369-fj5135",
+  "name": "Insular part of right middle cerebral artery",
+  "fma": "FMA50369",
+  "fj": "FJ5135",
+  "bp": "BP23792",
+  "faces": 5322,
+  "segments": 4,
+  "bbox": [
+   [
+    39.28,
+    -19.05,
+    -17.99
+   ],
+   [
+    61.27,
+    19.43,
+    20.96
+   ]
+  ],
+  "centroid": [
+   46.34,
+   1.13,
+   -1.07
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma77439-fj1664m",
+  "name": "Artery of central sulcus",
+  "fma": "FMA77439",
+  "fj": "FJ1664M",
+  "bp": "BP21196",
+  "faces": 21464,
+  "segments": 7,
+  "bbox": [
+   [
+    -74.25,
+    -30.04,
+    -9.55
+   ],
+   [
+    74.12,
+    6.31,
+    76.61
+   ]
+  ],
+  "centroid": [
+   8.63,
+   -7.76,
+   26.16
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50484-fj1666m",
+  "name": "Artery of left postcentral sulcus",
+  "fma": "FMA50484",
+  "fj": "FJ1666M",
+  "bp": "BP20626",
+  "faces": 2816,
+  "segments": 1,
+  "bbox": [
+   [
+    -77.33,
+    -37.46,
+    15.56
+   ],
+   [
+    -54.0,
+    -19.84,
+    63.55
+   ]
+  ],
+  "centroid": [
+   -66.35,
+   -28.21,
+   32.34
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50483-fj1666",
+  "name": "Artery of right postcentral sulcus",
+  "fma": "FMA50483",
+  "fj": "FJ1666",
+  "bp": "BP21222",
+  "faces": 5936,
+  "segments": 3,
+  "bbox": [
+   [
+    39.69,
+    -42.14,
+    15.61
+   ],
+   [
+    77.67,
+    -15.64,
+    69.14
+   ]
+  ],
+  "centroid": [
+   66.4,
+   -25.99,
+   36.02
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50487-fj1667m",
+  "name": "Left anterior parietal artery",
+  "fma": "FMA50487",
+  "fj": "FJ1667M",
+  "bp": "BP21221",
+  "faces": 1908,
+  "segments": 1,
+  "bbox": [
+   [
+    -76.0,
+    -45.71,
+    25.47
+   ],
+   [
+    -38.73,
+    -31.12,
+    69.1
+   ]
+  ],
+  "centroid": [
+   -64.86,
+   -39.23,
+   47.1
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50486-fj1667",
+  "name": "Right anterior parietal artery",
+  "fma": "FMA50486",
+  "fj": "FJ1667",
+  "bp": "BP21265",
+  "faces": 1908,
+  "segments": 1,
+  "bbox": [
+   [
+    39.69,
+    -42.14,
+    25.54
+   ],
+   [
+    76.4,
+    -25.46,
+    69.14
+   ]
+  ],
+  "centroid": [
+   65.59,
+   -34.34,
+   47.15
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50481-fj1668m",
+  "name": "Artery of left precentral sulcus",
+  "fma": "FMA50481",
+  "fj": "FJ1668M",
+  "bp": "BP21239",
+  "faces": 5638,
+  "segments": 3,
+  "bbox": [
+   [
+    -67.05,
+    -1.01,
+    -5.5
+   ],
+   [
+    -35.17,
+    30.52,
+    74.54
+   ]
+  ],
+  "centroid": [
+   -58.04,
+   11.88,
+   21.81
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50480-fj1668",
+  "name": "Artery of right precentral sulcus",
+  "fma": "FMA50480",
+  "fj": "FJ1668",
+  "bp": "BP21244",
+  "faces": 9380,
+  "segments": 6,
+  "bbox": [
+   [
+    34.18,
+    1.61,
+    -5.45
+   ],
+   [
+    65.57,
+    34.65,
+    74.58
+   ]
+  ],
+  "centroid": [
+   56.47,
+   16.16,
+   21.87
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50362-fj1671m",
+  "name": "Precuneal branch of left pericallosal artery",
+  "fma": "FMA50362",
+  "fj": "FJ1671M",
+  "bp": "BP21282",
+  "faces": 1266,
+  "segments": 1,
+  "bbox": [
+   [
+    -8.52,
+    -27.66,
+    26.81
+   ],
+   [
+    -0.25,
+    24.4,
+    48.22
+   ]
+  ],
+  "centroid": [
+   -2.79,
+   4.78,
+   35.38
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50361-fj1671",
+  "name": "Precuneal branch of right pericallosal artery",
+  "fma": "FMA50361",
+  "fj": "FJ1671",
+  "bp": "BP21280",
+  "faces": 2278,
+  "segments": 2,
+  "bbox": [
+   [
+    -0.44,
+    -27.43,
+    26.82
+   ],
+   [
+    7.75,
+    24.49,
+    48.22
+   ]
+  ],
+  "centroid": [
+   1.63,
+   4.97,
+   35.38
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50477-fj1673m",
+  "name": "Branch of left middle cerebral artery to left angular gyrus",
+  "fma": "FMA50477",
+  "fj": "FJ1673M",
+  "bp": "BP22732",
+  "faces": 1736,
+  "segments": 1,
+  "bbox": [
+   [
+    -68.11,
+    -73.42,
+    32.98
+   ],
+   [
+    -42.2,
+    -52.41,
+    56.45
+   ]
+  ],
+  "centroid": [
+   -59.44,
+   -63.11,
+   44.48
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50476-fj1673",
+  "name": "Branch of right middle cerebral artery to right angular gyrus",
+  "fma": "FMA50476",
+  "fj": "FJ1673",
+  "bp": "BP21211",
+  "faces": 2906,
+  "segments": 2,
+  "bbox": [
+   [
+    44.43,
+    -69.64,
+    33.05
+   ],
+   [
+    69.5,
+    -47.31,
+    56.49
+   ]
+  ],
+  "centroid": [
+   61.26,
+   -58.58,
+   44.54
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50147-fj1674m",
+  "name": "Branch of left anterior choroidal artery to posterior limb of left internal capsule",
+  "fma": "FMA50147",
+  "fj": "FJ1674M",
+  "bp": "BP21195",
+  "faces": 346,
+  "segments": 1,
+  "bbox": [
+   [
+    -33.91,
+    -23.99,
+    -18.11
+   ],
+   [
+    -21.06,
+    -9.61,
+    18.32
+   ]
+  ],
+  "centroid": [
+   -28.62,
+   -19.33,
+   -2.79
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50671-fj1675m",
+  "name": "Left thalamogeniculate artery",
+  "fma": "FMA50671",
+  "fj": "FJ1675M",
+  "bp": "BP22503",
+  "faces": 778,
+  "segments": 1,
+  "bbox": [
+   [
+    -24.05,
+    -39.94,
+    -26.05
+   ],
+   [
+    -3.27,
+    -5.93,
+    9.07
+   ]
+  ],
+  "centroid": [
+   -18.04,
+   -24.74,
+   -15.39
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50670-fj5217",
+  "name": "Right thalamogeniculate artery",
+  "fma": "FMA50670",
+  "fj": "FJ5217",
+  "bp": "BP24012",
+  "faces": 2302,
+  "segments": 2,
+  "bbox": [
+   [
+    3.81,
+    -38.45,
+    -26.05
+   ],
+   [
+    24.56,
+    -5.46,
+    9.14
+   ]
+  ],
+  "centroid": [
+   18.81,
+   -25.24,
+   -14.0
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50348-fj1676m",
+  "name": "Left callosomarginal artery",
+  "fma": "FMA50348",
+  "fj": "FJ1676M",
+  "bp": "BP21225",
+  "faces": 578,
+  "segments": 1,
+  "bbox": [
+   [
+    -7.43,
+    19.49,
+    -18.31
+   ],
+   [
+    -1.12,
+    53.48,
+    23.63
+   ]
+  ],
+  "centroid": [
+   -4.78,
+   41.36,
+   -4.45
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50347-fj1676",
+  "name": "Right callosomarginal artery",
+  "fma": "FMA50347",
+  "fj": "FJ1676",
+  "bp": "BP21288",
+  "faces": 578,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.9,
+    19.77,
+    -18.3
+   ],
+   [
+    4.67,
+    53.71,
+    23.63
+   ]
+  ],
+  "centroid": [
+   1.99,
+   41.62,
+   -4.45
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50685-fj1678m",
+  "name": "Left splenial artery",
+  "fma": "FMA50685",
+  "fj": "FJ1678M",
+  "bp": "BP22552",
+  "faces": 1538,
+  "segments": 2,
+  "bbox": [
+   [
+    -11.89,
+    -54.76,
+    -10.63
+   ],
+   [
+    -0.44,
+    -31.15,
+    27.13
+   ]
+  ],
+  "centroid": [
+   -4.1,
+   -46.0,
+   9.8
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50684-fj1678",
+  "name": "Right splenial artery",
+  "fma": "FMA50684",
+  "fj": "FJ1678",
+  "bp": "BP22539",
+  "faces": 2798,
+  "segments": 3,
+  "bbox": [
+   [
+    1.98,
+    -54.63,
+    -10.62
+   ],
+   [
+    12.78,
+    -30.9,
+    27.12
+   ]
+  ],
+  "centroid": [
+   4.85,
+   -46.07,
+   11.19
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50429-fj1679m",
+  "name": "Hypothalamic branch of left posterior communicating artery",
+  "fma": "FMA50429",
+  "fj": "FJ1679M",
+  "bp": "BP21163",
+  "faces": 156,
+  "segments": 1,
+  "bbox": [
+   [
+    -12.62,
+    -0.32,
+    -30.57
+   ],
+   [
+    -2.04,
+    5.2,
+    -20.73
+   ]
+  ],
+  "centroid": [
+   -7.29,
+   1.88,
+   -26.42
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50428-fj5088",
+  "name": "Hypothalamic branch of right posterior communicating artery",
+  "fma": "FMA50428",
+  "fj": "FJ5088",
+  "bp": "BP21602",
+  "faces": 434,
+  "segments": 2,
+  "bbox": [
+   [
+    0.92,
+    -4.13,
+    -32.06
+   ],
+   [
+    11.7,
+    5.33,
+    -20.73
+   ]
+  ],
+  "centroid": [
+   6.05,
+   1.56,
+   -26.77
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50352-fj1681m",
+  "name": "Intermediomedial branch of left callosomarginal artery",
+  "fma": "FMA50352",
+  "fj": "FJ1681M",
+  "bp": "BP21178",
+  "faces": 1098,
+  "segments": 1,
+  "bbox": [
+   [
+    -18.28,
+    49.46,
+    21.88
+   ],
+   [
+    -2.42,
+    66.65,
+    46.16
+   ]
+  ],
+  "centroid": [
+   -6.73,
+   60.1,
+   29.15
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50351-fj1681",
+  "name": "Intermediomedial branch of right callosomarginal artery",
+  "fma": "FMA50351",
+  "fj": "FJ1681",
+  "bp": "BP21285",
+  "faces": 1972,
+  "segments": 2,
+  "bbox": [
+   [
+    -0.99,
+    49.66,
+    21.89
+   ],
+   [
+    14.48,
+    67.28,
+    46.18
+   ]
+  ],
+  "centroid": [
+   3.05,
+   60.47,
+   29.14
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma75866-fj1682",
+  "name": "Trunk of right internal carotid artery",
+  "fma": "FMA75866",
+  "fj": "FJ1682",
+  "bp": "BP23183",
+  "faces": 2064,
+  "segments": 2,
+  "bbox": [
+   [
+    9.99,
+    -49.46,
+    -135.33
+   ],
+   [
+    40.5,
+    11.5,
+    -23.15
+   ]
+  ],
+  "centroid": [
+   23.71,
+   -19.71,
+   -75.37
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50579-fj1683m",
+  "name": "Lateral branch of left superior cerebellar artery",
+  "fma": "FMA50579",
+  "fj": "FJ1683M",
+  "bp": "BP21082",
+  "faces": 728,
+  "segments": 1,
+  "bbox": [
+   [
+    -48.76,
+    -93.15,
+    -29.63
+   ],
+   [
+    -15.28,
+    -31.35,
+    -17.56
+   ]
+  ],
+  "centroid": [
+   -27.68,
+   -60.67,
+   -23.24
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50578-fj5107",
+  "name": "Lateral branch of right superior cerebellar artery",
+  "fma": "FMA50578",
+  "fj": "FJ5107",
+  "bp": "BP21073",
+  "faces": 1464,
+  "segments": 2,
+  "bbox": [
+   [
+    18.12,
+    -90.1,
+    -29.59
+   ],
+   [
+    51.5,
+    -29.7,
+    -17.55
+   ]
+  ],
+  "centroid": [
+   29.47,
+   -58.52,
+   -23.22
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50569-fj1684m",
+  "name": "Lateral branch of left pontine artery",
+  "fma": "FMA50569",
+  "fj": "FJ1684M",
+  "bp": "BP22500",
+  "faces": 558,
+  "segments": 1,
+  "bbox": [
+   [
+    -25.42,
+    -38.97,
+    -48.13
+   ],
+   [
+    -0.52,
+    -16.79,
+    -38.39
+   ]
+  ],
+  "centroid": [
+   -13.04,
+   -22.87,
+   -44.75
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50568-fj1684",
+  "name": "Lateral branch of right pontine artery",
+  "fma": "FMA50568",
+  "fj": "FJ1684",
+  "bp": "BP22712",
+  "faces": 1116,
+  "segments": 2,
+  "bbox": [
+   [
+    0.43,
+    -37.43,
+    -48.12
+   ],
+   [
+    25.91,
+    -16.31,
+    -38.36
+   ]
+  ],
+  "centroid": [
+   13.16,
+   -21.88,
+   -44.73
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50444-fj1685m",
+  "name": "Left lateral frontobasal artery",
+  "fma": "FMA50444",
+  "fj": "FJ1685M",
+  "bp": "BP21248",
+  "faces": 4384,
+  "segments": 2,
+  "bbox": [
+   [
+    -56.72,
+    15.4,
+    -20.96
+   ],
+   [
+    -31.4,
+    67.4,
+    7.33
+   ]
+  ],
+  "centroid": [
+   -46.65,
+   30.73,
+   -8.62
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50443-fj1685",
+  "name": "Right lateral frontobasal artery",
+  "fma": "FMA50443",
+  "fj": "FJ1685",
+  "bp": "BP21249",
+  "faces": 4780,
+  "segments": 3,
+  "bbox": [
+   [
+    27.41,
+    19.14,
+    -20.92
+   ],
+   [
+    54.47,
+    69.62,
+    7.36
+   ]
+  ],
+  "centroid": [
+   45.32,
+   34.77,
+   -8.85
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50582-fj1688m",
+  "name": "Medial branch of left superior cerebellar artery",
+  "fma": "FMA50582",
+  "fj": "FJ1688M",
+  "bp": "BP21138",
+  "faces": 354,
+  "segments": 1,
+  "bbox": [
+   [
+    -22.6,
+    -76.11,
+    -28.49
+   ],
+   [
+    -9.22,
+    -31.31,
+    -7.76
+   ]
+  ],
+  "centroid": [
+   -13.84,
+   -45.88,
+   -17.64
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50581-fj1688",
+  "name": "Medial branch of right superior cerebellar artery",
+  "fma": "FMA50581",
+  "fj": "FJ1688",
+  "bp": "BP21145",
+  "faces": 354,
+  "segments": 1,
+  "bbox": [
+   [
+    11.59,
+    -75.32,
+    -28.47
+   ],
+   [
+    23.13,
+    -29.63,
+    -7.75
+   ]
+  ],
+  "centroid": [
+   15.02,
+   -44.77,
+   -17.65
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50567-fj1689m",
+  "name": "Medial branch of left pontine artery",
+  "fma": "FMA50567",
+  "fj": "FJ1689M",
+  "bp": "BP22505",
+  "faces": 294,
+  "segments": 1,
+  "bbox": [
+   [
+    -10.75,
+    -19.8,
+    -41.47
+   ],
+   [
+    -0.4,
+    -12.58,
+    -37.3
+   ]
+  ],
+  "centroid": [
+   -5.44,
+   -15.2,
+   -39.59
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50566-fj5125",
+  "name": "Medial branch of right pontine artery",
+  "fma": "FMA50566",
+  "fj": "FJ5125",
+  "bp": "BP23807",
+  "faces": 650,
+  "segments": 2,
+  "bbox": [
+   [
+    0.24,
+    -19.01,
+    -41.49
+   ],
+   [
+    10.74,
+    -12.09,
+    -37.26
+   ]
+  ],
+  "centroid": [
+   5.18,
+   -14.87,
+   -39.57
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50344-fj1690m",
+  "name": "Left medial frontobasal artery",
+  "fma": "FMA50344",
+  "fj": "FJ1690M",
+  "bp": "BP21232",
+  "faces": 698,
+  "segments": 1,
+  "bbox": [
+   [
+    -18.85,
+    6.51,
+    -35.73
+   ],
+   [
+    -2.42,
+    72.63,
+    -19.98
+   ]
+  ],
+  "centroid": [
+   -5.25,
+   38.32,
+   -28.65
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50343-fj1690",
+  "name": "Right medial frontobasal artery",
+  "fma": "FMA50343",
+  "fj": "FJ1690",
+  "bp": "BP21247",
+  "faces": 1192,
+  "segments": 2,
+  "bbox": [
+   [
+    -0.5,
+    7.2,
+    -35.72
+   ],
+   [
+    15.44,
+    73.33,
+    -19.66
+   ]
+  ],
+  "centroid": [
+   2.12,
+   38.35,
+   -28.45
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50367-fj1692m",
+  "name": "Sphenoid part of left middle cerebral artery",
+  "fma": "FMA50367",
+  "fj": "FJ1692M",
+  "bp": "BP23285",
+  "faces": 800,
+  "segments": 1,
+  "bbox": [
+   [
+    -48.04,
+    2.42,
+    -28.39
+   ],
+   [
+    -14.72,
+    11.48,
+    -10.07
+   ]
+  ],
+  "centroid": [
+   -32.09,
+   7.35,
+   -22.13
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50366-fj1692",
+  "name": "Sphenoid part of right middle cerebral artery",
+  "fma": "FMA50366",
+  "fj": "FJ1692",
+  "bp": "BP23364",
+  "faces": 1202,
+  "segments": 2,
+  "bbox": [
+   [
+    13.34,
+    5.87,
+    -28.36
+   ],
+   [
+    46.89,
+    13.16,
+    -10.03
+   ]
+  ],
+  "centroid": [
+   29.55,
+   9.91,
+   -22.63
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50468-fj1693m",
+  "name": "Middle temporal branch of left middle cerebral artery",
+  "fma": "FMA50468",
+  "fj": "FJ1693M",
+  "bp": "BP21235",
+  "faces": 818,
+  "segments": 1,
+  "bbox": [
+   [
+    -75.71,
+    -68.84,
+    -28.71
+   ],
+   [
+    -47.35,
+    -5.63,
+    13.96
+   ]
+  ],
+  "centroid": [
+   -66.9,
+   -29.78,
+   -3.17
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50467-fj1693",
+  "name": "Middle temporal branch of right middle cerebral artery",
+  "fma": "FMA50467",
+  "fj": "FJ1693",
+  "bp": "BP21218",
+  "faces": 818,
+  "segments": 1,
+  "bbox": [
+   [
+    48.72,
+    -64.7,
+    -28.65
+   ],
+   [
+    76.27,
+    -1.43,
+    14.03
+   ]
+  ],
+  "centroid": [
+   67.23,
+   -24.81,
+   -3.16
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma49870-fj1695m",
+  "name": "Left ophthalmic artery",
+  "fma": "FMA49870",
+  "fj": "FJ1695M",
+  "bp": "BP22443",
+  "faces": 2410,
+  "segments": 1,
+  "bbox": [
+   [
+    -15.24,
+    4.93,
+    -34.33
+   ],
+   [
+    -12.55,
+    64.22,
+    -29.43
+   ]
+  ],
+  "centroid": [
+   -13.82,
+   30.8,
+   -32.32
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma49869-fj1695",
+  "name": "Right ophthalmic artery",
+  "fma": "FMA49869",
+  "fj": "FJ1695",
+  "bp": "BP21312",
+  "faces": 2410,
+  "segments": 1,
+  "bbox": [
+   [
+    9.68,
+    5.95,
+    -34.32
+   ],
+   [
+    14.06,
+    65.16,
+    -29.42
+   ]
+  ],
+  "centroid": [
+   11.51,
+   31.76,
+   -32.31
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50358-fj1696m",
+  "name": "Paracentral branch of left callosomarginal artery",
+  "fma": "FMA50358",
+  "fj": "FJ1696M",
+  "bp": "BP21277",
+  "faces": 3646,
+  "segments": 3,
+  "bbox": [
+   [
+    -34.03,
+    -5.04,
+    14.59
+   ],
+   [
+    0.03,
+    31.16,
+    86.33
+   ]
+  ],
+  "centroid": [
+   -5.63,
+   13.24,
+   53.47
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50357-fj1696",
+  "name": "Paracentral branch of right callosomarginal artery",
+  "fma": "FMA50357",
+  "fj": "FJ1696",
+  "bp": "BP21278",
+  "faces": 3646,
+  "segments": 3,
+  "bbox": [
+   [
+    -1.72,
+    -4.41,
+    14.6
+   ],
+   [
+    32.92,
+    31.51,
+    86.33
+   ]
+  ],
+  "centroid": [
+   4.06,
+   13.62,
+   53.46
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50360-fj1699m",
+  "name": "Left pericallosal artery",
+  "fma": "FMA50360",
+  "fj": "FJ1699M",
+  "bp": "BP21240",
+  "faces": 1080,
+  "segments": 1,
+  "bbox": [
+   [
+    -6.77,
+    -33.26,
+    -17.29
+   ],
+   [
+    -0.49,
+    38.19,
+    43.9
+   ]
+  ],
+  "centroid": [
+   -3.92,
+   12.24,
+   14.94
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50359-fj1699",
+  "name": "Right pericallosal artery",
+  "fma": "FMA50359",
+  "fj": "FJ1699",
+  "bp": "BP21267",
+  "faces": 1080,
+  "segments": 1,
+  "bbox": [
+   [
+    0.63,
+    -33.02,
+    -17.28
+   ],
+   [
+    6.93,
+    38.43,
+    43.91
+   ]
+  ],
+  "centroid": [
+   2.43,
+   12.49,
+   14.95
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50520-fj1715m",
+  "name": "Left posterior inferior cerebellar artery",
+  "fma": "FMA50520",
+  "fj": "FJ1715M",
+  "bp": "BP21999",
+  "faces": 4040,
+  "segments": 13,
+  "bbox": [
+   [
+    -56.39,
+    -102.4,
+    -60.32
+   ],
+   [
+    -4.47,
+    -44.4,
+    -19.62
+   ]
+  ],
+  "centroid": [
+   -24.77,
+   -75.25,
+   -49.67
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50519-fj1715",
+  "name": "Right posterior inferior cerebellar artery",
+  "fma": "FMA50519",
+  "fj": "FJ1715",
+  "bp": "BP24003",
+  "faces": 6098,
+  "segments": 20,
+  "bbox": [
+   [
+    7.22,
+    -101.14,
+    -60.3
+   ],
+   [
+    58.41,
+    -43.23,
+    -19.62
+   ]
+  ],
+  "centroid": [
+   25.45,
+   -75.11,
+   -49.07
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50381-fj1712m",
+  "name": "Left polar temporal artery",
+  "fma": "FMA50381",
+  "fj": "FJ1712M",
+  "bp": "BP21286",
+  "faces": 360,
+  "segments": 1,
+  "bbox": [
+   [
+    -56.15,
+    3.97,
+    -40.28
+   ],
+   [
+    -34.2,
+    24.03,
+    -8.45
+   ]
+  ],
+  "centroid": [
+   -50.2,
+   17.64,
+   -18.76
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50380-fj1712",
+  "name": "Right polar temporal artery",
+  "fma": "FMA50380",
+  "fj": "FJ1712",
+  "bp": "BP21274",
+  "faces": 360,
+  "segments": 1,
+  "bbox": [
+   [
+    32.39,
+    7.78,
+    -40.24
+   ],
+   [
+    54.32,
+    27.43,
+    -8.4
+   ]
+  ],
+  "centroid": [
+   48.42,
+   21.33,
+   -18.7
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50086-fj1713m",
+  "name": "Left posterior communicating artery",
+  "fma": "FMA50086",
+  "fj": "FJ1713M",
+  "bp": "BP21086",
+  "faces": 204,
+  "segments": 1,
+  "bbox": [
+   [
+    -14.02,
+    -7.26,
+    -31.34
+   ],
+   [
+    -6.15,
+    5.4,
+    -24.89
+   ]
+  ],
+  "centroid": [
+   -10.46,
+   -1.15,
+   -28.58
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50085-fj1713",
+  "name": "Right posterior communicating artery",
+  "fma": "FMA50085",
+  "fj": "FJ1713",
+  "bp": "BP21058",
+  "faces": 408,
+  "segments": 2,
+  "bbox": [
+   [
+    5.53,
+    -6.76,
+    -31.32
+   ],
+   [
+    12.91,
+    6.35,
+    -24.89
+   ]
+  ],
+  "centroid": [
+   9.6,
+   -0.4,
+   -28.56
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50642-fj1714m",
+  "name": "Postcommunicating part of left posterior cerebral artery",
+  "fma": "FMA50642",
+  "fj": "FJ1714M",
+  "bp": "BP23057",
+  "faces": 544,
+  "segments": 1,
+  "bbox": [
+   [
+    -18.84,
+    -40.79,
+    -29.01
+   ],
+   [
+    -7.13,
+    -5.86,
+    -9.29
+   ]
+  ],
+  "centroid": [
+   -14.52,
+   -22.61,
+   -22.26
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50641-fj5161",
+  "name": "Postcommunicating part of right posterior cerebral artery",
+  "fma": "FMA50641",
+  "fj": "FJ5161",
+  "bp": "BP23063",
+  "faces": 2816,
+  "segments": 3,
+  "bbox": [
+   [
+    6.54,
+    -41.9,
+    -29.0
+   ],
+   [
+    21.49,
+    -5.28,
+    -2.43
+   ]
+  ],
+  "centroid": [
+   14.93,
+   -22.27,
+   -20.78
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50490-fj1716m",
+  "name": "Left posterior parietal artery",
+  "fma": "FMA50490",
+  "fj": "FJ1716M",
+  "bp": "BP21238",
+  "faces": 6812,
+  "segments": 1,
+  "bbox": [
+   [
+    -70.52,
+    -71.78,
+    0.86
+   ],
+   [
+    -29.36,
+    -9.09,
+    70.72
+   ]
+  ],
+  "centroid": [
+   -52.95,
+   -38.47,
+   26.87
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50489-fj1716",
+  "name": "Right posterior parietal artery",
+  "fma": "FMA50489",
+  "fj": "FJ1716",
+  "bp": "BP21246",
+  "faces": 8052,
+  "segments": 2,
+  "bbox": [
+   [
+    31.16,
+    -68.79,
+    0.91
+   ],
+   [
+    71.98,
+    -5.6,
+    70.75
+   ]
+  ],
+  "centroid": [
+   53.71,
+   -34.93,
+   27.62
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50471-fj1717m",
+  "name": "Posterior temporal branch of left middle cerebral artery",
+  "fma": "FMA50471",
+  "fj": "FJ1717M",
+  "bp": "BP21220",
+  "faces": 3328,
+  "segments": 1,
+  "bbox": [
+   [
+    -74.92,
+    -84.06,
+    -13.2
+   ],
+   [
+    -51.32,
+    -27.65,
+    17.34
+   ]
+  ],
+  "centroid": [
+   -64.7,
+   -53.53,
+   7.27
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50470-fj1717",
+  "name": "Posterior temporal branch of right middle cerebral artery",
+  "fma": "FMA50470",
+  "fj": "FJ1717",
+  "bp": "BP21234",
+  "faces": 3328,
+  "segments": 1,
+  "bbox": [
+   [
+    51.61,
+    -80.02,
+    -13.13
+   ],
+   [
+    76.05,
+    -23.72,
+    17.4
+   ]
+  ],
+  "centroid": [
+   66.11,
+   -48.7,
+   7.3
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76129-fj1718m",
+  "name": "Trunk of inferior terminal branch of left middle cerebral artery",
+  "fma": "FMA76129",
+  "fj": "FJ1718M",
+  "bp": "BP20996",
+  "faces": 368,
+  "segments": 1,
+  "bbox": [
+   [
+    -63.12,
+    2.85,
+    -14.5
+   ],
+   [
+    -44.06,
+    14.52,
+    2.41
+   ]
+  ],
+  "centroid": [
+   -53.66,
+   7.84,
+   -5.86
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76128-fj1718",
+  "name": "Trunk of inferior terminal branch of right middle cerebral artery",
+  "fma": "FMA76128",
+  "fj": "FJ1718",
+  "bp": "BP20984",
+  "faces": 368,
+  "segments": 1,
+  "bbox": [
+   [
+    42.9,
+    6.26,
+    -14.46
+   ],
+   [
+    61.51,
+    19.0,
+    2.47
+   ]
+  ],
+  "centroid": [
+   52.31,
+   11.82,
+   -5.8
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50665-fj1720m",
+  "name": "Left thalamoperforating artery",
+  "fma": "FMA50665",
+  "fj": "FJ1720M",
+  "bp": "BP22720",
+  "faces": 706,
+  "segments": 1,
+  "bbox": [
+   [
+    -13.85,
+    -39.0,
+    -16.8
+   ],
+   [
+    -5.27,
+    -14.43,
+    12.49
+   ]
+  ],
+  "centroid": [
+   -9.33,
+   -32.93,
+   -1.03
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50664-fj1720",
+  "name": "Right thalamoperforating artery",
+  "fma": "FMA50664",
+  "fj": "FJ1720",
+  "bp": "BP22541",
+  "faces": 1068,
+  "segments": 2,
+  "bbox": [
+   [
+    5.69,
+    -38.29,
+    -23.4
+   ],
+   [
+    23.95,
+    -13.86,
+    12.49
+   ]
+  ],
+  "centroid": [
+   13.93,
+   -26.56,
+   -4.25
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50661-fj1721m",
+  "name": "Posteromedial central branch of left posterior cerebral artery",
+  "fma": "FMA50661",
+  "fj": "FJ1721M",
+  "bp": "BP19808",
+  "faces": 252,
+  "segments": 1,
+  "bbox": [
+   [
+    -26.8,
+    -17.86,
+    -27.97
+   ],
+   [
+    -14.62,
+    -11.46,
+    -17.31
+   ]
+  ],
+  "centroid": [
+   -20.4,
+   -14.3,
+   -24.12
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50354-fj1722m",
+  "name": "Posteromedial branch of left callosomarginal artery",
+  "fma": "FMA50354",
+  "fj": "FJ1722M",
+  "bp": "BP21272",
+  "faces": 530,
+  "segments": 1,
+  "bbox": [
+   [
+    -25.06,
+    29.66,
+    21.56
+   ],
+   [
+    -1.59,
+    51.23,
+    72.3
+   ]
+  ],
+  "centroid": [
+   -5.82,
+   38.37,
+   48.76
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50353-fj1722",
+  "name": "Posteromedial branch of right callosomarginal artery",
+  "fma": "FMA50353",
+  "fj": "FJ1722",
+  "bp": "BP22735",
+  "faces": 530,
+  "segments": 1,
+  "bbox": [
+   [
+    -1.37,
+    29.87,
+    21.56
+   ],
+   [
+    22.6,
+    51.44,
+    72.31
+   ]
+  ],
+  "centroid": [
+   3.12,
+   38.71,
+   48.77
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50640-fj1723m",
+  "name": "Precommunicating part of left posterior cerebral artery",
+  "fma": "FMA50640",
+  "fj": "FJ1723M",
+  "bp": "BP23793",
+  "faces": 282,
+  "segments": 1,
+  "bbox": [
+   [
+    -9.16,
+    -9.99,
+    -29.68
+   ],
+   [
+    0.12,
+    -5.69,
+    -24.06
+   ]
+  ],
+  "centroid": [
+   -3.88,
+   -7.54,
+   -26.31
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50639-fj1723",
+  "name": "Precommunicating part of right posterior cerebral artery",
+  "fma": "FMA50639",
+  "fj": "FJ1723",
+  "bp": "BP23085",
+  "faces": 550,
+  "segments": 2,
+  "bbox": [
+   [
+    -0.68,
+    -9.94,
+    -29.68
+   ],
+   [
+    8.57,
+    -5.22,
+    -24.05
+   ]
+  ],
+  "centroid": [
+   3.32,
+   -7.23,
+   -26.29
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50478-fj1724m",
+  "name": "Left prefrontal artery",
+  "fma": "FMA50478",
+  "fj": "FJ1724M",
+  "bp": "BP22067",
+  "faces": 5424,
+  "segments": 1,
+  "bbox": [
+   [
+    -62.59,
+    11.8,
+    -6.76
+   ],
+   [
+    -36.22,
+    54.61,
+    50.07
+   ]
+  ],
+  "centroid": [
+   -52.7,
+   29.02,
+   9.1
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50445-fj1724",
+  "name": "Right prefrontal artery",
+  "fma": "FMA50445",
+  "fj": "FJ1724",
+  "bp": "BP21259",
+  "faces": 8236,
+  "segments": 2,
+  "bbox": [
+   [
+    32.75,
+    15.19,
+    -6.72
+   ],
+   [
+    60.63,
+    57.22,
+    50.1
+   ]
+  ],
+  "centroid": [
+   50.3,
+   33.26,
+   9.61
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76262-fj1725m",
+  "name": "Trunk of left vertebral artery",
+  "fma": "FMA76262",
+  "fj": "FJ1725M",
+  "bp": "BP23900",
+  "faces": 800,
+  "segments": 1,
+  "bbox": [
+   [
+    -35.3,
+    -72.48,
+    -164.96
+   ],
+   [
+    0.62,
+    -27.42,
+    -51.41
+   ]
+  ],
+  "centroid": [
+   -19.23,
+   -58.05,
+   -99.02
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76261-fj5015",
+  "name": "Trunk of right vertebral artery",
+  "fma": "FMA76261",
+  "fj": "FJ5015",
+  "bp": "BP23901",
+  "faces": 1896,
+  "segments": 2,
+  "bbox": [
+   [
+    -0.2,
+    -81.18,
+    -214.58
+   ],
+   [
+    36.83,
+    -27.38,
+    -51.4
+   ]
+  ],
+  "centroid": [
+   21.98,
+   -60.75,
+   -116.26
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50575-fj1726m",
+  "name": "Left superior cerebellar artery",
+  "fma": "FMA50575",
+  "fj": "FJ1726M",
+  "bp": "BP20958",
+  "faces": 406,
+  "segments": 1,
+  "bbox": [
+   [
+    -22.7,
+    -33.22,
+    -38.2
+   ],
+   [
+    0.65,
+    -9.19,
+    -26.64
+   ]
+  ],
+  "centroid": [
+   -13.81,
+   -17.53,
+   -32.02
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50574-fj1726",
+  "name": "Right superior cerebellar artery",
+  "fma": "FMA50574",
+  "fj": "FJ1726",
+  "bp": "BP23767",
+  "faces": 406,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.92,
+    -31.58,
+    -38.2
+   ],
+   [
+    23.19,
+    -8.55,
+    -26.62
+   ]
+  ],
+  "centroid": [
+   13.67,
+   -16.49,
+   -32.01
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50673-fj1727m",
+  "name": "Left posterior medial choroidal artery",
+  "fma": "FMA50673",
+  "fj": "FJ1727M",
+  "bp": "BP22525",
+  "faces": 880,
+  "segments": 1,
+  "bbox": [
+   [
+    -6.96,
+    -41.8,
+    -3.48
+   ],
+   [
+    -3.86,
+    7.5,
+    14.62
+   ]
+  ],
+  "centroid": [
+   -5.1,
+   -23.84,
+   8.88
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50672-fj1727",
+  "name": "Right posterior medial choroidal artery",
+  "fma": "FMA50672",
+  "fj": "FJ1727",
+  "bp": "BP21166",
+  "faces": 880,
+  "segments": 1,
+  "bbox": [
+   [
+    4.27,
+    -41.28,
+    -3.47
+   ],
+   [
+    7.92,
+    7.87,
+    14.63
+   ]
+  ],
+  "centroid": [
+   5.26,
+   -23.45,
+   8.89
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50697-fj1728m",
+  "name": "Superior vermian branch of medial branch of left superior cerebellar artery",
+  "fma": "FMA50697",
+  "fj": "FJ1728M",
+  "bp": "BP21152",
+  "faces": 412,
+  "segments": 1,
+  "bbox": [
+   [
+    -15.06,
+    -79.26,
+    -23.96
+   ],
+   [
+    -1.71,
+    -38.39,
+    -1.82
+   ]
+  ],
+  "centroid": [
+   -5.61,
+   -51.92,
+   -10.97
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50696-fj1728",
+  "name": "Superior vermian branch of medial branch of right superior cerebellar artery",
+  "fma": "FMA50696",
+  "fj": "FJ1728",
+  "bp": "BP22724",
+  "faces": 412,
+  "segments": 1,
+  "bbox": [
+   [
+    3.51,
+    -78.99,
+    -23.95
+   ],
+   [
+    15.92,
+    -37.3,
+    -1.8
+   ]
+  ],
+  "centroid": [
+   7.06,
+   -51.43,
+   -10.97
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50474-fj1729m",
+  "name": "Temporo-occipital branch of left middle cerebral artery",
+  "fma": "FMA50474",
+  "fj": "FJ1729M",
+  "bp": "BP21215",
+  "faces": 2416,
+  "segments": 1,
+  "bbox": [
+   [
+    -66.44,
+    -113.84,
+    -11.72
+   ],
+   [
+    -14.36,
+    6.76,
+    41.35
+   ]
+  ],
+  "centroid": [
+   -50.31,
+   -61.17,
+   15.45
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50473-fj1729",
+  "name": "Temporo-occipital branch of right middle cerebral artery",
+  "fma": "FMA50473",
+  "fj": "FJ1729",
+  "bp": "BP22193",
+  "faces": 4098,
+  "segments": 2,
+  "bbox": [
+   [
+    18.22,
+    -112.59,
+    -11.69
+   ],
+   [
+    67.91,
+    10.68,
+    41.38
+   ]
+  ],
+  "centroid": [
+   52.03,
+   -57.58,
+   15.55
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma78454-fj1730",
   "name": "Third ventricle",
   "fma": "FMA78454",
   "fj": "FJ1730",
   "bp": "BP24045",
   "faces": 3870,
+  "segments": 1,
   "bbox": [
    [
     -3.92,
@@ -32,6 +2463,7 @@
   "fj": "FJ1731",
   "bp": "BP21438",
   "faces": 6940,
+  "segments": 1,
   "bbox": [
    [
     -13.77,
@@ -58,6 +2490,7 @@
   "fj": "FJ1732",
   "bp": "BP21657",
   "faces": 3588,
+  "segments": 1,
   "bbox": [
    [
     -68.46,
@@ -84,6 +2517,7 @@
   "fj": "FJ1733",
   "bp": "BP23987",
   "faces": 3554,
+  "segments": 1,
   "bbox": [
    [
     25.42,
@@ -104,12 +2538,94 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma61961-fj1734",
+  "name": "Anterior commissure",
+  "fma": "FMA61961",
+  "fj": "FJ1734",
+  "bp": "BP24031",
+  "faces": 812,
+  "segments": 1,
+  "bbox": [
+   [
+    -13.03,
+    3.74,
+    -7.76
+   ],
+   [
+    13.26,
+    9.0,
+    -4.93
+   ]
+  ],
+  "centroid": [
+   0.08,
+   5.86,
+   -6.38
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73462-fj1735",
+  "name": "Brachium of left superior colliculus",
+  "fma": "FMA73462",
+  "fj": "FJ1735",
+  "bp": "BP23528",
+  "faces": 282,
+  "segments": 1,
+  "bbox": [
+   [
+    3.8,
+    -33.42,
+    -14.43
+   ],
+   [
+    19.91,
+    -26.85,
+    -7.1
+   ]
+  ],
+  "centroid": [
+   10.14,
+   -29.89,
+   -10.01
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73461-fj1736",
+  "name": "Brachium of right superior colliculus",
+  "fma": "FMA73461",
+  "fj": "FJ1736",
+  "bp": "BP23605",
+  "faces": 266,
+  "segments": 1,
+  "bbox": [
+   [
+    -18.0,
+    -33.92,
+    -14.42
+   ],
+   [
+    -1.91,
+    -27.1,
+    -7.05
+   ]
+  ],
+  "centroid": [
+   -8.19,
+   -30.55,
+   -10.07
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma78467-fj1738",
   "name": "Cerebral aqueduct",
   "fma": "FMA78467",
   "fj": "FJ1738",
   "bp": "BP22739",
   "faces": 518,
+  "segments": 1,
   "bbox": [
    [
     -1.07,
@@ -135,7 +2651,8 @@
   "fma": "FMA86464",
   "fj": "FJ1742",
   "bp": "BP21574",
-  "faces": 30232,
+  "faces": 23999,
+  "segments": 1,
   "bbox": [
    [
     -26.33,
@@ -149,9 +2666,36 @@
    ]
   ],
   "centroid": [
-   0.42,
-   -8.39,
-   14.13
+   0.43,
+   -8.61,
+   14.21
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma62032-fj1743",
+  "name": "Habenula",
+  "fma": "FMA62032",
+  "fj": "FJ1743",
+  "bp": "BP22971",
+  "faces": 384,
+  "segments": 1,
+  "bbox": [
+   [
+    -3.17,
+    -31.65,
+    -5.76
+   ],
+   [
+    4.95,
+    -27.05,
+    -0.9
+   ]
+  ],
+  "centroid": [
+   0.97,
+   -29.55,
+   -3.65
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
@@ -162,6 +2706,7 @@
   "fj": "FJ1744",
   "bp": "BP22402",
   "faces": 3290,
+  "segments": 1,
   "bbox": [
    [
     -66.06,
@@ -188,6 +2733,7 @@
   "fj": "FJ1745",
   "bp": "BP22397",
   "faces": 3292,
+  "segments": 1,
   "bbox": [
    [
     27.5,
@@ -214,6 +2760,7 @@
   "fj": "FJ1748",
   "bp": "BP23978",
   "faces": 2448,
+  "segments": 1,
   "bbox": [
    [
     -47.83,
@@ -240,6 +2787,7 @@
   "fj": "FJ1749",
   "bp": "BP21973",
   "faces": 2448,
+  "segments": 1,
   "bbox": [
    [
     27.35,
@@ -260,12 +2808,94 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma72907-fj1750",
+  "name": "Left internal capsule",
+  "fma": "FMA72907",
+  "fj": "FJ1750",
+  "bp": "BP22348",
+  "faces": 10740,
+  "segments": 1,
+  "bbox": [
+   [
+    -31.7,
+    -31.45,
+    -14.02
+   ],
+   [
+    -7.82,
+    23.5,
+    23.7
+   ]
+  ],
+  "centroid": [
+   -20.63,
+   -3.64,
+   4.44
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72906-fj1751",
+  "name": "Right internal capsule",
+  "fma": "FMA72906",
+  "fj": "FJ1751",
+  "bp": "BP22231",
+  "faces": 10742,
+  "segments": 1,
+  "bbox": [
+   [
+    8.2,
+    -29.19,
+    -13.99
+   ],
+   [
+    33.39,
+    25.18,
+    23.73
+   ]
+  ],
+  "centroid": [
+   21.23,
+   -2.02,
+   4.46
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma75351-fj1752",
+  "name": "Interventricular foramen",
+  "fma": "FMA75351",
+  "fj": "FJ1752",
+  "bp": "BP21789",
+  "faces": 1068,
+  "segments": 1,
+  "bbox": [
+   [
+    -6.61,
+    -2.66,
+    -1.3
+   ],
+   [
+    6.97,
+    5.24,
+    10.47
+   ]
+  ],
+  "centroid": [
+   0.24,
+   1.66,
+   4.87
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma72833-fj1753",
   "name": "Left amygdala",
   "fma": "FMA72833",
   "fj": "FJ1753",
   "bp": "BP20316",
   "faces": 382,
+  "segments": 1,
   "bbox": [
    [
     -36.17,
@@ -292,6 +2922,7 @@
   "fj": "FJ1754",
   "bp": "BP23921",
   "faces": 2544,
+  "segments": 1,
   "bbox": [
    [
     -36.51,
@@ -312,12 +2943,67 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma61934-fj1755",
+  "name": "Left choroid plexus of cerebral hemisphere",
+  "fma": "FMA61934",
+  "fj": "FJ1755",
+  "bp": "BP21421",
+  "faces": 4930,
+  "segments": 1,
+  "bbox": [
+   [
+    -39.28,
+    -42.2,
+    -24.48
+   ],
+   [
+    0.98,
+    3.3,
+    17.71
+   ]
+  ],
+  "centroid": [
+   -19.17,
+   -24.33,
+   0.69
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma61934-fj1803",
+  "name": "Right choroid plexus of cerebral hemisphere",
+  "fma": "FMA61934",
+  "fj": "FJ1803",
+  "bp": "BP21421",
+  "faces": 4942,
+  "segments": 1,
+  "bbox": [
+   [
+    0.46,
+    -40.48,
+    -24.49
+   ],
+   [
+    40.79,
+    3.59,
+    17.68
+   ]
+  ],
+  "centroid": [
+   20.74,
+   -22.81,
+   0.66
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma72831-fj1757",
   "name": "Left globus pallidus",
   "fma": "FMA72831",
   "fj": "FJ1757",
   "bp": "BP20205",
   "faces": 7080,
+  "segments": 1,
   "bbox": [
    [
     -31.23,
@@ -344,6 +3030,7 @@
   "fj": "FJ1759",
   "bp": "BP24047",
   "faces": 980,
+  "segments": 1,
   "bbox": [
    [
     -39.2,
@@ -364,12 +3051,121 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma62008-fj1760",
+  "name": "Hypothalamus",
+  "fma": "FMA62008",
+  "fj": "FJ1760",
+  "bp": "BP21294",
+  "faces": 4078,
+  "segments": 2,
+  "bbox": [
+   [
+    -7.92,
+    -8.2,
+    -28.27
+   ],
+   [
+    8.42,
+    7.84,
+    -7.3
+   ]
+  ],
+  "centroid": [
+   0.23,
+   0.96,
+   -16.44
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73464-fj1761",
+  "name": "Brachium of left inferior colliculus",
+  "fma": "FMA73464",
+  "fj": "FJ1761",
+  "bp": "BP23602",
+  "faces": 308,
+  "segments": 1,
+  "bbox": [
+   [
+    -14.97,
+    -35.51,
+    -19.48
+   ],
+   [
+    -2.25,
+    -25.74,
+    -8.6
+   ]
+  ],
+  "centroid": [
+   -8.66,
+   -30.8,
+   -14.24
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73435-fj1762",
+  "name": "Left inferior colliculus",
+  "fma": "FMA73435",
+  "fj": "FJ1762",
+  "bp": "BP22120",
+  "faces": 156,
+  "segments": 1,
+  "bbox": [
+   [
+    -7.6,
+    -37.23,
+    -22.93
+   ],
+   [
+    0.67,
+    -28.55,
+    -15.01
+   ]
+  ],
+  "centroid": [
+   -3.52,
+   -33.16,
+   -18.88
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73304-fj1766",
+  "name": "Left lateral geniculate body",
+  "fma": "FMA73304",
+  "fj": "FJ1766",
+  "bp": "BP20469",
+  "faces": 196,
+  "segments": 1,
+  "bbox": [
+   [
+    -26.95,
+    -31.58,
+    -16.53
+   ],
+   [
+    -17.79,
+    -21.57,
+    -7.73
+   ]
+  ],
+  "centroid": [
+   -22.02,
+   -27.06,
+   -12.49
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma78450-fj1767",
   "name": "Left lateral ventricle",
   "fma": "FMA78450",
   "fj": "FJ1767",
   "bp": "BP21451",
   "faces": 17968,
+  "segments": 1,
   "bbox": [
    [
     -40.72,
@@ -391,11 +3187,12 @@
  },
  {
   "id": "fma62004-fj1769",
-  "name": "Medulla oblongata",
+  "name": "Left medulla oblongata",
   "fma": "FMA62004",
   "fj": "FJ1769",
   "bp": "BP23201",
   "faces": 6036,
+  "segments": 1,
   "bbox": [
    [
     -12.99,
@@ -416,12 +3213,40 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma62004-fj1831",
+  "name": "Right medulla oblongata",
+  "fma": "FMA62004",
+  "fj": "FJ1831",
+  "bp": "BP23201",
+  "faces": 6060,
+  "segments": 1,
+  "bbox": [
+   [
+    1.0,
+    -77.27,
+    -88.61
+   ],
+   [
+    15.65,
+    -30.53,
+    -47.41
+   ]
+  ],
+  "centroid": [
+   6.08,
+   -53.58,
+   -65.52
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma67943-fj1775",
-  "name": "Pons",
+  "name": "Left pons",
   "fma": "FMA67943",
   "fj": "FJ1775",
   "bp": "BP22028",
   "faces": 10304,
+  "segments": 1,
   "bbox": [
    [
     -21.51,
@@ -442,12 +3267,40 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma67943-fj1822",
+  "name": "Right pons",
+  "fma": "FMA67943",
+  "fj": "FJ1822",
+  "bp": "BP22028",
+  "faces": 10346,
+  "segments": 1,
+  "bbox": [
+   [
+    0.52,
+    -50.23,
+    -54.9
+   ],
+   [
+    23.74,
+    -8.2,
+    -22.68
+   ]
+  ],
+  "centroid": [
+   10.26,
+   -31.11,
+   -37.32
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma72829-fj1776",
   "name": "Left putamen",
   "fma": "FMA72829",
   "fj": "FJ1776",
   "bp": "BP20313",
   "faces": 7056,
+  "segments": 1,
   "bbox": [
    [
     -37.18,
@@ -468,12 +3321,67 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma72940-fj1778",
+  "name": "Left stria terminalis",
+  "fma": "FMA72940",
+  "fj": "FJ1778",
+  "bp": "BP20186",
+  "faces": 690,
+  "segments": 1,
+  "bbox": [
+   [
+    -29.39,
+    -36.36,
+    -22.32
+   ],
+   [
+    -2.64,
+    4.94,
+    16.02
+   ]
+  ],
+  "centroid": [
+   -16.04,
+   -16.16,
+   0.85
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73423-fj1779",
+  "name": "Left superior colliculus",
+  "fma": "FMA73423",
+  "fj": "FJ1779",
+  "bp": "BP20130",
+  "faces": 180,
+  "segments": 1,
+  "bbox": [
+   [
+    -7.51,
+    -33.87,
+    -13.99
+   ],
+   [
+    0.84,
+    -27.13,
+    -7.74
+   ]
+  ],
+  "centroid": [
+   -3.47,
+   -30.31,
+   -11.03
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma67944-fj1781",
-  "name": "Cerebellum",
+  "name": "Left cerebellum",
   "fma": "FMA67944",
   "fj": "FJ1781",
   "bp": "BP22033",
   "faces": 23818,
+  "segments": 1,
   "bbox": [
    [
     -55.35,
@@ -494,12 +3402,40 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma67944-fj1830",
+  "name": "Right cerebellum",
+  "fma": "FMA67944",
+  "fj": "FJ1830",
+  "bp": "BP22033",
+  "faces": 23882,
+  "segments": 1,
+  "bbox": [
+   [
+    1.33,
+    -101.18,
+    -61.44
+   ],
+   [
+    58.8,
+    -40.18,
+    -2.62
+   ]
+  ],
+  "centroid": [
+   22.62,
+   -68.74,
+   -33.6
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma258716-fj1782",
   "name": "Left thalamus",
   "fma": "FMA258716",
   "fj": "FJ1782",
   "bp": "BP21462",
   "faces": 1702,
+  "segments": 1,
   "bbox": [
    [
     -24.85,
@@ -526,6 +3462,7 @@
   "fj": "FJ1787",
   "bp": "BP22367",
   "faces": 3416,
+  "segments": 1,
   "bbox": [
    [
     -53.83,
@@ -552,6 +3489,7 @@
   "fj": "FJ1788",
   "bp": "BP20959",
   "faces": 3326,
+  "segments": 1,
   "bbox": [
    [
     16.08,
@@ -578,6 +3516,7 @@
   "fj": "FJ1789",
   "bp": "BP22697",
   "faces": 2710,
+  "segments": 1,
   "bbox": [
    [
     -73.42,
@@ -604,6 +3543,7 @@
   "fj": "FJ1790",
   "bp": "BP22182",
   "faces": 2754,
+  "segments": 1,
   "bbox": [
    [
     36.11,
@@ -630,6 +3570,7 @@
   "fj": "FJ1795",
   "bp": "BP21418",
   "faces": 580,
+  "segments": 1,
   "bbox": [
    [
     -2.41,
@@ -655,7 +3596,8 @@
   "fma": "FMA13889",
   "fj": "FJ1796",
   "bp": "BP23814",
-  "faces": 1164,
+  "faces": 2302,
+  "segments": 2,
   "bbox": [
    [
     -6.35,
@@ -682,6 +3624,7 @@
   "fj": "FJ1797",
   "bp": "BP22179",
   "faces": 3604,
+  "segments": 1,
   "bbox": [
    [
     -72.28,
@@ -708,6 +3651,7 @@
   "fj": "FJ1798",
   "bp": "BP22140",
   "faces": 3604,
+  "segments": 1,
   "bbox": [
    [
     2.27,
@@ -728,12 +3672,40 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma62072-fj1799",
+  "name": "Posterior commissure",
+  "fma": "FMA62072",
+  "fj": "FJ1799",
+  "bp": "BP22899",
+  "faces": 834,
+  "segments": 1,
+  "bbox": [
+   [
+    -7.35,
+    -29.05,
+    -8.44
+   ],
+   [
+    9.17,
+    -23.28,
+    -5.63
+   ]
+  ],
+  "centroid": [
+   0.97,
+   -26.08,
+   -6.8
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma72662-fj1800",
   "name": "Left precentral gyrus",
   "fma": "FMA72662",
   "fj": "FJ1800",
   "bp": "BP22183",
   "faces": 4042,
+  "segments": 1,
   "bbox": [
    [
     -67.93,
@@ -760,6 +3732,7 @@
   "fj": "FJ1801",
   "bp": "BP22215",
   "faces": 4042,
+  "segments": 1,
   "bbox": [
    [
     2.03,
@@ -786,6 +3759,7 @@
   "fj": "FJ1802",
   "bp": "BP20207",
   "faces": 2570,
+  "segments": 1,
   "bbox": [
    [
     2.76,
@@ -812,6 +3786,7 @@
   "fj": "FJ1805",
   "bp": "BP20297",
   "faces": 5344,
+  "segments": 1,
   "bbox": [
    [
     14.05,
@@ -838,6 +3813,7 @@
   "fj": "FJ1807",
   "bp": "BP24044",
   "faces": 1020,
+  "segments": 1,
   "bbox": [
    [
     19.53,
@@ -858,12 +3834,94 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma73463-fj1809",
+  "name": "Brachium of right inferior colliculus",
+  "fma": "FMA73463",
+  "fj": "FJ1809",
+  "bp": "BP22786",
+  "faces": 260,
+  "segments": 1,
+  "bbox": [
+   [
+    4.23,
+    -35.06,
+    -19.44
+   ],
+   [
+    16.72,
+    -24.66,
+    -8.57
+   ]
+  ],
+  "centroid": [
+   10.56,
+   -30.04,
+   -14.22
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73434-fj1810",
+  "name": "Right inferior colliculus",
+  "fma": "FMA73434",
+  "fj": "FJ1810",
+  "bp": "BP23935",
+  "faces": 204,
+  "segments": 1,
+  "bbox": [
+   [
+    1.32,
+    -37.11,
+    -22.89
+   ],
+   [
+    9.59,
+    -28.07,
+    -14.96
+   ]
+  ],
+  "centroid": [
+   5.48,
+   -32.73,
+   -18.86
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73303-fj1813",
+  "name": "Right lateral geniculate body",
+  "fma": "FMA73303",
+  "fj": "FJ1813",
+  "bp": "BP20476",
+  "faces": 604,
+  "segments": 1,
+  "bbox": [
+   [
+    17.42,
+    -31.22,
+    -15.94
+   ],
+   [
+    26.35,
+    -20.13,
+    -7.75
+   ]
+  ],
+  "centroid": [
+   21.95,
+   -26.63,
+   -12.13
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma78449-fj1814",
   "name": "Right lateral ventricle",
   "fma": "FMA78449",
   "fj": "FJ1814",
   "bp": "BP22737",
   "faces": 18016,
+  "segments": 1,
   "bbox": [
    [
     0.22,
@@ -884,28 +3942,56 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
-  "id": "fma67943-fj1822",
-  "name": "Pons",
-  "fma": "FMA67943",
-  "fj": "FJ1822",
-  "bp": "BP22028",
-  "faces": 10346,
+  "id": "fma73310-fj1816m",
+  "name": "Left medial geniculate body",
+  "fma": "FMA73310",
+  "fj": "FJ1816M",
+  "bp": "BP23854",
+  "faces": 198,
+  "segments": 1,
   "bbox": [
    [
-    0.52,
-    -50.23,
-    -54.9
+    -19.5,
+    -31.16,
+    -17.3
    ],
    [
-    23.74,
-    -8.2,
-    -22.68
+    -12.48,
+    -24.64,
+    -8.1
    ]
   ],
   "centroid": [
-   10.26,
-   -31.11,
-   -37.32
+   -16.0,
+   -27.5,
+   -12.39
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73309-fj1816",
+  "name": "Right medial geniculate body",
+  "fma": "FMA73309",
+  "fj": "FJ1816",
+  "bp": "BP20529",
+  "faces": 198,
+  "segments": 1,
+  "bbox": [
+   [
+    12.8,
+    -29.98,
+    -17.28
+   ],
+   [
+    19.75,
+    -23.29,
+    -8.08
+   ]
+  ],
+  "centroid": [
+   16.32,
+   -26.28,
+   -12.38
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
@@ -916,6 +4002,7 @@
   "fj": "FJ1823",
   "bp": "BP20196",
   "faces": 7064,
+  "segments": 1,
   "bbox": [
    [
     17.99,
@@ -936,12 +4023,67 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma72939-fj1825",
+  "name": "Right stria terminalis",
+  "fma": "FMA72939",
+  "fj": "FJ1825",
+  "bp": "BP24069",
+  "faces": 764,
+  "segments": 1,
+  "bbox": [
+   [
+    -28.49,
+    -34.54,
+    -22.5
+   ],
+   [
+    30.94,
+    5.38,
+    16.06
+   ]
+  ],
+  "centroid": [
+   17.3,
+   -14.95,
+   0.74
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73422-fj1826",
+  "name": "Right superior colliculus",
+  "fma": "FMA73422",
+  "fj": "FJ1826",
+  "bp": "BP22114",
+  "faces": 176,
+  "segments": 1,
+  "bbox": [
+   [
+    1.11,
+    -33.59,
+    -14.03
+   ],
+   [
+    9.33,
+    -26.76,
+    -7.73
+   ]
+  ],
+  "centroid": [
+   5.35,
+   -30.02,
+   -11.07
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma258714-fj1827",
   "name": "Right thalamus",
   "fma": "FMA258714",
   "fj": "FJ1827",
   "bp": "BP21533",
   "faces": 758,
+  "segments": 1,
   "bbox": [
    [
     1.17,
@@ -968,6 +4110,7 @@
   "fj": "FJ1829",
   "bp": "BP20277",
   "faces": 384,
+  "segments": 1,
   "bbox": [
    [
     18.4,
@@ -988,64 +4131,13 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
-  "id": "fma67944-fj1830",
-  "name": "Cerebellum",
-  "fma": "FMA67944",
-  "fj": "FJ1830",
-  "bp": "BP22033",
-  "faces": 23882,
-  "bbox": [
-   [
-    1.33,
-    -101.18,
-    -61.44
-   ],
-   [
-    58.8,
-    -40.18,
-    -2.62
-   ]
-  ],
-  "centroid": [
-   22.62,
-   -68.74,
-   -33.6
-  ],
-  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
- },
- {
-  "id": "fma62004-fj1831",
-  "name": "Medulla oblongata",
-  "fma": "FMA62004",
-  "fj": "FJ1831",
-  "bp": "BP23201",
-  "faces": 6060,
-  "bbox": [
-   [
-    1.0,
-    -77.27,
-    -88.61
-   ],
-   [
-    15.65,
-    -30.53,
-    -47.41
-   ]
-  ],
-  "centroid": [
-   6.08,
-   -53.58,
-   -65.52
-  ],
-  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
- },
- {
   "id": "fma72654-fj1833",
   "name": "Left superior frontal gyrus",
   "fma": "FMA72654",
   "fj": "FJ1833",
   "bp": "BP22376",
   "faces": 6452,
+  "segments": 1,
   "bbox": [
    [
     -34.36,
@@ -1072,6 +4164,7 @@
   "fj": "FJ1834",
   "bp": "BP23996",
   "faces": 6450,
+  "segments": 1,
   "bbox": [
    [
     0.03,
@@ -1098,6 +4191,7 @@
   "fj": "FJ1841",
   "bp": "BP22180",
   "faces": 2344,
+  "segments": 1,
   "bbox": [
    [
     -73.59,
@@ -1124,6 +4218,7 @@
   "fj": "FJ1842",
   "bp": "BP22255",
   "faces": 2314,
+  "segments": 1,
   "bbox": [
    [
     26.68,
@@ -1144,12 +4239,3847 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma83966-fj1843",
+  "name": "Tentorium cerebelli",
+  "fma": "FMA83966",
+  "fj": "FJ1843",
+  "bp": "BP24046",
+  "faces": 21924,
+  "segments": 1,
+  "bbox": [
+   [
+    4.38,
+    -105.67,
+    -48.5
+   ],
+   [
+    68.99,
+    -18.14,
+    -2.3
+   ]
+  ],
+  "centroid": [
+   31.02,
+   -64.72,
+   -21.72
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76647-fj1844",
+  "name": "Trunk of basilar artery",
+  "fma": "FMA76647",
+  "fj": "FJ1844",
+  "bp": "BP23088",
+  "faces": 244,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.99,
+    -31.08,
+    -55.01
+   ],
+   [
+    2.66,
+    -6.76,
+    -26.52
+   ]
+  ],
+  "centroid": [
+   0.7,
+   -18.05,
+   -42.23
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52734-fj3200",
+  "name": "Frontal bone",
+  "fma": "FMA52734",
+  "fj": "FJ3200",
+  "bp": "BP22997",
+  "faces": 23999,
+  "segments": 2,
+  "bbox": [
+   [
+    -67.65,
+    22.07,
+    -55.93
+   ],
+   [
+    66.62,
+    86.25,
+    73.71
+   ]
+  ],
+  "centroid": [
+   -1.37,
+   57.29,
+   2.84
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma54738-fj3263",
+  "name": "Left inferior nasal concha",
+  "fma": "FMA54738",
+  "fj": "FJ3263",
+  "bp": "BP22607",
+  "faces": 1476,
+  "segments": 2,
+  "bbox": [
+   [
+    -18.24,
+    11.49,
+    -98.29
+   ],
+   [
+    -5.85,
+    47.13,
+    -77.59
+   ]
+  ],
+  "centroid": [
+   -10.62,
+   32.85,
+   -87.77
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma53646-fj3265",
+  "name": "Left lacrimal bone",
+  "fma": "FMA53646",
+  "fj": "FJ3265",
+  "bp": "BP23042",
+  "faces": 1274,
+  "segments": 2,
+  "bbox": [
+   [
+    -20.62,
+    36.05,
+    -79.72
+   ],
+   [
+    -9.22,
+    54.67,
+    -49.24
+   ]
+  ],
+  "centroid": [
+   -14.05,
+   45.58,
+   -65.51
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma53650-fj3269",
+  "name": "Left maxilla",
+  "fma": "FMA53650",
+  "fj": "FJ3269",
+  "bp": "BP23755",
+  "faces": 10284,
+  "segments": 2,
+  "bbox": [
+   [
+    -50.01,
+    3.51,
+    -121.54
+   ],
+   [
+    2.24,
+    66.95,
+    -45.06
+   ]
+  ],
+  "centroid": [
+   -20.66,
+   33.64,
+   -90.63
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma53656-fj3273",
+  "name": "Left palatine bone",
+  "fma": "FMA53656",
+  "fj": "FJ3273",
+  "bp": "BP23315",
+  "faces": 3782,
+  "segments": 2,
+  "bbox": [
+   [
+    -29.95,
+    -10.94,
+    -101.83
+   ],
+   [
+    1.2,
+    26.42,
+    -52.54
+   ]
+  ],
+  "centroid": [
+   -13.26,
+   10.34,
+   -80.54
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52789-fj3274",
+  "name": "Left parietal bone",
+  "fma": "FMA52789",
+  "fj": "FJ3274",
+  "bp": "BP23158",
+  "faces": 23999,
+  "segments": 2,
+  "bbox": [
+   [
+    -80.0,
+    -108.83,
+    -25.91
+   ],
+   [
+    9.39,
+    41.59,
+    94.73
+   ]
+  ],
+  "centroid": [
+   -47.18,
+   -32.99,
+   46.11
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52739-fj3281",
+  "name": "Left temporal bone",
+  "fma": "FMA52739",
+  "fj": "FJ3281",
+  "bp": "BP23760",
+  "faces": 9844,
+  "segments": 2,
+  "bbox": [
+   [
+    -77.46,
+    -79.38,
+    -84.63
+   ],
+   [
+    -12.33,
+    18.39,
+    -3.79
+   ]
+  ],
+  "centroid": [
+   -54.68,
+   -30.65,
+   -42.76
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52893-fj6397",
+  "name": "Left zygomatic bone",
+  "fma": "FMA52893",
+  "fj": "FJ6397",
+  "bp": "BP23337",
+  "faces": 3044,
+  "segments": 2,
+  "bbox": [
+   [
+    -68.39,
+    2.24,
+    -95.23
+   ],
+   [
+    -35.56,
+    49.16,
+    -37.1
+   ]
+  ],
+  "centroid": [
+   -52.07,
+   28.34,
+   -67.81
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52748-fj3289",
+  "name": "Mandible",
+  "fma": "FMA52748",
+  "fj": "FJ3289",
+  "bp": "BP22817",
+  "faces": 11120,
+  "segments": 2,
+  "bbox": [
+   [
+    -56.23,
+    -34.35,
+    -163.5
+   ],
+   [
+    57.75,
+    37.16,
+    -53.77
+   ]
+  ],
+  "centroid": [
+   0.28,
+   -1.79,
+   -114.56
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52735-fj3309",
+  "name": "Occipital bone",
+  "fma": "FMA52735",
+  "fj": "FJ3309",
+  "bp": "BP23972",
+  "faces": 24000,
+  "segments": 2,
+  "bbox": [
+   [
+    -63.67,
+    -121.23,
+    -77.9
+   ],
+   [
+    67.79,
+    -13.7,
+    58.16
+   ]
+  ],
+  "centroid": [
+   2.34,
+   -88.39,
+   -26.27
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma54737-fj3369",
+  "name": "Right inferior nasal concha",
+  "fma": "FMA54737",
+  "fj": "FJ3369",
+  "bp": "BP23235",
+  "faces": 1428,
+  "segments": 2,
+  "bbox": [
+   [
+    6.12,
+    6.91,
+    -96.26
+   ],
+   [
+    16.6,
+    45.38,
+    -79.25
+   ]
+  ],
+  "centroid": [
+   10.77,
+   28.74,
+   -88.15
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma53645-fj3371",
+  "name": "Right lacrimal bone",
+  "fma": "FMA53645",
+  "fj": "FJ3371",
+  "bp": "BP23129",
+  "faces": 1256,
+  "segments": 2,
+  "bbox": [
+   [
+    6.35,
+    37.57,
+    -77.08
+   ],
+   [
+    18.34,
+    58.25,
+    -49.34
+   ]
+  ],
+  "centroid": [
+   11.86,
+   47.12,
+   -63.4
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma53649-fj6468",
+  "name": "Right maxilla",
+  "fma": "FMA53649",
+  "fj": "FJ6468",
+  "bp": "BP23661",
+  "faces": 10682,
+  "segments": 2,
+  "bbox": [
+   [
+    -1.02,
+    6.36,
+    -121.51
+   ],
+   [
+    50.01,
+    68.57,
+    -45.01
+   ]
+  ],
+  "centroid": [
+   20.07,
+   35.54,
+   -90.57
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma53655-fj6471",
+  "name": "Right palatine bone",
+  "fma": "FMA53655",
+  "fj": "FJ6471",
+  "bp": "BP24091",
+  "faces": 3604,
+  "segments": 2,
+  "bbox": [
+   [
+    -1.01,
+    -10.11,
+    -101.47
+   ],
+   [
+    30.33,
+    27.46,
+    -52.52
+   ]
+  ],
+  "centroid": [
+   13.47,
+   11.55,
+   -80.45
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52788-fj3380",
+  "name": "Right parietal bone",
+  "fma": "FMA52788",
+  "fj": "FJ3380",
+  "bp": "BP23064",
+  "faces": 24000,
+  "segments": 2,
+  "bbox": [
+   [
+    -4.25,
+    -106.73,
+    -25.76
+   ],
+   [
+    81.91,
+    43.91,
+    94.69
+   ]
+  ],
+  "centroid": [
+   49.8,
+   -30.29,
+   45.9
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52738-fj3386",
+  "name": "Right temporal bone",
+  "fma": "FMA52738",
+  "fj": "FJ3386",
+  "bp": "BP23685",
+  "faces": 9832,
+  "segments": 2,
+  "bbox": [
+   [
+    13.66,
+    -74.53,
+    -84.62
+   ],
+   [
+    79.57,
+    22.97,
+    -3.25
+   ]
+  ],
+  "centroid": [
+   56.52,
+   -26.46,
+   -42.72
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52892-fj3392",
+  "name": "Right zygomatic bone",
+  "fma": "FMA52892",
+  "fj": "FJ3392",
+  "bp": "BP23110",
+  "faces": 3064,
+  "segments": 2,
+  "bbox": [
+   [
+    34.21,
+    7.16,
+    -95.14
+   ],
+   [
+    68.53,
+    53.08,
+    -36.93
+   ]
+  ],
+  "centroid": [
+   51.15,
+   32.09,
+   -67.48
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52736-fj3394",
+  "name": "Sphenoid bone",
+  "fma": "FMA52736",
+  "fj": "FJ3394",
+  "bp": "BP23082",
+  "faces": 16188,
+  "segments": 2,
+  "bbox": [
+   [
+    -59.91,
+    -24.03,
+    -90.16
+   ],
+   [
+    59.41,
+    41.99,
+    -17.55
+   ]
+  ],
+  "centroid": [
+   -0.07,
+   8.17,
+   -48.16
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma75867-fj3483",
+  "name": "Trunk of left internal carotid artery",
+  "fma": "FMA75867",
+  "fj": "FJ3483",
+  "bp": "BP23219",
+  "faces": 170,
+  "segments": 1,
+  "bbox": [
+   [
+    -23.64,
+    -90.38,
+    -267.32
+   ],
+   [
+    -10.31,
+    -51.3,
+    -197.98
+   ]
+  ],
+  "centroid": [
+   -16.95,
+   -70.85,
+   -233.16
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma4762-fj3485",
+  "name": "Left internal jugular vein",
+  "fma": "FMA4762",
+  "fj": "FJ3485",
+  "bp": "BP20878",
+  "faces": 280,
+  "segments": 1,
+  "bbox": [
+   [
+    -32.5,
+    -61.94,
+    -240.01
+   ],
+   [
+    -18.5,
+    -40.06,
+    -193.0
+   ]
+  ],
+  "centroid": [
+   -26.1,
+   -51.46,
+   -216.45
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma4754-fj3585",
+  "name": "Right internal jugular vein",
+  "fma": "FMA4754",
+  "fj": "FJ3585",
+  "bp": "BP24100",
+  "faces": 226,
+  "segments": 1,
+  "bbox": [
+   [
+    23.85,
+    -57.37,
+    -236.82
+   ],
+   [
+    34.21,
+    -37.92,
+    -191.61
+   ]
+  ],
+  "centroid": [
+   28.82,
+   -48.08,
+   -214.11
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50378-fj3678m",
+  "name": "Anterolateral central branch of left middle cerebral artery",
+  "fma": "FMA50378",
+  "fj": "FJ3678M",
+  "bp": "BP19725",
+  "faces": 1542,
+  "segments": 2,
+  "bbox": [
+   [
+    -37.96,
+    -15.41,
+    -26.82
+   ],
+   [
+    -14.69,
+    26.22,
+    16.34
+   ]
+  ],
+  "centroid": [
+   -28.3,
+   5.55,
+   -9.17
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50377-fj5031",
+  "name": "Anterolateral central branch of right middle cerebral artery",
+  "fma": "FMA50377",
+  "fj": "FJ5031",
+  "bp": "BP23809",
+  "faces": 3072,
+  "segments": 4,
+  "bbox": [
+   [
+    5.55,
+    -16.05,
+    -26.33
+   ],
+   [
+    40.97,
+    13.07,
+    30.72
+   ]
+  ],
+  "centroid": [
+   25.84,
+   3.81,
+   -4.47
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma242857-fj3855",
+  "name": "Choroid plexus of right lateral ventricle",
+  "fma": "FMA242857",
+  "fj": "FJ3855",
+  "bp": "BP29570",
+  "faces": 4838,
+  "segments": 1,
+  "bbox": [
+   [
+    0.46,
+    -40.34,
+    -24.49
+   ],
+   [
+    40.81,
+    3.61,
+    17.81
+   ]
+  ],
+  "centroid": [
+   20.72,
+   -22.79,
+   0.68
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma266041-fj7446",
+  "name": "Right half of tentorium cerebelli",
+  "fma": "FMA266041",
+  "fj": "FJ7446",
+  "bp": "BP29614",
+  "faces": 23999,
+  "segments": 2,
+  "bbox": [
+   [
+    1.05,
+    -111.22,
+    -48.48
+   ],
+   [
+    68.99,
+    -15.66,
+    -2.29
+   ]
+  ],
+  "centroid": [
+   29.53,
+   -65.64,
+   -20.24
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma266056-fj3890",
+  "name": "Cerebral hemisphere segment of dura mater",
+  "fma": "FMA266056",
+  "fj": "FJ3890",
+  "bp": "BP29622",
+  "faces": 24000,
+  "segments": 1,
+  "bbox": [
+   [
+    -77.39,
+    -115.87,
+    -70.75
+   ],
+   [
+    78.96,
+    83.57,
+    89.41
+   ]
+  ],
+  "centroid": [
+   0.67,
+   -20.36,
+   7.18
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50886-fj3891",
+  "name": "Right abducens nerve",
+  "fma": "FMA50886",
+  "fj": "FJ3891",
+  "bp": "BP29534",
+  "faces": 1090,
+  "segments": 1,
+  "bbox": [
+   [
+    4.68,
+    -31.77,
+    -54.95
+   ],
+   [
+    37.0,
+    33.5,
+    -36.33
+   ]
+  ],
+  "centroid": [
+   16.68,
+   -0.88,
+   -43.28
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50890-fj3894",
+  "name": "Right vestibulocochlear nerve",
+  "fma": "FMA50890",
+  "fj": "FJ3894",
+  "bp": "BP29543",
+  "faces": 1672,
+  "segments": 1,
+  "bbox": [
+   [
+    13.02,
+    -43.1,
+    -56.29
+   ],
+   [
+    49.03,
+    -25.54,
+    -48.81
+   ]
+  ],
+  "centroid": [
+   30.97,
+   -36.52,
+   -52.7
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma65421-fj3899",
+  "name": "Trunk of right facial nerve",
+  "fma": "FMA65421",
+  "fj": "FJ3899",
+  "bp": "BP29410",
+  "faces": 4672,
+  "segments": 1,
+  "bbox": [
+   [
+    12.72,
+    -46.13,
+    -121.55
+   ],
+   [
+    56.6,
+    -29.23,
+    -50.0
+   ]
+  ],
+  "centroid": [
+   42.3,
+   -37.03,
+   -76.79
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50894-fj3939",
+  "name": "Left glossopharyngeal nerve",
+  "fma": "FMA50894",
+  "fj": "FJ3939",
+  "bp": "BP29500",
+  "faces": 14026,
+  "segments": 2,
+  "bbox": [
+   [
+    -38.31,
+    -49.74,
+    -176.03
+   ],
+   [
+    40.65,
+    -6.08,
+    -52.13
+   ]
+  ],
+  "centroid": [
+   1.09,
+   -35.69,
+   -105.52
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma223162-fj3914",
+  "name": "Left olfactory tract",
+  "fma": "FMA223162",
+  "fj": "FJ3914",
+  "bp": "BP29371",
+  "faces": 1292,
+  "segments": 1,
+  "bbox": [
+   [
+    -10.04,
+    3.03,
+    -35.67
+   ],
+   [
+    -3.03,
+    51.56,
+    -18.13
+   ]
+  ],
+  "centroid": [
+   -6.75,
+   25.26,
+   -30.44
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52593-fj3915",
+  "name": "Left olfactory nerve",
+  "fma": "FMA52593",
+  "fj": "FJ3915",
+  "bp": "BP29573",
+  "faces": 3090,
+  "segments": 6,
+  "bbox": [
+   [
+    -6.03,
+    23.76,
+    -60.93
+   ],
+   [
+    -1.9,
+    48.73,
+    -33.75
+   ]
+  ],
+  "centroid": [
+   -3.92,
+   36.88,
+   -46.12
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52623-fj3921",
+  "name": "Left ophthalmic nerve",
+  "fma": "FMA52623",
+  "fj": "FJ3921",
+  "bp": "BP23833",
+  "faces": 1000,
+  "segments": 1,
+  "bbox": [
+   [
+    -23.36,
+    -27.09,
+    -38.23
+   ],
+   [
+    -18.33,
+    15.13,
+    -35.0
+   ]
+  ],
+  "centroid": [
+   -21.05,
+   -6.47,
+   -36.47
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma18157-fj3926",
+  "name": "Trunk of left vagus nerve",
+  "fma": "FMA18157",
+  "fj": "FJ3926",
+  "bp": "BP29477",
+  "faces": 23999,
+  "segments": 1,
+  "bbox": [
+   [
+    -55.26,
+    -174.33,
+    -525.53
+   ],
+   [
+    0.92,
+    -45.41,
+    -53.41
+   ]
+  ],
+  "centroid": [
+   -23.57,
+   -101.83,
+   -280.57
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50887-fj3927",
+  "name": "Left abducens nerve",
+  "fma": "FMA50887",
+  "fj": "FJ3927",
+  "bp": "BP29502",
+  "faces": 1146,
+  "segments": 1,
+  "bbox": [
+   [
+    -37.93,
+    -32.05,
+    -54.97
+   ],
+   [
+    -2.77,
+    30.71,
+    -36.34
+   ]
+  ],
+  "centroid": [
+   -16.07,
+   -2.23,
+   -43.33
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma81015-fj3928",
+  "name": "Trunk of left accessory nerve",
+  "fma": "FMA81015",
+  "fj": "FJ3928",
+  "bp": "BP29554",
+  "faces": 8018,
+  "segments": 1,
+  "bbox": [
+   [
+    -50.7,
+    -106.2,
+    -190.36
+   ],
+   [
+    -3.78,
+    -46.36,
+    -55.58
+   ]
+  ],
+  "centroid": [
+   -34.37,
+   -59.44,
+   -101.11
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50891-fj3932",
+  "name": "Left vestibulocochlear nerve",
+  "fma": "FMA50891",
+  "fj": "FJ3932",
+  "bp": "BP29535",
+  "faces": 1714,
+  "segments": 1,
+  "bbox": [
+   [
+    -47.22,
+    -44.04,
+    -56.35
+   ],
+   [
+    -10.54,
+    -29.1,
+    -48.82
+   ]
+  ],
+  "centroid": [
+   -28.7,
+   -38.77,
+   -52.72
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma65422-fj3938",
+  "name": "Trunk of left facial nerve",
+  "fma": "FMA65422",
+  "fj": "FJ3938",
+  "bp": "BP29462",
+  "faces": 4790,
+  "segments": 1,
+  "bbox": [
+   [
+    -54.39,
+    -48.17,
+    -121.6
+   ],
+   [
+    -10.32,
+    -32.9,
+    -50.0
+   ]
+  ],
+  "centroid": [
+   -39.98,
+   -40.12,
+   -76.81
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma80483-fj3941",
+  "name": "Trunk of left hypoglossal nerve",
+  "fma": "FMA80483",
+  "fj": "FJ3941",
+  "bp": "BP29459",
+  "faces": 1682,
+  "segments": 1,
+  "bbox": [
+   [
+    -33.3,
+    -47.87,
+    -127.1
+   ],
+   [
+    -5.95,
+    20.73,
+    -55.46
+   ]
+  ],
+  "centroid": [
+   -18.88,
+   -32.29,
+   -90.68
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52998-fj3951",
+  "name": "Left mandibular nerve",
+  "fma": "FMA52998",
+  "fj": "FJ3951",
+  "bp": "BP29377",
+  "faces": 668,
+  "segments": 1,
+  "bbox": [
+   [
+    -41.55,
+    -26.91,
+    -89.12
+   ],
+   [
+    -21.81,
+    -10.47,
+    -36.5
+   ]
+  ],
+  "centroid": [
+   -30.66,
+   -14.74,
+   -59.87
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma65426-fj3968",
+  "name": "Trunk of left oculomotor nerve",
+  "fma": "FMA65426",
+  "fj": "FJ3968",
+  "bp": "BP29438",
+  "faces": 648,
+  "segments": 1,
+  "bbox": [
+   [
+    -21.61,
+    -12.19,
+    -37.69
+   ],
+   [
+    -1.06,
+    19.34,
+    -23.41
+   ]
+  ],
+  "centroid": [
+   -11.96,
+   2.71,
+   -31.03
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma65424-fj3980",
+  "name": "Trunk of left trigeminal nerve",
+  "fma": "FMA65424",
+  "fj": "FJ3980",
+  "bp": "BP29463",
+  "faces": 246,
+  "segments": 1,
+  "bbox": [
+   [
+    -23.88,
+    -33.44,
+    -39.29
+   ],
+   [
+    -19.45,
+    -24.81,
+    -35.35
+   ]
+  ],
+  "centroid": [
+   -21.7,
+   -29.13,
+   -37.32
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50882-fj3981",
+  "name": "Left trochlear nerve",
+  "fma": "FMA50882",
+  "fj": "FJ3981",
+  "bp": "BP23034",
+  "faces": 4856,
+  "segments": 1,
+  "bbox": [
+   [
+    -20.22,
+    -38.74,
+    -42.74
+   ],
+   [
+    2.04,
+    55.32,
+    -21.45
+   ]
+  ],
+  "centroid": [
+   -15.04,
+   -4.1,
+   -31.17
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52997-fj3985",
+  "name": "Right mandibular nerve",
+  "fma": "FMA52997",
+  "fj": "FJ3985",
+  "bp": "BP29281",
+  "faces": 656,
+  "segments": 1,
+  "bbox": [
+   [
+    23.46,
+    -25.16,
+    -89.07
+   ],
+   [
+    42.57,
+    -7.49,
+    -36.43
+   ]
+  ],
+  "centroid": [
+   31.85,
+   -12.38,
+   -59.89
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma223163-fj4012",
+  "name": "Right olfactory tract",
+  "fma": "FMA223163",
+  "fj": "FJ4012",
+  "bp": "BP29272",
+  "faces": 1292,
+  "segments": 1,
+  "bbox": [
+   [
+    1.56,
+    3.72,
+    -35.7
+   ],
+   [
+    10.37,
+    51.93,
+    -18.12
+   ]
+  ],
+  "centroid": [
+   6.11,
+   25.75,
+   -30.45
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52592-fj4013",
+  "name": "Right olfactory nerve",
+  "fma": "FMA52592",
+  "fj": "FJ4013",
+  "bp": "BP29597",
+  "faces": 3114,
+  "segments": 6,
+  "bbox": [
+   [
+    0.7,
+    23.92,
+    -60.93
+   ],
+   [
+    4.95,
+    49.09,
+    -33.75
+   ]
+  ],
+  "centroid": [
+   2.77,
+   37.16,
+   -46.1
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma18151-fj4024",
+  "name": "Trunk of right vagus nerve",
+  "fma": "FMA18151",
+  "fj": "FJ4024",
+  "bp": "BP29476",
+  "faces": 23999,
+  "segments": 1,
+  "bbox": [
+   [
+    -82.19,
+    -156.57,
+    -493.62
+   ],
+   [
+    41.45,
+    -43.9,
+    -53.41
+   ]
+  ],
+  "centroid": [
+   7.23,
+   -96.73,
+   -294.24
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma81014-fj4025",
+  "name": "Trunk of right accessory nerve",
+  "fma": "FMA81014",
+  "fj": "FJ4025",
+  "bp": "BP29541",
+  "faces": 7822,
+  "segments": 1,
+  "bbox": [
+   [
+    6.98,
+    -102.21,
+    -190.3
+   ],
+   [
+    56.08,
+    -43.24,
+    -55.56
+   ]
+  ],
+  "centroid": [
+   37.57,
+   -56.72,
+   -101.04
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma80482-fj4027",
+  "name": "Trunk of right hypoglossal nerve",
+  "fma": "FMA80482",
+  "fj": "FJ4027",
+  "bp": "BP29430",
+  "faces": 4878,
+  "segments": 1,
+  "bbox": [
+   [
+    7.67,
+    -46.31,
+    -127.09
+   ],
+   [
+    35.87,
+    21.46,
+    -55.43
+   ]
+  ],
+  "centroid": [
+   20.99,
+   -31.02,
+   -90.49
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma65425-fj4034",
+  "name": "Trunk of right oculomotor nerve",
+  "fma": "FMA65425",
+  "fj": "FJ4034",
+  "bp": "BP29461",
+  "faces": 1524,
+  "segments": 2,
+  "bbox": [
+   [
+    2.08,
+    -12.03,
+    -73.64
+   ],
+   [
+    40.91,
+    43.0,
+    -23.43
+   ]
+  ],
+  "centroid": [
+   20.24,
+   13.79,
+   -42.1
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma65423-fj4038",
+  "name": "Trunk of right trigeminal nerve",
+  "fma": "FMA65423",
+  "fj": "FJ4038",
+  "bp": "BP29432",
+  "faces": 244,
+  "segments": 1,
+  "bbox": [
+   [
+    21.32,
+    -31.79,
+    -39.27
+   ],
+   [
+    25.6,
+    -23.06,
+    -35.33
+   ]
+  ],
+  "centroid": [
+   23.5,
+   -27.41,
+   -37.3
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50994-fj4654",
+  "name": "Right great cerebral vein",
+  "fma": "FMA50994",
+  "fj": "FJ4654",
+  "bp": "BP28758",
+  "faces": 490,
+  "segments": 1,
+  "bbox": [
+   [
+    -1.0,
+    -59.38,
+    -10.49
+   ],
+   [
+    3.46,
+    -41.21,
+    -0.57
+   ]
+  ],
+  "centroid": [
+   1.19,
+   -49.99,
+   -5.12
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50986-fj4679",
+  "name": "Inferior cerebral vein",
+  "fma": "FMA50986",
+  "fj": "FJ4679",
+  "bp": "BP28953",
+  "faces": 2116,
+  "segments": 2,
+  "bbox": [
+   [
+    21.12,
+    -58.74,
+    -48.61
+   ],
+   [
+    73.37,
+    -2.61,
+    -7.9
+   ]
+  ],
+  "centroid": [
+   55.52,
+   -24.73,
+   -28.58
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51307-fj4680",
+  "name": "Right anterior cerebral vein",
+  "fma": "FMA51307",
+  "fj": "FJ4680",
+  "bp": "BP28708",
+  "faces": 1438,
+  "segments": 6,
+  "bbox": [
+   [
+    0.06,
+    5.95,
+    -30.58
+   ],
+   [
+    6.66,
+    71.01,
+    -3.31
+   ]
+  ],
+  "centroid": [
+   1.84,
+   34.31,
+   -20.58
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma71578-fj4689",
+  "name": "Set of inferior veins of cerebellar hemisphere",
+  "fma": "FMA71578",
+  "fj": "FJ4689",
+  "bp": "BP29633",
+  "faces": 1694,
+  "segments": 3,
+  "bbox": [
+   [
+    7.45,
+    -97.88,
+    -62.27
+   ],
+   [
+    55.54,
+    -41.01,
+    -36.85
+   ]
+  ],
+  "centroid": [
+   29.0,
+   -70.56,
+   -53.57
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51004-fj4690",
+  "name": "Right internal cerebral vein",
+  "fma": "FMA51004",
+  "fj": "FJ4690",
+  "bp": "BP28702",
+  "faces": 442,
+  "segments": 1,
+  "bbox": [
+   [
+    0.54,
+    -44.05,
+    -9.09
+   ],
+   [
+    4.51,
+    2.71,
+    8.75
+   ]
+  ],
+  "centroid": [
+   2.98,
+   -23.76,
+   2.35
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51378-fj4691",
+  "name": "Right interpeduncular vein",
+  "fma": "FMA51378",
+  "fj": "FJ4691",
+  "bp": "BP28903",
+  "faces": 414,
+  "segments": 2,
+  "bbox": [
+   [
+    -0.14,
+    -11.31,
+    -28.1
+   ],
+   [
+    16.6,
+    0.79,
+    -12.48
+   ]
+  ],
+  "centroid": [
+   5.84,
+   -4.26,
+   -16.89
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50978-fj4696",
+  "name": "Superior cerebral vein",
+  "fma": "FMA50978",
+  "fj": "FJ4696",
+  "bp": "BP28835",
+  "faces": 8146,
+  "segments": 3,
+  "bbox": [
+   [
+    -0.76,
+    -107.06,
+    -18.12
+   ],
+   [
+    69.46,
+    79.3,
+    84.78
+   ]
+  ],
+  "centroid": [
+   8.2,
+   -19.05,
+   39.32
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52452-fj4700",
+  "name": "Right superior cerebellar vein",
+  "fma": "FMA52452",
+  "fj": "FJ4700",
+  "bp": "BP28891",
+  "faces": 722,
+  "segments": 3,
+  "bbox": [
+   [
+    17.67,
+    -78.23,
+    -29.52
+   ],
+   [
+    60.35,
+    -46.29,
+    -14.08
+   ]
+  ],
+  "centroid": [
+   38.53,
+   -57.83,
+   -24.49
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51400-fj4701",
+  "name": "Right transverse medullary vein",
+  "fma": "FMA51400",
+  "fj": "FJ4701",
+  "bp": "BP28768",
+  "faces": 322,
+  "segments": 1,
+  "bbox": [
+   [
+    0.84,
+    -51.67,
+    -71.67
+   ],
+   [
+    10.27,
+    -34.76,
+    -56.58
+   ]
+  ],
+  "centroid": [
+   5.55,
+   -41.9,
+   -64.07
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51355-fj4702",
+  "name": "Right transverse pontine vein",
+  "fma": "FMA51355",
+  "fj": "FJ4702",
+  "bp": "BP28819",
+  "faces": 354,
+  "segments": 1,
+  "bbox": [
+   [
+    0.37,
+    -28.36,
+    -51.85
+   ],
+   [
+    18.5,
+    -11.38,
+    -32.66
+   ]
+  ],
+  "centroid": [
+   7.73,
+   -18.17,
+   -41.93
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50784-fj4704",
+  "name": "Sinus confluence",
+  "fma": "FMA50784",
+  "fj": "FJ4704",
+  "bp": "BP29489",
+  "faces": 1308,
+  "segments": 1,
+  "bbox": [
+   [
+    -1.86,
+    -110.88,
+    -26.92
+   ],
+   [
+    24.49,
+    -99.71,
+    -16.4
+   ]
+  ],
+  "centroid": [
+   10.86,
+   -105.57,
+   -21.73
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50769-fj4705",
+  "name": "Straight sinus",
+  "fma": "FMA50769",
+  "fj": "FJ4705",
+  "bp": "BP28864",
+  "faces": 1304,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.18,
+    -106.88,
+    -25.18
+   ],
+   [
+    5.49,
+    -54.73,
+    -1.64
+   ]
+  ],
+  "centroid": [
+   2.28,
+   -81.3,
+   -12.72
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50774-fj4707",
+  "name": "Anterior intercavernous sinus",
+  "fma": "FMA50774",
+  "fj": "FJ4707",
+  "bp": "BP28778",
+  "faces": 420,
+  "segments": 1,
+  "bbox": [
+   [
+    -10.64,
+    -1.45,
+    -35.43
+   ],
+   [
+    11.2,
+    5.14,
+    -31.43
+   ]
+  ],
+  "centroid": [
+   0.17,
+   3.07,
+   -33.08
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51390-fj4708",
+  "name": "Anteromedian medullary vein",
+  "fma": "FMA51390",
+  "fj": "FJ4708",
+  "bp": "BP28865",
+  "faces": 296,
+  "segments": 1,
+  "bbox": [
+   [
+    0.42,
+    -64.48,
+    -88.68
+   ],
+   [
+    2.42,
+    -30.37,
+    -53.41
+   ]
+  ],
+  "centroid": [
+   1.38,
+   -48.85,
+   -71.26
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51346-fj4709",
+  "name": "Anteromedian pontine vein",
+  "fma": "FMA51346",
+  "fj": "FJ4709",
+  "bp": "BP28833",
+  "faces": 234,
+  "segments": 1,
+  "bbox": [
+   [
+    0.12,
+    -31.39,
+    -54.19
+   ],
+   [
+    1.44,
+    -10.74,
+    -27.46
+   ]
+  ],
+  "centroid": [
+   0.68,
+   -19.93,
+   -42.88
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50341-fj4712",
+  "name": "Right distal medial striate artery",
+  "fma": "FMA50341",
+  "fj": "FJ4712",
+  "bp": "BP29697",
+  "faces": 438,
+  "segments": 1,
+  "bbox": [
+   [
+    1.71,
+    10.73,
+    -24.1
+   ],
+   [
+    24.67,
+    19.32,
+    -7.08
+   ]
+  ],
+  "centroid": [
+   12.96,
+   17.05,
+   -16.73
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50768-fj4716",
+  "name": "Inferior sagittal sinus",
+  "fma": "FMA50768",
+  "fj": "FJ4716",
+  "bp": "BP28870",
+  "faces": 2346,
+  "segments": 1,
+  "bbox": [
+   [
+    -1.35,
+    -58.53,
+    -5.61
+   ],
+   [
+    3.88,
+    49.43,
+    47.87
+   ]
+  ],
+  "centroid": [
+   0.59,
+   -16.39,
+   23.3
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51231-fj5101",
+  "name": "Inferior vein of vermis",
+  "fma": "FMA51231",
+  "fj": "FJ5101",
+  "bp": "BP29036",
+  "faces": 1644,
+  "segments": 2,
+  "bbox": [
+   [
+    1.3,
+    -107.13,
+    -56.46
+   ],
+   [
+    15.52,
+    -55.92,
+    -25.01
+   ]
+  ],
+  "centroid": [
+   3.22,
+   -88.25,
+   -43.39
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76156-fj4770",
+  "name": "Trunk of artery of left precentral sulcus",
+  "fma": "FMA76156",
+  "fj": "FJ4770",
+  "bp": "BP28932",
+  "faces": 4380,
+  "segments": 1,
+  "bbox": [
+   [
+    -71.95,
+    -12.02,
+    -7.28
+   ],
+   [
+    72.4,
+    3.96,
+    60.81
+   ]
+  ],
+  "centroid": [
+   -18.46,
+   -2.91,
+   23.36
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76135-fj4873",
+  "name": "Trunk of middle temporal branch of left middle cerebral artery",
+  "fma": "FMA76135",
+  "fj": "FJ4873",
+  "bp": "BP28898",
+  "faces": 4362,
+  "segments": 1,
+  "bbox": [
+   [
+    -57.12,
+    -22.34,
+    -18.01
+   ],
+   [
+    -39.32,
+    6.6,
+    20.92
+   ]
+  ],
+  "centroid": [
+   -46.79,
+   -10.49,
+   4.79
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50775-fj4979",
+  "name": "Posterior intercavernous sinus",
+  "fma": "FMA50775",
+  "fj": "FJ4979",
+  "bp": "BP28733",
+  "faces": 556,
+  "segments": 1,
+  "bbox": [
+   [
+    -12.16,
+    -8.45,
+    -35.89
+   ],
+   [
+    12.79,
+    0.27,
+    -27.0
+   ]
+  ],
+  "centroid": [
+   0.39,
+   -5.32,
+   -31.09
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51394-fj4980",
+  "name": "Posteromedian medullary vein",
+  "fma": "FMA51394",
+  "fj": "FJ4980",
+  "bp": "BP28967",
+  "faces": 148,
+  "segments": 1,
+  "bbox": [
+   [
+    1.17,
+    -77.91,
+    -86.22
+   ],
+   [
+    2.61,
+    -62.67,
+    -60.57
+   ]
+  ],
+  "centroid": [
+   1.85,
+   -70.59,
+   -73.96
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51311-fj4988",
+  "name": "Right deep middle cerebral vein",
+  "fma": "FMA51311",
+  "fj": "FJ4988",
+  "bp": "BP28726",
+  "faces": 862,
+  "segments": 1,
+  "bbox": [
+   [
+    6.63,
+    3.56,
+    -18.26
+   ],
+   [
+    40.45,
+    19.81,
+    3.57
+   ]
+  ],
+  "centroid": [
+   22.35,
+   10.71,
+   -10.0
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51250-fj4992",
+  "name": "Right inferior ophthalmic vein",
+  "fma": "FMA51250",
+  "fj": "FJ4992",
+  "bp": "BP28809",
+  "faces": 1346,
+  "segments": 1,
+  "bbox": [
+   [
+    13.86,
+    7.81,
+    -70.44
+   ],
+   [
+    24.01,
+    50.45,
+    -37.33
+   ]
+  ],
+  "centroid": [
+   21.56,
+   24.36,
+   -54.99
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma86070-fj5003",
+  "name": "Trunk of right posterior inferior cerebellar artery",
+  "fma": "FMA86070",
+  "fj": "FJ5003",
+  "bp": "BP29702",
+  "faces": 796,
+  "segments": 1,
+  "bbox": [
+   [
+    14.43,
+    -79.03,
+    -60.14
+   ],
+   [
+    58.37,
+    -43.23,
+    -28.7
+   ]
+  ],
+  "centroid": [
+   29.46,
+   -65.49,
+   -52.57
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51293-fj5005",
+  "name": "Right sigmoid sinus",
+  "fma": "FMA51293",
+  "fj": "FJ5005",
+  "bp": "BP28740",
+  "faces": 1962,
+  "segments": 1,
+  "bbox": [
+   [
+    30.37,
+    -64.82,
+    -61.59
+   ],
+   [
+    69.1,
+    -38.27,
+    -21.61
+   ]
+  ],
+  "centroid": [
+   55.68,
+   -48.54,
+   -42.19
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50816-fj5008",
+  "name": "Superior bulb of right internal jugular vein",
+  "fma": "FMA50816",
+  "fj": "FJ5008",
+  "bp": "BP29775",
+  "faces": 174,
+  "segments": 1,
+  "bbox": [
+   [
+    29.93,
+    -46.31,
+    -65.31
+   ],
+   [
+    35.03,
+    -37.8,
+    -57.22
+   ]
+  ],
+  "centroid": [
+   32.44,
+   -42.05,
+   -61.28
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51248-fj5010",
+  "name": "Right superior ophthalmic vein",
+  "fma": "FMA51248",
+  "fj": "FJ5010",
+  "bp": "BP28765",
+  "faces": 1418,
+  "segments": 1,
+  "bbox": [
+   [
+    19.69,
+    5.85,
+    -41.05
+   ],
+   [
+    23.16,
+    65.68,
+    -33.6
+   ]
+  ],
+  "centroid": [
+   20.63,
+   31.39,
+   -37.73
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76254-fj5022",
+  "name": "Trunk of right anterior choroidal artery",
+  "fma": "FMA76254",
+  "fj": "FJ5022",
+  "bp": "BP29245",
+  "faces": 1850,
+  "segments": 1,
+  "bbox": [
+   [
+    2.62,
+    -38.54,
+    -25.95
+   ],
+   [
+    35.43,
+    8.12,
+    14.21
+   ]
+  ],
+  "centroid": [
+   19.78,
+   -16.35,
+   -6.48
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma13319-fj5025",
+  "name": "Right anterior jugular vein",
+  "fma": "FMA13319",
+  "fj": "FJ5025",
+  "bp": "BP28757",
+  "faces": 3902,
+  "segments": 1,
+  "bbox": [
+   [
+    6.99,
+    -71.7,
+    -218.86
+   ],
+   [
+    51.04,
+    -18.46,
+    -152.15
+   ]
+  ],
+  "centroid": [
+   25.57,
+   -49.09,
+   -200.19
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51012-fj5030",
+  "name": "Anterior vein of right septum pellucidum",
+  "fma": "FMA51012",
+  "fj": "FJ5030",
+  "bp": "BP28683",
+  "faces": 452,
+  "segments": 1,
+  "bbox": [
+   [
+    0.2,
+    2.8,
+    3.85
+   ],
+   [
+    4.49,
+    27.64,
+    11.13
+   ]
+  ],
+  "centroid": [
+   2.47,
+   15.15,
+   7.82
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51637-fj5033",
+  "name": "Right anterolateral medullary vein",
+  "fma": "FMA51637",
+  "fj": "FJ5033",
+  "bp": "BP28782",
+  "faces": 642,
+  "segments": 1,
+  "bbox": [
+   [
+    1.12,
+    -61.49,
+    -84.53
+   ],
+   [
+    14.6,
+    -35.92,
+    -50.35
+   ]
+  ],
+  "centroid": [
+   9.35,
+   -51.13,
+   -67.07
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51635-fj5034",
+  "name": "Right anterolateral pontine vein",
+  "fma": "FMA51635",
+  "fj": "FJ5034",
+  "bp": "BP28792",
+  "faces": 744,
+  "segments": 1,
+  "bbox": [
+   [
+    8.71,
+    -41.02,
+    -54.2
+   ],
+   [
+    22.48,
+    -14.01,
+    -25.89
+   ]
+  ],
+  "centroid": [
+   16.8,
+   -26.17,
+   -42.26
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50349-fj5035",
+  "name": "Anteromedial frontal branch of right callosomarginal artery",
+  "fma": "FMA50349",
+  "fj": "FJ5035",
+  "bp": "BP29660",
+  "faces": 1866,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.39,
+    48.62,
+    -2.29
+   ],
+   [
+    23.15,
+    79.16,
+    36.19
+   ]
+  ],
+  "centroid": [
+   5.33,
+   66.85,
+   17.63
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76062-fj5043",
+  "name": "Trunk of right anterior cerebral artery",
+  "fma": "FMA76062",
+  "fj": "FJ5043",
+  "bp": "BP29216",
+  "faces": 124,
+  "segments": 1,
+  "bbox": [
+   [
+    3.81,
+    -1.74,
+    -28.82
+   ],
+   [
+    9.84,
+    -0.51,
+    -21.47
+   ]
+  ],
+  "centroid": [
+   7.08,
+   -0.92,
+   -25.64
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma71693-fj5048",
+  "name": "Set of branches of cavernous part of internal carotid artery to nerves",
+  "fma": "FMA71693",
+  "fj": "FJ5048",
+  "bp": "BP29634",
+  "faces": 206,
+  "segments": 1,
+  "bbox": [
+   [
+    15.03,
+    -2.53,
+    -38.66
+   ],
+   [
+    21.98,
+    8.15,
+    -34.41
+   ]
+  ],
+  "centroid": [
+   18.19,
+   1.58,
+   -36.09
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50138-fj5053",
+  "name": "Branch of right anterior choroidal artery to right optic tract",
+  "fma": "FMA50138",
+  "fj": "FJ5053",
+  "bp": "BP29675",
+  "faces": 310,
+  "segments": 1,
+  "bbox": [
+   [
+    19.02,
+    -11.28,
+    -21.64
+   ],
+   [
+    30.56,
+    -3.38,
+    -16.09
+   ]
+  ],
+  "centroid": [
+   25.89,
+   -7.86,
+   -18.96
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51393-fj5081",
+  "name": "Dorsal medullary vein",
+  "fma": "FMA51393",
+  "fj": "FJ5081",
+  "bp": "BP28961",
+  "faces": 1028,
+  "segments": 3,
+  "bbox": [
+   [
+    1.25,
+    -75.45,
+    -86.97
+   ],
+   [
+    17.78,
+    -49.5,
+    -47.14
+   ]
+  ],
+  "centroid": [
+   8.48,
+   -62.81,
+   -66.53
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma49822-fj5063",
+  "name": "Cavernous branch of right internal carotid artery",
+  "fma": "FMA49822",
+  "fj": "FJ5063",
+  "bp": "BP29017",
+  "faces": 214,
+  "segments": 1,
+  "bbox": [
+   [
+    15.76,
+    -7.97,
+    -44.77
+   ],
+   [
+    19.03,
+    3.2,
+    -39.81
+   ]
+  ],
+  "centroid": [
+   17.54,
+   -1.32,
+   -42.18
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51402-fj5064",
+  "name": "Right cavernous sinus",
+  "fma": "FMA51402",
+  "fj": "FJ5064",
+  "bp": "BP28741",
+  "faces": 1646,
+  "segments": 1,
+  "bbox": [
+   [
+    11.87,
+    -18.21,
+    -46.03
+   ],
+   [
+    23.14,
+    8.51,
+    -31.61
+   ]
+  ],
+  "centroid": [
+   17.69,
+   -5.37,
+   -38.37
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50412-fj5066",
+  "name": "Chiasmatic branch of right posterior communicating artery",
+  "fma": "FMA50412",
+  "fj": "FJ5066",
+  "bp": "BP29659",
+  "faces": 170,
+  "segments": 1,
+  "bbox": [
+   [
+    5.77,
+    1.92,
+    -30.46
+   ],
+   [
+    11.74,
+    3.26,
+    -22.97
+   ]
+  ],
+  "centroid": [
+   8.92,
+   2.66,
+   -27.24
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50131-fj5067",
+  "name": "Branch of right anterior choroidal artery to right lateral ventricle",
+  "fma": "FMA50131",
+  "fj": "FJ5067",
+  "bp": "BP29695",
+  "faces": 644,
+  "segments": 1,
+  "bbox": [
+   [
+    26.21,
+    -40.62,
+    -20.84
+   ],
+   [
+    38.02,
+    -9.12,
+    0.48
+   ]
+  ],
+  "centroid": [
+   33.34,
+   -26.6,
+   -10.2
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76079-fj5068",
+  "name": "Trunk of right callosomarginal artery",
+  "fma": "FMA76079",
+  "fj": "FJ5068",
+  "bp": "BP28941",
+  "faces": 310,
+  "segments": 1,
+  "bbox": [
+   [
+    0.95,
+    -28.83,
+    0.97
+   ],
+   [
+    3.8,
+    -1.9,
+    14.01
+   ]
+  ],
+  "centroid": [
+   1.76,
+   -14.0,
+   6.38
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma75908-fj5070",
+  "name": "Trunk of clivus branch of right internal carotid artery",
+  "fma": "FMA75908",
+  "fj": "FJ5070",
+  "bp": "BP29230",
+  "faces": 332,
+  "segments": 1,
+  "bbox": [
+   [
+    1.56,
+    -20.33,
+    -44.67
+   ],
+   [
+    14.02,
+    -14.3,
+    -37.38
+   ]
+  ],
+  "centroid": [
+   8.22,
+   -16.81,
+   -40.55
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50666-fj5071",
+  "name": "Right collicular artery",
+  "fma": "FMA50666",
+  "fj": "FJ5071",
+  "bp": "BP29656",
+  "faces": 490,
+  "segments": 1,
+  "bbox": [
+   [
+    11.67,
+    -25.02,
+    -26.86
+   ],
+   [
+    19.44,
+    -6.66,
+    -13.18
+   ]
+  ],
+  "centroid": [
+   16.91,
+   -17.65,
+   -23.21
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma49535-fj5074",
+  "name": "Third part of right lingual artery",
+  "fma": "FMA49535",
+  "fj": "FJ5074",
+  "bp": "BP29557",
+  "faces": 308,
+  "segments": 1,
+  "bbox": [
+   [
+    0.25,
+    -0.05,
+    -139.69
+   ],
+   [
+    7.48,
+    25.97,
+    -127.66
+   ]
+  ],
+  "centroid": [
+   5.1,
+   13.36,
+   -135.84
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma13111-fj5082",
+  "name": "Right external jugular vein",
+  "fma": "FMA13111",
+  "fj": "FJ5082",
+  "bp": "BP28813",
+  "faces": 4348,
+  "segments": 1,
+  "bbox": [
+   [
+    44.34,
+    -74.86,
+    -232.19
+   ],
+   [
+    56.61,
+    -32.38,
+    -88.68
+   ]
+  ],
+  "centroid": [
+   51.06,
+   -58.25,
+   -165.86
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma49731-fj5086",
+  "name": "Frontal branch of right middle meningeal artery",
+  "fma": "FMA49731",
+  "fj": "FJ5086",
+  "bp": "BP29666",
+  "faces": 8038,
+  "segments": 1,
+  "bbox": [
+   [
+    9.15,
+    -36.8,
+    -44.28
+   ],
+   [
+    76.76,
+    27.72,
+    86.08
+   ]
+  ],
+  "centroid": [
+   53.23,
+   11.03,
+   27.75
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50820-fj5092",
+  "name": "Inferior bulb of right internal jugular vein",
+  "fma": "FMA50820",
+  "fj": "FJ5092",
+  "bp": "BP29778",
+  "faces": 680,
+  "segments": 1,
+  "bbox": [
+   [
+    17.59,
+    -68.59,
+    -232.98
+   ],
+   [
+    30.28,
+    -58.15,
+    -206.24
+   ]
+  ],
+  "centroid": [
+   24.21,
+   -63.52,
+   -219.84
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma75898-fj5094",
+  "name": "Trunk of right inferior hypophyseal artery",
+  "fma": "FMA75898",
+  "fj": "FJ5094",
+  "bp": "BP29213",
+  "faces": 298,
+  "segments": 1,
+  "bbox": [
+   [
+    1.3,
+    -4.68,
+    -41.44
+   ],
+   [
+    14.72,
+    -1.02,
+    -34.33
+   ]
+  ],
+  "centroid": [
+   9.23,
+   -3.18,
+   -38.07
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51291-fj5098",
+  "name": "Right inferior petrosal sinus",
+  "fma": "FMA51291",
+  "fj": "FJ5098",
+  "bp": "BP28734",
+  "faces": 600,
+  "segments": 1,
+  "bbox": [
+   [
+    14.17,
+    -45.55,
+    -62.23
+   ],
+   [
+    33.08,
+    -12.15,
+    -43.8
+   ]
+  ],
+  "centroid": [
+   20.75,
+   -32.2,
+   -52.27
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50690-fj5114",
+  "name": "Right calcarine artery",
+  "fma": "FMA50690",
+  "fj": "FJ5114",
+  "bp": "BP29646",
+  "faces": 2052,
+  "segments": 1,
+  "bbox": [
+   [
+    1.92,
+    -110.33,
+    -11.73
+   ],
+   [
+    13.31,
+    -37.67,
+    13.38
+   ]
+  ],
+  "centroid": [
+   7.95,
+   -67.1,
+   -0.75
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma66447-fj5117",
+  "name": "Trunk of right lingual artery",
+  "fma": "FMA66447",
+  "fj": "FJ5117",
+  "bp": "BP29142",
+  "faces": 654,
+  "segments": 1,
+  "bbox": [
+   [
+    3.93,
+    -42.75,
+    -137.65
+   ],
+   [
+    31.81,
+    0.91,
+    -120.94
+   ]
+  ],
+  "centroid": [
+   18.21,
+   -24.97,
+   -129.17
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50449-fj5119",
+  "name": "Right mammillary artery",
+  "fma": "FMA50449",
+  "fj": "FJ5119",
+  "bp": "BP29654",
+  "faces": 124,
+  "segments": 1,
+  "bbox": [
+   [
+    1.9,
+    -6.8,
+    -26.22
+   ],
+   [
+    7.07,
+    -3.71,
+    -18.37
+   ]
+  ],
+  "centroid": [
+   4.79,
+   -4.76,
+   -22.73
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma86079-fj5124",
+  "name": "Trunk of medial branch of right superior cerebellar artery",
+  "fma": "FMA86079",
+  "fj": "FJ5124",
+  "bp": "BP28977",
+  "faces": 354,
+  "segments": 1,
+  "bbox": [
+   [
+    11.59,
+    -75.32,
+    -28.47
+   ],
+   [
+    23.13,
+    -29.63,
+    -7.75
+   ]
+  ],
+  "centroid": [
+   15.02,
+   -44.77,
+   -17.65
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50174-fj5129",
+  "name": "Median commissural artery",
+  "fma": "FMA50174",
+  "fj": "FJ5129",
+  "bp": "BP29664",
+  "faces": 454,
+  "segments": 1,
+  "bbox": [
+   [
+    0.32,
+    6.43,
+    -25.32
+   ],
+   [
+    5.17,
+    14.3,
+    -6.98
+   ]
+  ],
+  "centroid": [
+   2.13,
+   10.46,
+   -19.66
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma75886-fj5130",
+  "name": "Trunk of meningeal branch of cavernous part of right internal carotid artery",
+  "fma": "FMA75886",
+  "fj": "FJ5130",
+  "bp": "BP28969",
+  "faces": 308,
+  "segments": 1,
+  "bbox": [
+   [
+    13.63,
+    2.12,
+    -49.85
+   ],
+   [
+    37.13,
+    10.51,
+    -39.22
+   ]
+  ],
+  "centroid": [
+   24.83,
+   4.58,
+   -43.84
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma79494-fj5133",
+  "name": "Trunk of right middle meningeal artery",
+  "fma": "FMA79494",
+  "fj": "FJ5133",
+  "bp": "BP28980",
+  "faces": 234,
+  "segments": 1,
+  "bbox": [
+   [
+    31.08,
+    -18.62,
+    -74.0
+   ],
+   [
+    44.19,
+    -15.39,
+    -51.41
+   ]
+  ],
+  "centroid": [
+   36.68,
+   -17.31,
+   -63.3
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma61991-fj5134",
+  "name": "Trunk of right middle cerebral artery",
+  "fma": "FMA61991",
+  "fj": "FJ5134",
+  "bp": "BP29157",
+  "faces": 818,
+  "segments": 1,
+  "bbox": [
+   [
+    48.72,
+    -64.7,
+    -28.65
+   ],
+   [
+    76.27,
+    -1.43,
+    14.03
+   ]
+  ],
+  "centroid": [
+   67.23,
+   -24.81,
+   -3.16
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma79455-fj5137",
+  "name": "Trunk of right middle temporal artery",
+  "fma": "FMA79455",
+  "fj": "FJ5137",
+  "bp": "BP29063",
+  "faces": 2886,
+  "segments": 1,
+  "bbox": [
+   [
+    -1.11,
+    -7.27,
+    -31.01
+   ],
+   [
+    70.47,
+    82.82,
+    70.01
+   ]
+  ],
+  "centroid": [
+   48.1,
+   46.08,
+   11.74
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50781-fj5140",
+  "name": "Occipital sinus",
+  "fma": "FMA50781",
+  "fj": "FJ5140",
+  "bp": "BP28965",
+  "faces": 2016,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.63,
+    -105.99,
+    -62.81
+   ],
+   [
+    38.52,
+    -44.22,
+    -21.44
+   ]
+  ],
+  "centroid": [
+   18.06,
+   -81.75,
+   -50.7
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma70525-fj5143",
+  "name": "Trunk of right ophthalmic artery",
+  "fma": "FMA70525",
+  "fj": "FJ5143",
+  "bp": "BP29191",
+  "faces": 790,
+  "segments": 1,
+  "bbox": [
+   [
+    12.09,
+    6.33,
+    -51.18
+   ],
+   [
+    42.47,
+    55.59,
+    -35.17
+   ]
+  ],
+  "centroid": [
+   21.38,
+   30.31,
+   -39.6
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma49729-fj5144",
+  "name": "Orbital branch of right middle meningeal artery",
+  "fma": "FMA49729",
+  "fj": "FJ5144",
+  "bp": "BP29663",
+  "faces": 1268,
+  "segments": 1,
+  "bbox": [
+   [
+    25.71,
+    18.04,
+    -46.92
+   ],
+   [
+    41.18,
+    51.52,
+    -35.38
+   ]
+  ],
+  "centroid": [
+   32.51,
+   30.92,
+   -38.2
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma49727-fj5149",
+  "name": "Parietal branch of right middle meningeal artery",
+  "fma": "FMA49727",
+  "fj": "FJ5149",
+  "bp": "BP29662",
+  "faces": 9052,
+  "segments": 1,
+  "bbox": [
+   [
+    31.01,
+    -93.21,
+    -53.33
+   ],
+   [
+    78.52,
+    20.32,
+    67.17
+   ]
+  ],
+  "centroid": [
+   57.26,
+   -28.7,
+   1.07
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma76098-fj5151",
+  "name": "Trunk of rightpericallosal artery",
+  "fma": "FMA76098",
+  "fj": "FJ5151",
+  "bp": "BP28827",
+  "faces": 860,
+  "segments": 1,
+  "bbox": [
+   [
+    0.61,
+    -33.02,
+    -17.28
+   ],
+   [
+    6.93,
+    38.37,
+    43.91
+   ]
+  ],
+  "centroid": [
+   2.43,
+   12.47,
+   14.91
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma49504-fj5166",
+  "name": "Right posterior meningeal artery",
+  "fma": "FMA49504",
+  "fj": "FJ5166",
+  "bp": "BP29692",
+  "faces": 342,
+  "segments": 1,
+  "bbox": [
+   [
+    22.98,
+    -74.92,
+    -62.52
+   ],
+   [
+    34.14,
+    -46.82,
+    -57.52
+   ]
+  ],
+  "centroid": [
+   29.25,
+   -57.44,
+   -59.5
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51020-fj5174",
+  "name": "Posterior vein of right septum pellucidum",
+  "fma": "FMA51020",
+  "fj": "FJ5174",
+  "bp": "BP28681",
+  "faces": 218,
+  "segments": 1,
+  "bbox": [
+   [
+    0.3,
+    -6.59,
+    7.41
+   ],
+   [
+    3.4,
+    3.64,
+    17.63
+   ]
+  ],
+  "centroid": [
+   1.9,
+   -1.82,
+   12.59
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50668-fj5175",
+  "name": "Posterolateral central branch of right posterior cerebral artery",
+  "fma": "FMA50668",
+  "fj": "FJ5175",
+  "bp": "BP29154",
+  "faces": 516,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.84,
+    -35.98,
+    -21.6
+   ],
+   [
+    19.64,
+    -23.6,
+    -3.7
+   ]
+  ],
+  "centroid": [
+   14.3,
+   -30.66,
+   -13.73
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51234-fj5177",
+  "name": "Precentral cerebellar vein",
+  "fma": "FMA51234",
+  "fj": "FJ5177",
+  "bp": "BP28978",
+  "faces": 388,
+  "segments": 1,
+  "bbox": [
+   [
+    0.76,
+    -49.02,
+    -31.17
+   ],
+   [
+    2.57,
+    -42.91,
+    -6.76
+   ]
+  ],
+  "centroid": [
+   1.65,
+   -44.14,
+   -17.56
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50315-fj5180",
+  "name": "Right proximal medial striate artery",
+  "fma": "FMA50315",
+  "fj": "FJ5180",
+  "bp": "BP29669",
+  "faces": 990,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.25,
+    -0.13,
+    -35.37
+   ],
+   [
+    4.18,
+    17.98,
+    1.36
+   ]
+  ],
+  "centroid": [
+   2.08,
+   12.83,
+   -13.85
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma79522-fj5181",
+  "name": "Trunk of right pterygomeningeal artery",
+  "fma": "FMA79522",
+  "fj": "FJ5181",
+  "bp": "BP29026",
+  "faces": 3232,
+  "segments": 1,
+  "bbox": [
+   [
+    10.82,
+    -31.26,
+    -80.66
+   ],
+   [
+    60.65,
+    -7.15,
+    -33.24
+   ]
+  ],
+  "centroid": [
+   33.61,
+   -16.13,
+   -57.06
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma75971-fj5182",
+  "name": "Trunk of recurrent meningeal branch of right lacrimal artery",
+  "fma": "FMA75971",
+  "fj": "FJ5182",
+  "bp": "BP28917",
+  "faces": 498,
+  "segments": 1,
+  "bbox": [
+   [
+    41.62,
+    23.16,
+    -45.78
+   ],
+   [
+    47.74,
+    45.88,
+    -28.1
+   ]
+  ],
+  "centroid": [
+   45.23,
+   34.14,
+   -38.95
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50984-fj5194",
+  "name": "Right superficial middle cerebral vein",
+  "fma": "FMA50984",
+  "fj": "FJ5194",
+  "bp": "BP28746",
+  "faces": 4072,
+  "segments": 3,
+  "bbox": [
+   [
+    19.39,
+    -73.94,
+    -39.41
+   ],
+   [
+    76.65,
+    54.54,
+    28.84
+   ]
+  ],
+  "centroid": [
+   58.6,
+   -0.03,
+   -0.47
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma86076-fj5199",
+  "name": "Trunk of right superior cerebellar artery",
+  "fma": "FMA86076",
+  "fj": "FJ5199",
+  "bp": "BP29398",
+  "faces": 468,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.92,
+    -31.58,
+    -38.2
+   ],
+   [
+    23.19,
+    -8.55,
+    -26.62
+   ]
+  ],
+  "centroid": [
+   13.62,
+   -16.46,
+   -32.01
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma49850-fj5201",
+  "name": "Right superior hypophyseal artery",
+  "fma": "FMA49850",
+  "fj": "FJ5201",
+  "bp": "BP29721",
+  "faces": 534,
+  "segments": 1,
+  "bbox": [
+   [
+    0.49,
+    -2.32,
+    -34.85
+   ],
+   [
+    13.49,
+    7.06,
+    -24.3
+   ]
+  ],
+  "centroid": [
+   5.07,
+   1.4,
+   -28.71
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51289-fj5207",
+  "name": "Right superior petrosal sinus",
+  "fma": "FMA51289",
+  "fj": "FJ5207",
+  "bp": "BP28760",
+  "faces": 1386,
+  "segments": 1,
+  "bbox": [
+   [
+    16.66,
+    -60.12,
+    -44.68
+   ],
+   [
+    68.16,
+    -15.05,
+    -24.08
+   ]
+  ],
+  "centroid": [
+   45.96,
+   -39.04,
+   -33.13
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51230-fj5210",
+  "name": "Superior vein of vermis",
+  "fma": "FMA51230",
+  "fj": "FJ5210",
+  "bp": "BP29076",
+  "faces": 790,
+  "segments": 2,
+  "bbox": [
+   [
+    -8.76,
+    -90.95,
+    -17.57
+   ],
+   [
+    10.83,
+    -43.52,
+    -2.91
+   ]
+  ],
+  "centroid": [
+   1.69,
+   -63.72,
+   -8.14
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma75911-fj5215",
+  "name": "Trunk of tentorial basal branch of right internal carotid artery",
+  "fma": "FMA75911",
+  "fj": "FJ5215",
+  "bp": "BP29171",
+  "faces": 508,
+  "segments": 1,
+  "bbox": [
+   [
+    13.04,
+    -60.03,
+    -45.17
+   ],
+   [
+    56.54,
+    -10.39,
+    -18.71
+   ]
+  ],
+  "centroid": [
+   34.42,
+   -30.49,
+   -34.59
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma75914-fj5216",
+  "name": "Trunk of tentorial marginal branch of right internal carotid artery",
+  "fma": "FMA75914",
+  "fj": "FJ5216",
+  "bp": "BP29251",
+  "faces": 538,
+  "segments": 1,
+  "bbox": [
+   [
+    5.71,
+    -43.6,
+    -42.37
+   ],
+   [
+    23.71,
+    -1.37,
+    -11.46
+   ]
+  ],
+  "centroid": [
+   16.37,
+   -24.45,
+   -33.26
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50999-fj5219",
+  "name": "Right superior thalamostriate vein",
+  "fma": "FMA50999",
+  "fj": "FJ5219",
+  "bp": "BP28688",
+  "faces": 314,
+  "segments": 1,
+  "bbox": [
+   [
+    3.32,
+    -30.58,
+    3.04
+   ],
+   [
+    19.24,
+    3.44,
+    15.03
+   ]
+  ],
+  "centroid": [
+   9.62,
+   -12.37,
+   11.72
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50425-fj5220",
+  "name": "Right thalamotuberal artery",
+  "fma": "FMA50425",
+  "fj": "FJ5220",
+  "bp": "BP29651",
+  "faces": 344,
+  "segments": 1,
+  "bbox": [
+   [
+    3.14,
+    -7.67,
+    -27.1
+   ],
+   [
+    13.32,
+    -2.64,
+    -0.64
+   ]
+  ],
+  "centroid": [
+   6.02,
+   -5.69,
+   -15.33
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50764-fj5222",
+  "name": "Right transverse sinus",
+  "fma": "FMA50764",
+  "fj": "FJ5222",
+  "bp": "BP28771",
+  "faces": 2882,
+  "segments": 1,
+  "bbox": [
+   [
+    16.05,
+    -110.63,
+    -27.8
+   ],
+   [
+    67.72,
+    -59.36,
+    -17.16
+   ]
+  ],
+  "centroid": [
+   43.54,
+   -89.79,
+   -22.53
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma50767-fj5232",
+  "name": "Superior sagittal sinus",
+  "fma": "FMA50767",
+  "fj": "FJ5232",
+  "bp": "BP28876",
+  "faces": 12762,
+  "segments": 1,
+  "bbox": [
+   [
+    -4.62,
+    -113.44,
+    -40.53
+   ],
+   [
+    7.97,
+    80.49,
+    89.33
+   ]
+  ],
+  "centroid": [
+   0.95,
+   -27.63,
+   43.32
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma51014-fj5234",
+  "name": "Vein of right caudate nucleus",
+  "fma": "FMA51014",
+  "fj": "FJ5234",
+  "bp": "BP28682",
+  "faces": 608,
+  "segments": 1,
+  "bbox": [
+   [
+    2.34,
+    -16.71,
+    8.78
+   ],
+   [
+    13.26,
+    7.86,
+    20.01
+   ]
+  ],
+  "centroid": [
+   6.42,
+   -4.49,
+   14.74
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma52740-fj6309",
+  "name": "Ethmoid",
+  "fma": "FMA52740",
+  "fj": "FJ6309",
+  "bp": "BP23248",
+  "faces": 22348,
+  "segments": 1,
+  "bbox": [
+   [
+    -21.49,
+    5.94,
+    -78.68
+   ],
+   [
+    20.83,
+    56.7,
+    -36.55
+   ]
+  ],
+  "centroid": [
+   -0.63,
+   31.41,
+   -60.59
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma53648-fj6383",
+  "name": "Left nasal bone",
+  "fma": "FMA53648",
+  "fj": "FJ6383",
+  "bp": "BP23333",
+  "faces": 500,
+  "segments": 1,
+  "bbox": [
+   [
+    -9.79,
+    64.24,
+    -82.79
+   ],
+   [
+    -0.06,
+    77.96,
+    -45.38
+   ]
+  ],
+  "centroid": [
+   -5.03,
+   69.64,
+   -65.95
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma53647-fj6470",
+  "name": "Right nasal bone",
+  "fma": "FMA53647",
+  "fj": "FJ6470",
+  "bp": "BP23260",
+  "faces": 468,
+  "segments": 1,
+  "bbox": [
+   [
+    -2.34,
+    63.82,
+    -84.37
+   ],
+   [
+    7.68,
+    78.0,
+    -45.92
+   ]
+  ],
+  "centroid": [
+   2.16,
+   69.48,
+   -66.68
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma9710-fj6486",
+  "name": "Vomer",
+  "fma": "FMA9710",
+  "fj": "FJ6486",
+  "bp": "BP22288",
+  "faces": 7102,
+  "segments": 1,
+  "bbox": [
+   [
+    -4.42,
+    -6.47,
+    -105.02
+   ],
+   [
+    4.76,
+    52.78,
+    -51.85
+   ]
+  ],
+  "centroid": [
+   -0.4,
+   23.08,
+   -77.29
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma83967-fj7445",
+  "name": "Falx cerebri",
+  "fma": "FMA83967",
+  "fj": "FJ7445",
+  "bp": "BP29620",
+  "faces": 24000,
+  "segments": 1,
+  "bbox": [
+   [
+    -2.77,
+    -111.64,
+    -42.64
+   ],
+   [
+    3.9,
+    80.68,
+    87.15
+   ]
+  ],
+  "centroid": [
+   0.58,
+   -15.12,
+   33.85
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma256198-fj7465m",
   "name": "Right anterior orbital gyrus",
   "fma": "FMA256198",
   "fj": "FJ7465M",
   "bp": "BP29916",
   "faces": 10090,
+  "segments": 1,
   "bbox": [
    [
     -0.29,
@@ -1176,6 +8106,7 @@
   "fj": "FJ7465",
   "bp": "BP29911",
   "faces": 10090,
+  "segments": 1,
   "bbox": [
    [
     -28.18,
@@ -1202,6 +8133,7 @@
   "fj": "FJ7466M",
   "bp": "BP29920",
   "faces": 8840,
+  "segments": 1,
   "bbox": [
    [
     10.77,
@@ -1228,6 +8160,7 @@
   "fj": "FJ7466",
   "bp": "BP29925",
   "faces": 8840,
+  "segments": 1,
   "bbox": [
    [
     -44.86,
@@ -1254,6 +8187,7 @@
   "fj": "FJ7467M",
   "bp": "BP29929",
   "faces": 9508,
+  "segments": 1,
   "bbox": [
    [
     0.06,
@@ -1280,6 +8214,7 @@
   "fj": "FJ7467",
   "bp": "BP29924",
   "faces": 9508,
+  "segments": 1,
   "bbox": [
    [
     -34.56,
@@ -1306,6 +8241,7 @@
   "fj": "FJ7468M",
   "bp": "BP29918",
   "faces": 8566,
+  "segments": 1,
   "bbox": [
    [
     13.56,
@@ -1332,6 +8268,7 @@
   "fj": "FJ7468",
   "bp": "BP29931",
   "faces": 8566,
+  "segments": 1,
   "bbox": [
    [
     -40.69,
@@ -1358,6 +8295,7 @@
   "fj": "FJ7469M",
   "bp": "BP29910",
   "faces": 12802,
+  "segments": 1,
   "bbox": [
    [
     -0.53,
@@ -1384,6 +8322,7 @@
   "fj": "FJ7469",
   "bp": "BP29922",
   "faces": 12802,
+  "segments": 1,
   "bbox": [
    [
     -16.35,
@@ -1409,7 +8348,8 @@
   "fma": "FMA72717",
   "fj": "FJ7470M",
   "bp": "BP23974",
-  "faces": 40600,
+  "faces": 24000,
+  "segments": 1,
   "bbox": [
    [
     -0.5,
@@ -1423,9 +8363,9 @@
    ]
   ],
   "centroid": [
-   6.0,
-   -4.96,
-   22.51
+   5.99,
+   -4.93,
+   22.54
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
@@ -1435,7 +8375,8 @@
   "fma": "FMA72718",
   "fj": "FJ7470",
   "bp": "BP20829",
-  "faces": 40600,
+  "faces": 24000,
+  "segments": 1,
   "bbox": [
    [
     -21.98,
@@ -1449,9 +8390,9 @@
    ]
   ],
   "centroid": [
-   -6.7,
-   -5.47,
-   22.51
+   -6.68,
+   -5.44,
+   22.54
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
@@ -1461,7 +8402,8 @@
   "fma": "FMA72689",
   "fj": "FJ7472M",
   "bp": "BP24018",
-  "faces": 26110,
+  "faces": 24000,
+  "segments": 1,
   "bbox": [
    [
     7.97,
@@ -1475,9 +8417,9 @@
    ]
   ],
   "centroid": [
-   26.19,
-   -58.58,
-   -14.95
+   26.26,
+   -58.41,
+   -14.97
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
@@ -1487,7 +8429,8 @@
   "fma": "FMA72690",
   "fj": "FJ7472",
   "bp": "BP20995",
-  "faces": 26110,
+  "faces": 24000,
+  "segments": 1,
   "bbox": [
    [
     -44.28,
@@ -1501,9 +8444,9 @@
    ]
   ],
   "centroid": [
-   -24.38,
-   -60.5,
-   -14.97
+   -24.45,
+   -60.33,
+   -14.99
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
@@ -1513,7 +8456,8 @@
   "fma": "FMA72687",
   "fj": "FJ7473M",
   "bp": "BP22176",
-  "faces": 30002,
+  "faces": 24000,
+  "segments": 1,
   "bbox": [
    [
     17.77,
@@ -1527,8 +8471,8 @@
    ]
   ],
   "centroid": [
-   44.23,
-   -25.7,
+   44.24,
+   -25.72,
    -25.69
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
@@ -1539,7 +8483,8 @@
   "fma": "FMA72688",
   "fj": "FJ7473",
   "bp": "BP22696",
-  "faces": 30002,
+  "faces": 23999,
+  "segments": 1,
   "bbox": [
    [
     -64.37,
@@ -1553,7 +8498,7 @@
    ]
   ],
   "centroid": [
-   -43.88,
+   -43.89,
    -28.95,
    -25.75
   ],
@@ -1566,6 +8511,7 @@
   "fj": "FJ7474M",
   "bp": "BP29928",
   "faces": 18146,
+  "segments": 1,
   "bbox": [
    [
     4.33,
@@ -1592,6 +8538,7 @@
   "fj": "FJ7474",
   "bp": "BP29927",
   "faces": 18146,
+  "segments": 1,
   "bbox": [
    [
     -45.02,
@@ -1618,6 +8565,7 @@
   "fj": "FJ7475M",
   "bp": "BP29912",
   "faces": 9370,
+  "segments": 1,
   "bbox": [
    [
     0.18,
@@ -1644,6 +8592,7 @@
   "fj": "FJ7475",
   "bp": "BP29917",
   "faces": 9370,
+  "segments": 1,
   "bbox": [
    [
     -12.07,
@@ -1670,6 +8619,7 @@
   "fj": "FJ7476M",
   "bp": "BP22184",
   "faces": 8324,
+  "segments": 1,
   "bbox": [
    [
     5.43,
@@ -1696,6 +8646,7 @@
   "fj": "FJ7476",
   "bp": "BP22707",
   "faces": 8324,
+  "segments": 1,
   "bbox": [
    [
     -36.68,
@@ -1722,6 +8673,7 @@
   "fj": "FJ7478M",
   "bp": "BP29921",
   "faces": 12714,
+  "segments": 1,
   "bbox": [
    [
     6.04,
@@ -1748,6 +8700,7 @@
   "fj": "FJ7478",
   "bp": "BP29923",
   "faces": 12714,
+  "segments": 1,
   "bbox": [
    [
     -39.99,
@@ -1774,6 +8727,7 @@
   "fj": "FJ7479M",
   "bp": "BP29913",
   "faces": 13278,
+  "segments": 1,
   "bbox": [
    [
     27.89,
@@ -1800,6 +8754,7 @@
   "fj": "FJ7479",
   "bp": "BP29914",
   "faces": 13278,
+  "segments": 1,
   "bbox": [
    [
     -74.29,
@@ -1820,12 +8775,634 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma73540-fj7481m",
+  "name": "Left substantia nigra",
+  "fma": "FMA73540",
+  "fj": "FJ7481M",
+  "bp": "BP29933",
+  "faces": 11828,
+  "segments": 1,
+  "bbox": [
+   [
+    -18.17,
+    -23.33,
+    -25.17
+   ],
+   [
+    -7.9,
+    -8.39,
+    -11.7
+   ]
+  ],
+  "centroid": [
+   -12.94,
+   -15.87,
+   -17.6
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73539-fj7481",
+  "name": "Right substantia nigra",
+  "fma": "FMA73539",
+  "fj": "FJ7481",
+  "bp": "BP29932",
+  "faces": 11828,
+  "segments": 1,
+  "bbox": [
+   [
+    7.46,
+    -22.06,
+    -25.16
+   ],
+   [
+    18.19,
+    -7.53,
+    -11.69
+   ]
+  ],
+  "centroid": [
+   12.74,
+   -14.9,
+   -17.59
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73368-fj7482m",
+  "name": "Left subthalamic nucleus",
+  "fma": "FMA73368",
+  "fj": "FJ7482M",
+  "bp": "BP29878",
+  "faces": 2920,
+  "segments": 1,
+  "bbox": [
+   [
+    -18.89,
+    -27.04,
+    -14.59
+   ],
+   [
+    -10.23,
+    -13.5,
+    -8.06
+   ]
+  ],
+  "centroid": [
+   -14.56,
+   -20.27,
+   -11.33
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73367-fj7482",
+  "name": "Right subthalamic nucleus",
+  "fma": "FMA73367",
+  "fj": "FJ7482",
+  "bp": "BP29871",
+  "faces": 2920,
+  "segments": 1,
+  "bbox": [
+   [
+    10.08,
+    -25.8,
+    -14.58
+   ],
+   [
+    19.03,
+    -12.56,
+    -8.04
+   ]
+  ],
+  "centroid": [
+   14.55,
+   -19.18,
+   -11.32
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73333-fj7483m",
+  "name": "Right anterior nucleus of hypothalamus",
+  "fma": "FMA73333",
+  "fj": "FJ7483M",
+  "bp": "BP29865",
+  "faces": 15064,
+  "segments": 2,
+  "bbox": [
+   [
+    -0.21,
+    -1.04,
+    -15.33
+   ],
+   [
+    2.31,
+    3.25,
+    -8.79
+   ]
+  ],
+  "centroid": [
+   1.17,
+   1.05,
+   -12.0
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73334-fj7483",
+  "name": "Left anterior nucleus of hypothalamus",
+  "fma": "FMA73334",
+  "fj": "FJ7483",
+  "bp": "BP29855",
+  "faces": 15064,
+  "segments": 2,
+  "bbox": [
+   [
+    -3.23,
+    -1.22,
+    -15.33
+   ],
+   [
+    -0.83,
+    3.2,
+    -8.79
+   ]
+  ],
+  "centroid": [
+   -2.12,
+   0.93,
+   -12.01
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma74877-fj7485m",
+  "name": "Mammillary body",
+  "fma": "FMA74877",
+  "fj": "FJ7485M",
+  "bp": "BP23808",
+  "faces": 408,
+  "segments": 2,
+  "bbox": [
+   [
+    -5.17,
+    -10.17,
+    -19.88
+   ],
+   [
+    4.54,
+    -4.23,
+    -13.94
+   ]
+  ],
+  "centroid": [
+   -0.31,
+   -7.2,
+   -16.68
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73389-fj7486m",
+  "name": "Right mammillothalamic tract of hypothalamus",
+  "fma": "FMA73389",
+  "fj": "FJ7486M",
+  "bp": "BP29856",
+  "faces": 596,
+  "segments": 1,
+  "bbox": [
+   [
+    2.89,
+    -10.93,
+    -16.25
+   ],
+   [
+    6.01,
+    -7.27,
+    -7.04
+   ]
+  ],
+  "centroid": [
+   4.45,
+   -9.27,
+   -11.68
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73390-fj7486",
+  "name": "Left mammillothalamic tract of hypothalamus",
+  "fma": "FMA73390",
+  "fj": "FJ7486",
+  "bp": "BP29881",
+  "faces": 596,
+  "segments": 1,
+  "bbox": [
+   [
+    -6.44,
+    -11.34,
+    -16.26
+   ],
+   [
+    -3.42,
+    -7.56,
+    -7.04
+   ]
+  ],
+  "centroid": [
+   -4.93,
+   -9.62,
+   -11.69
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73491-fj7487m",
+  "name": "Right red nucleus",
+  "fma": "FMA73491",
+  "fj": "FJ7487M",
+  "bp": "BP29879",
+  "faces": 762,
+  "segments": 1,
+  "bbox": [
+   [
+    3.33,
+    -20.05,
+    -19.12
+   ],
+   [
+    9.39,
+    -13.5,
+    -13.15
+   ]
+  ],
+  "centroid": [
+   6.35,
+   -16.76,
+   -16.12
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73492-fj7487",
+  "name": "Left red nucleus",
+  "fma": "FMA73492",
+  "fj": "FJ7487",
+  "bp": "BP29876",
+  "faces": 762,
+  "segments": 1,
+  "bbox": [
+   [
+    -9.54,
+    -20.54,
+    -19.13
+   ],
+   [
+    -3.44,
+    -13.96,
+    -13.14
+   ]
+  ],
+  "centroid": [
+   -6.48,
+   -17.24,
+   -16.12
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73337-fj7488m",
+  "name": "Right arcuate nucleus of hypothalamus",
+  "fma": "FMA73337",
+  "fj": "FJ7488M",
+  "bp": "BP29873",
+  "faces": 912,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.92,
+    -3.77,
+    -21.02
+   ],
+   [
+    0.14,
+    -1.69,
+    -16.83
+   ]
+  ],
+  "centroid": [
+   -0.39,
+   -2.73,
+   -18.92
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73338-fj7488",
+  "name": "Left arcuate nucleus of hypothalamus",
+  "fma": "FMA73338",
+  "fj": "FJ7488",
+  "bp": "BP29859",
+  "faces": 912,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.93,
+    -3.77,
+    -21.02
+   ],
+   [
+    0.15,
+    -1.69,
+    -16.83
+   ]
+  ],
+  "centroid": [
+   -0.39,
+   -2.73,
+   -18.92
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73335-fj7489m",
+  "name": "Right paraventricular nucleus of hypothalamus",
+  "fma": "FMA73335",
+  "fj": "FJ7489M",
+  "bp": "BP29869",
+  "faces": 1186,
+  "segments": 1,
+  "bbox": [
+   [
+    0.03,
+    0.3,
+    -9.96
+   ],
+   [
+    2.61,
+    4.37,
+    -5.09
+   ]
+  ],
+  "centroid": [
+   1.37,
+   2.38,
+   -7.3
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73336-fj7489",
+  "name": "Left paraventricular nucleus of hypothalamus",
+  "fma": "FMA73336",
+  "fj": "FJ7489",
+  "bp": "BP29868",
+  "faces": 1186,
+  "segments": 1,
+  "bbox": [
+   [
+    -3.6,
+    0.11,
+    -9.96
+   ],
+   [
+    -1.06,
+    4.23,
+    -5.1
+   ]
+  ],
+  "centroid": [
+   -2.39,
+   2.24,
+   -7.31
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73341-fj7490m",
+  "name": "Right ventromedial nucleus of hypothalamus",
+  "fma": "FMA73341",
+  "fj": "FJ7490M",
+  "bp": "BP29866",
+  "faces": 1186,
+  "segments": 1,
+  "bbox": [
+   [
+    0.79,
+    -4.05,
+    -18.19
+   ],
+   [
+    2.45,
+    0.34,
+    -13.92
+   ]
+  ],
+  "centroid": [
+   1.63,
+   -2.01,
+   -16.04
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73342-fj7490",
+  "name": "Left ventromedial nucleus of hypothalamus",
+  "fma": "FMA73342",
+  "fj": "FJ7490",
+  "bp": "BP29880",
+  "faces": 1186,
+  "segments": 1,
+  "bbox": [
+   [
+    -3.24,
+    -4.21,
+    -18.19
+   ],
+   [
+    -1.59,
+    0.19,
+    -13.92
+   ]
+  ],
+  "centroid": [
+   -2.43,
+   -2.16,
+   -16.04
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73359-fj7491m",
+  "name": "Right lateral hypothalamic nucleus",
+  "fma": "FMA73359",
+  "fj": "FJ7491M",
+  "bp": "BP29875",
+  "faces": 1368,
+  "segments": 1,
+  "bbox": [
+   [
+    3.11,
+    -6.98,
+    -14.83
+   ],
+   [
+    7.12,
+    5.36,
+    -5.04
+   ]
+  ],
+  "centroid": [
+   5.11,
+   -0.69,
+   -10.02
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73360-fj7491",
+  "name": "Left lateral hypothalamic nucleus",
+  "fma": "FMA73360",
+  "fj": "FJ7491",
+  "bp": "BP29863",
+  "faces": 1368,
+  "segments": 1,
+  "bbox": [
+   [
+    -8.22,
+    -7.3,
+    -14.84
+   ],
+   [
+    -3.72,
+    4.83,
+    -5.04
+   ]
+  ],
+  "centroid": [
+   -5.97,
+   -1.1,
+   -10.02
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73353-fj7496m",
+  "name": "Right posterior nucleus of hypothalamus",
+  "fma": "FMA73353",
+  "fj": "FJ7496M",
+  "bp": "BP29857",
+  "faces": 1826,
+  "segments": 1,
+  "bbox": [
+   [
+    1.63,
+    -8.13,
+    -14.46
+   ],
+   [
+    2.74,
+    -3.89,
+    -7.29
+   ]
+  ],
+  "centroid": [
+   2.19,
+   -5.93,
+   -10.76
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73354-fj7496",
+  "name": "Left posterior nucleus of hypothalamus",
+  "fma": "FMA73354",
+  "fj": "FJ7496",
+  "bp": "BP29864",
+  "faces": 1826,
+  "segments": 1,
+  "bbox": [
+   [
+    -3.37,
+    -8.32,
+    -14.46
+   ],
+   [
+    -2.25,
+    -4.07,
+    -7.29
+   ]
+  ],
+  "centroid": [
+   -2.82,
+   -6.12,
+   -10.77
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73339-fj7497m",
+  "name": "Right dorsomedial nucleus of hypothalamus",
+  "fma": "FMA73339",
+  "fj": "FJ7497M",
+  "bp": "BP29853",
+  "faces": 2100,
+  "segments": 1,
+  "bbox": [
+   [
+    0.82,
+    -4.01,
+    -14.49
+   ],
+   [
+    2.03,
+    -0.35,
+    -9.29
+   ]
+  ],
+  "centroid": [
+   1.46,
+   -2.05,
+   -11.94
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73340-fj7497",
+  "name": "Left dorsomedial nucleus of hypothalamus",
+  "fma": "FMA73340",
+  "fj": "FJ7497",
+  "bp": "BP29877",
+  "faces": 2100,
+  "segments": 1,
+  "bbox": [
+   [
+    -2.84,
+    -4.16,
+    -14.49
+   ],
+   [
+    -1.65,
+    -0.47,
+    -9.29
+   ]
+  ],
+  "centroid": [
+   -2.27,
+   -2.18,
+   -11.94
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma72924-fj7498m",
   "name": "Right fornix of forebrain",
   "fma": "FMA72924",
   "fj": "FJ7498M",
   "bp": "BP24080",
   "faces": 4782,
+  "segments": 1,
   "bbox": [
    [
     -1.16,
@@ -1852,6 +9429,7 @@
   "fj": "FJ7498",
   "bp": "BP23782",
   "faces": 4782,
+  "segments": 1,
   "bbox": [
    [
     -32.91,
@@ -1878,6 +9456,7 @@
   "fj": "FJ7501M",
   "bp": "BP23214",
   "faces": 1506,
+  "segments": 1,
   "bbox": [
    [
     -34.67,
@@ -1904,6 +9483,7 @@
   "fj": "FJ7501",
   "bp": "BP23301",
   "faces": 1506,
+  "segments": 1,
   "bbox": [
    [
     3.47,
@@ -1930,6 +9510,7 @@
   "fj": "FJ7502M",
   "bp": "BP23128",
   "faces": 912,
+  "segments": 1,
   "bbox": [
    [
     -27.84,
@@ -1956,6 +9537,7 @@
   "fj": "FJ7502",
   "bp": "BP23107",
   "faces": 912,
+  "segments": 1,
   "bbox": [
    [
     5.89,
@@ -1982,6 +9564,7 @@
   "fj": "FJ7503",
   "bp": "BP22996",
   "faces": 1464,
+  "segments": 1,
   "bbox": [
    [
     -0.09,

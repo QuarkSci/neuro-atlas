@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 import { acceleratedRaycast, computeBoundsTree, disposeBoundsTree } from 'three-mesh-bvh'
 import type { LayerId, Part, SystemId } from '@/data/types'
-import { DEPTH_LEVELS, depthOf } from '@/data'
+import { DEPTH_LEVELS, GROSS_CORTEX_IDS, PARCELLATION_IDS, depthOf } from '@/data'
 import type { View } from '@/store/useAtlas'
 import { inventoryLayout, separationVector } from './explode'
 import { createGround } from './ground'
@@ -75,6 +75,9 @@ interface Insets {
 /** The atlas renders dark only. */
 const THEME = { clear: '#0b0e14', ground: '#151a22', hemiSky: 0xbfcbe0, hemiGround: 0x1a1d24 } as const
 
+/** Systems whose extent defines the model for camera framing. */
+const BRAIN_SYSTEMS = new Set<SystemId>(['telencephalon', 'diencephalon', 'brainstem', 'cerebellum', 'ventricles', 'white-matter'])
+
 /** Slider fraction where separation ends and the inventory grid begins. */
 const SPLIT = 0.5
 
@@ -134,9 +137,11 @@ export class BrainScene {
   private modelBox = new T.Box3()
   private modelCentre = new T.Vector3()
   private modelRadius = 100
+  private seed = 0
   /** Smoothed explode amount that chases the store value. */
   private amount = 0
   private lastFitAmount = -1
+  private framedOnce = false
   /** Smoothed peel depth that chases the store value. */
   private peel = 0
   private lastFitPeel = 0
@@ -158,8 +163,12 @@ export class BrainScene {
     this.labelLayer.className = 'part-labels'
     host.appendChild(this.labelLayer)
 
-    // Bounds first: lights, ground, camera and the clip indicator are all sized from them.
-    for (const g of geometries) this.modelBox.union(g.geometry.boundingBox!)
+    // Bounds first: lights, ground, camera and the clip indicator are all
+    // sized from them. Only the brain proper counts — the skull, dura and
+    // vessels reach far outside it (the jugular runs to the neck) and would
+    // push the camera back until the brain is a thumbnail.
+    for (const g of geometries) if (BRAIN_SYSTEMS.has(g.part.system)) this.modelBox.union(g.geometry.boundingBox!)
+    if (this.modelBox.isEmpty()) for (const g of geometries) this.modelBox.union(g.geometry.boundingBox!)
     this.modelBox.getCenter(this.modelCentre)
     this.modelRadius = this.modelBox.getSize(new T.Vector3()).length() / 2
 
@@ -226,11 +235,48 @@ export class BrainScene {
       polygonOffsetUnits: -4,
     })
 
-    // Structure meshes.
-    let seed = 0
+    this.addGeometries(geometries)
+
+    this.clipIndicator = this.makeClipIndicator()
+    this.scene.add(this.clipIndicator)
+
+    this.renderer.setClearColor(THEME.clear)
+    this.warmUp()
+
+    document.addEventListener('visibilitychange', this.onVisible)
+    this.observer = new ResizeObserver(() => this.resize())
+    this.observer.observe(host)
+    this.resize()
+
+    const el = r.domElement
+    el.addEventListener('pointerdown', this.onDown)
+    el.addEventListener('pointermove', this.onMove)
+    el.addEventListener('pointerup', this.onUp)
+    el.addEventListener('pointercancel', this.onCancel)
+    el.addEventListener('pointerleave', this.onLeave)
+    el.addEventListener('webglcontextlost', this.onContextLost)
+    // Attached to the host (the canvas's parent), not the canvas itself:
+    // OrbitControls' own wheel listener lives on the canvas, and a listener
+    // on the same target fires in registration order regardless of the
+    // capture flag. A true ancestor genuinely sees the event first during
+    // the capture phase, letting us stop it before OrbitControls ever does.
+    this.host.addEventListener('wheel', this.onWheel, { capture: true, passive: false })
+
+    this.animate()
+  }
+
+  // ── Public API ──────────────────────────────────────────────────────
+
+  /**
+   * Add structure meshes to the scene. Layers load on demand (a parcellation
+   * is only fetched when it is switched on), so this runs once at start-up
+   * with the gross anatomy and again for each layer that is opened later.
+   */
+  addGeometries(geometries: LoadedGeometry[]) {
     for (const { part, geometry } of geometries) {
+      if (this.byId.has(part.id)) continue
       geometry.computeBoundsTree()
-      const material = createPartMaterial(part.system, part.layer === 'julich', seed++)
+      const material = createPartMaterial(part.system, part.layer, this.seed++)
       material.clippingPlanes = [this.clipPlane]
       const mesh = new T.Mesh(geometry, material)
       mesh.name = part.id
@@ -267,36 +313,17 @@ export class BrainScene {
       this.byId.set(part.id, entry)
       this.scene.add(mesh)
     }
-
-    this.clipIndicator = this.makeClipIndicator()
-    this.scene.add(this.clipIndicator)
-
-    this.renderer.setClearColor(THEME.clear)
+    // Force the visibility / layout pass to run again for the new meshes.
+    this.last = null
+    this.layoutKey = ''
+    this.dirty = true
     this.warmUp()
-
-    document.addEventListener('visibilitychange', this.onVisible)
-    this.observer = new ResizeObserver(() => this.resize())
-    this.observer.observe(host)
-    this.resize()
-
-    const el = r.domElement
-    el.addEventListener('pointerdown', this.onDown)
-    el.addEventListener('pointermove', this.onMove)
-    el.addEventListener('pointerup', this.onUp)
-    el.addEventListener('pointercancel', this.onCancel)
-    el.addEventListener('pointerleave', this.onLeave)
-    el.addEventListener('webglcontextlost', this.onContextLost)
-    // Attached to the host (the canvas's parent), not the canvas itself:
-    // OrbitControls' own wheel listener lives on the canvas, and a listener
-    // on the same target fires in registration order regardless of the
-    // capture flag. A true ancestor genuinely sees the event first during
-    // the capture phase, letting us stop it before OrbitControls ever does.
-    this.host.addEventListener('wheel', this.onWheel, { capture: true, passive: false })
-
-    this.animate()
   }
 
-  // ── Public API ──────────────────────────────────────────────────────
+  /** Names for newly added parts; existing labels are left alone. */
+  setLabelsFor(names: Record<string, string>) {
+    for (const p of this.parts) if (names[p.id] !== undefined) p.label.textContent = names[p.id]
+  }
 
   setState(state: SceneSnapshot) {
     this.state = state
@@ -714,6 +741,9 @@ export class BrainScene {
     if (!s) return
     const last = this.last
     const first = last === null
+    // A later addGeometries() resets `last` to re-run visibility; that must
+    // not re-frame the camera the way the very first frame does.
+    const firstEver = first && !this.framedOnce
 
     // Cutaway plane: rotate to the chosen azimuth, or push it far away to
     // disable clipping entirely (cheaper than toggling clippingPlanes on
@@ -759,8 +789,12 @@ export class BrainScene {
     const shells = Math.max(1, DEPTH_LEVELS.length - 1)
     const visibilityChanged = first || peeling || last.visible !== s.visible || last.layers !== s.layers || last.selected !== s.selected || last.isolate !== s.isolate
     if (visibilityChanged) {
+      // A cortical parcellation replaces the gross cortex rather than
+      // hiding inside it.
+      const parcellationOn = s.layers.some((l) => PARCELLATION_IDS.has(l))
       for (const p of this.parts) {
-        const shown = s.isolate ? selection.has(p.id) : (visibleSet.has(p.system) && layerSet.has(p.layer)) || selection.has(p.id)
+        const covered = parcellationOn && GROSS_CORTEX_IDS.has(p.id)
+        const shown = s.isolate ? selection.has(p.id) : (visibleSet.has(p.system) && layerSet.has(p.layer) && !covered) || selection.has(p.id)
         const peelAmount = selection.has(p.id) || s.isolate ? 1 : T.MathUtils.clamp(p.depth - this.peel * shells + 1, 0, 1)
         if (peelAmount !== p.peelAmount) {
           p.peelAmount = peelAmount
@@ -789,8 +823,9 @@ export class BrainScene {
     const selectionKey = s.selected.join(',')
     const selectionChanged = !first && selectionKey !== this.selectionKey
     this.selectionKey = selectionKey
-    if (viewChanged || isolateChanged) {
-      this.frameFor(s, !first)
+    if (firstEver || (!first && (viewChanged || isolateChanged))) {
+      this.framedOnce = true
+      this.frameFor(s, !firstEver)
       this.isolateKey = isolateKey
       this.lastFitAmount = this.amount
     } else if (selectionChanged && !s.isolate) {

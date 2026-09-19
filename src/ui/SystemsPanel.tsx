@@ -4,6 +4,7 @@ import { Switch } from '@/components/ui/switch'
 import { ACTIVE_SYSTEMS, ALL_SYSTEM_IDS, LAYERS, LEAF_PARTS } from '@/data'
 import type { LayerId, SystemId } from '@/data/types'
 import { useL, useT } from '@/i18n'
+import { LAYER_COLORS } from '@/scene/materials'
 import { useAtlas } from '@/store/useAtlas'
 
 /** Distance the sheet must be pulled down before release dismisses it. */
@@ -82,8 +83,9 @@ export function SystemsPanel() {
       </div>
       <div className="presets" role="group" aria-label={t.layers}>
         {LAYERS.map((layer) => (
-          <button key={layer.id} aria-pressed={layers.includes(layer.id)} onClick={() => toggleLayer(layer.id)} title={layer.source}>
-            {l(layer.name)} <span className="system-count">{counts.byLayer[layer.id]}</span>
+          <button key={layer.id} aria-pressed={layers.includes(layer.id)} onClick={() => toggleLayer(layer.id)} title={`${layer.source} · ${layer.license}`}>
+            <span className="layer-swatch" style={{ background: LAYER_COLORS[layer.id] }} />
+            {l(layer.name).replace(/ .*/, '')} <span className="system-count">{counts.byLayer[layer.id]}</span>
           </button>
         ))}
       </div>

@@ -26,7 +26,7 @@ export type SystemId =
  * Which atlas a mesh comes from. Layers overlap in space (a Julich area sits
  * inside a BodyParts3D gyrus), so they are toggled independently of systems.
  */
-export type LayerId = 'gross' | 'julich'
+export type LayerId = 'gross' | 'julich' | 'brodmann' | 'desikan' | 'destrieux' | 'glasser' | 'jhu'
 
 export type Side = 'left' | 'right' | 'midline'
 
@@ -41,6 +41,8 @@ export interface System {
 export interface Layer {
   id: LayerId
   name: L10n
+  /** Cortical parcellations tile the same surface, so only one shows at a time. */
+  parcellation?: boolean
   /** One-line provenance shown in the inspector and the about panel. */
   source: string
   license: string

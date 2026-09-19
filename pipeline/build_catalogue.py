@@ -16,15 +16,17 @@ G = json.load(open(ROOT / 'data/gross.json'))
 J = json.load(open(ROOT / 'data/julich.json'))
 
 GROSS_SYSTEM = [
-    (r'ventricle|aqueduct|choroid plexus', 'ventricles'),
-    (r'optic nerve', 'cranial-nerves'),
-    (r'tentorium|falx|dura|arachnoid|pia', 'meninges'),
-    (r'artery|arteries', 'arteries'),
-    (r'vein|sinus', 'veins'),
-    (r'cerebell', 'cerebellum'),
-    (r'pons|medulla|colliculus|brachium|midbrain|peduncle', 'brainstem'),
-    (r'thalam|pineal|pituitary|hypophysis|optic chiasm|optic tract|mammillary|stria medullaris|hypothalam', 'diencephalon'),
-    (r'corpus callosum|fornix|internal capsule|commissure', 'white-matter'),
+    # Order matters: a vessel "to right lateral ventricle" is a vessel.
+    (r'arter', 'arteries'),
+    (r'vein|sinus|jugular', 'veins'),
+    (r'nerve|ganglion|olfactory (bulb|tract)', 'cranial-nerves'),
+    (r'tentorium|falx|dura|arachnoid|pia mater|diaphragma', 'meninges'),
+    (r'bone$|^mandible$|maxilla$|^ethmoid$|^sphenoid$|^vomer$|concha', 'skull'),
+    (r'ventricle|aqueduct|choroid plexus|interventricular', 'ventricles'),
+    (r'cerebell|vermis|flocculus', 'cerebellum'),
+    (r'pons|medulla|colliculus|brachium|midbrain|peduncle|red nucleus|substantia nigra|olive|pyramid|tectum|tegmentum', 'brainstem'),
+    (r'thalam|geniculate|habenula|pineal|pituitary|hypophysis|optic chiasm|optic tract|mammillary|stria medullaris|infundibul', 'diencephalon'),
+    (r'white matter|corpus callosum|fornix|internal capsule|external capsule|commissure|corona radiata|radiation|cingulum|fasciculus|capsule|tapetum|lemniscus|corticospinal|stria terminalis', 'white-matter'),
     (r'.', 'telencephalon'),
 ]
 JULICH_SYSTEM = {
@@ -95,6 +97,31 @@ for p in J:
         bbox=p['bbox'], faces=p['faces'], ref=str(p['label']),
     ))
 parts = list(groups.values()) + parts
+
+# ── neuroparc atlases (Brodmann, Desikan, Destrieux, Glasser, JHU) ───────
+PARCEL = {
+    'brodmann': ('telencephalon', 'ba'), 'glasser': ('telencephalon', 'gl'), 'destrieux': ('telencephalon', 'ds'),
+    'desikan': (None, 'dk'), 'jhu': ('white-matter', 'wm'),
+}
+for layer, (fixed, prefix) in PARCEL.items():
+    f = ROOT / f'data/{layer}.json'
+    if not f.exists():
+        print('missing', f); continue
+    for p in json.load(open(f)):
+        n = p['name']
+        sys_ = fixed or gross_system(n)
+        if layer == 'jhu' and re.search(r'cerebellar peduncle|pontine', n, re.I):
+            sys_ = 'brainstem'
+        # Proper nouns keep their capital after the side prefix.
+        body = n if re.match(r'^(Brodmann|Heschl|Broca|Wernicke|Rolandic|Sylvian)', n) else n[0].lower() + n[1:]
+        shown = n if p['side'] == 'midline' else f"{p['side'].capitalize()} {body}"
+        if layer == 'brodmann':
+            shown = re.sub(r'Brodmann area (\d+)', r'Brodmann area \1 (BA\1)', shown)
+        parts.append(dict(
+            id=f"{prefix}-{p['id']}", name={'en': shown}, system=sys_, layer=layer, side=p['side'],
+            concept=f"{prefix}-{slug(n)}", mesh=f"{layer}/{p['id']}.glb", centroid=p['centroid'],
+            bbox=p['bbox'], faces=p['faces'], ref=str(p['label']),
+        ))
 
 # ── Overall bounds ──────────────────────────────────────────────────────
 lo = [min(p['bbox'][0][i] for p in parts if 'bbox' in p) for i in range(3)]
