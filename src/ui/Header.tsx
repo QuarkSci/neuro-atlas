@@ -1,0 +1,104 @@
+import { Info, PanelLeft, Pause, RotateCw, Search, Slice } from 'lucide-react'
+import { LEAF_PARTS } from '@/data'
+import { useT } from '@/i18n'
+import { useAtlas, type View } from '@/store/useAtlas'
+
+const VIEWS: { id: View; glyph: string }[] = [
+  { id: 'three-quarter', glyph: '¾' },
+  { id: 'lateral', glyph: 'L' },
+  { id: 'front', glyph: 'A' },
+  { id: 'top', glyph: 'S' },
+]
+
+/** The atlas mark: a brain in profile. Stands alone in the corner on wide
+ *  screens and rides inside the top bar on a phone. */
+function Mark({ className }: { className: string }) {
+  const t = useT()
+  const setAboutOpen = useAtlas((s) => s.setAboutOpen)
+  return (
+    <button className={className} onClick={() => setAboutOpen(true)} aria-label={t.about} title={t.about}>
+      <svg viewBox="0 0 24 24" width="64%" height="64%" aria-hidden fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9.5 3.5a3 3 0 0 0-3 3 3 3 0 0 0-2 4.5 3 3 0 0 0 1 5 3 3 0 0 0 4 2.5V3.5Z" />
+        <path d="M14.5 3.5a3 3 0 0 1 3 3 3 3 0 0 1 2 4.5 3 3 0 0 1-1 5 3 3 0 0 1-4 2.5V3.5Z" />
+        <path d="M9.5 18.5v2M14.5 18.5v2M6.5 6.5c1 .5 2 .5 3 0M17.5 6.5c-1 .5-2 .5-3 0" />
+      </svg>
+    </button>
+  )
+}
+
+/** Circular mark in the top-left corner; opens the about panel. */
+export function Identity() {
+  const t = useT()
+  return (
+    <header className="identity">
+      <Mark className="identity-mark glass" />
+      <div className="identity-text">
+        <div className="eyebrow">
+          <span className="status-dot" /> {t.eyebrow}
+        </div>
+        <h1>{t.title}</h1>
+        <div className="identity-meta">
+          {t.metaPieces(LEAF_PARTS.length)} <span>·</span> {t.metaSpace}
+        </div>
+      </div>
+    </header>
+  )
+}
+
+/**
+ * The single top bar: a sidebar toggle, a segmented tab strip of camera
+ * views plus the cutaway toggle, then search and the global preferences.
+ */
+export function TopActions() {
+  const t = useT()
+  const { panel, setPanel, view, setView, explode, cutaway, setCutaway, autoRotate, setAutoRotate, isolate, lang, setLang, setAboutOpen } = useAtlas()
+  const frontOnly = explode > 0.8
+  return (
+    <nav className="top-actions glass" aria-label={t.tools}>
+      <Mark className="pill-mark" />
+      <button className={`pill-icon ${panel === 'systems' ? 'active' : ''}`} onClick={() => setPanel('systems')} aria-pressed={panel === 'systems'} aria-label={t.systems} title={t.systems}>
+        <PanelLeft size={17} />
+      </button>
+      <div className="tab-group" role="tablist" aria-label={t.viewControls}>
+        {VIEWS.map((v) => (
+          <button
+            key={v.id}
+            role="tab"
+            className={`tab ${view === v.id && !cutaway ? 'active' : ''}`}
+            aria-selected={view === v.id && !cutaway}
+            disabled={frontOnly && v.id !== 'front'}
+            onClick={() => {
+              if (cutaway) setCutaway(false)
+              setView(v.id)
+            }}
+            title={t.views[v.id]}
+          >
+            <span className="tab-glyph">{v.glyph}</span>
+            <span className="tab-text">{t.views[v.id].replace(/\s.*/, '')}</span>
+          </button>
+        ))}
+        <button role="tab" className={`tab ${cutaway ? 'active' : ''}`} aria-selected={cutaway} disabled={explode >= 0.4} onClick={() => setCutaway(!cutaway)} title={t.cutaway}>
+          <Slice size={15} />
+        </button>
+      </div>
+      <button className={`pill-icon ${panel === 'search' ? 'active' : ''}`} onClick={() => setPanel('search')} aria-label={t.findPart} title={t.findPart}>
+        <Search size={17} />
+      </button>
+      <i className="pill-divider" />
+      <button className={`pill-icon ${autoRotate ? 'active' : ''}`} disabled={explode >= 0.4 || isolate} onClick={() => setAutoRotate(!autoRotate)} aria-label={autoRotate ? t.pauseRotate : t.autoRotate} title={t.autoRotate}>
+        {autoRotate ? <Pause size={16} /> : <RotateCw size={16} />}
+      </button>
+      <div className="lang-toggle" role="group" aria-label={t.language}>
+        <button className={lang === 'uz' ? 'active' : ''} onClick={() => setLang('uz')} aria-pressed={lang === 'uz'}>
+          UZ
+        </button>
+        <button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')} aria-pressed={lang === 'en'}>
+          EN
+        </button>
+      </div>
+      <button className="pill-icon" onClick={() => setAboutOpen(true)} aria-label={t.about} title={t.about}>
+        <Info size={17} />
+      </button>
+    </nav>
+  )
+}

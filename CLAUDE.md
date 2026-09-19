@@ -4,7 +4,7 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-09-19 (repo yaratildi, 0-bosqich bajarildi).
+> Oxirgi yangilanish: 2026-09-19 (2-bosqich: ilova skeleti ishlaydi).
 
 ## 1. Loyiha nima
 
@@ -61,8 +61,34 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     `python3 -m http.server 3018` bilan ochiladi.
   - Muhim: trimesh `export(file_type='glb')` normal yozmaydi → mesh qora
     ko'rinadi. `include_normals=True` shart.
-- ⬜ 2-bosqich: ilova skeleti — KEYINGI QADAM.
-- ⬜ 3–7.
+- ✅ 2-bosqich: ilova skeleti (2026-09-19) — brauzerda tekshirilgan
+  (desktop 800px va telefon 375×812): 585 qism (76 gross + 508 Julich, shu
+  jumladan 14 ta Julich guruh-qismi) yuklanadi, tanlash/hover/Inspector/
+  qidiruv (juftlik konseptlari)/tizim va qatlam toggle/isolate/kesim/
+  explode+inventar/4 kamera ko'rinishi ishlaydi.
+  - `src/data/parts.json` — `pipeline/build_catalogue.py` hosil qiladi
+    (gross.json + julich.json). Tizim nom bo'yicha regex bilan, Julich
+    guruhlari qavs ichidagi bosh so'zdan (`Thalamus`, `PostCG`…).
+    Bir xil nomli BodyParts3D meshlar: ko'zguli bo'lsa chap/o'ng yarim,
+    aks holda ko'p yuzlisi qoladi.
+  - `src/scene/loader.ts` — GLTFLoader, 12 parallel; MNI (RAS) → sahna
+    `(−x, z, y)` matritsasi geometriyaga "pishiriladi" (Y yuqoriga, old
+    kamera +Z dan). Meshlar `public/meshes/<layer>/<id>.glb` — gitignore.
+  - `src/scene/BrainScene.ts` — RocketScene'dan; flight/alanga/pad yo'q,
+    three-mesh-bvh raycast, kesim tanlovni hisobga oladi, kamera sfera
+    bo'yicha kadrlaydi (margin 0.68 — sfera uzunchoq miya uchun katta).
+  - `L10n.uz/la` ixtiyoriy; `useL()` inglizchaga tushadi (kontent 5-bosqich).
+  - Dizayn: `.inspector.glass` to'qroq (78% qora ramp, blur 18px),
+    `.studio-credit` pastki o'ng burchak (telefonda yuqori panel ostida).
+  - Dev server porti **3019** (Falcon 3017 bilan to'qnashmasin).
+  - Preview vositasi (`preview_start`) sessiya Falcon papkasida boshlangan
+    bo'lsa hamon 3017 ni o'qiydi — bunda `npm run dev` fonda ishga tushirib
+    `navigate` bilan ochish kerak. Brauzer pane screenshot'i ba'zan bir
+    qadam kechikadi — `wait` qo'shib qayta oling.
+- ⬜ 3-bosqich: to'liq import — KEYINGI QADAM (qolgan BodyParts3D bosh
+  qismlari: tomirlar, bosh nervlari, meninges, bosh suyagi; Brodmann; DK/
+  Destrieux; Glasser; traktlar; performance).
+- ⬜ 4–7.
 
 ## 4. Ma'lum xatolar tarixi
 

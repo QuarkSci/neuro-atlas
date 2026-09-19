@@ -99,7 +99,7 @@ glasser | julich`), tizim emas.
 |---|---|---|
 | 0 | Manbalar auditi | ✅ jadval yuqorida; `?` lar 1-bosqichda hal qilinadi |
 | 1 | Pipeline sinovi | ✅ 2026-09-19: BodyParts3D 77 qism + Julich 414 hudud → GLB, MNI fazosida ustma-ust (RMS 5.3 mm), brauzerda tasdiqlangan |
-| 2 | Ilova skeleti | Falcon UI/scene ko'chirilgan, 100 ta qism yuklanadi, tanlash/hover/Inspector/qidiruv ishlaydi |
+| 2 | Ilova skeleti | ✅ 2026-09-19: Falcon UI/scene ko'chirildi, 585 qism, barcha asosiy interaktivlik brauzerda tasdiqlangan |
 | 3 | To'liq import | Barcha qatlamlar, ierarxiya, 1700+ qism, 60 fps desktop / 30 fps telefon |
 | 4 | Kesim + qatlamlar | 3 tekislik, MNI koordinata, parcellation almashtirish |
 | 5 | Kontent | parts.json skeleton (nom uz/en/la, tizim, funksiya, klinik ahamiyat, manba) → foydalanuvchi ko'rib chiqadi |

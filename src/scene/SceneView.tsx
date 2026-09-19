@@ -1,0 +1,82 @@
+import { useEffect, useRef } from 'react'
+import { LEAF_PARTS, PART_BY_ID } from '@/data'
+import { useAtlas, type AtlasState, type Lang } from '@/store/useAtlas'
+import { useT } from '@/i18n'
+import { BrainScene, type SceneSnapshot } from './BrainScene'
+import { loadGeometries } from './loader'
+
+const snapshot = (s: AtlasState): SceneSnapshot => ({
+  visible: s.visible,
+  layers: s.layers,
+  selected: s.selected,
+  isolate: s.isolate,
+  explode: s.explode,
+  view: s.view,
+  autoRotate: s.autoRotate,
+  cutaway: s.cutaway,
+  cutawayAngle: s.cutawayAngle,
+  resetTick: s.resetTick,
+  inspectorOpen: s.inspectorOpen,
+  hovered: s.hovered,
+})
+
+const labelsFor = (lang: Lang) => Object.fromEntries(LEAF_PARTS.map((p) => [p.id, p.name[lang] ?? p.name.en]))
+
+/** Mounts the Three.js scene once the meshes are in and streams store changes into it. */
+export function SceneView() {
+  const host = useRef<HTMLDivElement>(null)
+  const t = useT()
+  const tRef = useRef(t)
+  tRef.current = t
+
+  useEffect(() => {
+    const el = host.current
+    if (!el) return
+    const store = useAtlas
+    const { setProgress, setError } = store.getState()
+    let scene: BrainScene | null = null
+    let cancelled = false
+    let lang = store.getState().lang
+
+    loadGeometries(LEAF_PARTS, (done, total) => setProgress(Math.min(95, Math.round((done / total) * 95))))
+      .then((geometries) => {
+        if (cancelled) return
+        scene = new BrainScene(el, geometries, {
+          onSelect: (id) => {
+            const s = store.getState()
+            if (!id) {
+              if (!s.isolate) s.clearSelection()
+              return
+            }
+            if (PART_BY_ID.has(id)) s.selectParts([id], { kind: 'part', id })
+          },
+          onHover: (id) => store.getState().setHovered(id),
+          onError: (code) => setError(code === 'context-lost' ? tRef.current.contextLost : tRef.current.webgl),
+        })
+        scene.setLabels(labelsFor(lang))
+        scene.setState(snapshot(store.getState()))
+        if (import.meta.env.DEV) (window as unknown as { __scene: BrainScene }).__scene = scene
+        setProgress(100)
+      })
+      .catch((e) => {
+        console.error(e)
+        setError(tRef.current.webgl)
+      })
+
+    const unsubscribe = store.subscribe((s) => {
+      if (!scene) return
+      scene.setState(snapshot(s))
+      if (s.lang !== lang) {
+        lang = s.lang
+        scene.setLabels(labelsFor(lang))
+      }
+    })
+    return () => {
+      cancelled = true
+      unsubscribe()
+      scene?.dispose()
+    }
+  }, [])
+
+  return <div className="scene" ref={host} />
+}

@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "neuro-preview", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "3018", "--bind", "127.0.0.1"], "port": 3018 }
+    { "name": "dev", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev"], "port": 3019 },
+    { "name": "pipeline-preview", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "3018", "--bind", "127.0.0.1"], "port": 3018 }
   ]
 }
