@@ -5,6 +5,8 @@ import { ALL_LAYER_IDS, ALL_SYSTEM_IDS } from '@/data'
 export type Lang = 'en' | 'uz'
 export type View = 'three-quarter' | 'lateral' | 'front' | 'top'
 export type Panel = 'systems' | 'search' | null
+/** Which slider the bottom dock drives. */
+export type Mode = 'explode' | 'peel'
 export type Focus = { kind: 'concept'; id: string } | { kind: 'part'; id: string }
 
 /**
@@ -25,6 +27,9 @@ export interface AtlasState {
   focus: Focus | null
   isolate: boolean
   explode: number
+  mode: Mode
+  /** Depth of the peel: 0 shows every shell, 1 only the innermost. Exclusive with explode/isolate. */
+  peel: number
   view: View
   autoRotate: boolean
   /** Whether a vertical wedge is clipped away to reveal interiors. */
@@ -49,6 +54,8 @@ export interface AtlasState {
   clearSelection: () => void
   setIsolate: (v: boolean) => void
   setExplode: (v: number) => void
+  setMode: (m: Mode) => void
+  setPeel: (v: number) => void
   setView: (v: View) => void
   setAutoRotate: (v: boolean) => void
   setCutaway: (v: boolean) => void
@@ -77,6 +84,8 @@ const sceneDefaults = {
   focus: null as Focus | null,
   isolate: false,
   explode: 0,
+  mode: 'explode' as Mode,
+  peel: 0,
   view: 'three-quarter' as View,
   autoRotate: false,
   cutaway: false,
@@ -120,8 +129,10 @@ export const useAtlas = create<AtlasState>((set) => ({
   setLayers: (layers) => set({ layers, selected: [], focus: null, isolate: false, inspectorOpen: false }),
   selectParts: (ids, focus) => set({ selected: ids, focus, isolate: false, inspectorOpen: ids.length > 0, panel: null, autoRotate: false }),
   clearSelection: () => set({ selected: [], focus: null, isolate: false, inspectorOpen: false }),
-  setIsolate: (isolate) => set({ isolate, explode: 0 }),
-  setExplode: (explode) => set((s) => ({ explode, autoRotate: false, view: explode > 0.8 ? 'front' : s.view })),
+  setIsolate: (isolate) => set({ isolate, explode: 0, peel: 0 }),
+  setExplode: (explode) => set((s) => ({ explode, peel: 0, autoRotate: false, view: explode > 0.8 ? 'front' : s.view })),
+  setMode: (mode) => set({ mode, explode: 0, peel: 0 }),
+  setPeel: (peel) => set({ peel: Math.max(0, Math.min(1, peel)), explode: 0, isolate: false }),
   setView: (view) => set((s) => ({ view, resetTick: s.resetTick + 1, autoRotate: false })),
   setAutoRotate: (autoRotate) => set({ autoRotate }),
   setCutaway: (cutaway) => set({ cutaway, autoRotate: false }),

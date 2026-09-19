@@ -11,6 +11,7 @@ const snapshot = (s: AtlasState): SceneSnapshot => ({
   selected: s.selected,
   isolate: s.isolate,
   explode: s.explode,
+  peel: s.peel,
   view: s.view,
   autoRotate: s.autoRotate,
   cutaway: s.cutaway,

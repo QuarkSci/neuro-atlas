@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 import { acceleratedRaycast, computeBoundsTree, disposeBoundsTree } from 'three-mesh-bvh'
 import type { LayerId, Part, SystemId } from '@/data/types'
+import { DEPTH_LEVELS, depthOf } from '@/data'
 import type { View } from '@/store/useAtlas'
 import { inventoryLayout, separationVector } from './explode'
 import { createGround } from './ground'
@@ -23,6 +24,8 @@ export interface SceneSnapshot {
   selected: string[]
   isolate: boolean
   explode: number
+  /** 0 = every shell shown, 1 = only the innermost (see data DEPTH_LEVELS). */
+  peel: number
   view: View
   autoRotate: boolean
   cutaway: boolean
@@ -53,6 +56,10 @@ interface PartEntry {
   inventory: T.Vector3
   /** Inventory cell width in millimetres, for label fitting. */
   cellWidth: number
+  /** Compact shell index, 0 = outermost; the peel slider fades shells out in this order. */
+  depth: number
+  /** Current peel opacity, 1 = fully shown. */
+  peelAmount: number
   selectedAmount: number
   hoverAmount: number
   label: HTMLDivElement
@@ -130,6 +137,9 @@ export class BrainScene {
   /** Smoothed explode amount that chases the store value. */
   private amount = 0
   private lastFitAmount = -1
+  /** Smoothed peel depth that chases the store value. */
+  private peel = 0
+  private lastFitPeel = 0
 
   constructor(host: HTMLElement, geometries: LoadedGeometry[], cb: SceneCallbacks) {
     this.host = host
@@ -247,6 +257,8 @@ export class BrainScene {
         separation: separationVector(centre, this.modelCentre),
         inventory: new T.Vector3(),
         cellWidth: 0,
+        depth: depthOf(part.id),
+        peelAmount: 1,
         selectedAmount: 0,
         hoverAmount: 0,
         label,
@@ -517,6 +529,11 @@ export class BrainScene {
       return
     }
     if (this.amount < 0.02) {
+      if (s.peel > 0.01) {
+        const box = this.visibleBox()
+        if (!box.isEmpty()) this.fitBox(box, s.view, this.insets(), animate, 0.8)
+        return
+      }
       // The whole model, whatever is toggled: switching systems should not
       // make the camera jump around.
       this.fitBox(this.modelBox, s.view, this.insets(), animate, 0.68)
@@ -732,9 +749,28 @@ export class BrainScene {
     const visibleSet = new Set(s.visible),
       layerSet = new Set(s.layers),
       selection = new Set(s.selected)
-    const visibilityChanged = first || last.visible !== s.visible || last.layers !== s.layers || last.selected !== s.selected || last.isolate !== s.isolate
+    // Peel depth chases the slider; each shell fades over one slider step
+    // so the strip reads as "lifting away" rather than popping.
+    const peeling = Math.abs(this.peel - s.peel) > 0.0005
+    if (peeling) {
+      this.peel = T.MathUtils.damp(this.peel, s.peel, 10, dt)
+      if (Math.abs(this.peel - s.peel) < 0.0005) this.peel = s.peel
+    }
+    const shells = Math.max(1, DEPTH_LEVELS.length - 1)
+    const visibilityChanged = first || peeling || last.visible !== s.visible || last.layers !== s.layers || last.selected !== s.selected || last.isolate !== s.isolate
     if (visibilityChanged) {
-      for (const p of this.parts) p.mesh.visible = s.isolate ? selection.has(p.id) : (visibleSet.has(p.system) && layerSet.has(p.layer)) || selection.has(p.id)
+      for (const p of this.parts) {
+        const shown = s.isolate ? selection.has(p.id) : (visibleSet.has(p.system) && layerSet.has(p.layer)) || selection.has(p.id)
+        const peelAmount = selection.has(p.id) || s.isolate ? 1 : T.MathUtils.clamp(p.depth - this.peel * shells + 1, 0, 1)
+        if (peelAmount !== p.peelAmount) {
+          p.peelAmount = peelAmount
+          const m = p.mesh.material
+          m.transparent = peelAmount < 1
+          m.opacity = peelAmount
+          m.depthWrite = peelAmount >= 1
+        }
+        p.mesh.visible = shown && peelAmount > 0.01
+      }
       this.dirty = true
     }
     this.ground.visible = !s.isolate && this.amount < 0.45
@@ -770,6 +806,11 @@ export class BrainScene {
     } else if (!moving && this.lastFitAmount > 0.02 && this.amount < 0.02) {
       this.frameFor(s, true)
       this.lastFitAmount = 0
+    } else if (!peeling && this.peel !== this.lastFitPeel) {
+      // Once the shells have settled, refit so the (smaller) remaining
+      // structures fill the frame, and hand the pivot to them.
+      this.lastFitPeel = this.peel
+      this.frameFor(s, true)
     }
 
     // Camera fly-to.

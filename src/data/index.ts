@@ -1,5 +1,5 @@
 import raw from './parts.json'
-import type { Atlas, Concept, Layer, LayerId, Part, System, SystemId } from './types'
+import type { Atlas, Concept, L10n, Layer, LayerId, Part, System, SystemId } from './types'
 
 export const SYSTEMS: System[] = [
   { id: 'telencephalon', name: { en: 'Telencephalon', uz: 'Oxirgi miya', la: 'Telencephalon' }, color: '#e0b7a8', description: { en: 'Cerebral cortex, basal ganglia and the limbic structures of the two hemispheres.', uz: "Bosh miya po'stlog'i, bazal yadrolar va ikki yarim sharning limbik tuzilmalari." } },
@@ -90,3 +90,61 @@ export function conceptLeafIds(conceptId: string): string[] {
 
 /** Parts that carry geometry. */
 export const LEAF_PARTS = PARTS.filter((p) => !p.group)
+
+// ── Depth shells (the "peel" slider) ───────────────────────────────────
+
+export interface DepthLevel {
+  rank: number
+  name: L10n
+}
+
+/**
+ * Anatomical shells from outside in. The peel slider strips them in this
+ * order, so deep structures that are normally hidden inside the hemispheres
+ * become visible without exploding or cutting the model.
+ */
+const SHELLS: DepthLevel[] = [
+  { rank: 0, name: { en: 'Skull', uz: 'Bosh suyagi' } },
+  { rank: 1, name: { en: 'Meninges & vessels', uz: 'Pardalar va tomirlar' } },
+  { rank: 2, name: { en: 'Cerebral cortex', uz: "Bosh miya po'stlog'i" } },
+  { rank: 3, name: { en: 'White matter', uz: 'Oq modda' } },
+  { rank: 4, name: { en: 'Basal ganglia & limbic', uz: 'Bazal yadrolar va limbik' } },
+  { rank: 5, name: { en: 'Ventricles', uz: 'Qorinchalar' } },
+  { rank: 6, name: { en: 'Diencephalon', uz: 'Oraliq miya' } },
+  { rank: 7, name: { en: 'Brainstem & cerebellum', uz: 'Miya ustuni va miyacha' } },
+]
+
+const DEEP_TELENCEPHALON = /amygdala|hippocamp|caudate|putamen|pallid|accumbens|striatum|fornix|basal forebrain|subic|dentate gyrus|\bca[123]\b|\bdg\b|hata|entorhinal|\bec\b|transsubiculum/i
+
+function shellRank(p: Part): number {
+  switch (p.system) {
+    case 'skull':
+      return 0
+    case 'meninges':
+    case 'arteries':
+    case 'veins':
+      return 1
+    case 'telencephalon':
+      return DEEP_TELENCEPHALON.test(p.name.en) ? 4 : 2
+    case 'white-matter':
+      return /fornix/i.test(p.name.en) ? 4 : 3
+    case 'ventricles':
+      return 5
+    case 'diencephalon':
+      return 6
+    default:
+      return 7
+  }
+}
+
+const RANK_BY_ID = new Map(LEAF_PARTS.map((p) => [p.id, shellRank(p)]))
+const PRESENT = [...new Set(RANK_BY_ID.values())].sort((a, b) => a - b)
+
+/** Shells that actually have parts in this build, outermost first. */
+export const DEPTH_LEVELS: DepthLevel[] = SHELLS.filter((s) => PRESENT.includes(s.rank))
+
+/** Compact shell index (0 = outermost present shell) for a leaf part. */
+export function depthOf(id: string): number {
+  const rank = RANK_BY_ID.get(id)
+  return rank === undefined ? 0 : PRESENT.indexOf(rank)
+}

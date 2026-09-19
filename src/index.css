@@ -440,7 +440,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 
 /* Bottom tab bar. */
 .mode-tabs { display: flex; align-items: center; gap: 0; padding: var(--ctl-pad); border-radius: 999px; }
-.mode-tab { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: var(--mode-w); height: var(--mode-h); border-radius: 999px; font-size: 10px; letter-spacing: 0.01em; color: var(--fa-muted); transition: background 0.2s, color 0.2s; }
+.mode-tab { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: var(--mode-w); padding: 0 12px; white-space: nowrap; height: var(--mode-h); border-radius: 999px; font-size: 10px; letter-spacing: 0.01em; color: var(--fa-muted); transition: background 0.2s, color 0.2s; }
 .mode-tab:hover { color: var(--foreground); }
 .mode-tab.active { color: var(--fa-accent); background: var(--fa-fill); font-weight: 600; }
 
