@@ -1,5 +1,6 @@
 import raw from './parts.json'
 import type { Atlas, Concept, L10n, Layer, LayerId, Part, System, SystemId } from './types'
+import { contentFor } from './content'
 
 export const SYSTEMS: System[] = [
   { id: 'telencephalon', name: { en: 'Telencephalon', uz: 'Oxirgi miya', la: 'Telencephalon' }, color: '#e0b7a8', description: { en: 'Cerebral cortex, basal ganglia and the limbic structures of the two hemispheres.', uz: "Bosh miya po'stlog'i, bazal yadrolar va ikki yarim sharning limbik tuzilmalari." } },
@@ -95,6 +96,21 @@ export function conceptLeafIds(conceptId: string): string[] {
 
 /** Parts that carry geometry. */
 export const LEAF_PARTS = PARTS.filter((p) => !p.group)
+
+// ── Editorial content ──────────────────────────────────────────────────
+// Merged onto the parts once at start-up so the UI reads plain fields.
+for (const p of PARTS) {
+  const parent = p.parent ? PART_BY_ID.get(p.parent) : undefined
+  const r = contentFor(p, parent?.concept)
+  if (!r) continue
+  const { entry, inherited } = r
+  p.description = entry.description
+  p.role = entry.role
+  p.clinical = entry.clinical
+  p.sources = entry.sources
+  p.inheritedContent = inherited
+  if (entry.la && !inherited) p.name.la = entry.la
+}
 
 // ── Depth shells (the "peel" slider) ───────────────────────────────────
 

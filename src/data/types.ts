@@ -80,6 +80,8 @@ export interface Part {
   clinical?: L10n
   facts?: L10n[]
   sources?: Source[]
+  /** Set when description/role/clinical were inherited from a family or group entry. */
+  inheritedContent?: boolean
 }
 
 export interface Concept {

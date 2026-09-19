@@ -71,6 +71,7 @@ export const STRINGS = {
     tools: 'Tools',
     webgl: 'This browser could not start the 3D viewer. Please try a browser with WebGL enabled.',
     contextLost: 'The 3D session was paused by your device. Reload to continue.',
+    inherited: 'General description of the group this structure belongs to.',
     credit: 'by MuhammadYusuf · with Claude',
   },
   uz: {
@@ -145,6 +146,7 @@ export const STRINGS = {
     tools: 'Vositalar',
     webgl: "Bu brauzer 3D ko'rgichni ishga tushira olmadi. WebGL yoqilgan brauzerda urinib ko'ring.",
     contextLost: "3D sessiya qurilmangiz tomonidan to'xtatildi. Davom etish uchun qayta yuklang.",
+    inherited: "Bu tuzilma kiradigan guruhning umumiy tavsifi.",
     credit: 'by MuhammadYusuf · with Claude',
   },
 } as const

@@ -62,6 +62,7 @@ export function Inspector() {
             </button>
           </div>
           <div className="detail-scroll" key={`${focus?.kind}-${focus?.id}-${isolate}`}>
+            {part.inheritedContent && <p className="inherited-note">{t.inherited}</p>}
             {part.description && <p className="structure-description">{l(part.description)}</p>}
             {part.role && (
               <div className="detail-section">

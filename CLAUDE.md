@@ -118,9 +118,23 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     ishlayotgan bo'lsa headless screenshot ishlating.
 - ⬜ 4-bosqich: kesim (3 tekislik + MNI koordinata) — parcellation
   almashtirish 3-bosqichda qilindi.
-- ⬜ 5-bosqich: kontent — KEYINGI QADAM (foydalanuvchi so'radi: har bir
-  qismning vazifasi, kichik kurs talabalari tushunadigan, aniq manbaga
-  tayangan).
+- 🟡 5-bosqich: kontent — boshlandi (2026-09-20), 218 yozuv:
+  - Mexanizm: `src/data/content/*.json` — konsept id bo'yicha (chap/o'ng
+    juftlik bitta yozuv): `la`, `description`, `role`, `clinical` (en/uz),
+    `sources`. `content/index.ts` `contentFor()` — o'z yozuvi yo'q bo'lsa
+    Julich sub-hududi ota guruhidan, tomir shoxi `FAMILIES` regex bo'yicha
+    oila yozuvidan meros oladi (`inheritedContent` → Inspector'da eslatma).
+    `data/index.ts` kontentni PARTS'ga bir marta yopishtiradi.
+  - Yozilgan: gross-brain.json 97 (gyruslar, chuqur yadrolar, gipotalamus
+    yadrolari, miya ustuni, miyacha, qorinchalar, oq modda, 12 bosh nervi,
+    pardalar, bosh suyagi), gross-vessels.json 33 (Willis halqasi, asosiy
+    arteriyalar, sinuslar, venalar), julich-groups.json 47 (barcha Julich
+    guruhlari), brodmann.json 41.
+  - QOLGAN: Julich alohida hududlari (207), Desikan (35), Destrieux (75),
+    Glasser (180), JHU traktlari (~30); tuzilma NOMLARINING uz/la
+    tarjimasi (hozir `name.uz` yo'q — inglizcha ko'rsatiladi).
+  - Manbalar: Wikipedia (CC BY-SA), NCBI Bookshelf (Purves Neuroscience,
+    StatPearls), Julich-Brain asl maqolalari (DOI). Har yozuvda `sources`.
 - ⬜ 6–7.
 
 ## 4. Ma'lum xatolar tarixi
