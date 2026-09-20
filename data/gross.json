@@ -2646,6 +2646,33 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma61970-fj1741",
+  "name": "Commissure of fornix of forebrain",
+  "fma": "FMA61970",
+  "fj": "FJ1741",
+  "bp": "BP21495",
+  "faces": 10632,
+  "segments": 1,
+  "bbox": [
+   [
+    -25.16,
+    -41.66,
+    -1.26
+   ],
+   [
+    27.39,
+    -3.97,
+    13.88
+   ]
+  ],
+  "centroid": [
+   0.99,
+   -32.56,
+   7.17
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma86464-fj1742",
   "name": "Corpus callosum",
   "fma": "FMA86464",
@@ -3024,6 +3051,33 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma261085-fj1758",
+  "name": "White matter of left temporal lobe",
+  "fma": "FMA261085",
+  "fj": "FJ1758",
+  "bp": "BP23298",
+  "faces": 24000,
+  "segments": 1,
+  "bbox": [
+   [
+    -66.57,
+    -105.67,
+    -37.21
+   ],
+   [
+    -1.67,
+    73.59,
+    81.07
+   ]
+  ],
+  "centroid": [
+   -29.71,
+   -18.89,
+   21.64
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma72714-fj1759",
   "name": "Left hippocampus proper",
   "fma": "FMA72714",
@@ -3321,6 +3375,33 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma73414-fj1777",
+  "name": "Left stria medullaris of thalamus",
+  "fma": "FMA73414",
+  "fj": "FJ1777",
+  "bp": "BP23489",
+  "faces": 926,
+  "segments": 1,
+  "bbox": [
+   [
+    -3.25,
+    -31.62,
+    -13.07
+   ],
+   [
+    0.32,
+    4.66,
+    8.59
+   ]
+  ],
+  "centroid": [
+   -1.29,
+   -13.36,
+   1.15
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma72940-fj1778",
   "name": "Left stria terminalis",
   "fma": "FMA72940",
@@ -3371,6 +3452,33 @@
    -3.47,
    -30.31,
    -11.03
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma62327-fj1780",
+  "name": "Tuber cinereum",
+  "fma": "FMA62327",
+  "fj": "FJ1780",
+  "bp": "BP22167",
+  "faces": 1606,
+  "segments": 2,
+  "bbox": [
+   [
+    -8.92,
+    -6.86,
+    -28.32
+   ],
+   [
+    9.5,
+    -0.07,
+    -14.6
+   ]
+  ],
+  "centroid": [
+   0.33,
+   -2.87,
+   -19.92
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
@@ -3807,6 +3915,33 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma261083-fj1806",
+  "name": "White matter of right temporal lobe",
+  "fma": "FMA261083",
+  "fj": "FJ1806",
+  "bp": "BP23323",
+  "faces": 23999,
+  "segments": 1,
+  "bbox": [
+   [
+    5.14,
+    -104.48,
+    -37.07
+   ],
+   [
+    68.69,
+    74.45,
+    81.15
+   ]
+  ],
+  "centroid": [
+   31.07,
+   -16.48,
+   21.63
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma72713-fj1807",
   "name": "Right hippocampus proper",
   "fma": "FMA72713",
@@ -4023,6 +4158,33 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma73413-fj1824",
+  "name": "Right stria medullaris of thalamus",
+  "fma": "FMA73413",
+  "fj": "FJ1824",
+  "bp": "BP23630",
+  "faces": 848,
+  "segments": 1,
+  "bbox": [
+   [
+    0.34,
+    -31.52,
+    -13.01
+   ],
+   [
+    4.92,
+    4.77,
+    8.54
+   ]
+  ],
+  "centroid": [
+   2.38,
+   -13.24,
+   1.16
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma72939-fj1825",
   "name": "Right stria terminalis",
   "fma": "FMA72939",
@@ -4127,6 +4289,33 @@
    27.93,
    -0.41,
    -20.89
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma61842-fj1832",
+  "name": "Septum of telencephalon",
+  "fma": "FMA61842",
+  "fj": "FJ1832",
+  "bp": "BP21514",
+  "faces": 5704,
+  "segments": 1,
+  "bbox": [
+   [
+    -10.27,
+    -35.78,
+    -7.22
+   ],
+   [
+    12.25,
+    28.7,
+    20.21
+   ]
+  ],
+  "centroid": [
+   0.09,
+   6.78,
+   8.77
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
@@ -8073,6 +8262,114 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma72673-fj7462m",
+  "name": "Right precuneus",
+  "fma": "FMA72673",
+  "fj": "FJ7462M",
+  "bp": "BP29930",
+  "faces": 8632,
+  "segments": 1,
+  "bbox": [
+   [
+    0.83,
+    -96.6,
+    13.95
+   ],
+   [
+    26.31,
+    -34.15,
+    76.18
+   ]
+  ],
+  "centroid": [
+   10.54,
+   -66.14,
+   43.58
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72674-fj7462",
+  "name": "Left precuneus",
+  "fma": "FMA72674",
+  "fj": "FJ7462",
+  "bp": "BP29926",
+  "faces": 8632,
+  "segments": 1,
+  "bbox": [
+   [
+    -23.25,
+    -97.68,
+    13.89
+   ],
+   [
+    0.99,
+    -34.58,
+    76.18
+   ]
+  ],
+  "centroid": [
+   -8.46,
+   -66.87,
+   43.57
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72671-fj7463m",
+  "name": "Right superior parietal lobule",
+  "fma": "FMA72671",
+  "fj": "FJ7463M",
+  "bp": "BP22214",
+  "faces": 11632,
+  "segments": 1,
+  "bbox": [
+   [
+    7.94,
+    -96.37,
+    16.21
+   ],
+   [
+    39.16,
+    -33.65,
+    82.03
+   ]
+  ],
+  "centroid": [
+   24.96,
+   -64.52,
+   53.14
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72672-fj7463",
+  "name": "Left superior parietal lobule",
+  "fma": "FMA72672",
+  "fj": "FJ7463",
+  "bp": "BP22159",
+  "faces": 11632,
+  "segments": 1,
+  "bbox": [
+   [
+    -38.01,
+    -97.6,
+    16.18
+   ],
+   [
+    -6.22,
+    -35.77,
+    82.05
+   ]
+  ],
+  "centroid": [
+   -22.94,
+   -66.29,
+   53.13
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma256198-fj7465m",
   "name": "Right anterior orbital gyrus",
   "fma": "FMA256198",
@@ -8393,6 +8690,60 @@
    -6.68,
    -5.44,
    22.54
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72679-fj7471m",
+  "name": "Right cuneus",
+  "fma": "FMA72679",
+  "fj": "FJ7471M",
+  "bp": "BP29915",
+  "faces": 13372,
+  "segments": 1,
+  "bbox": [
+   [
+    1.39,
+    -107.46,
+    2.5
+   ],
+   [
+    24.58,
+    -57.88,
+    40.69
+   ]
+  ],
+  "centroid": [
+   10.06,
+   -81.99,
+   18.51
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma72680-fj7471",
+  "name": "Left cuneus",
+  "fma": "FMA72680",
+  "fj": "FJ7471",
+  "bp": "BP29919",
+  "faces": 13372,
+  "segments": 1,
+  "bbox": [
+   [
+    -22.77,
+    -107.91,
+    2.47
+   ],
+   [
+    1.22,
+    -59.28,
+    40.7
+   ]
+  ],
+  "centroid": [
+   -7.24,
+   -82.64,
+   18.51
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
@@ -9288,6 +9639,222 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma73327-fj7492m",
+  "name": "Right lateral preoptic nucleus",
+  "fma": "FMA73327",
+  "fj": "FJ7492M",
+  "bp": "BP29890",
+  "faces": 1460,
+  "segments": 1,
+  "bbox": [
+   [
+    0.82,
+    1.8,
+    -17.12
+   ],
+   [
+    3.34,
+    5.58,
+    -8.2
+   ]
+  ],
+  "centroid": [
+   2.05,
+   3.63,
+   -12.6
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73328-fj7492",
+  "name": "Left lateral preoptic nucleus",
+  "fma": "FMA73328",
+  "fj": "FJ7492",
+  "bp": "BP29889",
+  "faces": 1460,
+  "segments": 1,
+  "bbox": [
+   [
+    -4.4,
+    1.59,
+    -17.13
+   ],
+   [
+    -1.92,
+    5.42,
+    -8.2
+   ]
+  ],
+  "centroid": [
+   -3.11,
+   3.44,
+   -12.6
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73329-fj7493m",
+  "name": "Right suprachiasmatic nucleus",
+  "fma": "FMA73329",
+  "fj": "FJ7493M",
+  "bp": "BP29854",
+  "faces": 1460,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.19,
+    1.17,
+    -17.7
+   ],
+   [
+    3.39,
+    4.26,
+    -14.17
+   ]
+  ],
+  "centroid": [
+   1.64,
+   2.87,
+   -15.95
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73330-fj7493",
+  "name": "Left suprachiasmatic nucleus",
+  "fma": "FMA73330",
+  "fj": "FJ7493",
+  "bp": "BP29870",
+  "faces": 1460,
+  "segments": 1,
+  "bbox": [
+   [
+    -4.44,
+    0.96,
+    -17.71
+   ],
+   [
+    -0.83,
+    4.17,
+    -14.17
+   ]
+  ],
+  "centroid": [
+   -2.66,
+   2.71,
+   -15.96
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73331-fj7494m",
+  "name": "Right supraoptic nucleus",
+  "fma": "FMA73331",
+  "fj": "FJ7494M",
+  "bp": "BP29862",
+  "faces": 1734,
+  "segments": 1,
+  "bbox": [
+   [
+    3.97,
+    -1.47,
+    -16.02
+   ],
+   [
+    8.99,
+    2.7,
+    -14.36
+   ]
+  ],
+  "centroid": [
+   6.46,
+   0.64,
+   -15.19
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73332-fj7494",
+  "name": "Left supraoptic nucleus",
+  "fma": "FMA73332",
+  "fj": "FJ7494",
+  "bp": "BP29883",
+  "faces": 1734,
+  "segments": 1,
+  "bbox": [
+   [
+    -9.91,
+    -2.0,
+    -16.03
+   ],
+   [
+    -4.91,
+    2.26,
+    -14.36
+   ]
+  ],
+  "centroid": [
+   -7.38,
+   0.12,
+   -15.2
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73325-fj7495m",
+  "name": "Right medial preoptic nucleus",
+  "fma": "FMA73325",
+  "fj": "FJ7495M",
+  "bp": "BP29895",
+  "faces": 1734,
+  "segments": 1,
+  "bbox": [
+   [
+    -0.83,
+    2.03,
+    -17.36
+   ],
+   [
+    1.68,
+    5.87,
+    -8.16
+   ]
+  ],
+  "centroid": [
+   0.39,
+   3.89,
+   -12.7
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma73326-fj7495",
+  "name": "Left medial preoptic nucleus",
+  "fma": "FMA73326",
+  "fj": "FJ7495",
+  "bp": "BP29884",
+  "faces": 1734,
+  "segments": 1,
+  "bbox": [
+   [
+    -2.76,
+    1.95,
+    -17.36
+   ],
+   [
+    -0.28,
+    5.83,
+    -8.16
+   ]
+  ],
+  "centroid": [
+   -1.47,
+   3.82,
+   -12.7
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma73353-fj7496m",
   "name": "Right posterior nucleus of hypothalamus",
   "fma": "FMA73353",
@@ -9450,6 +10017,33 @@
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  },
  {
+  "id": "fma84354-fj7499",
+  "name": "Periventricular nucleus",
+  "fma": "FMA84354",
+  "fj": "FJ7499",
+  "bp": "BP29908",
+  "faces": 1882,
+  "segments": 1,
+  "bbox": [
+   [
+    -2.74,
+    -9.68,
+    -14.21
+   ],
+   [
+    -0.33,
+    4.65,
+    -7.95
+   ]
+  ],
+  "centroid": [
+   -1.27,
+   -2.49,
+   -10.98
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
   "id": "fma50878-fj7501m",
   "name": "Left optic nerve",
   "fma": "FMA50878",
@@ -9581,6 +10175,60 @@
    3.85,
    3.65,
    -21.78
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma242160-fj7504m",
+  "name": "Right cerebral crus",
+  "fma": "FMA242160",
+  "fj": "FJ7504M",
+  "bp": "BP19691",
+  "faces": 4144,
+  "segments": 1,
+  "bbox": [
+   [
+    1.16,
+    -26.95,
+    -28.65
+   ],
+   [
+    21.96,
+    -0.09,
+    -8.29
+   ]
+  ],
+  "centroid": [
+   12.88,
+   -12.92,
+   -18.45
+  ],
+  "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
+ },
+ {
+  "id": "fma242162-fj7504",
+  "name": "Left cerebral crus",
+  "fma": "FMA242162",
+  "fj": "FJ7504",
+  "bp": "BP19692",
+  "faces": 4144,
+  "segments": 1,
+  "bbox": [
+   [
+    -22.13,
+    -27.84,
+    -28.68
+   ],
+   [
+    -1.55,
+    -0.8,
+    -8.31
+   ]
+  ],
+  "centroid": [
+   -13.17,
+   -13.88,
+   -18.47
   ],
   "source": "BodyParts3D 4.3 (DBCLS) CC BY-SA 2.1 JP"
  }

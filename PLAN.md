@@ -35,11 +35,15 @@ yuklab olishda qayta tekshiriladi.
 | **Glasser HCP-MMP1** | BALSA / Kevin Weiner MNI versiyasi | WU-Minn HCP Open Access Data Use Terms — qayta tarqatish shu shartlar ostida mumkin, attribution shart | ✅ mos (shartlar ATTRIBUTION'da) | 360 |
 | **Julich-Brain v3.x** (sitoarxitektonika, ~300 hudud, MNI152 + fsaverage) | EBRAINS / siibra | **CC BY-NC-SA 4.0** | ✅ mos | ~300 |
 | Po'stloq osti + talamus | FreeSurfer aseg (MNI'dagi nusxa) + THOMAS talamus yadrolari `?` | ⚠ tekshirish | ~40 + ~25 |
-| **Miyacha bo'laklari** | ~~SUIT/Diedrichsen to'plami~~ — **CC BY-ND → MOS EMAS** | ❌ | — |
+| **Miyacha bo'laklari** | SUIT / Diedrichsen 2009 (`DiedrichsenLab/cerebellar_atlases`, MNI152NLin6) | **CC BY-NC 3.0** (repo LICENSE; README CC BY deydi — qat'iyrog'i olindi; 0-bosqichdagi "ND" taxmini 2026-09-20 da tekshirilib NOTO'G'RI chiqdi) | ✅ 28 bo'lak + dentate/interposed | 32 |
+| **Miya ustuni bo'linmalari** | Allen Human Reference Atlas – 3D 2020 (Ding et al.), ICBM 2009b sym, 0.5 mm | **CC BY 4.0** (2022-09 dan) | ✅ tegmentum/basis/piramida/olive/oyoqchalar/pretektum (22) | 22 |
+| **Miya ustuni uyg'onish yadrolari** | Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023, Zenodo 8161638) | **CC0** | ✅ LC, DR, MnR, PAG, VTA, PTg, LDTg, PBC, PnO, mRt | 16 |
+| ~~Miya ustuni 31 yadro~~ | Brainstem Navigator (MGH, Bianciardi) | "YOU MAY NOT DISTRIBUTE ... information derived" | ❌ tarqatish taqiq | — |
+| ~~Miya ustuni traktlari~~ | USC brainstem connectome atlas (Tang 2018, NITRC) | xuddi shunday taqiq | ❌ | — |
 | Miyacha (alternativ) | BodyParts3D miyacha bo'laklari + Julich-Brain miyacha yadrolari (dentate, fastigial…) | CC BY-SA / BY-NC-SA | ✅ mos | ~20 |
 | **Oq modda traktlari** | TractSeg 72 bundle (MNI, probabilistik) | **CC BY** | ✅ mos | 72 |
 | Harvard-Oxford, AAL, Schaefer… (qo'shimcha qatlamlar) | neuroparc (neurodata) | atlasga qarab `?` | keyinroq | — |
-| Allen Human Reference Atlas 3D (141 hudud) | Allen Institute | Allen terms — nokommersial `?` | keyinroq | 141 |
+| Allen Human Reference Atlas 3D (141 hudud) | Allen Institute | **CC BY 4.0** (README.pdf, 2022-09-01 dan) | ✅ miya ustuni qismi olindi; amigdala 9 yadro, gippokamp bosh/tana/dum, kaudat 3, BNST, septal, bazal old miya — keyinroq | 141 |
 
 **Umumiy hisob:** ~600 (gross) + 104 (Brodmann) + 216 (DK+Destrieux) + 360
 (Glasser) + 300 (Julich) + 65 (subkortikal/talamus) + 72 (traktlar) ≈
@@ -102,6 +106,7 @@ glasser | julich`), tizim emas.
 | 1 | Pipeline sinovi | ✅ 2026-09-19: BodyParts3D 77 qism + Julich 414 hudud → GLB, MNI fazosida ustma-ust (RMS 5.3 mm), brauzerda tasdiqlangan |
 | 2 | Ilova skeleti | ✅ 2026-09-19: Falcon UI/scene ko'chirildi, 585 qism, barcha asosiy interaktivlik brauzerda tasdiqlangan |
 | 3 | To'liq import | ✅ 2026-09-20: 1571 qism, 7 qatlam (gross 355 + Julich 508 + Brodmann 82 + Desikan 70 + Destrieux 148 + Glasser 360 + JHU 48), qatlamlar talab bo'yicha yuklanadi, parcellation almashtirish |
+| 3b | Miya ustuni / miyacha chuqurlashtirish | ✅ 2026-09-20: `bstem` (Allen 22 + AAN 16) va `suit` (32) qatlamlari, gross +24 (precuneus, cuneus, SPL, septum, crus cerebri, 9 gipotalamus yadrosi…) → 1672 qism, 9 qatlam; `Layer.covers`, peel 8-qobiq, kontent 62 yozuv + `name.uz` mexanizmi |
 | 4 | Kesim + qatlamlar | 3 tekislik, MNI koordinata, parcellation almashtirish |
 | 5 | Kontent | parts.json skeleton (nom uz/en/la, tizim, funksiya, klinik ahamiyat, manba) → foydalanuvchi ko'rib chiqadi |
 | 6 | Deploy | Pages, meshlar GitHub Release'da, README, ATTRIBUTION.md |

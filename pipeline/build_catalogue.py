@@ -24,8 +24,8 @@ GROSS_SYSTEM = [
     (r'bone$|^mandible$|maxilla$|^ethmoid$|^sphenoid$|^vomer$|concha', 'skull'),
     (r'ventricle|aqueduct|choroid plexus|interventricular', 'ventricles'),
     (r'cerebell|vermis|flocculus', 'cerebellum'),
-    (r'pons|medulla|colliculus|brachium|midbrain|peduncle|red nucleus|substantia nigra|olive|pyramid|tectum|tegmentum', 'brainstem'),
-    (r'thalam|geniculate|habenula|pineal|pituitary|hypophysis|optic chiasm|optic tract|mammillary|stria medullaris|infundibul', 'diencephalon'),
+    (r'pons|medulla|colliculus|brachium|midbrain|peduncle|cerebral crus|red nucleus|substantia nigra|olive|pyramid|tectum|tegmentum', 'brainstem'),
+    (r'thalam|geniculate|habenula|pineal|pituitary|hypophysis|optic chiasm|optic tract|mammillary|stria medullaris|infundibul|tuber cinereum|preoptic|suprachiasmatic|supraoptic|periventricular nucleus', 'diencephalon'),
     (r'white matter|corpus callosum|fornix|internal capsule|external capsule|commissure|corona radiata|radiation|cingulum|fasciculus|capsule|tapetum|lemniscus|corticospinal|stria terminalis', 'white-matter'),
     (r'.', 'telencephalon'),
 ]
@@ -121,6 +121,38 @@ for layer, (fixed, prefix) in PARCEL.items():
             id=f"{prefix}-{p['id']}", name={'en': shown}, system=sys_, layer=layer, side=p['side'],
             concept=f"{prefix}-{slug(n)}", mesh=f"{layer}/{p['id']}.glb", centroid=p['centroid'],
             bbox=p['bbox'], faces=p['faces'], ref=str(p['label']),
+        ))
+
+# ── Brainstem (Allen + AAN) and cerebellum (SUIT) sub-parcellations ─────
+# Each layer gets midline group parts (midbrain / pons / medulla; cerebellar
+# lobes / deep nuclei) so the hierarchy tree reads like a textbook.
+SUB = {
+    'bstem': ('brainstem', 'bs', {
+        'midbrain': 'Midbrain', 'pons': 'Pons', 'medulla': 'Medulla oblongata'}),
+    'suit': ('cerebellum', 'cb', {
+        'anterior-lobe': 'Anterior lobe of cerebellum', 'posterior-lobe': 'Posterior lobe of cerebellum',
+        'flocculonodular-lobe': 'Flocculonodular lobe', 'deep-nuclei': 'Deep cerebellar nuclei'}),
+}
+SUB_URL = {
+    'Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0': 'https://download.alleninstitute.org/informatics-archive/allen_human_reference_atlas_3d_2020/version_1/',
+    'Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0': 'https://doi.org/10.5061/dryad.zw3r228d2',
+    'Diedrichsen 2009 probabilistic cerebellar atlas (SUIT) · CC BY-NC 3.0': 'https://github.com/DiedrichsenLab/cerebellar_atlases',
+}
+for layer, (sys_, prefix, groups_) in SUB.items():
+    f = ROOT / f'data/{layer}.json'
+    if not f.exists():
+        print('missing', f); continue
+    for gid, gname in groups_.items():
+        parts.append(dict(id=f'{prefix}-{gid}', name={'en': gname}, system=sys_, layer=layer, side='midline',
+                          group=True, concept=f'{prefix}-{gid}'))
+    for p in json.load(open(f)):
+        n = p['name']
+        shown = n if p['side'] == 'midline' else f"{p['side'].capitalize()} {n[0].lower() + n[1:]}"
+        parts.append(dict(
+            id=f"{prefix}-{p['id']}", name={'en': shown}, system=sys_, layer=layer, side=p['side'],
+            parent=f"{prefix}-{p['group']}", concept=f"{prefix}-{slug(n)}", mesh=f"{layer}/{p['id']}.glb",
+            centroid=p['centroid'], bbox=p['bbox'], faces=p['faces'], ref=str(p['label']),
+            meshSource=dict(title=p['source'], url=SUB_URL[p['source']]),
         ))
 
 # ── Overall bounds ──────────────────────────────────────────────────────

@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 import { acceleratedRaycast, computeBoundsTree, disposeBoundsTree } from 'three-mesh-bvh'
 import type { LayerId, Part, SystemId } from '@/data/types'
-import { DEPTH_LEVELS, GROSS_CORTEX_IDS, PARCELLATION_IDS, depthOf } from '@/data'
+import { DEPTH_LEVELS, coveredIds, depthOf } from '@/data'
 import type { View } from '@/store/useAtlas'
 import { inventoryLayout, separationVector } from './explode'
 import { createGround } from './ground'
@@ -789,11 +789,11 @@ export class BrainScene {
     const shells = Math.max(1, DEPTH_LEVELS.length - 1)
     const visibilityChanged = first || peeling || last.visible !== s.visible || last.layers !== s.layers || last.selected !== s.selected || last.isolate !== s.isolate
     if (visibilityChanged) {
-      // A cortical parcellation replaces the gross cortex rather than
-      // hiding inside it.
-      const parcellationOn = s.layers.some((l) => PARCELLATION_IDS.has(l))
+      // A finer layer replaces the gross part it subdivides (parcellation →
+      // cortex, brainstem layer → pons/medulla) rather than hiding inside it.
+      const coveredSet = coveredIds(s.layers)
       for (const p of this.parts) {
-        const covered = parcellationOn && GROSS_CORTEX_IDS.has(p.id)
+        const covered = coveredSet.has(p.id)
         const shown = s.isolate ? selection.has(p.id) : (visibleSet.has(p.system) && layerSet.has(p.layer) && !covered) || selection.has(p.id)
         const peelAmount = selection.has(p.id) || s.isolate ? 1 : T.MathUtils.clamp(p.depth - this.peel * shells + 1, 0, 1)
         if (peelAmount !== p.peelAmount) {

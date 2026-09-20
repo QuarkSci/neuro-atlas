@@ -24,6 +24,8 @@ export const LAYERS: Layer[] = [
   { id: 'destrieux', name: { en: 'Destrieux', uz: 'Destrieux' }, source: 'Destrieux et al. 2010 (FreeSurfer aparc.a2009s), via neuroparc', license: 'FreeSurfer licence', url: 'https://doi.org/10.1016/j.neuroimage.2010.06.010', parcellation: true },
   { id: 'glasser', name: { en: 'Glasser HCP-MMP1', uz: 'Glasser HCP-MMP1' }, source: 'Glasser et al. 2016, Human Connectome Project multimodal parcellation, via neuroparc', license: 'WU-Minn HCP Open Access Data Use Terms', url: 'https://doi.org/10.1038/nature18933', parcellation: true },
   { id: 'jhu', name: { en: 'JHU white-matter tracts', uz: 'JHU oq modda traktlari' }, source: 'JHU ICBM-DTI-81 white-matter labels (Mori et al.), via neuroparc', license: 'FSL licence, non-commercial', url: 'https://doi.org/10.1016/j.neuroimage.2007.12.035' },
+  { id: 'bstem', name: { en: 'Brainstem subdivisions & nuclei', uz: 'Miya ustuni bo\'limlari va yadrolari' }, short: { en: 'Brainstem', uz: 'Miya ustuni' }, source: 'Allen Human Reference Atlas – 3D 2020 (Ding et al.) + Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023)', license: 'CC BY 4.0 + CC0', url: 'https://doi.org/10.5061/dryad.zw3r228d2', covers: /^g-(left|right)-(pons|medulla-oblongata|cerebral-crus)$/ },
+  { id: 'suit', name: { en: 'Cerebellar lobules (SUIT)', uz: 'Miyacha bo\'lakchalari (SUIT)' }, short: { en: 'Cerebellum', uz: 'Miyacha' }, source: 'Diedrichsen et al. 2009/2011 probabilistic cerebellar atlas (SUIT)', license: 'CC BY-NC 3.0', url: 'https://github.com/DiedrichsenLab/cerebellar_atlases', covers: /^g-(left|right)-cerebellum$/ },
 ]
 
 const data = raw as unknown as { bbox: Atlas['bbox']; parts: Part[] }
@@ -40,6 +42,35 @@ export const ACTIVE_SYSTEMS: System[] = SYSTEMS.filter((s) => PARTS.some((p) => 
 export const ALL_SYSTEM_IDS: SystemId[] = ACTIVE_SYSTEMS.map((s) => s.id)
 export const ALL_LAYER_IDS: LayerId[] = LAYERS.map((l) => l.id)
 
+/** "Chap ko'k dog'" for a left part, the bare concept name for midline/group parts. */
+function sidedName(uz: string, p: Part): string {
+  if (p.group || p.side === 'midline') return uz
+  // Lower-case an ordinary first word ("Ko'k dog'" → "ko'k dog'") but keep Roman numerals and acronyms ("VIIb", "Crus I" stays; "I–IV" too).
+  const bare = /^[A-Z](?=[a-z'’])/.test(uz) ? uz.charAt(0).toLowerCase() + uz.slice(1) : uz
+  return (p.side === 'left' ? 'Chap ' : "O'ng ") + bare
+}
+
+const CONCEPT_UZ = new Map<string, string>()
+
+// ── Editorial content ──────────────────────────────────────────────────
+// Merged onto the parts once at start-up so the UI reads plain fields.
+for (const p of PARTS) {
+  const parent = p.parent ? PART_BY_ID.get(p.parent) : undefined
+  const r = contentFor(p, parent?.concept)
+  if (!r) continue
+  const { entry, inherited } = r
+  p.description = entry.description
+  p.role = entry.role
+  p.clinical = entry.clinical
+  p.sources = entry.sources
+  p.inheritedContent = inherited
+  if (entry.la && !inherited) p.name.la = entry.la
+  if (entry.uz && !inherited) {
+    p.name.uz = sidedName(entry.uz, p)
+    CONCEPT_UZ.set(p.concept, entry.uz)
+  }
+}
+
 /** Bilateral concepts: "amygdala" → left + right amygdala; a midline part is a concept of one. */
 function buildConcepts(): Concept[] {
   const byConcept = new Map<string, Part[]>()
@@ -52,7 +83,7 @@ function buildConcepts(): Concept[] {
   for (const [id, members] of byConcept) {
     const first = members[0]
     const en = first.name.en.replace(/^(Left|Right) /, (m) => (members.length > 1 ? '' : m)).replace(/ — (left|right) /, ' ')
-    out.push({ id, name: { en: en.charAt(0).toUpperCase() + en.slice(1), uz: first.name.uz, la: first.name.la }, parts: members.map((m) => m.id) })
+    out.push({ id, name: { en: en.charAt(0).toUpperCase() + en.slice(1), uz: CONCEPT_UZ.get(id) ?? first.name.uz, la: first.name.la }, parts: members.map((m) => m.id) })
   }
   return out
 }
@@ -97,21 +128,6 @@ export function conceptLeafIds(conceptId: string): string[] {
 /** Parts that carry geometry. */
 export const LEAF_PARTS = PARTS.filter((p) => !p.group)
 
-// ── Editorial content ──────────────────────────────────────────────────
-// Merged onto the parts once at start-up so the UI reads plain fields.
-for (const p of PARTS) {
-  const parent = p.parent ? PART_BY_ID.get(p.parent) : undefined
-  const r = contentFor(p, parent?.concept)
-  if (!r) continue
-  const { entry, inherited } = r
-  p.description = entry.description
-  p.role = entry.role
-  p.clinical = entry.clinical
-  p.sources = entry.sources
-  p.inheritedContent = inherited
-  if (entry.la && !inherited) p.name.la = entry.la
-}
-
 // ── Depth shells (the "peel" slider) ───────────────────────────────────
 
 export interface DepthLevel {
@@ -133,7 +149,11 @@ const SHELLS: DepthLevel[] = [
   { rank: 5, name: { en: 'Ventricles', uz: 'Qorinchalar' } },
   { rank: 6, name: { en: 'Diencephalon', uz: 'Oraliq miya' } },
   { rank: 7, name: { en: 'Brainstem & cerebellum', uz: 'Miya ustuni va miyacha' } },
+  { rank: 8, name: { en: 'Brainstem & cerebellar nuclei', uz: 'Miya ustuni va miyacha yadrolari' } },
 ]
+
+/** Nuclei buried inside the brainstem/cerebellar envelope: the last shell the peel slider reaches. */
+const DEEP_HINDBRAIN = /nucle|locus coeruleus|raphe|periaqueductal|tegmental area|reticular formation|parabrachial|olive|substantia nigra|\b(SNC|SNR|NRm|NRp|Ndent[dv]|Ninterp|Nfast)\b/i
 
 const DEEP_TELENCEPHALON = /amygdala|hippocamp|caudate|putamen|pallid|accumbens|striatum|fornix|basal forebrain|subic|dentate gyrus|\bca[123]\b|\bdg\b|hata|entorhinal|\bec\b|transsubiculum/i
 
@@ -154,7 +174,7 @@ function shellRank(p: Part): number {
     case 'diencephalon':
       return 6
     default:
-      return 7
+      return DEEP_HINDBRAIN.test(p.name.en) ? 8 : 7
   }
 }
 
@@ -167,6 +187,21 @@ export const DEPTH_LEVELS: DepthLevel[] = SHELLS.filter((s) => PRESENT.includes(
 /** Gross-anatomy cortex: hidden while a cortical parcellation stands in for it. */
 export const GROSS_CORTEX_IDS = new Set(LEAF_PARTS.filter((p) => p.layer === 'gross' && RANK_BY_ID.get(p.id) === 2).map((p) => p.id))
 export const PARCELLATION_IDS = new Set<LayerId>(LAYERS.filter((l) => l.parcellation).map((l) => l.id))
+
+/** Gross part ids a layer stands in for (see Layer.covers); parcellations cover the whole gross cortex. */
+export const COVERED_BY_LAYER = new Map<LayerId, Set<string>>(
+  LAYERS.map((l) => [
+    l.id,
+    l.parcellation ? GROSS_CORTEX_IDS : new Set(l.covers ? LEAF_PARTS.filter((p) => p.layer === 'gross' && l.covers!.test(p.id)).map((p) => p.id) : []),
+  ]),
+)
+
+/** Every gross part hidden by the currently enabled layers. */
+export function coveredIds(layers: LayerId[]): Set<string> {
+  const out = new Set<string>()
+  for (const l of layers) for (const id of COVERED_BY_LAYER.get(l) ?? []) out.add(id)
+  return out
+}
 
 /** Compact shell index (0 = outermost present shell) for a leaf part. */
 export function depthOf(id: string): number {

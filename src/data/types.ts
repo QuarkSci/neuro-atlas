@@ -26,7 +26,7 @@ export type SystemId =
  * Which atlas a mesh comes from. Layers overlap in space (a Julich area sits
  * inside a BodyParts3D gyrus), so they are toggled independently of systems.
  */
-export type LayerId = 'gross' | 'julich' | 'brodmann' | 'desikan' | 'destrieux' | 'glasser' | 'jhu'
+export type LayerId = 'gross' | 'julich' | 'brodmann' | 'desikan' | 'destrieux' | 'glasser' | 'jhu' | 'bstem' | 'suit'
 
 export type Side = 'left' | 'right' | 'midline'
 
@@ -41,8 +41,16 @@ export interface System {
 export interface Layer {
   id: LayerId
   name: L10n
+  /** Chip label in the layers row; the first word of `name` when absent. */
+  short?: L10n
   /** Cortical parcellations tile the same surface, so only one shows at a time. */
   parcellation?: boolean
+  /**
+   * Gross parts this layer stands in for while it is on: a parcellation
+   * replaces the gross cortex, the brainstem layer the solid pons/medulla
+   * halves, the cerebellar layer the two gross hemispheres.
+   */
+  covers?: RegExp
   /** One-line provenance shown in the inspector and the about panel. */
   source: string
   license: string
@@ -74,6 +82,8 @@ export interface Part {
   faces?: number
   /** Atlas-native identifiers (FMA id for BodyParts3D, label index for Julich). */
   ref?: string
+  /** Mesh provenance when a layer mixes atlases (brainstem: Allen vs AAN); the layer's source otherwise. */
+  meshSource?: { title: string; url: string }
   description?: L10n
   /** Function / clinical relevance, filled by the content pass. */
   role?: L10n

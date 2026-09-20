@@ -1,0 +1,546 @@
+{
+  "cb-anterior-lobe": {
+    "la": "Lobus cerebelli anterior",
+    "uz": "Miyachaning old bo'lagi",
+    "description": {
+      "en": "Lobules I–V, in front of the primary fissure on the superior surface of the cerebellum. Its cortex receives spinocerebellar input and is somatotopically mapped (the 'inverted homunculus').",
+      "uz": "Miyachaning yuqori yuzasida, birlamchi yoriqdan oldindagi I–V bo'lakchalar. Po'stlog'i spinotserebellyar signallarni oladi va somatotopik xaritalangan ('teskari gomunkulus')."
+    },
+    "role": {
+      "en": "The spinocerebellum for the limbs and trunk: online correction of muscle tone, posture and the execution of ongoing limb movement.",
+      "uz": "Oyoq-qo'l va tana uchun spinotserebellum: mushak tonusi, gavda holati va davom etayotgan harakatni real vaqtda tuzatish."
+    },
+    "clinical": {
+      "en": "Preferentially degenerates in chronic alcoholism (anterior superior vermis) → wide-based gait ataxia with relatively spared arms.",
+      "uz": "Surunkali alkogolizmda tanlab degeneratsiyaga uchraydi (old-yuqori chuvalchang) → qo'llar nisbatan saqlangan holda keng qadamli yurish ataksiyasi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Anatomy of the cerebellum",
+        "url": "https://en.wikipedia.org/wiki/Anatomy_of_the_cerebellum"
+      }
+    ]
+  },
+  "cb-posterior-lobe": {
+    "la": "Lobus cerebelli posterior",
+    "uz": "Miyachaning orqa bo'lagi",
+    "description": {
+      "en": "Lobules VI–IX, between the primary and posterolateral fissures — by far the largest lobe, containing the massive Crus I/II of the hemispheres and the tonsils (hemispheric IX).",
+      "uz": "Birlamchi va orqa-yon yoriqlar orasidagi VI–IX bo'lakchalar — eng katta bo'lak; yarim sharlarning ulkan Crus I/II va bodomchalarini (yarim shar IX) o'z ichiga oladi."
+    },
+    "role": {
+      "en": "The cerebrocerebellum: planning and timing of skilled voluntary movement (lobule VI, VIII) plus the cognitive-affective cerebellum (Crus I/II, VIIb) linked to prefrontal and parietal association cortex.",
+      "uz": "Tserebrotserebellum: nozik ixtiyoriy harakatni rejalash va vaqtlash (VI, VIII bo'lakchalar) hamda prefrontal va parietal assotsiativ po'stloq bilan bog'langan kognitiv-affektiv miyacha (Crus I/II, VIIb)."
+    },
+    "clinical": {
+      "en": "Posterior-lobe lesions cause the cerebellar cognitive affective (Schmahmann) syndrome; tonsillar herniation through the foramen magnum (Chiari I, raised ICP) involves lobule IX.",
+      "uz": "Orqa bo'lak zararlanishi miyacha kognitiv-affektiv (Schmahmann) sindromini beradi; bodomchalarning katta teshik orqali churrasi (Chiari I, yuqori ICP) IX bo'lakchaga tegishli."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Anatomy of the cerebellum",
+        "url": "https://en.wikipedia.org/wiki/Anatomy_of_the_cerebellum"
+      },
+      {
+        "title": "Wikipedia — Cerebellar cognitive affective syndrome",
+        "url": "https://en.wikipedia.org/wiki/Cerebellar_cognitive_affective_syndrome"
+      }
+    ]
+  },
+  "cb-flocculonodular-lobe": {
+    "la": "Lobus flocculonodularis",
+    "uz": "Flokkulonodulyar bo'lak",
+    "description": {
+      "en": "Lobule X — the nodulus of the vermis and the two flocculi — the phylogenetically oldest part (archicerebellum), tucked beneath the posterior lobe next to the fourth ventricle and the cerebellopontine angle.",
+      "uz": "X bo'lakcha — chuvalchang tuguni (nodulus) va ikki flokkulus — filogenetik eng qadimgi qism (arxitserebellum); orqa bo'lak ostida, IV qorincha va ko'prik-miyacha burchagi yonida joylashgan."
+    },
+    "role": {
+      "en": "The vestibulocerebellum: balance, gaze stabilisation (vestibulo-ocular reflex adaptation, smooth pursuit) and gaze holding.",
+      "uz": "Vestibulotserebellum: muvozanat, qarashni barqarorlashtirish (vestibulo-okulyar refleks moslashuvi, silliq kuzatish) va qarashni ushlab turish."
+    },
+    "clinical": {
+      "en": "Damage (medulloblastoma in children arises next to it) produces truncal ataxia, nystagmus and vertigo with normal limb coordination.",
+      "uz": "Zararlanishi (bolalardagi medulloblastoma uning yonida paydo bo'ladi) oyoq-qo'l muvofiqligi saqlangan holda gavda ataksiyasi, nistagm va bosh aylanishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Flocculonodular lobe",
+        "url": "https://en.wikipedia.org/wiki/Flocculonodular_lobe"
+      }
+    ]
+  },
+  "cb-deep-nuclei": {
+    "la": "Nuclei cerebelli",
+    "uz": "Miyachaning chuqur yadrolari",
+    "description": {
+      "en": "Four paired nuclei buried in the cerebellar white matter — from lateral to medial the dentate, emboliform and globose (together the interposed) and fastigial nuclei — receiving inhibitory Purkinje-cell output and excitatory collaterals of mossy and climbing fibres.",
+      "uz": "Miyacha oq moddasiga ko'milgan to'rt juft yadro — lateraldan medialga tishsimon, tiqinsimon va sharsimon (birgalikda oraliq) hamda chodirsimon yadrolar; Purkinje hujayralarining tormozlovchi chiqishi va moxsimon/o'rmalovchi tolalarning qo'zg'atuvchi kollaterallarini oladi."
+    },
+    "role": {
+      "en": "The sole output of the cerebellum: every cerebellar influence on the thalamus, red nucleus, vestibular nuclei and reticular formation passes through them.",
+      "uz": "Miyachaning yagona chiqishi: talamus, qizil yadro, vestibulyar yadrolar va retikulyar formatsiyaga miyacha ta'siri faqat ular orqali o'tadi."
+    },
+    "clinical": {
+      "en": "Injury during posterior-fossa tumour surgery (especially to the dentate and its efferents) causes cerebellar mutism syndrome in children; iron-rich dentate is hypointense on SWI.",
+      "uz": "Orqa chuqurcha o'smalari jarrohligida (ayniqsa tishsimon yadro va uning chiqish tolalari) jarohat bolalarda miyacha mutizmi sindromini keltiradi; temirga boy tishsimon yadro SWI'da gipointensiv."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Deep cerebellar nuclei",
+        "url": "https://en.wikipedia.org/wiki/Deep_cerebellar_nuclei"
+      }
+    ]
+  },
+  "cb-lobules-i-iv": {
+    "la": "Lobuli I–IV (lingula, lobulus centralis, culmen)",
+    "uz": "I–IV bo'lakchalar (lingula, markaziy bo'lakcha, culmen)",
+    "description": {
+      "en": "The most anterior cerebellar lobules — lingula (I), central lobule (II–III) and the anterior culmen (IV) — forming the roof of the fourth ventricle beside the superior medullary velum.",
+      "uz": "Eng oldingi miyacha bo'lakchalari — lingula (I), markaziy bo'lakcha (II–III) va oldingi culmen (IV); yuqori miya pardasi yonida IV qorincha tomini hosil qiladi."
+    },
+    "role": {
+      "en": "Spinocerebellar representation of the lower limbs and trunk; lobule I also receives vestibular input.",
+      "uz": "Oyoqlar va tananing spinotserebellyar vakilligi; I bo'lakcha vestibulyar signallarni ham oladi."
+    },
+    "clinical": {
+      "en": "Together with lobule V and the vermis, the classic site of alcoholic cerebellar degeneration.",
+      "uz": "V bo'lakcha va chuvalchang bilan birga alkogolli miyacha degeneratsiyasining klassik joyi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-lobule-v": {
+    "la": "Lobulus V (culmen)",
+    "uz": "V bo'lakcha (culmen)",
+    "description": {
+      "en": "The posterior culmen, immediately in front of the primary fissure, forming the summit of the superior cerebellar surface.",
+      "uz": "Birlamchi yoriqdan bevosita oldindagi orqa culmen; miyachaning yuqori yuzasi cho'qqisini hosil qiladi."
+    },
+    "role": {
+      "en": "Anterior-lobe representation of the upper limb and the hand (the first of the two hand maps of the cerebellum); active in simple finger movements.",
+      "uz": "Qo'l va kaftning old bo'lak vakilligi (miyachadagi ikki kaft xaritasidan birinchisi); oddiy barmoq harakatlarida faol."
+    },
+    "clinical": {
+      "en": "Lesions of lobules IV–V give ipsilateral upper-limb dysmetria and intention tremor.",
+      "uz": "IV–V bo'lakchalar zararlanishi o'sha tomonda qo'l dismetriyasi va intension tremor beradi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-lobule-vi": {
+    "la": "Lobulus VI (declive / lobulus simplex)",
+    "uz": "VI bo'lakcha (lobulus simplex)",
+    "description": {
+      "en": "The first posterior-lobe lobule, just behind the primary fissure (hemispheric 'lobulus simplex', vermal 'declive').",
+      "uz": "Birlamchi yoriqdan bevosita orqadagi orqa bo'lakning birinchi bo'lakchasi (yarim sharda 'lobulus simplex', chuvalchangda 'declive')."
+    },
+    "role": {
+      "en": "Motor lobule for the hand, mouth and eyes — strongly active in finger tapping, speech articulation and saccades; part of the 'oculomotor vermis' with VII.",
+      "uz": "Kaft, og'iz va ko'zlar uchun harakat bo'lakchasi — barmoq bilan urish, nutq artikulyatsiyasi va sakkadalarda kuchli faol; VII bilan birga 'okulomotor chuvalchang' qismi."
+    },
+    "clinical": {
+      "en": "Lobule VI lesions cause ataxic dysarthria and saccadic dysmetria; grey-matter loss here is reported in ADHD and autism.",
+      "uz": "VI bo'lakcha zararlanishi ataktik dizartriya va sakkada dismetriyasini beradi; ADHD va autizmda bu yerda kulrang modda kamayishi qayd etilgan."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-vermis-vi": {
+    "la": "Declive vermis (VI)",
+    "uz": "Chuvalchang VI (declive)",
+    "description": {
+      "en": "The vermal part of lobule VI, immediately behind the primary fissure on the superior vermis.",
+      "uz": "VI bo'lakchaning chuvalchang qismi; yuqori chuvalchangda birlamchi yoriqdan bevosita orqada."
+    },
+    "role": {
+      "en": "Axial and oculomotor control: with vermal VII it forms the oculomotor vermis that calibrates saccade amplitude.",
+      "uz": "O'q va okulomotor nazorat: chuvalchang VII bilan birga sakkada amplitudasini sozlovchi okulomotor chuvalchangni hosil qiladi."
+    },
+    "clinical": {
+      "en": "Vermian atrophy (alcohol, phenytoin, paraneoplastic degeneration) gives truncal and gait ataxia and saccadic dysmetria.",
+      "uz": "Chuvalchang atrofiyasi (alkogol, fenitoin, paraneoplastik degeneratsiya) gavda va yurish ataksiyasi hamda sakkada dismetriyasini beradi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-crus-i": {
+    "la": "Crus I lobuli ansiformis (VIIa)",
+    "uz": "Crus I",
+    "description": {
+      "en": "The huge anterior half of the ansiform lobule (VIIa), the largest lobule of the human cerebellum, spanning the posterolateral surface above the horizontal fissure.",
+      "uz": "Ansiform bo'lakchaning (VIIa) ulkan oldingi yarmi — inson miyachasining eng katta bo'lakchasi; gorizontal yoriq ustidagi orqa-yon yuzani egallaydi."
+    },
+    "role": {
+      "en": "Non-motor cerebellum: connected with dorsolateral prefrontal and posterior parietal cortex — working memory, language, executive function and the default-mode network.",
+      "uz": "Harakatsiz miyacha: dorsolateral prefrontal va orqa parietal po'stloq bilan bog'langan — ishchi xotira, til, ijro funksiyalari va sukut rejimi tarmog'i."
+    },
+    "clinical": {
+      "en": "Crus I/II lesions produce the cognitive-affective (Schmahmann) syndrome without ataxia; Crus I is the most common cerebellar site of stroke in the PICA/SCA watershed.",
+      "uz": "Crus I/II zararlanishi ataksiyasiz kognitiv-affektiv (Schmahmann) sindromini beradi; Crus I — PICA/SCA chegarasida miyacha insultining eng ko'p uchraydigan joyi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      },
+      {
+        "title": "Wikipedia — Cerebellar cognitive affective syndrome",
+        "url": "https://en.wikipedia.org/wiki/Cerebellar_cognitive_affective_syndrome"
+      }
+    ]
+  },
+  "cb-vermis-crus-i": {
+    "la": "Folium vermis (VIIa)",
+    "uz": "Chuvalchang Crus I (folium)",
+    "description": {
+      "en": "The tiny vermal strip corresponding to Crus I — the folium vermis — a single narrow leaf at the posterior tip of the vermis.",
+      "uz": "Crus I'ga mos keluvchi mitti chuvalchang chizig'i — folium vermis — chuvalchangning orqa uchidagi yagona tor barg."
+    },
+    "role": {
+      "en": "Part of the oculomotor vermis (VI–VII) that tunes saccade accuracy.",
+      "uz": "Sakkada aniqligini sozlovchi okulomotor chuvalchang (VI–VII) qismi."
+    },
+    "clinical": {
+      "en": "Vermal VII lesions give hypometric or hypermetric saccades and ocular flutter.",
+      "uz": "Chuvalchang VII zararlanishi gipometrik yoki gipermetrik sakkadalar va ko'z 'titrashi'ni beradi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-crus-ii": {
+    "la": "Crus II lobuli ansiformis (VIIa)",
+    "uz": "Crus II",
+    "description": {
+      "en": "The posterior half of the ansiform lobule, below the horizontal fissure on the inferior surface, continuous medially with the tuber of the vermis.",
+      "uz": "Ansiform bo'lakchaning orqa yarmi; pastki yuzada gorizontal yoriq ostida, medial tomonda chuvalchang tuber bilan tutash."
+    },
+    "role": {
+      "en": "Like Crus I, a cognitive/associative lobule: language (right Crus II is active in verbal fluency), social cognition and the frontoparietal network. Contains the second cerebellar body map's face and hand regions at its border with VIIb.",
+      "uz": "Crus I kabi kognitiv/assotsiativ bo'lakcha: til (o'ng Crus II so'z ravonligida faol), ijtimoiy kognitsiya va frontoparietal tarmoq. VIIb bilan chegarasida miyachaning ikkinchi tana xaritasi yuz va kaft sohalari joylashgan."
+    },
+    "clinical": {
+      "en": "Right posterolateral (Crus II) lesions impair verbal fluency and language; the region is affected early in spinocerebellar ataxias with cognitive impairment.",
+      "uz": "O'ng orqa-yon (Crus II) zararlanishi so'z ravonligi va tilni buzadi; kognitiv buzilishli spinotserebellyar ataksiyalarda erta zararlanadi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-vermis-crus-ii": {
+    "la": "Tuber vermis (VIIb / VIIat)",
+    "uz": "Chuvalchang Crus II (tuber)",
+    "description": {
+      "en": "The tuber of the vermis on the inferior surface — the vermal continuation of Crus II.",
+      "uz": "Pastki yuzadagi chuvalchang tuberi — Crus II'ning chuvalchang davomi."
+    },
+    "role": {
+      "en": "Posterior vermis: gait and trunk control together with autonomic and affective modulation (limbic cerebellum).",
+      "uz": "Orqa chuvalchang: yurish va gavda nazorati, vegetativ va affektiv modulyatsiya (limbik miyacha) bilan birga."
+    },
+    "clinical": {
+      "en": "Posterior vermis damage in children (medulloblastoma resection) contributes to emotional dysregulation of cerebellar mutism syndrome.",
+      "uz": "Bolalarda orqa chuvalchang zararlanishi (medulloblastoma rezeksiyasi) miyacha mutizmi sindromidagi hissiy buzilishga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-lobule-viib": {
+    "la": "Lobulus VIIb (paramedianus)",
+    "uz": "VIIb bo'lakcha (paramedian)",
+    "description": {
+      "en": "The paramedian lobule on the inferior surface, between Crus II and lobule VIIIa, continuous with the tuber of the vermis.",
+      "uz": "Pastki yuzadagi paramedian bo'lakcha; Crus II bilan VIIIa orasida, chuvalchang tuber bilan tutash."
+    },
+    "role": {
+      "en": "Transition between the cognitive Crus I/II and the motor lobule VIII — involved in working memory, saccades and hand movements of the second body map.",
+      "uz": "Kognitiv Crus I/II bilan harakat bo'lakchasi VIII orasidagi o'tish — ishchi xotira, sakkadalar va ikkinchi tana xaritasining kaft harakatlarida ishtirok etadi."
+    },
+    "clinical": {
+      "en": "Included in inferior cerebellar (PICA) infarcts; isolated involvement is rarely symptomatic.",
+      "uz": "Pastki miyacha (PICA) infarktlarida zararlanadi; alohida zararlanishi kam simptom beradi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-vermis-viib": {
+    "la": "Tuber vermis (VIIb)",
+    "uz": "Chuvalchang VIIb (tuber)",
+    "description": {
+      "en": "The vermal strip of lobule VIIb on the inferior vermis.",
+      "uz": "Pastki chuvalchangdagi VIIb bo'lakchaning chuvalchang chizig'i."
+    },
+    "role": {
+      "en": "Posterior vermis contribution to gait, posture and the oculomotor vermis.",
+      "uz": "Orqa chuvalchangning yurish, gavda holati va okulomotor chuvalchangga hissasi."
+    },
+    "clinical": {
+      "en": "Damaged with the rest of the posterior vermis in midline tumours of childhood.",
+      "uz": "Bolalik davri o'rta chiziq o'smalarida orqa chuvalchangning qolgan qismi bilan birga zararlanadi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-lobule-viiia": {
+    "la": "Lobulus VIIIa (biventer)",
+    "uz": "VIIIa bo'lakcha (biventer)",
+    "description": {
+      "en": "Anterior part of the biventer lobule on the inferior surface, lateral to the vermal pyramid.",
+      "uz": "Pastki yuzadagi ikki qorinli (biventer) bo'lakchaning oldingi qismi; chuvalchang piramidasidan lateralda."
+    },
+    "role": {
+      "en": "The second motor representation of the cerebellum (upper limb and hand, mouth) — co-activates with lobule V in movement and with somatosensory cortex in touch.",
+      "uz": "Miyachaning ikkinchi harakat vakilligi (qo'l va kaft, og'iz) — harakatda V bo'lakcha, sezishda somatosensor po'stloq bilan birga faollashadi."
+    },
+    "clinical": {
+      "en": "Together with VIIIb the seat of upper-limb ataxia in inferior cerebellar (PICA) infarcts.",
+      "uz": "VIIIb bilan birga pastki miyacha (PICA) infarktlarida qo'l ataksiyasining joyi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-vermis-viiia": {
+    "la": "Pyramis vermis (VIIIa)",
+    "uz": "Chuvalchang VIIIa (piramida)",
+    "description": {
+      "en": "The anterior part of the vermal pyramid on the inferior vermis.",
+      "uz": "Pastki chuvalchangdagi chuvalchang piramidasining oldingi qismi."
+    },
+    "role": {
+      "en": "Axial motor control of the trunk and lower limbs during stance and gait.",
+      "uz": "Tik turish va yurishda tana va oyoqlarning o'q harakat nazorati."
+    },
+    "clinical": {
+      "en": "Vermal VIII lesions produce truncal titubation and gait ataxia.",
+      "uz": "Chuvalchang VIII zararlanishi gavda tebranishi (titubatsiya) va yurish ataksiyasini beradi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-lobule-viiib": {
+    "la": "Lobulus VIIIb (biventer)",
+    "uz": "VIIIb bo'lakcha (biventer)",
+    "description": {
+      "en": "Posterior part of the biventer lobule, adjacent to the tonsil (hemispheric IX) on the inferior surface.",
+      "uz": "Ikki qorinli bo'lakchaning orqa qismi; pastki yuzada bodomcha (yarim shar IX) yoniga tutash."
+    },
+    "role": {
+      "en": "Continuation of the second motor map — lower limb and foot representation.",
+      "uz": "Ikkinchi harakat xaritasining davomi — oyoq va tovon vakilligi."
+    },
+    "clinical": {
+      "en": "Inferior cerebellar (PICA) infarcts involving VIIIb produce ipsilateral leg ataxia and lateropulsion.",
+      "uz": "VIIIb'ni qamrab olgan pastki miyacha (PICA) infarktlari o'sha tomonda oyoq ataksiyasi va lateropulsiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-vermis-viiib": {
+    "la": "Pyramis vermis (VIIIb)",
+    "uz": "Chuvalchang VIIIb (piramida)",
+    "description": {
+      "en": "The posterior part of the vermal pyramid.",
+      "uz": "Chuvalchang piramidasining orqa qismi."
+    },
+    "role": {
+      "en": "Axial motor control; with the fastigial nucleus, drives vestibulospinal and reticulospinal postural pathways.",
+      "uz": "O'q harakat nazorati; chodirsimon yadro bilan birga vestibulospinal va retikulospinal postural yo'llarni boshqaradi."
+    },
+    "clinical": {
+      "en": "Contributes to truncal ataxia in midline cerebellar lesions.",
+      "uz": "O'rta chiziq miyacha zararlanishlarida gavda ataksiyasiga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-lobule-ix": {
+    "la": "Lobulus IX (tonsilla cerebelli)",
+    "uz": "IX bo'lakcha (miyacha bodomchasi)",
+    "description": {
+      "en": "The cerebellar tonsil — the hemispheric part of lobule IX — a rounded lobule on the inferomedial surface lying just above the foramen magnum beside the medulla.",
+      "uz": "Miyacha bodomchasi — IX bo'lakchaning yarim shar qismi — pastki-medial yuzada, katta teshikdan sal yuqorida, uzunchoq miya yonidagi yumaloq bo'lakcha."
+    },
+    "role": {
+      "en": "Receives vestibular and visual-motion input; involved in the default-mode network and in autonomic (cardiovascular) modulation.",
+      "uz": "Vestibulyar va ko'rish-harakat signallarini oladi; sukut rejimi tarmog'i va vegetativ (yurak-qon tomir) modulyatsiyada ishtirok etadi."
+    },
+    "clinical": {
+      "en": "Tonsillar herniation: descent >5 mm below the foramen magnum in Chiari I malformation or acute herniation from raised ICP, compressing the medulla — the reason lumbar puncture is dangerous with a posterior-fossa mass.",
+      "uz": "Bodomcha churrasi: Chiari I malformatsiyasida yoki yuqori ICP'da katta teshikdan >5 mm tushib uzunchoq miyani bosadi — orqa chuqurcha o'smasida lumbal punksiya xavfli bo'lishining sababi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Cerebellar tonsil",
+        "url": "https://en.wikipedia.org/wiki/Cerebellar_tonsil"
+      }
+    ]
+  },
+  "cb-vermis-ix": {
+    "la": "Uvula vermis (IX)",
+    "uz": "Chuvalchang IX (uvula)",
+    "description": {
+      "en": "The uvula — the vermal part of lobule IX between the two tonsils on the inferior vermis, facing the fourth ventricle.",
+      "uz": "Uvula — pastki chuvalchangda ikki bodomcha orasidagi, IV qorinchaga qaragan IX bo'lakchaning chuvalchang qismi."
+    },
+    "role": {
+      "en": "Vestibular vermis: with the nodulus it processes vestibular and optokinetic input for balance and the velocity-storage mechanism of the VOR.",
+      "uz": "Vestibulyar chuvalchang: nodulus bilan birga muvozanat va VOR'ning tezlik-saqlash mexanizmi uchun vestibulyar va optokinetik signallarni qayta ishlaydi."
+    },
+    "clinical": {
+      "en": "Uvular/nodular lesions produce positional nystagmus and vertigo mimicking peripheral vestibular disease.",
+      "uz": "Uvula/nodulus zararlanishi periferik vestibulyar kasallikka o'xshash pozitsion nistagm va bosh aylanishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Diedrichsen et al. 2009, NeuroImage — A probabilistic MR atlas of the human cerebellum",
+        "url": "https://doi.org/10.1016/j.neuroimage.2009.01.045"
+      }
+    ]
+  },
+  "cb-lobule-x": {
+    "la": "Flocculus (X)",
+    "uz": "X bo'lakcha (flokkulus)",
+    "description": {
+      "en": "The flocculus — a small tuft of folia projecting into the cerebellopontine angle below the middle cerebellar peduncle, connected to the nodulus by the thin peduncle of the flocculus.",
+      "uz": "Flokkulus — o'rta miyacha oyoqchasi ostida ko'prik-miyacha burchagiga chiqib turuvchi kichik bargchalar to'dasi; nodulus bilan ingichka flokkulus oyoqchasi orqali bog'langan."
+    },
+    "role": {
+      "en": "Vestibulo-ocular reflex adaptation, smooth pursuit and gaze holding via direct projections to the vestibular nuclei.",
+      "uz": "Vestibulyar yadrolarga bevosita proyeksiyalar orqali vestibulo-okulyar refleks moslashuvi, silliq kuzatish va qarashni ushlab turish."
+    },
+    "clinical": {
+      "en": "Flocculus lesions (vestibular schwannoma surgery, PICA infarct) cause gaze-evoked and downbeat nystagmus, impaired pursuit and VOR gain abnormalities.",
+      "uz": "Flokkulus zararlanishi (vestibulyar shvannoma jarrohligi, PICA infarkti) qarashga bog'liq va pastga uruvchi nistagm, kuzatish buzilishi va VOR kuchayishi anomaliyalarini beradi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Flocculus",
+        "url": "https://en.wikipedia.org/wiki/Flocculus"
+      }
+    ]
+  },
+  "cb-vermis-x": {
+    "la": "Nodulus vermis (X)",
+    "uz": "Chuvalchang X (nodulus)",
+    "description": {
+      "en": "The nodulus — the most anterior-inferior vermal lobule, forming the front of the inferior vermis above the roof of the fourth ventricle (inferior medullary velum).",
+      "uz": "Nodulus — chuvalchangning eng oldingi-pastki bo'lakchasi; IV qorincha tomi (pastki miya pardasi) ustida pastki chuvalchang oldini hosil qiladi."
+    },
+    "role": {
+      "en": "Core of the vestibulocerebellum: sets the time-constant of the velocity-storage mechanism, controls gravity-referenced eye movements and posture.",
+      "uz": "Vestibulotserebellumning o'zagi: tezlik-saqlash mexanizmi vaqt doimiysini belgilaydi, tortishishga nisbatan ko'z harakatlari va gavda holatini boshqaradi."
+    },
+    "clinical": {
+      "en": "Nodular lesions produce periodic alternating nystagmus and central positional vertigo; medulloblastoma classically arises from the roof of the fourth ventricle next to it.",
+      "uz": "Nodulus zararlanishi davriy almashinuvchi nistagm va markaziy pozitsion bosh aylanishini beradi; medulloblastoma klassik ravishda uning yonida, IV qorincha tomidan boshlanadi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Flocculonodular lobe",
+        "url": "https://en.wikipedia.org/wiki/Flocculonodular_lobe"
+      }
+    ]
+  },
+  "cb-dentate-nucleus": {
+    "la": "Nucleus dentatus",
+    "uz": "Tishsimon yadro",
+    "description": {
+      "en": "The largest and most lateral deep nucleus — a crumpled, bag-like lamina of grey matter in the white matter of each hemisphere, opening medially (hilum) toward the superior cerebellar peduncle.",
+      "uz": "Eng yirik va eng lateral chuqur yadro — har yarim shar oq moddasida burmalangan, xaltasimon kulrang modda qatlami; medialda (hilum) yuqori miyacha oyoqchasiga ochiladi."
+    },
+    "role": {
+      "en": "Output of the cerebrocerebellum: the dentato-rubro-thalamic tract to the contralateral VL thalamus and motor/prefrontal cortex — initiation, planning and timing of skilled movement and cognition.",
+      "uz": "Tserebrotserebellum chiqishi: qarama-qarshi VL talamus va harakat/prefrontal po'stloqqa dentato-rubro-talamik trakt — nozik harakat va kognitsiyani boshlash, rejalash va vaqtlash."
+    },
+    "clinical": {
+      "en": "Damage to the dentate or its efferents in posterior-fossa surgery causes cerebellar mutism; hypertrophic olivary degeneration follows dentate lesions; gadolinium retention and metabolic disorders (Wilson, Leigh) show here on MRI. The dentato-rubro-thalamic tract is the tractographic DBS target for tremor.",
+      "uz": "Orqa chuqurcha jarrohligida tishsimon yadro yoki chiqish tolalari jarohati miyacha mutizmini beradi; tishsimon yadro zararlanishidan so'ng gipertrofik zaytun degeneratsiyasi; gadoliniy to'planishi va metabolik kasalliklar (Wilson, Leigh) MRTda shu yerda ko'rinadi. Dentato-rubro-talamik trakt — tremorda DBS'ning traktografik nishoni."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Dentate nucleus",
+        "url": "https://en.wikipedia.org/wiki/Dentate_nucleus"
+      },
+      {
+        "title": "Diedrichsen et al. 2011, NeuroImage — Imaging the deep cerebellar nuclei",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.10.035"
+      }
+    ]
+  },
+  "cb-interposed-nucleus": {
+    "la": "Nucleus interpositus (emboliformis + globosus)",
+    "uz": "Oraliq yadro (tiqinsimon + sharsimon)",
+    "description": {
+      "en": "The emboliform and globose nuclei together, medial to the dentate hilum and lateral to the fastigial nucleus.",
+      "uz": "Tishsimon yadro hilumidan medialda va chodirsimon yadrodan lateraldagi tiqinsimon va sharsimon yadrolar birgalikda."
+    },
+    "role": {
+      "en": "Output of the spinocerebellum (intermediate zone): to the contralateral red nucleus (rubrospinal tract) and VL thalamus — adjusts limb movement in progress and agonist–antagonist timing.",
+      "uz": "Spinotserebellum (oraliq zona) chiqishi: qarama-qarshi qizil yadro (rubrospinal trakt) va VL talamusga — davom etayotgan oyoq-qo'l harakati va agonist–antagonist vaqtlashini sozlaydi."
+    },
+    "clinical": {
+      "en": "Lesions produce limb ataxia, intention tremor and dysdiadochokinesia; classical conditioning of the eyeblink reflex depends on the anterior interposed nucleus.",
+      "uz": "Zararlanishi oyoq-qo'l ataksiyasi, intension tremor va disdiadoxokineziya beradi; ko'z pirpiratish refleksining klassik shartlanishi oldingi oraliq yadroga bog'liq."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Interposed nucleus",
+        "url": "https://en.wikipedia.org/wiki/Interposed_nucleus"
+      },
+      {
+        "title": "Diedrichsen et al. 2011, NeuroImage — Imaging the deep cerebellar nuclei",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.10.035"
+      }
+    ]
+  }
+}

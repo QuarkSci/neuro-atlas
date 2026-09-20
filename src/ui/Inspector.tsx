@@ -142,8 +142,8 @@ export function Inspector() {
             {layer && (
               <div className="detail-section">
                 <h3>{t.sources}</h3>
-                <a className="source-link" href={layer.url} target="_blank" rel="noreferrer">
-                  {layer.source} · {layer.license} <ArrowUpRight size={13} />
+                <a className="source-link" href={part.meshSource?.url ?? layer.url} target="_blank" rel="noreferrer">
+                  {part.meshSource?.title ?? `${layer.source} · ${layer.license}`} <ArrowUpRight size={13} />
                 </a>
                 {part.sources?.map((sr) => (
                   <a key={sr.url} className="source-link" href={sr.url} target="_blank" rel="noreferrer">

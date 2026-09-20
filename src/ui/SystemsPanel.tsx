@@ -85,7 +85,7 @@ export function SystemsPanel() {
         {LAYERS.map((layer) => (
           <button key={layer.id} aria-pressed={layers.includes(layer.id)} onClick={() => toggleLayer(layer.id)} title={`${layer.source} · ${layer.license}`}>
             <span className="layer-swatch" style={{ background: LAYER_COLORS[layer.id] }} />
-            {l(layer.name).replace(/ .*/, '')} <span className="system-count">{counts.byLayer[layer.id]}</span>
+            {layer.short ? l(layer.short) : l(layer.name).replace(/ .*/, '')} <span className="system-count">{counts.byLayer[layer.id]}</span>
           </button>
         ))}
       </div>

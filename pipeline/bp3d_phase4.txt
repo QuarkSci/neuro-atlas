@@ -1,0 +1,30 @@
+# Phase 4 — structures missed in phases 1–3 (2026-09-20)
+# Cortex gaps
+FJ7462
+FJ7462M
+FJ7471
+FJ7471M
+FJ7463
+FJ7463M
+# Septum, fornix commissure, temporal white matter
+FJ1832
+FJ1741
+FJ1758
+FJ1806
+# Midbrain / diencephalon
+FJ7504
+FJ7504M
+FJ1777
+FJ1824
+FJ1780
+FJ1828
+# Hypothalamic nuclei (mirrored pairs) + periventricular
+FJ7492
+FJ7492M
+FJ7493
+FJ7493M
+FJ7494
+FJ7494M
+FJ7495
+FJ7495M
+FJ7499

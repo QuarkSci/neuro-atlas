@@ -1,0 +1,990 @@
+[
+ {
+  "id": "midbrain-tegmentum-left",
+  "name": "Midbrain tegmentum",
+  "side": "left",
+  "group": "midbrain",
+  "label": 12195,
+  "faces": 16000,
+  "bbox": [
+   [
+    -16.16,
+    -36.75,
+    -20.94
+   ],
+   [
+    -0.25,
+    -7.51,
+    -1.68
+   ]
+  ],
+  "centroid": [
+   -5.99,
+   -21.7,
+   -11.0
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "midbrain-tegmentum-right",
+  "name": "Midbrain tegmentum",
+  "side": "right",
+  "group": "midbrain",
+  "label": 12195,
+  "faces": 16000,
+  "bbox": [
+   [
+    -0.25,
+    -36.8,
+    -20.94
+   ],
+   [
+    16.16,
+    -7.37,
+    -1.56
+   ]
+  ],
+  "centroid": [
+   5.79,
+   -21.74,
+   -10.91
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "pretectal-region-left",
+  "name": "Pretectal region",
+  "side": "left",
+  "group": "midbrain",
+  "label": 12181,
+  "faces": 2640,
+  "bbox": [
+   [
+    -13.37,
+    -30.84,
+    -9.76
+   ],
+   [
+    -2.02,
+    -24.15,
+    0.41
+   ]
+  ],
+  "centroid": [
+   -7.78,
+   -27.35,
+   -3.92
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "pretectal-region-right",
+  "name": "Pretectal region",
+  "side": "right",
+  "group": "midbrain",
+  "label": 12181,
+  "faces": 2640,
+  "bbox": [
+   [
+    2.02,
+    -30.8,
+    -9.73
+   ],
+   [
+    13.34,
+    -24.17,
+    0.4
+   ]
+  ],
+  "centroid": [
+   7.76,
+   -27.36,
+   -3.91
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "cerebral-peduncle-crus-cerebri-left",
+  "name": "Cerebral peduncle (crus cerebri)",
+  "side": "left",
+  "group": "midbrain",
+  "label": 12330,
+  "faces": 10898,
+  "bbox": [
+   [
+    -21.01,
+    -28.89,
+    -22.67
+   ],
+   [
+    -3.65,
+    -6.89,
+    -9.17
+   ]
+  ],
+  "centroid": [
+   -12.65,
+   -17.27,
+   -15.94
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "cerebral-peduncle-crus-cerebri-right",
+  "name": "Cerebral peduncle (crus cerebri)",
+  "side": "right",
+  "group": "midbrain",
+  "label": 12330,
+  "faces": 10898,
+  "bbox": [
+   [
+    3.65,
+    -28.88,
+    -22.71
+   ],
+   [
+    21.03,
+    -6.88,
+    -9.15
+   ]
+  ],
+  "centroid": [
+   12.65,
+   -17.26,
+   -15.93
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "basilar-part-of-pons-left",
+  "name": "Basilar part of pons",
+  "side": "left",
+  "group": "pons",
+  "label": 12405,
+  "faces": 16000,
+  "bbox": [
+   [
+    -20.07,
+    -37.09,
+    -49.68
+   ],
+   [
+    -0.25,
+    -12.44,
+    -21.05
+   ]
+  ],
+  "centroid": [
+   -7.92,
+   -25.32,
+   -34.37
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "basilar-part-of-pons-right",
+  "name": "Basilar part of pons",
+  "side": "right",
+  "group": "pons",
+  "label": 12405,
+  "faces": 16000,
+  "bbox": [
+   [
+    -0.25,
+    -37.09,
+    -49.68
+   ],
+   [
+    20.07,
+    -12.44,
+    -21.06
+   ]
+  ],
+  "centroid": [
+   7.7,
+   -25.3,
+   -34.38
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "pontine-tegmentum-left",
+  "name": "Pontine tegmentum",
+  "side": "left",
+  "group": "pons",
+  "label": 12416,
+  "faces": 14544,
+  "bbox": [
+   [
+    -12.45,
+    -43.68,
+    -46.33
+   ],
+   [
+    -0.25,
+    -24.48,
+    -15.05
+   ]
+  ],
+  "centroid": [
+   -5.5,
+   -34.86,
+   -30.1
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "pontine-tegmentum-right",
+  "name": "Pontine tegmentum",
+  "side": "right",
+  "group": "pons",
+  "label": 12416,
+  "faces": 14940,
+  "bbox": [
+   [
+    -0.25,
+    -43.71,
+    -46.34
+   ],
+   [
+    12.45,
+    -24.46,
+    -15.07
+   ]
+  ],
+  "centroid": [
+   5.31,
+   -34.81,
+   -30.15
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "superior-cerebellar-peduncle-left",
+  "name": "Superior cerebellar peduncle",
+  "side": "left",
+  "group": "pons",
+  "label": 12354,
+  "faces": 4272,
+  "bbox": [
+   [
+    -8.75,
+    -52.27,
+    -32.88
+   ],
+   [
+    -3.16,
+    -37.15,
+    -16.91
+   ]
+  ],
+  "centroid": [
+   -6.03,
+   -44.18,
+   -26.93
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "superior-cerebellar-peduncle-right",
+  "name": "Superior cerebellar peduncle",
+  "side": "right",
+  "group": "pons",
+  "label": 12354,
+  "faces": 4272,
+  "bbox": [
+   [
+    3.14,
+    -52.29,
+    -32.9
+   ],
+   [
+    8.75,
+    -37.16,
+    -16.88
+   ]
+  ],
+  "centroid": [
+   6.04,
+   -44.19,
+   -26.93
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "middle-cerebellar-peduncle-left",
+  "name": "Middle cerebellar peduncle",
+  "side": "left",
+  "group": "pons",
+  "label": 12768,
+  "faces": 8022,
+  "bbox": [
+   [
+    -26.57,
+    -44.25,
+    -43.51
+   ],
+   [
+    -11.52,
+    -30.63,
+    -29.15
+   ]
+  ],
+  "centroid": [
+   -18.62,
+   -38.63,
+   -36.57
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "middle-cerebellar-peduncle-right",
+  "name": "Middle cerebellar peduncle",
+  "side": "right",
+  "group": "pons",
+  "label": 12768,
+  "faces": 8022,
+  "bbox": [
+   [
+    11.52,
+    -44.25,
+    -43.53
+   ],
+   [
+    26.57,
+    -30.63,
+    -29.15
+   ]
+  ],
+  "centroid": [
+   18.62,
+   -38.62,
+   -36.57
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "pyramid-of-medulla-oblongata-left",
+  "name": "Pyramid of medulla oblongata",
+  "side": "left",
+  "group": "medulla",
+  "label": 12535,
+  "faces": 3890,
+  "bbox": [
+   [
+    -6.22,
+    -40.36,
+    -69.69
+   ],
+   [
+    -0.58,
+    -29.81,
+    -47.21
+   ]
+  ],
+  "centroid": [
+   -3.03,
+   -34.17,
+   -57.44
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "pyramid-of-medulla-oblongata-right",
+  "name": "Pyramid of medulla oblongata",
+  "side": "right",
+  "group": "medulla",
+  "label": 12535,
+  "faces": 3890,
+  "bbox": [
+   [
+    0.59,
+    -40.36,
+    -69.66
+   ],
+   [
+    6.23,
+    -29.8,
+    -47.2
+   ]
+  ],
+  "centroid": [
+   3.02,
+   -34.17,
+   -57.43
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "tegmentum-of-medulla-oblongata-left",
+  "name": "Tegmentum of medulla oblongata",
+  "side": "left",
+  "group": "medulla",
+  "label": 12538,
+  "faces": 12634,
+  "bbox": [
+   [
+    -10.86,
+    -50.59,
+    -69.79
+   ],
+   [
+    -0.25,
+    -32.28,
+    -41.11
+   ]
+  ],
+  "centroid": [
+   -4.24,
+   -41.6,
+   -54.99
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "tegmentum-of-medulla-oblongata-right",
+  "name": "Tegmentum of medulla oblongata",
+  "side": "right",
+  "group": "medulla",
+  "label": 12538,
+  "faces": 13074,
+  "bbox": [
+   [
+    -0.25,
+    -50.6,
+    -69.8
+   ],
+   [
+    10.86,
+    -32.28,
+    -41.08
+   ]
+  ],
+  "centroid": [
+   4.03,
+   -41.57,
+   -55.04
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "inferior-olive-left",
+  "name": "Inferior olive",
+  "side": "left",
+  "group": "medulla",
+  "label": 12600,
+  "faces": 2560,
+  "bbox": [
+   [
+    -9.7,
+    -40.11,
+    -60.93
+   ],
+   [
+    -5.25,
+    -32.05,
+    -47.99
+   ]
+  ],
+  "centroid": [
+   -7.1,
+   -36.27,
+   -54.19
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "inferior-olive-right",
+  "name": "Inferior olive",
+  "side": "right",
+  "group": "medulla",
+  "label": 12600,
+  "faces": 2560,
+  "bbox": [
+   [
+    5.25,
+    -40.12,
+    -60.93
+   ],
+   [
+    9.7,
+    -32.04,
+    -47.97
+   ]
+  ],
+  "centroid": [
+   7.1,
+   -36.27,
+   -54.19
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "inferior-cerebellar-peduncle-left",
+  "name": "Inferior cerebellar peduncle",
+  "side": "left",
+  "group": "medulla",
+  "label": 12741,
+  "faces": 2656,
+  "bbox": [
+   [
+    -14.18,
+    -44.71,
+    -49.01
+   ],
+   [
+    -8.87,
+    -38.91,
+    -30.27
+   ]
+  ],
+  "centroid": [
+   -11.43,
+   -42.33,
+   -40.04
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "inferior-cerebellar-peduncle-right",
+  "name": "Inferior cerebellar peduncle",
+  "side": "right",
+  "group": "medulla",
+  "label": 12741,
+  "faces": 2656,
+  "bbox": [
+   [
+    8.87,
+    -44.69,
+    -49.02
+   ],
+   [
+    14.18,
+    -38.9,
+    -30.3
+   ]
+  ],
+  "centroid": [
+   11.44,
+   -42.33,
+   -40.03
+  ],
+  "source": "Allen Human Reference Atlas – 3D, 2020 (Ding et al.) · CC BY 4.0"
+ },
+ {
+  "id": "dorsal-raphe-nucleus-dr-midline",
+  "name": "Dorsal raphe nucleus (DR)",
+  "side": "midline",
+  "group": "midbrain",
+  "label": 7201,
+  "faces": 1272,
+  "bbox": [
+   [
+    -3.17,
+    -39.07,
+    -34.03
+   ],
+   [
+    4.17,
+    -26.88,
+    -12.55
+   ]
+  ],
+  "centroid": [
+   0.5,
+   -34.41,
+   -20.85
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "median-raphe-nucleus-mnr-midline",
+  "name": "Median raphe nucleus (MnR)",
+  "side": "midline",
+  "group": "pons",
+  "label": 7202,
+  "faces": 508,
+  "bbox": [
+   [
+    -0.5,
+    -37.16,
+    -34.18
+   ],
+   [
+    1.5,
+    -27.88,
+    -21.83
+   ]
+  ],
+  "centroid": [
+   0.5,
+   -32.88,
+   -27.79
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "periaqueductal-grey-pag-midline",
+  "name": "Periaqueductal grey (PAG)",
+  "side": "midline",
+  "group": "midbrain",
+  "label": 7203,
+  "faces": 1300,
+  "bbox": [
+   [
+    -3.43,
+    -37.78,
+    -19.01
+   ],
+   [
+    4.43,
+    -25.88,
+    -5.51
+   ]
+  ],
+  "centroid": [
+   0.49,
+   -32.75,
+   -11.06
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "ventral-tegmental-area-vta-midline",
+  "name": "Ventral tegmental area (VTA)",
+  "side": "midline",
+  "group": "midbrain",
+  "label": 7204,
+  "faces": 2804,
+  "bbox": [
+   [
+    -7.96,
+    -25.83,
+    -21.29
+   ],
+   [
+    8.87,
+    -9.34,
+    -4.69
+   ]
+  ],
+  "centroid": [
+   0.51,
+   -18.54,
+   -12.52
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "locus-coeruleus-lc-left",
+  "name": "Locus coeruleus (LC)",
+  "side": "left",
+  "group": "pons",
+  "label": 7301,
+  "faces": 256,
+  "bbox": [
+   [
+    -7.06,
+    -39.17,
+    -34.04
+   ],
+   [
+    -2.84,
+    -35.82,
+    -21.96
+   ]
+  ],
+  "centroid": [
+   -4.71,
+   -37.34,
+   -28.02
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "locus-coeruleus-lc-right",
+  "name": "Locus coeruleus (LC)",
+  "side": "right",
+  "group": "pons",
+  "label": 7401,
+  "faces": 256,
+  "bbox": [
+   [
+    3.85,
+    -39.18,
+    -34.04
+   ],
+   [
+    8.04,
+    -35.81,
+    -21.96
+   ]
+  ],
+  "centroid": [
+   5.71,
+   -37.33,
+   -28.03
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "laterodorsal-tegmental-nucleus-ldtg-left",
+  "name": "Laterodorsal tegmental nucleus (LDTg)",
+  "side": "left",
+  "group": "pons",
+  "label": 7302,
+  "faces": 172,
+  "bbox": [
+   [
+    -4.03,
+    -38.03,
+    -30.03
+   ],
+   [
+    -1.94,
+    -26.54,
+    -19.07
+   ]
+  ],
+  "centroid": [
+   -2.88,
+   -32.58,
+   -24.07
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "laterodorsal-tegmental-nucleus-ldtg-right",
+  "name": "Laterodorsal tegmental nucleus (LDTg)",
+  "side": "right",
+  "group": "pons",
+  "label": 7402,
+  "faces": 172,
+  "bbox": [
+   [
+    2.93,
+    -38.03,
+    -30.03
+   ],
+   [
+    5.04,
+    -26.93,
+    -19.45
+   ]
+  ],
+  "centroid": [
+   3.79,
+   -32.62,
+   -24.1
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "mesencephalic-reticular-formation-mrt-left",
+  "name": "Mesencephalic reticular formation (mRt)",
+  "side": "left",
+  "group": "midbrain",
+  "label": 7303,
+  "faces": 1032,
+  "bbox": [
+   [
+    -8.09,
+    -37.1,
+    -21.3
+   ],
+   [
+    -1.81,
+    -25.79,
+    -5.57
+   ]
+  ],
+  "centroid": [
+   -4.71,
+   -30.47,
+   -13.27
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "mesencephalic-reticular-formation-mrt-right",
+  "name": "Mesencephalic reticular formation (mRt)",
+  "side": "right",
+  "group": "midbrain",
+  "label": 7403,
+  "faces": 1032,
+  "bbox": [
+   [
+    2.81,
+    -37.13,
+    -21.29
+   ],
+   [
+    9.09,
+    -25.79,
+    -5.58
+   ]
+  ],
+  "centroid": [
+   5.71,
+   -30.46,
+   -13.26
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "parabrachial-complex-pbc-left",
+  "name": "Parabrachial complex (PBC)",
+  "side": "left",
+  "group": "pons",
+  "label": 7304,
+  "faces": 758,
+  "bbox": [
+   [
+    -9.32,
+    -38.9,
+    -31.04
+   ],
+   [
+    -3.26,
+    -15.82,
+    -14.16
+   ]
+  ],
+  "centroid": [
+   -6.0,
+   -29.32,
+   -23.52
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "parabrachial-complex-pbc-right",
+  "name": "Parabrachial complex (PBC)",
+  "side": "right",
+  "group": "pons",
+  "label": 7404,
+  "faces": 758,
+  "bbox": [
+   [
+    3.77,
+    -38.91,
+    -31.03
+   ],
+   [
+    10.32,
+    -15.81,
+    -14.16
+   ]
+  ],
+  "centroid": [
+   6.9,
+   -29.26,
+   -23.47
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "pontine-reticular-formation-oral-part-pno-left",
+  "name": "Pontine reticular formation, oral part (PnO)",
+  "side": "left",
+  "group": "pons",
+  "label": 7305,
+  "faces": 448,
+  "bbox": [
+   [
+    -3.24,
+    -36.21,
+    -34.33
+   ],
+   [
+    -0.53,
+    -29.11,
+    -21.88
+   ]
+  ],
+  "centroid": [
+   -1.74,
+   -33.02,
+   -28.09
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "pontine-reticular-formation-oral-part-pno-right",
+  "name": "Pontine reticular formation, oral part (PnO)",
+  "side": "right",
+  "group": "pons",
+  "label": 7405,
+  "faces": 448,
+  "bbox": [
+   [
+    1.53,
+    -36.21,
+    -34.33
+   ],
+   [
+    4.24,
+    -29.07,
+    -21.88
+   ]
+  ],
+  "centroid": [
+   2.74,
+   -33.02,
+   -28.11
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "pedunculotegmental-pedunculopontine-nucleus-ptg-left",
+  "name": "Pedunculotegmental (pedunculopontine) nucleus (PTg)",
+  "side": "left",
+  "group": "midbrain",
+  "label": 7306,
+  "faces": 504,
+  "bbox": [
+   [
+    -9.66,
+    -33.95,
+    -21.16
+   ],
+   [
+    -5.05,
+    -22.05,
+    -14.59
+   ]
+  ],
+  "centroid": [
+   -7.39,
+   -26.74,
+   -18.08
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ },
+ {
+  "id": "pedunculotegmental-pedunculopontine-nucleus-ptg-right",
+  "name": "Pedunculotegmental (pedunculopontine) nucleus (PTg)",
+  "side": "right",
+  "group": "midbrain",
+  "label": 7406,
+  "faces": 504,
+  "bbox": [
+   [
+    6.04,
+    -33.96,
+    -21.12
+   ],
+   [
+    10.79,
+    -22.08,
+    -14.6
+   ]
+  ],
+  "centroid": [
+   8.38,
+   -26.76,
+   -18.11
+  ],
+  "source": "Harvard Ascending Arousal Network Atlas v2.0 (Edlow & Kinney 2023) · CC0"
+ }
+]

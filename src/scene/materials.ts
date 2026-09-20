@@ -35,6 +35,8 @@ export const LAYER_COLORS: Record<LayerId, string> = {
   destrieux: '#c78bff',
   glasser: '#ffd35a',
   jhu: '#f4f0e6',
+  bstem: '#e2a35a',
+  suit: '#6fd6b8',
 }
 const LAYER_TINT: Partial<Record<LayerId, T.Color>> = Object.fromEntries(Object.entries(LAYER_COLORS).filter(([k]) => k !== 'gross').map(([k, v]) => [k, new T.Color(v)]))
 

@@ -4,19 +4,18 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-09-20 (3-bosqich tugadi, 5-bosqich kontent 218/~750).
+> Oxirgi yangilanish: 2026-09-20 (3b: miya ustuni/miyacha qatlamlari; 5-bosqich kontent 281 yozuv).
 
 ## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
 
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -5`
-   oxirgi commit `5b5a9b8` yoki undan keyingisi bo'lishi kerak.
-3. Meshlar diskda bor (`public/meshes/` 183 MB, 7 papka; `data/raw/`
-   110 MB) — gitignore'da, QAYTA HOSIL QILISH SHART EMAS. Agar yo'q bo'lsa
-   (yangi kompyuter): `pipeline/README.md` retsepti + `volume_to_glb.py`
-   har atlas uchun (neuroparc fayllari `data/raw/neuroparc/` — curl bilan
-   olinadi, URL `pipeline/volume_to_glb.py` docstringida).
+   oxirgi commit `3b`-bosqich commit'i ("Miya ustuni va miyacha...") yoki undan keyingisi bo'lishi kerak.
+3. Meshlar diskda bor (`public/meshes/` ~195 MB, 9 papka; `data/raw/`
+   ~125 MB) — gitignore'da, QAYTA HOSIL QILISH SHART EMAS. Agar yo'q bo'lsa
+   (yangi kompyuter): `pipeline/README.md` retsepti (barcha yuklab olish
+   URL'lari shu yerda va skript docstringlarida).
 4. Dev server: `npm run dev` → http://localhost:3019 (**3019**, Falcon 3017
    band). `preview_start` vositasi ishlamasa (Falcon konfiguratsiyasini
    o'qib qolgan bo'lsa) — `npm run dev`ni fonda Bash bilan ishga tushirib
@@ -36,10 +35,11 @@
 
 **Keyingi vazifa (foydalanuvchi tanlaydi, ikkalasi ham navbatda):**
 - **5-bosqich davomi — kontent.** Fayl formati va id'lar quyida
-  (3-bo'lim, 5-bosqich). Ustuvorlik: (a) tuzilma nomlarining `uz`/`la`
-  tarjimasi — `content/*.json` yozuviga `name: {uz, la}` qo'shib
-  `data/index.ts` merge qismida `p.name.uz = entry.name?.uz` qilish
-  (hozir faqat `la` yopishtiriladi); (b) Julich 207 alohida hudud
+  (3-bo'lim, 5-bosqich). Ustuvorlik: (a) `uz` nomlar — mexanizm TAYYOR
+  (yozuvda `"uz": "Ko'k dog'"`, ilova `Chap/O'ng` prefiksini o'zi qo'shadi,
+  `sidedName()` `data/index.ts`); gross-brain 112, brainstem 24, cerebellum
+  24 yozuvda bor; QOLGAN: gross-vessels 33, julich-groups 47, brodmann 41;
+  (b) Julich 207 alohida hudud
   (`julich-areas.json`, id = `j-<slug>` masalan `j-vim`, `j-ca1`,
   `j-area-4a`); (c) Desikan 35 (`dk-<slug>`), Destrieux 75 (`ds-<slug>`),
   JHU ~30 (`wm-<slug>`), Glasser 180 (`gl-<slug>`). Id'larni olish:
@@ -170,23 +170,57 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     suyagi va pardalar sukut bo'yicha yashirin (`DEFAULT_VISIBLE`).
   - `scripts/shot.mjs` port 3019, `na:lang`. Brauzer pane'da foydalanuvchi
     ishlayotgan bo'lsa headless screenshot ishlating.
+- ✅ 3b-bosqich: miya ustuni / miyacha chuqurlashtirish (2026-09-20) —
+  foydalanuvchi talabi: po'stloqdagi kabi sopi/o'rta miya/miyacha ham
+  sub-qismlarga bo'linsin. 1672 qism, 9 qatlam:
+  - `bstem` (41: 3 guruh + 38 mesh) — Allen Human Reference Atlas 3D 2020
+    (CC BY 4.0; 0.5 mm, hemisfera-ko'zguli → x<0 bo'yicha chap/o'ng):
+    o'rta miya tegmentumi, pretektum, crus cerebri, bazilyar ko'prik, ko'prik
+    tegmentumi, 3 miyacha oyoqchasi, piramida, medulla tegmentumi, pastki
+    zaytun; + Harvard AAN v2.0 (CC0): LC, DR, MnR, PAG, VTA, PTg(PPN), LDTg,
+    PBC, PnO, mRt. Guruhlar `bs-midbrain`/`bs-pons`/`bs-medulla`.
+  - `suit` (36: 4 guruh + 32) — Diedrichsen 2009 (CC BY-NC 3.0): I–IV, V,
+    VI, Crus I/II, VIIb, VIIIa/b, IX, X yarim shar + vermis, dentate,
+    interposed (fastigial max-prob'da 3 voksel — o'tkazildi, Julich'da bor).
+    Guruhlar `cb-anterior-lobe`/`cb-posterior-lobe`/`cb-flocculonodular-lobe`/
+    `cb-deep-nuclei`.
+  - gross +24 (`pipeline/bp3d_phase4.txt`): precuneus, cuneus, superior
+    parietal lobule, septum, fornix komissurasi, chakka oq moddasi, cerebral
+    crus, stria medullaris, tuber cinereum, lateral/medial preoptic, SCN,
+    supraoptic, periventricular yadrolar.
+  - `pipeline/subcortical_to_glb.py bstem|suit` (bbox-crop marching cubes);
+    `build_catalogue.py` `SUB` bloki guruhlar + `meshSource` (Inspector'da
+    aralash qatlam uchun mesh manbasi alohida ko'rsatiladi).
+  - `Layer.covers` (RegExp) — qatlam yoqilganda yashiriladigan gross
+    qismlar (`bstem` → pons/medulla/crus, `suit` → miyacha L/R);
+    parcellation'lar `GROSS_CORTEX_IDS`. `coveredIds()` BrainScene'da.
+  - Peel 8-qobiq "Miya ustuni va miyacha yadrolari" (`DEEP_HINDBRAIN`
+    regex): tegmentum yechilganda LC/raphe/PAG/VTA/olive/SN/RN/dentate qoladi.
+  - RAD ETILDI (litsenziya, tarqatish taqiq): Brainstem Navigator (MGH, 31
+    yadro), USC brainstem pathways (Tang 2018). Bosh nerv yadrolari
+    (III–XII motor/sezgi, ambiguus, solitarius, cuneate/gracile) uchun ochiq
+    MNI atlas TOPILMADI — Inspector matnida tegmentum yozuvlarida sanab
+    o'tilgan. Kelajak: Allen 3D'ning old miya qismi (amigdala 9 yadro,
+    gippokamp bosh/tana/dum, kaudat 3, BNST, septal, bazal old miya) alohida
+    qatlam sifatida.
 - ⬜ 4-bosqich: kesim (3 tekislik + MNI koordinata) — parcellation
   almashtirish 3-bosqichda qilindi.
-- 🟡 5-bosqich: kontent — boshlandi (2026-09-20), 218 yozuv:
+- 🟡 5-bosqich: kontent — boshlandi (2026-09-20), 281 yozuv:
   - Mexanizm: `src/data/content/*.json` — konsept id bo'yicha (chap/o'ng
     juftlik bitta yozuv): `la`, `description`, `role`, `clinical` (en/uz),
     `sources`. `content/index.ts` `contentFor()` — o'z yozuvi yo'q bo'lsa
     Julich sub-hududi ota guruhidan, tomir shoxi `FAMILIES` regex bo'yicha
     oila yozuvidan meros oladi (`inheritedContent` → Inspector'da eslatma).
     `data/index.ts` kontentni PARTS'ga bir marta yopishtiradi.
-  - Yozilgan: gross-brain.json 97 (gyruslar, chuqur yadrolar, gipotalamus
+  - Yozilgan: gross-brain.json 112 (gyruslar, chuqur yadrolar, gipotalamus
     yadrolari, miya ustuni, miyacha, qorinchalar, oq modda, 12 bosh nervi,
-    pardalar, bosh suyagi), gross-vessels.json 33 (Willis halqasi, asosiy
-    arteriyalar, sinuslar, venalar), julich-groups.json 47 (barcha Julich
-    guruhlari), brodmann.json 41.
+    pardalar, bosh suyagi; barchasida `uz` nom), gross-vessels.json 33
+    (Willis halqasi, asosiy arteriyalar, sinuslar, venalar), julich-groups.json
+    47 (barcha Julich guruhlari), brodmann.json 41, brainstem.json 24,
+    cerebellum.json 24 (neyroxirurgik daraja: DBS nishonlari, sindromlar).
   - QOLGAN: Julich alohida hududlari (207), Desikan (35), Destrieux (75),
-    Glasser (180), JHU traktlari (~30); tuzilma NOMLARINING uz/la
-    tarjimasi (hozir `name.uz` yo'q — inglizcha ko'rsatiladi).
+    Glasser (180), JHU traktlari (~30); `uz` nomlar vessels/julich-groups/
+    brodmann yozuvlarida.
   - Manbalar: Wikipedia (CC BY-SA), NCBI Bookshelf (Purves Neuroscience,
     StatPearls), Julich-Brain asl maqolalari (DOI). Har yozuvda `sources`.
 - ⬜ 6–7.
@@ -205,3 +239,10 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
 7. `git commit -m` ichida `"` — pathspec xatosi; `-F` ishlating.
 8. `--setup`da noto'g'ri id (`j-vim-thalamus-...`) → bo'sh tanlov + isolate
    → qora ekran; id'larni `parts.json`dan tekshiring (`j-vim-left`).
+9. Brauzer pane yashirin (fonda) bo'lsa `requestAnimationFrame` ishlamaydi —
+   `setState` qo'llanmaydi, `mesh.visible` eski qoladi. JS bilan tekshirishdan
+   oldin `screenshot` oling (tab oldinga chiqadi) yoki headless ishlating.
+10. NITRC'dagi "ochiq" atlaslar (Brainstem Navigator, USC brainstem
+    pathways) litsenziyasi "may not distribute ... derived" — yuklashdan
+    OLDIN agreement sahifasini o'qing (`curl` zip o'rniga HTML qaytaradi).
+11. SUIT: README CC BY, LICENSE fayli CC BY-NC 3.0 — fayl ustun.

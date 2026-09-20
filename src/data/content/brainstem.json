@@ -1,0 +1,558 @@
+{
+  "bs-midbrain": {
+    "la": "Mesencephalon",
+    "uz": "O'rta miya",
+    "description": {
+      "en": "The uppermost brainstem segment, about 2 cm long, between the diencephalon and the pons. From dorsal to ventral: the tectum (superior and inferior colliculi), the cerebral aqueduct wrapped in periaqueductal grey, the tegmentum (red nucleus, substantia nigra, oculomotor and trochlear nuclei, reticular formation, VTA) and the two cerebral peduncles (crura cerebri).",
+      "uz": "Miya ustunining eng yuqori, ~2 sm uzunlikdagi bo'limi; oraliq miya bilan ko'prik orasida. Orqadan oldinga: tektum (yuqori va pastki do'ngliklar), atrofi periakveduktal kulrang modda bilan o'ralgan miya suv yo'li, tegmentum (qizil yadro, qora modda, III va IV nerv yadrolari, retikulyar formatsiya, VTA) va ikki miya oyoqchasi (crura cerebri)."
+    },
+    "role": {
+      "en": "Conducts every ascending and descending pathway between forebrain and hindbrain, houses the vertical-gaze and pupillary circuitry, the dopaminergic nigrostriatal and mesolimbic systems, and the auditory and visual reflex centres of the tectum.",
+      "uz": "Old miya bilan orqa miya orasidagi barcha ko'tariluvchi/tushuvchi yo'llarni o'tkazadi; vertikal qarash va qorachiq reflekslari, dofaminergik nigrostriatal va mezolimbik tizimlar hamda tektumdagi eshitish va ko'rish reflekslari markazlarini o'z ichiga oladi."
+    },
+    "clinical": {
+      "en": "Classic syndromes: Weber (crus + CN III), Claude (red nucleus + CN III), Benedikt, Parinaud (dorsal midbrain). Transtentorial (uncal) herniation compresses the midbrain first — fixed dilated pupil, then decerebrate posturing. The midbrain is the surgical corridor for pineal-region and tectal tumours.",
+      "uz": "Klassik sindromlar: Weber (oyoqcha + III nerv), Claude (qizil yadro + III nerv), Benedikt, Parinaud (dorsal o'rta miya). Transtentorial (unkal) churrada birinchi o'rta miya bosiladi — qorachiq kengayib qotadi, keyin detserebratsion holat. Pineal soha va tektum o'smalarida jarrohlik yo'li o'rta miya orqali o'tadi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Midbrain",
+        "url": "https://en.wikipedia.org/wiki/Midbrain"
+      },
+      {
+        "title": "StatPearls — Neuroanatomy, Midbrain",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551599/"
+      }
+    ]
+  },
+  "bs-pons": {
+    "la": "Pons",
+    "uz": "Ko'prik (Varoliy ko'prigi)",
+    "description": {
+      "en": "The bulging middle segment of the brainstem between midbrain and medulla, ~2.5 cm long. A ventral basilar part (pontine nuclei, transverse pontocerebellar fibres and the descending corticospinal bundles) and a dorsal tegmentum (cranial nerve nuclei V–VIII, reticular formation, medial lemniscus, MLF, locus coeruleus) beneath the floor of the fourth ventricle.",
+      "uz": "Miya ustunining o'rta miya bilan uzunchoq miya orasidagi bo'rtib chiqqan, ~2,5 sm bo'limi. Ventral bazilyar qism (ko'prik yadrolari, ko'ndalang ponto-tserebellyar tolalar va tushuvchi kortikospinal tutamlar) hamda IV qorincha tubi ostidagi dorsal tegmentum (V–VIII bosh nerv yadrolari, retikulyar formatsiya, medial lemnisk, MLF, ko'k dog')."
+    },
+    "role": {
+      "en": "Relays cortical motor plans to the cerebellum through the middle cerebellar peduncles, carries trigeminal sensation, facial movement, lateral gaze (abducens + PPRF) and hearing/balance, and hosts the pneumotaxic and apneustic respiratory centres and REM-sleep generators.",
+      "uz": "Po'stloq harakat rejalarini o'rta miyacha oyoqchalari orqali miyachaga uzatadi; uch shoxli nerv sezuvchanligi, yuz mimikasi, yon tomonga qarash (VI nerv + PPRF) va eshitish/muvozanatni ta'minlaydi; pnevmotaksik va apneystik nafas markazlari hamda REM-uyqu generatorlari shu yerda."
+    },
+    "clinical": {
+      "en": "Basilar-artery pontine infarction → locked-in syndrome. Millard-Gubler and Foville syndromes (CN VI/VII + hemiparesis). Pontine haemorrhage: pinpoint reactive pupils, coma. Central pontine myelinolysis after over-rapid sodium correction. Pontine gliomas (DIPG) are among the least resectable brainstem tumours.",
+      "uz": "Bazilyar arteriya infarkti → 'qulflangan odam' (locked-in) sindromi. Millard-Gubler va Foville sindromlari (VI/VII nerv + gemiparez). Ko'prik qon quyilishi: nuqtadek reaktiv qorachiqlar, koma. Natriyni tez to'g'rilashda markaziy pontin miyelinoliz. Ko'prik gliomalari (DIPG) eng kam rezektsiya qilinadigan ustun o'smalaridan."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Pons",
+        "url": "https://en.wikipedia.org/wiki/Pons"
+      },
+      {
+        "title": "StatPearls — Neuroanatomy, Pons",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK535392/"
+      }
+    ]
+  },
+  "bs-medulla": {
+    "la": "Medulla oblongata",
+    "uz": "Uzunchoq miya",
+    "description": {
+      "en": "The lowest 3 cm of the brainstem, continuous with the spinal cord at the foramen magnum. Ventrally the pyramids (corticospinal tracts) and olives; dorsally the gracile and cuneate tubercles and the lower floor of the fourth ventricle. Contains the nuclei of CN IX–XII, the solitary and vestibular nuclei, the inferior olive and the medullary reticular formation.",
+      "uz": "Miya ustunining pastki ~3 sm qismi; katta teshik darajasida orqa miyaga o'tadi. Old yuzasida piramidalar (kortikospinal traktlar) va zaytunlar; orqasida nozik va ponasimon do'mboqlar hamda IV qorincha tubining pastki qismi. IX–XII nerv yadrolari, yolg'iz yo'l va vestibulyar yadrolar, pastki zaytun va medullyar retikulyar formatsiyani o'z ichiga oladi."
+    },
+    "role": {
+      "en": "Vital autonomic control — the cardiovascular and respiratory rhythm generators (pre-Bötzinger complex), swallowing, vomiting and cough reflexes — plus the decussation of the pyramids and of the dorsal-column pathway (medial lemniscus).",
+      "uz": "Hayotiy vegetativ boshqaruv — yurak-qon tomir va nafas ritmi generatorlari (pre-Bötzinger kompleksi), yutish, qusish va yo'tal reflekslari — hamda piramidalar va orqa ustun yo'li (medial lemnisk) kesishmasi."
+    },
+    "clinical": {
+      "en": "Lateral medullary (Wallenberg) syndrome from PICA/vertebral occlusion; medial medullary (Dejerine) syndrome. Tonsillar herniation compresses the medulla → apnoea and cardiac arrest. Foramen-magnum meningiomas and Chiari malformation act here.",
+      "uz": "PICA/umurtqa arteriyasi okklyuziyasida lateral medullyar (Wallenberg) sindromi; medial medullyar (Dejerine) sindromi. Miyacha bodomchalari churrasi uzunchoq miyani bosadi → apnoe va yurak to'xtashi. Katta teshik meningiomalari va Chiari malformatsiyasi shu yerda ta'sir qiladi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Medulla oblongata",
+        "url": "https://en.wikipedia.org/wiki/Medulla_oblongata"
+      },
+      {
+        "title": "StatPearls — Neuroanatomy, Medulla Oblongata",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551684/"
+      }
+    ]
+  },
+  "bs-midbrain-tegmentum": {
+    "la": "Tegmentum mesencephali",
+    "uz": "O'rta miya tegmentumi",
+    "description": {
+      "en": "The core of the midbrain between the cerebral aqueduct and the substantia nigra: red nucleus, oculomotor and trochlear nuclei, Edinger-Westphal nucleus, medial longitudinal fasciculus, medial lemniscus, decussation of the superior cerebellar peduncles and the mesencephalic reticular formation.",
+      "uz": "O'rta miyaning miya suv yo'li bilan qora modda orasidagi o'zagi: qizil yadro, III va IV nerv yadrolari, Edinger-Westphal yadrosi, medial bo'ylama tutam, medial lemnisk, yuqori miyacha oyoqchalari kesishmasi va mezensefal retikulyar formatsiya."
+    },
+    "role": {
+      "en": "Integrates eye movement (vertical gaze, pupil, accommodation), cerebellar output to the thalamus and cortex, ascending sensory relays and the arousal system.",
+      "uz": "Ko'z harakati (vertikal qarash, qorachiq, akkomodatsiya), miyachadan talamus va po'stloqqa chiqish, ko'tariluvchi sezgi uzatmalari va uyg'oqlik tizimini birlashtiradi."
+    },
+    "clinical": {
+      "en": "Tegmental infarcts produce Claude and Benedikt syndromes (ipsilateral CN III palsy + contralateral ataxia or tremor). Wernicke encephalopathy and Leigh disease favour the periaqueductal tegmentum. Tegmental compression in herniation → 'blown' pupil.",
+      "uz": "Tegmentum infarktlari Claude va Benedikt sindromlarini beradi (o'sha tomonda III nerv falaji + qarama-qarshi tomonda ataksiya yoki tremor). Wernicke ensefalopatiyasi va Leigh kasalligi periakveduktal tegmentumni afzal ko'radi. Churrada tegmentum bosilishi → 'kengaygan' qorachiq."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Midbrain tegmentum",
+        "url": "https://en.wikipedia.org/wiki/Midbrain_tegmentum"
+      }
+    ]
+  },
+  "bs-pretectal-region": {
+    "la": "Area pretectalis",
+    "uz": "Pretektal soha",
+    "description": {
+      "en": "A group of small nuclei (olivary pretectal, nucleus of the optic tract, posterior and medial pretectal nuclei) at the junction of midbrain and thalamus, just rostral to the superior colliculus beside the posterior commissure.",
+      "uz": "O'rta miya bilan talamus chegarasida, yuqori do'nglikdan sal oldinda, orqa komissura yonidagi mayda yadrolar guruhi (zaytunsimon pretektal, ko'rish trakti yadrosi, orqa va medial pretektal yadrolar)."
+    },
+    "role": {
+      "en": "Relay for the pupillary light reflex: retinal input reaches the olivary pretectal nucleus, which projects bilaterally (through the posterior commissure) to the Edinger-Westphal nuclei. Also drives optokinetic nystagmus and pupillary responses to ambient light.",
+      "uz": "Qorachiqning yorug'likka reaksiyasi uchun uzatuvchi bo'g'in: to'r pardadan kelgan signal zaytunsimon pretektal yadroga, undan (orqa komissura orqali) ikki tomonlama Edinger-Westphal yadrolariga boradi. Optokinetik nistagm va atrof yorug'ligiga qorachiq javobini ham boshqaradi."
+    },
+    "clinical": {
+      "en": "Damage (pineal tumours, hydrocephalus, dorsal midbrain stroke) gives Parinaud syndrome: light-near dissociation, upgaze palsy, convergence-retraction nystagmus, lid retraction (Collier sign). Bilateral pretectal lesion abolishes the light reflex while accommodation survives (Argyll Robertson pupil).",
+      "uz": "Zararlanishi (pineal o'smalar, gidrotsefaliya, dorsal o'rta miya insulti) Parinaud sindromini beradi: yorug'lik-yaqin dissotsiatsiyasi, yuqoriga qarash falaji, konvergensiya-retraksiya nistagmi, qovoq tortilishi (Collier belgisi). Ikki tomonlama pretektal zararlanish yorug'lik refleksini yo'qotadi, akkomodatsiya saqlanadi (Argyll Robertson qorachig'i)."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Pretectal area",
+        "url": "https://en.wikipedia.org/wiki/Pretectal_area"
+      }
+    ]
+  },
+  "bs-cerebral-peduncle-crus-cerebri": {
+    "la": "Crus cerebri",
+    "uz": "Miya oyoqchasi (crus cerebri)",
+    "description": {
+      "en": "The massive fibre bundle on the ventral surface of each side of the midbrain, separated from the tegmentum by the substantia nigra. From medial to lateral: frontopontine fibres, corticobulbar and corticospinal tracts (middle three-fifths) and parieto-temporo-occipito-pontine fibres.",
+      "uz": "O'rta miyaning har ikki tomonida ventral yuzadagi yirik tola tutami; tegmentumdan qora modda bilan ajralgan. Medialdan lateralga: frontopontin tolalar, kortikobulbar va kortikospinal traktlar (o'rta 3/5 qismi) va parieto-temporo-oksipito-pontin tolalar."
+    },
+    "role": {
+      "en": "Carries the entire descending motor output of one cerebral hemisphere towards the pons, brainstem motor nuclei and spinal cord.",
+      "uz": "Bir yarim sharning barcha tushuvchi harakat chiqishini ko'prik, ustun harakat yadrolari va orqa miyaga olib boradi."
+    },
+    "clinical": {
+      "en": "Infarction with the adjacent CN III fascicle = Weber syndrome (ipsilateral third-nerve palsy, contralateral hemiplegia). Kernohan's notch: uncal herniation pushes the opposite crus against the tentorium, giving a false-localising ipsilateral hemiparesis.",
+      "uz": "Yonidagi III nerv tolalari bilan birga infarkt = Weber sindromi (o'sha tomonda III nerv falaji, qarama-qarshi gemiplegiya). Kernohan o'yig'i: unkal churra qarama-qarshi oyoqchani chodirga bosadi — churra bilan bir tomonda 'yolg'on lokalizatsiyali' gemiparez."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Cerebral crus",
+        "url": "https://en.wikipedia.org/wiki/Cerebral_crus"
+      },
+      {
+        "title": "Wikipedia — Kernohan's notch",
+        "url": "https://en.wikipedia.org/wiki/Kernohan%27s_notch"
+      }
+    ]
+  },
+  "bs-basilar-part-of-pons": {
+    "la": "Pars basilaris pontis",
+    "uz": "Ko'prikning bazilyar qismi",
+    "description": {
+      "en": "The ventral, bulbous part of the pons: scattered pontine nuclei embedded among descending corticospinal/corticobulbar bundles and the transverse pontocerebellar fibres that sweep laterally into the middle cerebellar peduncles. The basilar artery runs in its midline groove.",
+      "uz": "Ko'prikning ventral, bo'rtgan qismi: tushuvchi kortikospinal/kortikobulbar tutamlar orasiga sochilgan ko'prik yadrolari va lateralga o'rta miyacha oyoqchalariga o'tuvchi ko'ndalang ponto-tserebellyar tolalar. O'rta chiziqdagi egatida bazilyar arteriya yotadi."
+    },
+    "role": {
+      "en": "The cortico-ponto-cerebellar relay: the pontine nuclei receive the largest cortical projection in the brain and send it, crossed, to the contralateral cerebellar hemisphere for the planning and timing of skilled movement.",
+      "uz": "Kortiko-ponto-tserebellyar uzatma: ko'prik yadrolari miyadagi eng katta po'stloq proyeksiyasini oladi va uni kesishgan holda qarama-qarshi miyacha yarim shariga — nozik harakatni rejalash va vaqtlash uchun — yuboradi."
+    },
+    "clinical": {
+      "en": "Paramedian basilar branch infarcts cause pure motor hemiparesis or ataxic hemiparesis; bilateral basis pontis infarction → locked-in syndrome. Central pontine myelinolysis targets this region.",
+      "uz": "Bazilyar arteriyaning paramedian shoxlari infarkti sof harakat gemiparezi yoki ataktik gemiparez beradi; ikki tomonlama basis pontis infarkti → locked-in sindromi. Markaziy pontin miyelinoliz aynan shu sohani zararlaydi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Pons (basilar part)",
+        "url": "https://en.wikipedia.org/wiki/Pons"
+      }
+    ]
+  },
+  "bs-pontine-tegmentum": {
+    "la": "Tegmentum pontis",
+    "uz": "Ko'prik tegmentumi",
+    "description": {
+      "en": "The dorsal part of the pons forming the upper floor of the fourth ventricle. Contains the trigeminal motor and principal sensory nuclei, abducens and facial nuclei (the facial fibres loop around the abducens nucleus as the facial colliculus), vestibular and cochlear nuclei, superior olive, pontine reticular formation, locus coeruleus, medial lemniscus and MLF.",
+      "uz": "Ko'prikning IV qorincha tubi yuqori qismini hosil qiluvchi dorsal bo'limi. Uch shoxli nervning harakat va asosiy sezuvchi yadrolari, VI va VII nerv yadrolari (yuz nervi tolalari VI yadroni aylanib yuz do'ngligini hosil qiladi), vestibulyar va eshitish yadrolari, yuqori zaytun, pontin retikulyar formatsiya, ko'k dog', medial lemnisk va MLF shu yerda."
+    },
+    "role": {
+      "en": "Horizontal gaze (abducens nucleus + paramedian pontine reticular formation), facial expression, corneal and jaw reflexes, sound localisation, balance, and the ascending arousal system.",
+      "uz": "Gorizontal qarash (VI yadro + paramedian pontin retikulyar formatsiya), yuz mimikasi, korneal va jag' reflekslari, tovush manbaini aniqlash, muvozanat va ko'tariluvchi uyg'oqlik tizimi."
+    },
+    "clinical": {
+      "en": "One-and-a-half syndrome (PPRF/VI nucleus + MLF); Foville syndrome. The facial colliculus is the classic 'safe entry zone' landmark to avoid — the suprafacial and infrafacial triangles are the surgical corridors into pontine cavernomas.",
+      "uz": "'Bir yarim' sindromi (PPRF/VI yadro + MLF); Foville sindromi. Yuz do'ngligi — jarrohlikda chetlab o'tiladigan klassik orientir; ko'prik kavernomalariga suprafatsial va infrafatsial uchburchaklar orqali kiriladi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Pontine tegmentum",
+        "url": "https://en.wikipedia.org/wiki/Pontine_tegmentum"
+      }
+    ]
+  },
+  "bs-superior-cerebellar-peduncle": {
+    "la": "Pedunculus cerebellaris superior (brachium conjunctivum)",
+    "uz": "Yuqori miyacha oyoqchasi",
+    "description": {
+      "en": "The main efferent bundle of the cerebellum, running from the dentate and interposed nuclei upward and medially along the roof of the fourth ventricle to decussate in the caudal midbrain and reach the red nucleus and the ventrolateral thalamus. Also carries the ventral spinocerebellar tract inward.",
+      "uz": "Miyachaning asosiy chiqish tutami: tishsimon va oraliq yadrolardan yuqoriga va medialga, IV qorincha tomi bo'ylab, kaudal o'rta miyada kesishib qizil yadro va ventrolateral talamusga boradi. Ichkariga ventral spinotserebellyar traktni ham olib kiradi."
+    },
+    "role": {
+      "en": "The dentato-rubro-thalamic tract — cerebellar timing and coordination signals for the motor cortex.",
+      "uz": "Dentato-rubro-talamik trakt — harakat po'stlog'i uchun miyachaning vaqtlash va muvofiqlashtirish signallari."
+    },
+    "clinical": {
+      "en": "Lesions cause contralateral (after the decussation) or ipsilateral (before it) intention tremor and ataxia. The dentato-rubro-thalamic tract is the tractographic target for VIM/PSA thalamic stimulation in essential tremor.",
+      "uz": "Zararlanishi kesishmadan keyin qarama-qarshi, oldin esa o'sha tomonda intension tremor va ataksiya beradi. Dentato-rubro-talamik trakt — essensial tremorda VIM/PSA stimulyatsiyasining traktografik nishoni."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Superior cerebellar peduncle",
+        "url": "https://en.wikipedia.org/wiki/Superior_cerebellar_peduncle"
+      }
+    ]
+  },
+  "bs-middle-cerebellar-peduncle": {
+    "la": "Pedunculus cerebellaris medius (brachium pontis)",
+    "uz": "O'rta miyacha oyoqchasi",
+    "description": {
+      "en": "The largest of the three peduncles, formed entirely by crossed pontocerebellar fibres from the pontine nuclei, sweeping around the lateral pons into the cerebellar hemisphere. The trigeminal nerve emerges at its ventral border.",
+      "uz": "Uch oyoqchaning eng yirigi; butunlay ko'prik yadrolaridan kelgan kesishgan ponto-tserebellyar tolalardan iborat bo'lib, ko'prikning yon tomonini aylanib miyacha yarim shariga kiradi. Uch shoxli nerv uning ventral chetidan chiqadi."
+    },
+    "role": {
+      "en": "Delivers the cortical 'copy' of intended movements to the cerebellar cortex — the afferent limb of the cortico-cerebellar loop.",
+      "uz": "Mo'ljallangan harakatlarning po'stloq 'nusxasini' miyacha po'stlog'iga yetkazadi — kortiko-tserebellyar halqaning afferent qismi."
+    },
+    "clinical": {
+      "en": "Infarcts (AICA/SCA border) cause ipsilateral limb ataxia and dysarthria. Bilateral MCP T2 hyperintensity is the 'hot-cross-bun' companion sign of multiple system atrophy and of fragile-X tremor/ataxia syndrome (FXTAS). Surgical landmark for cerebellopontine-angle approaches.",
+      "uz": "Infarktlar (AICA/SCA chegarasi) o'sha tomonda oyoq-qo'l ataksiyasi va dizartriya beradi. MRTda ikki tomonlama MCP T2-giperintensivligi — ko'p tizimli atrofiya va FXTAS belgisi. Ko'prik-miyacha burchagi yondashuvlarida jarrohlik orientiri."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Middle cerebellar peduncle",
+        "url": "https://en.wikipedia.org/wiki/Middle_cerebellar_peduncle"
+      }
+    ]
+  },
+  "bs-pyramid-of-medulla-oblongata": {
+    "la": "Pyramis medullae oblongatae",
+    "uz": "Uzunchoq miya piramidasi",
+    "description": {
+      "en": "Paired ridges on the ventral medulla flanking the anterior median fissure, each containing about a million corticospinal fibres. At the lower medulla 85–90 % cross in the pyramidal decussation to form the lateral corticospinal tract.",
+      "uz": "Uzunchoq miya old yuzasida old o'rta yoriqning ikki yonidagi juft do'nglik; har birida ~1 million kortikospinal tola. Uzunchoq miyaning pastki qismida 85–90 % tola piramidalar kesishmasida qarama-qarshi tomonga o'tib lateral kortikospinal traktni hosil qiladi."
+    },
+    "role": {
+      "en": "The final brainstem segment of voluntary motor output to the spinal cord.",
+      "uz": "Ixtiyoriy harakat chiqishining orqa miyaga yo'nalgan oxirgi ustun segmenti."
+    },
+    "clinical": {
+      "en": "Anterior spinal artery infarct = medial medullary (Dejerine) syndrome: contralateral hemiparesis sparing the face, contralateral loss of position sense, ipsilateral tongue deviation. A lesion at the decussation can give 'cruciate' hemiplegia (arm one side, leg the other).",
+      "uz": "Old orqa miya arteriyasi infarkti = medial medullyar (Dejerine) sindromi: yuz saqlangan qarama-qarshi gemiparez, qarama-qarshi tomonda chuqur sezgi yo'qolishi, tilning o'sha tomonga og'ishi. Kesishma darajasidagi zararlanish 'xochsimon' gemiplegiya (bir tomonda qo'l, ikkinchi tomonda oyoq) berishi mumkin."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Medullary pyramids",
+        "url": "https://en.wikipedia.org/wiki/Medullary_pyramids_(brainstem)"
+      }
+    ]
+  },
+  "bs-tegmentum-of-medulla-oblongata": {
+    "la": "Tegmentum medullae oblongatae",
+    "uz": "Uzunchoq miya tegmentumi",
+    "description": {
+      "en": "The dorsal bulk of the medulla behind the pyramids and olives: the hypoglossal, dorsal vagal, solitary, ambiguus, spinal trigeminal, vestibular and cochlear nuclei, the gracile and cuneate nuclei with the internal arcuate fibres and medial lemniscus, and the medullary reticular formation with its cardiorespiratory centres.",
+      "uz": "Uzunchoq miyaning piramidalar va zaytunlar orqasidagi asosiy dorsal massasi: XII nerv, adashgan nervning dorsal, yolg'iz yo'l, ambiguus, uch shoxli nervning spinal, vestibulyar va eshitish yadrolari; ichki yoysimon tolalar va medial lemnisk bilan nozik va ponasimon yadrolar; yurak-nafas markazlari bilan medullyar retikulyar formatsiya."
+    },
+    "role": {
+      "en": "Swallowing, phonation, tongue movement, taste and visceral sensation, baroreflex and chemoreflex control of circulation, respiratory rhythm generation and the dorsal-column relay of fine touch and proprioception.",
+      "uz": "Yutish, tovush hosil qilish, til harakati, ta'm va visseral sezgi, qon aylanishining baro- va xemorefleks boshqaruvi, nafas ritmi generatsiyasi va nozik sezgi/proprioretsepsiyaning orqa ustun uzatmasi."
+    },
+    "clinical": {
+      "en": "Lateral medullary (Wallenberg) syndrome: dysphagia, hoarseness, ipsilateral Horner and facial pain loss, contralateral body pain loss, vertigo, ataxia. Area postrema (chemoreceptor trigger zone) on the dorsal surface mediates vomiting and is the site of area-postrema syndrome in NMOSD.",
+      "uz": "Lateral medullyar (Wallenberg) sindromi: disfagiya, ovoz bo'g'iqligi, o'sha tomonda Horner va yuzda og'riq sezgisi yo'qolishi, qarama-qarshi tanada og'riq yo'qolishi, bosh aylanishi, ataksiya. Dorsal yuzadagi area postrema (xemoretseptor trigger zonasi) qusishni boshqaradi; NMOSD'da area postrema sindromi shu yerda."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Medulla oblongata",
+        "url": "https://en.wikipedia.org/wiki/Medulla_oblongata"
+      },
+      {
+        "title": "Wikipedia — Lateral medullary syndrome",
+        "url": "https://en.wikipedia.org/wiki/Lateral_medullary_syndrome"
+      }
+    ]
+  },
+  "bs-inferior-olive": {
+    "la": "Nucleus olivaris inferior",
+    "uz": "Pastki zaytun yadrosi",
+    "description": {
+      "en": "A crumpled, bag-shaped sheet of grey matter behind the ventral surface of the medulla, producing the olive. Its climbing fibres cross the midline and ascend through the inferior cerebellar peduncle to synapse one-to-one on Purkinje cells.",
+      "uz": "Uzunchoq miya old yuzasi ostidagi burmalangan, xaltasimon kulrang modda qatlami; tashqarida zaytun bo'rtmasini hosil qiladi. Uning o'rmalovchi tolalari o'rta chiziqni kesib, pastki miyacha oyoqchasi orqali ko'tarilib Purkinje hujayralari bilan birma-bir sinaps hosil qiladi."
+    },
+    "role": {
+      "en": "The 'teacher' of the cerebellum: climbing-fibre error signals drive motor learning and timing; part of the Guillain-Mollaret triangle (dentate → red nucleus → inferior olive).",
+      "uz": "Miyachaning 'o'qituvchisi': o'rmalovchi tola xato signallari harakat o'rganish va vaqtlashni boshqaradi; Guillain-Mollaret uchburchagining (tishsimon yadro → qizil yadro → pastki zaytun) bir qismi."
+    },
+    "clinical": {
+      "en": "A lesion of the central tegmental tract or dentate produces hypertrophic olivary degeneration — the olive enlarges on MRI months later and the patient develops palatal (oculopalatal) tremor.",
+      "uz": "Markaziy tegmental trakt yoki tishsimon yadro zararlanishi gipertrofik zaytun degeneratsiyasiga olib keladi — bir necha oydan so'ng MRTda zaytun kattalashadi va bemorda tanglay (okulopalatal) tremori paydo bo'ladi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Inferior olivary nucleus",
+        "url": "https://en.wikipedia.org/wiki/Inferior_olivary_nucleus"
+      }
+    ]
+  },
+  "bs-inferior-cerebellar-peduncle": {
+    "la": "Pedunculus cerebellaris inferior (corpus restiforme)",
+    "uz": "Pastki miyacha oyoqchasi",
+    "description": {
+      "en": "The bundle linking the upper medulla to the cerebellum: the large restiform body (olivocerebellar, dorsal spinocerebellar, cuneocerebellar and reticulocerebellar fibres) and the small juxtarestiform body (two-way vestibular connections).",
+      "uz": "Uzunchoq miyaning yuqori qismini miyacha bilan bog'lovchi tutam: yirik restiform tana (olivotserebellyar, dorsal spinotserebellyar, kuneotserebellyar va retikulotserebellyar tolalar) va kichik yukstarestiform tana (ikki yo'nalishli vestibulyar aloqalar)."
+    },
+    "role": {
+      "en": "Brings proprioceptive and vestibular information and olivary climbing fibres into the cerebellum; returns cerebellar control to the vestibular nuclei for balance and eye stabilisation.",
+      "uz": "Proprioretseptiv va vestibulyar axborot hamda zaytun o'rmalovchi tolalarini miyachaga olib kiradi; muvozanat va ko'z barqarorligi uchun miyacha nazoratini vestibulyar yadrolarga qaytaradi."
+    },
+    "clinical": {
+      "en": "Involved in lateral medullary (Wallenberg) syndrome — ipsilateral limb ataxia and lateropulsion. Surgical landmark of the telovelar approach to the fourth ventricle.",
+      "uz": "Lateral medullyar (Wallenberg) sindromida zararlanadi — o'sha tomonda oyoq-qo'l ataksiyasi va lateropulsiya. IV qorinchaga telovelyar yondashuvda jarrohlik orientiri."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Inferior cerebellar peduncle",
+        "url": "https://en.wikipedia.org/wiki/Inferior_cerebellar_peduncle"
+      }
+    ]
+  },
+  "bs-dorsal-raphe-nucleus-dr": {
+    "la": "Nucleus raphes dorsalis",
+    "uz": "Dorsal raphe yadrosi (DR)",
+    "description": {
+      "en": "The largest serotonergic nucleus of the brain, lying in the midline of the caudal midbrain and rostral pons beneath the aqueduct within the ventral periaqueductal grey. Its ~165 000 neurons on each side project diffusely to the whole forebrain.",
+      "uz": "Miyaning eng yirik serotonergik yadrosi; kaudal o'rta miya va rostral ko'prikda, suv yo'li ostida, ventral periakveduktal kulrang modda ichida o'rta chiziqda yotadi. Har tomonda ~165 000 neyroni butun old miyaga diffuz proyeksiya beradi."
+    },
+    "role": {
+      "en": "Main source of cortical, striatal and limbic serotonin: mood, impulse control, sleep-wake transitions, pain modulation and appetite.",
+      "uz": "Po'stloq, striatum va limbik tizim serotonini asosiy manbai: kayfiyat, impuls nazorati, uyqu-uyg'oqlik almashinuvi, og'riq modulyatsiyasi va ishtaha."
+    },
+    "clinical": {
+      "en": "Reduced serotonergic neurons in depression and suicide; target of SSRIs. Neuromelanin/MRI signal loss in Parkinson's disease precedes motor signs. Included in the ascending arousal network implicated in coma after brainstem injury.",
+      "uz": "Depressiya va suitsidda serotonergik neyronlar kamayadi; SSRI'lar nishoni. Parkinson kasalligida neyromelanin/MRT signalining pasayishi harakat belgilaridan oldin keladi. Ustun jarohatidan keyingi komada ishtirok etuvchi ko'tariluvchi uyg'oqlik tarmog'ining a'zosi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Dorsal raphe nucleus",
+        "url": "https://en.wikipedia.org/wiki/Dorsal_raphe_nucleus"
+      },
+      {
+        "title": "Edlow et al. 2024, Sci Transl Med — Multimodal MRI reveals brainstem connections that sustain wakefulness",
+        "url": "https://doi.org/10.1126/scitranslmed.adj4303"
+      }
+    ]
+  },
+  "bs-median-raphe-nucleus-mnr": {
+    "la": "Nucleus raphes medianus",
+    "uz": "Median raphe yadrosi (MnR)",
+    "description": {
+      "en": "A midline serotonergic nucleus of the pontine tegmentum, ventral to the dorsal raphe and continuous with the superior central nucleus, projecting chiefly to the hippocampus, septum and hypothalamus.",
+      "uz": "Ko'prik tegmentumidagi o'rta chiziq serotonergik yadrosi; dorsal raphe'dan ventralda, yuqori markaziy yadro bilan tutash. Asosan gippokamp, septum va gipotalamusga proyeksiya beradi."
+    },
+    "role": {
+      "en": "Regulates hippocampal theta rhythm and memory consolidation, anxiety and the circadian entrainment of the suprachiasmatic nucleus.",
+      "uz": "Gippokamp teta ritmi va xotira mustahkamlanishini, xavotirni va suprachiazmatik yadroning sirkad moslashuvini boshqaradi."
+    },
+    "clinical": {
+      "en": "Serotonergic dysfunction here is implicated in anxiety disorders and in the arousal deficit after traumatic brainstem injury.",
+      "uz": "Bu yerdagi serotonergik buzilish xavotir buzilishlari va travmatik ustun jarohatidan keyingi uyg'oqlik tanqisligi bilan bog'lanadi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Median raphe nucleus",
+        "url": "https://en.wikipedia.org/wiki/Median_raphe_nucleus"
+      }
+    ]
+  },
+  "bs-periaqueductal-grey-pag": {
+    "la": "Substantia grisea centralis",
+    "uz": "Periakveduktal kulrang modda (PAG)",
+    "description": {
+      "en": "The sleeve of grey matter surrounding the cerebral aqueduct throughout the midbrain, organised in longitudinal columns (dorsomedial, dorsolateral, lateral, ventrolateral). Rich in opioid receptors and enkephalinergic neurons.",
+      "uz": "O'rta miya bo'ylab miya suv yo'lini o'rab turgan kulrang modda 'yengi'; bo'ylama ustunlarga (dorsomedial, dorsolateral, lateral, ventrolateral) tashkil topgan. Opioid retseptorlar va enkefalinergik neyronlarga boy."
+    },
+    "role": {
+      "en": "The hub of descending pain modulation (PAG → rostral ventromedial medulla → dorsal horn), of defensive behaviour (fight/flight vs. freezing/passive coping), micturition, vocalisation and cardiovascular responses to threat.",
+      "uz": "Tushuvchi og'riq modulyatsiyasi (PAG → rostral ventromedial medulla → orqa shox), himoya xulqi (jang/qochish vs qotib qolish), siydik chiqarish, tovush chiqarish va xavfga yurak-qon tomir javoblarining markazi."
+    },
+    "clinical": {
+      "en": "Deep brain stimulation of PAG/PVG is used for refractory neuropathic pain. Lesions cause pathological laughing/crying and vertical gaze disorders; Wernicke encephalopathy and Leigh syndrome characteristically involve it.",
+      "uz": "Chidab bo'lmas neyropatik og'riqda PAG/PVG chuqur miya stimulyatsiyasi qo'llanadi. Zararlanishi patologik kulgi/yig'i va vertikal qarash buzilishlarini beradi; Wernicke ensefalopatiyasi va Leigh sindromi odatda uni zararlaydi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Periaqueductal gray",
+        "url": "https://en.wikipedia.org/wiki/Periaqueductal_gray"
+      }
+    ]
+  },
+  "bs-ventral-tegmental-area-vta": {
+    "la": "Area tegmentalis ventralis",
+    "uz": "Ventral tegmental soha (VTA)",
+    "description": {
+      "en": "A cluster of dopaminergic (A10) and GABAergic neurons in the ventromedial midbrain tegmentum, medial to the substantia nigra and just above the interpeduncular nucleus.",
+      "uz": "O'rta miya tegmentumining ventromedial qismida, qora moddadan medialda va oyoqchalararo yadro ustidagi dofaminergik (A10) va GABAergik neyronlar to'plami."
+    },
+    "role": {
+      "en": "Origin of the mesolimbic (→ nucleus accumbens, amygdala) and mesocortical (→ prefrontal cortex) dopamine pathways: reward prediction, motivation, reinforcement learning and salience.",
+      "uz": "Mezolimbik (→ nucleus accumbens, amigdala) va mezokortikal (→ prefrontal po'stloq) dofamin yo'llarining boshlanishi: mukofot bashorati, motivatsiya, mustahkamlash orqali o'rganish va ahamiyatlilik."
+    },
+    "clinical": {
+      "en": "Central to addiction (all drugs of abuse raise VTA dopamine release), schizophrenia (dopamine hypothesis) and depression/anhedonia; relatively spared compared with the substantia nigra in Parkinson's disease.",
+      "uz": "Giyohvandlik (barcha suiiste'mol moddalari VTA dofamin ajralishini oshiradi), shizofreniya (dofamin gipotezasi) va depressiya/angedoniyada markaziy o'rin; Parkinson kasalligida qora moddaga nisbatan saqlanib qoladi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Ventral tegmental area",
+        "url": "https://en.wikipedia.org/wiki/Ventral_tegmental_area"
+      }
+    ]
+  },
+  "bs-locus-coeruleus-lc": {
+    "la": "Locus caeruleus",
+    "uz": "Ko'k dog' (locus coeruleus, LC)",
+    "description": {
+      "en": "A pigmented (neuromelanin) rod of about 30 000 noradrenergic neurons per side in the rostral pontine tegmentum, at the lateral floor of the fourth ventricle beneath the superior cerebellar peduncle. Blue-grey in the fresh brain.",
+      "uz": "Rostral ko'prik tegmentumida, IV qorincha tubining yon qismida, yuqori miyacha oyoqchasi ostidagi pigmentli (neyromelanin), har tomonda ~30 000 noradrenergik neyrondan iborat tayoqcha. Yangi miyada ko'k-kulrang."
+    },
+    "role": {
+      "en": "The brain's main noradrenaline source, projecting to the entire cortex, cerebellum and spinal cord: arousal, attention and vigilance, stress response, REM-sleep suppression and pain gating.",
+      "uz": "Miyaning asosiy noradrenalin manbai; butun po'stloq, miyacha va orqa miyaga proyeksiya beradi: uyg'oqlik, diqqat va hushyorlik, stress javobi, REM-uyquni bosish va og'riq nazorati."
+    },
+    "clinical": {
+      "en": "One of the earliest sites of tau pathology in Alzheimer's and of α-synuclein in Parkinson's disease (REM-sleep behaviour disorder); neuromelanin-sensitive MRI shows its loss. Implicated in opiate withdrawal, PTSD and panic.",
+      "uz": "Alzheimer kasalligida tau va Parkinsonda α-sinuklein patologiyasining eng erta joylaridan biri (REM-uyqu xulq buzilishi); neyromelanin-sezgir MRTda yo'qolishi ko'rinadi. Opiat abstinensiyasi, PTSD va vahima buzilishida ishtirok etadi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Locus coeruleus",
+        "url": "https://en.wikipedia.org/wiki/Locus_coeruleus"
+      }
+    ]
+  },
+  "bs-laterodorsal-tegmental-nucleus-ldtg": {
+    "la": "Nucleus tegmentalis laterodorsalis",
+    "uz": "Laterodorsal tegmental yadro (LDTg)",
+    "description": {
+      "en": "A small cholinergic (Ch6) nucleus in the dorsal pontine tegmentum within the periaqueductal/periventricular grey, medial to the locus coeruleus and continuous rostrally with the pedunculopontine nucleus.",
+      "uz": "Dorsal ko'prik tegmentumida, periakveduktal/periventrikulyar kulrang modda ichida, ko'k dog'dan medialda joylashgan kichik xolinergik (Ch6) yadro; rostral tomonda pedunkulopontin yadro bilan tutash."
+    },
+    "role": {
+      "en": "With the PPN, the brainstem cholinergic arm of the ascending arousal system: drives thalamic activation in waking and REM sleep, and excites VTA dopamine neurons in reward.",
+      "uz": "PPN bilan birga ko'tariluvchi uyg'oqlik tizimining ustun xolinergik qismi: uyg'oqlik va REM-uyquda talamus faollashuvini boshqaradi, mukofotda VTA dofamin neyronlarini qo'zg'atadi."
+    },
+    "clinical": {
+      "en": "Damage contributes to REM-sleep abnormalities and to coma after pontine tegmental injury.",
+      "uz": "Zararlanishi REM-uyqu buzilishlari va ko'prik tegmentumi jarohatidan keyingi komaga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Laterodorsal tegmental nucleus",
+        "url": "https://en.wikipedia.org/wiki/Laterodorsal_tegmental_nucleus"
+      }
+    ]
+  },
+  "bs-mesencephalic-reticular-formation-mrt": {
+    "la": "Formatio reticularis mesencephali",
+    "uz": "Mezensefal retikulyar formatsiya (mRt)",
+    "description": {
+      "en": "The rostral continuation of the reticular formation through the midbrain tegmentum, including the cuneiform and subcuneiform nuclei lateral to the PAG and the rostral interstitial nucleus of the MLF.",
+      "uz": "Retikulyar formatsiyaning o'rta miya tegmentumi orqali rostral davomi; PAG'dan lateraldagi ponasimon (cuneiformis) va subkuneiform yadrolar hamda MLF'ning rostral interstitsial yadrosini o'z ichiga oladi."
+    },
+    "role": {
+      "en": "Core of the ascending reticular activating system that keeps the cortex awake via the intralaminar thalamus; the cuneiform region is the mesencephalic locomotor region, and the riMLF generates vertical saccades.",
+      "uz": "Intralaminar talamus orqali po'stloqni uyg'oq tutuvchi ko'tariluvchi retikulyar faollashtiruvchi tizimning o'zagi; kuneiform soha — mezensefal lokomotor markaz, riMLF esa vertikal sakkadalarni hosil qiladi."
+    },
+    "clinical": {
+      "en": "Bilateral damage (diffuse axonal injury, 'top of the basilar' stroke, herniation) is a principal cause of coma; the mRt is a node of the Harvard AAN atlas used to model recovery of consciousness.",
+      "uz": "Ikki tomonlama zararlanish (diffuz akson jarohati, bazilyar arteriya uchi insulti, churra) komaning asosiy sabablaridan; mRt — hush tiklanishini modellashda ishlatiladigan Harvard AAN atlasi tuguni."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Reticular formation",
+        "url": "https://en.wikipedia.org/wiki/Reticular_formation"
+      },
+      {
+        "title": "Edlow et al. 2024, Sci Transl Med — brainstem connections that sustain wakefulness",
+        "url": "https://doi.org/10.1126/scitranslmed.adj4303"
+      }
+    ]
+  },
+  "bs-parabrachial-complex-pbc": {
+    "la": "Nuclei parabrachiales",
+    "uz": "Parabraxial kompleks (PBC)",
+    "description": {
+      "en": "Medial and lateral parabrachial nuclei plus the Kölliker-Fuse nucleus, wrapped around the superior cerebellar peduncle at the pontomesencephalic junction.",
+      "uz": "Pontomezensefal chegarada yuqori miyacha oyoqchasini o'rab olgan medial va lateral parabraxial yadrolar hamda Kölliker-Fuse yadrosi."
+    },
+    "role": {
+      "en": "The main brainstem relay for visceral and taste information from the solitary nucleus to the hypothalamus, amygdala and thalamus; controls respiratory phase switching (pneumotaxic centre), thermoregulation, thirst and the affective dimension of pain. A key node of the arousal network.",
+      "uz": "Yolg'iz yo'l yadrosidan gipotalamus, amigdala va talamusga visseral va ta'm axborotining asosiy ustun uzatgichi; nafas fazalari almashinuvi (pnevmotaksik markaz), termoregulyatsiya, chanqoq va og'riqning hissiy tomonini boshqaradi. Uyg'oqlik tarmog'ining muhim tuguni."
+    },
+    "clinical": {
+      "en": "Lesions produce apneustic breathing and are associated with loss of consciousness after brainstem injury; parabrachial dysfunction is implicated in sudden unexpected death in epilepsy (SUDEP) and in opioid-induced respiratory depression.",
+      "uz": "Zararlanishi apneystik nafasni beradi va ustun jarohatidan keyingi hush yo'qolishi bilan bog'lanadi; parabraxial disfunksiya epilepsiyada to'satdan kutilmagan o'lim (SUDEP) va opioid nafas depressiyasida ishtirok etadi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Parabrachial nuclei",
+        "url": "https://en.wikipedia.org/wiki/Parabrachial_nuclei"
+      }
+    ]
+  },
+  "bs-pontine-reticular-formation-oral-part-pno": {
+    "la": "Nucleus reticularis pontis oralis",
+    "uz": "Pontin retikulyar formatsiya, oral qismi (PnO)",
+    "description": {
+      "en": "The rostral part of the pontine reticular formation in the medial pontine tegmentum, containing giant neurons whose axons form the medial (pontine) reticulospinal tract.",
+      "uz": "Medial ko'prik tegmentumida pontin retikulyar formatsiyaning rostral qismi; aksonlari medial (pontin) retikulospinal traktni hosil qiluvchi ulkan neyronlarni o'z ichiga oladi."
+    },
+    "role": {
+      "en": "Facilitates extensor/antigravity tone and postural reflexes, generates the muscle atonia and PGO waves of REM sleep, and contributes to the paramedian pontine reticular formation that drives horizontal saccades.",
+      "uz": "Ekstenzor/antigravitatsion tonus va postural reflekslarni kuchaytiradi, REM-uyquning mushak atoniyasi va PGO to'lqinlarini hosil qiladi hamda gorizontal sakkadalarni boshqaruvchi paramedian pontin retikulyar formatsiyaga hissa qo'shadi."
+    },
+    "clinical": {
+      "en": "Release of PnO extensor drive from cortical control underlies decerebrate rigidity; PPRF lesions abolish ipsilateral horizontal gaze; PnO dysfunction is implicated in REM-sleep behaviour disorder and narcolepsy-cataplexy.",
+      "uz": "PnO ekstenzor faolligining po'stloq nazoratidan chiqishi detserebratsion rigidlik asosida yotadi; PPRF zararlanishi o'sha tomonga gorizontal qarashni yo'qotadi; PnO disfunksiyasi REM-uyqu xulq buzilishi va narkolepsiya-katapleksiyada ishtirok etadi."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Oral pontine reticular nucleus",
+        "url": "https://en.wikipedia.org/wiki/Oral_pontine_reticular_nucleus"
+      }
+    ]
+  },
+  "bs-pedunculotegmental-pedunculopontine-nucleus-ptg": {
+    "la": "Nucleus tegmentalis pedunculopontinus",
+    "uz": "Pedunkulopontin yadro (PPN/PTg)",
+    "description": {
+      "en": "A column of cholinergic (Ch5), glutamatergic and GABAergic neurons in the caudal midbrain and rostral pontine tegmentum, lateral to the decussation of the superior cerebellar peduncle and medial to the lateral lemniscus.",
+      "uz": "Kaudal o'rta miya va rostral ko'prik tegmentumida, yuqori miyacha oyoqchasi kesishmasidan lateralda va lateral lemniskdan medialdagi xolinergik (Ch5), glutamatergik va GABAergik neyronlar ustuni."
+    },
+    "role": {
+      "en": "The mesencephalic locomotor region: initiates and modulates gait and postural control through reticulospinal projections, and drives thalamic and basal-ganglia arousal (it is reciprocally connected with STN, GPi and SNr).",
+      "uz": "Mezensefal lokomotor markaz: retikulospinal proyeksiyalar orqali yurish va postural nazoratni boshlaydi va modulyatsiya qiladi; talamus va bazal yadrolarda uyg'oqlikni qo'zg'atadi (STN, GPi va SNr bilan o'zaro bog'langan)."
+    },
+    "clinical": {
+      "en": "Degenerates in Parkinson's disease and progressive supranuclear palsy; low-frequency PPN deep brain stimulation is an experimental treatment for freezing of gait and falls refractory to STN stimulation.",
+      "uz": "Parkinson kasalligi va progressiv supranuklear falajda degeneratsiyaga uchraydi; STN stimulyatsiyasiga javob bermaydigan yurishda qotib qolish va yiqilishlarda PPN'ning past chastotali DBS'i eksperimental davo."
+    },
+    "sources": [
+      {
+        "title": "Wikipedia — Pedunculopontine nucleus",
+        "url": "https://en.wikipedia.org/wiki/Pedunculopontine_nucleus"
+      }
+    ]
+  }
+}
