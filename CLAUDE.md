@@ -4,18 +4,23 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-09-20 (3b: miya ustuni/miyacha qatlamlari; 5-bosqich kontent 281 yozuv).
+> Oxirgi yangilanish: 2026-09-22 (3b tugadi va push qilindi; 5-bosqich kontent 281 yozuv).
 
 ## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
 
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
-2. Holatni tekshiring: `git status` toza, `git log --oneline | head -5`
-   oxirgi commit `3b`-bosqich commit'i ("Miya ustuni va miyacha...") yoki undan keyingisi bo'lishi kerak.
-3. Meshlar diskda bor (`public/meshes/` ~195 MB, 9 papka; `data/raw/`
-   ~125 MB) — gitignore'da, QAYTA HOSIL QILISH SHART EMAS. Agar yo'q bo'lsa
-   (yangi kompyuter): `pipeline/README.md` retsepti (barcha yuklab olish
-   URL'lari shu yerda va skript docstringlarida).
+2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
+   oxirgi commit **`6c9a50f`** ("3b-bosqich: miya ustuni va miyacha
+   sub-qismlari…") yoki undan keyingisi; `git rev-parse HEAD origin/master`
+   bir xil bo'lishi kerak (2026-09-22 holatiga: bir xil, ishchi daraxt toza).
+3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
+   `public/meshes/` 196 MB (9 papka: gross 42, glasser 34, julich 29,
+   destrieux/brodmann/desikan/jhu, bstem 4.7, suit 4.4 MB),
+   `data/raw/` 154 MB (bp3d, julich, neuroparc, brainstem, suit).
+   Yangi kompyuterda: `pipeline/README.md` — to'liq retsept, barcha
+   yuklab olish URL'lari 2026-09-22 da sinovdan o'tkazilgan (neuroparc
+   fayllari baytma-bayt mos chiqdi).
 4. Dev server: `npm run dev` → http://localhost:3019 (**3019**, Falcon 3017
    band). `preview_start` vositasi ishlamasa (Falcon konfiguratsiyasini
    o'qib qolgan bo'lsa) — `npm run dev`ni fonda Bash bilan ishga tushirib
@@ -24,7 +29,22 @@
    pane'da ishlayotgan bo'lsa state o'zgarib turadi — bunda ishlatmang) yoki
    headless: `node scripts/shot.mjs out.png --lang uz --setup "JS" --wait
    3000` (`__atlas.getState()`, `__scene` global). Qatlam yuklanishi
-   kerak bo'lsa `--wait 12000`+.
+   kerak bo'lsa `--wait 12000`+. Tayyor smoke-test (miya ustuni + miyacha
+   qatlamlari yuklanadi, 449 mesh ko'rinadi):
+   ```bash
+   node scripts/shot.mjs /tmp/smoke.png --lang uz --wait 13000 --setup "const a=__atlas.getState(); a.showOnly(['brainstem','cerebellum','diencephalon']); a.setLayers(['gross','bstem','suit']); a.setView('lateral')"
+   ```
+   Ma'lumotlar butunligi (unmatched bo'sh, har yozuvda sources va uz matn):
+   ```bash
+   python3 -c "
+   import json,glob
+   c={p['concept'] for p in json.load(open('src/data/parts.json'))['parts']}
+   k={}
+   for f in glob.glob('src/data/content/*.json'):
+       for a,b in json.load(open(f)).items():
+           k[a]=f; assert b.get('sources'), (f,a); assert 'uz' in b['description'], (f,a)
+   print('yozuv',len(k),'unmatched',[x for x in k if x not in c])"
+   ```
 6. Har commit oldidan: `npx tsc -p tsconfig.app.json --noEmit && npm run
    build && rm -rf dist`. Commit xabari o'zbekcha, batafsil (nima va NEGA),
    `Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>` bilan. Push
@@ -33,32 +53,42 @@
 7. Har bosqich oxirida shu faylning 3-bo'limi va `PLAN.md` jadvalini
    yangilang.
 
-**Keyingi vazifa (foydalanuvchi tanlaydi, ikkalasi ham navbatda):**
-- **5-bosqich davomi — kontent.** Fayl formati va id'lar quyida
-  (3-bo'lim, 5-bosqich). Ustuvorlik: (a) `uz` nomlar — mexanizm TAYYOR
-  (yozuvda `"uz": "Ko'k dog'"`, ilova `Chap/O'ng` prefiksini o'zi qo'shadi,
-  `sidedName()` `data/index.ts`); gross-brain 112, brainstem 24, cerebellum
-  24 yozuvda bor; QOLGAN: gross-vessels 33, julich-groups 47, brodmann 41;
-  (b) Julich 207 alohida hudud
-  (`julich-areas.json`, id = `j-<slug>` masalan `j-vim`, `j-ca1`,
-  `j-area-4a`); (c) Desikan 35 (`dk-<slug>`), Destrieux 75 (`ds-<slug>`),
-  JHU ~30 (`wm-<slug>`), Glasser 180 (`gl-<slug>`). Id'larni olish:
-  `python3 -c "import json;d=json.load(open('src/data/parts.json'));
-  print(sorted(set(p['concept'] for p in d['parts'] if p['layer']=='julich')))"`.
-  Yangi faylni `content/index.ts` `FILES` ro'yxatiga qo'shing. Har
-  yozuvda `sources` shart. Tekshiruv: JSON yuklanadi + `unmatched` bo'sh
-  (skript 5-bosqich bandida).
-- **4-bosqich — kesim.** Hozirgi `cutaway` bitta vertikal tekislik
-  (Falcon'dan). Kerak: sagittal/koronal/aksial 3 slayder (MNI mm),
-  `clipPlane` → 3 ta `T.Plane`, `interiorMaterial`/`material.clippingPlanes`
-  massivini yangilash, Inspector/PlanesPanel'da MNI koordinata ko'rsatish,
-  kesilgan tomon pick'da e'tiborsiz (`pick()` allaqachon plane'ni
-  tekshiradi — 3 taga kengaytiring). `ui/ViewControls.tsx` → `PlanesPanel`.
-- **6-bosqich — deploy:** meshlar 183 MB — GitHub Pages'ga sig'adi (1 GB),
-  lekin `public/meshes` gitignore'da; variant: Draco siqish
-  (`gltf-transform`) + GitHub Release asset yoki alohida `neuro-atlas-data`
-  repo + `MESHES_URL` env. `deploy.yml` Falcon'dan ko'chirilgan, `VITE_BASE`
-  ishlaydi.
+**Keyingi vazifa — foydalanuvchi tanlaydi. Uchtasi ham tayyor turibdi:**
+
+**A) 5-bosqich davomi — kontent (eng ko'p qolgan ish).**
+Format: `src/data/content/<fayl>.json`, kalit = konsept id, qiymat =
+`{la?, uz?, description{en,uz}, role?{en,uz}, clinical?{en,uz}, sources[]}`.
+Yangi faylni `src/data/content/index.ts` `FILES` massiviga qo'shing.
+`uz` — tuzilma NOMI (tomonsiz); ilova `Chap/O'ng` prefiksini o'zi qo'shadi
+(`sidedName()`, `src/data/index.ts`; rim raqamlari/qisqartmalar katta
+harfda qoladi). Ustuvorlik tartibi:
+1. `uz` nomlarni tugatish — QOLGAN: `gross-vessels.json` 33,
+   `julich-groups.json` 47, `brodmann.json` 41 yozuv (gross-brain 112,
+   brainstem 24, cerebellum 24 — BAJARILDI).
+2. Julich alohida hududlari — 206 konsept, yangi `julich-areas.json`
+   (id `j-<slug>`: `j-vim`, `j-ca1`, `j-area-4a`…).
+3. Glasser 179 (`gl-<slug>`), Destrieux 74 (`ds-<slug>`), Desikan 35
+   (`dk-<slug>`), JHU 27 (`wm-<slug>`).
+Id ro'yxatini olish:
+```bash
+python3 -c "import json;d=json.load(open('src/data/parts.json'));print(sorted({p['concept'] for p in d['parts'] if p['layer']=='julich' and not p.get('group')}))"
+```
+Har yozuvda `sources` SHART. Tugatgach 0-bo'lim 5-bandidagi butunlik
+skriptini ishlating (`unmatched` bo'sh bo'lishi kerak).
+
+**B) 4-bosqich — kesim (3 tekislik).** Hozirgi `cutaway` bitta vertikal
+tekislik (Falcon'dan ko'chirilgan). Kerak: sagittal/koronal/aksial 3
+slayder (MNI mm), `clipPlane` → 3 ta `T.Plane`, `interiorMaterial` va
+`material.clippingPlanes` massivini yangilash (`BrainScene.addGeometries`
+~280-qator), Inspector/PlanesPanel'da MNI koordinata, `pick()` uchtala
+tekislikni hisobga olsin (hozir bittasini tekshiradi).
+`src/ui/ViewControls.tsx` → `PlanesPanel`.
+
+**C) 6-bosqich — deploy.** Meshlar 196 MB, `public/meshes` gitignore'da.
+GitHub Pages limiti 1 GB — sig'adi, lekin variantlar: Draco siqish
+(`gltf-transform optimize --compress draco`) + GitHub Release asset, yoki
+alohida `neuro-atlas-data` repo + `MESHES_URL` env. `deploy.yml` Falcon'dan
+ko'chirilgan, `VITE_BASE` ishlaydi.
 
 ## 1. Loyiha nima
 
@@ -218,9 +248,11 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     (Willis halqasi, asosiy arteriyalar, sinuslar, venalar), julich-groups.json
     47 (barcha Julich guruhlari), brodmann.json 41, brainstem.json 24,
     cerebellum.json 24 (neyroxirurgik daraja: DBS nishonlari, sindromlar).
-  - QOLGAN: Julich alohida hududlari (207), Desikan (35), Destrieux (75),
-    Glasser (180), JHU traktlari (~30); `uz` nomlar vessels/julich-groups/
-    brodmann yozuvlarida.
+  - QOLGAN (aniq sanog'i, 2026-09-22): Julich alohida hududlari 206,
+    Glasser 179, Destrieux 74, Desikan 35, JHU 27; `uz` nomlar
+    gross-vessels (33), julich-groups (47), brodmann (41) yozuvlarida.
+    Hozir o'z yozuvi bor leaf qism: 381/1571 (qolgani guruh/oiladan meros
+    oladi yoki matnsiz).
   - Manbalar: Wikipedia (CC BY-SA), NCBI Bookshelf (Purves Neuroscience,
     StatPearls), Julich-Brain asl maqolalari (DOI). Har yozuvda `sources`.
 - ⬜ 6–7.
