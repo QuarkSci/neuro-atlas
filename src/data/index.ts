@@ -42,11 +42,17 @@ export const ACTIVE_SYSTEMS: System[] = SYSTEMS.filter((s) => PARTS.some((p) => 
 export const ALL_SYSTEM_IDS: SystemId[] = ACTIVE_SYSTEMS.map((s) => s.id)
 export const ALL_LAYER_IDS: LayerId[] = LAYERS.map((l) => l.id)
 
-/** "Chap ko'k dog'" for a left part, the bare concept name for midline/group parts. */
+/** Proper names that keep their capital after the side prefix. */
+const EPONYM = /^(Brodmann|Geshl|Galen|Broka|Vernike|Monro|Silviy|Varoliy|Meynert|Kalleja|Papez|Lyuis)\b/
+
+/** "Chap ko'k dog'" for a left part (Julich groups too), the bare concept name for midline parts. */
 function sidedName(uz: string, p: Part): string {
-  if (p.group || p.side === 'midline') return uz
-  // Lower-case an ordinary first word ("Ko'k dog'" → "ko'k dog'") but keep Roman numerals and acronyms ("VIIb", "Crus I" stays; "I–IV" too).
-  const bare = /^[A-Z](?=[a-z'’])/.test(uz) ? uz.charAt(0).toLowerCase() + uz.slice(1) : uz
+  if (p.side !== 'left' && p.side !== 'right') return uz
+  // Lower-case an ordinary first word ("Ko'k dog'" → "ko'k dog'") but keep eponyms ("Brodmann 4-maydoni"),
+  // atlas codes ("Fo1", "PGa", "GapMap", "Te 1.0") and Roman-numbered names ("Crus I").
+  const [first, next = ''] = uz.split(/\s+/)
+  const keep = EPONYM.test(first) || /\d|.[A-Z]/.test(first) || /^[\dIVX]/.test(next)
+  const bare = /^[A-Z][a-z'’]/.test(uz) && !keep ? uz.charAt(0).toLowerCase() + uz.slice(1) : uz
   return (p.side === 'left' ? 'Chap ' : "O'ng ") + bare
 }
 

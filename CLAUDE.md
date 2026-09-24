@@ -4,16 +4,15 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-09-22 (3b tugadi va push qilindi; 5-bosqich kontent 281 yozuv).
+> Oxirgi yangilanish: 2026-09-24 (5-bosqich: 487 yozuv — uz nomlar tugadi, Julich 206 hudud yozildi).
 
 ## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
 
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
-   oxirgi commit **`6c9a50f`** ("3b-bosqich: miya ustuni va miyacha
-   sub-qismlari…") yoki undan keyingisi; `git rev-parse HEAD origin/master`
-   bir xil bo'lishi kerak (2026-09-22 holatiga: bir xil, ishchi daraxt toza).
+   oxirgi commit — "5-bosqich: Julich 206 hudud…" (2026-09-24) yoki undan
+   keyingisi; `git rev-parse HEAD origin/master` bir xil bo'lishi kerak.
 3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
    `public/meshes/` 196 MB (9 papka: gross 42, glasser 34, julich 29,
    destrieux/brodmann/desikan/jhu, bstem 4.7, suit 4.4 MB),
@@ -62,13 +61,16 @@ Yangi faylni `src/data/content/index.ts` `FILES` massiviga qo'shing.
 `uz` — tuzilma NOMI (tomonsiz); ilova `Chap/O'ng` prefiksini o'zi qo'shadi
 (`sidedName()`, `src/data/index.ts`; rim raqamlari/qisqartmalar katta
 harfda qoladi). Ustuvorlik tartibi:
-1. `uz` nomlarni tugatish — QOLGAN: `gross-vessels.json` 33,
-   `julich-groups.json` 47, `brodmann.json` 41 yozuv (gross-brain 112,
-   brainstem 24, cerebellum 24 — BAJARILDI).
-2. Julich alohida hududlari — 206 konsept, yangi `julich-areas.json`
-   (id `j-<slug>`: `j-vim`, `j-ca1`, `j-area-4a`…).
-3. Glasser 179 (`gl-<slug>`), Destrieux 74 (`ds-<slug>`), Desikan 35
-   (`dk-<slug>`), JHU 27 (`wm-<slug>`).
+1. ✅ `uz` nomlar — barcha 487 yozuvda bor (2026-09-24).
+2. ✅ Julich alohida hududlari — 206 konsept, `julich-areas.json`
+   (2026-09-24). Manba generatori scratchpad'da edi; yangi fayllar uchun
+   xuddi shu uslub: bir qatorda bitta yozuv, kalit tartibi
+   `uz, description, role?, clinical?, sources`.
+3. QOLGAN: Glasser 179 (`gl-<slug>`), Destrieux 74 (`ds-<slug>`),
+   Desikan 35 (`dk-<slug>`), JHU 27 (`wm-<slug>`).
+Manba URL'larini yozgach tekshiring: DOI — Crossref API
+(`https://api.crossref.org/works/<doi>`, doi.org nashriyotga 403 beradi),
+Wikipedia — HTTP 200 (2026-09-24 da ikki sahifa 404 chiqdi va almashtirildi).
 Id ro'yxatini olish:
 ```bash
 python3 -c "import json;d=json.load(open('src/data/parts.json'));print(sorted({p['concept'] for p in d['parts'] if p['layer']=='julich' and not p.get('group')}))"
@@ -248,11 +250,16 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     (Willis halqasi, asosiy arteriyalar, sinuslar, venalar), julich-groups.json
     47 (barcha Julich guruhlari), brodmann.json 41, brainstem.json 24,
     cerebellum.json 24 (neyroxirurgik daraja: DBS nishonlari, sindromlar).
-  - QOLGAN (aniq sanog'i, 2026-09-22): Julich alohida hududlari 206,
-    Glasser 179, Destrieux 74, Desikan 35, JHU 27; `uz` nomlar
-    gross-vessels (33), julich-groups (47), brodmann (41) yozuvlarida.
-    Hozir o'z yozuvi bor leaf qism: 381/1571 (qolgani guruh/oiladan meros
-    oladi yoki matnsiz).
+  - 2026-09-24: +206 `julich-areas.json` (talamusning 29 yadrosi — VIM/STN
+    DBS koordinatalari bilan, amigdala, gippokamp CA1–3/DG, bazal old miya,
+    po'stloqning barcha Julich maydonlari, GapMap'lar); `uz` nomlar
+    gross-vessels/julich-groups/brodmann'da ham. Jami 487 yozuv; o'z yozuvi
+    bor leaf qism: 795/1571.
+  - `sidedName()` (`data/index.ts`): Julich guruhlari ham Chap/O'ng oladi
+    (ular yon tomonli); atlas kodlari (`Fo1`, `PGa`, `Te 1.0`, `GapMap`),
+    rim raqamli nomlar (`Crus I`) va `EPONYM` ro'yxatidagi xos otlar
+    (Brodmann, Geshl, Meynert, Kalleja…) kichik harfga tushirilmaydi.
+  - QOLGAN: Glasser 179, Destrieux 74, Desikan 35, JHU 27.
   - Manbalar: Wikipedia (CC BY-SA), NCBI Bookshelf (Purves Neuroscience,
     StatPearls), Julich-Brain asl maqolalari (DOI). Har yozuvda `sources`.
 - ⬜ 6–7.
@@ -278,3 +285,8 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     pathways) litsenziyasi "may not distribute ... derived" — yuklashdan
     OLDIN agreement sahifasini o'qing (`curl` zip o'rniga HTML qaytaradi).
 11. SUIT: README CC BY, LICENSE fayli CC BY-NC 3.0 — fayl ustun.
+12. `shot.mjs --setup`da `selectParts(ids, null)` Inspector'ni OCHMAYDI —
+    `focus` shart: `{kind:'part', id}` yoki `{kind:'concept', id}`; qatlam
+    yuklanishini kutish uchun `setTimeout(..., 9000)` + `--wait 16000`.
+13. Tomonga xos konsept (`white-matter-of-left-temporal-lobe`) `uz` nomiga
+    "Chap" yozilmaydi — `sidedName()` o'zi qo'shadi ("Chap chap …" xatosi).
