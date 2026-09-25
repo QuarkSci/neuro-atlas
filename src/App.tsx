@@ -6,7 +6,7 @@ import { Identity, TopActions } from '@/ui/Header'
 import { SideRail } from '@/ui/SideRail'
 import { SystemsPanel } from '@/ui/SystemsPanel'
 import { SearchPanel } from '@/ui/SearchPanel'
-import { CutawayPanel } from '@/ui/ViewControls'
+import { PlanesPanel } from '@/ui/ViewControls'
 import { BottomBar } from '@/ui/BottomBar'
 import { Inspector } from '@/ui/Inspector'
 import { About } from '@/ui/About'
@@ -42,7 +42,7 @@ export default function App() {
       <SideRail />
       <SystemsPanel />
       {panel === 'search' && <SearchPanel />}
-      {cutaway && <CutawayPanel />}
+      {cutaway && <PlanesPanel />}
       <BottomBar />
       <Footer />
       <Credit />

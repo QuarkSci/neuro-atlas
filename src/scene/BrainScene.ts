@@ -4,7 +4,7 @@ import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment
 import { acceleratedRaycast, computeBoundsTree, disposeBoundsTree } from 'three-mesh-bvh'
 import type { LayerId, Part, SystemId } from '@/data/types'
 import { DEPTH_LEVELS, coveredIds, depthOf } from '@/data'
-import type { View } from '@/store/useAtlas'
+import type { ClipAxis, ClipState, View } from '@/store/useAtlas'
 import { inventoryLayout, separationVector } from './explode'
 import { createGround } from './ground'
 import type { LoadedGeometry } from './loader'
@@ -29,7 +29,7 @@ export interface SceneSnapshot {
   view: View
   autoRotate: boolean
   cutaway: boolean
-  cutawayAngle: number
+  clip: Record<ClipAxis, ClipState>
   resetTick: number
   inspectorOpen: boolean
   hovered: string | null
@@ -127,9 +127,14 @@ export class BrainScene {
   private isolateKey = ''
   private layoutKey = ''
   private selectionKey = ''
-  /** Shared clip plane for the cutaway view; pushed far away (constant) to disable. */
-  private clipPlane = new T.Plane(new T.Vector3(1, 0, 0), 1e5)
-  private clipIndicator: T.Group
+  /**
+   * Sagittal (x), coronal (y) and axial (z) cross-section planes — always a
+   * 3-element array so material.clippingPlanes never has to be reassigned;
+   * a disabled plane is just pushed far away (huge constant) so it never
+   * clips anything, which is cheaper than toggling arrays on every material.
+   */
+  private clipPlanes: [T.Plane, T.Plane, T.Plane] = [new T.Plane(new T.Vector3(1, 0, 0), 1e5), new T.Plane(new T.Vector3(0, 0, 1), 1e5), new T.Plane(new T.Vector3(0, 1, 0), 1e5)]
+  private clipIndicators: T.Group[] = []
   /** Shared matte material for cut interiors, so a slice reads as solid tissue rather than a mirrored shell. */
   private interiorMaterial: T.MeshStandardMaterial
   private labelLayer: HTMLDivElement
@@ -229,7 +234,7 @@ export class BrainScene {
       roughness: 0.95,
       metalness: 0.0,
       side: T.BackSide,
-      clippingPlanes: [this.clipPlane],
+      clippingPlanes: this.clipPlanes,
       polygonOffset: true,
       polygonOffsetFactor: -4,
       polygonOffsetUnits: -4,
@@ -237,8 +242,8 @@ export class BrainScene {
 
     this.addGeometries(geometries)
 
-    this.clipIndicator = this.makeClipIndicator()
-    this.scene.add(this.clipIndicator)
+    this.clipIndicators = (['sagittal', 'coronal', 'axial'] as ClipAxis[]).map((axis) => this.makeClipIndicator(axis))
+    for (const g of this.clipIndicators) this.scene.add(g)
 
     this.renderer.setClearColor(THEME.clear)
     this.warmUp()
@@ -277,7 +282,7 @@ export class BrainScene {
       if (this.byId.has(part.id)) continue
       geometry.computeBoundsTree()
       const material = createPartMaterial(part.system, part.layer, this.seed++)
-      material.clippingPlanes = [this.clipPlane]
+      material.clippingPlanes = this.clipPlanes
       const mesh = new T.Mesh(geometry, material)
       mesh.name = part.id
       // A back-facing child sharing the same geometry: invisible normally
@@ -363,24 +368,57 @@ export class BrainScene {
     el.remove()
   }
 
+  /**
+   * Points a clip plane (and its indicator quad) at the store's mm value
+   * for one axis, in scene space (the loader bakes MNI (RAS) → scene
+   * (−x, z, y) into every mesh, so sagittal follows scene x, coronal scene
+   * z, axial scene y). `flip` swaps which half is kept; the same
+   * `constant = flip ? mm : -mm` works for all three because the normal's
+   * sign flips with it.
+   */
+  private updateClipPlane(axis: ClipAxis, index: 0 | 1 | 2, s: SceneSnapshot) {
+    const c = s.clip[axis]
+    const plane = this.clipPlanes[index]
+    const indicator = this.clipIndicators[index]
+    if (!s.cutaway || !c.enabled) {
+      plane.constant = 1e5
+      return
+    }
+    const mm = c.mm
+    plane.constant = c.flip ? mm : -mm
+    if (axis === 'axial') {
+      plane.normal.set(0, c.flip ? -1 : 1, 0)
+      indicator.position.set(this.modelCentre.x, mm, this.modelCentre.z)
+    } else if (axis === 'coronal') {
+      plane.normal.set(0, 0, c.flip ? -1 : 1)
+      indicator.position.set(this.modelCentre.x, this.modelCentre.y, mm)
+    } else {
+      plane.normal.set(c.flip ? 1 : -1, 0, 0)
+      indicator.position.set(-mm, this.modelCentre.y, this.modelCentre.z)
+    }
+  }
+
   // ── Setup helpers ───────────────────────────────────────────────────
 
   /**
-   * A faint quad marking the cutaway plane, plus a bright edge — the plane
-   * itself has no visible thickness, so without this the "missing" half
-   * would give no sense of where the cut actually is. Oriented at
-   * rotation.y = 0 for a plane whose normal is +Z; the frame loop rotates the
-   * whole group to match the clip plane's current angle.
+   * A faint quad marking one clip plane, plus a bright edge — the plane
+   * itself has no visible thickness, so without this the "missing" part
+   * would give no sense of where the cut actually is. A PlaneGeometry's
+   * default normal is +Z (coronal, no rotation needed); sagittal and axial
+   * rotate it onto +X / +Y respectively. Position and sign are set per
+   * frame from the store's mm value, not baked in here.
    */
-  private makeClipIndicator() {
+  private makeClipIndicator(axis: ClipAxis) {
     const group = new T.Group()
     const size = this.modelRadius * 2.3
-    const fill = new T.Mesh(new T.PlaneGeometry(size, size), new T.MeshBasicMaterial({ color: 0x0088ff, transparent: true, opacity: 0.05, side: T.DoubleSide, depthWrite: false }))
+    const color = axis === 'sagittal' ? 0x0088ff : axis === 'coronal' ? 0x22c07a : 0xf0a030
+    const fill = new T.Mesh(new T.PlaneGeometry(size, size), new T.MeshBasicMaterial({ color, transparent: true, opacity: 0.05, side: T.DoubleSide, depthWrite: false }))
     group.add(fill)
     const edges = new T.EdgesGeometry(new T.PlaneGeometry(size, size))
-    const line = new T.LineSegments(edges, new T.LineBasicMaterial({ color: 0x0088ff, transparent: true, opacity: 0.35 }))
+    const line = new T.LineSegments(edges, new T.LineBasicMaterial({ color, transparent: true, opacity: 0.35 }))
     group.add(line)
-    group.position.copy(this.modelCentre)
+    if (axis === 'sagittal') group.rotation.y = Math.PI / 2
+    else if (axis === 'axial') group.rotation.x = Math.PI / 2
     group.visible = false
     group.renderOrder = 5
     return group
@@ -682,10 +720,10 @@ export class BrainScene {
     this.raycaster.firstHitOnly = true
     const candidates = this.parts.filter((p) => p.mesh.visible).map((p) => p.mesh)
     const hits = this.raycaster.intersectObjects(candidates, false)
-    // Respect the cutaway: a hit on the clipped-away side of the plane is
+    // Respect the clip planes: a hit clipped away on any active plane is
     // invisible and must not be selectable.
     for (const hit of hits) {
-      if (this.clipPlane.constant >= 1e4 || this.clipPlane.distanceToPoint(hit.point) >= 0) return hit.object.name
+      if (this.clipPlanes.every((p) => p.constant >= 1e4 || p.distanceToPoint(hit.point) >= 0)) return hit.object.name
     }
     return null
   }
@@ -745,26 +783,22 @@ export class BrainScene {
     // not re-frame the camera the way the very first frame does.
     const firstEver = first && !this.framedOnce
 
-    // Cutaway plane: rotate to the chosen azimuth, or push it far away to
-    // disable clipping entirely (cheaper than toggling clippingPlanes on
-    // every material).
-    if (first || last.cutaway !== s.cutaway || last.cutawayAngle !== s.cutawayAngle) {
-      if (s.cutaway) {
-        const rad = T.MathUtils.degToRad(s.cutawayAngle)
-        // Negated: we want to remove the near (camera-facing) half so the
-        // cut reveals the interior toward the viewer, not the far side.
-        this.clipPlane.normal.set(-Math.cos(rad), 0, -Math.sin(rad))
-        this.clipPlane.constant = -this.clipPlane.normal.dot(this.modelCentre)
-        this.clipIndicator.rotation.y = Math.PI / 2 - rad
-      } else {
-        this.clipPlane.constant = 1e5
-      }
+    // Cross-section planes: each is pushed far away (huge constant) to
+    // disable it entirely when off, cheaper than toggling clippingPlanes
+    // arrays on every material.
+    if (first || last.cutaway !== s.cutaway || last.clip.sagittal !== s.clip.sagittal || last.clip.coronal !== s.clip.coronal || last.clip.axial !== s.clip.axial) {
+      this.updateClipPlane('sagittal', 0, s)
+      this.updateClipPlane('coronal', 1, s)
+      this.updateClipPlane('axial', 2, s)
       this.dirty = true
     }
-    const showIndicator = s.cutaway && !s.isolate
-    if (this.clipIndicator.visible !== showIndicator) {
-      this.clipIndicator.visible = showIndicator
-      this.dirty = true
+    const axes: ClipAxis[] = ['sagittal', 'coronal', 'axial']
+    for (let i = 0; i < 3; i++) {
+      const visible = s.cutaway && !s.isolate && s.clip[axes[i]].enabled
+      if (this.clipIndicators[i].visible !== visible) {
+        this.clipIndicators[i].visible = visible
+        this.dirty = true
+      }
     }
 
     // Explode amount chases the slider.

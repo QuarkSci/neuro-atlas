@@ -9,6 +9,16 @@ export type Panel = 'systems' | 'search' | null
 export type Mode = 'explode' | 'peel'
 export type Focus = { kind: 'concept'; id: string } | { kind: 'part'; id: string }
 
+/** One of the three orthogonal cross-section planes. */
+export type ClipAxis = 'sagittal' | 'coronal' | 'axial'
+export interface ClipState {
+  enabled: boolean
+  /** MNI mm along the plane's axis (x for sagittal, y for coronal, z for axial). */
+  mm: number
+  /** Which half is removed; the scene decides the concrete side per axis. */
+  flip: boolean
+}
+
 /**
  * Global UI + scene state. The scene modes `explode`, `isolate` and `cutaway`
  * are mutually exclusive; every action that turns one on clears the others
@@ -32,10 +42,10 @@ export interface AtlasState {
   peel: number
   view: View
   autoRotate: boolean
-  /** Whether a vertical wedge is clipped away to reveal interiors. */
+  /** Master switch for the cross-section planes below (the "Kesim" panel). */
   cutaway: boolean
-  /** Azimuth of the cut, in degrees around the vertical axis. */
-  cutawayAngle: number
+  /** Sagittal (x), coronal (y) and axial (z) clip planes, each independently toggled. */
+  clip: Record<ClipAxis, ClipState>
   /** Bumped to force a camera re-fit. */
   resetTick: number
   panel: Panel
@@ -59,7 +69,9 @@ export interface AtlasState {
   setView: (v: View) => void
   setAutoRotate: (v: boolean) => void
   setCutaway: (v: boolean) => void
-  setCutawayAngle: (deg: number) => void
+  setClipAxis: (axis: ClipAxis, patch: Partial<ClipState>) => void
+  /** Jumps to a classic teaching cross-section: axial clip only, at this MNI z. */
+  jumpToLevel: (mm: number) => void
   setPanel: (p: Panel) => void
   setInspectorOpen: (v: boolean) => void
   setAboutOpen: (v: boolean) => void
@@ -93,7 +105,11 @@ const sceneDefaults = {
   view: 'three-quarter' as View,
   autoRotate: false,
   cutaway: false,
-  cutawayAngle: 200,
+  clip: {
+    sagittal: { enabled: true, mm: 0, flip: false },
+    coronal: { enabled: false, mm: 0, flip: false },
+    axial: { enabled: false, mm: 0, flip: false },
+  } as Record<ClipAxis, ClipState>,
   panel: null as Panel,
   inspectorOpen: false,
   hovered: null as string | null,
@@ -143,8 +159,34 @@ export const useAtlas = create<AtlasState>((set) => ({
   setPeel: (peel) => set({ peel: Math.max(0, Math.min(1, peel)), explode: 0, isolate: false }),
   setView: (view) => set((s) => ({ view, resetTick: s.resetTick + 1, autoRotate: false })),
   setAutoRotate: (autoRotate) => set({ autoRotate }),
-  setCutaway: (cutaway) => set({ cutaway, autoRotate: false }),
-  setCutawayAngle: (cutawayAngle) => set({ cutawayAngle }),
+  // Turning the panel on must leave at least one plane active, or nothing
+  // would visibly change; turning it off leaves the per-axis toggles alone
+  // (BrainScene treats !cutaway as "ignore clip entirely" either way) so
+  // reopening the panel remembers what was on.
+  setCutaway: (cutaway) =>
+    set((s) => ({
+      cutaway,
+      autoRotate: false,
+      clip: cutaway && !s.clip.sagittal.enabled && !s.clip.coronal.enabled && !s.clip.axial.enabled ? { ...s.clip, sagittal: { ...s.clip.sagittal, enabled: true } } : s.clip,
+    })),
+  setClipAxis: (axis, patch) => set((s) => ({ clip: { ...s.clip, [axis]: { ...s.clip[axis], ...patch } } })),
+  jumpToLevel: (mm) =>
+    set((s) => ({
+      cutaway: true,
+      clip: {
+        sagittal: { ...s.clip.sagittal, enabled: false },
+        coronal: { ...s.clip.coronal, enabled: false },
+        axial: { enabled: true, mm, flip: false },
+      },
+      isolate: false,
+      explode: 0,
+      peel: 0,
+      // Lateral, not top: a horizontal (axial) cut is only visible in
+      // profile — viewed from directly above it looks unchanged.
+      view: 'lateral',
+      resetTick: s.resetTick + 1,
+      autoRotate: false,
+    })),
   setPanel: (panel) => set((s) => ({ panel: s.panel === panel ? null : panel, inspectorOpen: panel ? false : s.inspectorOpen })),
   setInspectorOpen: (inspectorOpen) => set({ inspectorOpen }),
   setAboutOpen: (aboutOpen) => set({ aboutOpen, panel: null, inspectorOpen: false }),

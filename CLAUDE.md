@@ -4,14 +4,14 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-09-24 (5-bosqich: 487 yozuv — uz nomlar tugadi, Julich 206 hudud yozildi).
+> Oxirgi yangilanish: 2026-09-25 (4-bosqich tugadi: 3 tekislikli kesim + 8 ta klassik "daraja" xaritkasi, ma'lumotdan hisoblanadigan tuzilma ro'yxati bilan).
 
 ## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
 
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
-   oxirgi commit — "5-bosqich: Julich 206 hudud…" (2026-09-24) yoki undan
+   oxirgi commit — "4-bosqich: 3 tekislikli kesim…" (2026-09-25) yoki undan
    keyingisi; `git rev-parse HEAD origin/master` bir xil bo'lishi kerak.
 3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
    `public/meshes/` 196 MB (9 papka: gross 42, glasser 34, julich 29,
@@ -52,7 +52,7 @@
 7. Har bosqich oxirida shu faylning 3-bo'limi va `PLAN.md` jadvalini
    yangilang.
 
-**Keyingi vazifa — foydalanuvchi tanlaydi. Uchtasi ham tayyor turibdi:**
+**Keyingi vazifa — foydalanuvchi tanlaydi. B tugadi, A va C tayyor turibdi:**
 
 **A) 5-bosqich davomi — kontent (eng ko'p qolgan ish).**
 Format: `src/data/content/<fayl>.json`, kalit = konsept id, qiymat =
@@ -78,13 +78,7 @@ python3 -c "import json;d=json.load(open('src/data/parts.json'));print(sorted({p
 Har yozuvda `sources` SHART. Tugatgach 0-bo'lim 5-bandidagi butunlik
 skriptini ishlating (`unmatched` bo'sh bo'lishi kerak).
 
-**B) 4-bosqich — kesim (3 tekislik).** Hozirgi `cutaway` bitta vertikal
-tekislik (Falcon'dan ko'chirilgan). Kerak: sagittal/koronal/aksial 3
-slayder (MNI mm), `clipPlane` → 3 ta `T.Plane`, `interiorMaterial` va
-`material.clippingPlanes` massivini yangilash (`BrainScene.addGeometries`
-~280-qator), Inspector/PlanesPanel'da MNI koordinata, `pick()` uchtala
-tekislikni hisobga olsin (hozir bittasini tekshiradi).
-`src/ui/ViewControls.tsx` → `PlanesPanel`.
+**B) ✅ 4-bosqich — kesim (3 tekislik) TUGADI (2026-09-25).**
 
 **C) 6-bosqich — deploy.** Meshlar 196 MB, `public/meshes` gitignore'da.
 GitHub Pages limiti 1 GB — sig'adi, lekin variantlar: Draco siqish
@@ -235,8 +229,45 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     o'tilgan. Kelajak: Allen 3D'ning old miya qismi (amigdala 9 yadro,
     gippokamp bosh/tana/dum, kaudat 3, BNST, septal, bazal old miya) alohida
     qatlam sifatida.
-- ⬜ 4-bosqich: kesim (3 tekislik + MNI koordinata) — parcellation
-  almashtirish 3-bosqichda qilindi.
+- ✅ 4-bosqich: kesim — 3 mustaqil tekislik + klassik "daraja" xaritkalari
+  (2026-09-25):
+  - `useAtlas.clip: Record<'sagittal'|'coronal'|'axial', {enabled,mm,flip}>`
+    eski `cutaway`/`cutawayAngle`ni almashtirdi; `cutaway: boolean` panel
+    ochiq/yopiqligi va bosh o'chirgich bo'lib qoladi (o'chirilganda barcha
+    tekisliklar `BrainScene`da e'tiborga olinmaydi, lekin `clip` holati
+    saqlanadi — panel qayta ochilganda tiklanadi). `setClipAxis(axis,
+    patch)`, `jumpToLevel(mm)` (aksial=mm, sagittal/koronal o'chadi,
+    `view:'lateral'` — yuqoridan qaralganda gorizontal kesim ko'rinmaydi).
+  - `BrainScene.clipPlanes: [T.Plane,T.Plane,T.Plane]` — doim 3 uzunlikdagi
+    massiv (`material.clippingPlanes` hech qachon qayta tayinlanmaydi,
+    faqat `constant` o'zgaradi: o'chirilgan tekislik 1e5ga suriladi).
+    MNI(RAS)→sahna `(−x,z,y)` pishirilgan matritsaga mos: sagittal sahna
+    X'ga, koronal sahna Z'ga, aksial sahna Y'ga bog'liq; barcha uch o'qda
+    `constant = flip ? mm : -mm` formulasi ishlaydi (normal belgisi flip
+    bilan teskarilanadi). `pick()` va interior-cap material barcha uchta
+    tekislikni hisobga oladi. 3 ta indikator (`clipIndicators`, rang bilan
+    ajratilgan: sagittal ko'k, koronal yashil, aksial to'q sariq) — bir
+    vaqtda bir nechta tekislik yoqilsa burchak kesim (intersection) hosil
+    bo'ladi.
+  - `src/data/levels.ts` — `LEVELS`: 8 ta klassik o'quv darajasi (uzunchoq
+    miya 3, ko'prik 2, o'rta miya 2, talamus 1), MNI z mm qiymatlari
+    ATLASNING O'Z geometriyasidan (Allen/neuroparc bbox) olingan, daraja
+    soni konvensiyasi Haines/Blumenfeld darsliklaridan. `partsAtAxialLevel
+    (mm, visible, layers)` — berilgan z darajasida haqiqatda ko'rinadigan
+    qismlarni HAR SAFAR HAQIQIY `bbox`dan hisoblaydi (qo'lda yozilgan matn
+    emas) — shuning uchun har qanday mm uchun to'g'ri, sinovdan o'tgan
+    (masalan z=-54: pastki zaytun + piramida + tegmentum + miyacha —
+    darslikdagi "o'rta-olivar daraja"ga mos). `CLIP_RANGE` — slayder
+    chegaralari, PARTS bbox'idan.
+  - Muhim: `levels.ts` → `index.ts`ni import qiladi (LEAF_PARTS,
+    coveredIds); `index.ts` `levels.ts`ni qayta eksport QILMASIN — aylanma
+    import ESM'da "Cannot access before initialization" beradi (import
+    hoisting: barcha import'lar joriy modul tanasidan OLDIN bajariladi).
+    UI komponentlari `levels.ts`dan to'g'ridan-to'g'ri import qiladi.
+  - `src/ui/ViewControls.tsx` `PlanesPanel` (eski `CutawayPanel` o'rnida):
+    3 slayder+flip tugmasi, darajalar tugmalari (tuzilma bo'yicha
+    guruhlangan), aksial yoqilganda "shu darajadagi tuzilmalar" ro'yxati
+    (bosilsa tanlanadi/Inspector ochiladi).
 - 🟡 5-bosqich: kontent — boshlandi (2026-09-20), 281 yozuv:
   - Mexanizm: `src/data/content/*.json` — konsept id bo'yicha (chap/o'ng
     juftlik bitta yozuv): `la`, `description`, `role`, `clinical` (en/uz),
@@ -290,3 +321,12 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     yuklanishini kutish uchun `setTimeout(..., 9000)` + `--wait 16000`.
 13. Tomonga xos konsept (`white-matter-of-left-temporal-lobe`) `uz` nomiga
     "Chap" yozilmaydi — `sidedName()` o'zi qo'shadi ("Chap chap …" xatosi).
+14. `src/data/levels.ts` `index.ts`dan import qiladi; `index.ts` uni QAYTA
+    EKSPORT qilsa aylanma import hosil bo'ladi va brauzerda "Cannot access
+    'LEAF_PARTS' before initialization" beradi (tsc buni USHLAMAYDI — faqat
+    runtime'da chiqadi). Sabab: ESM import hoisting — bir modulning barcha
+    `import`/`export...from` satrlari, hatto fayl OXIRIDA yozilgan bo'lsa
+    ham, o'sha modul tanasidagi HECH BIR kod bajarilishidan OLDIN
+    bajariladi. Qoida: bitta yo'nalishli bog'liqlik saqlang (levels.ts →
+    index.ts, hech qachon aksincha); UI komponentlari kerak bo'lsa
+    levels.ts'dan to'g'ridan-to'g'ri import qilsin.
