@@ -12,7 +12,9 @@
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
    oxirgi commit — "4b-bosqich: ko'ndalang kesim atlasi…" (2026-10-02) yoki
-   undan keyingisi; `git rev-parse HEAD origin/master` bir xil bo'lishi kerak.
+   undan keyingisi (2026-10-02 holati: HEAD = origin/master = `f8fe0b3` yoki
+   faqat hujjat commit'i undan keyin); `git rev-parse HEAD origin/master` bir
+   xil bo'lishi kerak.
 3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
    `public/meshes/` 196 MB (9 papka: gross 42, glasser 34, julich 29,
    destrieux/brodmann/desikan/jhu, bstem 4.7, suit 4.4 MB),
@@ -21,7 +23,9 @@
    yuklab olish URL'lari 2026-09-22 da sinovdan o'tkazilgan (neuroparc
    fayllari baytma-bayt mos chiqdi).
 4. Dev server: `npm run dev` → http://localhost:3019 (**3019**, Falcon 3017
-   band). `preview_start` vositasi ishlamasa (Falcon konfiguratsiyasini
+   band). Tekshirish: `curl -s -o /dev/null -w "%{http_code}" localhost:3019`
+   — `000` bo'lsa server to'xtagan (foydalanuvchi yopgan bo'lishi mumkin):
+   Bash `run_in_background` bilan `npm run dev` ni qayta ishga tushiring. `preview_start` vositasi ishlamasa (Falcon konfiguratsiyasini
    o'qib qolgan bo'lsa) — `npm run dev`ni fonda Bash bilan ishga tushirib
    `navigate` qiling.
 5. Tekshiruv uchun ikki yo'l: brauzer pane (foydalanuvchi bir vaqtda
@@ -33,7 +37,29 @@
    ```bash
    node scripts/shot.mjs /tmp/smoke.png --lang uz --wait 13000 --setup "const a=__atlas.getState(); a.showOnly(['brainstem','cerebellum','diencephalon']); a.setLayers(['gross','bstem','suit']); a.setView('lateral')"
    ```
-   Ma'lumotlar butunligi (unmatched bo'sh, har yozuvda sources va uz matn):
+   Kesim atlasi smoke-testi (Kesimlar rejimi + bitta sxema; `openSection`
+   id'lari `src/data/sections/*.ts` dagi `id:`):
+   ```bash
+   node scripts/shot.mjs /tmp/sec.png --lang uz --w 1400 --h 860 --setup "const a=__atlas.getState(); a.setMode('sections'); a.openSection('midbrain-superior-colliculus')" --wait 1500
+   ```
+   Sxema ichidagi tugmalarni bosish (React delegatsiyasi ishlaydi):
+   `document.querySelectorAll('.sv-item')[n].dispatchEvent(new MouseEvent('click',{bubbles:true}))`
+   (`.sv-tools button` [0]=Raqamlar [1]=Nomlar [2]=Viktorina; `.sv-tabs button` [1]=Daraja haqida).
+   Kesim ma'lumotlari butunligi (har item lug'atda bor, `part` haqiqiy konsept):
+   ```bash
+   python3 - <<'EOF'
+   import re, json
+   src=open('src/data/sections/structures-brainstem.ts').read()+open('src/data/sections/structures-forebrain.ts').read()
+   keys=set(re.findall(r"^\s+'?([\w-]+)'?: S\(", src, re.M)); used=set()
+   for f in ['medulla','pons','midbrain','diencephalon','cerebellum']:
+       ids=re.findall(r"\{ id: '([\w-]+)'", open(f'src/data/sections/{f}.ts').read()); used|=set(ids)
+       print(f, 'missing', [i for i in ids if i not in keys])
+   print('unused', sorted(keys-used))
+   c={p['concept'] for p in json.load(open('src/data/parts.json'))['parts']}
+   print('bad part links', [x for x in re.findall(r",\s*'([a-z0-9-]+)'\)\s*,\s*\n", src) if x not in c])
+   EOF
+   ```
+   Kontent ma'lumotlari butunligi (unmatched bo'sh, har yozuvda sources va uz matn):
    ```bash
    python3 -c "
    import json,glob
@@ -46,13 +72,27 @@
    ```
 6. Har commit oldidan: `npx tsc -p tsconfig.app.json --noEmit && npm run
    build && rm -rf dist`. Commit xabari o'zbekcha, batafsil (nima va NEGA),
-   `Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>` bilan. Push
+   `Co-Authored-By:` qatori bilan (tizim eslatmasidagi joriy model nomi;
+   2026-10-02 da `Claude Opus 5.5 <noreply@anthropic.com>`). Push
    `origin master`. Uzun xabarni `-F fayl` bilan bering (ichida `"`
    bo'lsa `-m` buziladi — bir marta shunday xato bo'lgan).
 7. Har bosqich oxirida shu faylning 3-bo'limi va `PLAN.md` jadvalini
    yangilang.
 
-**Keyingi vazifa — foydalanuvchi tanlaydi. B tugadi, A va C tayyor turibdi:**
+**Keyingi vazifa — foydalanuvchi tanlaydi. B (kesim) tugadi; A, C, D tayyor:**
+
+**D) Kesim atlasini kengaytirish (4b davomi, ixtiyoriy).** Qanday qo'shiladi:
+yangi obyekt `src/data/sections/<soha>.ts` massiviga (`Section` tipi,
+`types.ts`); tuzilma yo'q bo'lsa avval `structures-*.ts` ga `S(...)` yozuv
+(kategoriya, en/uz/lotin nom, info en/uz, zararlanish en/uz, 3D konsept);
+`plane` — miya ustuni uchun `brainstemPlane(z)`, diensefalon uchun koronal;
+`contour` — gross mesh id regex (3D chiziq); `pin` — belgi joyi
+(`side/off/dy`); `loc` — lokator chizig'i. Har yangi kesimni headless
+screenshot bilan ko'ring, ustma-ust raqamlarni `at` bilan tuzating.
+Taklif etilgan yangi darajalar: obex/area postrema, pontomezensefal
+chegara, bazal yadrolar koronal (oldingi komissura, kaudat boshi, GPi),
+gippokamp/amigdala koronal, ichki kapsula aksial; sxemani 3D kesim yuzasi
+bilan "yonma-yon" ko'rsatish rejimi.
 
 **A) 5-bosqich davomi — kontent (eng ko'p qolgan ish).**
 Format: `src/data/content/<fayl>.json`, kalit = konsept id, qiymat =
@@ -313,7 +353,7 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     yarim olib tashlanadi, kamera kesim yuzasiga qaraydi; kesim yuzalari
     endi har tuzilma rangida (`MeshBasicMaterial` BackSide cap) — bstem/suit
     /julich qatlamlari bilan rangli atlas kesimi bo'ladi.
-- 🟡 5-bosqich: kontent — boshlandi (2026-09-20), 281 yozuv:
+- 🟡 5-bosqich: kontent — boshlandi (2026-09-20), 487 yozuv (2026-10-02):
   - Mexanizm: `src/data/content/*.json` — konsept id bo'yicha (chap/o'ng
     juftlik bitta yozuv): `la`, `description`, `role`, `clinical` (en/uz),
     `sources`. `content/index.ts` `contentFor()` — o'z yozuvi yo'q bo'lsa
