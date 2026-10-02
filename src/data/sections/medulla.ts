@@ -1,0 +1,229 @@
+import { B, E, L, sym } from './shapes'
+import { brainstemPlane } from './plane'
+import type { Section } from './types'
+
+/** Shared caption bits. */
+const AXES_BS: Section['axes'] = [
+  { en: 'Dorsal', uz: 'Dorsal (orqa)' },
+  { en: 'Ventral', uz: 'Ventral (old)' },
+  { en: 'Right', uz: "O'ng" },
+  { en: 'Left', uz: 'Chap' },
+]
+const ORIENT = { en: 'Transverse, perpendicular to the neuraxis · dorsal up', uz: "Ko'ndalang, neyraksisga perpendikulyar · dorsal tomon yuqorida" }
+const SRC = [
+  { title: 'Wikipedia — Medulla oblongata (cross-sections)', url: 'https://en.wikipedia.org/wiki/Medulla_oblongata' },
+  { title: 'StatPearls — Neuroanatomy, Medulla Oblongata', url: 'https://www.ncbi.nlm.nih.gov/books/NBK551589/' },
+  { title: 'StatPearls — Neuroanatomy, Brainstem', url: 'https://www.ncbi.nlm.nih.gov/books/NBK544297/' },
+]
+const MEDULLA_MESH = /^g-(left|right)-medulla-oblongata$/
+const JUNCTION_MESH = /^g-(left|right)-(medulla-oblongata|pons)$/
+
+/** Midline sulcus / fissure strokes shared by the closed-medulla outlines. */
+const midSulci = (top: number, topEnd: number, bottom: number, bottomEnd: number) => [L(2.2, [250, top], [250, topEnd]), L(2.2, [250, bottom], [250, bottomEnd])]
+
+export const MEDULLA: Section[] = [
+  // ── U1 · Pyramidal decussation ──────────────────────────────────────
+  {
+    id: 'medulla-pyramidal-decussation',
+    code: 'U1',
+    region: 'medulla',
+    title: { en: 'Caudal medulla — pyramidal (motor) decussation', uz: 'Kaudal uzunchoq miya — piramidalar (harakat) kesishmasi' },
+    orientation: ORIENT,
+    plane: brainstemPlane(-74),
+    contour: MEDULLA_MESH,
+    pin: { side: 'front' },
+    loc: [70, 182, 104, 172],
+    w: 500,
+    h: 380,
+    axes: AXES_BS,
+    outline: [B(...sym([[250, 62], [205, 60], [160, 75], [122, 108], [100, 155], [98, 205], [112, 252], [145, 292], [195, 318], [250, 322]], 250)), ...midSulci(62, 108, 322, 292)],
+    items: [
+      { id: 'fg', mirror: true, at: [236, 74], shapes: [B([247, 66], [228, 64], [220, 88], [226, 118], [246, 124])] },
+      { id: 'ng', mirror: true, at: [235, 104], shapes: [E(236, 98, 6, 10)], note: { en: 'caudal pole', uz: 'kaudal qutbi' } },
+      { id: 'fc', mirror: true, at: [176, 92], shapes: [B([217, 64], [185, 68], [160, 86], [168, 112], [198, 124], [218, 118], [214, 90])] },
+      { id: 'nc', mirror: true, at: [200, 102], shapes: [E(193, 100, 11, 8)], note: { en: 'caudal pole', uz: 'kaudal qutbi' } },
+      { id: 'sp5t', mirror: true, shapes: [B([150, 86], [128, 106], [116, 138], [122, 156], [136, 130], [158, 100])] },
+      { id: 'sp5n', mirror: true, shapes: [B([164, 108], [146, 132], [140, 162], [160, 168], [174, 140], [178, 114])], note: { en: 'subnucleus caudalis', uz: 'kaudal subyadro' } },
+      { id: 'cg', at: [228, 182], shapes: [E(250, 168, 32, 26)] },
+      { id: 'cc', shapes: [E(250, 165, 5, 5)] },
+      { id: 'n11', mirror: true, shapes: [B([212, 194], [190, 202], [176, 224], [190, 238], [212, 224], [222, 206])] },
+      { id: 'lcst', mirror: true, shapes: [B([142, 172], [120, 190], [118, 222], [140, 228], [160, 206], [160, 180])], note: { en: 'just formed', uz: 'endigina shakllangan' } },
+      { id: 'pyr-dec', mirror: true, shapes: [L(9, [236, 284], [252, 258], [296, 226], [338, 200])], at: [250, 246] },
+      { id: 'pyramid', mirror: true, shapes: [B([248, 318], [212, 312], [200, 294], [214, 274], [246, 276])] },
+      { id: 'als', mirror: true, shapes: [B([120, 238], [114, 262], [132, 284], [152, 278], [142, 252])] },
+      { id: 'dsct', mirror: true, shapes: [B([106, 150], [99, 182], [104, 204], [114, 196], [116, 160])] },
+      { id: 'vsct', mirror: true, shapes: [B([103, 212], [107, 238], [116, 242], [116, 214])] },
+      { id: 'mlf', mirror: true, shapes: [E(234, 210, 6, 12)] },
+      { id: 'rf', mirror: true, shapes: [B([214, 244], [192, 252], [190, 270], [218, 268])] },
+    ],
+    landmarks: {
+      en: 'Still looks like spinal cord (closed medulla, central canal). Pyramidal fibres cross through the ventral grey, decapitating the ventral horn; dorsal columns are still fasciculi with only the caudal tips of the gracile/cuneate nuclei; spinal V tract caps the dorsal horn.',
+      uz: "Hali orqa miyaga o'xshaydi (yopiq uzunchoq miya, markaziy kanal). Piramida tolalari ventral kulrang modda orqali kesishib, old shoxni 'kesib' o'tadi; orqa ustunlar hali tutam ko'rinishida, nozik/ponasimon yadrolarning faqat kaudal uchlari; spinal V trakt orqa shox ustida.",
+    },
+    blood: {
+      en: 'Anterior spinal artery (ventral two-thirds: pyramids/decussation, ventral grey); posterior spinal arteries (dorsal columns, spinal V); vertebral arteries laterally.',
+      uz: "Oldingi orqa miya arteriyasi (ventral 2/3: piramidalar/kesishma, ventral kulrang modda); orqa orqa miya arteriyalari (orqa ustunlar, spinal V); lateral tomonda umurtqa arteriyalari.",
+    },
+    syndromes: [
+      { name: { en: 'Cruciate hemiplegia', uz: 'Xochsimon gemiplegiya' }, text: { en: 'A small lesion at the decussation can weaken the ipsilateral arm (fibres already crossed) and the contralateral leg (not yet crossed) — arm fibres decussate more rostrally.', uz: "Kesishmadagi kichik zararlanish o'sha tomon qo'lini (tolalar allaqachon kesishgan) va qarama-qarshi oyoqni (hali kesishmagan) zaiflashtiradi — qo'l tolalari yuqoriroqda kesishadi." } },
+      { name: { en: 'Foramen-magnum syndrome', uz: 'Katta teshik sindromi' }, text: { en: 'Meningioma, Chiari I or atlanto-axial instability: suboccipital pain, "around-the-clock" weakness (ipsilateral arm → leg → contralateral leg → arm), downbeat nystagmus.', uz: "Meningioma, Chiari I yoki atlanto-aksial beqarorlik: ensa osti og'rig'i, 'soat mili bo'ylab' zaiflik (o'sha tomon qo'li → oyog'i → qarama-qarshi oyoq → qo'l), pastga uruvchi nistagm." } },
+    ],
+    sources: SRC,
+  },
+
+  // ── U2 · Sensory decussation ────────────────────────────────────────
+  {
+    id: 'medulla-sensory-decussation',
+    code: 'U2',
+    region: 'medulla',
+    title: { en: 'Caudal medulla — sensory (lemniscal) decussation', uz: 'Kaudal uzunchoq miya — sezgi (lemniskal) kesishmasi' },
+    orientation: ORIENT,
+    plane: brainstemPlane(-66),
+    contour: MEDULLA_MESH,
+    pin: { side: 'front' },
+    loc: [70, 170, 104, 160],
+    w: 500,
+    h: 380,
+    axes: AXES_BS,
+    outline: [B(...sym([[250, 60], [200, 56], [152, 70], [116, 104], [96, 150], [94, 202], [108, 252], [142, 294], [196, 322], [250, 326]], 250)), ...midSulci(60, 92, 326, 298)],
+    items: [
+      { id: 'fg', mirror: true, shapes: [B([247, 62], [226, 60], [218, 72], [230, 80], [247, 82])], note: { en: 'thinning rim', uz: 'yupqalashgan qobiq' } },
+      { id: 'ng', mirror: true, shapes: [B([246, 84], [230, 82], [218, 98], [224, 120], [244, 124])] },
+      { id: 'fc', mirror: true, shapes: [B([214, 60], [176, 62], [150, 78], [160, 90], [196, 84], [214, 76])] },
+      { id: 'nc', mirror: true, shapes: [B([212, 82], [184, 88], [168, 106], [178, 124], [206, 122], [216, 102])] },
+      { id: 'acn', mirror: true, shapes: [E(158, 98, 9, 8)] },
+      { id: 'sp5t', mirror: true, shapes: [B([140, 88], [118, 110], [106, 146], [114, 160], [128, 132], [148, 104])] },
+      { id: 'sp5n', mirror: true, shapes: [B([150, 112], [134, 136], [130, 164], [150, 170], [162, 142], [164, 118])] },
+      { id: 'cg', at: [274, 160], shapes: [E(250, 152, 30, 22)] },
+      { id: 'cc', shapes: [E(250, 146, 5, 5)] },
+      { id: 'n12', mirror: true, shapes: [E(240, 160, 6, 8)], note: { en: 'caudal part', uz: 'kaudal qismi' } },
+      { id: 'dmx', mirror: true, shapes: [E(230, 142, 6, 6)] },
+      { id: 'sol', mirror: true, shapes: [E(214, 134, 7, 7)], note: { en: 'caudal (commissural) part', uz: 'kaudal (komissural) qismi' } },
+      { id: 'ia', mirror: true, shapes: [L(5, [200, 120], [178, 160], [196, 210], [234, 236], [266, 246])], at: [214, 228] },
+      { id: 'ml', mirror: true, shapes: [B([246, 244], [234, 246], [232, 280], [240, 292], [247, 290])], note: { en: 'forming', uz: 'shakllanayotgan' } },
+      { id: 'mlf', mirror: true, shapes: [E(240, 196, 5, 10)] },
+      { id: 'pyramid', mirror: true, shapes: [B([248, 322], [212, 316], [198, 300], [212, 294], [246, 296])] },
+      { id: 'als', mirror: true, shapes: [B([114, 238], [108, 262], [126, 284], [146, 276], [136, 250])] },
+      { id: 'dsct', mirror: true, shapes: [B([100, 166], [94, 198], [98, 222], [108, 214], [110, 176])] },
+      { id: 'vsct', mirror: true, shapes: [B([99, 226], [103, 248], [111, 252], [111, 228])] },
+      { id: 'rf', mirror: true, shapes: [B([186, 176], [156, 196], [160, 232], [190, 224], [198, 196])] },
+    ],
+    landmarks: {
+      en: 'Gracile and cuneate NUCLEI now dominate the dorsal medulla; their axons arc ventromedially as internal arcuate fibres and cross ventral to the central canal (sensory decussation) to build the medial lemnisci. Pyramids sit ventrally, decussation complete. XII, X (dorsal motor) and solitary nuclei appear around the central canal.',
+      uz: "Nozik va ponasimon YADROLAR endi dorsal uzunchoq miyada ustun; aksonlari ichki yoysimon tolalar bo'lib ventromedial yoy chizadi va markaziy kanal ostida kesishadi (sezgi kesishmasi) — medial lemniskalarni hosil qiladi. Piramidalar ventralda, kesishma tugagan. Markaziy kanal atrofida XII, X (dorsal harakat) va yolg'iz yo'l yadrolari paydo bo'ladi.",
+    },
+    blood: {
+      en: 'Anterior spinal artery (pyramids, medial lemniscus, XII); vertebral and PICA branches (lateral wedge); posterior spinal / PICA (dorsal-column nuclei).',
+      uz: "Oldingi orqa miya arteriyasi (piramidalar, medial lemnisk, XII); umurtqa va PICA shoxlari (lateral pona); orqa orqa miya / PICA (orqa ustun yadrolari).",
+    },
+    syndromes: [
+      { name: { en: 'Bilateral medial medullary infarct', uz: 'Ikki tomonlama medial medullyar infarkt' }, text: { en: 'Both anterior spinal territories (pyramids, lemnisci, XII): quadriplegia, loss of position sense in all limbs, bilateral tongue palsy with preserved consciousness — "heart-shaped" DWI lesion.', uz: "Ikkala oldingi orqa miya hududi (piramidalar, lemniskalar, XII): tetraplegiya, barcha oyoq-qo'llarda holat sezgisi yo'qolishi, ikki tomonlama til falaji, hush saqlangan — DWI'da 'yurak shaklidagi' o'choq." } },
+    ],
+    sources: SRC,
+  },
+
+  // ── U3 · Mid-olivary (open) medulla ────────────────────────────────
+  {
+    id: 'medulla-olive',
+    code: 'U3',
+    region: 'medulla',
+    title: { en: 'Open medulla — mid-olivary level', uz: "Ochiq uzunchoq miya — o'rta zaytun darajasi" },
+    orientation: ORIENT,
+    plane: brainstemPlane(-55),
+    contour: MEDULLA_MESH,
+    pin: { side: 'front' },
+    loc: [70, 156, 106, 146],
+    w: 500,
+    h: 390,
+    axes: AXES_BS,
+    outline: [B(...sym([[250, 118], [214, 112], [178, 100], [150, 78], [126, 70], [100, 92], [86, 136], [84, 188], [94, 238], [118, 284], [160, 316], [206, 334], [250, 338]], 250)), L(2.2, [250, 338], [250, 314])],
+    items: [
+      { id: 'v4', shapes: [B(...sym([[250, 52], [200, 56], [150, 74], [180, 98], [214, 110], [250, 116]], 250))] },
+      { id: 'n12', mirror: true, shapes: [E(236, 130, 9, 9)] },
+      { id: 'dmx', mirror: true, shapes: [E(214, 124, 9, 7)] },
+      { id: 'sol', mirror: true, shapes: [E(192, 130, 9, 9)] },
+      { id: 'vn', mirror: true, shapes: [B([176, 102], [150, 86], [132, 102], [144, 122], [170, 116])], note: { en: 'medial & inferior', uz: 'medial va pastki' } },
+      { id: 'icp', mirror: true, shapes: [B([126, 72], [102, 90], [92, 124], [108, 146], [128, 126], [146, 92])] },
+      { id: 'sp5t', mirror: true, shapes: [B([100, 148], [90, 180], [98, 206], [110, 184], [114, 156])] },
+      { id: 'sp5n', mirror: true, shapes: [B([120, 152], [112, 182], [122, 206], [136, 184], [134, 158])], note: { en: 'subnucleus interpolaris', uz: 'interpolaris subyadro' } },
+      { id: 'amb', mirror: true, shapes: [E(152, 198, 6, 9)] },
+      { id: 'n10-root', mirror: true, shapes: [L(2.6, [200, 142], [176, 168], [152, 208], [118, 250])], at: [168, 180] },
+      { id: 'rf', mirror: true, shapes: [B([206, 164], [172, 186], [166, 226], [196, 232], [214, 200])] },
+      { id: 'ap', mirror: true, at: [238, 108], shapes: [E(242, 113, 7, 3.5)], note: { en: 'at the obex, just caudal to this level', uz: 'obex darajasida, bu kesimdan sal pastda' } },
+      { id: 'mlf', mirror: true, at: [226, 150], shapes: [E(240, 148, 6, 7)] },
+      { id: 'tst', mirror: true, at: [222, 162], shapes: [E(238, 160, 5, 4)] },
+      { id: 'ml', mirror: true, shapes: [B([246, 160], [234, 162], [232, 244], [238, 268], [247, 266])] },
+      { id: 'raphe', shapes: [L(5, [250, 150], [250, 268])], at: [250, 206] },
+      { id: 'ctt', mirror: true, shapes: [E(202, 238, 8, 7)] },
+      { id: 'ion', mirror: true, shapes: [L(5, [208, 256], [196, 248], [186, 257], [174, 247], [162, 256], [151, 268], [158, 280], [149, 292], [160, 303], [172, 297], [184, 307], [196, 299], [208, 304])], at: [168, 278], note: { en: 'principal olive (accessory olives medial & dorsal)', uz: "asosiy zaytun (qo'shimcha zaytunlar medial va dorsalda)" } },
+      { id: 'n12-root', mirror: true, shapes: [L(2.4, [232, 140], [228, 200], [220, 260], [216, 312])], at: [226, 230] },
+      { id: 'als', mirror: true, shapes: [B([114, 226], [106, 250], [120, 268], [136, 256], [130, 232])] },
+      { id: 'pyramid', mirror: true, shapes: [B([248, 334], [214, 330], [200, 312], [212, 286], [246, 284])] },
+      { id: 'arcm', mirror: true, shapes: [L(4, [244, 338], [222, 336], [206, 326])], at: [222, 336] },
+    ],
+    landmarks: {
+      en: 'Open medulla: the central canal has opened into the 4th ventricle (dorsal surface = floor). The crumpled inferior olive bulges ventrolaterally; the medial lemnisci stand vertically beside the midline over the pyramids. Floor shows medial→lateral: XII, dorsal motor X, solitary nucleus, vestibular nuclei (sulcus limitans separates motor from sensory columns). Nucleus ambiguus lies deep in the lateral tegmentum.',
+      uz: "Ochiq uzunchoq miya: markaziy kanal IV qorinchaga ochilgan (dorsal yuza = tubi). Burmalangan pastki zaytun ventrolateral bo'rtadi; medial lemniskalar piramidalar ustida o'rta chiziq yonida tik turadi. Tubida medialdan lateralga: XII, X dorsal harakat, yolg'iz yo'l yadrosi, vestibulyar yadrolar (sulcus limitans harakat va sezgi ustunlarini ajratadi). Ikki ma'noli yadro lateral tegmentumda chuqurda.",
+    },
+    blood: {
+      en: 'Paramedian (anterior spinal / vertebral): pyramid, ML, MLF, XII. Lateral (PICA ± vertebral): spinal V, ALS, nucleus ambiguus, vestibular nuclei, ICP, descending sympathetics. Dorsal: PICA medial branches.',
+      uz: "Paramedian (oldingi orqa miya / umurtqa): piramida, ML, MLF, XII. Lateral (PICA ± umurtqa): spinal V, ALS, ikki ma'noli yadro, vestibulyar yadrolar, ICP, tushuvchi simpatik tolalar. Dorsal: PICA medial shoxlari.",
+    },
+    syndromes: [
+      { name: { en: 'Lateral medullary (Wallenberg)', uz: 'Lateral medullyar (Wallenberg)' }, text: { en: 'PICA/vertebral: ipsilateral facial pain/temperature loss (spinal V) + contralateral body (ALS); dysphagia, hoarseness, absent gag (ambiguus); vertigo, nystagmus (vestibular); ipsilateral ataxia (ICP); ipsilateral Horner (descending hypothalamospinal fibres); hiccups.', uz: "PICA/umurtqa: o'sha tomonda yuzda og'riq/harorat yo'qolishi (spinal V) + qarama-qarshi tanada (ALS); disfagiya, ovoz bo'g'iqligi, qusish refleksi yo'q (ambiguus); bosh aylanishi, nistagm (vestibulyar); o'sha tomonda ataksiya (ICP); o'sha tomonda Horner (tushuvchi gipotalamospinal tolalar); hiqichoq." } },
+      { name: { en: 'Medial medullary (Dejerine)', uz: 'Medial medullyar (Dejerine)' }, text: { en: 'Anterior spinal / paramedian vertebral: contralateral hemiparesis sparing face (pyramid), contralateral loss of vibration/position (ML), ipsilateral tongue deviation and atrophy (XII fibres).', uz: "Oldingi orqa miya / paramedian umurtqa: yuz saqlangan qarama-qarshi gemiparez (piramida), qarama-qarshi tomonda vibratsiya/holat sezgisi yo'qolishi (ML), tilning o'sha tomonga og'ishi va atrofiyasi (XII tolalari)." } },
+    ],
+    sources: SRC,
+  },
+
+  // ── U4 · Rostral medulla (pontomedullary junction) ─────────────────
+  {
+    id: 'medulla-rostral',
+    code: 'U4',
+    region: 'medulla',
+    title: { en: 'Rostral medulla — cochlear nuclei & CN VIII entry', uz: "Rostral uzunchoq miya — eshitish yadrolari va VIII nerv kirishi" },
+    orientation: ORIENT,
+    plane: brainstemPlane(-47),
+    contour: JUNCTION_MESH,
+    pin: { side: 'front' },
+    loc: [70, 144, 108, 134],
+    w: 520,
+    h: 390,
+    axes: AXES_BS,
+    outline: [B(...sym([[260, 128], [222, 120], [186, 104], [158, 76], [126, 60], [94, 74], [74, 112], [70, 166], [82, 222], [108, 274], [152, 312], [206, 334], [260, 340]], 260)), L(2.2, [260, 340], [260, 318])],
+    items: [
+      { id: 'v4', shapes: [B(...sym([[260, 44], [200, 46], [140, 62], [168, 90], [216, 114], [260, 126]], 260))], note: { en: 'with lateral recess', uz: 'yon cho\'ntagi bilan' } },
+      { id: 'vn', mirror: true, shapes: [B([236, 128], [200, 114], [170, 92], [150, 102], [170, 128], [208, 140])], note: { en: 'medial, inferior & lateral (Deiters)', uz: 'medial, pastki va lateral (Deiters)' } },
+      { id: 'icp', mirror: true, shapes: [B([150, 74], [118, 70], [96, 94], [100, 132], [128, 142], [152, 116])] },
+      { id: 'cochn', mirror: true, shapes: [B([126, 60], [98, 64], [76, 92], [74, 124], [90, 120], [96, 92], [118, 70])] },
+      { id: 'n8-root', mirror: true, shapes: [L(5, [72, 128], [52, 146], [30, 158])], at: [54, 146] },
+      { id: 'sp5t', mirror: true, shapes: [B([96, 146], [84, 176], [92, 202], [106, 180], [108, 152])] },
+      { id: 'sp5n', mirror: true, shapes: [B([116, 150], [108, 180], [118, 204], [132, 182], [130, 156])], note: { en: 'subnucleus oralis', uz: 'oralis subyadro' } },
+      { id: 'sol', mirror: true, shapes: [E(206, 156, 8, 8)], note: { en: 'rostral (gustatory) part', uz: "rostral (ta'm) qismi" } },
+      { id: 'isn', mirror: true, shapes: [E(224, 166, 6, 6)] },
+      { id: 'amb', mirror: true, shapes: [E(158, 206, 6, 9)], note: { en: 'rostral pole (IX)', uz: 'rostral qutbi (IX)' } },
+      { id: 'n9-root', mirror: true, shapes: [L(2.6, [196, 168], [168, 196], [130, 238], [100, 262])], at: [140, 226] },
+      { id: 'rf', mirror: true, shapes: [B([216, 182], [186, 196], [180, 240], [212, 246], [228, 214])] },
+      { id: 'mlf', mirror: true, shapes: [E(248, 152, 6, 8)] },
+      { id: 'ml', mirror: true, shapes: [B([256, 178], [244, 180], [240, 254], [248, 274], [257, 272])] },
+      { id: 'raphe', shapes: [L(5, [260, 160], [260, 278])], at: [260, 216] },
+      { id: 'ctt', mirror: true, shapes: [E(214, 262, 8, 7)] },
+      { id: 'ion', mirror: true, shapes: [L(5, [222, 278], [198, 270], [178, 282], [178, 302], [200, 312], [220, 304]) ], note: { en: 'rostral pole', uz: 'rostral qutbi' }, at: [192, 296] },
+      { id: 'als', mirror: true, shapes: [B([110, 230], [100, 254], [116, 270], [132, 258], [126, 234])] },
+      { id: 'pyramid', mirror: true, shapes: [B([258, 336], [222, 330], [210, 314], [222, 292], [256, 292])] },
+    ],
+    landmarks: {
+      en: 'Widest part of the 4th ventricle with its lateral recess; the inferior cerebellar peduncle is at its fullest, capped by the dorsal and ventral cochlear nuclei where CN VIII enters at the cerebellopontine angle. Olive reduced to its rostral pole; hypoglossal and dorsal vagal nuclei have ended (nucleus prepositus takes their place).',
+      uz: "IV qorinchaning eng keng qismi, yon cho'ntagi bilan; pastki miyacha oyoqchasi eng yo'g'on, ustida dorsal va ventral eshitish yadrolari — VIII nerv ko'prik-miyacha burchagidan shu yerga kiradi. Zaytun rostral qutbiga qisqargan; XII va X dorsal yadrolari tugagan (o'rnida prepositus yadrosi).",
+    },
+    blood: {
+      en: 'Vertebral → basilar junction; lateral: PICA (caudal) and AICA (rostral, cochlear nuclei & CPA, with the labyrinthine artery); paramedian: vertebral/basilar perforators.',
+      uz: "Umurtqa → bazilyar qo'shilishi; lateral: PICA (kaudal) va AICA (rostral, eshitish yadrolari va KMB, labirint arteriyasi bilan); paramedian: umurtqa/bazilyar perforantlari.",
+    },
+    syndromes: [
+      { name: { en: 'Cerebellopontine-angle mass', uz: "Ko'prik-miyacha burchagi hosilasi" }, text: { en: 'Vestibular schwannoma or meningioma: unilateral sensorineural hearing loss and tinnitus first, then facial numbness (loss of corneal reflex — V), facial weakness (VII), ipsilateral ataxia, finally hydrocephalus.', uz: "Vestibulyar shvannoma yoki meningioma: avval bir tomonlama sensonevral eshitish pasayishi va shang'illash, keyin yuzda uvishish (korneal refleks yo'qolishi — V), yuz zaifligi (VII), o'sha tomonda ataksiya, oxirida gidrotsefaliya." } },
+      { name: { en: 'AICA (lateral pontomedullary) syndrome', uz: 'AICA (lateral pontomedullyar) sindromi' }, text: { en: 'Like Wallenberg but with ipsilateral deafness and facial palsy (labyrinthine artery, VII/VIII nuclei) and prominent MCP ataxia.', uz: "Wallenbergga o'xshash, lekin o'sha tomonda karlik va yuz falaji (labirint arteriyasi, VII/VIII yadrolari) hamda yaqqol MCP ataksiyasi bilan." } },
+    ],
+    sources: SRC,
+  },
+]

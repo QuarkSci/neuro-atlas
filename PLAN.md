@@ -108,6 +108,7 @@ glasser | julich`), tizim emas.
 | 3 | To'liq import | ✅ 2026-09-20: 1571 qism, 7 qatlam (gross 355 + Julich 508 + Brodmann 82 + Desikan 70 + Destrieux 148 + Glasser 360 + JHU 48), qatlamlar talab bo'yicha yuklanadi, parcellation almashtirish |
 | 3b | Miya ustuni / miyacha chuqurlashtirish | ✅ 2026-09-20: `bstem` (Allen 22 + AAN 16) va `suit` (32) qatlamlari, gross +24 (precuneus, cuneus, SPL, septum, crus cerebri, 9 gipotalamus yadrosi…) → 1672 qism, 9 qatlam; `Layer.covers`, peel 8-qobiq, kontent 62 yozuv + `name.uz` mexanizmi |
 | 4 | Kesim + qatlamlar | ✅ 2026-09-25: 3 mustaqil tekislik (sagittal/koronal/aksial, birga qo'shilib burchak kesim beradi) + 8 ta klassik o'quv darajasi (medulla 3, ko'prik 2, o'rta miya 2, talamus 1), har darajadagi tuzilmalar ro'yxati haqiqiy MNI bbox'dan hisoblanadi; parcellation almashtirish 3-bosqichda qilingan |
+| 4b | Ko'ndalang kesim atlasi | ✅ 2026-10-02: 17 interaktiv sxema (uzunchoq miya 4, ko'prik 3, o'rta miya 3, talamus 2, gipotalamus 4, miyacha 1), ~150 tuzilma uz/en/lat + vazifa + zararlanish, daraja bo'yicha qon ta'minoti va sindromlar, 3D daraja chiziqlari, neyraksisga perpendikulyar qiyshiq 3D kesim, viktorina |
 | 5 | Kontent | 🟡 2026-09-24: 487 yozuv (`src/data/content/*.json`, en/uz + manbalar); barcha yozuvlarda `uz` nom; Julich 206 alohida hudud tugadi. Qolgan: Glasser 179, Destrieux 74, Desikan 35, JHU 27 |
 | 6 | Deploy | Pages, meshlar GitHub Release'da, README, ATTRIBUTION.md |
 | 7 | v2 | Orqa miya, qo'shimcha atlaslar (neuroparc, Allen) |

@@ -4,15 +4,15 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-09-25 (4-bosqich tugadi: 3 tekislikli kesim + 8 ta klassik "daraja" xaritkasi, ma'lumotdan hisoblanadigan tuzilma ro'yxati bilan).
+> Oxirgi yangilanish: 2026-10-02 (4b: ko'ndalang kesim atlasi — 17 ta interaktiv sxema, 3D daraja chiziqlari, qiyshiq 3D kesim).
 
 ## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
 
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
-   oxirgi commit — "4-bosqich: 3 tekislikli kesim…" (2026-09-25) yoki undan
-   keyingisi; `git rev-parse HEAD origin/master` bir xil bo'lishi kerak.
+   oxirgi commit — "4b-bosqich: ko'ndalang kesim atlasi…" (2026-10-02) yoki
+   undan keyingisi; `git rev-parse HEAD origin/master` bir xil bo'lishi kerak.
 3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
    `public/meshes/` 196 MB (9 papka: gross 42, glasser 34, julich 29,
    destrieux/brodmann/desikan/jhu, bstem 4.7, suit 4.4 MB),
@@ -78,7 +78,12 @@ python3 -c "import json;d=json.load(open('src/data/parts.json'));print(sorted({p
 Har yozuvda `sources` SHART. Tugatgach 0-bo'lim 5-bandidagi butunlik
 skriptini ishlating (`unmatched` bo'sh bo'lishi kerak).
 
-**B) ✅ 4-bosqich — kesim (3 tekislik) TUGADI (2026-09-25).**
+**B) ✅ 4-bosqich — kesim (3 tekislik) TUGADI (2026-09-25); 4b — ko'ndalang
+kesim atlasi (17 sxema) TUGADI (2026-10-02).** Mumkin bo'lgan davomi:
+ko'prik/uzunchoq miya uchun qo'shimcha darajalar (obex, pontomezensefal),
+bazal yadrolar koronal kesimlari (oldingi komissura, kaudat boshi),
+gippokamp/amigdala kesimlari; har sxemaga 3D kesim yuzasi bilan
+"yonma-yon" taqqoslash.
 
 **C) 6-bosqich — deploy.** Meshlar 196 MB, `public/meshes` gitignore'da.
 GitHub Pages limiti 1 GB — sig'adi, lekin variantlar: Draco siqish
@@ -268,6 +273,46 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     3 slayder+flip tugmasi, darajalar tugmalari (tuzilma bo'yicha
     guruhlangan), aksial yoqilganda "shu darajadagi tuzilmalar" ro'yxati
     (bosilsa tanlanadi/Inspector ochiladi).
+- ✅ 4b-bosqich: ko'ndalang kesim atlasi (2026-10-02) — foydalanuvchi
+  talabi (doskadagi sxemalar rasmi bilan): miya ustuni, o'rta miya,
+  talamus, gipotalamus, miyachada darslikdagi kabi ko'ndalang kesim yuzalari;
+  modelda kesim chizig'i, bosilsa yuza ochiladi; bakalavr va PhD darajasi.
+  - Pastki dock'da 3-tab **Kesimlar** (`mode: 'sections'`): tizimlar
+    brainstem/diencephalon/cerebellum'ga o'tadi (oldingisi
+    `sectionsPrevVisible`da saqlanib, chiqishda tiklanadi), yon ko'rinish,
+    kamera ko'rinadigan qismga moslanadi; pastda daraja kodlari qatori.
+  - `src/data/sections/` — 17 kesim: U1–U4 (uzunchoq miya: piramida
+    kesishmasi, sezgi kesishmasi, o'rta zaytun, rostral/VIII), K1–K3
+    (ko'prik: yuz do'ngligi, trigeminal, isthmus/LC), O1–O3 (o'rta miya: IC,
+    SC/RN, pretektum/orqa komissura), T1 (talamus koronal), T2 (talamus
+    yadrolari "tuxum" xaritasi), G1–G3 (gipotalamus koronal: xiazmatik,
+    tuberal, mamillyar), G4 (gipotalamus zonalari sagittal xaritasi), Mc
+    (miyacha chuqur yadrolari). Har kesimda: sxema (SVG, `shapes.ts`:
+    Catmull-Rom blob/ellips/chiziq, `mirror` juft tuzilmalar uchun),
+    `landmarks`, `blood`, `syndromes`, `sources`.
+  - Tuzilmalar lug'ati `structures-brainstem.ts` + `structures-forebrain.ts`
+    (~150 ta, `S(cat, en, uz, la, info, infoUz, lesion, lesionUz, part)`):
+    bitta yozuv barcha kesimlarda qayta ishlatiladi; `part` — 3D konsept
+    ("3D da ko'rsatish" tugmasi). Kategoriya ranglari `ui/sectionStyle.ts`
+    (harakat qizil, sezgi ko'k, BN harakat to'q sariq…); tolalar shtrixli.
+  - Brainstem kesimlari MNI aksial emas — **neyraksisga perpendikulyar**:
+    atlas geometriyasidan o'q (medulla y−38,z−55 → midbrain y−24,z−12),
+    normal (0, 0.31, 0.95), `plane.ts` `brainstemPlane(z)`. Diensefalon —
+    koronal (normal +y), miyacha — tishsimon yadro markazi orqali.
+  - Ko'ruvchi `ui/SectionViewer.tsx`: raqamlar, "Nomlar" (atlas uslubida
+    ikki ustun + yetakchi chiziqlar, `labelLayout`), viktorina (nomlar
+    yashirin, tasodifiy, ball), kategoriya filtri, lokator (o'rta sagittal
+    mini-sxema, daraja chiziqlari bosiladi), ← → klavishlar, "Daraja haqida"
+    tabi. Yo'nalish: rostraldan qaralgan, dorsal yuqorida → bemorning chap
+    tomoni ekranning o'ngida (3D kesim kamerasi bilan bir xil).
+  - 3D: `BrainScene` 4-kesim tekisligi (`clipPlanes[3]`, qiyshiq);
+    `buildMarkers()` — har kesim tekisligining gross meshlar bilan haqiqiy
+    kesishuv konturi (`contour()`, LineSegments2 qalin chiziq, depthTest
+    o'chiq) + DOM nishon (`.section-marker`, `pin.side/off/dy` bilan
+    siljitiladi). "3D da kesish" → `cutSection(id, layers)`: rostral/oldingi
+    yarim olib tashlanadi, kamera kesim yuzasiga qaraydi; kesim yuzalari
+    endi har tuzilma rangida (`MeshBasicMaterial` BackSide cap) — bstem/suit
+    /julich qatlamlari bilan rangli atlas kesimi bo'ladi.
 - 🟡 5-bosqich: kontent — boshlandi (2026-09-20), 281 yozuv:
   - Mexanizm: `src/data/content/*.json` — konsept id bo'yicha (chap/o'ng
     juftlik bitta yozuv): `la`, `description`, `role`, `clinical` (en/uz),
@@ -330,3 +375,15 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     bajariladi. Qoida: bitta yo'nalishli bog'liqlik saqlang (levels.ts →
     index.ts, hech qachon aksincha); UI komponentlari kerak bo'lsa
     levels.ts'dan to'g'ridan-to'g'ri import qilsin.
+15. Python `open(p,'w').write(open(p).read())` — 'w' faylni OLDIN bo'shatadi,
+    keyin bo'sh o'qiladi → fayl yo'qoladi (BrainScene.ts shunday o'chdi, git
+    bilan tiklandi). Patchlarni `/tmp/p.py` faylga yozing, matnli o'zgartirishda
+    uch qo'shtirnoq (`"""`) ishlating — ichida `'` va `"` aralash bo'ladi.
+16. NCBI Bookshelf (StatPearls) curl/WebFetch'ga reCAPTCHA qaytaradi — HTTP 200
+    havola to'g'riligini isbotlamaydi. NBK raqamini WebSearch bilan sarlavhaga
+    solishtiring. 2026-10-02 da topildi: Medulla = NBK551589, Midbrain =
+    NBK551509, Pons = NBK560589, Brainstem = NBK544297 (oldingi
+    `brainstem.json`dagi 551684/551599/535392 NOTO'G'RI edi — tuzatildi).
+    DOI'larni Crossref sarlavhasi bilan tekshiring (HTTP 200 emas).
+17. Sxema raqamlari ustma-ust tushsa (yadro tutam ichida) — `at: [x, y]`
+    bilan siljiting; chizish tartibi = `items` tartibi (PAG v4'dan oldin).

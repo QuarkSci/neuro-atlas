@@ -7,6 +7,7 @@ import { SideRail } from '@/ui/SideRail'
 import { SystemsPanel } from '@/ui/SystemsPanel'
 import { SearchPanel } from '@/ui/SearchPanel'
 import { PlanesPanel } from '@/ui/ViewControls'
+import { SectionViewer } from '@/ui/SectionViewer'
 import { BottomBar } from '@/ui/BottomBar'
 import { Inspector } from '@/ui/Inspector'
 import { About } from '@/ui/About'
@@ -50,6 +51,7 @@ export default function App() {
       <Loading />
       <Inspector />
       <About />
+      <SectionViewer />
     </main>
   )
 }

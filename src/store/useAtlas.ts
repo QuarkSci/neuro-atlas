@@ -5,8 +5,8 @@ import { ALL_SYSTEM_IDS, LAYER_BY_ID } from '@/data'
 export type Lang = 'en' | 'uz'
 export type View = 'three-quarter' | 'lateral' | 'front' | 'top'
 export type Panel = 'systems' | 'search' | null
-/** Which slider the bottom dock drives. */
-export type Mode = 'explode' | 'peel'
+/** Which control the bottom dock shows: explode slider, peel slider or the cross-section atlas. */
+export type Mode = 'explode' | 'peel' | 'sections'
 export type Focus = { kind: 'concept'; id: string } | { kind: 'part'; id: string }
 
 /** One of the three orthogonal cross-section planes. */
@@ -46,6 +46,12 @@ export interface AtlasState {
   cutaway: boolean
   /** Sagittal (x), coronal (y) and axial (z) clip planes, each independently toggled. */
   clip: Record<ClipAxis, ClipState>
+  /** Cross-section schematic open in the viewer (see data/sections), or null. */
+  sectionId: string | null
+  /** Section whose oblique plane currently cuts the 3D model, or null. */
+  sectionCut: string | null
+  /** Systems shown before entering the sections mode, restored on leaving it. */
+  sectionsPrevVisible: SystemId[] | null
   /** Bumped to force a camera re-fit. */
   resetTick: number
   panel: Panel
@@ -72,6 +78,10 @@ export interface AtlasState {
   setClipAxis: (axis: ClipAxis, patch: Partial<ClipState>) => void
   /** Jumps to a classic teaching cross-section: axial clip only, at this MNI z. */
   jumpToLevel: (mm: number) => void
+  /** Opens (or closes, with null) the cross-section viewer. */
+  openSection: (id: string | null) => void
+  /** Cuts the 3D model along a section's plane (null removes the cut). */
+  cutSection: (id: string | null, layers?: LayerId[]) => void
   setPanel: (p: Panel) => void
   setInspectorOpen: (v: boolean) => void
   setAboutOpen: (v: boolean) => void
@@ -113,7 +123,13 @@ const sceneDefaults = {
   panel: null as Panel,
   inspectorOpen: false,
   hovered: null as string | null,
+  sectionId: null as string | null,
+  sectionCut: null as string | null,
+  sectionsPrevVisible: null as SystemId[] | null,
 }
+
+/** Systems that make sense around brainstem / diencephalon cross-sections. */
+const SECTION_SYSTEMS: SystemId[] = ['brainstem', 'diencephalon', 'cerebellum']
 
 export const useAtlas = create<AtlasState>((set) => ({
   lang: initialLang(),
@@ -155,7 +171,35 @@ export const useAtlas = create<AtlasState>((set) => ({
   clearSelection: () => set({ selected: [], focus: null, isolate: false, inspectorOpen: false }),
   setIsolate: (isolate) => set({ isolate, explode: 0, peel: 0 }),
   setExplode: (explode) => set((s) => ({ explode, peel: 0, autoRotate: false, view: explode > 0.8 ? 'front' : s.view })),
-  setMode: (mode) => set({ mode, explode: 0, peel: 0 }),
+  setMode: (mode) =>
+    set((s) => {
+      if (mode === s.mode) return {}
+      const base = { mode, explode: 0, peel: 0, isolate: false }
+      // Entering the section atlas: show the deep structures the level
+      // markers sit on, from the side where the brainstem levels read best.
+      if (mode === 'sections')
+        return { ...base, sectionsPrevVisible: s.visible, visible: SECTION_SYSTEMS.filter((id) => ALL_SYSTEM_IDS.includes(id)), cutaway: false, view: 'lateral' as View, resetTick: s.resetTick + 1, selected: [], focus: null, inspectorOpen: false, autoRotate: false }
+      // Leaving it: drop the cut and hand back whatever was shown before.
+      if (s.mode === 'sections') return { ...base, sectionCut: null, sectionId: null, visible: s.sectionsPrevVisible ?? s.visible, sectionsPrevVisible: null, resetTick: s.resetTick + 1 }
+      return base
+    }),
+  openSection: (sectionId) => set({ sectionId, panel: null }),
+  cutSection: (sectionCut, layers) =>
+    set((s) => ({
+      sectionCut,
+      sectionId: null,
+      cutaway: false,
+      isolate: false,
+      explode: 0,
+      peel: 0,
+      autoRotate: false,
+      selected: [],
+      focus: null,
+      inspectorOpen: false,
+      layers: layers ? [...new Set([...s.layers.filter((x) => !(LAYER_BY_ID.get(x)?.parcellation && layers.some((y) => LAYER_BY_ID.get(y)?.parcellation))), ...layers])] : s.layers,
+      // A null cut returns to the overview of all level markers.
+      ...(sectionCut ? {} : { view: 'lateral' as View, resetTick: s.resetTick + 1 }),
+    })),
   setPeel: (peel) => set({ peel: Math.max(0, Math.min(1, peel)), explode: 0, isolate: false }),
   setView: (view) => set((s) => ({ view, resetTick: s.resetTick + 1, autoRotate: false })),
   setAutoRotate: (autoRotate) => set({ autoRotate }),
@@ -166,6 +210,7 @@ export const useAtlas = create<AtlasState>((set) => ({
   setCutaway: (cutaway) =>
     set((s) => ({
       cutaway,
+      sectionCut: cutaway ? null : s.sectionCut,
       autoRotate: false,
       clip: cutaway && !s.clip.sagittal.enabled && !s.clip.coronal.enabled && !s.clip.axial.enabled ? { ...s.clip, sagittal: { ...s.clip.sagittal, enabled: true } } : s.clip,
     })),
@@ -193,7 +238,7 @@ export const useAtlas = create<AtlasState>((set) => ({
   setHovered: (hovered) => set({ hovered }),
   setProgress: (progress) => set({ progress }),
   setError: (error) => set({ error }),
-  reset: () => set((s) => ({ ...sceneDefaults, resetTick: s.resetTick + 1 })),
+  reset: () => set((s) => ({ ...sceneDefaults, mode: s.mode === 'sections' ? 'sections' : 'explode', visible: s.mode === 'sections' ? s.visible : sceneDefaults.visible, sectionsPrevVisible: s.sectionsPrevVisible, view: s.mode === 'sections' ? 'lateral' : sceneDefaults.view, resetTick: s.resetTick + 1 })),
 }))
 
 if (import.meta.env.DEV) (window as unknown as { __atlas: typeof useAtlas }).__atlas = useAtlas

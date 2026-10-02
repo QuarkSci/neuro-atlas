@@ -1,7 +1,8 @@
-import { Blocks, Brain, Layers2, RotateCcw } from 'lucide-react'
+import { Blocks, Brain, Layers2, RotateCcw, ScanLine, X } from 'lucide-react'
 import { DEPTH_LEVELS } from '@/data'
 import { useL, useT } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
+import { SECTIONS, SECTION_BY_ID, SECTION_REGIONS } from '@/data/sections'
 
 /** Half the knob's width — the travel of a range input is inset by this much at both ends. */
 const KNOB = 12
@@ -87,11 +88,65 @@ function ModeTabs() {
         <Layers2 size={20} />
         <span>{t.tabPeel}</span>
       </button>
+      <button role="tab" className={`mode-tab ${mode === 'sections' ? 'active' : ''}`} aria-selected={mode === 'sections'} onClick={() => setMode('sections')}>
+        <ScanLine size={20} />
+        <span>{t.tabSections}</span>
+      </button>
     </nav>
   )
 }
 
 const EXPLODE_TICKS = [0, 0.25, 0.5, 0.75, 1]
+
+/**
+ * Sections mode: every cross-section level as a code chip, grouped by
+ * region — the same levels the model shows as outlines. While the model is
+ * cut along one of them, the strip offers the figure and the way back.
+ */
+function SectionStrip() {
+  const t = useT()
+  const l = useL()
+  const { sectionCut, openSection, cutSection } = useAtlas()
+  const cut = sectionCut ? SECTION_BY_ID.get(sectionCut) : undefined
+  return (
+    <div className="section-strip glass">
+      {cut ? (
+        <div className="strip-cut">
+          <span className="sv-code">{cut.code}</span>
+          <strong>{l(cut.title)}</strong>
+          <button className="strip-btn accent" onClick={() => openSection(cut.id)}>
+            <ScanLine size={14} /> {t.svFace}
+          </button>
+          <button className="strip-btn" onClick={() => cutSection(null)}>
+            <X size={14} /> {t.svUncut}
+          </button>
+        </div>
+      ) : (
+        <>
+          <div className="strip-hint">{t.svStrip}</div>
+          <div className="strip-regions">
+            {SECTION_REGIONS.map((r) => {
+              const list = SECTIONS.filter((s) => s.region === r.id)
+              if (!list.length) return null
+              return (
+                <div className="strip-region" key={r.id}>
+                  <span>{l(r.name)}</span>
+                  <div>
+                    {list.map((s) => (
+                      <button key={s.id} className="sv-chip" onClick={() => openSection(s.id)} title={l(s.title)}>
+                        {s.code}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
 
 /** The whole bottom stack: the active mode's slider, its dial, and the mode tabs. */
 export function BottomBar() {
@@ -106,7 +161,9 @@ export function BottomBar() {
   return (
     <div className="bottom-dock">
       <div className="dock-row">
-        {mode === 'peel' ? (
+        {mode === 'sections' ? (
+          <SectionStrip />
+        ) : mode === 'peel' ? (
           <div className="slider-card glass">
             <div className="flight-label">
               <strong>{shown ? l(shown.name) : ''}</strong>

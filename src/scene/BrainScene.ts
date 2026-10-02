@@ -10,6 +10,11 @@ import { createGround } from './ground'
 import type { LoadedGeometry } from './loader'
 import { createPartMaterial, tint, type PartMaterial } from './materials'
 import { PointerTap } from './PointerTap'
+import { LineSegments2 } from 'three/examples/jsm/lines/LineSegments2.js'
+import { LineSegmentsGeometry } from 'three/examples/jsm/lines/LineSegmentsGeometry.js'
+import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial.js'
+import { SECTIONS, scenePlane, type Section } from '@/data/sections'
+import type { Mode } from '@/store/useAtlas'
 
 // Hover picking runs a raycast against every visible mesh each frame the
 // pointer moves; with hundreds of 5–40k-triangle meshes that is only smooth
@@ -30,6 +35,10 @@ export interface SceneSnapshot {
   autoRotate: boolean
   cutaway: boolean
   clip: Record<ClipAxis, ClipState>
+  mode: Mode
+  sectionCut: string | null
+  /** Viewer open: markers stay but the scene behind is idle. */
+  sectionId: string | null
   resetTick: number
   inspectorOpen: boolean
   hovered: string | null
@@ -39,6 +48,18 @@ export interface SceneCallbacks {
   onSelect: (id: string | null) => void
   onHover: (id: string | null) => void
   onError: (message: string) => void
+  /** A cross-section level marker was pressed. */
+  onSection: (id: string) => void
+}
+
+/** One cross-section level drawn on the model: its outline and the badge that opens it. */
+interface Marker {
+  section: Section
+  line: LineSegments2 | null
+  material: LineMaterial
+  pill: HTMLButtonElement
+  /** Where the badge hangs, scene space. */
+  anchor: T.Vector3
 }
 
 interface PartEntry {
@@ -133,10 +154,18 @@ export class BrainScene {
    * a disabled plane is just pushed far away (huge constant) so it never
    * clips anything, which is cheaper than toggling arrays on every material.
    */
-  private clipPlanes: [T.Plane, T.Plane, T.Plane] = [new T.Plane(new T.Vector3(1, 0, 0), 1e5), new T.Plane(new T.Vector3(0, 0, 1), 1e5), new T.Plane(new T.Vector3(0, 1, 0), 1e5)]
+  private clipPlanes: [T.Plane, T.Plane, T.Plane, T.Plane] = [
+    new T.Plane(new T.Vector3(1, 0, 0), 1e5),
+    new T.Plane(new T.Vector3(0, 0, 1), 1e5),
+    new T.Plane(new T.Vector3(0, 1, 0), 1e5),
+    // Fourth: the oblique plane of a textbook cross-section (sections mode).
+    new T.Plane(new T.Vector3(0, 1, 0), 1e5),
+  ]
+  private markers: Marker[] = []
+  private markerLayer: HTMLDivElement
+  private markersBuilt = false
+  private cutKey = ''
   private clipIndicators: T.Group[] = []
-  /** Shared matte material for cut interiors, so a slice reads as solid tissue rather than a mirrored shell. */
-  private interiorMaterial: T.MeshStandardMaterial
   private labelLayer: HTMLDivElement
   /** Assembled bounds of the whole model. */
   private modelBox = new T.Box3()
@@ -167,6 +196,9 @@ export class BrainScene {
     this.labelLayer = document.createElement('div')
     this.labelLayer.className = 'part-labels'
     host.appendChild(this.labelLayer)
+    this.markerLayer = document.createElement('div')
+    this.markerLayer.className = 'section-markers'
+    host.appendChild(this.markerLayer)
 
     // Bounds first: lights, ground, camera and the clip indicator are all
     // sized from them. Only the brain proper counts — the skull, dura and
@@ -225,21 +257,6 @@ export class BrainScene {
     this.ground.position.z = this.modelCentre.z
     this.scene.add(this.ground)
 
-    // A closed shell's exterior material is DoubleSide, so its own backface
-    // would otherwise render at the exact same depth as this interior cap
-    // and win the depth test at random (z-fighting). The polygon offset
-    // nudges the cap fractionally closer to the camera so it always wins.
-    this.interiorMaterial = new T.MeshStandardMaterial({
-      color: '#9c7f78',
-      roughness: 0.95,
-      metalness: 0.0,
-      side: T.BackSide,
-      clippingPlanes: this.clipPlanes,
-      polygonOffset: true,
-      polygonOffsetFactor: -4,
-      polygonOffsetUnits: -4,
-    })
-
     this.addGeometries(geometries)
 
     this.clipIndicators = (['sagittal', 'coronal', 'axial'] as ClipAxis[]).map((axis) => this.makeClipIndicator(axis))
@@ -288,7 +305,19 @@ export class BrainScene {
       // A back-facing child sharing the same geometry: invisible normally
       // (front and back faces coincide), it only becomes visible where the
       // clip plane has sliced the shell open.
-      const cap = new T.Mesh(geometry, this.interiorMaterial)
+      // Coloured per structure (flat, unlit) so a cut reads like a stained
+      // atlas section: each nucleus/tract face keeps its own colour.
+      const cap = new T.Mesh(
+        geometry,
+        new T.MeshBasicMaterial({
+          color: material.userData.base.clone().multiplyScalar(0.82),
+          side: T.BackSide,
+          clippingPlanes: this.clipPlanes,
+          polygonOffset: true,
+          polygonOffsetFactor: -4,
+          polygonOffsetUnits: -4,
+        }),
+      )
       cap.raycast = () => {}
       mesh.add(cap)
       const bounds = geometry.boundingBox!.clone()
@@ -365,6 +394,7 @@ export class BrainScene {
     this.env.dispose()
     this.renderer.dispose()
     this.labelLayer.remove()
+    this.markerLayer.remove()
     el.remove()
   }
 
@@ -432,6 +462,7 @@ export class BrainScene {
     this.camera.aspect = w / h
     this.camera.updateProjectionMatrix()
     this.renderer.setSize(w, h)
+    for (const m of this.markers) m.material.resolution.set(w, h)
     this.layoutKey = ''
     this.isolateKey = ''
     this.lastFitAmount = -1
@@ -548,7 +579,7 @@ export class BrainScene {
    * by bounding sphere rather than per-axis extents so it holds for any view
    * direction, including the near-vertical superior view.
    */
-  private fitBox(box: T.Box3, view: View, insets: Insets, animate: boolean, margin = 1.08) {
+  private fitBox(box: T.Box3, view: View | T.Vector3, insets: Insets, animate: boolean, margin = 1.08) {
     const w = this.host.clientWidth,
       h = this.host.clientHeight
     const left = insets.left,
@@ -564,7 +595,8 @@ export class BrainScene {
     const hfov = Math.atan(Math.tan(T.MathUtils.degToRad(this.camera.fov / 2)) * this.camera.aspect) * (availW / w)
     const distance = Math.max(radius / Math.sin(vfov), radius / Math.sin(hfov)) * margin
     this.controls.maxDistance = Math.max(3000, distance * 3)
-    this.goTo(centre.clone().addScaledVector(this.viewDirection(view), distance), centre, animate)
+    const dir = view instanceof T.Vector3 ? view : this.viewDirection(view)
+    this.goTo(centre.clone().addScaledVector(dir, distance), centre, animate)
   }
 
   private goTo(pos: T.Vector3, target: T.Vector3, animate: boolean) {
@@ -594,6 +626,11 @@ export class BrainScene {
       return
     }
     if (this.amount < 0.02) {
+      if (s.mode === 'sections' && !s.sectionCut) {
+        const box = this.visibleBox()
+        if (!box.isEmpty()) this.fitBox(box, s.view, this.insets(), animate, 0.78)
+        return
+      }
       if (s.peel > 0.01) {
         const box = this.visibleBox()
         if (!box.isEmpty()) this.fitBox(box, s.view, this.insets(), animate, 0.8)
@@ -736,6 +773,201 @@ export class BrainScene {
     this.dirty = true
   }
 
+  // ── Cross-section markers ───────────────────────────────────────────
+
+  /**
+   * Intersection of a plane with the triangles of every loaded part whose id
+   * matches `match`: the real outline of the structure at that level, as
+   * line-segment pairs (scene space, assembled positions).
+   */
+  private contour(plane: T.Plane, match: RegExp) {
+    const out: number[] = []
+    const a = new T.Vector3(),
+      b = new T.Vector3(),
+      c = new T.Vector3()
+    const pts: T.Vector3[] = []
+    const cross = (p: T.Vector3, q: T.Vector3, dp: number, dq: number) => pts.push(p.clone().lerp(q, dp / (dp - dq)))
+    for (const part of this.parts) {
+      if (!match.test(part.id)) continue
+      const g = part.mesh.geometry
+      const pos = g.getAttribute('position')
+      const idx = g.getIndex()
+      const count = idx ? idx.count : pos.count
+      for (let t = 0; t < count; t += 3) {
+        const ia = idx ? idx.getX(t) : t,
+          ib = idx ? idx.getX(t + 1) : t + 1,
+          ic = idx ? idx.getX(t + 2) : t + 2
+        a.fromBufferAttribute(pos, ia)
+        b.fromBufferAttribute(pos, ib)
+        c.fromBufferAttribute(pos, ic)
+        const da = plane.distanceToPoint(a),
+          db = plane.distanceToPoint(b),
+          dc = plane.distanceToPoint(c)
+        if ((da > 0 && db > 0 && dc > 0) || (da < 0 && db < 0 && dc < 0)) continue
+        pts.length = 0
+        if (da * db < 0) cross(a, b, da, db)
+        if (db * dc < 0) cross(b, c, db, dc)
+        if (dc * da < 0) cross(c, a, dc, da)
+        if (pts.length === 2) out.push(pts[0].x, pts[0].y, pts[0].z, pts[1].x, pts[1].y, pts[1].z)
+      }
+    }
+    return out
+  }
+
+  /** Bounds of every loaded part whose id matches. */
+  private matchBox(match: RegExp) {
+    const box = new T.Box3()
+    for (const p of this.parts) if (match.test(p.id)) box.union(p.bounds)
+    return box
+  }
+
+  /** Builds every level marker once (the gross meshes they trace are loaded at start-up). */
+  private buildMarkers() {
+    this.markersBuilt = true
+    const res = new T.Vector2(this.host.clientWidth, this.host.clientHeight)
+    for (const section of SECTIONS) {
+      const material = new LineMaterial({ color: 0x5ad1ff, linewidth: 2.4, transparent: true, opacity: 0.95, depthTest: false, resolution: res })
+      const sp = scenePlane(section)
+      const match = section.contour ?? /$^/
+      let line: LineSegments2 | null = null
+      let box = new T.Box3()
+      // Extreme points of the outline in each direction: the badge hangs off one.
+      const ext = { front: null as T.Vector3 | null, back: null as T.Vector3 | null, top: null as T.Vector3 | null, bottom: null as T.Vector3 | null }
+      if (sp) {
+        const plane = new T.Plane().setFromNormalAndCoplanarPoint(new T.Vector3(...sp.normal).normalize(), new T.Vector3(...sp.point))
+        const segs = this.contour(plane, match)
+        if (segs.length) {
+          line = new LineSegments2(new LineSegmentsGeometry().setPositions(segs), material)
+          line.renderOrder = 30
+          line.visible = false
+          this.scene.add(line)
+          for (let i = 0; i < segs.length; i += 3) {
+            const q = new T.Vector3(segs[i], segs[i + 1], segs[i + 2])
+            box.expandByPoint(q)
+            if (!ext.front || q.z > ext.front.z) ext.front = q
+            if (!ext.back || q.z < ext.back.z) ext.back = q
+            if (!ext.top || q.y > ext.top.y) ext.top = q
+            if (!ext.bottom || q.y < ext.bottom.y) ext.bottom = q
+          }
+        }
+      }
+      if (box.isEmpty()) box = this.matchBox(match)
+      // Badge position: the end of the outline named by `pin`, pushed a few
+      // millimetres clear of it (scene: +z anterior, +y superior).
+      const pin = section.pin ?? { side: 'front' }
+      const centre = box.getCenter(new T.Vector3())
+      const off = 6 + (pin.off ?? 0)
+      const at = ext[pin.side]
+      const anchor =
+        pin.side === 'front'
+          ? new T.Vector3(centre.x, at?.y ?? centre.y, (at?.z ?? box.max.z) + off)
+          : pin.side === 'back'
+            ? new T.Vector3(centre.x, at?.y ?? centre.y, (at?.z ?? box.min.z) - off)
+            : pin.side === 'top'
+              ? new T.Vector3(centre.x, (at?.y ?? box.max.y) + off, at?.z ?? centre.z)
+              : new T.Vector3(centre.x, (at?.y ?? box.min.y) - off, at?.z ?? centre.z)
+      anchor.y += pin.dy ?? 0
+      const pill = document.createElement('button')
+      pill.className = 'section-marker'
+      pill.type = 'button'
+      pill.dataset.region = section.region
+      const code = document.createElement('b')
+      code.textContent = section.code
+      const name = document.createElement('span')
+      pill.append(code, name)
+      pill.hidden = true
+      pill.addEventListener('click', (e) => {
+        e.stopPropagation()
+        this.cb.onSection(section.id)
+      })
+      pill.addEventListener('pointerenter', () => {
+        material.color.set(0xffd166)
+        material.linewidth = 3.6
+        this.dirty = true
+      })
+      pill.addEventListener('pointerleave', () => {
+        material.color.set(0x5ad1ff)
+        material.linewidth = 2.4
+        this.dirty = true
+      })
+      this.markerLayer.appendChild(pill)
+      this.markers.push({ section, line, material, pill, anchor })
+    }
+  }
+
+  /** Marker names in the active language. */
+  setMarkerNames(names: Record<string, string>) {
+    for (const m of this.markers) {
+      const span = m.pill.querySelector('span')
+      if (span) span.textContent = names[m.section.id] ?? ''
+    }
+  }
+
+  private markerNames: Record<string, string> = {}
+  setSectionNames(names: Record<string, string>) {
+    this.markerNames = names
+    this.setMarkerNames(names)
+  }
+
+  private updateMarkers() {
+    const s = this.state
+    const on = !!s && s.mode === 'sections' && !s.isolate && this.amount < 0.02
+    if (on && !this.markersBuilt) {
+      this.buildMarkers()
+      this.setMarkerNames(this.markerNames)
+    }
+    if (this.markerLayer.hidden !== !on) this.markerLayer.hidden = !on
+    const w = this.host.clientWidth,
+      h = this.host.clientHeight
+    const v = new T.Vector3()
+    for (const m of this.markers) {
+      const active = on && (!s!.sectionCut || s!.sectionCut === m.section.id)
+      if (m.line && m.line.visible !== active) {
+        m.line.visible = active
+        this.dirty = true
+      }
+      let show = active
+      if (show) {
+        v.copy(m.anchor).project(this.camera)
+        if (v.z < -1 || v.z > 1) show = false
+        else m.pill.style.transform = `translate(-50%, -50%) translate(${(((v.x + 1) * w) / 2).toFixed(1)}px, ${(((1 - v.y) * h) / 2).toFixed(1)}px)`
+      }
+      m.pill.classList.toggle('active', !!s?.sectionCut && s.sectionCut === m.section.id)
+      if (m.pill.hidden !== !show) m.pill.hidden = !show
+    }
+  }
+
+  /**
+   * Cuts the model along a section's own (oblique) plane, keeping the
+   * caudal / posterior half, and turns the camera to look at the cut face
+   * from the removed side — the way the textbook figure is drawn.
+   */
+  private applySectionCut(id: string | null) {
+    const plane = this.clipPlanes[3]
+    const section = id ? SECTIONS.find((x) => x.id === id) : undefined
+    const sp = section ? scenePlane(section) : null
+    if (!section || !sp) {
+      plane.constant = 1e5
+      return
+    }
+    const n = new T.Vector3(...sp.normal).normalize()
+    const p = new T.Vector3(...sp.point)
+    plane.normal.copy(n).negate()
+    plane.constant = -plane.normal.dot(p)
+    const marker = this.markers.find((m) => m.section.id === id)
+    const box = new T.Box3()
+    if (marker?.line) {
+      marker.line.geometry.computeBoundingBox()
+      box.copy(marker.line.geometry.boundingBox!)
+    }
+    if (box.isEmpty()) box.setFromCenterAndSize(p, new T.Vector3(40, 40, 40))
+    box.expandByScalar(section.region === 'cerebellum' ? 8 : 14)
+    // Tilt the view a little off-axis so the cut face reads as a surface on a
+    // solid, not a flat drawing.
+    const dir = n.clone().add(new T.Vector3(0.18, 0.1, 0)).normalize()
+    this.fitBox(box, dir, this.insets(), true, 1.0)
+  }
+
   // ── Labels ──────────────────────────────────────────────────────────
 
   private updateLabels() {
@@ -790,6 +1022,17 @@ export class BrainScene {
       this.updateClipPlane('sagittal', 0, s)
       this.updateClipPlane('coronal', 1, s)
       this.updateClipPlane('axial', 2, s)
+      this.dirty = true
+    }
+    // Oblique section cut (sections mode); built markers give the framing box.
+    const cutKey = s.mode === 'sections' ? (s.sectionCut ?? '') : ''
+    if (cutKey !== this.cutKey) {
+      if (cutKey && !this.markersBuilt) {
+        this.buildMarkers()
+        this.setMarkerNames(this.markerNames)
+      }
+      this.cutKey = cutKey
+      this.applySectionCut(cutKey || null)
       this.dirty = true
     }
     const axes: ClipAxis[] = ['sagittal', 'coronal', 'axial']
@@ -928,6 +1171,7 @@ export class BrainScene {
       this.settle--
       this.renderer.render(this.scene, this.camera)
       this.updateLabels()
+      this.updateMarkers()
       this.dirty = false
     }
   }

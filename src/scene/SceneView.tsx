@@ -5,6 +5,7 @@ import { useAtlas, type AtlasState, type Lang } from '@/store/useAtlas'
 import { useT } from '@/i18n'
 import { BrainScene, type SceneSnapshot } from './BrainScene'
 import { loadGeometries } from './loader'
+import { SECTIONS } from '@/data/sections'
 
 const snapshot = (s: AtlasState): SceneSnapshot => ({
   visible: s.visible,
@@ -17,10 +18,15 @@ const snapshot = (s: AtlasState): SceneSnapshot => ({
   autoRotate: s.autoRotate,
   cutaway: s.cutaway,
   clip: s.clip,
+  mode: s.mode,
+  sectionCut: s.sectionCut,
+  sectionId: s.sectionId,
   resetTick: s.resetTick,
   inspectorOpen: s.inspectorOpen,
   hovered: s.hovered,
 })
+
+const sectionNamesFor = (lang: Lang) => Object.fromEntries(SECTIONS.map((s) => [s.id, s.title[lang] ?? s.title.en]))
 
 const labelsFor = (lang: Lang, ids?: Set<string>) => Object.fromEntries(LEAF_PARTS.filter((p) => !ids || ids.has(p.id)).map((p) => [p.id, p.name[lang] ?? p.name.en]))
 
@@ -93,10 +99,12 @@ export function SceneView() {
             if (PART_BY_ID.has(id)) s.selectParts([id], { kind: 'part', id })
           },
           onHover: (id) => store.getState().setHovered(id),
+          onSection: (id) => store.getState().openSection(id),
           onError: (code) => setError(code === 'context-lost' ? tRef.current.contextLost : tRef.current.webgl),
         })
         for (const l of firstLayers) loaded.add(l)
         scene.setLabels(labelsFor(lang))
+        scene.setSectionNames(sectionNamesFor(lang))
         scene.setState(snapshot(store.getState()))
         if (import.meta.env.DEV) (window as unknown as { __scene: BrainScene }).__scene = scene
         setProgress(100)
@@ -113,6 +121,7 @@ export function SceneView() {
       if (s.lang !== lang) {
         lang = s.lang
         scene.setLabels(labelsFor(lang))
+        scene.setSectionNames(sectionNamesFor(lang))
       }
       for (const l of neededLayers(s)) void loadLayer(l)
     })
