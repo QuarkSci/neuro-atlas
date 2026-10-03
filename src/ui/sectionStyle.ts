@@ -34,3 +34,29 @@ export const FIBRE = new Set([
 export const CATEGORY_ORDER: SectionCategory[] = [
   'motor', 'sensory', 'cn-motor', 'cn-sensory', 'autonomic', 'cerebellar', 'visual-auditory', 'relay', 'hypothalamic', 'limbic', 'modulatory', 'pathway', 'csf', 'region',
 ]
+
+/**
+ * How a structure takes a stain. Myelin (Weigert / Luxol fast blue) stains
+ * fibre tracts dark and leaves grey matter pale; Nissl (cresyl violet)
+ * stains neuronal cell bodies and leaves tracts pale — the two complementary
+ * views every brainstem atlas plate is printed in.
+ */
+export type Tissue = 'fibre' | 'grey' | 'mixed' | 'csf'
+const MIXED = new Set(['tegm-med', 'tegm-pons', 'tegm-mid', 'basis-pontis', 'rf', 'pprf', 'zi', 'lha', 'snr'])
+const WHITE = new Set(['cb-wm', 'hemi-wm'])
+export function tissueOf(id: string, cat: SectionCategory): Tissue {
+  if (cat === 'csf') return 'csf'
+  if (FIBRE.has(id) || WHITE.has(id) || id.endsWith('-root') || cat === 'pathway') return 'fibre'
+  if (MIXED.has(id)) return 'mixed'
+  return 'grey'
+}
+
+export type Stain = 'myelin' | 'nissl'
+
+/** Fill for each tissue under each stain (pattern ids are defined by the figure). */
+export const STAIN: Record<Stain, Record<Tissue, string>> = {
+  myelin: { fibre: 'url(#st-myelin-fibre)', grey: '#e9dfc8', mixed: 'url(#st-myelin-mixed)', csf: '#0f1319' },
+  nissl: { fibre: '#f1ebf3', grey: 'url(#st-nissl-grey)', mixed: 'url(#st-nissl-mixed)', csf: '#0f1319' },
+}
+/** Large-neuron motor nuclei stain darkest in Nissl. */
+export const NISSL_DARK = new Set(['cn-motor'])

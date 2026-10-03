@@ -14,6 +14,7 @@ import { LineSegments2 } from 'three/examples/jsm/lines/LineSegments2.js'
 import { LineSegmentsGeometry } from 'three/examples/jsm/lines/LineSegmentsGeometry.js'
 import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial.js'
 import { SECTIONS, scenePlane, type Section } from '@/data/sections'
+import { chainLoops, decimate, offsetLoop, planeBasis, sliceSegments, smoothLoop, unionOutline } from './slice'
 import type { Mode } from '@/store/useAtlas'
 
 // Hover picking runs a raycast against every visible mesh each frame the
@@ -58,8 +59,11 @@ interface Marker {
   line: LineSegments2 | null
   material: LineMaterial
   pill: HTMLButtonElement
-  /** Where the badge hangs, scene space. */
+  /** Centre of the outline, scene space (sorts the badge column). */
   anchor: T.Vector3
+  /** Outline points (scene space) the leader line may attach to. */
+  ring: T.Vector3[]
+  lead: SVGPolylineElement
 }
 
 interface PartEntry {
@@ -94,7 +98,12 @@ interface Insets {
 }
 
 /** The atlas renders dark only. */
-const THEME = { clear: '#0b0e14', ground: '#151a22', hemiSky: 0xbfcbe0, hemiGround: 0x1a1d24 } as const
+const THEME = {
+  clear: '#0b0e14',
+  ground: '#151a22',
+  hemiSky: 0xbfcbe0,
+  hemiGround: 0x1a1d24,
+} as const
 
 /** Systems whose extent defines the model for camera framing. */
 const BRAIN_SYSTEMS = new Set<SystemId>(['telencephalon', 'diencephalon', 'brainstem', 'cerebellum', 'ventricles', 'white-matter'])
@@ -164,6 +173,8 @@ export class BrainScene {
   private markers: Marker[] = []
   private markerLayer: HTMLDivElement
   private markersBuilt = false
+  private leaders: SVGSVGElement | null = null
+  private markerInsets: Insets | null = null
   private cutKey = ''
   private clipIndicators: T.Group[] = []
   private labelLayer: HTMLDivElement
@@ -183,7 +194,11 @@ export class BrainScene {
   constructor(host: HTMLElement, geometries: LoadedGeometry[], cb: SceneCallbacks) {
     this.host = host
     this.cb = cb
-    this.renderer = new T.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' })
+    this.renderer = new T.WebGLRenderer({
+      antialias: true,
+      alpha: false,
+      powerPreference: 'high-performance',
+    })
     const r = this.renderer
     r.setPixelRatio(Math.min(devicePixelRatio, host.clientWidth < 768 ? 1.5 : 2))
     r.outputColorSpace = T.SRGBColorSpace
@@ -282,7 +297,10 @@ export class BrainScene {
     // on the same target fires in registration order regardless of the
     // capture flag. A true ancestor genuinely sees the event first during
     // the capture phase, letting us stop it before OrbitControls ever does.
-    this.host.addEventListener('wheel', this.onWheel, { capture: true, passive: false })
+    this.host.addEventListener('wheel', this.onWheel, {
+      capture: true,
+      passive: false,
+    })
 
     this.animate()
   }
@@ -442,7 +460,16 @@ export class BrainScene {
     const group = new T.Group()
     const size = this.modelRadius * 2.3
     const color = axis === 'sagittal' ? 0x0088ff : axis === 'coronal' ? 0x22c07a : 0xf0a030
-    const fill = new T.Mesh(new T.PlaneGeometry(size, size), new T.MeshBasicMaterial({ color, transparent: true, opacity: 0.05, side: T.DoubleSide, depthWrite: false }))
+    const fill = new T.Mesh(
+      new T.PlaneGeometry(size, size),
+      new T.MeshBasicMaterial({
+        color,
+        transparent: true,
+        opacity: 0.05,
+        side: T.DoubleSide,
+        depthWrite: false,
+      }),
+    )
     group.add(fill)
     const edges = new T.EdgesGeometry(new T.PlaneGeometry(size, size))
     const line = new T.LineSegments(edges, new T.LineBasicMaterial({ color, transparent: true, opacity: 0.35 }))
@@ -463,6 +490,7 @@ export class BrainScene {
     this.camera.updateProjectionMatrix()
     this.renderer.setSize(w, h)
     for (const m of this.markers) m.material.resolution.set(w, h)
+    this.markerInsets = null
     this.layoutKey = ''
     this.isolateKey = ''
     this.lastFitAmount = -1
@@ -776,42 +804,29 @@ export class BrainScene {
   // ── Cross-section markers ───────────────────────────────────────────
 
   /**
-   * Intersection of a plane with the triangles of every loaded part whose id
-   * matches `match`: the real outline of the structure at that level, as
-   * line-segment pairs (scene space, assembled positions).
+   * The level's outline on the model: plane ∩ every loaded part matching
+   * `match`, merged into the OUTER boundary only (the left/right half
+   * meshes and the nuclei inside would otherwise draw a tangle of rings),
+   * smoothed and lifted 0.6 mm off the surface so the depth test can hide
+   * the half that runs behind the model. Returns closed loops, scene space.
    */
-  private contour(plane: T.Plane, match: RegExp) {
-    const out: number[] = []
-    const a = new T.Vector3(),
-      b = new T.Vector3(),
-      c = new T.Vector3()
-    const pts: T.Vector3[] = []
-    const cross = (p: T.Vector3, q: T.Vector3, dp: number, dq: number) => pts.push(p.clone().lerp(q, dp / (dp - dq)))
+  private outline(plane: T.Plane, match: RegExp): T.Vector3[][] {
+    const { u, v } = planeBasis(plane.normal, Math.abs(plane.normal.y) > 0.9 ? new T.Vector3(0, 0, -1) : new T.Vector3(0, 1, 0))
+    const origin = plane.coplanarPoint(new T.Vector3())
+    const flat: number[] = []
+    const q = new T.Vector3()
     for (const part of this.parts) {
       if (!match.test(part.id)) continue
-      const g = part.mesh.geometry
-      const pos = g.getAttribute('position')
-      const idx = g.getIndex()
-      const count = idx ? idx.count : pos.count
-      for (let t = 0; t < count; t += 3) {
-        const ia = idx ? idx.getX(t) : t,
-          ib = idx ? idx.getX(t + 1) : t + 1,
-          ic = idx ? idx.getX(t + 2) : t + 2
-        a.fromBufferAttribute(pos, ia)
-        b.fromBufferAttribute(pos, ib)
-        c.fromBufferAttribute(pos, ic)
-        const da = plane.distanceToPoint(a),
-          db = plane.distanceToPoint(b),
-          dc = plane.distanceToPoint(c)
-        if ((da > 0 && db > 0 && dc > 0) || (da < 0 && db < 0 && dc < 0)) continue
-        pts.length = 0
-        if (da * db < 0) cross(a, b, da, db)
-        if (db * dc < 0) cross(b, c, db, dc)
-        if (dc * da < 0) cross(c, a, dc, da)
-        if (pts.length === 2) out.push(pts[0].x, pts[0].y, pts[0].z, pts[1].x, pts[1].y, pts[1].z)
+      const seg = sliceSegments(part.mesh.geometry, plane)
+      for (let i = 0; i < seg.length; i += 3) {
+        q.set(seg[i] - origin.x, seg[i + 1] - origin.y, seg[i + 2] - origin.z)
+        flat.push(q.dot(u), q.dot(v))
       }
     }
-    return out
+    if (!flat.length) return []
+    return unionOutline(chainLoops(flat, 1e-3)).map((loop) =>
+      decimate(offsetLoop(smoothLoop(loop, 3), 0.6), 0.35).map(([a, b]) => origin.clone().addScaledVector(u, a).addScaledVector(v, b)),
+    )
   }
 
   /** Bounds of every loaded part whose id matches. */
@@ -825,48 +840,48 @@ export class BrainScene {
   private buildMarkers() {
     this.markersBuilt = true
     const res = new T.Vector2(this.host.clientWidth, this.host.clientHeight)
+    this.leaders = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+    this.leaders.classList.add('section-leaders')
+    this.markerLayer.appendChild(this.leaders)
     for (const section of SECTIONS) {
-      const material = new LineMaterial({ color: 0x5ad1ff, linewidth: 2.4, transparent: true, opacity: 0.95, depthTest: false, resolution: res })
+      // Depth-tested: the part of the ring behind the brainstem (or behind
+      // the cerebellum) is hidden, as a line drawn on a real specimen would be.
+      const material = new LineMaterial({
+        color: 0x5ad1ff,
+        linewidth: 2.2,
+        transparent: true,
+        opacity: 0.95,
+        depthTest: true,
+        depthWrite: false,
+        resolution: res,
+      })
       const sp = scenePlane(section)
       const match = section.contour ?? /$^/
       let line: LineSegments2 | null = null
-      let box = new T.Box3()
-      // Extreme points of the outline in each direction: the badge hangs off one.
-      const ext = { front: null as T.Vector3 | null, back: null as T.Vector3 | null, top: null as T.Vector3 | null, bottom: null as T.Vector3 | null }
+      const ring: T.Vector3[] = []
       if (sp) {
         const plane = new T.Plane().setFromNormalAndCoplanarPoint(new T.Vector3(...sp.normal).normalize(), new T.Vector3(...sp.point))
-        const segs = this.contour(plane, match)
+        const segs: number[] = []
+        for (const loop of this.outline(plane, match)) {
+          for (let i = 0; i < loop.length; i++) {
+            const a = loop[i],
+              b = loop[(i + 1) % loop.length]
+            segs.push(a.x, a.y, a.z, b.x, b.y, b.z)
+          }
+          ring.push(...loop)
+        }
         if (segs.length) {
           line = new LineSegments2(new LineSegmentsGeometry().setPositions(segs), material)
           line.renderOrder = 30
           line.visible = false
           this.scene.add(line)
-          for (let i = 0; i < segs.length; i += 3) {
-            const q = new T.Vector3(segs[i], segs[i + 1], segs[i + 2])
-            box.expandByPoint(q)
-            if (!ext.front || q.z > ext.front.z) ext.front = q
-            if (!ext.back || q.z < ext.back.z) ext.back = q
-            if (!ext.top || q.y > ext.top.y) ext.top = q
-            if (!ext.bottom || q.y < ext.bottom.y) ext.bottom = q
-          }
         }
       }
-      if (box.isEmpty()) box = this.matchBox(match)
-      // Badge position: the end of the outline named by `pin`, pushed a few
-      // millimetres clear of it (scene: +z anterior, +y superior).
-      const pin = section.pin ?? { side: 'front' }
-      const centre = box.getCenter(new T.Vector3())
-      const off = 6 + (pin.off ?? 0)
-      const at = ext[pin.side]
-      const anchor =
-        pin.side === 'front'
-          ? new T.Vector3(centre.x, at?.y ?? centre.y, (at?.z ?? box.max.z) + off)
-          : pin.side === 'back'
-            ? new T.Vector3(centre.x, at?.y ?? centre.y, (at?.z ?? box.min.z) - off)
-            : pin.side === 'top'
-              ? new T.Vector3(centre.x, (at?.y ?? box.max.y) + off, at?.z ?? centre.z)
-              : new T.Vector3(centre.x, (at?.y ?? box.min.y) - off, at?.z ?? centre.z)
-      anchor.y += pin.dy ?? 0
+      // Maps (no plane) hang their badge off the structure's own box.
+      const box = this.matchBox(match)
+      const anchor = ring.length ? new T.Box3().setFromPoints(ring).getCenter(new T.Vector3()) : box.isEmpty() ? new T.Vector3() : box.getCenter(new T.Vector3())
+      if (!ring.length && !box.isEmpty())
+        ring.push(new T.Vector3(anchor.x, anchor.y, box.max.z), new T.Vector3(anchor.x, anchor.y, box.min.z), new T.Vector3(anchor.x, box.max.y, anchor.z))
       const pill = document.createElement('button')
       pill.className = 'section-marker'
       pill.type = 'button'
@@ -876,22 +891,23 @@ export class BrainScene {
       const name = document.createElement('span')
       pill.append(code, name)
       pill.hidden = true
+      const lead = document.createElementNS('http://www.w3.org/2000/svg', 'polyline')
+      lead.dataset.region = section.region
+      this.leaders.appendChild(lead)
+      const hot = (on: boolean) => {
+        material.color.set(on ? 0xffd166 : 0x5ad1ff)
+        material.linewidth = on ? 3.4 : 2.2
+        lead.classList.toggle('hot', on)
+        this.dirty = true
+      }
       pill.addEventListener('click', (e) => {
         e.stopPropagation()
         this.cb.onSection(section.id)
       })
-      pill.addEventListener('pointerenter', () => {
-        material.color.set(0xffd166)
-        material.linewidth = 3.6
-        this.dirty = true
-      })
-      pill.addEventListener('pointerleave', () => {
-        material.color.set(0x5ad1ff)
-        material.linewidth = 2.4
-        this.dirty = true
-      })
+      pill.addEventListener('pointerenter', () => hot(true))
+      pill.addEventListener('pointerleave', () => hot(false))
       this.markerLayer.appendChild(pill)
-      this.markers.push({ section, line, material, pill, anchor })
+      this.markers.push({ section, line, material, pill, anchor, ring, lead })
     }
   }
 
@@ -917,23 +933,98 @@ export class BrainScene {
       this.setMarkerNames(this.markerNames)
     }
     if (this.markerLayer.hidden !== !on) this.markerLayer.hidden = !on
+    if (!on) {
+      this.markerInsets = null
+      for (const m of this.markers)
+        if (m.line?.visible) {
+          m.line.visible = false
+          this.dirty = true
+        }
+      return
+    }
     const w = this.host.clientWidth,
       h = this.host.clientHeight
+    this.leaders?.setAttribute('viewBox', `0 0 ${w} ${h}`)
     const v = new T.Vector3()
+    const toScreen = (p: T.Vector3): [number, number] | null => {
+      v.copy(p).project(this.camera)
+      return v.z < -1 || v.z > 1 ? null : [((v.x + 1) * w) / 2, ((1 - v.y) * h) / 2]
+    }
+    // Each badge sits just beyond its ring on the anterior side of the
+    // model (where textbooks label the levels), joined by a short leader;
+    // badges that would collide are pushed down one by one, so they read as
+    // a tidy staggered column that follows the brainstem's own tilt.
+    if (!this.markerInsets) this.markerInsets = this.insets()
+    const ins = this.markerInsets
+    const rows: {
+      m: Marker
+      pts: [number, number][]
+      x: number
+      y: number
+      at: [number, number]
+    }[] = []
+    let minX = Infinity,
+      maxX = -Infinity
     for (const m of this.markers) {
-      const active = on && (!s!.sectionCut || s!.sectionCut === m.section.id)
+      const active = !s!.sectionCut || s!.sectionCut === m.section.id
       if (m.line && m.line.visible !== active) {
         m.line.visible = active
         this.dirty = true
       }
-      let show = active
-      if (show) {
-        v.copy(m.anchor).project(this.camera)
-        if (v.z < -1 || v.z > 1) show = false
-        else m.pill.style.transform = `translate(-50%, -50%) translate(${(((v.x + 1) * w) / 2).toFixed(1)}px, ${(((1 - v.y) * h) / 2).toFixed(1)}px)`
+      const pts = active ? (m.ring.map(toScreen).filter(Boolean) as [number, number][]) : []
+      if (!pts.length) {
+        m.pill.hidden = true
+        m.lead.setAttribute('points', '')
+        continue
       }
-      m.pill.classList.toggle('active', !!s?.sectionCut && s.sectionCut === m.section.id)
-      if (m.pill.hidden !== !show) m.pill.hidden = !show
+      for (const [x] of pts) {
+        minX = Math.min(minX, x)
+        maxX = Math.max(maxX, x)
+      }
+      rows.push({ m, pts, x: 0, y: 0, at: pts[0] })
+    }
+    if (!rows.length) return
+    const c0 = toScreen(this.modelCentre),
+      c1 = toScreen(this.modelCentre.clone().add(new T.Vector3(0, 0, 30)))
+    const dx = c0 && c1 ? c1[0] - c0[0] : 0
+    // Seen from the side, badges follow each ring; seen from the front or
+    // top the rings stack on one another, so the badges form one straight
+    // column clear of the whole model instead.
+    const lateral = Math.abs(dx) > 12
+    const right = lateral ? dx > 0 : w - maxX >= minX
+    for (const r of rows) {
+      let best = r.pts[0]
+      for (const p of r.pts) if (right ? p[0] > best[0] : p[0] < best[0]) best = p
+      r.at = best
+      r.x = lateral ? best[0] + (right ? 26 : -26) : right ? maxX + 34 : minX - 34
+      r.y = best[1]
+    }
+    const PW = 46,
+      PH = 27
+    const top = ins.top + 14,
+      bottom = h - ins.bottom - 14
+    rows.sort((a, b) => a.y - b.y)
+    const place = () => {
+      for (let i = 0; i < rows.length; i++) {
+        rows[i].y = Math.max(rows[i].y, top)
+        for (let j = 0; j < i; j++) if (Math.abs(rows[j].x - rows[i].x) < PW && rows[i].y - rows[j].y < PH) rows[i].y = rows[j].y + PH
+      }
+    }
+    place()
+    const over = Math.max(...rows.map((r) => r.y)) - bottom
+    if (over > 0) {
+      for (const r of rows) r.y -= over
+      place()
+    }
+    for (const r of rows) {
+      const [ax, ay] = r.at
+      const end = right ? r.x - 2 : r.x + 2
+      const elbow = right ? Math.max(ax + 8, end - 10) : Math.min(ax - 8, end + 10)
+      r.m.lead.setAttribute('points', `${ax.toFixed(1)},${ay.toFixed(1)} ${elbow.toFixed(1)},${r.y.toFixed(1)} ${end.toFixed(1)},${r.y.toFixed(1)}`)
+      r.m.pill.style.transform = `translate(${right ? '0' : '-100%'}, -50%) translate(${r.x.toFixed(1)}px, ${r.y.toFixed(1)}px)`
+      r.m.pill.classList.toggle('left', !right)
+      r.m.pill.classList.toggle('active', !!s?.sectionCut && s.sectionCut === r.m.section.id)
+      if (r.m.pill.hidden) r.m.pill.hidden = false
     }
   }
 
@@ -964,7 +1055,10 @@ export class BrainScene {
     box.expandByScalar(section.region === 'cerebellum' ? 8 : 14)
     // Tilt the view a little off-axis so the cut face reads as a surface on a
     // solid, not a flat drawing.
-    const dir = n.clone().add(new T.Vector3(0.18, 0.1, 0)).normalize()
+    const dir = n
+      .clone()
+      .add(new T.Vector3(0.18, 0.1, 0))
+      .normalize()
     this.fitBox(box, dir, this.insets(), true, 1.0)
   }
 

@@ -4,16 +4,15 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-10-02 (4b: ko'ndalang kesim atlasi — 17 ta interaktiv sxema, 3D daraja chiziqlari, qiyshiq 3D kesim).
+> Oxirgi yangilanish: 2026-10-03 (4c: toza 3D daraja konturlari, sxemalar atlas-plastinka uslubida, Mielin/Nissl/Atlas (MNI) ko'rinishlari).
 
 ## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
 
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
-   oxirgi commit — "4b-bosqich: ko'ndalang kesim atlasi…" (2026-10-02) yoki
-   undan keyingisi (2026-10-02 holati: HEAD = origin/master = `f8fe0b3` yoki
-   faqat hujjat commit'i undan keyin); `git rev-parse HEAD origin/master` bir
+   oxirgi commit — "4c-bosqich: …kesim ko'rinishlari…" (2026-10-03) yoki
+   undan keyingisi; `git rev-parse HEAD origin/master` bir
    xil bo'lishi kerak.
 3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
    `public/meshes/` 196 MB (9 papka: gross 42, glasser 34, julich 29,
@@ -43,16 +42,30 @@
    node scripts/shot.mjs /tmp/sec.png --lang uz --w 1400 --h 860 --setup "const a=__atlas.getState(); a.setMode('sections'); a.openSection('midbrain-superior-colliculus')" --wait 1500
    ```
    Sxema ichidagi tugmalarni bosish (React delegatsiyasi ishlaydi):
-   `document.querySelectorAll('.sv-item')[n].dispatchEvent(new MouseEvent('click',{bubbles:true}))`
-   (`.sv-tools button` [0]=Raqamlar [1]=Nomlar [2]=Viktorina; `.sv-tabs button` [1]=Daraja haqida).
-   Kesim ma'lumotlari butunligi (har item lug'atda bor, `part` haqiqiy konsept):
+   `document.querySelector('.sv-item[data-id="ml"]').dispatchEvent(new MouseEvent('click',{bubbles:true}))`
+   (`.sv-views button` [0]=Sxema [1]=Mielin [2]=Nissl [3]=Atlas (MNI);
+   `.sv-tools button` [0]=Raqamlar [1]=Nomlar [2]=Viktorina — Atlas
+   ko'rinishida faqat [0]=Nomlar; `.sv-tabs button` [1]=Daraja haqida).
+   BARCHA 17 kesimni bitta brauzer sessiyasida suratga olish (~1 daqiqa;
+   `--full` butun oyna, `--setup` har kesimdan keyin bajariladi; atlas uchun
+   `--wait 7000`):
+   ```bash
+   node scripts/shot-sections.mjs /tmp/sec --only medulla-olive,pons-trigeminal --setup "[...document.querySelectorAll('.sv-views button')][3].click()" --wait 7000
+   ```
+   Sxemalarda ustma-ust tushgan juftlar (kichigining necha foizi yopilgan):
+   `node scripts/audit-sections.mjs --min 0.15`. 2026-10-03 da qolganlari
+   ATAYLAB: konteyner (cg/pag ichidagi yadrolar), tutam ichidagi yadro
+   (fg×ng, fc×nc), icp×vn 18%, crus×snr 13%.
+   Kesim ma'lumotlari butunligi (har item / ground lug'atda bor, `part` haqiqiy konsept):
    ```bash
    python3 - <<'EOF'
    import re, json
-   src=open('src/data/sections/structures-brainstem.ts').read()+open('src/data/sections/structures-forebrain.ts').read()
+   src=''.join(open(f'src/data/sections/structures-{n}.ts').read() for n in ['brainstem','forebrain','ground'])
    keys=set(re.findall(r"^\s+'?([\w-]+)'?: S\(", src, re.M)); used=set()
    for f in ['medulla','pons','midbrain','diencephalon','cerebellum']:
-       ids=re.findall(r"\{ id: '([\w-]+)'", open(f'src/data/sections/{f}.ts').read()); used|=set(ids)
+       t=open(f'src/data/sections/{f}.ts').read()
+       ids=re.findall(r"\{ id: '([\w-]+)'", t)+re.findall(r"ground: '([\w-]+)'", t)+[x for g in re.findall(r"ground: \[([^\]]*)\]", t) for x in re.findall(r"'([\w-]+)'", g)]
+       used|=set(ids)
        print(f, 'missing', [i for i in ids if i not in keys])
    print('unused', sorted(keys-used))
    c={p['concept'] for p in json.load(open('src/data/parts.json'))['parts']}
@@ -79,7 +92,12 @@
 7. Har bosqich oxirida shu faylning 3-bo'limi va `PLAN.md` jadvalini
    yangilang.
 
-**Keyingi vazifa — foydalanuvchi tanlaydi. B (kesim) tugadi; A, C, D tayyor:**
+**Keyingi vazifa — foydalanuvchi tanlaydi. B (kesim) tugadi; A, C, D tayyor.**
+**Doimiy talab (2026-10-03):** har yangi funksiya bilan birga PhD /
+neyroxirurg darajasidagi imkoniyat ham qo'shilsin (foydalanuvchi talaba,
+ularni o'zi bilmaydi — taklif qilib, nima uchunligini qisqa tushuntiring).
+Misollar: MNI koordinata, mm shkala, kesim yuzasi mm², manba atlas,
+bo'yoq turlari, tekislik tenglamasi.
 
 **D) Kesim atlasini kengaytirish (4b davomi, ixtiyoriy).** Qanday qo'shiladi:
 yangi obyekt `src/data/sections/<soha>.ts` massiviga (`Section` tipi,
@@ -92,7 +110,9 @@ screenshot bilan ko'ring, ustma-ust raqamlarni `at` bilan tuzating.
 Taklif etilgan yangi darajalar: obex/area postrema, pontomezensefal
 chegara, bazal yadrolar koronal (oldingi komissura, kaudat boshi, GPi),
 gippokamp/amigdala koronal, ichki kapsula aksial; sxemani 3D kesim yuzasi
-bilan "yonma-yon" ko'rsatish rejimi.
+bilan "yonma-yon" ko'rsatish rejimi. Yangi kesimda `ground` (fon to'qima
+id, `structures-ground.ts`) va `regions[].id` bering — sxemada nomsiz joy
+qolmasin; `scripts/audit-sections.mjs` bilan ustma-ust tushishni tekshiring.
 
 **A) 5-bosqich davomi — kontent (eng ko'p qolgan ish).**
 Format: `src/data/content/<fayl>.json`, kalit = konsept id, qiymat =
@@ -353,6 +373,53 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     yarim olib tashlanadi, kamera kesim yuzasiga qaraydi; kesim yuzalari
     endi har tuzilma rangida (`MeshBasicMaterial` BackSide cap) — bstem/suit
     /julich qatlamlari bilan rangli atlas kesimi bo'ladi.
+- ✅ 4c-bosqich: kesim ko'rinishlari va sifat (2026-10-03) — foydalanuvchi
+  talabi (rasmlar bilan): 3D chiziqlar "gologramma" kabi (orqa tomondagi
+  chiziqlar ham ko'rinardi, chap/o'ng yarim meshlar va ichki yadrolar
+  halqalari chalkashardi), sxemalarda chegaralar aralashgan, hech qaysi
+  guruhga kirmagan joylar bor; real kesim ko'rinishi va PhD funksiyalari.
+  - `src/scene/slice.ts` — umumiy geometriya: `sliceSegments` (tekislik ∩
+    uchburchaklar), `chainLoops` (segment → yopiq halqa), `unionOutline`
+    (rasterlash 0.25 mm + morfologik yopish + marching squares → faqat TASHQI
+    kontur), `smoothLoop` (Chaikin), `offsetLoop`, `decimate`, `planeBasis`.
+  - 3D markerlar (`BrainScene.outline/buildMarkers/updateMarkers`): har
+    daraja = bitta tashqi kontur, 0.6 mm tashqariga surilgan, `depthTest:
+    true` — model orqasidagi qismi yashirinadi. Yorliqlar: yon ko'rinishda
+    har halqaning old (anterior) chetidan 26px narida, to'qnashsa pastga
+    suriladi (zinapoya); old/yuqori ko'rinishda bitta ustun; SVG yetakchi
+    chiziq (`.section-leaders`), insets (`markerInsets` kesh) ichida.
+  - Sxema renderi (`SectionViewer` `Figure` + `ui/sectionLayout.ts`):
+    rassom tartibi — fon to'qima (`ground`) → hududlar → tola chiziqlari →
+    to'ldirilgan tuzilmalar KATTADAN KICHIKKA; ranglar shaffof emas (`mix`
+    karta foniga); tola chiziqlari ingichka (`strokeW`); raqamlar
+    to'qnashsa avtomatik itariladi (`badgePositions`, siljigan raqamda
+    nuqta+chiziq). `Section.ground` (string | outline shakli bo'yicha
+    massiv) va `regions[].id` — ular ham raqamlangan, bosiladigan tuzilma
+    (ro'yxat oxirida). 8 yangi tuzilma `structures-ground.ts`: tegm-med/
+    pons/mid, basis-pontis, cb-wm, hemi-wm, thal, hypo-grey. Gipotalamus
+    kesimi lateral chegarasi ichki kapsulagacha qisqartirildi. Audit bilan
+    tuzatilgan ustma-ustlar: U3 ap/tst/mlf/ml, K2 ctt/tl, T1 ic3/gpe/gpi
+    (lateral→medial: putamen, GPe, GPi, kapsula), Mc fastigial.
+  - Ko'rinishlar (`.sv-views`): **Sxema · Mielin · Nissl · Atlas (MNI)**.
+    Mielin (Weigert/LFB) — tolalar to'q ko'k-qora, kulrang modda och;
+    Nissl (krezil-binafsha) — yadrolar to'q binafsha nuqtali, harakat
+    yadrolari eng to'q, tolalar och. `sectionStyle.tissueOf()` (fibre/grey/
+    mixed/csf) + `STAIN`, naqshlar `StainDefs` (deterministik nuqtalar).
+  - Atlas (MNI): `scene/atlasSlice.ts` — kesim qatlamlari (`CUT_LAYERS`)
+    meshlarini aynan shu tekislikda kesadi (bbox bilan tanlab, faqat
+    keraklilarini yuklab, keshlab), mm koordinatada, sxema yo'nalishida
+    (rostral/old tomondan, dorsal yuqorida, bemorning chapi o'ngda);
+    oyna = daraja konturi meshlari + 5 mm. Har soha 0.5 mm morfologik
+    yopiladi (Allen yorliqlaridagi ingichka yoriqlar), yuza/markaz xom
+    kesimdan. `ui/AtlasSliceView.tsx`: hover → nom, qatlam, tizim, mm²;
+    kursor ostidagi MNI koordinata; 5/10 mm shkala; "Nomlar" — to'qnashmas
+    yorliqlar (eng keng ichki nuqtada); yon ro'yxat: soha, mm², markaz
+    MNI, manba atlas, "Sxemada ko'rsatish"/"3D da ko'rsatish"; ogohlantirish
+    (BodyParts3D ≈5 mm). Sxema ↔ atlas tanlovi `part` konsept orqali
+    bog'langan. Dev: `window.__atlasSlice(section, layers)`.
+  - "Daraja haqida": `PlaneFacts` — tekislik nuqtasi, birlik normal,
+    aksial/koronaldan og'ish (miya ustuni 18.0°), MRTda oblique reslice
+    eslatmasi.
 - 🟡 5-bosqich: kontent — boshlandi (2026-09-20), 487 yozuv (2026-10-02):
   - Mexanizm: `src/data/content/*.json` — konsept id bo'yicha (chap/o'ng
     juftlik bitta yozuv): `la`, `description`, `role`, `clinical` (en/uz),
@@ -426,4 +493,13 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     `brainstem.json`dagi 551684/551599/535392 NOTO'G'RI edi — tuzatildi).
     DOI'larni Crossref sarlavhasi bilan tekshiring (HTTP 200 emas).
 17. Sxema raqamlari ustma-ust tushsa (yadro tutam ichida) — `at: [x, y]`
-    bilan siljiting; chizish tartibi = `items` tartibi (PAG v4'dan oldin).
+    bilan siljiting (2026-10-03 dan `badgePositions` qolganini o'zi
+    itaradi). Chizish tartibi endi `items` tartibi EMAS: to'ldirilgan
+    shakllar maydoni bo'yicha kattadan kichikka (`itemArea`), chiziqlar
+    ulardan oldin.
+18. `npx prettier --write` loyihada konfiguratsiyasiz ishlasa standart
+    uslub (nuqtali vergul, 80 ustun) butun faylni qayta formatlaydi. Loyiha
+    uslubi: `npx prettier --no-semi --single-quote --print-width 180`.
+19. Atlas kesimi (`atlasSlice`) qiyshiq tekislik bo'lgani uchun o'rta miya
+    darajasida pulvinar va gipotalamus ham kesimga tushadi — bu xato emas
+    (haqiqiy oblique kesim), oyna faqat daraja konturi meshlari + 5 mm.

@@ -629,6 +629,12 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .section-marker:hover span, .section-marker.active span { max-width: 300px; opacity: 1; }
 .section-marker[data-region='diencephalon'] b, .section-marker[data-region='hypothalamus'] b { background: #ffb38a; }
 .section-marker[data-region='cerebellum'] b { background: #9a7bff; color: #fff; }
+.section-marker.left { flex-direction: row-reverse; padding: 0 4px 0 9px; }
+.section-leaders { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.section-leaders polyline { fill: none; stroke: color-mix(in oklab, #5ad1ff 55%, transparent); stroke-width: 1; }
+.section-leaders polyline[data-region='diencephalon'], .section-leaders polyline[data-region='hypothalamus'] { stroke: color-mix(in oklab, #ffb38a 55%, transparent); }
+.section-leaders polyline[data-region='cerebellum'] { stroke: color-mix(in oklab, #9a7bff 65%, transparent); }
+.section-leaders polyline.hot { stroke: #ffd166; stroke-width: 1.6; }
 
 /* Bottom strip of level codes (sections mode). */
 .section-strip { border-radius: 20px; padding: 8px 12px 10px; max-width: min(760px, calc(100vw - 2 * var(--gap-edge) - var(--gauge) - 14px)); }
@@ -677,7 +683,53 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .sv-axis { font-size: 10px; fill: var(--fa-muted); letter-spacing: 0.06em; text-transform: uppercase; }
 .sv-outline { fill: #1c232d; stroke: #8792a2; stroke-width: 1.6; }
 .sv-outline-line { fill: none; stroke: #8792a2; stroke-linecap: round; }
-.sv-region-fill { fill: #262f3b; stroke: #4b5666; stroke-width: 1; stroke-dasharray: 3 3; }
+.sv-region-fill { fill: #2a3240; stroke: #56616f; stroke-width: 1; stroke-dasharray: 3 3; }
+.sv-ground { fill: #212833; stroke: none; }
+.sv-rim { fill: none; stroke: #8792a2; stroke-width: 1.6; pointer-events: none; }
+.sv-item.ground.dim, .sv-item.region.dim { opacity: 0.55; }
+.sv-item.ground.active .sv-fill, .sv-item.ground.selected .sv-fill { fill: #2c3646; stroke: none; }
+.sv-item.region.active .sv-fill, .sv-item.region.selected .sv-fill { fill: #35404f; stroke: #fff; stroke-dasharray: none; }
+.sv-tick { stroke-width: 1; opacity: 0.85; }
+/* Stained views (myelin / Nissl): a slide on a lightbox. */
+.sv-svg.stained .sv-outline { fill: #0f1319; stroke: none; }
+.sv-svg.stained .sv-rim { stroke: #d8cfbd; stroke-width: 1.2; }
+.sv-svg.nissl .sv-rim { stroke: #d9c9e4; }
+.sv-svg.stained .sv-stained { stroke: rgba(28, 24, 40, 0.55); stroke-width: 0.8; }
+.sv-svg.stained .sv-item.ground .sv-stained, .sv-svg.stained .sv-item.region .sv-stained { stroke: none; }
+.sv-svg.stained .sv-item.active .sv-fill, .sv-svg.stained .sv-item.selected .sv-fill { stroke: #ff3d7f; stroke-width: 2.2; }
+.sv-svg.stained .sv-item.ground.active .sv-fill { stroke: none; filter: brightness(1.08); }
+.sv-svg.stained .sv-region-line { stroke: rgba(40, 36, 52, 0.55); }
+.sv-svg.stained .sv-item.dim { opacity: 0.45; }
+.sv-views { align-self: flex-start; margin-bottom: 6px; display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: color-mix(in oklab, #000 35%, transparent); }
+.sv-views button { flex: none; white-space: nowrap; display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 10px; border-radius: 999px; font-size: 11.5px; color: var(--fa-muted); }
+.sv-views button.on { background: var(--fa-accent); color: #fff; }
+.sv-views button:disabled { opacity: 0.35; }
+@media (max-width: 560px) {
+  .sv-views { max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+  .sv-views button:not(.on) span { display: none; }
+}
+.sv-view-hint { margin: 2px 0 4px; font-size: 11px; line-height: 1.4; color: var(--fa-muted); }
+/* Atlas (MNI) slice */
+.as-wrap { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.as-svg { cursor: crosshair; }
+.as-field { fill: #0f1319; }
+.as-frame { fill: none; stroke: #4b5666; stroke-width: 1; }
+.as-region { cursor: pointer; transition: opacity 0.15s; }
+.as-region.dim { opacity: 0.45; }
+.as-label { fill: #fff; font-weight: 600; paint-order: stroke; stroke: rgba(0, 0, 0, 0.75); stroke-width: 0.35px; pointer-events: none; }
+.as-axis { fill: #8f9aab; }
+.as-scale line { stroke: #e9eef5; stroke-width: 2.2; }
+.as-scale text { fill: #e9eef5; }
+.as-readout { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; min-height: 22px; padding: 2px 14px 0; font-size: 11.5px; color: var(--fa-muted); }
+.as-readout b { color: var(--foreground); font-weight: 600; }
+.as-readout code { margin-left: auto; font-size: 11px; color: #9fd0ff; font-variant-numeric: tabular-nums; }
+.as-status { flex: 1; display: grid; place-items: center; color: var(--fa-muted); font-size: 13px; }
+.as-swatch { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.as-area { margin-left: auto; font-style: normal; font-size: 11px; color: var(--fa-muted); font-variant-numeric: tabular-nums; }
+.as-facts { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; margin: 6px 0; font-size: 12px; }
+.as-facts dt { color: var(--fa-muted); }
+.as-facts dd { margin: 0; font-variant-numeric: tabular-nums; }
+.as-actions { display: flex; gap: 6px; flex-wrap: wrap; }
 .sv-item { cursor: pointer; transition: opacity 0.15s; }
 .sv-item.dim { opacity: 0.22; }
 .sv-item.active .sv-fill { stroke: #fff; stroke-width: 2.4; }

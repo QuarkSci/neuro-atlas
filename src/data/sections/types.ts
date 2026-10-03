@@ -86,8 +86,14 @@ export interface Section {
   axes: [L10n, L10n, L10n, L10n]
   /** Background outline (the section silhouette), drawn first. */
   outline: Shape[]
-  /** Faint territory shading (tegmentum vs basis…) drawn under the structures. */
-  regions?: { shapes: Shape[]; label?: L10n; at?: [number, number] }[]
+  /**
+   * Structure id of the tissue the outline encloses (per outline shape when
+   * an array): what is left between the named items — tegmentum, white
+   * matter… — so no part of the figure is unassigned.
+   */
+  ground?: string | string[]
+  /** Faint territory shading (tegmentum vs basis…) drawn under the structures; with `id` it is a clickable structure. */
+  regions?: { id?: string; shapes: Shape[]; label?: L10n; at?: [number, number] }[]
   items: SectionItem[]
   /** What identifies this level at a glance. */
   landmarks: L10n

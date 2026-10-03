@@ -47,6 +47,7 @@ export const MIDBRAIN: Section[] = [
     h: 420,
     axes: AXES_BS,
     outline: [OUTLINE],
+    ground: 'tegm-mid',
     items: [
       { id: 'ic', mirror: true, shapes: [B([276, 72], [256, 56], [222, 52], [194, 64], [186, 92], [214, 108], [256, 106], [274, 96])] },
       { id: 'bic', mirror: true, shapes: [B([184, 98], [162, 106], [150, 130], [166, 134], [186, 114])] },
@@ -98,6 +99,7 @@ export const MIDBRAIN: Section[] = [
     h: 420,
     axes: AXES_BS,
     outline: [OUTLINE],
+    ground: 'tegm-mid',
     items: [
       { id: 'sc', mirror: true, shapes: [B([276, 74], [254, 56], [218, 52], [190, 66], [184, 94], [214, 110], [256, 108], [274, 98])], note: { en: 'layered: superficial visual, deep motor', uz: "qatlamli: yuza — ko'rish, chuqur — harakat" } },
       { id: 'bsc', mirror: true, shapes: [B([186, 100], [166, 108], [154, 128], [170, 130], [188, 114])] },
@@ -149,6 +151,7 @@ export const MIDBRAIN: Section[] = [
     h: 420,
     axes: AXES_BS,
     outline: [B(...sym([[C, 70], [250, 58], [200, 58], [150, 74], [112, 108], [96, 160], [100, 212], [108, 256], [96, 300], [104, 342], [160, 372], [224, 370], [252, 346], [266, 312], [C, 300]], C))],
+    ground: 'tegm-mid',
     items: [
       { id: 'pin', shapes: [E(C, 52, 16, 11)] },
       { id: 'hab', mirror: true, shapes: [E(254, 70, 8, 6)] },

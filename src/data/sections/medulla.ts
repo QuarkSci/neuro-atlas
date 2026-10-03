@@ -37,6 +37,7 @@ export const MEDULLA: Section[] = [
     h: 380,
     axes: AXES_BS,
     outline: [B(...sym([[250, 62], [205, 60], [160, 75], [122, 108], [100, 155], [98, 205], [112, 252], [145, 292], [195, 318], [250, 322]], 250)), ...midSulci(62, 108, 322, 292)],
+    ground: 'tegm-med',
     items: [
       { id: 'fg', mirror: true, at: [236, 74], shapes: [B([247, 66], [228, 64], [220, 88], [226, 118], [246, 124])] },
       { id: 'ng', mirror: true, at: [235, 104], shapes: [E(236, 98, 6, 10)], note: { en: 'caudal pole', uz: 'kaudal qutbi' } },
@@ -86,6 +87,7 @@ export const MEDULLA: Section[] = [
     h: 380,
     axes: AXES_BS,
     outline: [B(...sym([[250, 60], [200, 56], [152, 70], [116, 104], [96, 150], [94, 202], [108, 252], [142, 294], [196, 322], [250, 326]], 250)), ...midSulci(60, 92, 326, 298)],
+    ground: 'tegm-med',
     items: [
       { id: 'fg', mirror: true, shapes: [B([247, 62], [226, 60], [218, 72], [230, 80], [247, 82])], note: { en: 'thinning rim', uz: 'yupqalashgan qobiq' } },
       { id: 'ng', mirror: true, shapes: [B([246, 84], [230, 82], [218, 98], [224, 120], [244, 124])] },
@@ -137,6 +139,7 @@ export const MEDULLA: Section[] = [
     h: 390,
     axes: AXES_BS,
     outline: [B(...sym([[250, 118], [214, 112], [178, 100], [150, 78], [126, 70], [100, 92], [86, 136], [84, 188], [94, 238], [118, 284], [160, 316], [206, 334], [250, 338]], 250)), L(2.2, [250, 338], [250, 314])],
+    ground: 'tegm-med',
     items: [
       { id: 'v4', shapes: [B(...sym([[250, 52], [200, 56], [150, 74], [180, 98], [214, 110], [250, 116]], 250))] },
       { id: 'n12', mirror: true, shapes: [E(236, 130, 9, 9)] },
@@ -149,10 +152,10 @@ export const MEDULLA: Section[] = [
       { id: 'amb', mirror: true, shapes: [E(152, 198, 6, 9)] },
       { id: 'n10-root', mirror: true, shapes: [L(2.6, [200, 142], [176, 168], [152, 208], [118, 250])], at: [168, 180] },
       { id: 'rf', mirror: true, shapes: [B([206, 164], [172, 186], [166, 226], [196, 232], [214, 200])] },
-      { id: 'ap', mirror: true, at: [238, 108], shapes: [E(242, 113, 7, 3.5)], note: { en: 'at the obex, just caudal to this level', uz: 'obex darajasida, bu kesimdan sal pastda' } },
-      { id: 'mlf', mirror: true, at: [226, 150], shapes: [E(240, 148, 6, 7)] },
-      { id: 'tst', mirror: true, at: [222, 162], shapes: [E(238, 160, 5, 4)] },
-      { id: 'ml', mirror: true, shapes: [B([246, 160], [234, 162], [232, 244], [238, 268], [247, 266])] },
+      { id: 'ap', mirror: true, at: [228, 112], shapes: [E(230, 118, 8, 2.8)], note: { en: 'at the obex, just caudal to this level', uz: 'obex darajasida, bu kesimdan sal pastda' } },
+      { id: 'mlf', mirror: true, at: [226, 148], shapes: [E(240, 147, 6, 6)] },
+      { id: 'tst', mirror: true, at: [222, 160], shapes: [E(239, 158, 5, 3.5)] },
+      { id: 'ml', mirror: true, shapes: [B([246, 174], [234, 176], [232, 244], [238, 268], [247, 266])] },
       { id: 'raphe', shapes: [L(5, [250, 150], [250, 268])], at: [250, 206] },
       { id: 'ctt', mirror: true, shapes: [E(202, 238, 8, 7)] },
       { id: 'ion', mirror: true, shapes: [L(5, [208, 256], [196, 248], [186, 257], [174, 247], [162, 256], [151, 268], [158, 280], [149, 292], [160, 303], [172, 297], [184, 307], [196, 299], [208, 304])], at: [168, 278], note: { en: 'principal olive (accessory olives medial & dorsal)', uz: "asosiy zaytun (qo'shimcha zaytunlar medial va dorsalda)" } },
@@ -191,6 +194,7 @@ export const MEDULLA: Section[] = [
     h: 390,
     axes: AXES_BS,
     outline: [B(...sym([[260, 128], [222, 120], [186, 104], [158, 76], [126, 60], [94, 74], [74, 112], [70, 166], [82, 222], [108, 274], [152, 312], [206, 334], [260, 340]], 260)), L(2.2, [260, 340], [260, 318])],
+    ground: 'tegm-med',
     items: [
       { id: 'v4', shapes: [B(...sym([[260, 44], [200, 46], [140, 62], [168, 90], [216, 114], [260, 126]], 260))], note: { en: 'with lateral recess', uz: 'yon cho\'ntagi bilan' } },
       { id: 'vn', mirror: true, shapes: [B([236, 128], [200, 114], [170, 92], [150, 102], [170, 128], [208, 140])], note: { en: 'medial, inferior & lateral (Deiters)', uz: 'medial, pastki va lateral (Deiters)' } },

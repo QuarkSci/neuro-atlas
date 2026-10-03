@@ -32,9 +32,11 @@ const H = 260
 const coronal = (y: number) => ({ point: [0, y, 0] as [number, number, number], normal: [0, 1, 0] as [number, number, number] })
 
 /** Hypothalamic crop: 3rd ventricle in the middle, thalamus above, walls either side. */
-const hypoOutline = [B(...sym([[H, 40], [200, 40], [120, 52], [70, 100], [56, 190], [70, 290], [120, 350], [190, 372], [236, 370], [H, 362]], H))]
+// Lateral edge follows the internal capsule: the crop stops where the
+// hypothalamus does, so no lentiform tissue is left unnamed beside it.
+const hypoOutline = [B(...sym([[H, 40], [200, 40], [138, 46], [100, 72], [86, 130], [84, 200], [90, 270], [114, 330], [176, 366], [236, 370], [H, 362]], H))]
 const hypoRegions = (sulcus: number): Section['regions'] => [
-  { shapes: [B([H - 6, 46], [196, 48], [128, 62], [118, sulcus - 8], [200, sulcus], [H - 6, sulcus + 6]), B([H + 6, 46], [324, 48], [392, 62], [402, sulcus - 8], [320, sulcus], [H + 6, sulcus + 6])], label: { en: 'Thalamus', uz: 'Talamus' }, at: [160, 86] },
+  { id: 'thal', shapes: [B([H - 6, 46], [196, 48], [128, 62], [118, sulcus - 8], [200, sulcus], [H - 6, sulcus + 6]), B([H + 6, 46], [324, 48], [392, 62], [402, sulcus - 8], [320, sulcus], [H + 6, sulcus + 6])], label: { en: 'Thalamus', uz: 'Talamus' }, at: [160, 86] },
   { shapes: [L(2, [H - 4, sulcus + 8], [196, sulcus + 2]), L(2, [H + 4, sulcus + 8], [324, sulcus + 2])] },
 ]
 
@@ -54,7 +56,8 @@ export const DIENCEPHALON: Section[] = [
     h: 420,
     axes: AXES_COR,
     outline: [B(...sym([[C, 24], [220, 24], [110, 36], [66, 84], [56, 190], [70, 296], [112, 358], [196, 384], [272, 380], [C, 352]], C))],
-    regions: [{ shapes: [B([310, 112], [280, 104], [244, 108], [214, 124], [196, 152], [192, 196], [204, 236], [232, 262], [270, 272], [304, 268], [312, 240]), B([330, 112], [360, 104], [396, 108], [426, 124], [444, 152], [448, 196], [436, 236], [408, 262], [370, 272], [336, 268], [328, 240])], label: { en: 'Thalamus', uz: 'Talamus' } }],
+    ground: 'hemi-wm',
+    regions: [{ id: 'thal', shapes: [B([310, 112], [280, 104], [244, 108], [214, 124], [196, 152], [192, 196], [204, 236], [232, 262], [270, 272], [304, 268], [312, 240]), B([330, 112], [360, 104], [396, 108], [426, 124], [444, 152], [448, 196], [436, 236], [408, 262], [370, 272], [336, 268], [328, 240])], label: { en: 'Thalamus', uz: 'Talamus' } }],
     items: [
       { id: 'cca', mirror: true, at: [214, 52], shapes: [B([C, 36], [250, 34], [180, 42], [124, 62], [130, 78], [188, 60], [254, 52], [C, 54])] },
       { id: 'lv', mirror: true, shapes: [B([304, 62], [254, 62], [210, 72], [214, 88], [258, 84], [304, 80])], note: { en: 'body', uz: 'tanasi' } },
@@ -71,10 +74,10 @@ export const DIENCEPHALON: Section[] = [
       { id: 'th-eml', mirror: true, at: [204, 140], shapes: [L(2.4, [222, 118], [204, 146], [198, 190], [208, 232], [232, 256])] },
       { id: 'th-ret', mirror: true, at: [190, 190], shapes: [B([212, 116], [190, 140], [182, 190], [194, 236], [222, 262], [214, 240], [200, 192], [204, 146], [218, 122])] },
       { id: 'v3', shapes: [B([316, 104], [313, 150], [313, 220], [316, 300], [324, 300], [327, 220], [327, 150], [324, 104])], at: [C, 160] },
-      { id: 'ic3', mirror: true, at: [166, 208], shapes: [B([196, 94], [170, 106], [150, 160], [146, 214], [158, 262], [180, 264], [180, 214], [182, 160], [198, 118])], note: { en: 'posterior limb', uz: "orqa oyog'i" } },
+      { id: 'ic3', mirror: true, at: [166, 208], shapes: [B([186, 112], [170, 124], [160, 160], [156, 214], [164, 262], [178, 264], [178, 214], [182, 160], [192, 124])], note: { en: 'posterior limb', uz: "orqa oyog'i" } },
       { id: 'put', mirror: true, shapes: [B([124, 112], [104, 140], [96, 190], [106, 232], [124, 226], [128, 170], [132, 124])] },
-      { id: 'gpe', mirror: true, shapes: [B([136, 150], [128, 178], [132, 210], [142, 198], [144, 168])] },
-      { id: 'gpi', mirror: true, shapes: [B([148, 172], [142, 190], [146, 212], [152, 196])] },
+      { id: 'gpe', mirror: true, shapes: [B([137, 150], [128, 178], [132, 210], [140, 198], [142, 168])] },
+      { id: 'gpi', mirror: true, shapes: [B([149, 172], [144, 190], [147, 210], [153, 195])] },
       { id: 'zi', mirror: true, at: [236, 278], shapes: [L(4, [298, 284], [266, 282], [232, 278], [204, 272])] },
       { id: 'stn', mirror: true, shapes: [E(250, 302, 26, 9, -12)] },
       { id: 'rn', mirror: true, shapes: [E(290, 318, 14, 13)], note: { en: 'rostral pole', uz: 'rostral qutbi' } },
@@ -111,6 +114,7 @@ export const DIENCEPHALON: Section[] = [
     h: 380,
     axes: AXES_SAG,
     outline: [B([110, 196], [134, 124], [214, 82], [336, 74], [452, 96], [526, 150], [548, 214], [516, 276], [420, 306], [300, 308], [188, 290], [130, 254])],
+    ground: 'thal',
     items: [
       { id: 'th-iml', at: [356, 182], shapes: [L(7, [440, 186], [372, 182], [304, 178]), L(7, [304, 178], [252, 146], [176, 120]), L(7, [304, 178], [244, 204], [170, 214])] },
       { id: 'th-an', shapes: [B([168, 128], [236, 140], [282, 174], [238, 196], [172, 206], [140, 172])] },
@@ -158,6 +162,7 @@ export const DIENCEPHALON: Section[] = [
     h: 400,
     axes: AXES_COR,
     outline: hypoOutline,
+    ground: 'hypo-grey',
     regions: hypoRegions(150),
     items: [
       { id: 'ac', at: [H, 128], shapes: [B([150, 122], [200, 116], [H, 120], [320, 116], [370, 122], [366, 136], [H, 134], [154, 136])], note: { en: 'just rostral', uz: 'sal oldinda' } },
@@ -203,6 +208,7 @@ export const DIENCEPHALON: Section[] = [
     h: 400,
     axes: AXES_COR,
     outline: hypoOutline,
+    ground: 'hypo-grey',
     regions: hypoRegions(140),
     items: [
       { id: 'v3', shapes: [B([H - 5, 130], [H - 7, 220], [H - 5, 290], [H, 316], [H + 5, 290], [H + 7, 220], [H + 5, 130])], at: [H, 190], note: { en: 'infundibular recess below', uz: "pastida infundibulyar cho'ntak" } },
@@ -247,6 +253,7 @@ export const DIENCEPHALON: Section[] = [
     h: 400,
     axes: AXES_COR,
     outline: hypoOutline,
+    ground: 'hypo-grey',
     regions: hypoRegions(130),
     items: [
       { id: 'v3', shapes: [B([H - 5, 120], [H - 7, 200], [H - 4, 262], [H, 272], [H + 4, 262], [H + 7, 200], [H + 5, 120])], at: [H, 180], note: { en: 'mammillary recess', uz: "mamillyar cho'ntak" } },
@@ -289,6 +296,7 @@ export const DIENCEPHALON: Section[] = [
     h: 400,
     axes: AXES_SAG,
     outline: [B([96, 120], [140, 92], [260, 80], [420, 84], [520, 110], [560, 170], [546, 240], [500, 300], [430, 330], [330, 336], [260, 324], [196, 300], [120, 280], [92, 220])],
+    ground: 'hypo-grey',
     regions: [
       { shapes: [D(1.4, [196, 94], [196, 330])] },
       { shapes: [D(1.4, [300, 86], [300, 334])] },
