@@ -24,7 +24,9 @@
 4. Dev server: `npm run dev` → http://localhost:3019 (**3019**, Falcon 3017
    band). Tekshirish: `curl -s -o /dev/null -w "%{http_code}" localhost:3019`
    — `000` bo'lsa server to'xtagan (foydalanuvchi yopgan bo'lishi mumkin):
-   Bash `run_in_background` bilan `npm run dev` ni qayta ishga tushiring. `preview_start` vositasi ishlamasa (Falcon konfiguratsiyasini
+   Bash `run_in_background` bilan `npm run dev` ni qayta ishga tushiring
+   (`timeout: 7200000` — fon vazifasi maksimal 2 soat yashaydi, keyin
+   avtomatik o'chadi; kerak bo'lsa yana ishga tushiring). `preview_start` vositasi ishlamasa (Falcon konfiguratsiyasini
    o'qib qolgan bo'lsa) — `npm run dev`ni fonda Bash bilan ishga tushirib
    `navigate` qiling.
 5. Tekshiruv uchun ikki yo'l: brauzer pane (foydalanuvchi bir vaqtda
@@ -93,6 +95,9 @@
    yangilang.
 
 **Keyingi vazifa — foydalanuvchi tanlaydi. B (kesim) tugadi; A, C, D tayyor.**
+Oxirgi sessiya (2026-10-03…08) 4c-bosqichni tugatdi (`aa5fd46`), ish
+daraxti toza, keyingi vazifa hali TANLANMAGAN — avval foydalanuvchidan
+A / C / D dan birini so'rang (yoki u yozganini boshlang).
 **Doimiy talab (2026-10-03):** har yangi funksiya bilan birga PhD /
 neyroxirurg darajasidagi imkoniyat ham qo'shilsin (foydalanuvchi talaba,
 ularni o'zi bilmaydi — taklif qilib, nima uchunligini qisqa tushuntiring).
