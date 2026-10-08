@@ -91,7 +91,7 @@ export const LEVELS: AxialLevel[] = [
 ]
 
 /** Brain systems levels are meaningful for (skull/meninges/vessels clutter the list). */
-const LEVEL_SYSTEMS = new Set<SystemId>(['brainstem', 'cerebellum', 'diencephalon', 'telencephalon', 'white-matter'])
+const LEVEL_SYSTEMS = new Set<SystemId>(['brainstem', 'cerebellum', 'diencephalon', 'basal-ganglia', 'telencephalon', 'white-matter'])
 
 /** MNI mm extent of the brain proper, per clip axis — the sliders' min/max. */
 export const CLIP_RANGE: Record<'sagittal' | 'coronal' | 'axial', [number, number]> = (() => {

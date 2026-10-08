@@ -4,14 +4,14 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-10-03 (4c: toza 3D daraja konturlari, sxemalar atlas-plastinka uslubida, Mielin/Nissl/Atlas (MNI) ko'rinishlari).
+> Oxirgi yangilanish: 2026-10-09 (BG-1: bazal yadrolar tizimi + B1–B5 koronal/aksial kesim plastinkalari, masshtabda).
 
 ## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
 
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
-   oxirgi commit — "4c-bosqich: …kesim ko'rinishlari…" (2026-10-03) yoki
+   oxirgi commit — "BG-1: bazal yadrolar …" (2026-10-09) yoki
    undan keyingisi; `git rev-parse HEAD origin/master` bir
    xil bo'lishi kerak.
 3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
@@ -62,9 +62,9 @@
    ```bash
    python3 - <<'EOF'
    import re, json
-   src=''.join(open(f'src/data/sections/structures-{n}.ts').read() for n in ['brainstem','forebrain','ground'])
+   src=''.join(open(f'src/data/sections/structures-{n}.ts').read() for n in ['brainstem','forebrain','basal','ground'])
    keys=set(re.findall(r"^\s+'?([\w-]+)'?: S\(", src, re.M)); used=set()
-   for f in ['medulla','pons','midbrain','diencephalon','cerebellum']:
+   for f in ['medulla','pons','midbrain','diencephalon','basal','cerebellum']:
        t=open(f'src/data/sections/{f}.ts').read()
        ids=re.findall(r"\{ id: '([\w-]+)'", t)+re.findall(r"ground: '([\w-]+)'", t)+[x for g in re.findall(r"ground: \[([^\]]*)\]", t) for x in re.findall(r"'([\w-]+)'", g)]
        used|=set(ids)
@@ -94,10 +94,24 @@
 7. Har bosqich oxirida shu faylning 3-bo'limi va `PLAN.md` jadvalini
    yangilang.
 
-**Keyingi vazifa — foydalanuvchi tanlaydi. B (kesim) tugadi; A, C, D tayyor.**
-Oxirgi sessiya (2026-10-03…08) 4c-bosqichni tugatdi (`aa5fd46`), ish
-daraxti toza, keyingi vazifa hali TANLANMAGAN — avval foydalanuvchidan
-A / C / D dan birini so'rang (yoki u yozganini boshlang).
+**Joriy vazifa (2026-10-09 dan): BAZAL YADROLAR MODULI, 4 bosqich.**
+Foydalanuvchi talabi: bazal yadrolar "bakalavrdan PhD gacha oltin standart"
+bo'lsin (Ninja Nerd 40 daqiqada tushuntirgan mavzu — undan chuqurroq).
+Bosqichlar (har biri alohida commit, brauzerda tekshirib):
+- ✅ **BG-1** kesimlar — `basal-ganglia` tizimi + B1–B5 (3-bo'limga qarang).
+- ⬜ **BG-2** yo'llar sxemasi — direct / indirect / hyperdirect /
+  nigrostriatal; har bog'lanish: mediator (GABA/Glu/DA), qo'zg'atuvchi/
+  tormozlovchi, D1/D2, ko-transmitterlar (P modda/dinorfin vs enkefalin);
+  signal oqimi animatsiyasi. Yangi ko'rinish (Kesimlar rejimiga 'map'
+  turidagi sxema yoki alohida panel) — tugunlar 3D konseptlarga bog'lansin.
+- ⬜ **BG-3** kasallik simulyatori — Parkinson / Huntington / gemiballizm /
+  distoniya (+ DBS yoqish): har yadro faollik ustuni (Gs), Albin–DeLong
+  1989 tezlik modeli; PhD: beta tebranish, modelning cheklovlari (Cui
+  2013 ko-aktivatsiya, Mallet arkipallidal).
+- ⬜ **BG-4** Alexander 1986 5 halqa (motor, okulomotor, DLPFC, OFC,
+  limbik) + DBS nishonlari (STN/GPi/Vim, AC–PC va MNI) + 3D'da zanjirni
+  yoritish (tugun bosilsa 3D'da yadro va sheriklari).
+Undan keyin A / C / D (quyida).
 **Doimiy talab (2026-10-03):** har yangi funksiya bilan birga PhD /
 neyroxirurg darajasidagi imkoniyat ham qo'shilsin (foydalanuvchi talaba,
 ularni o'zi bilmaydi — taklif qilib, nima uchunligini qisqa tushuntiring).
@@ -450,6 +464,33 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
   - QOLGAN: Glasser 179, Destrieux 74, Desikan 35, JHU 27.
   - Manbalar: Wikipedia (CC BY-SA), NCBI Bookshelf (Purves Neuroscience,
     StatPearls), Julich-Brain asl maqolalari (DOI). Har yozuvda `sources`.
+- ✅ BG-1: bazal yadrolar — tizim va kesim plastinkalari (2026-10-09):
+  - Yangi tizim `basal-ganglia` ("Bazal yadrolar", rang `#c98fb4`):
+    `build_catalogue.py` gross regex `caudate|putamen|globus pallidus|
+    accumbens|lentiform|claustrum` + Julich `Ventral Striatum`/`Ventral
+    Pallidum` guruhlari → 20 qism (oldin `telencephalon`da edi; parts.json
+    boshqa farqsiz qayta hosil qilingan). STN/SN o'z tizimlarida qoladi
+    (diensefalon/miya ustuni). Ulangan joylar: `SystemId`, `SYSTEMS`,
+    `shellRank` (4), `materials.ts`, `SideRail` DEEP, `BRAIN_SYSTEMS`,
+    `LEVEL_SYSTEMS`, `SECTION_SYSTEMS` (Kesimlar rejimida ko'rinadi).
+  - `src/data/sections/basal.ts` — 5 plastinka, **MASSHTABDA**: nuqtalar
+    MNI mm'da (`kit({k, top, y0})`: x = o'rta chiziqdan masofa, z/y), atlas
+    meshlari shu tekislikda kesib o'lchangan (scratchpad `slices.py`,
+    trimesh section → SVG). B1 y+14 (kaudat boshi, oldingi oyoq, ko'prikchalar,
+    accumbens o'zak/qobiq), B2 y+1 (AC, GPe, VP, Meynert Ch4, BNST, preoptik),
+    B3 y−6 (GPe/GPi, medial/lateral medullyar plastinkalar, ansa, H2,
+    oldingi talamus), B4 y−13 (DBS darajasi: H1→ZI→H2→STN→SNc/SNr, H
+    maydoni, VLa/VLp, mamillyar), B5 aksial z+4 (ichki kapsula '>' shakli,
+    somatotopiya: CST qo'l→oyoq, talamokortikal, retrolentikulyar).
+    `lateralWall()` — tashqi kapsula/klaustrum/eng tashqi kapsula/orolcha.
+  - `structures-basal.ts` — 30 yangi tuzilma (en/uz/lotin, PhD tafsilot:
+    MSN/striosoma-matriks, TAN, prototipik/arkipallidal GPe, GPi 60–100 Gs,
+    STN uch qismli, DBS AC–PC koordinatalari, mikroelektrod belgilar);
+    put/gpe/gpi/stn yozuvlari boyitildi. Mielin ko'rinishida GPe/GPi/VP
+    `MIXED` (Weigert'da pallidum putamendan to'q — nomi "rangpar" bo'lsa ham).
+  - Lokator: striatum silueti (`.loc-shape.bg`), B1–B4 vertikal, B5
+    gorizontal chiziq. Pastki dock darajalar qatori desktopda ikki qatorga
+    o'raladi (7 guruh sig'masdi), telefonda gorizontal scroll.
 - ⬜ 6–7.
 
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
@@ -497,6 +538,12 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     NBK551509, Pons = NBK560589, Brainstem = NBK544297 (oldingi
     `brainstem.json`dagi 551684/551599/535392 NOTO'G'RI edi — tuzatildi).
     DOI'larni Crossref sarlavhasi bilan tekshiring (HTTP 200 emas).
+    ENG ISHONCHLI YO'L (2026-10-09): NCBI eutils captchasiz ishlaydi —
+    `esearch.fcgi?db=books&retmode=json&term="<sarlavha>"[Title]` →
+    `esummary.fcgi?db=books&id=…` → `accessionid` (NBK…). Shunday topildi:
+    Purves "Modulation of Movement by the Basal Ganglia" = NBK10868 (taxmin
+    qilingan 10865 noto'g'ri edi), StatPearls Basal Ganglia = NBK537141,
+    Internal Capsule = NBK542181.
 17. Sxema raqamlari ustma-ust tushsa (yadro tutam ichida) — `at: [x, y]`
     bilan siljiting (2026-10-03 dan `badgePositions` qolganini o'zi
     itaradi). Chizish tartibi endi `items` tartibi EMAS: to'ldirilgan
@@ -508,3 +555,9 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
 19. Atlas kesimi (`atlasSlice`) qiyshiq tekislik bo'lgani uchun o'rta miya
     darajasida pulvinar va gipotalamus ham kesimga tushadi — bu xato emas
     (haqiqiy oblique kesim), oyna faqat daraja konturi meshlari + 5 mm.
+20. Bash'da `cat > fayl` (heredoc'siz) stdin kutib osilib qoladi — 2 daqiqa
+    timeout. Patch skriptlarini Write vositasi bilan yozing.
+21. Yangi sxema chizishdan OLDIN atlas meshlarini shu tekislikda kesib
+    o'lchang (trimesh `mesh.section`, `pipeline/.venv`), keyin mm'da
+    chizing — ko'z bilan chizilgan proporsiyalar Atlas (MNI) ko'rinishi
+    bilan mos kelmaydi.

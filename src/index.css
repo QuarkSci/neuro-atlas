@@ -639,7 +639,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 /* Bottom strip of level codes (sections mode). */
 .section-strip { border-radius: 20px; padding: 8px 12px 10px; max-width: min(760px, calc(100vw - 2 * var(--gap-edge) - var(--gauge) - 14px)); }
 .strip-hint { font-size: 10.5px; color: var(--fa-muted); margin-bottom: 6px; text-align: center; }
-.strip-regions { display: flex; gap: 12px; overflow-x: auto; scrollbar-width: none; }
+.strip-regions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 12px; overflow-x: auto; scrollbar-width: none; }
 .strip-region { display: flex; flex-direction: column; gap: 4px; flex: none; }
 .strip-region > span { font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--fa-muted); }
 .strip-region > div { display: flex; gap: 4px; }
@@ -750,6 +750,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .sv-locator { position: absolute; right: 14px; top: 44px; width: 116px; height: 122px; border-radius: 14px; background: color-mix(in oklab, #0b0e14 80%, transparent); border: 1px solid var(--fa-line); padding: 4px; }
 .loc-shape { fill: #232b36; stroke: #6d7888; stroke-width: 1.2; }
 .loc-shape.cb { fill: #2a2840; }
+.loc-shape.bg { fill: #c98fb4; fill-opacity: 0.16; stroke: #a87a98; stroke-dasharray: 2 2; }
 .loc-csf { fill: #2b4a5c; }
 .loc-line { cursor: pointer; }
 .loc-line line { stroke: #5ad1ff; stroke-width: 1.4; stroke-opacity: 0.45; }
@@ -804,6 +805,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   .sv-locator { width: 64px; height: 68px; top: 40px; right: 10px; }
   .sv-legend { display: none; }
   .section-strip { padding: 6px 10px 8px; }
+  .strip-regions { flex-wrap: nowrap; justify-content: flex-start; }
 }
 .sv-region-line { fill: none; stroke: #5d6878; stroke-linecap: round; }
 .sv-region-label { font-size: 10.5px; fill: #8f9aab; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; pointer-events: none; }

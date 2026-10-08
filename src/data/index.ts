@@ -3,7 +3,8 @@ import type { Atlas, Concept, L10n, Layer, LayerId, Part, System, SystemId } fro
 import { contentFor } from './content'
 
 export const SYSTEMS: System[] = [
-  { id: 'telencephalon', name: { en: 'Telencephalon', uz: 'Oxirgi miya', la: 'Telencephalon' }, color: '#e0b7a8', description: { en: 'Cerebral cortex, basal ganglia and the limbic structures of the two hemispheres.', uz: "Bosh miya po'stlog'i, bazal yadrolar va ikki yarim sharning limbik tuzilmalari." } },
+  { id: 'telencephalon', name: { en: 'Telencephalon', uz: 'Oxirgi miya', la: 'Telencephalon' }, color: '#e0b7a8', description: { en: 'Cerebral cortex and the limbic structures of the two hemispheres.', uz: "Bosh miya po'stlog'i va ikki yarim sharning limbik tuzilmalari." } },
+  { id: 'basal-ganglia', name: { en: 'Basal ganglia', uz: 'Bazal yadrolar', la: 'Nuclei basales' }, color: '#c98fb4', description: { en: 'Striatum (caudate, putamen, nucleus accumbens) and pallidum (globus pallidus, ventral pallidum). Their loop partners — subthalamic nucleus and substantia nigra — sit in the diencephalon and midbrain.', uz: "Striatum (dumli yadro, putamen, accumbens yadrosi) va pallidum (rangpar shar, ventral pallidum). Halqa sheriklari — subtalamik yadro va qora modda — oraliq va o'rta miyada joylashgan." } },
   { id: 'diencephalon', name: { en: 'Diencephalon', uz: "Oraliq miya", la: 'Diencephalon' }, color: '#d9a066', description: { en: 'Thalamus, hypothalamus, epithalamus and subthalamus, between the hemispheres and the brainstem.', uz: "Talamus, gipotalamus, epitalamus va subtalamus — yarim sharlar bilan miya ustuni orasida." } },
   { id: 'brainstem', name: { en: 'Brainstem', uz: 'Miya ustuni', la: 'Truncus encephali' }, color: '#c2b280', description: { en: 'Midbrain, pons and medulla oblongata.', uz: "O'rta miya, ko'prik va uzunchoq miya." } },
   { id: 'cerebellum', name: { en: 'Cerebellum', uz: 'Miyacha', la: 'Cerebellum' }, color: '#a8c5a0', description: { en: 'Cerebellar hemispheres, vermis and deep nuclei.', uz: "Miyacha yarim sharlari, chuvalchang va chuqur yadrolar." } },
@@ -173,6 +174,8 @@ function shellRank(p: Part): number {
       return 1
     case 'telencephalon':
       return DEEP_TELENCEPHALON.test(p.name.en) ? 4 : 2
+    case 'basal-ganglia':
+      return 4
     case 'white-matter':
       return /fornix/i.test(p.name.en) ? 4 : 3
     case 'ventricles':

@@ -11,6 +11,7 @@ export interface L10n {
 
 export type SystemId =
   | 'telencephalon'
+  | 'basal-ganglia'
   | 'diencephalon'
   | 'brainstem'
   | 'cerebellum'

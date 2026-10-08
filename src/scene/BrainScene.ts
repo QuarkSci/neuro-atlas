@@ -106,7 +106,7 @@ const THEME = {
 } as const
 
 /** Systems whose extent defines the model for camera framing. */
-const BRAIN_SYSTEMS = new Set<SystemId>(['telencephalon', 'diencephalon', 'brainstem', 'cerebellum', 'ventricles', 'white-matter'])
+const BRAIN_SYSTEMS = new Set<SystemId>(['telencephalon', 'basal-ganglia', 'diencephalon', 'brainstem', 'cerebellum', 'ventricles', 'white-matter'])
 
 /** Slider fraction where separation ends and the inventory grid begins. */
 const SPLIT = 0.5

@@ -27,7 +27,7 @@ export const CATEGORY: Record<SectionCategory, { color: string; name: L10n }> = 
 export const FIBRE = new Set([
   'pyramid', 'pyr-dec', 'lcst', 'basis-cst', 'crus', 'crus-fp', 'crus-cst', 'crus-ptop', 'rst', 'tst', 'fg', 'fc', 'ia', 'ml', 'als', 'tl', 'll', 'dsct', 'vsct',
   'sp5t', 'mes5', 'icp', 'mcp', 'scp', 'scp-dec', 'tpf', 'tb', 'bic', 'bsc', 'pc', 'mlf', 'ctt', 'vtd', 'dtd', 'n4-dec', 'th-iml', 'th-eml', 'sm', 'ic3', 'fx', 'mtt',
-  'och', 'ot', 'ac', 'cca', 'smv',
+  'och', 'ot', 'ac', 'cca', 'smv', 'ic-al', 'ic-g', 'ic-pl', 'ic-rl', 'cst-ic', 'tcr', 'stt',
 ])
 
 /** Display order of the categories in the list and legend. */
@@ -42,7 +42,7 @@ export const CATEGORY_ORDER: SectionCategory[] = [
  * views every brainstem atlas plate is printed in.
  */
 export type Tissue = 'fibre' | 'grey' | 'mixed' | 'csf'
-const MIXED = new Set(['tegm-med', 'tegm-pons', 'tegm-mid', 'basis-pontis', 'rf', 'pprf', 'zi', 'lha', 'snr'])
+const MIXED = new Set(['tegm-med', 'tegm-pons', 'tegm-mid', 'basis-pontis', 'rf', 'pprf', 'zi', 'lha', 'snr', 'nbm', 'gpe', 'gpi', 'vp'])
 const WHITE = new Set(['cb-wm', 'hemi-wm'])
 export function tissueOf(id: string, cat: SectionCategory): Tissue {
   if (cat === 'csf') return 'csf'

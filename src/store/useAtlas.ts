@@ -129,7 +129,7 @@ const sceneDefaults = {
 }
 
 /** Systems that make sense around brainstem / diencephalon cross-sections. */
-const SECTION_SYSTEMS: SystemId[] = ['brainstem', 'diencephalon', 'cerebellum']
+const SECTION_SYSTEMS: SystemId[] = ['basal-ganglia', 'brainstem', 'diencephalon', 'cerebellum']
 
 export const useAtlas = create<AtlasState>((set) => ({
   lang: initialLang(),

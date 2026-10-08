@@ -14,6 +14,7 @@ interface Preset {
  */
 const PRESETS: Record<SystemId, Preset> = {
   telencephalon: { color: '#cfa08f', roughness: 0.62 },
+  'basal-ganglia': { color: '#c98fb4', roughness: 0.6 },
   diencephalon: { color: '#d39c69', roughness: 0.6 },
   brainstem: { color: '#c7b78a', roughness: 0.6 },
   cerebellum: { color: '#a9c3a0', roughness: 0.62 },

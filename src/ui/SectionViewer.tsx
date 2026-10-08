@@ -18,6 +18,7 @@ const CUT_LAYERS: Record<Section['region'], LayerId[]> = {
   midbrain: ['gross', 'bstem'],
   diencephalon: ['gross', 'julich'],
   hypothalamus: ['gross'],
+  'basal-ganglia': ['gross', 'julich'],
   cerebellum: ['gross', 'suit', 'bstem'],
 }
 
@@ -671,6 +672,9 @@ function Locator({ section, onPick, title }: { section: Section; onPick: (id: st
       <path className="loc-shape" d="M60,152 C74,158 92,158 102,152 L104,200 C94,204 80,204 70,200 Z" />
       <path className="loc-shape cb" d="M110,108 C134,96 170,104 178,130 C184,156 166,178 140,178 C122,178 110,166 108,150 C112,136 112,122 110,108 Z" />
       <path className="loc-csf" d="M104,116 L116,134 L104,150 Z" />
+      {/* striatum: caudate C-arc over the thalamus and the lentiform nucleus in front of it */}
+      <path className="loc-shape bg" d="M16,44 C14,26 34,14 58,16 C84,18 110,20 128,30 L126,36 C108,28 84,26 60,24 C40,24 26,32 26,46 C26,56 20,58 16,44 Z" />
+      <path className="loc-shape bg" d="M22,62 C28,50 50,46 74,50 C92,54 100,62 98,70 C92,78 66,80 44,76 C30,74 20,70 22,62 Z" />
       {SECTIONS.filter((s) => s.loc).map((s) => {
         const [x1, y1, x2, y2] = s.loc!
         const on = s.id === section.id

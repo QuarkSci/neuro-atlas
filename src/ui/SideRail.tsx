@@ -5,7 +5,7 @@ import { useT } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
 
 const CORTEX: SystemId[] = ['telencephalon']
-const DEEP: SystemId[] = ['diencephalon', 'brainstem', 'cerebellum', 'ventricles', 'white-matter', 'cranial-nerves']
+const DEEP: SystemId[] = ['basal-ganglia', 'diencephalon', 'brainstem', 'cerebellum', 'ventricles', 'white-matter', 'cranial-nerves']
 
 const populated = (ids: SystemId[]) => ids.filter((id) => ALL_SYSTEM_IDS.includes(id))
 

@@ -67,7 +67,7 @@ export interface Section {
   id: string
   /** Short badge code shown on the 3D marker ("U3", "K1"…). */
   code: string
-  region: 'medulla' | 'pons' | 'midbrain' | 'diencephalon' | 'hypothalamus' | 'cerebellum'
+  region: 'medulla' | 'pons' | 'midbrain' | 'diencephalon' | 'hypothalamus' | 'basal-ganglia' | 'cerebellum'
   title: L10n
   /** How the cut is oriented, for the caption. */
   orientation: L10n

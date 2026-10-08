@@ -26,12 +26,14 @@ GROSS_SYSTEM = [
     (r'cerebell|vermis|flocculus', 'cerebellum'),
     (r'pons|medulla|colliculus|brachium|midbrain|peduncle|cerebral crus|red nucleus|substantia nigra|olive|pyramid|tectum|tegmentum', 'brainstem'),
     (r'thalam|geniculate|habenula|pineal|pituitary|hypophysis|optic chiasm|optic tract|mammillary|stria medullaris|infundibul|tuber cinereum|preoptic|suprachiasmatic|supraoptic|periventricular nucleus', 'diencephalon'),
+    (r'caudate|putamen|globus pallidus|accumbens|lentiform|claustrum', 'basal-ganglia'),
     (r'white matter|corpus callosum|fornix|internal capsule|external capsule|commissure|corona radiata|radiation|cingulum|fasciculus|capsule|tapetum|lemniscus|corticospinal|stria terminalis', 'white-matter'),
     (r'.', 'telencephalon'),
 ]
 JULICH_SYSTEM = {
     'Thalamus': 'diencephalon', 'Metathalamus': 'diencephalon', 'Subthalamus': 'diencephalon',
     'Midbrain': 'brainstem', 'Cerebellum': 'cerebellum',
+    'Ventral Striatum': 'basal-ganglia', 'Ventral Pallidum': 'basal-ganglia',
 }
 
 def slug(s):
