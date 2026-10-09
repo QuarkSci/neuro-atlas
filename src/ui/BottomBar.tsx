@@ -1,4 +1,5 @@
-import { Blocks, Brain, Layers2, RotateCcw, ScanLine, X } from 'lucide-react'
+import { Blocks, Brain, GraduationCap, Layers2, RotateCcw, ScanLine, X } from 'lucide-react'
+import { LessonProgress, LessonStrip } from './LessonPanel'
 import { DEPTH_LEVELS } from '@/data'
 import { useL, useT } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
@@ -92,6 +93,10 @@ function ModeTabs() {
         <ScanLine size={20} />
         <span>{t.tabSections}</span>
       </button>
+      <button role="tab" className={`mode-tab ${mode === 'lessons' ? 'active' : ''}`} aria-selected={mode === 'lessons'} onClick={() => setMode('lessons')}>
+        <GraduationCap size={20} />
+        <span>{t.tabLessons}</span>
+      </button>
     </nav>
   )
 }
@@ -148,6 +153,12 @@ function SectionStrip() {
   )
 }
 
+/** Lessons: the list while none is open, the step dots while one runs. */
+function LessonDock() {
+  const lesson = useAtlas((s) => s.lesson)
+  return lesson ? <LessonProgress /> : <LessonStrip />
+}
+
 /** The whole bottom stack: the active mode's slider, its dial, and the mode tabs. */
 export function BottomBar() {
   const t = useT()
@@ -161,7 +172,9 @@ export function BottomBar() {
   return (
     <div className="bottom-dock">
       <div className="dock-row">
-        {mode === 'sections' ? (
+        {mode === 'lessons' ? (
+          <LessonDock />
+        ) : mode === 'sections' ? (
           <SectionStrip />
         ) : mode === 'peel' ? (
           <div className="slider-card glass">

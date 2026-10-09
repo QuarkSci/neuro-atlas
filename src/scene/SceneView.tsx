@@ -6,6 +6,19 @@ import { useT } from '@/i18n'
 import { BrainScene, type SceneSnapshot } from './BrainScene'
 import { loadGeometries } from './loader'
 import { SECTIONS } from '@/data/sections'
+import { LESSON_BY_ID, lessonStage, type LessonStage } from '@/data/lessons'
+
+/** The resolved stage of the open lesson step, cached so the scene sees a stable object per step. */
+let stageCache: { key: string; stage: LessonStage } | null = null
+function stageOf(s: AtlasState): LessonStage | null {
+  if (s.mode !== 'lessons' || !s.lesson) return null
+  const lesson = LESSON_BY_ID.get(s.lesson.id)
+  const step = lesson?.steps[s.lesson.step]
+  if (!lesson || !step) return null
+  const key = `${lesson.id}:${s.lesson.step}:${s.lang}`
+  if (stageCache?.key !== key) stageCache = { key, stage: lessonStage(lesson, s.lesson.step, s.lang, !!step.quiz) }
+  return stageCache.stage
+}
 
 const snapshot = (s: AtlasState): SceneSnapshot => ({
   visible: s.visible,
@@ -24,6 +37,8 @@ const snapshot = (s: AtlasState): SceneSnapshot => ({
   resetTick: s.resetTick,
   inspectorOpen: s.inspectorOpen,
   hovered: s.hovered,
+  lesson: stageOf(s),
+  lessonPick: s.mode === 'lessons' ? (s.lessonPick?.id ?? null) : null,
 })
 
 const sectionNamesFor = (lang: Lang) => Object.fromEntries(SECTIONS.map((s) => [s.id, s.title[lang] ?? s.title.en]))
@@ -76,6 +91,7 @@ export function SceneView() {
     /** Layers the current state needs: every enabled one, plus any a selected structure lives in. */
     const neededLayers = (s: AtlasState) => {
       const need = new Set<LayerId>(s.layers)
+      for (const l of stageOf(s)?.layers ?? []) need.add(l)
       for (const id of s.selected) {
         const p = PART_BY_ID.get(id)
         if (p) need.add(p.layer)
@@ -92,6 +108,11 @@ export function SceneView() {
         scene = new BrainScene(el, geometries, {
           onSelect: (id) => {
             const s = store.getState()
+            // In a lesson a tap answers the quiz / names the structure; it does not open the inspector.
+            if (s.mode === 'lessons' && s.lesson) {
+              s.setLessonPick(id)
+              return
+            }
             if (!id) {
               if (!s.isolate) s.clearSelection()
               return

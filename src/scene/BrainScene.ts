@@ -16,6 +16,7 @@ import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial.js'
 import { SECTIONS, scenePlane, type Section } from '@/data/sections'
 import { chainLoops, decimate, offsetLoop, planeBasis, sliceSegments, smoothLoop, unionOutline } from './slice'
 import type { Mode } from '@/store/useAtlas'
+import type { LessonStage, Mni } from '@/data/lessons'
 
 // Hover picking runs a raycast against every visible mesh each frame the
 // pointer moves; with hundreds of 5–40k-triangle meshes that is only smooth
@@ -43,6 +44,10 @@ export interface SceneSnapshot {
   resetTick: number
   inspectorOpen: boolean
   hovered: string | null
+  /** Guided lesson step on stage (lessons mode), already resolved to mesh ids. */
+  lesson: LessonStage | null
+  /** Structure the student last tapped in a lesson — highlighted like a selection. */
+  lessonPick: string | null
 }
 
 export interface SceneCallbacks {
@@ -88,7 +93,24 @@ interface PartEntry {
   selectedAmount: number
   hoverAmount: number
   label: HTMLDivElement
+  /** Lesson opacity: 1 on stage, a ghost for context, 0 off stage. */
+  lessonAmount: number
+  /** The atlas colour, kept while a lesson repaints the part in a teaching colour. */
+  atlasBase: T.Color | null
 }
+
+/** One lesson label: a name pill in a side column, a leader to its anchor point. */
+interface LessonLabelEl {
+  el: HTMLDivElement
+  line: SVGPolylineElement
+  dot: SVGCircleElement
+  anchor: T.Vector3
+}
+
+/** Context structures fade to this: enough to read where you are, faint enough not to hide the stage. */
+const GHOST_OPACITY = 0.07
+const GHOST_COLOR = new T.Color('#7d8ba3')
+const mniToScene = ([x, y, z]: Mni) => new T.Vector3(-x, z, y)
 
 interface Insets {
   top: number
@@ -190,6 +212,16 @@ export class BrainScene {
   /** Smoothed peel depth that chases the store value. */
   private peel = 0
   private lastFitPeel = 0
+  // ── Lessons ──
+  private lessonActive = false
+  private lessonKey = ''
+  private lessonFramedKey = ''
+  private lessonFocus = new Map<string, string | undefined>()
+  private lessonContext = new Set<string>()
+  private lessonLayer: HTMLDivElement
+  private lessonSvg: SVGSVGElement
+  private lessonLabels: LessonLabelEl[] = []
+  private flow: { group: T.Group; curve: T.CatmullRomCurve3; dots: T.Mesh[]; line: LineSegments2; loop: boolean; t: number; period: number } | null = null
 
   constructor(host: HTMLElement, geometries: LoadedGeometry[], cb: SceneCallbacks) {
     this.host = host
@@ -214,6 +246,12 @@ export class BrainScene {
     this.markerLayer = document.createElement('div')
     this.markerLayer.className = 'section-markers'
     host.appendChild(this.markerLayer)
+    this.lessonLayer = document.createElement('div')
+    this.lessonLayer.className = 'lesson-labels'
+    this.lessonSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+    this.lessonSvg.classList.add('lesson-leaders')
+    this.lessonLayer.appendChild(this.lessonSvg)
+    host.appendChild(this.lessonLayer)
 
     // Bounds first: lights, ground, camera and the clip indicator are all
     // sized from them. Only the brain proper counts — the skull, dura and
@@ -360,13 +398,17 @@ export class BrainScene {
         selectedAmount: 0,
         hoverAmount: 0,
         label,
+        lessonAmount: 0,
+        atlasBase: null,
       }
       this.parts.push(entry)
       this.byId.set(part.id, entry)
       this.scene.add(mesh)
     }
-    // Force the visibility / layout pass to run again for the new meshes.
+    // Force the visibility / layout pass to run again for the new meshes,
+    // and re-stage the running lesson so they get its colours.
     this.last = null
+    this.lessonKey = ''
     this.layoutKey = ''
     this.dirty = true
     this.warmUp()
@@ -413,6 +455,7 @@ export class BrainScene {
     this.renderer.dispose()
     this.labelLayer.remove()
     this.markerLayer.remove()
+    this.lessonLayer.remove()
     el.remove()
   }
 
@@ -490,6 +533,7 @@ export class BrainScene {
     this.camera.updateProjectionMatrix()
     this.renderer.setSize(w, h)
     for (const m of this.markers) m.material.resolution.set(w, h)
+    if (this.flow) (this.flow.line.material as LineMaterial).resolution.set(w, h)
     this.markerInsets = null
     this.layoutKey = ''
     this.isolateKey = ''
@@ -558,7 +602,8 @@ export class BrainScene {
         const inspector = root.querySelector('.inspector.open')
         const systems = root.querySelector('.sheet.open')
         const search = root.querySelector('.search-panel')
-        for (const el of [inspector, systems]) {
+        const lesson = root.querySelector('.lesson-panel')
+        for (const el of [inspector, systems, lesson]) {
           if (!el) continue
           const r = (el as HTMLElement).getBoundingClientRect()
           if (r.width > 0 && overlapsH(r)) grow('bottom', hostRect.bottom - r.top + gap)
@@ -573,9 +618,9 @@ export class BrainScene {
           const r = systems.getBoundingClientRect()
           if (r.width > 0 && overlapsV(r)) grow('left', r.right - hostRect.left + gap)
         }
-        const inspector = root.querySelector('.inspector.open')
-        if (inspector) {
-          const r = (inspector as HTMLElement).getBoundingClientRect()
+        for (const el of [root.querySelector('.inspector.open'), root.querySelector('.lesson-panel')]) {
+          if (!el) continue
+          const r = (el as HTMLElement).getBoundingClientRect()
           if (r.width > 0 && overlapsV(r)) grow('right', hostRect.right - r.left + gap)
         }
       }
@@ -648,6 +693,7 @@ export class BrainScene {
 
   /** Choose the framing for the current mode: assembled, exploded or isolated. */
   private frameFor(s: SceneSnapshot, animate: boolean) {
+    if (s.lesson && this.frameLesson(s.lesson, animate)) return
     if (s.isolate) {
       const box = this.visibleBox()
       if (!box.isEmpty()) this.fitBox(box, s.view, this.insets(), animate, 0.95)
@@ -783,7 +829,7 @@ export class BrainScene {
     const ndc = new T.Vector2((x / w) * 2 - 1, -(y / h) * 2 + 1)
     this.raycaster.setFromCamera(ndc, this.camera)
     this.raycaster.firstHitOnly = true
-    const candidates = this.parts.filter((p) => p.mesh.visible).map((p) => p.mesh)
+    const candidates = this.parts.filter((p) => p.mesh.visible && (!this.lessonActive || this.lessonFocus.has(p.id))).map((p) => p.mesh)
     const hits = this.raycaster.intersectObjects(candidates, false)
     // Respect the clip planes: a hit clipped away on any active plane is
     // invisible and must not be selectable.
@@ -1094,6 +1140,255 @@ export class BrainScene {
     }
   }
 
+  // ── Lessons ─────────────────────────────────────────────────────────
+
+  /**
+   * Puts a lesson step on stage: structures in focus fade in (in their
+   * teaching colours), context fades to a ghost, everything else fades out.
+   * Runs every frame while a lesson is open; the expensive part (colours,
+   * labels, flow, camera) only when the step changes.
+   */
+  private stageLesson(s: SceneSnapshot, dt: number) {
+    const st = s.lesson!
+    if (st.key !== this.lessonKey) {
+      if (!this.lessonActive) for (const p of this.parts) p.lessonAmount = p.mesh.visible ? p.peelAmount : 0
+      this.lessonActive = true
+      this.lessonKey = st.key
+      this.lessonFocus = new Map(st.focus.map((f) => [f.id, f.color]))
+      this.lessonContext = new Set(st.context)
+      for (const p of this.parts) {
+        const color = this.lessonFocus.get(p.id)
+        const want = color ? new T.Color(color) : this.lessonContext.has(p.id) ? GHOST_COLOR : null
+        const base = p.mesh.material.userData.base
+        if (want) {
+          if (!p.atlasBase) p.atlasBase = base.clone()
+          base.copy(want)
+        } else if (p.atlasBase) {
+          base.copy(p.atlasBase)
+          p.atlasBase = null
+        }
+        tint(p.mesh.material, p.selectedAmount, p.hoverAmount)
+        ;(p.mesh.children[0] as T.Mesh<T.BufferGeometry, T.MeshBasicMaterial> | undefined)?.material.color.copy(base).multiplyScalar(0.82)
+      }
+      this.buildLessonLabels(st)
+      this.buildFlow(st)
+      this.markerInsets = null
+      this.dirty = true
+    }
+    // Frame once every focus mesh is in (a step may wait for a layer to load).
+    if (this.lessonFramedKey !== st.key && st.focus.every((f) => this.byId.has(f.id))) {
+      this.lessonFramedKey = st.key
+      this.frameLesson(st, true)
+    }
+    let moving = false
+    for (const p of this.parts) {
+      const target = this.lessonFocus.has(p.id) ? 1 : this.lessonContext.has(p.id) ? GHOST_OPACITY : 0
+      if (p.lessonAmount !== target) {
+        p.lessonAmount = T.MathUtils.damp(p.lessonAmount, target, 5, dt)
+        if (Math.abs(p.lessonAmount - target) < 0.003) p.lessonAmount = target
+        moving = true
+      }
+      const a = p.lessonAmount
+      const m = p.mesh.material
+      // A ghost shows its front faces only: with both sides, every gyrus
+      // would stack two layers and the stage behind would drown in white.
+      const side = this.lessonFocus.has(p.id) ? T.DoubleSide : T.FrontSide
+      // `side` is part of the shader program key: a change needs a recompile.
+      if (m.side !== side) {
+        m.side = side
+        m.needsUpdate = true
+      }
+      if (m.opacity !== a) {
+        m.opacity = a
+        m.transparent = a < 0.999
+        m.depthWrite = a >= 0.999
+      }
+      p.mesh.visible = a > 0.005
+      // The back-face cut cap would show through a see-through shell.
+      const cap = p.mesh.children[0]
+      if (cap) cap.visible = a >= 0.999
+    }
+    if (moving) this.dirty = true
+  }
+
+  /** Leaves lesson mode: atlas colours back, opacity handed back to the peel/visibility pass. */
+  private endLesson() {
+    this.lessonActive = false
+    this.lessonKey = ''
+    this.lessonFramedKey = ''
+    this.lessonFocus.clear()
+    this.lessonContext.clear()
+    for (const p of this.parts) {
+      if (p.atlasBase) {
+        p.mesh.material.userData.base.copy(p.atlasBase)
+        ;(p.mesh.children[0] as T.Mesh<T.BufferGeometry, T.MeshBasicMaterial> | undefined)?.material.color.copy(p.atlasBase).multiplyScalar(0.82)
+        p.atlasBase = null
+        tint(p.mesh.material, p.selectedAmount, p.hoverAmount)
+      }
+      const cap = p.mesh.children[0]
+      if (cap) cap.visible = true
+      if (p.mesh.material.side !== T.DoubleSide) {
+        p.mesh.material.side = T.DoubleSide
+        p.mesh.material.needsUpdate = true
+      }
+      p.peelAmount = -1 // forces the visibility pass to rewrite opacity
+    }
+    this.buildLessonLabels(null)
+    this.buildFlow(null)
+  }
+
+  /** Frames the step's focus structures from its viewpoint; false if none is loaded yet. */
+  private frameLesson(st: LessonStage, animate: boolean) {
+    const box = new T.Box3()
+    for (const f of st.focus) {
+      const p = this.byId.get(f.id)
+      if (p) box.union(p.bounds)
+    }
+    for (const l of st.labels) box.expandByPoint(mniToScene(l.at))
+    if (box.isEmpty()) return false
+    this.markerInsets = null
+    const dir = mniToScene(st.view).normalize()
+    this.fitBox(box, dir, this.insets(), animate, 0.95)
+    return true
+  }
+
+  private buildLessonLabels(st: LessonStage | null) {
+    for (const l of this.lessonLabels) {
+      l.el.remove()
+      l.line.remove()
+      l.dot.remove()
+    }
+    this.lessonLabels = []
+    if (!st) return
+    const NS = 'http://www.w3.org/2000/svg'
+    for (const lab of st.labels) {
+      const el = document.createElement('div')
+      el.className = 'lesson-label'
+      if (lab.color) {
+        const sw = document.createElement('i')
+        sw.style.background = lab.color
+        el.appendChild(sw)
+      }
+      el.appendChild(document.createTextNode(lab.text))
+      this.lessonLayer.appendChild(el)
+      const line = document.createElementNS(NS, 'polyline')
+      const dot = document.createElementNS(NS, 'circle')
+      dot.setAttribute('r', '3.2')
+      if (lab.color) {
+        line.style.stroke = lab.color
+        dot.style.fill = lab.color
+      }
+      this.lessonSvg.append(line, dot)
+      this.lessonLabels.push({ el, line, dot, anchor: mniToScene(lab.at) })
+    }
+  }
+
+  /**
+   * Atlas-style label columns: each label goes to the side of the stage its
+   * anchor is on, columns are de-overlapped top to bottom, and a leader runs
+   * from the pill to the anchor dot.
+   */
+  private updateLessonLabels() {
+    if (!this.lessonLabels.length) return
+    const w = this.host.clientWidth,
+      h = this.host.clientHeight
+    this.lessonSvg.setAttribute('viewBox', `0 0 ${w} ${h}`)
+    const box = new T.Box3()
+    for (const id of this.lessonFocus.keys()) {
+      const p = this.byId.get(id)
+      if (p && p.mesh.visible) box.union(p.bounds)
+    }
+    const toScreen = (v: T.Vector3) => {
+      const q = v.clone().project(this.camera)
+      return { x: ((q.x + 1) * w) / 2, y: ((1 - q.y) * h) / 2 }
+    }
+    let minX = Infinity,
+      maxX = -Infinity
+    const pts = this.lessonLabels.map((l) => toScreen(l.anchor))
+    if (!box.isEmpty()) {
+      for (let i = 0; i < 8; i++) {
+        const c = new T.Vector3(i & 1 ? box.max.x : box.min.x, i & 2 ? box.max.y : box.min.y, i & 4 ? box.max.z : box.min.z)
+        const sp = toScreen(c)
+        minX = Math.min(minX, sp.x)
+        maxX = Math.max(maxX, sp.x)
+      }
+    }
+    for (const p of pts) {
+      minX = Math.min(minX, p.x)
+      maxX = Math.max(maxX, p.x)
+    }
+    const ins = this.markerInsets ?? (this.markerInsets = this.insets())
+    const mid = (minX + maxX) / 2
+    const leftX = Math.max(ins.left + 12, minX - 28)
+    const rightX = Math.min(w - ins.right - 12, maxX + 28)
+    const sides: { i: number; y: number }[][] = [[], []]
+    pts.forEach((p, i) => sides[p.x < mid ? 0 : 1].push({ i, y: p.y }))
+    const GAP = 28
+    sides.forEach((col, side) => {
+      col.sort((a, b) => a.y - b.y)
+      const ys = col.map((c) => c.y)
+      for (let k = 1; k < ys.length; k++) ys[k] = Math.max(ys[k], ys[k - 1] + GAP)
+      // Shift the column back up if it ran off the bottom.
+      const over = ys.length ? ys[ys.length - 1] - (h - ins.bottom - 12) : 0
+      if (over > 0) for (let k = 0; k < ys.length; k++) ys[k] -= over
+      col.forEach((c, k) => {
+        const l = this.lessonLabels[c.i]
+        const a = pts[c.i]
+        const y = Math.max(ins.top + 12, ys[k])
+        // Keep the whole pill on screen and clear of the side panels.
+        const pw = l.el.offsetWidth
+        const x = side === 0 ? Math.max(leftX, ins.left + 8 + pw) : Math.min(rightX, w - ins.right - 8 - pw)
+        l.el.style.transform = side === 0 ? `translate(-100%, -50%) translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)` : `translate(0, -50%) translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`
+        const elbow = side === 0 ? x + 10 : x - 10
+        l.line.setAttribute('points', `${x.toFixed(1)},${y.toFixed(1)} ${elbow.toFixed(1)},${y.toFixed(1)} ${a.x.toFixed(1)},${a.y.toFixed(1)}`)
+        l.dot.setAttribute('cx', a.x.toFixed(1))
+        l.dot.setAttribute('cy', a.y.toFixed(1))
+      })
+    })
+  }
+
+  /** Particles streaming along the step's path (CSF flow, a circuit), drawn over the ghosts. */
+  private buildFlow(st: LessonStage | null) {
+    if (this.flow) {
+      this.scene.remove(this.flow.group)
+      this.flow.group.traverse((o) => {
+        if (o instanceof T.Mesh || o instanceof LineSegments2) {
+          o.geometry.dispose()
+          ;(o.material as T.Material).dispose()
+        }
+      })
+      this.flow = null
+    }
+    if (!st?.flow) return
+    const loop = st.flow.loop
+    const curve = new T.CatmullRomCurve3(st.flow.path.map(mniToScene), loop, 'centripetal')
+    const group = new T.Group()
+    const samples = curve.getSpacedPoints(240)
+    const pos: number[] = []
+    for (let i = 0; i < samples.length - 1; i++) pos.push(samples[i].x, samples[i].y, samples[i].z, samples[i + 1].x, samples[i + 1].y, samples[i + 1].z)
+    const geo = new LineSegmentsGeometry()
+    geo.setPositions(pos)
+    const mat = new LineMaterial({ color: st.flow.color, linewidth: 2, transparent: true, opacity: 0.45, depthTest: false })
+    mat.resolution.set(this.host.clientWidth, this.host.clientHeight)
+    const line = new LineSegments2(geo, mat)
+    line.renderOrder = 30
+    group.add(line)
+    const length = curve.getLength()
+    const n = Math.max(8, Math.round(length / 14))
+    const dotGeo = new T.SphereGeometry(1.1, 12, 8)
+    const dots: T.Mesh[] = []
+    for (let i = 0; i < n; i++) {
+      const d = new T.Mesh(dotGeo, new T.MeshBasicMaterial({ color: st.flow.color, transparent: true, depthTest: false }))
+      d.renderOrder = 31
+      d.raycast = () => {}
+      group.add(d)
+      dots.push(d)
+    }
+    this.scene.add(group)
+    // ~22 mm/s: slow enough to follow with the eye.
+    this.flow = { group, curve, dots, line, loop, t: 0, period: Math.max(4, length / 22) }
+  }
+
   // ── Frame loop ──────────────────────────────────────────────────────
 
   private animate = () => {
@@ -1158,8 +1453,14 @@ export class BrainScene {
       if (Math.abs(this.peel - s.peel) < 0.0005) this.peel = s.peel
     }
     const shells = Math.max(1, DEPTH_LEVELS.length - 1)
-    const visibilityChanged = first || peeling || last.visible !== s.visible || last.layers !== s.layers || last.selected !== s.selected || last.isolate !== s.isolate
-    if (visibilityChanged) {
+    let lessonEnded = false
+    if (s.lesson) this.stageLesson(s, dt)
+    else if (this.lessonActive) {
+      this.endLesson()
+      lessonEnded = true
+    }
+    const visibilityChanged = first || peeling || lessonEnded || last.visible !== s.visible || last.layers !== s.layers || last.selected !== s.selected || last.isolate !== s.isolate
+    if (visibilityChanged && !s.lesson) {
       // A finer layer replaces the gross part it subdivides (parcellation →
       // cortex, brainstem layer → pons/medulla) rather than hiding inside it.
       const coveredSet = coveredIds(s.layers)
@@ -1179,6 +1480,7 @@ export class BrainScene {
       this.dirty = true
     }
     this.ground.visible = !s.isolate && this.amount < 0.45
+    if (lessonEnded) this.frameFor(s, true)
 
     // Offsets.
     if (moving || visibilityChanged) {
@@ -1219,6 +1521,21 @@ export class BrainScene {
       this.frameFor(s, true)
     }
 
+    // Lesson flow particles run continuously.
+    if (this.flow) {
+      const f = this.flow
+      f.t = (f.t + dt / f.period) % 1
+      const n = f.dots.length
+      f.dots.forEach((d, i) => {
+        const u = (f.t + i / n) % 1
+        f.curve.getPointAt(u, d.position)
+        // Open paths fade in at the source and out at the exit.
+        const m = d.material as T.MeshBasicMaterial
+        m.opacity = f.loop ? 0.95 : 0.95 * Math.min(1, u * 8, (1 - u) * 8)
+      })
+      this.dirty = true
+    }
+
     // Camera fly-to.
     if (this.fly) {
       this.fly.t = Math.min(1, this.fly.t + dt / 0.75)
@@ -1237,7 +1554,7 @@ export class BrainScene {
 
     // Smooth highlight amounts.
     for (const p of this.parts) {
-      const targetSel = selection.has(p.id) ? 1 : 0
+      const targetSel = selection.has(p.id) || (s.lessonPick !== null && p.id === s.lessonPick) ? 1 : 0
       const targetHov = p.id === this.hoveredId ? 1 : 0
       if (Math.abs(p.selectedAmount - targetSel) > 0.002 || Math.abs(p.hoverAmount - targetHov) > 0.002) {
         p.selectedAmount = T.MathUtils.damp(p.selectedAmount, targetSel, 14, dt)
@@ -1266,6 +1583,7 @@ export class BrainScene {
       this.renderer.render(this.scene, this.camera)
       this.updateLabels()
       this.updateMarkers()
+      this.updateLessonLabels()
       this.dirty = false
     }
   }

@@ -4,14 +4,14 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-10-09 (BG-1: bazal yadrolar tizimi + B1–B5 koronal/aksial kesim plastinkalari, masshtabda).
+> Oxirgi yangilanish: 2026-10-09 (Darslar: 3D qadamma-qadam darslar — qorinchalar, qadoqsimon tana, gippokamp/fornix/Papez; BG-1 undan oldin).
 
 ## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
 
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
-   oxirgi commit — "BG-1: bazal yadrolar …" (2026-10-09) yoki
+   oxirgi commit — "Darslar: …" (2026-10-09) yoki
    undan keyingisi; `git rev-parse HEAD origin/master` bir
    xil bo'lishi kerak.
 3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
@@ -54,6 +54,13 @@
    ```bash
    node scripts/shot-sections.mjs /tmp/sec --only medulla-olive,pons-trigeminal --setup "[...document.querySelectorAll('.sv-views button')][3].click()" --wait 7000
    ```
+   Darslar (Darslar tabi): barcha qadamlarni bitta sessiyada suratga olish
+   (21 qadam ≈ 3.5 daqiqa; headless'da fade sekin — `--wait 8000`):
+   ```bash
+   node scripts/shot-lessons.mjs /tmp/les --only ventricles:0,limbic:3 --wait 8000
+   ```
+   Store'dan: `a.setMode('lessons'); a.setLesson('limbic'); __atlas.getState().setLessonStep(3)`;
+   viktorina javobi: `__atlas.getState().setLessonPick('g-third-ventricle')`.
    Sxemalarda ustma-ust tushgan juftlar (kichigining necha foizi yopilgan):
    `node scripts/audit-sections.mjs --min 0.15`. 2026-10-03 da qolganlari
    ATAYLAB: konteyner (cg/pag ichidagi yadrolar), tutam ichidagi yadro
@@ -93,6 +100,20 @@
    bo'lsa `-m` buziladi — bir marta shunday xato bo'lgan).
 7. Har bosqich oxirida shu faylning 3-bo'limi va `PLAN.md` jadvalini
    yangilang.
+
+**Darslar (2026-10-09, foydalanuvchi talabi):** "qorinchalar, qadoqsimon tana,
+gippokamp, fornix — o'zim ham o'qib tushunmadim; talabalar uchun esdan
+chiqmaydigan qilib ko'rsatib, tushuntiradigan qism". ✅ 3 dars tayyor
+(3-bo'lim). Yangi dars qo'shish: `src/data/lessons/<id>.ts` (`Lesson` tipi)
+→ `index.ts` `LESSONS`. Har qadam: `show` (konsept + `side` + o'quv rangi),
+`context` (`@tizim` yoki konsept — xira fon), `labels` (MNI nuqta —
+meshdan o'lchang, scratchpad'dagi `landmarks.py` uslubi: trimesh ekstremal
+nuqtalar/y-bo'laklar markazi), `view` (MNI yo'nalish, kameradan nishonga
+emas — nishondan kameraga), `flow` (MNI yo'l yoki `via` konsept
+markazlari), `memo` (o'xshatish/mnemonika), `deep` (klinika/PhD), oxirida
+`quiz`. Taklif etilgan keyingi darslar: bazal yadrolar halqasi (BG-2 bilan
+birlashtirish mumkin), talamus yadrolari, Willis halqasi, bosh nervlari
+chiqish joylari, miyacha oyoqchalari, ko'rish yo'li.
 
 **Joriy vazifa (2026-10-09 dan): BAZAL YADROLAR MODULI, 4 bosqich.**
 Foydalanuvchi talabi: bazal yadrolar "bakalavrdan PhD gacha oltin standart"
@@ -491,6 +512,41 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
   - Lokator: striatum silueti (`.loc-shape.bg`), B1–B4 vertikal, B5
     gorizontal chiziq. Pastki dock darajalar qatori desktopda ikki qatorga
     o'raladi (7 guruh sig'masdi), telefonda gorizontal scroll.
+- ✅ Darslar — 3D qadamma-qadam darslar (2026-10-09):
+  - 4-tab **Darslar** (`mode: 'lessons'`, `GraduationCap`): ro'yxat
+    (`LessonStrip`, dock'da kartochkalar) → dars ochilganda o'ngda
+    `LessonPanel` (`.lesson-panel`, telefonda pastki karta, yig'ish tugmasi):
+    matn, **Eslab qoling** (o'xshatish/mnemonika, sariq quti), **Chuqurroq:
+    klinika va tadqiqot** (ochiladigan), oxirgi qadamda manbalar; dock'da
+    qadam nuqtalari (`LessonProgress`); ← → / Esc. Viktorina: savol →
+    talaba 3D'da bosadi → `lessonPick` → konsept tekshiriladi, ball.
+    Dars rejimida bosish Inspector'ni OCHMAYDI (`SceneView` onSelect).
+  - Store: `lesson {id, step}`, `lessonPick {id, tick}`, `setLesson/
+    setLessonStep/setLessonPick`; `setMode` ularni tozalaydi; `reset`
+    dars rejimida qoladi.
+  - Ma'lumot: `src/data/lessons/` — `ventricles.ts` (8 qadam: 4 qorincha,
+    yon qorincha 5 qismi, devorlari, Monro/III, suv yo'li/IV + Magendie/
+    Luschka, tomirli chigal, likvor oqimi animatsiyasi, viktorina),
+    `callosum.ts` (7: ko'prik, rostrum-genu-tana-splenium, topografiya
+    medial yuzada rangli giruslar bilan, septum, AC/gippokamp komissurasi,
+    split-brain, viktorina), `limbic.ts` (6: gippokamp bosh/tana/dum,
+    fornix fimbriya→oyoq→tana→ustun, "beshta C", Papez 7 bekat + aylanuvchi
+    zarrachalar, Julich CA1/CA2/CA3/DG/subikulum/EC trisinaptik zanjiri,
+    viktorina). `lessonStage()` konseptlarni mesh id'ga, `@tizim`ni gross
+    qismlarga aylantiradi; viktorinada o'quv ranglari va yorliqlar o'chadi.
+  - `BrainScene` dars rejimi (`stageLesson/endLesson/frameLesson/
+    buildLessonLabels/updateLessonLabels/buildFlow`): fokus qismlar o'quv
+    rangida asta paydo bo'ladi (`lessonAmount` damp), kontekst — xira
+    `GHOST_COLOR` 0.07, faqat FrontSide (DoubleSide bo'lsa har giros 2
+    qatlam beradi va sahna oq tumanga cho'kadi), qolgani yo'qoladi; cap
+    (kesim yuzasi) shaffof qismda yashiriladi; xira qismlar bosilmaydi
+    (`pick` faqat fokus). Yorliqlar — atlas uslubidagi ikki ustun, yetakchi
+    chiziq + nuqta, ekran/panel ichida qisiladi. Oqim — CatmullRom yo'l,
+    LineSegments2 + 22 mm/s zarrachalar, `depthTest: false`. Chiqishda
+    ranglar `atlasBase`dan, opacity `peelAmount = -1` bilan tiklanadi.
+  - Manbalar eutils/Crossref bilan tekshirilgan: StatPearls Ventricular
+    System NBK532932, CSF NBK519007, Corpus Callosum NBK448209, Hippocampus
+    NBK482171; Papez 1937, Scoville & Milner 1957, Hofer & Frahm 2006.
 - ⬜ 6–7.
 
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
@@ -561,3 +617,6 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     o'lchang (trimesh `mesh.section`, `pipeline/.venv`), keyin mm'da
     chizing — ko'z bilan chizilgan proporsiyalar Atlas (MNI) ko'rinishi
     bilan mos kelmaydi.
+22. three.js: `material.side` shader dasturi kalitining qismi — uni
+    o'zgartirgach `material.needsUpdate = true` SHART, aks holda eski dastur
+    ishlatiladi (darslarda xira qismlar butunlay noshaffof chiqdi).
