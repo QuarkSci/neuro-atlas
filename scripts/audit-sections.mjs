@@ -30,7 +30,7 @@ try {
   await page.setViewport({ width: 1400, height: 860 })
   await page.goto('http://localhost:3019/', { waitUntil: 'networkidle0' })
   await page.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })
-  await page.evaluate(() => window.__atlas.getState().setMode('sections'))
+  await page.evaluate(() => window.__atlas.getState().setMode('learn'))
   for (const id of ids) {
     await page.evaluate((id) => window.__atlas.getState().openSection(id), id)
     await new Promise((r) => setTimeout(r, 300))

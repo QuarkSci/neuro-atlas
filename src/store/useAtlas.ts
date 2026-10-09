@@ -1,3 +1,4 @@
+import { TOPICS } from '@/data/topics'
 import { create } from 'zustand'
 import type { LayerId, SystemId } from '@/data/types'
 import { ALL_SYSTEM_IDS, LAYER_BY_ID } from '@/data'
@@ -6,7 +7,12 @@ export type Lang = 'en' | 'uz'
 export type View = 'three-quarter' | 'lateral' | 'front' | 'top'
 export type Panel = 'systems' | 'search' | null
 /** Which control the bottom dock shows: explode slider, peel slider or the cross-section atlas. */
-export type Mode = 'explode' | 'peel' | 'sections' | 'lessons'
+/**
+ * `learn` is the single study tab: topic cards → a topic's 3D lessons and
+ * cross-section plates (data/topics). Lessons and plates used to be two
+ * tabs; they are one now so a topic is found in one place.
+ */
+export type Mode = 'explode' | 'peel' | 'learn'
 export type Focus = { kind: 'concept'; id: string } | { kind: 'part'; id: string }
 
 /** One of the three orthogonal cross-section planes. */
@@ -52,6 +58,8 @@ export interface AtlasState {
   sectionCut: string | null
   /** Systems shown before entering the sections mode, restored on leaving it. */
   sectionsPrevVisible: SystemId[] | null
+  /** Topic open in the learn tab (data/topics), or null for the topic cards. */
+  topic: string | null
   /** Guided 3D lesson in progress (see data/lessons), or null for the lesson list. */
   lesson: { id: string; step: number } | null
   /** Structure the student last tapped during a lesson (quiz answers, "what was that?"). */
@@ -84,6 +92,8 @@ export interface AtlasState {
   jumpToLevel: (mm: number) => void
   /** Opens (or closes, with null) the cross-section viewer. */
   openSection: (id: string | null) => void
+  /** Opens a topic in the learn tab (null: back to the topic cards). */
+  setTopic: (id: string | null) => void
   /** Starts a lesson at its first step, or (null) returns to the lesson list. */
   setLesson: (id: string | null) => void
   setLessonStep: (step: number) => void
@@ -134,8 +144,15 @@ const sceneDefaults = {
   sectionId: null as string | null,
   sectionCut: null as string | null,
   sectionsPrevVisible: null as SystemId[] | null,
+  topic: null as string | null,
   lesson: null as { id: string; step: number } | null,
   lessonPick: null as { id: string; tick: number } | null,
+}
+
+/** State for walking into the learn tab from another mode (no-op when already there). */
+function enterLearn(s: { mode: Mode; visible: SystemId[]; resetTick: number }) {
+  if (s.mode === 'learn') return {}
+  return { mode: 'learn' as Mode, explode: 0, peel: 0, isolate: false, sectionsPrevVisible: s.visible, visible: SECTION_SYSTEMS.filter((id) => ALL_SYSTEM_IDS.includes(id)), cutaway: false, view: 'lateral' as View, resetTick: s.resetTick + 1, selected: [], focus: null, inspectorOpen: false, autoRotate: false }
 }
 
 /** Systems that make sense around brainstem / diencephalon cross-sections. */
@@ -184,21 +201,37 @@ export const useAtlas = create<AtlasState>((set) => ({
   setMode: (mode) =>
     set((s) => {
       if (mode === s.mode) return {}
-      const base = { mode, explode: 0, peel: 0, isolate: false, lesson: null, lessonPick: null }
-      // Entering the section atlas: show the deep structures the level
-      // markers sit on, from the side where the brainstem levels read best.
-      if (mode === 'sections')
-        return { ...base, sectionsPrevVisible: s.visible, visible: SECTION_SYSTEMS.filter((id) => ALL_SYSTEM_IDS.includes(id)), cutaway: false, view: 'lateral' as View, resetTick: s.resetTick + 1, selected: [], focus: null, inspectorOpen: false, autoRotate: false }
+      const base = { mode, explode: 0, peel: 0, isolate: false, lesson: null, lessonPick: null, topic: null }
+      // Entering the learn tab: show the deep structures the level markers
+      // sit on, from the side where the brainstem levels read best.
+      if (mode === 'learn') return { ...base, ...enterLearn(s) }
       // Leaving it: drop the cut and hand back whatever was shown before.
-      if (s.mode === 'sections') return { ...base, sectionCut: null, sectionId: null, visible: s.sectionsPrevVisible ?? s.visible, sectionsPrevVisible: null, resetTick: s.resetTick + 1 }
+      if (s.mode === 'learn') return { ...base, sectionCut: null, sectionId: null, visible: s.sectionsPrevVisible ?? s.visible, sectionsPrevVisible: null, resetTick: s.resetTick + 1 }
       return base
     }),
   openSection: (sectionId) => set({ sectionId, panel: null }),
+  setTopic: (topic) =>
+    set((s) => ({
+      ...enterLearn(s),
+      topic,
+      lesson: null,
+      lessonPick: null,
+      sectionCut: null,
+      selected: [],
+      focus: null,
+      inspectorOpen: false,
+      view: 'lateral' as View,
+      resetTick: s.resetTick + 1,
+    })),
   setLesson: (id) =>
     set((s) => ({
+      ...enterLearn(s),
+      // A lesson opened from outside its topic (a plate's link) lands in it.
+      topic: id && !s.topic ? (TOPICS.find((t) => t.lessons.includes(id))?.id ?? null) : s.topic,
       lesson: id ? { id, step: 0 } : null,
       lessonPick: null,
-      mode: 'lessons' as Mode,
+      sectionCut: null,
+      sectionId: null,
       selected: [],
       focus: null,
       inspectorOpen: false,
@@ -208,8 +241,8 @@ export const useAtlas = create<AtlasState>((set) => ({
       explode: 0,
       peel: 0,
       isolate: false,
-      // Back to the list: frame the whole brain again.
-      ...(id ? {} : { view: 'three-quarter' as View, resetTick: s.resetTick + 1 }),
+      // Back to the topic: its level markers, from the side.
+      ...(id ? {} : { view: 'lateral' as View, resetTick: s.resetTick + 1 }),
     })),
   setLessonStep: (step) => set((s) => (s.lesson ? { lesson: { ...s.lesson, step }, lessonPick: null, selected: [], focus: null, inspectorOpen: false } : {})),
   setLessonPick: (id) => set((s) => ({ lessonPick: id ? { id, tick: (s.lessonPick?.tick ?? 0) + 1 } : null })),
@@ -217,6 +250,8 @@ export const useAtlas = create<AtlasState>((set) => ({
     set((s) => ({
       sectionCut,
       sectionId: null,
+      lesson: null,
+      lessonPick: null,
       cutaway: false,
       isolate: false,
       explode: 0,
@@ -267,7 +302,7 @@ export const useAtlas = create<AtlasState>((set) => ({
   setHovered: (hovered) => set({ hovered }),
   setProgress: (progress) => set({ progress }),
   setError: (error) => set({ error }),
-  reset: () => set((s) => ({ ...sceneDefaults, lesson: s.lesson, mode: s.mode === 'sections' || s.mode === 'lessons' ? s.mode : 'explode', visible: s.mode === 'sections' ? s.visible : sceneDefaults.visible, sectionsPrevVisible: s.sectionsPrevVisible, view: s.mode === 'sections' ? 'lateral' : sceneDefaults.view, resetTick: s.resetTick + 1 })),
+  reset: () => set((s) => ({ ...sceneDefaults, topic: s.topic, lesson: s.lesson, mode: s.mode === 'learn' ? 'learn' : 'explode', visible: s.mode === 'learn' ? s.visible : sceneDefaults.visible, sectionsPrevVisible: s.sectionsPrevVisible, view: s.mode === 'learn' ? 'lateral' : sceneDefaults.view, resetTick: s.resetTick + 1 })),
 }))
 
 if (import.meta.env.DEV) (window as unknown as { __atlas: typeof useAtlas }).__atlas = useAtlas

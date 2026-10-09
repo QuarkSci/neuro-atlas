@@ -53,6 +53,7 @@ export const CALLOSUM: Lesson = {
         { text: { en: 'Body (trunk)', uz: 'Tana (truncus)' }, at: [0, -9, 26], color: CC },
         { text: { en: 'Splenium', uz: 'Qalinlashma (splenium)' }, at: [0, -46, 15], color: CC },
       ],
+      section: 'bg-capsule-axial',
       view: [1, 0.05, 0.15],
     },
     {
@@ -107,6 +108,7 @@ export const CALLOSUM: Lesson = {
         { text: { en: 'Frontal horn', uz: 'Frontal shox' }, at: [-15.7, 30, 1], color: LV },
         { text: { en: 'Fornix', uz: 'Fornix' }, at: [-2, -13, 13], color: FX },
       ],
+      section: 'bg-accumbens',
       view: [-0.5, 0.85, 0.35],
     },
     {
@@ -131,6 +133,7 @@ export const CALLOSUM: Lesson = {
         { text: { en: 'Hippocampal commissure', uz: 'Gippokamp komissurasi' }, at: [0, -30, 7], color: HC },
         { text: { en: 'Corpus callosum', uz: 'Qadoqsimon tana' }, at: [0, -9, 26], color: CC },
       ],
+      section: 'bg-commissural',
       view: [1, 0.05, 0.15],
     },
     {

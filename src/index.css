@@ -667,6 +667,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .sv-nav { display: flex; align-items: center; gap: 6px; }
 .sv-icon { width: 32px; height: 32px; border-radius: 999px; display: grid; place-items: center; background: var(--fa-fill); }
 .sv-icon:disabled { opacity: 0.35; }
+.sv-learn { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 13px; border-radius: 999px; background: rgba(184, 211, 58, 0.16); color: #d9ef7a; font-size: 12.5px; font-weight: 600; }
 .sv-cut { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 13px; border-radius: 999px; background: var(--fa-accent); color: #fff; font-size: 12.5px; font-weight: 600; }
 .sv-regions { display: flex; gap: 14px; padding: 2px 18px 10px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--fa-line); }
 .sv-region { display: flex; align-items: center; gap: 4px; flex: none; }
@@ -798,7 +799,8 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   .sv-card.glass { height: 100%; border-radius: 0; }
   .sv-body { grid-template-columns: 1fr; grid-template-rows: minmax(300px, 52%) 1fr; }
   .sv-side { border-left: 0; border-top: 1px solid var(--fa-line); }
-  .sv-cut span { display: none; }
+  .sv-cut span, .sv-learn span { display: none; }
+  .sv-learn { padding: 0 9px; }
   .sv-cut { padding: 0 9px; }
   .sv-head { padding: 12px 12px 6px; }
   .sv-heading h2 { font-size: 14.5px; }
@@ -885,4 +887,33 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   .lesson-card { min-width: 230px; }
   .lesson-progress .strip-btn span { display: none; }
   .lesson-label { font-size: 10.5px; padding: 3px 8px; max-width: 140px; }
+}
+
+/* ── Learn tab: topics ─────────────────────────────────────────────── */
+.topic-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.topic-card { display: flex; flex-direction: column; gap: 2px; text-align: left; padding: 7px 10px; border-radius: 14px; background: var(--fa-fill); transition: background 0.15s; min-width: 0; }
+.topic-card:hover { background: rgba(255, 255, 255, 0.13); }
+.topic-card strong { font-size: 12.5px; font-weight: 650; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.topic-card small { font-size: 10.5px; color: var(--fa-muted); line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.topic-badges { display: flex; gap: 5px; flex-wrap: nowrap; margin-top: 2px; }
+.topic-badge { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; flex: none; font-size: 10px; padding: 2px 7px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); color: var(--fa-muted); }
+.topic-badge.lesson { background: rgba(184, 211, 58, 0.16); color: #d9ef7a; }
+.topic-strip { display: flex; flex-direction: column; gap: 8px; }
+.topic-strip-head { display: flex; align-items: center; gap: 10px; }
+.topic-strip-head strong { font-size: 13px; font-weight: 650; }
+.topic-strip-body { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.topic-chips { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.topic-chips > span { font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--fa-muted); margin-right: 4px; }
+.lesson-plate { display: flex; align-items: center; gap: 10px; text-align: left; padding: 9px 12px; border-radius: 14px; background: rgba(79, 163, 255, 0.1); border: 1px solid rgba(79, 163, 255, 0.3); }
+.lesson-plate span:last-child { display: flex; flex-direction: column; gap: 1px; }
+.lesson-plate strong { font-size: 12.5px; }
+.lesson-plate small { font-size: 11px; color: var(--fa-muted); }
+.lesson-plates { display: flex; flex-direction: column; gap: 6px; font-size: 11px; }
+.lesson-plates > span { text-transform: uppercase; letter-spacing: 0.04em; color: var(--fa-muted); font-size: 10px; }
+.lesson-plates > div { display: flex; gap: 4px; flex-wrap: wrap; }
+@media (max-width: 1100px) { .topic-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) {
+  .topic-cards { display: flex; overflow-x: auto; scrollbar-width: none; }
+  .topic-card { flex: none; width: 200px; }
+  .topic-strip-head .strip-btn span { display: none; }
 }

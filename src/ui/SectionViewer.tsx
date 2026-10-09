@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowUpRight, Box, ChevronLeft, ChevronRight, Eye, EyeOff, GraduationCap, Hash, Layers, Microscope, PenTool, ScanLine, Shuffle, Tags, X } from 'lucide-react'
+import { ArrowLeft, ArrowUpRight, Box, ChevronLeft, ChevronRight, Eye, EyeOff, GraduationCap, Hash, Layers, Microscope, PenTool, ScanLine, Shuffle, Tags, X } from 'lucide-react'
 import { CONCEPT_BY_ID, conceptLeafIds } from '@/data'
 import { SECTIONS, SECTION_BY_ID, SECTION_REGIONS, STRUCTURE_BY_ID, type Section, type SectionItem } from '@/data/sections'
 import { shapePath } from '@/data/sections/shapes'
@@ -9,6 +9,7 @@ import { useAtlas } from '@/store/useAtlas'
 import { CATEGORY, CATEGORY_ORDER, FIBRE, NISSL_DARK, STAIN, tissueOf, type Stain } from './sectionStyle'
 import { AtlasSliceView, regionColor, useAtlasSlice } from './AtlasSliceView'
 import { LAYER_BY_ID, PART_BY_ID } from '@/data'
+import { TOPIC_BY_ID, topicsOfSection } from '@/data/topics'
 import { badgePositions, itemArea, itemShapes, mix, sectionEntries, type Entry } from './sectionLayout'
 
 /** Layers whose meshes make the 3D cut face informative for each region. */
@@ -33,8 +34,13 @@ type Numbered = Entry
 export function SectionViewer() {
   const t = useT()
   const l = useL()
-  const { sectionId, openSection, cutSection, selectParts, lang } = useAtlas()
+  const { sectionId, openSection, cutSection, selectParts, lang, topic, lesson, setLesson } = useAtlas()
   const section = sectionId ? SECTION_BY_ID.get(sectionId) : undefined
+  // Inside a topic the plates step through that topic only; otherwise through all.
+  const tp = topic ? TOPIC_BY_ID.get(topic) : undefined
+  const order = tp && sectionId && tp.sections.includes(sectionId) ? tp.sections.map((id) => SECTION_BY_ID.get(id)!).filter(Boolean) : SECTIONS
+  // The 3D lesson that teaches this plate's structures (own topic first).
+  const lessonFor = sectionId ? (tp?.lessons[0] ?? topicsOfSection(sectionId).find((x) => x.lessons.length)?.lessons[0]) : undefined
   const [selected, setSelected] = useState<string | null>(null)
   const [hover, setHover] = useState<string | null>(null)
   const [labels, setLabels] = useState(false)
@@ -60,13 +66,13 @@ export function SectionViewer() {
     if (!section) return
     const key = (e: KeyboardEvent) => {
       if (e.key === 'Escape') openSection(null)
-      const i = SECTIONS.findIndex((s) => s.id === section.id)
-      if (e.key === 'ArrowRight' && i < SECTIONS.length - 1) openSection(SECTIONS[i + 1].id)
-      if (e.key === 'ArrowLeft' && i > 0) openSection(SECTIONS[i - 1].id)
+      const i = order.findIndex((s) => s.id === section.id)
+      if (e.key === 'ArrowRight' && i < order.length - 1) openSection(order[i + 1].id)
+      if (e.key === 'ArrowLeft' && i > 0) openSection(order[i - 1].id)
     }
     window.addEventListener('keydown', key)
     return () => window.removeEventListener('keydown', key)
-  }, [section, openSection])
+  }, [section, openSection, order])
 
   const numbered: Numbered[] = useMemo(() => (section ? sectionEntries(section) : []), [section])
   const cats = useMemo(() => {
@@ -76,9 +82,9 @@ export function SectionViewer() {
 
   const atlas = useAtlasSlice(section ?? SECTIONS[0], section ? CUT_LAYERS[section.region] : [], !!section?.plane && view === 'atlas')
   if (!section) return null
-  const index = SECTIONS.findIndex((s) => s.id === section.id)
-  const prev = SECTIONS[index - 1],
-    next = SECTIONS[index + 1]
+  const index = order.findIndex((s) => s.id === section.id)
+  const prev = order[index - 1],
+    next = order[index + 1]
   const active = hover ?? selected
   const sel = selected ? numbered.find((x) => x.item.id === selected) : undefined
   const selInfo = sel ? STRUCTURE_BY_ID.get(sel.item.id) : undefined
@@ -134,6 +140,17 @@ export function SectionViewer() {
             <button className="sv-icon" disabled={!next} onClick={() => next && openSection(next.id)} aria-label={t.svNext} title={next ? `${next.code} · ${l(next.title)}` : ''}>
               <ChevronRight size={17} />
             </button>
+            {lesson ? (
+              <button className="sv-learn" onClick={() => openSection(null)} title={t.lnBackLesson}>
+                <ArrowLeft size={14} />
+                <span>{t.lnBackLesson}</span>
+              </button>
+            ) : lessonFor ? (
+              <button className="sv-learn" onClick={() => { openSection(null); setLesson(lessonFor) }} title={t.lnLearn3d}>
+                <GraduationCap size={14} />
+                <span>{t.lnLearn3d}</span>
+              </button>
+            ) : null}
             {section.plane && (
               <button className="sv-cut" onClick={() => cutSection(section.id, CUT_LAYERS[section.region])} title={t.svCutHint}>
                 <Box size={14} />
@@ -147,7 +164,16 @@ export function SectionViewer() {
         </header>
 
         <nav className="sv-regions" aria-label={t.svLevels}>
-          {SECTION_REGIONS.map((r) => {
+          {order !== SECTIONS && tp ? (
+            <div className="sv-region">
+              <span>{l(tp.title)}</span>
+              {order.map((s) => (
+                <button key={s.id} className={`sv-chip ${s.id === section.id ? 'active' : ''}`} onClick={() => openSection(s.id)} title={l(s.title)}>
+                  {s.code}
+                </button>
+              ))}
+            </div>
+          ) : SECTION_REGIONS.map((r) => {
             const list = SECTIONS.filter((s) => s.region === r.id)
             if (!list.length) return null
             return (

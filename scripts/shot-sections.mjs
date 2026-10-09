@@ -38,7 +38,7 @@ try {
     : ['medulla', 'pons', 'midbrain', 'diencephalon', 'cerebellum'].flatMap((f) =>
         [...readFileSync(`src/data/sections/${f}.ts`, 'utf8').matchAll(/^    id: '([a-z0-9-]+)'/gm)].map((m) => m[1]),
       )
-  await page.evaluate(() => window.__atlas.getState().setMode('sections'))
+  await page.evaluate(() => window.__atlas.getState().setMode('learn'))
   for (const id of ids) {
     await page.evaluate((id) => window.__atlas.getState().openSection(id), id)
     await new Promise((r) => setTimeout(r, 250))

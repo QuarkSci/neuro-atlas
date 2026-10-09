@@ -1,9 +1,11 @@
-import { Blocks, Brain, GraduationCap, Layers2, RotateCcw, ScanLine, X } from 'lucide-react'
-import { LessonProgress, LessonStrip } from './LessonPanel'
+import { ArrowLeft, Blocks, Brain, GraduationCap, Layers2, RotateCcw, ScanLine, X } from 'lucide-react'
+import { LessonProgress } from './LessonPanel'
+import { LESSON_BY_ID } from '@/data/lessons'
+import { TOPICS, TOPIC_BY_ID } from '@/data/topics'
 import { DEPTH_LEVELS } from '@/data'
 import { useL, useT } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
-import { SECTIONS, SECTION_BY_ID, SECTION_REGIONS } from '@/data/sections'
+import { SECTION_BY_ID } from '@/data/sections'
 
 /** Half the knob's width — the travel of a range input is inset by this much at both ends. */
 const KNOB = 12
@@ -89,13 +91,9 @@ function ModeTabs() {
         <Layers2 size={20} />
         <span>{t.tabPeel}</span>
       </button>
-      <button role="tab" className={`mode-tab ${mode === 'sections' ? 'active' : ''}`} aria-selected={mode === 'sections'} onClick={() => setMode('sections')}>
-        <ScanLine size={20} />
-        <span>{t.tabSections}</span>
-      </button>
-      <button role="tab" className={`mode-tab ${mode === 'lessons' ? 'active' : ''}`} aria-selected={mode === 'lessons'} onClick={() => setMode('lessons')}>
+      <button role="tab" className={`mode-tab ${mode === 'learn' ? 'active' : ''}`} aria-selected={mode === 'learn'} onClick={() => setMode('learn')}>
         <GraduationCap size={20} />
-        <span>{t.tabLessons}</span>
+        <span>{t.tabLearn}</span>
       </button>
     </nav>
   )
@@ -104,15 +102,18 @@ function ModeTabs() {
 const EXPLODE_TICKS = [0, 0.25, 0.5, 0.75, 1]
 
 /**
- * Sections mode: every cross-section level as a code chip, grouped by
- * region — the same levels the model shows as outlines. While the model is
- * cut along one of them, the strip offers the figure and the way back.
+ * The learn tab's dock, by depth: topic cards → one topic (its 3D lessons
+ * and its plates as code chips — the same levels the model outlines) → a
+ * running lesson's step dots. While the model is cut along a plate, the
+ * strip offers the figure and the way back instead.
  */
-function SectionStrip() {
+function LearnDock() {
   const t = useT()
   const l = useL()
-  const { sectionCut, openSection, cutSection } = useAtlas()
+  const { sectionCut, topic, lesson, openSection, cutSection, setTopic, setLesson } = useAtlas()
   const cut = sectionCut ? SECTION_BY_ID.get(sectionCut) : undefined
+  if (lesson && !cut) return <LessonProgress />
+  const tp = topic ? TOPIC_BY_ID.get(topic) : undefined
   return (
     <div className="section-strip glass">
       {cut ? (
@@ -126,37 +127,64 @@ function SectionStrip() {
             <X size={14} /> {t.svUncut}
           </button>
         </div>
+      ) : tp ? (
+        <div className="topic-strip">
+          <div className="topic-strip-head">
+            <button className="strip-btn" onClick={() => setTopic(null)} title={t.lnTopics}>
+              <ArrowLeft size={14} /> <span>{t.lnTopics}</span>
+            </button>
+            <strong>{l(tp.title)}</strong>
+          </div>
+          <div className="topic-strip-body">
+            {tp.lessons.map((id) => {
+              const ls = LESSON_BY_ID.get(id)
+              return ls ? (
+                <button key={id} className="strip-btn accent" onClick={() => setLesson(id)} title={l(ls.blurb)}>
+                  <GraduationCap size={14} /> {t.ln3dLesson} · {t.lsSteps(ls.steps.length)}
+                </button>
+              ) : null
+            })}
+            {tp.sections.length > 0 && (
+              <div className="topic-chips" aria-label={t.lnPlates}>
+                <span>{t.lnPlates}</span>
+                {tp.sections.map((id) => {
+                  const s = SECTION_BY_ID.get(id)
+                  return s ? (
+                    <button key={id} className="sv-chip" onClick={() => openSection(id)} title={l(s.title)}>
+                      {s.code}
+                    </button>
+                  ) : null
+                })}
+              </div>
+            )}
+          </div>
+        </div>
       ) : (
         <>
-          <div className="strip-hint">{t.svStrip}</div>
-          <div className="strip-regions">
-            {SECTION_REGIONS.map((r) => {
-              const list = SECTIONS.filter((s) => s.region === r.id)
-              if (!list.length) return null
-              return (
-                <div className="strip-region" key={r.id}>
-                  <span>{l(r.name)}</span>
-                  <div>
-                    {list.map((s) => (
-                      <button key={s.id} className="sv-chip" onClick={() => openSection(s.id)} title={l(s.title)}>
-                        {s.code}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )
-            })}
+          <div className="strip-hint">{t.lnHint}</div>
+          <div className="topic-cards">
+            {TOPICS.map((tp) => (
+              <button key={tp.id} className="topic-card" onClick={() => setTopic(tp.id)} title={l(tp.blurb)}>
+                <strong>{l(tp.title)}</strong>
+                <span className="topic-badges">
+                  {tp.lessons.length > 0 && (
+                    <span className="topic-badge lesson">
+                      <GraduationCap size={11} /> {t.ln3dLesson}
+                    </span>
+                  )}
+                  {tp.sections.length > 0 && (
+                    <span className="topic-badge">
+                      <ScanLine size={11} /> {t.lnPlatesN(tp.sections.length)}
+                    </span>
+                  )}
+                </span>
+              </button>
+            ))}
           </div>
         </>
       )}
     </div>
   )
-}
-
-/** Lessons: the list while none is open, the step dots while one runs. */
-function LessonDock() {
-  const lesson = useAtlas((s) => s.lesson)
-  return lesson ? <LessonProgress /> : <LessonStrip />
 }
 
 /** The whole bottom stack: the active mode's slider, its dial, and the mode tabs. */
@@ -172,10 +200,8 @@ export function BottomBar() {
   return (
     <div className="bottom-dock">
       <div className="dock-row">
-        {mode === 'lessons' ? (
-          <LessonDock />
-        ) : mode === 'sections' ? (
-          <SectionStrip />
+        {mode === 'learn' ? (
+          <LearnDock />
         ) : mode === 'peel' ? (
           <div className="slider-card glass">
             <div className="flight-label">

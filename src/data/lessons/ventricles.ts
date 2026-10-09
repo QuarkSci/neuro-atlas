@@ -73,6 +73,7 @@ export const VENTRICLES: Lesson = {
         { text: { en: 'Occipital (posterior) horn', uz: 'Orqa (ensa) shox' }, at: [-17, -76, 7.6], color: LV },
         { text: { en: 'Temporal (inferior) horn', uz: 'Pastki (chakka) shox' }, at: [-29, -6, -25], color: LV },
       ],
+      section: 'bg-capsule-axial',
       view: [-1, 0, 0.18],
     },
     {
@@ -103,6 +104,7 @@ export const VENTRICLES: Lesson = {
         { text: { en: 'Floor — thalamus', uz: 'Tubi — talamus' }, at: [-13, -17, 10], color: '#e0a35a' },
         { text: { en: 'Temporal-horn floor — hippocampus', uz: 'Chakka shoxi tubi — gippokamp' }, at: [-31, -18, -21], color: '#ff9d4d' },
       ],
+      section: 'thalamus-coronal',
       view: [-0.8, 0.45, 0.45],
     },
     {
@@ -126,6 +128,7 @@ export const VENTRICLES: Lesson = {
         { text: { en: 'Foramen of Monro', uz: 'Monro teshigi' }, at: [-5, 2, 7], color: MONRO },
         { text: { en: '3rd ventricle', uz: 'III qorincha' }, at: [0.5, -12, -6], color: V3 },
       ],
+      section: 'bg-commissural',
       view: [-0.55, 0.8, 0.3],
     },
     {
@@ -151,6 +154,7 @@ export const VENTRICLES: Lesson = {
         { text: { en: 'Median aperture (Magendie)', uz: 'Magendie teshigi (medial)' }, at: [1.5, -60, -58], color: V4 },
         { text: { en: 'Lateral aperture (Luschka)', uz: 'Luschka teshigi (lateral)' }, at: [-14, -49, -51], color: V4 },
       ],
+      section: 'midbrain-superior-colliculus',
       view: [-1, 0.05, 0.1],
     },
     {

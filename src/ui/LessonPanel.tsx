@@ -2,32 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Check, ChevronDown, ChevronsDownUp, ChevronsUpDown, GraduationCap, Lightbulb, Microscope, RotateCcw, X } from 'lucide-react'
 import { PART_BY_ID } from '@/data'
 import { LESSONS, LESSON_BY_ID } from '@/data/lessons'
+import { SECTION_BY_ID } from '@/data/sections'
+import { TOPIC_BY_ID } from '@/data/topics'
 import { useL, useT } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
-
-/** The lesson list, shown in the bottom dock while no lesson is open. */
-export function LessonStrip() {
-  const t = useT()
-  const l = useL()
-  const setLesson = useAtlas((s) => s.setLesson)
-  return (
-    <div className="lesson-strip glass">
-      <div className="strip-hint">{t.lsPick}</div>
-      <div className="lesson-cards">
-        {LESSONS.map((ls, i) => (
-          <button key={ls.id} className="lesson-card" onClick={() => setLesson(ls.id)}>
-            <span className="lesson-num">{i + 1}</span>
-            <span className="lesson-card-text">
-              <strong>{l(ls.title)}</strong>
-              <small>{l(ls.blurb)}</small>
-            </span>
-            <span className="lesson-steps">{t.lsSteps(ls.steps.length)}</span>
-          </button>
-        ))}
-      </div>
-    </div>
-  )
-}
 
 /** Step dots under the stage: where you are in the lesson, tap to jump. */
 export function LessonProgress() {
@@ -60,8 +38,8 @@ export function LessonProgress() {
 export function LessonPanel() {
   const t = useT()
   const l = useL()
-  const { mode, lesson, lessonPick, setLessonStep, setLesson, setLessonPick } = useAtlas()
-  const ls = mode === 'lessons' && lesson ? LESSON_BY_ID.get(lesson.id) : undefined
+  const { mode, lesson, lessonPick, topic, setLessonStep, setLesson, setLessonPick, openSection } = useAtlas()
+  const ls = mode === 'learn' && lesson ? LESSON_BY_ID.get(lesson.id) : undefined
   const step = ls && lesson ? ls.steps[lesson.step] : undefined
   const body = useRef<HTMLDivElement>(null)
   const [deepOpen, setDeepOpen] = useState(false)
@@ -130,6 +108,8 @@ export function LessonPanel() {
   const next = LESSONS[LESSONS.indexOf(ls) + 1]
   const quiz = step.quiz
   const quizDone = quiz && q >= quiz.length
+  const plate = step.section ? SECTION_BY_ID.get(step.section) : undefined
+  const topicPlates = last ? (TOPIC_BY_ID.get(topic ?? '')?.sections ?? []).map((id) => SECTION_BY_ID.get(id)).filter((s) => !!s) : []
 
   return (
     <aside className={`lesson-panel glass ${folded ? 'folded' : ''}`} aria-label={l(ls.title)}>
@@ -186,6 +166,16 @@ export function LessonPanel() {
           </div>
         )}
 
+        {plate && (
+          <button className="lesson-plate" onClick={() => openSection(plate.id)}>
+            <span className="sv-code">{plate.code}</span>
+            <span>
+              <strong>{t.lnSeePlate}</strong>
+              <small>{l(plate.title)}</small>
+            </span>
+          </button>
+        )}
+
         {step.memo && (
           <div className="lesson-memo">
             <span className="lesson-box-title">
@@ -202,6 +192,19 @@ export function LessonPanel() {
               <ChevronDown size={14} className="chev" />
             </button>
             {deepOpen && <p>{l(step.deep)}</p>}
+          </div>
+        )}
+
+        {topicPlates.length > 0 && (
+          <div className="lesson-plates">
+            <span>{t.lnPlatesTopic}</span>
+            <div>
+              {topicPlates.map((s) => (
+                <button key={s!.id} className="sv-chip" onClick={() => openSection(s!.id)} title={l(s!.title)}>
+                  {s!.code}
+                </button>
+              ))}
+            </div>
           </div>
         )}
 

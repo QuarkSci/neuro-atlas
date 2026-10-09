@@ -46,6 +46,8 @@ export interface LessonStep {
   flow?: { path?: Mni[]; via?: { concept: string; side?: 'left' | 'right' }[]; color: string; loop?: boolean }
   /** Extra atlas layers the step needs (e.g. Julich hippocampal subfields). */
   layers?: LayerId[]
+  /** A cross-section plate (data/sections id) showing this step's structures in section. */
+  section?: string
   /** Self-test: tap the named structure on the model. */
   quiz?: { ask: L10n; answer: string[] }[]
 }

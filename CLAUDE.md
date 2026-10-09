@@ -4,14 +4,14 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-10-09 (Darslar: 3D qadamma-qadam darslar — qorinchalar, qadoqsimon tana, gippokamp/fornix/Papez; BG-1 undan oldin).
+> Oxirgi yangilanish: 2026-10-09 (Kesimlar + Darslar → bitta "O'rganish" tabi, mavzular bo'yicha; undan oldin Darslar va BG-1).
 
 ## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
 
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
-   oxirgi commit — "Darslar: …" (2026-10-09) yoki
+   oxirgi commit — "O'rganish tabi: …" (2026-10-09) yoki
    undan keyingisi; `git rev-parse HEAD origin/master` bir
    xil bo'lishi kerak.
 3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
@@ -38,10 +38,10 @@
    ```bash
    node scripts/shot.mjs /tmp/smoke.png --lang uz --wait 13000 --setup "const a=__atlas.getState(); a.showOnly(['brainstem','cerebellum','diencephalon']); a.setLayers(['gross','bstem','suit']); a.setView('lateral')"
    ```
-   Kesim atlasi smoke-testi (Kesimlar rejimi + bitta sxema; `openSection`
+   Kesim atlasi smoke-testi (O'rganish rejimi + bitta sxema; `openSection`
    id'lari `src/data/sections/*.ts` dagi `id:`):
    ```bash
-   node scripts/shot.mjs /tmp/sec.png --lang uz --w 1400 --h 860 --setup "const a=__atlas.getState(); a.setMode('sections'); a.openSection('midbrain-superior-colliculus')" --wait 1500
+   node scripts/shot.mjs /tmp/sec.png --lang uz --w 1400 --h 860 --setup "const a=__atlas.getState(); a.setMode('learn'); a.openSection('midbrain-superior-colliculus')" --wait 1500
    ```
    Sxema ichidagi tugmalarni bosish (React delegatsiyasi ishlaydi):
    `document.querySelector('.sv-item[data-id="ml"]').dispatchEvent(new MouseEvent('click',{bubbles:true}))`
@@ -54,12 +54,13 @@
    ```bash
    node scripts/shot-sections.mjs /tmp/sec --only medulla-olive,pons-trigeminal --setup "[...document.querySelectorAll('.sv-views button')][3].click()" --wait 7000
    ```
-   Darslar (Darslar tabi): barcha qadamlarni bitta sessiyada suratga olish
+   Darslar (O'rganish tabida): barcha qadamlarni bitta sessiyada suratga olish
    (21 qadam ≈ 3.5 daqiqa; headless'da fade sekin — `--wait 8000`):
    ```bash
    node scripts/shot-lessons.mjs /tmp/les --only ventricles:0,limbic:3 --wait 8000
    ```
-   Store'dan: `a.setMode('lessons'); a.setLesson('limbic'); __atlas.getState().setLessonStep(3)`;
+   Store'dan: `a.setTopic('limbic'); __atlas.getState().setLesson('limbic'); __atlas.getState().setLessonStep(3)`
+   (`setTopic`/`setLesson` o'zi `learn` rejimiga o'tkazadi);
    viktorina javobi: `__atlas.getState().setLessonPick('g-third-ventricle')`.
    Sxemalarda ustma-ust tushgan juftlar (kichigining necha foizi yopilgan):
    `node scripts/audit-sections.mjs --min 0.15`. 2026-10-03 da qolganlari
@@ -101,6 +102,16 @@
 7. Har bosqich oxirida shu faylning 3-bo'limi va `PLAN.md` jadvalini
    yangilang.
 
+**O'rganish tabi (2026-10-09, foydalanuvchi bilan kelishilgan):** Kesimlar va
+Darslar alohida tab EDI — bitta mavzu ikki joyga bo'linib ketardi. Endi
+bitta `mode: 'learn'`, mazmun `src/data/topics.ts` MAVZULAR bo'yicha
+(har mavzu = `lessons[]` + `sections[]`; bitta plastinka bir nechta
+mavzuda bo'lishi mumkin). YANGI DARS YOKI KESIM QO'SHGANDA uni tegishli
+mavzu(lar)ga ham yozing, aks holda O'rganish tabida ko'rinmaydi (kesim
+oynasining "barcha kesimlar" qatorida baribir chiqadi). BG-2/BG-3 kabi
+yangi funksiyalar YANGI TAB OCHMAYDI — o'z mavzusiga (masalan
+`basal-ganglia`) kiradi.
+
 **Darslar (2026-10-09, foydalanuvchi talabi):** "qorinchalar, qadoqsimon tana,
 gippokamp, fornix — o'zim ham o'qib tushunmadim; talabalar uchun esdan
 chiqmaydigan qilib ko'rsatib, tushuntiradigan qism". ✅ 3 dars tayyor
@@ -123,8 +134,8 @@ Bosqichlar (har biri alohida commit, brauzerda tekshirib):
 - ⬜ **BG-2** yo'llar sxemasi — direct / indirect / hyperdirect /
   nigrostriatal; har bog'lanish: mediator (GABA/Glu/DA), qo'zg'atuvchi/
   tormozlovchi, D1/D2, ko-transmitterlar (P modda/dinorfin vs enkefalin);
-  signal oqimi animatsiyasi. Yangi ko'rinish (Kesimlar rejimiga 'map'
-  turidagi sxema yoki alohida panel) — tugunlar 3D konseptlarga bog'lansin.
+  signal oqimi animatsiyasi. Yangi ko'rinish — `basal-ganglia` mavzusi ichida (alohida tab EMAS;
+  'map' turidagi sxema yoki panel) — tugunlar 3D konseptlarga bog'lansin.
 - ⬜ **BG-3** kasallik simulyatori — Parkinson / Huntington / gemiballizm /
   distoniya (+ DBS yoqish): har yadro faollik ustuni (Gs), Albin–DeLong
   1989 tezlik modeli; PhD: beta tebranish, modelning cheklovlari (Cui
@@ -377,7 +388,7 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
   talabi (doskadagi sxemalar rasmi bilan): miya ustuni, o'rta miya,
   talamus, gipotalamus, miyachada darslikdagi kabi ko'ndalang kesim yuzalari;
   modelda kesim chizig'i, bosilsa yuza ochiladi; bakalavr va PhD darajasi.
-  - Pastki dock'da 3-tab **Kesimlar** (`mode: 'sections'`): tizimlar
+  - (2026-10-09 dan O'rganish tabining bir qismi.) Pastki dock'da 3-tab **Kesimlar** (`mode: 'sections'`, endi `'learn'`): tizimlar
     brainstem/diencephalon/cerebellum'ga o'tadi (oldingisi
     `sectionsPrevVisible`da saqlanib, chiqishda tiklanadi), yon ko'rinish,
     kamera ko'rinadigan qismga moslanadi; pastda daraja kodlari qatori.
@@ -513,7 +524,7 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     gorizontal chiziq. Pastki dock darajalar qatori desktopda ikki qatorga
     o'raladi (7 guruh sig'masdi), telefonda gorizontal scroll.
 - ✅ Darslar — 3D qadamma-qadam darslar (2026-10-09):
-  - 4-tab **Darslar** (`mode: 'lessons'`, `GraduationCap`): ro'yxat
+  - (2026-10-09 dan O'rganish tabining bir qismi, `mode: 'learn'`.) 4-tab **Darslar** (`mode: 'lessons'`, `GraduationCap`): ro'yxat
     (`LessonStrip`, dock'da kartochkalar) → dars ochilganda o'ngda
     `LessonPanel` (`.lesson-panel`, telefonda pastki karta, yig'ish tugmasi):
     matn, **Eslab qoling** (o'xshatish/mnemonika, sariq quti), **Chuqurroq:
@@ -547,6 +558,29 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
   - Manbalar eutils/Crossref bilan tekshirilgan: StatPearls Ventricular
     System NBK532932, CSF NBK519007, Corpus Callosum NBK448209, Hippocampus
     NBK482171; Papez 1937, Scoville & Milner 1957, Hofer & Frahm 2006.
+- ✅ O'rganish tabi — Kesimlar + Darslar birlashtirildi (2026-10-09):
+  - Sabab (foydalanuvchi savoli): ikkalasi o'xshash vazifali, alohida tab
+    mavzuni ikki joyga bo'lardi, bir-biriga bog'lanmagan edi, telefonda 4
+    tab tor. Mazmun turi saqlandi (kesim = ma'lumotnoma, dars = qo'llanma),
+    navigatsiya mavzu bo'yicha birlashtirildi.
+  - `Mode = 'explode' | 'peel' | 'learn'`; store `topic` + `setTopic`;
+    `enterLearn()` istalgan rejimdan kirishda tizimlarni saqlaydi/yoqadi;
+    `setLesson` mavzusiz chaqirilsa darsning mavzusini o'zi tanlaydi;
+    `cutSection` darsni yopadi.
+  - Dock (`LearnDock`, BottomBar): mavzu kartochkalari (7: qorinchalar,
+    qadoqsimon tana, limbik, bazal yadrolar, talamus/gipotalamus, miya
+    ustuni, miyacha; "3D dars" va "N ta kesim" belgilari) → mavzu: "3D
+    dars" tugmasi + kesim kodlari → dars: qadam nuqtalari; kesim bo'yicha
+    kesilganda eski kesim paneli.
+  - 3D: mavzu ochiq bo'lsa faqat shu mavzuning daraja markerlari
+    (`SceneSnapshot.topicSections`); dars ochiq bo'lsa markerlar yo'q.
+  - O'zaro havolalar: `LessonStep.section` → kartada "Kesimda ko'rish"
+    (9 qadamda: masalan "beshta C" → B3, fornix → G3); oxirgi qadamda
+    mavzuning barcha plastinkalari; kesim oynasida "3D darsda o'rganish"
+    (yoki dars ochiq bo'lsa "Darsga qaytish"); mavzu ichida kesim oynasi
+    ← → va kodlar qatori faqat mavzu plastinkalari bo'yicha.
+  - Skriptlar (`shot-sections`, `audit-sections`, `shot-lessons`) `learn`
+    rejimiga o'tkazildi.
 - ⬜ 6–7.
 
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)

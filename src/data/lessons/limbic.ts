@@ -77,6 +77,7 @@ export const LIMBIC: Lesson = {
         { text: { en: 'Column', uz: 'Ustuni' }, at: [-3, 5, 1], color: FX },
         { text: { en: 'Mammillary body', uz: "So'rg'ichsimon tana" }, at: [-2.5, -7, -17], color: MB },
       ],
+      section: 'hypothalamus-mammillary',
       view: [-0.85, -0.45, 0.45],
     },
     {
@@ -108,6 +109,7 @@ export const LIMBIC: Lesson = {
         { text: { en: 'Stria terminalis', uz: 'Stria terminalis' }, at: [-21, -30, 3], color: ST },
         { text: { en: 'Hippocampus', uz: 'Gippokamp' }, at: [-33, -22, -20], color: HIP },
       ],
+      section: 'bg-pallidal',
       view: [-1, 0, 0.2],
     },
     {

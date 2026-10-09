@@ -7,11 +7,12 @@ import { BrainScene, type SceneSnapshot } from './BrainScene'
 import { loadGeometries } from './loader'
 import { SECTIONS } from '@/data/sections'
 import { LESSON_BY_ID, lessonStage, type LessonStage } from '@/data/lessons'
+import { TOPIC_BY_ID } from '@/data/topics'
 
 /** The resolved stage of the open lesson step, cached so the scene sees a stable object per step. */
 let stageCache: { key: string; stage: LessonStage } | null = null
 function stageOf(s: AtlasState): LessonStage | null {
-  if (s.mode !== 'lessons' || !s.lesson) return null
+  if (s.mode !== 'learn' || !s.lesson) return null
   const lesson = LESSON_BY_ID.get(s.lesson.id)
   const step = lesson?.steps[s.lesson.step]
   if (!lesson || !step) return null
@@ -38,7 +39,8 @@ const snapshot = (s: AtlasState): SceneSnapshot => ({
   inspectorOpen: s.inspectorOpen,
   hovered: s.hovered,
   lesson: stageOf(s),
-  lessonPick: s.mode === 'lessons' ? (s.lessonPick?.id ?? null) : null,
+  lessonPick: s.mode === 'learn' ? (s.lessonPick?.id ?? null) : null,
+  topicSections: s.mode === 'learn' && s.topic ? (TOPIC_BY_ID.get(s.topic)?.sections ?? null) : null,
 })
 
 const sectionNamesFor = (lang: Lang) => Object.fromEntries(SECTIONS.map((s) => [s.id, s.title[lang] ?? s.title.en]))
@@ -109,7 +111,7 @@ export function SceneView() {
           onSelect: (id) => {
             const s = store.getState()
             // In a lesson a tap answers the quiz / names the structure; it does not open the inspector.
-            if (s.mode === 'lessons' && s.lesson) {
+            if (s.mode === 'learn' && s.lesson) {
               s.setLessonPick(id)
               return
             }

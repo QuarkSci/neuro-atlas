@@ -48,6 +48,8 @@ export interface SceneSnapshot {
   lesson: LessonStage | null
   /** Structure the student last tapped in a lesson — highlighted like a selection. */
   lessonPick: string | null
+  /** Plates of the open topic: only their level markers are drawn (null = all). */
+  topicSections: string[] | null
 }
 
 export interface SceneCallbacks {
@@ -700,7 +702,7 @@ export class BrainScene {
       return
     }
     if (this.amount < 0.02) {
-      if (s.mode === 'sections' && !s.sectionCut) {
+      if (s.mode === 'learn' && !s.lesson && !s.sectionCut) {
         const box = this.visibleBox()
         if (!box.isEmpty()) this.fitBox(box, s.view, this.insets(), animate, 0.78)
         return
@@ -973,7 +975,7 @@ export class BrainScene {
 
   private updateMarkers() {
     const s = this.state
-    const on = !!s && s.mode === 'sections' && !s.isolate && this.amount < 0.02
+    const on = !!s && s.mode === 'learn' && !s.lesson && !s.isolate && this.amount < 0.02
     if (on && !this.markersBuilt) {
       this.buildMarkers()
       this.setMarkerNames(this.markerNames)
@@ -1012,7 +1014,7 @@ export class BrainScene {
     let minX = Infinity,
       maxX = -Infinity
     for (const m of this.markers) {
-      const active = !s!.sectionCut || s!.sectionCut === m.section.id
+      const active = s!.sectionCut ? s!.sectionCut === m.section.id : !s!.topicSections || s!.topicSections.includes(m.section.id)
       if (m.line && m.line.visible !== active) {
         m.line.visible = active
         this.dirty = true
@@ -1414,7 +1416,7 @@ export class BrainScene {
       this.dirty = true
     }
     // Oblique section cut (sections mode); built markers give the framing box.
-    const cutKey = s.mode === 'sections' ? (s.sectionCut ?? '') : ''
+    const cutKey = s.mode === 'learn' ? (s.sectionCut ?? '') : ''
     if (cutKey !== this.cutKey) {
       if (cutKey && !this.markersBuilt) {
         this.buildMarkers()

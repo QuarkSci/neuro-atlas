@@ -39,7 +39,7 @@ try {
         const { LESSONS } = await import('/src/data/lessons/index.ts')
         return LESSONS.flatMap((l) => l.steps.map((_, step) => ({ id: l.id, step })))
       })
-  await page.evaluate(() => __atlas.getState().setMode('lessons'))
+  await page.evaluate(() => __atlas.getState().setMode('learn'))
   let current = ''
   for (const { id, step } of plan) {
     await page.evaluate(
