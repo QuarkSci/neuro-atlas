@@ -62,6 +62,8 @@
    Store'dan: `a.setTopic('limbic'); __atlas.getState().setLesson('limbic'); __atlas.getState().setLessonStep(3)`
    (`setTopic`/`setLesson` o'zi `learn` rejimiga o'tkazadi);
    viktorina javobi: `__atlas.getState().setLessonPick('g-third-ventricle')`.
+   Kesim (clip) yoqilganda hover/bosish to'g'ri tuzilmani nomlashi
+   (`diff: 0` bo'lishi kerak): `node scripts/audit-pick.mjs`.
    Sxemalarda ustma-ust tushgan juftlar (kichigining necha foizi yopilgan):
    `node scripts/audit-sections.mjs --min 0.15`. 2026-10-03 da qolganlari
    ATAYLAB: konteyner (cg/pag ichidagi yadrolar), tutam ichidagi yadro
@@ -654,3 +656,14 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
 22. three.js: `material.side` shader dasturi kalitining qismi — uni
     o'zgartirgach `material.needsUpdate = true` SHART, aks holda eski dastur
     ishlatiladi (darslarda xira qismlar butunlay noshaffof chiqdi).
+23. `raycaster.firstHitOnly = true` + clip tekislik: kesilgan meshning
+    birinchi kesishuvi olib tashlangan yarmida bo'ladi → rad etiladi, uning
+    ko'rinib turgan kesim yuzasi tekshirilmaydi → hover ORTDAGI tuzilmani
+    nomlaydi (2026-10-09: medial yuzada 33 % xato — qadoqsimon tana/septum
+    "o'ng yon qorincha", III qorincha "talamus"). Kesim faol bo'lsa
+    `firstHitOnly = false`. Tekshiruv: `scripts/audit-pick.mjs`.
+24. Dock ichidagi `grid auto-fill` — dock paneli kengligini mazmunga qarab
+    qisqartiradi, auto-fill esa doim minimal ustun oladi (2 ustun, baland
+    panel). To'rga aniq `width: min(...)` bering. Belgilar/yorliqlarni
+    `nowrap` qilsangiz inglizcha (uzunroq) matnda kartadan chiqib qo'shni
+    kartaga minadi — har doim EN va UZ da suratga oling.

@@ -830,7 +830,13 @@ export class BrainScene {
       h = this.host.clientHeight
     const ndc = new T.Vector2((x / w) * 2 - 1, -(y / h) * 2 + 1)
     this.raycaster.setFromCamera(ndc, this.camera)
-    this.raycaster.firstHitOnly = true
+    // With a clip plane on, a mesh's first hit is often on its cut-away half;
+    // its visible cut face lies further along the ray. Taking only the first
+    // hit per mesh then rejects the structure you are pointing at and falls
+    // through to whatever lies behind it (the callosum and septum read as
+    // the lateral ventricle). So: every hit per mesh while cutting.
+    const clipping = this.clipPlanes.some((p) => p.constant < 1e4)
+    this.raycaster.firstHitOnly = !clipping
     const candidates = this.parts.filter((p) => p.mesh.visible && (!this.lessonActive || this.lessonFocus.has(p.id))).map((p) => p.mesh)
     const hits = this.raycaster.intersectObjects(candidates, false)
     // Respect the clip planes: a hit clipped away on any active plane is

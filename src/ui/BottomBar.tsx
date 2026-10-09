@@ -168,8 +168,8 @@ function LearnDock() {
                 <strong>{l(tp.title)}</strong>
                 <span className="topic-badges">
                   {tp.lessons.length > 0 && (
-                    <span className="topic-badge lesson">
-                      <GraduationCap size={11} /> {t.ln3dLesson}
+                    <span className="topic-badge lesson" title={t.ln3dLesson}>
+                      <GraduationCap size={11} /> 3D
                     </span>
                   )}
                   {tp.sections.length > 0 && (
