@@ -4,14 +4,15 @@
 > Foydalanuvchi (MuhammadYusuf) o'zbek tilida yozadi, javoblar o'zbek tilida.
 > Kod izohlari ingliz tilida.
 >
-> Oxirgi yangilanish: 2026-10-09 (Kesimlar + Darslar → bitta "O'rganish" tabi, mavzular bo'yicha; undan oldin Darslar va BG-1).
+> Oxirgi yangilanish: 2026-10-23 (yangi chatga topshirish; oxirgi ish 2026-10-09:
+> kesimda pick tuzatishi, O'rganish tabi, Darslar, BG-1).
 
 ## 0. YANGI SESSIYADA BIRINCHI QADAMLAR (shu tartibda)
 
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
-   oxirgi commit — "O'rganish tabi: …" (2026-10-09) yoki
+   oxirgi commit — "Hujjatlar: yangi chatga topshirish …" (2026-10-23) yoki
    undan keyingisi; `git rev-parse HEAD origin/master` bir
    xil bo'lishi kerak.
 3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
@@ -104,6 +105,24 @@
 7. Har bosqich oxirida shu faylning 3-bo'limi va `PLAN.md` jadvalini
    yangilang.
 
+**KEYINGI VAZIFA — FOYDALANUVCHI HALI TANLAMAGAN (2026-10-09 oxirgi savol).**
+Avval so'rang, ikki variant taklif qilingan edi:
+1. **Mavzu viktorinasi** — kesim viktorinasi (sxemada nomsiz tuzilmani
+   bosish, `SectionViewer` quiz) va dars viktorinasi (3D'da bosish,
+   `LessonPanel`) hozir ALOHIDA; ularni mavzu bo'yicha bitta aralash
+   viktorinaga birlashtirish (O'rganish tabini taklif qilganda va'da
+   qilingan, lekin hali qilinmagan — foydalanuvchiga ochiq aytilgan).
+2. **BG-2** — bazal yadrolar yo'llari sxemasi (quyida), `basal-ganglia`
+   mavzusining 3D darsi/paneli sifatida.
+Foydalanuvchi o'zi boshqa narsa yozsa — o'shani boshlang.
+
+**Yordamchi vositalar (repoda, 2026-10-23):** `pipeline/tools/slice_svg.py`
+(meshlarni koronal/aksial tekislikda kesib mm to'rli SVG — yangi masshtabli
+kesim sxemasi chizishdan oldin), `pipeline/tools/landmarks.py` (mesh
+ekstremal nuqtalari va y-bo'laklar markazi — dars yorliqlari/oqim yo'li
+uchun MNI nuqtalar). Ikkalasi `pipeline/.venv/bin/python` bilan, repo
+ildizidan. Ilgari scratchpad'da edi va o'chib ketgan — endi repoda.
+
 **O'rganish tabi (2026-10-09, foydalanuvchi bilan kelishilgan):** Kesimlar va
 Darslar alohida tab EDI — bitta mavzu ikki joyga bo'linib ketardi. Endi
 bitta `mode: 'learn'`, mazmun `src/data/topics.ts` MAVZULAR bo'yicha
@@ -120,7 +139,7 @@ chiqmaydigan qilib ko'rsatib, tushuntiradigan qism". ✅ 3 dars tayyor
 (3-bo'lim). Yangi dars qo'shish: `src/data/lessons/<id>.ts` (`Lesson` tipi)
 → `index.ts` `LESSONS`. Har qadam: `show` (konsept + `side` + o'quv rangi),
 `context` (`@tizim` yoki konsept — xira fon), `labels` (MNI nuqta —
-meshdan o'lchang, scratchpad'dagi `landmarks.py` uslubi: trimesh ekstremal
+meshdan o'lchang: `pipeline/tools/landmarks.py <part-id> --slabs` — ekstremal
 nuqtalar/y-bo'laklar markazi), `view` (MNI yo'nalish, kameradan nishonga
 emas — nishondan kameraga), `flow` (MNI yo'l yoki `via` konsept
 markazlari), `memo` (o'xshatish/mnemonika), `deep` (klinika/PhD), oxirida
@@ -509,7 +528,7 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     `LEVEL_SYSTEMS`, `SECTION_SYSTEMS` (Kesimlar rejimida ko'rinadi).
   - `src/data/sections/basal.ts` — 5 plastinka, **MASSHTABDA**: nuqtalar
     MNI mm'da (`kit({k, top, y0})`: x = o'rta chiziqdan masofa, z/y), atlas
-    meshlari shu tekislikda kesib o'lchangan (scratchpad `slices.py`,
+    meshlari shu tekislikda kesib o'lchangan (`pipeline/tools/slice_svg.py`,
     trimesh section → SVG). B1 y+14 (kaudat boshi, oldingi oyoq, ko'prikchalar,
     accumbens o'zak/qobiq), B2 y+1 (AC, GPe, VP, Meynert Ch4, BNST, preoptik),
     B3 y−6 (GPe/GPi, medial/lateral medullyar plastinkalar, ansa, H2,
@@ -583,6 +602,10 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
     ← → va kodlar qatori faqat mavzu plastinkalari bo'yicha.
   - Skriptlar (`shot-sections`, `audit-sections`, `shot-lessons`) `learn`
     rejimiga o'tkazildi.
+- ✅ Kesimda pick tuzatishi + kartochkalar (2026-10-09): clip faol bo'lsa
+  `raycaster.firstHitOnly = false` (medial yuzada 33 % noto'g'ri nom edi →
+  0 %, `scripts/audit-pick.mjs`); mavzu kartochkalari: "3D" qisqa belgi,
+  wrap, aniq kenglikdagi auto-fill to'r (4-bo'lim 23–24).
 - ⬜ 6–7.
 
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
