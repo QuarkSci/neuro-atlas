@@ -611,6 +611,31 @@ bilan tekshirilmasdan "tayyor" deyilmaydi.
   wrap, aniq kenglikdagi auto-fill to'r (4-bo'lim 23–24).
 - ⬜ 6–7.
 
+### R1 — Realizm: yorug'lik va material (2026-11-14)
+
+Muammo: sahna oqarib ketgan va yassi edi (ACES + hemi 0.8 + key 2.0 + rim 1.4 + muhit 0.7
+och ranglar ustida) — po'stloq pushti-oq "plastik", suyak butunlay kuygan.
+
+- `src/scene/materials.ts`: `ColorMode = 'real' | 'atlas'`. Har material ikkala ko'rinishni
+  `userData.looks`da saqlaydi; `applyColorMode(m, mode)` roughness/sheen/envMapIntensity ni
+  qo'yadi va rejim rangini QAYTARADI (`userData.base`ni chaqiruvchi yozadi, chunki dars uni
+  o'quv rangiga bo'yagan bo'lishi mumkin — unda rang `atlasBase`ga yoziladi).
+- `REAL` presetlari: po'stloq `#ab8d82`, chuqur yadrolar jigarrang-kulrang, miya ustuni/oq modda
+  krem, arteriya `#a8231d`, vena `#43437c`, nerv sadafrang, dura, suyak fil suyagi.
+  `REAL_BY_ID`: qora modda (neyromelanin), qizil yadro, globus pallidus, xoroid chigal, gipofiz,
+  epifiz, kulrang tizimga yozilgan tolalar (fornix, crus cerebri, ...), dural sinuslar.
+- Nam yaltirash clearcoat'siz (kesimni buzadi): roughness 0.3–0.46 + muhit aksi + yengil `sheen`
+  (yumshoq to'qima cheti; sheen yoqilishi/o'chishi shader kalitida → `needsUpdate`).
+- `BrainScene.RIGS`: atlas = eski qiymatlar (o'zgarmagan); real = `NeutralToneMapping`,
+  exposure 0.8, hemi 0.1, key 2.3, rim 0.8, fill 0.1. Rang bloki kadr siklida dars blokidan OLDIN.
+- Saboq: muhit xaritasi (`envMapIntensity`) diffuz yoritishni ham oshiradi — uni ko'tarish
+  "nam" emas, "yassi" qiladi; shakl uchun yo'nalgan chiroq ko'tariladi, muhit pasaytiriladi.
+  Pushti sheen + to'yingan asos = "saqich" ko'rinishi; asos kulrangroq olinadi.
+- Parcellation qatlamlari (Julich, Glasser, ...) ikkala rejimda xarita rangida qoladi.
+- Tekshiruv: `audit-pick.mjs` diff 0; screenshotlar ¾, lateral (ichki tizimlar), kesim, telefon
+  390 px, atlas↔real ish vaqtida almashtirish, darsga kirib-chiqish.
+- Yangi mashinada `node_modules` to'liq bo'lmasa (`vite: command not found`) — `npm install`.
+
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
 1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).

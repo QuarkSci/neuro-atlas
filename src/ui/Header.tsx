@@ -1,4 +1,4 @@
-import { Info, PanelLeft, Pause, RotateCw, Search, Slice } from 'lucide-react'
+import { Droplet, Info, Palette, PanelLeft, Pause, RotateCw, Search, Slice } from 'lucide-react'
 import { LEAF_PARTS } from '@/data'
 import { useT } from '@/i18n'
 import { useAtlas, type View } from '@/store/useAtlas'
@@ -51,7 +51,7 @@ export function Identity() {
  */
 export function TopActions() {
   const t = useT()
-  const { panel, setPanel, view, setView, explode, cutaway, setCutaway, autoRotate, setAutoRotate, isolate, lang, setLang, setAboutOpen } = useAtlas()
+  const { panel, setPanel, view, setView, explode, cutaway, setCutaway, autoRotate, setAutoRotate, isolate, lang, setLang, setAboutOpen, colorMode, setColorMode } = useAtlas()
   const frontOnly = explode > 0.8
   return (
     <nav className="top-actions glass" aria-label={t.tools}>
@@ -87,6 +87,15 @@ export function TopActions() {
       <i className="pill-divider" />
       <button className={`pill-icon ${autoRotate ? 'active' : ''}`} disabled={explode >= 0.4 || isolate} onClick={() => setAutoRotate(!autoRotate)} aria-label={autoRotate ? t.pauseRotate : t.autoRotate} title={t.autoRotate}>
         {autoRotate ? <Pause size={16} /> : <RotateCw size={16} />}
+      </button>
+      <button
+        className={`pill-icon ${colorMode === 'real' ? 'active' : ''}`}
+        onClick={() => setColorMode(colorMode === 'real' ? 'atlas' : 'real')}
+        aria-pressed={colorMode === 'real'}
+        aria-label={colorMode === 'real' ? t.colorReal : t.colorAtlas}
+        title={colorMode === 'real' ? t.colorReal : t.colorAtlas}
+      >
+        {colorMode === 'real' ? <Droplet size={16} /> : <Palette size={16} />}
       </button>
       <div className="lang-toggle" role="group" aria-label={t.language}>
         <button className={lang === 'uz' ? 'active' : ''} onClick={() => setLang('uz')} aria-pressed={lang === 'uz'}>

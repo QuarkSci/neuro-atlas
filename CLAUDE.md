@@ -61,12 +61,14 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 
 ## Joriy holat (2026-11-14)
 
-Tayyor: 0–4c bosqichlar, BG-1, 3 dars, O'rganish tabi, kontent 487 yozuv (🟡).
+Tayyor: 0–4c bosqichlar, BG-1, 3 dars, O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14).
 
 **Hozirgi yo'nalish — realizm (foydalanuvchi talabi 2026-11-14):** butun ko'rinishni iloji
 boricha real qilish. Reja (har biri alohida sessiya va commit):
-- **R1** yorug'lik/material: muhit yoritilishi, tone mapping, to'qima ranglari (kulrang/oq modda,
-  arteriya/vena, nerv, suyak), nam yaltirash; PhD: "Real / Atlas rangi" almashtirgichi.
+- **R1** ✅ yorug'lik/material: `colorMode: 'real' | 'atlas'` (store, `na:colors`, standart `real`;
+  yuqori paneldagi tomchi/palitra tugmasi). `materials.ts` — `ATLAS`/`REAL` presetlari, `REAL_BY_ID`
+  (qora modda, qizil yadro, ...), `applyColorMode()`; `BrainScene` — `RIGS` (tone mapping + chiroqlar).
+  Parcellation qatlamlari ikkala rejimda xarita rangini saqlaydi. Keyingisi — **R2**.
 - **R2** chuqurlik: egatlarda ambient occlusion (vertexga pishirilgan yoki SSAO), yumshoq soyalar.
 - **R3** kesim yuzalari: 3D kesimda kulrang/oq modda ko'rinishi; Mielin/Nissl'ni preparatga yaqinlashtirish.
 - **R4** mayda detal: mikro-relyef, tomir yaltirashi, pardalar yarim shaffof; telefonda FPS tekshiruvi.

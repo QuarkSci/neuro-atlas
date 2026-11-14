@@ -8,7 +8,7 @@ import type { ClipAxis, ClipState, View } from '@/store/useAtlas'
 import { inventoryLayout, separationVector } from './explode'
 import { createGround } from './ground'
 import type { LoadedGeometry } from './loader'
-import { createPartMaterial, tint, type PartMaterial } from './materials'
+import { applyColorMode, createPartMaterial, tint, type ColorMode, type PartMaterial } from './materials'
 import { PointerTap } from './PointerTap'
 import { LineSegments2 } from 'three/examples/jsm/lines/LineSegments2.js'
 import { LineSegmentsGeometry } from 'three/examples/jsm/lines/LineSegmentsGeometry.js'
@@ -50,6 +50,8 @@ export interface SceneSnapshot {
   lessonPick: string | null
   /** Plates of the open topic: only their level markers are drawn (null = all). */
   topicSections: string[] | null
+  /** Fresh-tissue look or the didactic atlas palette (see materials.ts). */
+  colorMode: ColorMode
 }
 
 export interface SceneCallbacks {
@@ -129,6 +131,16 @@ const THEME = {
   hemiGround: 0x1a1d24,
 } as const
 
+/**
+ * Light rig per colour mode. `atlas` is flat and bright so every hue reads;
+ * `real` is a single warm operating-light key with deeper falloff, and a
+ * tone curve that keeps tissue colours true instead of bleaching them.
+ */
+const RIGS: Record<ColorMode, { tone: T.ToneMapping; exposure: number; hemi: number; key: number; rim: number; fill: number }> = {
+  atlas: { tone: T.ACESFilmicToneMapping, exposure: 1.05, hemi: 0.8, key: 2.0, rim: 1.4, fill: 0.5 },
+  real: { tone: T.NeutralToneMapping, exposure: 0.8, hemi: 0.1, key: 2.3, rim: 0.8, fill: 0.1 },
+}
+
 /** Systems whose extent defines the model for camera framing. */
 const BRAIN_SYSTEMS = new Set<SystemId>(['telencephalon', 'basal-ganglia', 'diencephalon', 'brainstem', 'cerebellum', 'ventricles', 'white-matter'])
 
@@ -176,6 +188,9 @@ export class BrainScene {
   private observer: ResizeObserver
   private ground: T.Mesh
   private hemi: T.HemisphereLight
+  private keyLight!: T.DirectionalLight
+  private rimLight!: T.DirectionalLight
+  private fillLight!: T.DirectionalLight
   private env: T.Texture
   private fly: { pos: T.Vector3; target: T.Vector3; t: number } | null = null
   private isolateKey = ''
@@ -303,6 +318,9 @@ export class BrainScene {
     const fill = new T.DirectionalLight(0xffffff, 0.5)
     fill.position.set(0, -200, 300)
     this.scene.add(fill)
+    this.keyLight = key
+    this.rimLight = rim
+    this.fillLight = fill
 
     // A gradient floor well below the brain gives the orbit a horizon without
     // reading as a table the brain sits on.
@@ -356,7 +374,7 @@ export class BrainScene {
     for (const { part, geometry } of geometries) {
       if (this.byId.has(part.id)) continue
       geometry.computeBoundsTree()
-      const material = createPartMaterial(part.system, part.layer, this.seed++)
+      const material = createPartMaterial(part.system, part.layer, this.seed++, part.id)
       material.clippingPlanes = this.clipPlanes
       const mesh = new T.Mesh(geometry, material)
       mesh.name = part.id
@@ -1411,6 +1429,29 @@ export class BrainScene {
     // A later addGeometries() resets `last` to re-run visibility; that must
     // not re-frame the camera the way the very first frame does.
     const firstEver = first && !this.framedOnce
+
+    // Colour mode: light rig, tone curve and every part's surface. Runs
+    // before the lesson pass, which may repaint `base` on top of it.
+    if (first || last.colorMode !== s.colorMode) {
+      const rig = RIGS[s.colorMode]
+      this.renderer.toneMapping = rig.tone
+      this.renderer.toneMappingExposure = rig.exposure
+      this.hemi.intensity = rig.hemi
+      this.keyLight.intensity = rig.key
+      this.rimLight.intensity = rig.rim
+      this.fillLight.intensity = rig.fill
+      for (const p of this.parts) {
+        const color = applyColorMode(p.mesh.material, s.colorMode)
+        // In a lesson `base` holds a teaching colour; the mode's colour waits in atlasBase.
+        if (p.atlasBase) p.atlasBase.copy(color)
+        else {
+          p.mesh.material.userData.base.copy(color)
+          ;(p.mesh.children[0] as T.Mesh<T.BufferGeometry, T.MeshBasicMaterial> | undefined)?.material.color.copy(color).multiplyScalar(0.82)
+          tint(p.mesh.material, p.selectedAmount, p.hoverAmount)
+        }
+      }
+      this.dirty = true
+    }
 
     // Cross-section planes: each is pushed far away (huge constant) to
     // disable it entirely when off, cheaper than toggling clippingPlanes

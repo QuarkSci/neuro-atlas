@@ -1,6 +1,7 @@
 import { TOPICS } from '@/data/topics'
 import { create } from 'zustand'
 import type { LayerId, SystemId } from '@/data/types'
+import type { ColorMode } from '@/scene/materials'
 import { ALL_SYSTEM_IDS, LAYER_BY_ID } from '@/data'
 
 export type Lang = 'en' | 'uz'
@@ -33,6 +34,8 @@ export interface ClipState {
  */
 export interface AtlasState {
   lang: Lang
+  /** Fresh-tissue colours and lighting, or the didactic atlas palette. A preference: survives reset. */
+  colorMode: ColorMode
   /** Systems currently shown. */
   visible: SystemId[]
   /** Atlas layers currently shown (independent of systems). */
@@ -74,6 +77,7 @@ export interface AtlasState {
   error: string
 
   setLang: (l: Lang) => void
+  setColorMode: (m: ColorMode) => void
   toggleSystem: (id: SystemId) => void
   showOnly: (ids: SystemId[]) => void
   toggleLayer: (id: LayerId) => void
@@ -115,6 +119,13 @@ const initialLang = (): Lang => {
     if (saved === 'uz' || saved === 'en') return saved
   } catch {}
   return navigator.language?.toLowerCase().startsWith('uz') ? 'uz' : 'en'
+}
+
+const initialColorMode = (): ColorMode => {
+  try {
+    if (localStorage.getItem('na:colors') === 'atlas') return 'atlas'
+  } catch {}
+  return 'real'
 }
 
 /** The skull and dura wrap everything else, so they start hidden. */
@@ -160,6 +171,7 @@ const SECTION_SYSTEMS: SystemId[] = ['basal-ganglia', 'brainstem', 'diencephalon
 
 export const useAtlas = create<AtlasState>((set) => ({
   lang: initialLang(),
+  colorMode: initialColorMode(),
   ...sceneDefaults,
   resetTick: 0,
   aboutOpen: false,
@@ -171,6 +183,12 @@ export const useAtlas = create<AtlasState>((set) => ({
       localStorage.setItem('na:lang', lang)
     } catch {}
     set({ lang })
+  },
+  setColorMode: (colorMode) => {
+    try {
+      localStorage.setItem('na:colors', colorMode)
+    } catch {}
+    set({ colorMode })
   },
   toggleSystem: (id) =>
     set((s) => ({

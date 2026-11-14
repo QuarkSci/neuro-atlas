@@ -113,6 +113,7 @@ glasser | julich`), tizim emas.
 | O'rganish | Kesimlar + Darslar bitta tabda | ✅ 2026-10-09: mavzular bo'yicha (7 mavzu), har mavzuda 3D dars + kesim plastinkalari, dars ↔ kesim havolalari, 3D'da faqat mavzu markerlari; pastda 3 tab |
 | Darslar | 3D qadamma-qadam darslar | ✅ 2026-10-09: 4-tab Darslar — qorinchalar va likvor yo'li (8), qadoqsimon tana (7), gippokamp/fornix/Papez (6): fokus + xira kontekst, o'quv ranglari, 3D yorliqlar, oqim animatsiyasi, Eslab qoling / Chuqurroq qutilari, 3D'da bosiladigan viktorina |
 | BG-1 | Bazal yadrolar: kesimlar | ✅ 2026-10-09: `basal-ganglia` tizimi (20 qism), B1–B5 masshtabli plastinkalar (accumbens, AC/VP/Ch4, GPe/GPi/ansa, STN/Forel H-H1-H2, ichki kapsula aksial), 30 yangi tuzilma PhD tafsilot bilan. Keyin BG-2 yo'llar, BG-3 kasallik simulyatori, BG-4 halqalar/DBS/3D |
+| R1 | Realizm: yorug'lik/material | ✅ 2026-11-14: "Real / Atlas rangi" almashtirgichi (standart Real) — to'qima ranglari (po'stloq, chuqur yadrolar, oq modda, arteriya/vena, nerv, dura, suyak; qora modda/qizil yadro/xoroid chigal alohida), nam yaltirash (past roughness + sheen, clearcoat 0), Neutral tone mapping, bitta iliq asosiy chiroq. Keyin R2 chuqurlik (AO/soya), R3 kesim yuzalari, R4 mayda detal |
 | 5 | Kontent | 🟡 2026-09-24: 487 yozuv (`src/data/content/*.json`, en/uz + manbalar); barcha yozuvlarda `uz` nom; Julich 206 alohida hudud tugadi. Qolgan: Glasser 179, Destrieux 74, Desikan 35, JHU 27 |
 | 6 | Deploy | Pages, meshlar GitHub Release'da, README, ATTRIBUTION.md |
 | 7 | v2 | Orqa miya, qo'shimcha atlaslar (neuroparc, Allen) |
