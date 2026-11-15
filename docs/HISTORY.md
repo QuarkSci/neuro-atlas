@@ -662,6 +662,26 @@ prujinadek joyiga qaytadi.
 - Tekshirildi: DPR 1 va 2 da sinish bir xil (`--stripes` bilan), 900×560 va 390×700, `audit-pick` diff 0,
   tsc + build. Tekshirilmadi: haqiqiy telefonda FPS, Safari'da ko'rinish (faqat kod bo'yicha zaxira).
 
+### UI-1 — iPad uslubidagi tuzilish (2026-11-15)
+
+Sabab: foydalanuvchi LG-1 dan qoniqmadi va interfeysni "chiroyli, foydali" qilib qayta qurishni so'radi. Savol-javob
+bilan kelishildi: tuzilish — iPad uslubi; fon — yorug' rejim ham qo'shiladi; birinchi ekranda Atlas va O'rganish
+teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
+
+- Tepa panelda 13 ta tugma tiqilib turgan edi → `TabBar` (4 element) + `ViewGroup` (3 tugma, ikki menyu).
+- `Sidebar` bitta komponent: Atlas'da `AtlasList` (tez tanlov segmenti linza bilan, qatlam chiplari, tizimlar),
+  O'rganish'da `TopicList` (akkordeon). Avval mavzu kartalari pastki dockda edi — matn sig'mas edi.
+- Store: `sidebar` alohida maydon (`panel` endi faqat `'search' | null`), `reset`da saqlanadi, telefonda qism
+  tanlansa / dars yoki kesim ochilsa o'zi yopiladi (`isPhone()`), standart ≥1100px da ochiq.
+- Kamera: `BrainScene.insets()` selektorlari yangilandi (`.tab-bar` — tepada yoki telefonda pastda, `.view-group`,
+  `.sidebar.open`). Yon panel almashtirilganda kamera QAYTA moslanmaydi (foydalanuvchi burgan ko'rinish saqlansin),
+  keyingi `fit`da hisobga olinadi.
+- CSS: eski xrom qoidalari (`.top-actions`, `.side-rail`, `.mode-tab*`, `.gauge*`, `.sheet`, `.topic-card*` ...)
+  skript bilan o'chirildi, yangisi fayl oxirida "Layout II". O'lchamlar Figma kitidan: bar 44, tab 36, 15px/500.
+- Tekshirildi: 1280×760 (Atlas, O'rganish), 1100×680 (dars, menyu), 390×760 (telefon, varaq), linza bosilgan/
+  sudralgan, `audit-pick` diff 0, tsc + build. Tekshirilmadi: kesim tasmasi (`sectionCut`) va qidiruv paneli
+  yangi joyda suratga olinmadi; haqiqiy telefonda sinalmadi.
+
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
 1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).

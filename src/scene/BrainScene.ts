@@ -600,17 +600,13 @@ export class BrainScene {
       base[key] = Math.max(base[key], value)
     }
     if (root) {
-      const identity = root.querySelector('.identity')
-      const topActions = root.querySelector('.top-actions')
-      for (const el of [identity, topActions]) {
+      for (const el of [root.querySelector('.identity'), root.querySelector('.tab-bar'), root.querySelector('.view-group')]) {
         if (!el) continue
         const r = el.getBoundingClientRect()
-        if (r.width > 0 && overlapsH(r)) grow('top', r.bottom - hostRect.top + 16)
-      }
-      const rail = root.querySelector('.side-rail')
-      if (rail) {
-        const r = rail.getBoundingClientRect()
-        if (r.width > 0 && overlapsV(r)) grow('left', r.right - hostRect.left + gap)
+        if (r.width === 0 || !overlapsH(r)) continue
+        // On a phone the tab bar sits at the bottom edge instead.
+        if (r.top > hostRect.top + hostRect.height / 2) grow('bottom', hostRect.bottom - r.top + 16)
+        else grow('top', r.bottom - hostRect.top + 16)
       }
       const dock = root.querySelector('.bottom-dock')
       if (dock) {
@@ -620,7 +616,7 @@ export class BrainScene {
       if (mobile) {
         // Panels are bottom sheets or a top strip on narrow screens.
         const inspector = root.querySelector('.inspector.open')
-        const systems = root.querySelector('.sheet.open')
+        const systems = root.querySelector('.sidebar.open')
         const search = root.querySelector('.search-panel')
         const lesson = root.querySelector('.lesson-panel')
         for (const el of [inspector, systems, lesson]) {
@@ -633,7 +629,7 @@ export class BrainScene {
           if (r.width > 0) grow('top', r.bottom - hostRect.top + gap)
         }
       } else {
-        const systems = root.querySelector('.sheet.open')
+        const systems = root.querySelector('.sidebar.open')
         if (systems) {
           const r = systems.getBoundingClientRect()
           if (r.width > 0 && overlapsV(r)) grow('left', r.right - hostRect.left + gap)

@@ -6,7 +6,7 @@ import { ALL_SYSTEM_IDS, LAYER_BY_ID } from '@/data'
 
 export type Lang = 'en' | 'uz'
 export type View = 'three-quarter' | 'lateral' | 'front' | 'top'
-export type Panel = 'systems' | 'search' | null
+export type Panel = 'search' | null
 /** Which control the bottom dock shows: explode slider, peel slider or the cross-section atlas. */
 /**
  * `learn` is the single study tab: topic cards → a topic's 3D lessons and
@@ -70,6 +70,8 @@ export interface AtlasState {
   /** Bumped to force a camera re-fit. */
   resetTick: number
   panel: Panel
+  /** The left sidebar (systems and layers, or the topic list). A preference: survives reset. */
+  sidebar: boolean
   inspectorOpen: boolean
   aboutOpen: boolean
   hovered: string | null
@@ -105,6 +107,7 @@ export interface AtlasState {
   /** Cuts the 3D model along a section's plane (null removes the cut). */
   cutSection: (id: string | null, layers?: LayerId[]) => void
   setPanel: (p: Panel) => void
+  setSidebar: (v: boolean) => void
   setInspectorOpen: (v: boolean) => void
   setAboutOpen: (v: boolean) => void
   setHovered: (id: string | null) => void
@@ -126,6 +129,17 @@ const initialColorMode = (): ColorMode => {
     if (localStorage.getItem('na:colors') === 'atlas') return 'atlas'
   } catch {}
   return 'real'
+}
+
+/** On a phone the sidebar is a bottom sheet that covers the model, so it must step aside. */
+const isPhone = () => typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
+
+const initialSidebar = (): boolean => {
+  try {
+    const saved = localStorage.getItem('na:sidebar')
+    if (saved) return saved === '1' && !isPhone()
+  } catch {}
+  return typeof window !== 'undefined' && window.innerWidth >= 1100
 }
 
 /** The skull and dura wrap everything else, so they start hidden. */
@@ -163,7 +177,21 @@ const sceneDefaults = {
 /** State for walking into the learn tab from another mode (no-op when already there). */
 function enterLearn(s: { mode: Mode; visible: SystemId[]; resetTick: number }) {
   if (s.mode === 'learn') return {}
-  return { mode: 'learn' as Mode, explode: 0, peel: 0, isolate: false, sectionsPrevVisible: s.visible, visible: SECTION_SYSTEMS.filter((id) => ALL_SYSTEM_IDS.includes(id)), cutaway: false, view: 'lateral' as View, resetTick: s.resetTick + 1, selected: [], focus: null, inspectorOpen: false, autoRotate: false }
+  return {
+    mode: 'learn' as Mode,
+    explode: 0,
+    peel: 0,
+    isolate: false,
+    sectionsPrevVisible: s.visible,
+    visible: SECTION_SYSTEMS.filter((id) => ALL_SYSTEM_IDS.includes(id)),
+    cutaway: false,
+    view: 'lateral' as View,
+    resetTick: s.resetTick + 1,
+    selected: [],
+    focus: null,
+    inspectorOpen: false,
+    autoRotate: false,
+  }
 }
 
 /** Systems that make sense around brainstem / diencephalon cross-sections. */
@@ -172,6 +200,7 @@ const SECTION_SYSTEMS: SystemId[] = ['basal-ganglia', 'brainstem', 'diencephalon
 export const useAtlas = create<AtlasState>((set) => ({
   lang: initialLang(),
   colorMode: initialColorMode(),
+  sidebar: initialSidebar(),
   ...sceneDefaults,
   resetTick: 0,
   aboutOpen: false,
@@ -203,16 +232,15 @@ export const useAtlas = create<AtlasState>((set) => ({
     set((s) => ({
       // Cortical parcellations tile the same surface, so switching one on
       // replaces whichever other parcellation was showing.
-      layers: s.layers.includes(id)
-        ? s.layers.filter((x) => x !== id)
-        : [...s.layers.filter((x) => !(LAYER_BY_ID.get(id)?.parcellation && LAYER_BY_ID.get(x)?.parcellation)), id],
+      layers: s.layers.includes(id) ? s.layers.filter((x) => x !== id) : [...s.layers.filter((x) => !(LAYER_BY_ID.get(id)?.parcellation && LAYER_BY_ID.get(x)?.parcellation)), id],
       selected: [],
       focus: null,
       isolate: false,
       inspectorOpen: false,
     })),
   setLayers: (layers) => set({ layers, selected: [], focus: null, isolate: false, inspectorOpen: false }),
-  selectParts: (ids, focus) => set({ selected: ids, focus, isolate: false, inspectorOpen: ids.length > 0, panel: null, autoRotate: false }),
+  selectParts: (ids, focus) =>
+    set((s) => ({ selected: ids, focus, isolate: false, inspectorOpen: ids.length > 0, panel: null, autoRotate: false, sidebar: ids.length > 0 && isPhone() ? false : s.sidebar })),
   clearSelection: () => set({ selected: [], focus: null, isolate: false, inspectorOpen: false }),
   setIsolate: (isolate) => set({ isolate, explode: 0, peel: 0 }),
   setExplode: (explode) => set((s) => ({ explode, peel: 0, autoRotate: false, view: explode > 0.8 ? 'front' : s.view })),
@@ -224,10 +252,11 @@ export const useAtlas = create<AtlasState>((set) => ({
       // sit on, from the side where the brainstem levels read best.
       if (mode === 'learn') return { ...base, ...enterLearn(s) }
       // Leaving it: drop the cut and hand back whatever was shown before.
-      if (s.mode === 'learn') return { ...base, sectionCut: null, sectionId: null, visible: s.sectionsPrevVisible ?? s.visible, sectionsPrevVisible: null, resetTick: s.resetTick + 1 }
+      if (s.mode === 'learn')
+        return { ...base, sectionCut: null, sectionId: null, visible: s.sectionsPrevVisible ?? s.visible, sectionsPrevVisible: null, resetTick: s.resetTick + 1 }
       return base
     }),
-  openSection: (sectionId) => set({ sectionId, panel: null }),
+  openSection: (sectionId) => set((s) => ({ sectionId, panel: null, sidebar: sectionId && isPhone() ? false : s.sidebar })),
   setTopic: (topic) =>
     set((s) => ({
       ...enterLearn(s),
@@ -247,6 +276,7 @@ export const useAtlas = create<AtlasState>((set) => ({
       // A lesson opened from outside its topic (a plate's link) lands in it.
       topic: id && !s.topic ? (TOPICS.find((t) => t.lessons.includes(id))?.id ?? null) : s.topic,
       lesson: id ? { id, step: 0 } : null,
+      sidebar: id && isPhone() ? false : s.sidebar,
       lessonPick: null,
       sectionCut: null,
       sectionId: null,
@@ -314,13 +344,29 @@ export const useAtlas = create<AtlasState>((set) => ({
       resetTick: s.resetTick + 1,
       autoRotate: false,
     })),
-  setPanel: (panel) => set((s) => ({ panel: s.panel === panel ? null : panel, inspectorOpen: panel ? false : s.inspectorOpen })),
+  setPanel: (panel) => set((s) => ({ panel: s.panel === panel ? null : panel, inspectorOpen: panel ? false : s.inspectorOpen, sidebar: panel && isPhone() ? false : s.sidebar })),
+  setSidebar: (sidebar) => {
+    try {
+      localStorage.setItem('na:sidebar', sidebar ? '1' : '0')
+    } catch {}
+    set((s) => ({ sidebar, panel: sidebar && isPhone() ? null : s.panel, inspectorOpen: sidebar && isPhone() ? false : s.inspectorOpen }))
+  },
   setInspectorOpen: (inspectorOpen) => set({ inspectorOpen }),
   setAboutOpen: (aboutOpen) => set({ aboutOpen, panel: null, inspectorOpen: false }),
   setHovered: (hovered) => set({ hovered }),
   setProgress: (progress) => set({ progress }),
   setError: (error) => set({ error }),
-  reset: () => set((s) => ({ ...sceneDefaults, topic: s.topic, lesson: s.lesson, mode: s.mode === 'learn' ? 'learn' : 'explode', visible: s.mode === 'learn' ? s.visible : sceneDefaults.visible, sectionsPrevVisible: s.sectionsPrevVisible, view: s.mode === 'learn' ? 'lateral' : sceneDefaults.view, resetTick: s.resetTick + 1 })),
+  reset: () =>
+    set((s) => ({
+      ...sceneDefaults,
+      topic: s.topic,
+      lesson: s.lesson,
+      mode: s.mode === 'learn' ? 'learn' : 'explode',
+      visible: s.mode === 'learn' ? s.visible : sceneDefaults.visible,
+      sectionsPrevVisible: s.sectionsPrevVisible,
+      view: s.mode === 'learn' ? 'lateral' : sceneDefaults.view,
+      resetTick: s.resetTick + 1,
+    })),
 }))
 
 if (import.meta.env.DEV) (window as unknown as { __atlas: typeof useAtlas }).__atlas = useAtlas

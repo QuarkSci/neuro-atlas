@@ -2,9 +2,8 @@ import { useEffect } from 'react'
 import { SceneView } from '@/scene/SceneView'
 import { useAtlas } from '@/store/useAtlas'
 import { useT } from '@/i18n'
-import { Identity, TopActions } from '@/ui/Header'
-import { SideRail } from '@/ui/SideRail'
-import { SystemsPanel } from '@/ui/SystemsPanel'
+import { Identity, TabBar, ViewGroup } from '@/ui/Header'
+import { Sidebar } from '@/ui/Sidebar'
 import { SearchPanel } from '@/ui/SearchPanel'
 import { PlanesPanel } from '@/ui/ViewControls'
 import { SectionViewer } from '@/ui/SectionViewer'
@@ -40,9 +39,9 @@ export default function App() {
       <SceneView />
       <div className="vignette" />
       <Identity />
-      <TopActions />
-      <SideRail />
-      <SystemsPanel />
+      <TabBar />
+      <ViewGroup />
+      <Sidebar />
       {panel === 'search' && <SearchPanel />}
       {cutaway && <PlanesPanel />}
       <BottomBar />

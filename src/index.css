@@ -277,64 +277,28 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   mask-composite: exclude;
 }
 
-.eyebrow { font-size: 11px; letter-spacing: 0.19em; color: var(--fa-muted); display: flex; align-items: center; gap: 8px; text-transform: uppercase; }
-.status-dot { height: 5px; width: 5px; background: var(--fa-accent); border-radius: 50%; box-shadow: 0 0 12px var(--fa-accent); }
 
 /* Top-left mark: a circular badge, with the wordmark beside it on wide screens. */
-.identity { position: absolute; left: var(--gap-edge); top: var(--gap-edge); z-index: 3; display: flex; align-items: center; gap: 10px; }
-.identity-mark { width: var(--mark); height: var(--mark); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--fa-accent); flex-shrink: 0; }
-.identity-mark:hover { color: var(--foreground); }
-.identity-text { pointer-events: none; }
-.identity h1 { font-weight: 400; font-size: 17px; letter-spacing: -0.6px; line-height: 1.15; margin: 3px 0 2px; }
-.identity-meta { font-size: 11.5px; color: var(--fa-muted); letter-spacing: 0.02em; }
-.identity-meta span { padding: 0 5px; opacity: 0.6; }
 
 /*
  * One pill holding everything: the sidebar toggle, a segmented tab strip of
  * camera views, then search and preferences. The active tab is a solid
  * rounded slab inside the strip, the way a platform tab bar reads.
  */
-.top-actions { position: absolute; top: var(--gap-edge); right: var(--gap-edge); display: flex; align-items: center; gap: 0; z-index: 3; padding: var(--ctl-pad); border-radius: 999px; }
-.pill-icon { display: inline-flex; align-items: center; justify-content: center; width: var(--icon-w); height: var(--ctl-h); border-radius: 999px; color: var(--fa-muted); }
-.pill-icon:hover { color: var(--foreground); background: var(--fa-fill); }
-.pill-icon.active { color: var(--fa-accent); background: var(--fa-accent-soft); }
-.pill-icon:disabled { opacity: 0.3; background: none; }
-.pill-mark { display: none; align-items: center; justify-content: center; width: var(--icon-w); height: var(--ctl-h); border-radius: 999px; color: var(--fa-accent); }
-.pill-mark:hover { background: var(--fa-fill); }
-.pill-divider { width: 1px; height: 16px; background: var(--fa-line); margin: 0 4px; }
 
-.tab-group { display: flex; align-items: center; gap: 0; }
-.tab { display: inline-flex; align-items: center; justify-content: center; gap: 5px; height: var(--ctl-h); min-width: var(--icon-w); padding: 0 11px; border-radius: 999px; font-size: var(--ctl-font); color: var(--fa-muted); white-space: nowrap; transition: background 0.18s, color 0.18s; }
-.tab:hover:not(:disabled) { color: var(--foreground); }
-.tab.active { color: var(--fa-accent); background: var(--fa-fill); box-shadow: inset 0 0 0 1px var(--fa-glass-border); font-weight: 600; }
-.tab:disabled { opacity: 0.3; }
 /* The glyph is the compact stand-in for the label; only one of them shows. */
-.tab-glyph { display: none; font-size: 13px; }
 @media (max-width: 1240px) {
-  .tab-glyph { display: inline; }
 }
 
 .icon-button { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; border-radius: 999px; color: var(--fa-muted); }
 .icon-button:hover, .icon-button.active { color: var(--foreground); background: var(--fa-line); }
 .icon-button:disabled { opacity: 0.35; }
 
-.lang-toggle { display: inline-flex; border: 1px solid var(--fa-line); border-radius: 999px; overflow: hidden; margin: 0 2px; }
-.lang-toggle { height: var(--ctl-h); align-items: center; }
-.lang-toggle button { font-size: 10.5px; letter-spacing: 0.06em; padding: 0 8px; height: 100%; color: var(--fa-muted); }
-.lang-toggle button.active { color: var(--foreground); background: var(--fa-line); }
 
 /*
  * Left rail: visibility presets set vertically (so the pill stays narrow)
  * over a chevron that expands the full systems sheet.
  */
-.side-rail { position: absolute; left: var(--gap-edge); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; width: var(--rail-w); padding: var(--ctl-pad); border-radius: 999px; gap: 0; z-index: 3; }
-.rail-item { writing-mode: vertical-rl; text-orientation: mixed; width: calc(var(--rail-w) - var(--ctl-pad) * 2); padding: 9px 0; border-radius: 999px; font-size: 11.5px; letter-spacing: 0.02em; color: var(--fa-muted); min-height: 42px; }
-.rail-item + .rail-item { box-shadow: 0 -1px 0 var(--fa-line); }
-.rail-item:hover { color: var(--foreground); }
-.rail-item.active { color: var(--fa-accent); }
-.rail-expand { width: calc(var(--rail-w) - var(--ctl-pad) * 2); height: calc(var(--rail-w) - var(--ctl-pad) * 2); margin-top: 4px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--fa-muted); background: var(--fa-fill); transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1); }
-.rail-expand:hover { color: var(--foreground); background: var(--fa-fill); }
-.rail-expand.open { transform: rotate(180deg); color: var(--fa-accent); }
 
 /*
  * The shared open/close treatment for every flyout panel: hidden (scaled
@@ -349,9 +313,6 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
  * below with a grabber at the top; dragging that grabber down dismisses it
  * (see useSheetDrag). `--sheet-dy` is the live drag distance.
  */
-.sheet { position: absolute; left: calc(var(--gap-edge) + var(--rail-w) + 16px); top: 76px; bottom: 172px; width: var(--sheet-w); max-height: 560px; border-radius: 24px; display: flex; flex-direction: column; padding: 0 13px; z-index: 4; opacity: 0; pointer-events: none; transform: translateY(26px) scale(0.97); transition: transform 0.42s cubic-bezier(0.22, 1.2, 0.36, 1), opacity 0.22s; }
-.sheet.open { opacity: 1; pointer-events: auto; transform: translateY(var(--sheet-dy, 0px)); }
-.sheet.dragging { transition: opacity 0.22s; }
 .sheet-grabber { height: 14px; margin: 0 -13px; cursor: grab; touch-action: none; user-select: none; position: relative; }
 .sheet-grabber:active { cursor: grabbing; }
 .sheet-grabber::after { content: ''; position: absolute; top: 5px; left: 50%; width: 44px; height: 4px; border-radius: 2px; background: color-mix(in oklab, #fff 28%, transparent); transform: translateX(-50%); }
@@ -418,14 +379,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
  * mode tab bar under them. The wrapper itself is transparent but keeps the
  * `.bottom-dock` class because RocketScene measures it for camera insets.
  */
-.bottom-dock { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 12px; z-index: 3; }
-.dock-row { display: flex; align-items: center; gap: 10px; }
-.slider-card { width: var(--slider-w); padding: 9px 13px 11px; border-radius: 18px; }
-.slider-card.bare { width: var(--slider-w); height: 40px; display: flex; align-items: center; background: none; border: 0; box-shadow: none; backdrop-filter: none; padding: 0; }
 
-.flight-label { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 11.5px; margin-bottom: 8px; }
-.flight-label strong { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.flight-label output { font-size: 11px; color: var(--fa-muted); font-variant-numeric: tabular-nums; white-space: nowrap; flex-shrink: 0; }
 
 /* macOS slider: thin rail, tick marks beneath, raised round knob. */
 .mac-slider { display: flex; align-items: center; gap: 10px; width: 100%; }
@@ -448,20 +402,8 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .mac-tick.pressable.active::after { background: var(--fa-accent); height: 8px; width: 2px; }
 
 /* Circular dial beside the slider: explode amount, or timeline position. */
-.gauge-card { width: var(--gauge); height: var(--gauge); border-radius: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.gauge { position: relative; width: calc(var(--gauge) - 12px); height: calc(var(--gauge) - 12px); display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--foreground); }
-.gauge > svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
-.gauge circle { fill: none; stroke-width: 4.5; stroke-linecap: round; }
-.gauge-track { stroke: color-mix(in oklab, #fff 22%, transparent); }
-.gauge-value { stroke: var(--fa-accent); transition: stroke-dashoffset 0.12s linear; }
-.gauge-glyph { display: flex; align-items: center; justify-content: center; width: calc(var(--gauge) * 0.44); height: calc(var(--gauge) * 0.44); border-radius: 50%; color: var(--foreground); }
-.gauge:hover .gauge-glyph { background: var(--fa-fill); }
 
 /* Bottom tab bar. */
-.mode-tabs { display: flex; align-items: center; gap: 0; padding: var(--ctl-pad); border-radius: 999px; }
-.mode-tab { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: var(--mode-w); padding: 0 12px; white-space: nowrap; height: var(--mode-h); border-radius: 999px; font-size: 10px; letter-spacing: 0.01em; color: var(--fa-muted); transition: background 0.2s, color 0.2s; }
-.mode-tab:hover { color: var(--foreground); }
-.mode-tab.active { color: var(--fa-accent); background: var(--fa-fill); font-weight: 600; }
 
 .studio-footer { position: absolute; bottom: 12px; left: var(--gap-edge); right: var(--gap-edge); display: flex; justify-content: space-between; align-items: center; pointer-events: none; font-size: 11.5px; color: var(--fa-muted); z-index: 2; }
 .studio-footer b { font-weight: 400; padding: 0 6px; opacity: 0.6; }
@@ -526,15 +468,10 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
  * the dock spans the width.
  */
 @media (max-width: 1240px) {
-  .identity-text { display: none; }
-  .tab-text { display: none; }
-  .tab-glyph { display: inline; }
-  .tab { min-width: var(--icon-w); padding: 0 8px; }
 }
 
 /* Tablet: the chrome sits closer to the edges, panels lose some height. */
 @media (max-width: 1024px) {
-  .sheet { top: 64px; bottom: 150px; }
   .inspector,
   .search-panel { top: 56px; }
 }
@@ -544,23 +481,10 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   :root { --ctl-pad: 2px; }
   /* A lone circle floating above the bar reads as a stray element, so the
      mark moves inside the bar and the standalone header steps aside. */
-  .identity { display: none; }
-  .pill-mark { display: inline-flex; }
-  .top-actions { top: var(--gap-edge); left: var(--gap-edge); right: var(--gap-edge); justify-content: space-between; border-radius: 18px; }
-  .top-actions .pill-divider { display: none; }
-  .tab { padding: 0 4px; }
-  .lang-toggle { margin: 0; }
-  .side-rail { left: var(--gap-edge); }
-  .rail-item { min-height: 38px; font-size: 11px; }
   /* A real bottom sheet: full width, springing off the bottom edge. */
-  .sheet { left: var(--gap-edge); right: var(--gap-edge); width: auto; top: auto; bottom: 0; max-height: 52dvh; border-radius: 22px 22px 0 0; padding-bottom: 6px; transform: translateY(100%); }
-  .sheet.open { transform: translateY(var(--sheet-dy, 0px)); }
   .search-panel { left: var(--gap-edge); right: var(--gap-edge); width: auto; top: calc(var(--gap-edge) + var(--ctl-h) + 14px); }
   .planes-panel { left: var(--gap-edge); right: var(--gap-edge); width: auto; top: calc(var(--gap-edge) + var(--ctl-h) + 14px); bottom: 190px; max-height: none; transform: translate(var(--drag-x, 0px), var(--drag-y, 0px)); }
   /* The slider stretches; the tab bar stays its own size and centred. */
-  .bottom-dock { left: var(--gap-edge); right: var(--gap-edge); bottom: 20px; transform: none; }
-  .dock-row { width: 100%; }
-  .slider-card { flex: 1; min-width: 0; width: auto; }
   /* No room for it once the dock spans the width. */
   .studio-footer { display: none; }
   .inspector { top: auto; left: var(--gap-edge); right: var(--gap-edge); bottom: var(--gap-edge); width: auto; max-height: 56dvh; transform: translateY(24px); }
@@ -570,8 +494,6 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 /* Short windows: the vehicle needs whatever height is left. Not on a
    phone, where the sheet is anchored to the bottom edge already. */
 @media (max-height: 620px) and (min-width: 641px) {
-  .sheet { top: 56px; bottom: 130px; }
-  .bottom-dock { bottom: 18px; gap: 8px; }
   .studio-footer { display: none; }
 }
 
@@ -637,8 +559,6 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .section-leaders polyline.hot { stroke: #ffd166; stroke-width: 1.6; }
 
 /* Bottom strip of level codes (sections mode). */
-.section-strip { border-radius: 20px; padding: 8px 12px 10px; max-width: min(760px, calc(100vw - 2 * var(--gap-edge) - var(--gauge) - 14px)); }
-.strip-hint { font-size: 10.5px; color: var(--fa-muted); margin-bottom: 6px; text-align: center; }
 .strip-regions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 12px; overflow-x: auto; scrollbar-width: none; }
 .strip-region { display: flex; flex-direction: column; gap: 4px; flex: none; }
 .strip-region > span { font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--fa-muted); }
@@ -806,7 +726,6 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   .sv-heading h2 { font-size: 14.5px; }
   .sv-locator { width: 64px; height: 68px; top: 40px; right: 10px; }
   .sv-legend { display: none; }
-  .section-strip { padding: 6px 10px 8px; }
   .strip-regions { flex-wrap: nowrap; justify-content: flex-start; }
 }
 .sv-region-line { fill: none; stroke: #5d6878; stroke-linecap: round; }
@@ -890,20 +809,6 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 }
 
 /* ── Learn tab: topics ─────────────────────────────────────────────── */
-.topic-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(138px, 1fr)); gap: 6px; width: min(640px, calc(100vw - 2 * var(--gap-edge) - var(--gauge) - 48px)); }
-.topic-card { display: flex; flex-direction: column; gap: 2px; text-align: left; padding: 7px 10px; overflow: hidden; border-radius: 14px; background: var(--fa-fill); transition: background 0.15s; min-width: 0; }
-.topic-card:hover { background: rgba(255, 255, 255, 0.13); }
-.topic-card strong { font-size: 12.5px; font-weight: 650; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.topic-card small { font-size: 10.5px; color: var(--fa-muted); line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.topic-badges { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 2px; min-width: 0; }
-.topic-badge { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; flex: none; font-size: 10px; padding: 2px 7px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); color: var(--fa-muted); }
-.topic-badge.lesson { background: rgba(184, 211, 58, 0.16); color: #d9ef7a; }
-.topic-strip { display: flex; flex-direction: column; gap: 8px; }
-.topic-strip-head { display: flex; align-items: center; gap: 10px; }
-.topic-strip-head strong { font-size: 13px; font-weight: 650; }
-.topic-strip-body { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.topic-chips { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
-.topic-chips > span { font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--fa-muted); margin-right: 4px; }
 .lesson-plate { display: flex; align-items: center; gap: 10px; text-align: left; padding: 9px 12px; border-radius: 14px; background: rgba(79, 163, 255, 0.1); border: 1px solid rgba(79, 163, 255, 0.3); }
 .lesson-plate span:last-child { display: flex; flex-direction: column; gap: 1px; }
 .lesson-plate strong { font-size: 12.5px; }
@@ -912,9 +817,6 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .lesson-plates > span { text-transform: uppercase; letter-spacing: 0.04em; color: var(--fa-muted); font-size: 10px; }
 .lesson-plates > div { display: flex; gap: 4px; flex-wrap: wrap; }
 @media (max-width: 767px) {
-  .topic-cards { display: flex; overflow-x: auto; scrollbar-width: none; width: auto; }
-  .topic-card { flex: none; width: 200px; }
-  .topic-strip-head .strip-btn span { display: none; }
 }
 
 /* ── Liquid Glass II: refraction, the lens indicator, press physics ─────────
@@ -940,9 +842,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 }
 
 /* The sliding selection capsule. Items sit above it at rest. */
-.tab-group { position: relative; }
-.tab, .mode-tab, .rail-item { position: relative; z-index: 1; transition: scale 0.42s var(--lg-spring), color 0.18s; }
-.tab.active, .mode-tab.active { background: none; box-shadow: none; }
+.tab, .seg-item { position: relative; z-index: 1; transition: scale 0.42s var(--lg-spring), color 0.18s; }
 .lens-blob {
   position: absolute; left: 0; top: 0; width: var(--bw, 0px); height: var(--bh, 0px); translate: var(--bx, 0px) var(--by, 0px);
   border-radius: 999px; pointer-events: none; opacity: 0; z-index: 0;
@@ -962,23 +862,19 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
     inset 0 0 14px -4px color-mix(in oklab, #9cc8ff 40%, transparent),
     0 8px 22px -4px color-mix(in oklab, #000 55%, transparent);
 }
-.side-rail .lens-blob.held { scale: 1.3 1.15; }
 /* Tracking the pointer: no glide lag, it has to stay under the finger. */
 .lens-blob.drag { transition: translate 0.07s linear, width 0.2s ease, height 0.2s ease, scale 0.42s var(--lg-spring), opacity 0.2s, background 0.25s, box-shadow 0.25s; }
 /* The item under the lens: tinted and enlarged, as if seen through it. */
 .lens-over { color: var(--fa-accent) !important; scale: 1.16; z-index: 4; }
 
 /* Press physics: give under the finger, overshoot on the way back. */
-.pill-icon, .pill-mark, .icon-button, .sheet-round, .strip-btn, .level-btn, .sv-chip, .primary-action, .secondary-action, .lang-toggle button, .plane-flip, .gauge {
+.bar-icon, .side-mark, .icon-button, .sheet-round, .strip-btn, .level-btn, .sv-chip, .primary-action, .secondary-action, .lang-toggle button, .plane-flip, .gauge {
   transition: scale 0.5s var(--lg-spring), background 0.18s, color 0.18s;
 }
-.rail-expand { transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), scale 0.5s var(--lg-spring); }
-.pill-icon:active:not(:disabled), .pill-mark:active, .icon-button:active:not(:disabled), .sheet-round:active, .strip-btn:active, .level-btn:active, .sv-chip:active,
-.secondary-action:active, .lang-toggle button:active, .plane-flip:active, .rail-expand:active, .gauge:active { scale: 0.86; transition-duration: 0.1s; }
+.bar-icon:active:not(:disabled), .side-mark:active, .icon-button:active:not(:disabled), .sheet-round:active, .strip-btn:active, .level-btn:active, .sv-chip:active,
+.secondary-action:active, .lang-toggle button:active, .plane-flip:active { scale: 0.86; transition-duration: 0.1s; }
 .primary-action:active { scale: 0.96; transition-duration: 0.1s; }
 /* Small free-standing glass swells instead: the whole droplet flexes. */
-.identity-mark, .gauge-card { transition: scale 0.55s var(--lg-spring); }
-.identity-mark:active, .gauge-card:has(.gauge:active) { scale: 1.12; transition-duration: 0.14s; }
 
 /* Slider knob: opaque at rest, a stretched drop of clear glass while dragged. */
 .mac-slider input[type='range']::-webkit-slider-thumb { transition: scale 0.4s var(--lg-spring), background 0.2s, box-shadow 0.2s; }
@@ -996,4 +892,170 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   .lens-blob, .lens-blob.drag { transition: opacity 0.2s; }
   .lens-blob.held { scale: 1; }
   .pill-icon, .pill-mark, .icon-button, .sheet-round, .strip-btn, .level-btn, .sv-chip, .primary-action, .secondary-action, .lang-toggle button, .plane-flip, .gauge, .identity-mark, .gauge-card { transition: background 0.18s, color 0.18s; scale: 1 !important; }
+}
+
+/* ── Layout II: tab bar, sidebar, view group, one tool strip ────────────────
+ *
+ * The iPadOS arrangement, with the kit's control sizes (falcon-anatomy Figma
+ * file): a 44px tab bar with 36px tabs at 15px/medium, 4px bar padding. Two
+ * places (Atlas, Learn) in the tab bar; what each contains in the sidebar;
+ * camera and display controls folded into one group with menus; a single
+ * strip under the model whose contents follow the tab.
+ */
+:root {
+  --edge: 12px;
+  --bar-h: 44px;
+  --tab-h: 36px;
+  --side-w: 296px;
+  /* Chrome centres on the area the sidebar leaves free. */
+  --free-x: 0px;
+}
+.studio:has(.sidebar.open) { --free-x: calc((var(--side-w) + var(--edge)) / 2); }
+
+.identity { position: absolute; left: var(--edge); top: var(--edge); z-index: 3; display: flex; align-items: center; gap: 10px; }
+.identity-mark { width: var(--bar-h); height: var(--bar-h); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--fa-accent); flex-shrink: 0; transition: scale 0.55s var(--lg-spring); }
+.identity-mark:active { scale: 1.12; transition-duration: 0.14s; }
+.identity-text { pointer-events: none; }
+.identity h1 { font-size: 16px; font-weight: 600; letter-spacing: -0.3px; line-height: 1.15; }
+.identity-meta { font-size: 11.5px; color: var(--fa-muted); }
+
+.bar-icon { display: inline-flex; align-items: center; justify-content: center; width: var(--bar-h); height: var(--tab-h); border-radius: 999px; color: color-mix(in oklab, var(--foreground) 88%, transparent); flex-shrink: 0; }
+.bar-icon:hover:not(:disabled) { background: var(--fa-fill); }
+.bar-icon.active { color: var(--fa-accent); }
+.bar-icon:disabled { opacity: 0.3; }
+
+.tab-bar { position: absolute; top: var(--edge); left: calc(50% + var(--free-x)); translate: -50% 0; display: flex; align-items: center; height: var(--bar-h); padding: 4px; border-radius: 999px; z-index: 5; transition: left 0.45s var(--lg-glide); }
+.tab-group { position: relative; display: flex; align-items: center; }
+.tab { display: inline-flex; align-items: center; justify-content: center; height: var(--tab-h); padding: 0 18px; border-radius: 999px; font-size: 15px; font-weight: 500; letter-spacing: -0.23px; color: color-mix(in oklab, var(--foreground) 88%, transparent); white-space: nowrap; }
+.tab.active { color: var(--fa-accent); }
+
+.view-wrap { position: absolute; top: var(--edge); right: var(--edge); z-index: 5; }
+.view-group { display: flex; align-items: center; height: var(--bar-h); padding: 4px; border-radius: 999px; }
+.view-group .bar-icon { width: 40px; }
+
+/* Menus: a sibling of the glass that opens them, growing out of its corner. */
+.menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 256px; padding: 6px; border-radius: 22px; display: flex; flex-direction: column; transform-origin: 85% 0; animation: menu-in 0.34s var(--lg-spring); }
+.menu.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 62%, transparent), color-mix(in oklab, var(--background) 48%, transparent)); backdrop-filter: blur(22px) saturate(1.7); -webkit-backdrop-filter: blur(22px) saturate(1.7); }
+@keyframes menu-in { from { opacity: 0; scale: 0.6; } }
+.menu-item { display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 12px 0 8px; border-radius: 14px; font-size: 14px; text-align: left; }
+.menu-item:hover:not(:disabled) { background: var(--fa-fill); }
+.menu-item:disabled { opacity: 0.35; }
+.menu-check { width: 18px; display: inline-flex; justify-content: center; color: var(--fa-accent); flex-shrink: 0; }
+.menu-trail { margin-left: auto; color: var(--fa-muted); }
+.menu-sep { height: 1px; background: var(--fa-line); margin: 5px 12px; }
+.menu-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 44px; padding: 0 6px 0 12px; }
+.menu-label { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; white-space: nowrap; }
+.menu-label svg { color: var(--fa-muted); }
+
+/* Segmented control: a soft track, the active segment marked by the lens blob
+   (`.seg-item`) or, in menus, by a plain fill. */
+.seg { position: relative; display: inline-flex; align-items: center; border-radius: 999px; background: color-mix(in oklab, #fff 7%, transparent); }
+.seg.wide { display: flex; }
+.seg.wide .seg-item { flex: 1; }
+.seg-item { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: var(--tab-h); padding: 0 14px; border-radius: 999px; font-size: 13.5px; font-weight: 500; color: var(--fa-muted); white-space: nowrap; }
+.seg-item.active { color: var(--foreground); }
+.seg > button:not(.seg-item) { height: 30px; padding: 0 11px; border-radius: 999px; font-size: 12.5px; color: var(--fa-muted); transition: background 0.18s, color 0.18s; }
+.seg > button:not(.seg-item).active { background: color-mix(in oklab, #fff 20%, transparent); color: var(--foreground); }
+
+/* Sidebar: a floating glass column; its list scrolls, head and foot stay. */
+.sidebar { position: absolute; left: var(--edge); top: var(--edge); bottom: var(--edge); width: var(--side-w); border-radius: 26px; display: flex; flex-direction: column; z-index: 4; opacity: 0; pointer-events: none; translate: calc(-100% - var(--edge)) 0; transition: translate 0.5s var(--lg-glide), opacity 0.25s; }
+.sidebar.open { opacity: 1; pointer-events: auto; translate: 0 var(--sheet-dy, 0px); }
+.sidebar.dragging { transition: opacity 0.22s; }
+.sidebar.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 58%, transparent), color-mix(in oklab, var(--background) 44%, transparent)); backdrop-filter: blur(20px) saturate(1.7); -webkit-backdrop-filter: blur(20px) saturate(1.7); }
+.sidebar .sheet-grabber { display: none; margin: 0; }
+.side-head { display: flex; align-items: center; gap: 10px; padding: 14px 14px 6px; }
+.side-mark { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--fa-accent); background: var(--fa-fill); flex-shrink: 0; }
+.side-brand { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.2; }
+.side-brand strong { font-size: 15px; font-weight: 600; letter-spacing: -0.3px; }
+.side-brand span { font-size: 11.5px; color: var(--fa-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.side-scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 14px 12px; scrollbar-width: thin; scrollbar-color: var(--fa-line) transparent; }
+.side-title { font-size: 12.5px; font-weight: 600; color: var(--fa-muted); margin: 16px 2px 8px; }
+.side-hint { font-size: 12px; line-height: 1.45; color: var(--fa-muted); margin: -2px 2px 10px; }
+.sidebar .presets { padding: 0; border: 0; }
+.sidebar .system-list { overflow: visible; padding: 0; }
+.sidebar .system-row { min-height: 36px; }
+.sidebar .system-name { font-size: 13.5px; min-height: 34px; }
+.sidebar .panel-foot { padding: 0 14px; margin-top: 0; font-size: 12px; }
+.foot-actions { display: inline-flex; gap: 2px; }
+.foot-actions button { width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--fa-muted); }
+.foot-actions button:hover { background: var(--fa-fill); color: var(--foreground); }
+
+.topic-list { display: flex; flex-direction: column; gap: 2px; }
+.topic { border-radius: 16px; transition: background 0.2s; }
+.topic.open { background: color-mix(in oklab, #fff 6%, transparent); }
+.topic-head { display: flex; align-items: flex-start; gap: 6px; width: 100%; text-align: left; padding: 9px 10px 9px 6px; border-radius: 14px; }
+.topic-head:hover { background: var(--fa-fill); }
+.topic-caret { flex-shrink: 0; margin-top: 2px; color: var(--fa-muted); transition: rotate 0.3s var(--lg-spring); }
+.topic.open .topic-caret { rotate: 90deg; color: var(--fa-accent); }
+.topic-name { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.topic-name strong { font-size: 14px; font-weight: 600; letter-spacing: -0.15px; }
+.topic-name small { font-size: 12px; line-height: 1.35; color: var(--fa-muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.topic.open .topic-name small { -webkit-line-clamp: 6; }
+.topic-body { padding: 2px 8px 10px 27px; display: flex; flex-direction: column; gap: 6px; }
+.topic-lesson { display: flex; align-items: center; gap: 10px; text-align: left; padding: 9px 11px; border-radius: 13px; background: var(--fa-accent-soft); color: var(--foreground); }
+.topic-lesson svg { color: var(--fa-accent); flex-shrink: 0; }
+.topic-lesson span { display: flex; flex-direction: column; min-width: 0; }
+.topic-lesson strong { font-size: 13px; font-weight: 600; }
+.topic-lesson small { font-size: 11.5px; color: var(--fa-muted); }
+.topic-lesson:hover, .topic-lesson.active { background: color-mix(in oklab, var(--fa-accent) 34%, transparent); }
+.topic-sub { display: flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; color: var(--fa-muted); margin: 6px 0 0; }
+.topic-plates { display: flex; flex-direction: column; }
+.plate-row { display: flex; align-items: center; gap: 9px; text-align: left; padding: 4px 6px; border-radius: 10px; font-size: 12.5px; }
+.plate-row:hover, .plate-row.active { background: var(--fa-fill); }
+.plate-row .sv-code { min-width: 34px; height: 22px; font-size: 11.5px; }
+.plate-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* The one strip under the model. */
+.bottom-dock { position: absolute; bottom: 18px; left: calc(50% + var(--free-x)); translate: -50% 0; z-index: 3; display: flex; justify-content: center; max-width: calc(100vw - 2 * var(--edge)); transition: left 0.45s var(--lg-glide); }
+.tool-strip { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 4px 6px; border-radius: 999px; }
+.tool-strip.as-button { padding: 0 20px; gap: 8px; font-size: 14px; font-weight: 500; }
+.tool-strip .sv-code { margin-left: 8px; }
+.tool-title { font-size: 13.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tool-slider { position: relative; width: clamp(170px, 24vw, 300px); padding: 0 4px; }
+.tool-caption { position: absolute; left: 0; right: 0; bottom: calc(100% + 14px); text-align: center; font-size: 12px; color: var(--foreground); text-shadow: 0 1px 6px color-mix(in oklab, #000 70%, transparent); pointer-events: none; white-space: nowrap; }
+.lesson-progress { min-height: 52px; padding: 4px 8px; }
+.studio-footer { display: none; }
+
+/* Panels on the right start under the bars. */
+.inspector, .lesson-panel, .search-panel { top: calc(var(--edge) * 2 + var(--bar-h)); }
+.inspector, .lesson-panel { bottom: var(--edge); right: var(--edge); }
+.search-panel { right: var(--edge); }
+
+@media (max-width: 1240px) {
+  .identity-text { display: none; }
+}
+
+/* Phone: the tab bar drops to the thumb, the sidebar becomes a bottom sheet. */
+@media (max-width: 767px) {
+  .studio:has(.sidebar.open) { --free-x: 0px; }
+  .tab-bar { top: auto; bottom: 14px; }
+  .bottom-dock { bottom: calc(14px + var(--bar-h) + 10px); left: var(--edge); right: var(--edge); translate: none; max-width: none; }
+  .tool-strip { width: 100%; }
+  .tool-strip.as-button { width: auto; }
+  .tool-slider { flex: 1; width: auto; min-width: 0; }
+  .seg-item span { display: none; }
+  .tool-strip .seg-item { padding: 0 12px; }
+  .sidebar { left: 6px; right: 6px; top: auto; bottom: 0; width: auto; max-height: 64dvh; border-radius: 30px 30px 0 0; translate: 0 105%; z-index: 6; }
+  .sidebar.open { translate: 0 var(--sheet-dy, 0px); }
+  .sidebar .sheet-grabber { display: block; flex-shrink: 0; }
+  .side-head { padding-top: 4px; }
+  .inspector, .lesson-panel { top: auto; left: var(--edge); right: var(--edge); bottom: calc(14px + var(--bar-h) + 10px); width: auto; }
+  .search-panel { left: var(--edge); right: var(--edge); width: auto; top: calc(var(--edge) * 2 + var(--bar-h)); }
+  .menu { min-width: min(256px, calc(100vw - 2 * var(--edge))); }
+}
+
+.seg > button { white-space: nowrap; }
+@media (max-width: 767px) {
+  .studio-credit { display: none; }
+}
+
+/* The strip also yields to a panel open on the right (inspector, lesson card). */
+:root { --free-r: 0px; }
+.studio:has(.inspector.open), .studio:has(.lesson-panel) { --free-r: calc((var(--side-panel-w) + var(--edge)) / 2); }
+.bottom-dock { left: calc(50% + var(--free-x) - var(--free-r)); max-width: calc(100vw - 2 * var(--edge) - 2 * var(--free-x) - 2 * var(--free-r) - 2 * var(--edge)); }
+.lesson-progress { max-width: 100%; }
+.lesson-progress .strip-btn { white-space: nowrap; flex-shrink: 0; }
+@media (max-width: 767px) {
+  .studio:has(.inspector.open), .studio:has(.lesson-panel) { --free-r: 0px; }
+  .bottom-dock { left: var(--edge); max-width: none; }
 }

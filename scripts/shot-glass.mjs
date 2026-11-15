@@ -79,8 +79,8 @@ try {
   await page.screenshot({ path: `${out}/dock-rest.png`, clip: dock })
 
   // Press the first mode tab, then scrub towards the second.
-  const [x0, y0] = await centre('.mode-tab', 0)
-  const [x1] = await centre('.mode-tab', 1)
+  const [x0, y0] = await centre('.tool-strip .seg-item', 0)
+  const [x1] = await centre('.tool-strip .seg-item', 1)
   await page.mouse.move(x0, y0)
   await page.mouse.down()
   await sleep(500)
@@ -92,11 +92,11 @@ try {
   await page.mouse.up()
   await sleep(500)
 
-  const [tx, ty] = await centre('.tab', 2)
+  const [tx, ty] = await centre('.tab', 1)
   await page.mouse.move(tx, ty)
   await page.mouse.down()
   await sleep(500)
-  await page.screenshot({ path: `${out}/top-held.png`, clip: await box('.top-actions') })
+  await page.screenshot({ path: `${out}/top-held.png`, clip: await box('.tab-bar') })
   await page.mouse.up()
   console.log('saved', out)
 } finally {

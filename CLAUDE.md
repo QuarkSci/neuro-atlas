@@ -55,13 +55,14 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
   `materials.ts`, `slice.ts`, `atlasSlice.ts`.
 - `src/data/` — `parts.json` (`pipeline/build_catalogue.py`), `index.ts`, `levels.ts`, `topics.ts` (O'rganish mavzulari),
   `sections/` (17+5 kesim, `structures-*.ts` lug'at), `lessons/` (3 dars), `content/*.json` (487 yozuv).
-- `src/ui/` — `SectionViewer`, `AtlasSliceView`, `LessonPanel`, `ViewControls`, `BottomBar` (`LearnDock`), Inspector.
+- `src/ui/` — `Header` (`TabBar`, `ViewGroup`, `Identity`), `Sidebar`, `BottomBar` (kontekstli tasma), `SectionViewer`,
+  `AtlasSliceView`, `LessonPanel`, `ViewControls`, Inspector; `liquidGlass.ts`, `useLens.ts`.
 - Rejimlar: `explode | peel | learn`. Yangi dars/kesim → tegishli mavzuga (`topics.ts`) yozilsin; yangi tab ochilmaydi.
 - Pipeline vositalari: `pipeline/tools/slice_svg.py`, `landmarks.py` (`pipeline/.venv/bin/python`, repo ildizidan).
 
 ## Joriy holat (2026-11-15)
 
-Tayyor: 0–4c bosqichlar, BG-1, 3 dars, O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1** (2026-11-15).
+Tayyor: 0–4c bosqichlar, BG-1, 3 dars, O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1** va **UI-1** (2026-11-15).
 
 **Hozirgi yo'nalish — realizm (foydalanuvchi talabi 2026-11-14):** butun ko'rinishni iloji
 boricha real qilish. Reja (har biri alohida sessiya va commit):
@@ -83,9 +84,26 @@ tanlov kapsulasi bosilganda shaffof linzaga aylanib barmoq ortidan sirg'aladi).
   Bosilish fizikasi: `scale` + `--lg-spring`. Uslublar `index.css` oxirida ("Liquid Glass II").
   Tekshiruv: `node scripts/shot-glass.mjs <papka> [--stripes] [--dpr 2]`.
   QOIDA: filtrlangan shisha ICHIDAGI elementga `backdrop-filter: url()` qo'ymang — tasvir ikkilanadi.
-- **LG-2** (keyingi): katta panellar (Inspector, tizimlar varag'i, qidiruv, kesim paneli, dars paneli) — sinish +
-  ochilishda tugmadan "o'sib chiqish" morfi; slayder tutqichi ostida haqiqiy linza; telefonda FPS o'lchovi
-  (filtr WebGL kanvas ustida har kadr ishlaydi); Safari uchun zaxira ko'rinishni sayqallash.
+- Foydalanuvchi LG-1 ni ko'rib "o'ylaganimdek emas" dedi (chet yaltirashi sun'iy, shisha sezilmaydi, animatsiya
+  hissi boshqacha) va interfeysni qayta qurishni so'radi. Kelishilgan reja (2026-11-15), tartib bilan:
+  - **UI-1** ✅ tuzilish, iPad uslubi: tepada tab bar (`TabBar`: yon panel tugmasi, Atlas | O'rganish, qidiruv),
+    chapda `Sidebar` (store `sidebar`, `na:sidebar`; Atlas'da tez tanlov/qatlamlar/tizimlar, O'rganish'da mavzular
+    akkordeoni → darslar va kesimlar), o'ngda `ViewGroup` (ko'rinish menyusi, kesim, "boshqa" menyusi: aylanish,
+    ranglar, til, atlas haqida), pastda bitta kontekstli tasma (`BottomBar`: Atlas'da Tarqatish/Chuqurlik + slayder
+    + reset; O'rganish'da dars nuqtalari yoki kesim). Telefonda tab bar pastda, yon panel — pastki varaq.
+    `SideRail`, `SystemsPanel`, gauge, rejim tablari olib tashlandi. `Mode` o'zgarmagan (`explode|peel|learn`).
+    Menyular shisha guruhning BOLASI emas, qo'shnisi (ichma-ich shisha sahnani ko'rmaydi).
+    Uslublar: `index.css` oxirida "Layout II"; `--free-x`/`--free-r` — panel ochiq bo'lsa markazni suradi.
+  - **UI-2** (keyingi) yorug' rejim: tema almashtirgichi ("boshqa" menyusida), sahna foni va yoritish, yozuvlar,
+    kesim ko'rinishlari. Falcon'da yorug' rejim olib tashlangan — noldan quriladi.
+  - **LG-2** material Figma bo'yicha qayta: fayl **falcon-anatomy** (`73v6ZFOiY8ccMLOkQfgjX2`, Figma MCP,
+    `get_design_context` + `disableCodeConnect: true`). Figma shisha effektining o'zini kod qilib BERMAYDI
+    ("Glass Effect" qatlami bo'sh) — faqat tana retsepti, soya, o'lcham va parametrlar (Refraction 70, Depth 30,
+    Dispersion 20, Frost 6/16, Splay 20, Opacity 25). Ko'chirish kerak: chetda faqat ±1.25px yon chiziq + 0.5px
+    kontur (yorqin pastki chiziq va konus halqa olib tashlanadi); neytral kulrang tana (plus-lighter/luminosity);
+    tanlov — tekis to'ldirish; slayder tutqichi 38×24 kapsula, yo'l 6px; varaq tepa radiusi 34px, keng soya;
+    "prominent" tugma — aksent to'ldirish. Fayldagi komponentlar faqat Light variantda.
+  - **LG-3** harakat: linza, sirg'alish, varaq ochilishi video kadrlari bilan yonma-yon sozlanadi.
 
 Keyin (foydalanuvchi tanlaydi): mavzu viktorinasi (kesim+dars birlashgan), BG-2 yo'llar sxemasi,
 BG-3 kasallik simulyatori, BG-4 Alexander halqalari + DBS; A) kontent: Glasser 179, Destrieux 74,

@@ -1,13 +1,11 @@
 import { useRef } from 'react'
-import { useLens } from './useLens'
-import { ArrowLeft, Blocks, Brain, GraduationCap, Layers2, RotateCcw, ScanLine, X } from 'lucide-react'
+import { Blocks, Brain, Layers2, ListTree, RotateCcw, ScanLine, X } from 'lucide-react'
 import { LessonProgress } from './LessonPanel'
-import { LESSON_BY_ID } from '@/data/lessons'
-import { TOPICS, TOPIC_BY_ID } from '@/data/topics'
 import { DEPTH_LEVELS } from '@/data'
 import { useL, useT } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
 import { SECTION_BY_ID } from '@/data/sections'
+import { useLens } from './useLens'
 
 /** Half the knob's width — the travel of a range input is inset by this much at both ends. */
 const KNOB = 12
@@ -40,7 +38,16 @@ function MacSlider({
     <div className="mac-slider">
       <span className="mac-slider-end">{left}</span>
       <div className="mac-slider-rail">
-        <input type="range" min={0} max={1000} step={1} value={Math.round(value * 1000)} onChange={(e) => onChange(Number(e.target.value) / 1000)} aria-label={label} style={{ '--fill': `${value * 100}%` } as React.CSSProperties} />
+        <input
+          type="range"
+          min={0}
+          max={1000}
+          step={1}
+          value={Math.round(value * 1000)}
+          onChange={(e) => onChange(Number(e.target.value) / 1000)}
+          aria-label={label}
+          style={{ '--fill': `${value * 100}%` } as React.CSSProperties}
+        />
         <div className="mac-ticks">
           {ticks.map((t) => {
             const pos = `calc(${KNOB}px + (100% - ${KNOB * 2}px) * ${t})`
@@ -57,175 +64,94 @@ function MacSlider({
   )
 }
 
-/** Circular progress dial showing the active slider's value; pressing it resets the view. */
-function Gauge() {
-  const t = useT()
-  const { mode, explode, peel, reset } = useAtlas()
-  const value = mode === 'peel' ? peel : explode
-  const r = 21
-  const circumference = 2 * Math.PI * r
-  return (
-    <div className="gauge-card glass lens">
-      <button className="gauge" onClick={reset} aria-label={t.reset} title={t.reset}>
-        <svg viewBox="0 0 50 50" aria-hidden>
-          <circle className="gauge-track" cx="25" cy="25" r={r} />
-          <circle className="gauge-value" cx="25" cy="25" r={r} strokeDasharray={circumference} strokeDashoffset={circumference * (1 - value)} />
-        </svg>
-        <span className="gauge-glyph">
-          <RotateCcw size={15} />
-        </span>
-      </button>
-    </div>
-  )
-}
-
-/** iOS-style bottom tab bar: explode the model apart, or peel it shell by shell. */
-function ModeTabs() {
-  const t = useT()
-  const { mode, setMode } = useAtlas()
-  const tabsRef = useRef<HTMLElement>(null)
-  const blobRef = useRef<HTMLSpanElement>(null)
-  useLens(tabsRef, blobRef, '.mode-tab')
-  return (
-    <nav className="mode-tabs glass lens" role="tablist" aria-label={t.modeTabs} ref={tabsRef}>
-      <span className="lens-blob" ref={blobRef} aria-hidden />
-      <button role="tab" className={`mode-tab ${mode === 'explode' ? 'active' : ''}`} aria-selected={mode === 'explode'} onClick={() => setMode('explode')}>
-        <Blocks size={20} />
-        <span>{t.tabExplode}</span>
-      </button>
-      <button role="tab" className={`mode-tab ${mode === 'peel' ? 'active' : ''}`} aria-selected={mode === 'peel'} onClick={() => setMode('peel')}>
-        <Layers2 size={20} />
-        <span>{t.tabPeel}</span>
-      </button>
-      <button role="tab" className={`mode-tab ${mode === 'learn' ? 'active' : ''}`} aria-selected={mode === 'learn'} onClick={() => setMode('learn')}>
-        <GraduationCap size={20} />
-        <span>{t.tabLearn}</span>
-      </button>
-    </nav>
-  )
-}
-
 const EXPLODE_TICKS = [0, 0.25, 0.5, 0.75, 1]
 
-/**
- * The learn tab's dock, by depth: topic cards → one topic (its 3D lessons
- * and its plates as code chips — the same levels the model outlines) → a
- * running lesson's step dots. While the model is cut along a plate, the
- * strip offers the figure and the way back instead.
- */
-function LearnDock() {
+/** Atlas tab: pick the tool (explode / peel by depth), drag its slider, reset the view. */
+function AtlasStrip() {
   const t = useT()
   const l = useL()
-  const { sectionCut, topic, lesson, openSection, cutSection, setTopic, setLesson } = useAtlas()
-  const cut = sectionCut ? SECTION_BY_ID.get(sectionCut) : undefined
-  if (lesson && !cut) return <LessonProgress />
-  const tp = topic ? TOPIC_BY_ID.get(topic) : undefined
-  return (
-    <div className="section-strip glass lens">
-      {cut ? (
-        <div className="strip-cut">
-          <span className="sv-code">{cut.code}</span>
-          <strong>{l(cut.title)}</strong>
-          <button className="strip-btn accent" onClick={() => openSection(cut.id)}>
-            <ScanLine size={14} /> {t.svFace}
-          </button>
-          <button className="strip-btn" onClick={() => cutSection(null)}>
-            <X size={14} /> {t.svUncut}
-          </button>
-        </div>
-      ) : tp ? (
-        <div className="topic-strip">
-          <div className="topic-strip-head">
-            <button className="strip-btn" onClick={() => setTopic(null)} title={t.lnTopics}>
-              <ArrowLeft size={14} /> <span>{t.lnTopics}</span>
-            </button>
-            <strong>{l(tp.title)}</strong>
-          </div>
-          <div className="topic-strip-body">
-            {tp.lessons.map((id) => {
-              const ls = LESSON_BY_ID.get(id)
-              return ls ? (
-                <button key={id} className="strip-btn accent" onClick={() => setLesson(id)} title={l(ls.blurb)}>
-                  <GraduationCap size={14} /> {t.ln3dLesson} · {t.lsSteps(ls.steps.length)}
-                </button>
-              ) : null
-            })}
-            {tp.sections.length > 0 && (
-              <div className="topic-chips" aria-label={t.lnPlates}>
-                <span>{t.lnPlates}</span>
-                {tp.sections.map((id) => {
-                  const s = SECTION_BY_ID.get(id)
-                  return s ? (
-                    <button key={id} className="sv-chip" onClick={() => openSection(id)} title={l(s.title)}>
-                      {s.code}
-                    </button>
-                  ) : null
-                })}
-              </div>
-            )}
-          </div>
-        </div>
-      ) : (
-        <>
-          <div className="strip-hint">{t.lnHint}</div>
-          <div className="topic-cards">
-            {TOPICS.map((tp) => (
-              <button key={tp.id} className="topic-card" onClick={() => setTopic(tp.id)} title={l(tp.blurb)}>
-                <strong>{l(tp.title)}</strong>
-                <span className="topic-badges">
-                  {tp.lessons.length > 0 && (
-                    <span className="topic-badge lesson" title={t.ln3dLesson}>
-                      <GraduationCap size={11} /> 3D
-                    </span>
-                  )}
-                  {tp.sections.length > 0 && (
-                    <span className="topic-badge">
-                      <ScanLine size={11} /> {t.lnPlatesN(tp.sections.length)}
-                    </span>
-                  )}
-                </span>
-              </button>
-            ))}
-          </div>
-        </>
-      )}
-    </div>
-  )
-}
-
-/** The whole bottom stack: the active mode's slider, its dial, and the mode tabs. */
-export function BottomBar() {
-  const t = useT()
-  const l = useL()
-  const { mode, explode, setExplode, peel, setPeel } = useAtlas()
+  const { mode, setMode, explode, setExplode, peel, setPeel, reset } = useAtlas()
+  const segRef = useRef<HTMLDivElement>(null)
+  const blobRef = useRef<HTMLSpanElement>(null)
+  useLens(segRef, blobRef, '.seg-item')
   // One tick per shell; the caption names the outermost shell still shown.
   const steps = Math.max(1, DEPTH_LEVELS.length - 1)
   const peelTicks = DEPTH_LEVELS.map((_, i) => i / steps)
   const shown = DEPTH_LEVELS[Math.min(DEPTH_LEVELS.length - 1, Math.round(peel * steps))]
-
+  const peeling = mode === 'peel'
   return (
-    <div className="bottom-dock">
-      <div className="dock-row">
-        {mode === 'learn' ? (
-          <LearnDock />
-        ) : mode === 'peel' ? (
-          <div className="slider-card glass lens">
-            <div className="flight-label">
-              <strong>{shown ? l(shown.name) : ''}</strong>
-              <output>{Math.round(peel * steps)}/{steps}</output>
-            </div>
-            <MacSlider value={peel} onChange={setPeel} label={t.peel} ticks={peelTicks} activeTick={Math.round(peel * steps) / steps} onTick={setPeel} left={<Brain size={15} />} right={<Layers2 size={15} />} />
-          </div>
-        ) : (
-          // Bare track, no caption and no card: the two end icons already say
-          // what the slider does, and the dial beside it reads out the value.
-          <div className="slider-card bare">
-            <MacSlider value={explode} onChange={setExplode} label={t.explode} ticks={EXPLODE_TICKS} left={<Brain size={15} />} right={<Blocks size={16} />} />
-          </div>
-        )}
-        <Gauge />
+    <div className="tool-strip glass lens">
+      <div className="seg" role="tablist" aria-label={t.modeTabs} ref={segRef}>
+        <span className="lens-blob" ref={blobRef} aria-hidden />
+        <button role="tab" className={`seg-item ${peeling ? '' : 'active'}`} aria-selected={!peeling} onClick={() => setMode('explode')} title={t.explode}>
+          <Blocks size={16} /> <span>{t.tabExplode}</span>
+        </button>
+        <button role="tab" className={`seg-item ${peeling ? 'active' : ''}`} aria-selected={peeling} onClick={() => setMode('peel')} title={t.peel}>
+          <Layers2 size={16} /> <span>{t.tabPeel}</span>
+        </button>
       </div>
-      <ModeTabs />
+      <div className="tool-slider">
+        {peeling ? (
+          <MacSlider
+            value={peel}
+            onChange={setPeel}
+            label={t.peel}
+            ticks={peelTicks}
+            activeTick={Math.round(peel * steps) / steps}
+            onTick={setPeel}
+            left={<Brain size={16} />}
+            right={<Layers2 size={16} />}
+          />
+        ) : (
+          <MacSlider value={explode} onChange={setExplode} label={t.explode} ticks={EXPLODE_TICKS} left={<Brain size={16} />} right={<Blocks size={16} />} />
+        )}
+        {peeling && (
+          <output className="tool-caption">
+            {shown ? l(shown.name) : ''} · {Math.round(peel * steps)}/{steps}
+          </output>
+        )}
+      </div>
+      <button className="bar-icon" onClick={reset} aria-label={t.reset} title={t.reset}>
+        <RotateCcw size={18} />
+      </button>
     </div>
   )
+}
+
+/**
+ * Study tab: the strip only carries what is in progress — a running lesson's
+ * step dots, or the plate the model is cut along. Choosing a topic happens
+ * in the sidebar; with it closed, the strip offers the way back to it.
+ */
+function LearnStrip() {
+  const t = useT()
+  const l = useL()
+  const { sectionCut, lesson, sidebar, setSidebar, openSection, cutSection } = useAtlas()
+  const cut = sectionCut ? SECTION_BY_ID.get(sectionCut) : undefined
+  if (lesson && !cut) return <LessonProgress />
+  if (cut)
+    return (
+      <div className="tool-strip glass lens">
+        <span className="sv-code">{cut.code}</span>
+        <strong className="tool-title">{l(cut.title)}</strong>
+        <button className="strip-btn accent" onClick={() => openSection(cut.id)}>
+          <ScanLine size={15} /> {t.svFace}
+        </button>
+        <button className="strip-btn" onClick={() => cutSection(null)}>
+          <X size={15} /> {t.svUncut}
+        </button>
+      </div>
+    )
+  if (sidebar) return null
+  return (
+    <button className="tool-strip glass lens as-button" onClick={() => setSidebar(true)}>
+      <ListTree size={17} /> {t.lnTopics}
+    </button>
+  )
+}
+
+/** The one strip under the model; its contents follow the current tab. */
+export function BottomBar() {
+  const mode = useAtlas((s) => s.mode)
+  return <div className="bottom-dock">{mode === 'learn' ? <LearnStrip /> : <AtlasStrip />}</div>
 }
