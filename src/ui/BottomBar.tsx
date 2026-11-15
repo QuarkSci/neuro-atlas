@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+import { useLens } from './useLens'
 import { ArrowLeft, Blocks, Brain, GraduationCap, Layers2, RotateCcw, ScanLine, X } from 'lucide-react'
 import { LessonProgress } from './LessonPanel'
 import { LESSON_BY_ID } from '@/data/lessons'
@@ -63,7 +65,7 @@ function Gauge() {
   const r = 21
   const circumference = 2 * Math.PI * r
   return (
-    <div className="gauge-card glass">
+    <div className="gauge-card glass lens">
       <button className="gauge" onClick={reset} aria-label={t.reset} title={t.reset}>
         <svg viewBox="0 0 50 50" aria-hidden>
           <circle className="gauge-track" cx="25" cy="25" r={r} />
@@ -81,8 +83,12 @@ function Gauge() {
 function ModeTabs() {
   const t = useT()
   const { mode, setMode } = useAtlas()
+  const tabsRef = useRef<HTMLElement>(null)
+  const blobRef = useRef<HTMLSpanElement>(null)
+  useLens(tabsRef, blobRef, '.mode-tab')
   return (
-    <nav className="mode-tabs glass" role="tablist" aria-label={t.modeTabs}>
+    <nav className="mode-tabs glass lens" role="tablist" aria-label={t.modeTabs} ref={tabsRef}>
+      <span className="lens-blob" ref={blobRef} aria-hidden />
       <button role="tab" className={`mode-tab ${mode === 'explode' ? 'active' : ''}`} aria-selected={mode === 'explode'} onClick={() => setMode('explode')}>
         <Blocks size={20} />
         <span>{t.tabExplode}</span>
@@ -115,7 +121,7 @@ function LearnDock() {
   if (lesson && !cut) return <LessonProgress />
   const tp = topic ? TOPIC_BY_ID.get(topic) : undefined
   return (
-    <div className="section-strip glass">
+    <div className="section-strip glass lens">
       {cut ? (
         <div className="strip-cut">
           <span className="sv-code">{cut.code}</span>
@@ -203,7 +209,7 @@ export function BottomBar() {
         {mode === 'learn' ? (
           <LearnDock />
         ) : mode === 'peel' ? (
-          <div className="slider-card glass">
+          <div className="slider-card glass lens">
             <div className="flight-label">
               <strong>{shown ? l(shown.name) : ''}</strong>
               <output>{Math.round(peel * steps)}/{steps}</output>

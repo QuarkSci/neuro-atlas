@@ -15,7 +15,7 @@ export function LessonProgress() {
   const ls = lesson ? LESSON_BY_ID.get(lesson.id) : undefined
   if (!lesson || !ls) return null
   return (
-    <div className="lesson-progress glass">
+    <div className="lesson-progress glass lens">
       <button className="strip-btn" onClick={() => setLesson(null)} title={t.lsAll}>
         <BookOpen size={14} /> <span>{t.lsAll}</span>
       </button>

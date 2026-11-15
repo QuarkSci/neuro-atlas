@@ -916,3 +916,84 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   .topic-card { flex: none; width: 200px; }
   .topic-strip-head .strip-btn span { display: none; }
 }
+
+/* ── Liquid Glass II: refraction, the lens indicator, press physics ─────────
+ *
+ * Modelled on a screen recording of the system material (tab bar, iOS 26):
+ *  1. the body bends what is behind it at the rim — `liquidGlass.ts` supplies
+ *     a per-size displacement filter as `--lg-url` (Blink only; elsewhere the
+ *     frosted `.glass` above is the whole story);
+ *  2. the selection is one capsule that glides between items, and while held
+ *     swells into a clear lens, enlarging the item under it (`useLens.ts`);
+ *  3. controls give under the finger and spring back with a little overshoot.
+ */
+:root {
+  --lg-spring: cubic-bezier(0.3, 1.55, 0.5, 1);
+  --lg-glide: cubic-bezier(0.3, 1.3, 0.5, 1);
+}
+
+/* Refracting controls: a thinner frost, so the bend at the rim stays readable. */
+.lg-on .glass.lens {
+  backdrop-filter: var(--lg-url,) blur(2.5px) saturate(1.8) brightness(1.08);
+  -webkit-backdrop-filter: var(--lg-url,) blur(2.5px) saturate(1.8) brightness(1.08);
+  background: linear-gradient(180deg, color-mix(in oklab, #fff 5%, transparent) 0%, color-mix(in oklab, #fff 7%, transparent) 55%, color-mix(in oklab, #fff 11%, transparent) 100%);
+}
+
+/* The sliding selection capsule. Items sit above it at rest. */
+.tab-group { position: relative; }
+.tab, .mode-tab, .rail-item { position: relative; z-index: 1; transition: scale 0.42s var(--lg-spring), color 0.18s; }
+.tab.active, .mode-tab.active { background: none; box-shadow: none; }
+.lens-blob {
+  position: absolute; left: 0; top: 0; width: var(--bw, 0px); height: var(--bh, 0px); translate: var(--bx, 0px) var(--by, 0px);
+  border-radius: 999px; pointer-events: none; opacity: 0; z-index: 0;
+  background: color-mix(in oklab, #fff 14%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, #fff 16%, transparent), inset 0 1px 0.5px color-mix(in oklab, #fff 26%, transparent);
+  transition: translate 0.46s var(--lg-glide), width 0.3s ease, height 0.3s ease, scale 0.42s var(--lg-spring), opacity 0.2s, background 0.25s, box-shadow 0.25s;
+}
+.lens-blob.shown { opacity: 1; }
+/* Held: lifted above the items, clear, with a bright rim — a lens, not a tint. */
+.lens-blob.held {
+  z-index: 3; scale: 1.2 1.3;
+  background: radial-gradient(120% 120% at 50% 0%, color-mix(in oklab, #fff 13%, transparent), color-mix(in oklab, #fff 3%, transparent) 60%);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in oklab, #fff 46%, transparent),
+    inset 0 -3px 5px -2px color-mix(in oklab, #fff 55%, transparent),
+    inset 0 3px 6px -3px color-mix(in oklab, #fff 30%, transparent),
+    inset 0 0 14px -4px color-mix(in oklab, #9cc8ff 40%, transparent),
+    0 8px 22px -4px color-mix(in oklab, #000 55%, transparent);
+}
+.side-rail .lens-blob.held { scale: 1.3 1.15; }
+/* Tracking the pointer: no glide lag, it has to stay under the finger. */
+.lens-blob.drag { transition: translate 0.07s linear, width 0.2s ease, height 0.2s ease, scale 0.42s var(--lg-spring), opacity 0.2s, background 0.25s, box-shadow 0.25s; }
+/* The item under the lens: tinted and enlarged, as if seen through it. */
+.lens-over { color: var(--fa-accent) !important; scale: 1.16; z-index: 4; }
+
+/* Press physics: give under the finger, overshoot on the way back. */
+.pill-icon, .pill-mark, .icon-button, .sheet-round, .strip-btn, .level-btn, .sv-chip, .primary-action, .secondary-action, .lang-toggle button, .plane-flip, .gauge {
+  transition: scale 0.5s var(--lg-spring), background 0.18s, color 0.18s;
+}
+.rail-expand { transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), scale 0.5s var(--lg-spring); }
+.pill-icon:active:not(:disabled), .pill-mark:active, .icon-button:active:not(:disabled), .sheet-round:active, .strip-btn:active, .level-btn:active, .sv-chip:active,
+.secondary-action:active, .lang-toggle button:active, .plane-flip:active, .rail-expand:active, .gauge:active { scale: 0.86; transition-duration: 0.1s; }
+.primary-action:active { scale: 0.96; transition-duration: 0.1s; }
+/* Small free-standing glass swells instead: the whole droplet flexes. */
+.identity-mark, .gauge-card { transition: scale 0.55s var(--lg-spring); }
+.identity-mark:active, .gauge-card:has(.gauge:active) { scale: 1.12; transition-duration: 0.14s; }
+
+/* Slider knob: opaque at rest, a stretched drop of clear glass while dragged. */
+.mac-slider input[type='range']::-webkit-slider-thumb { transition: scale 0.4s var(--lg-spring), background 0.2s, box-shadow 0.2s; }
+.mac-slider input[type='range']:active::-webkit-slider-thumb {
+  scale: 1.55 1.22;
+  background: color-mix(in oklab, #fff 20%, transparent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in oklab, #fff 70%, transparent),
+    inset 0 -2px 3px -1px color-mix(in oklab, #fff 70%, transparent),
+    inset 0 0 6px color-mix(in oklab, #9cc8ff 45%, transparent),
+    0 4px 12px color-mix(in oklab, #000 45%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lens-blob, .lens-blob.drag { transition: opacity 0.2s; }
+  .lens-blob.held { scale: 1; }
+  .pill-icon, .pill-mark, .icon-button, .sheet-round, .strip-btn, .level-btn, .sv-chip, .primary-action, .secondary-action, .lang-toggle button, .plane-flip, .gauge, .identity-mark, .gauge-card { transition: background 0.18s, color 0.18s; scale: 1 !important; }
+}

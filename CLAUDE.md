@@ -59,9 +59,9 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 - Rejimlar: `explode | peel | learn`. Yangi dars/kesim → tegishli mavzuga (`topics.ts`) yozilsin; yangi tab ochilmaydi.
 - Pipeline vositalari: `pipeline/tools/slice_svg.py`, `landmarks.py` (`pipeline/.venv/bin/python`, repo ildizidan).
 
-## Joriy holat (2026-11-14)
+## Joriy holat (2026-11-15)
 
-Tayyor: 0–4c bosqichlar, BG-1, 3 dars, O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14).
+Tayyor: 0–4c bosqichlar, BG-1, 3 dars, O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1** (2026-11-15).
 
 **Hozirgi yo'nalish — realizm (foydalanuvchi talabi 2026-11-14):** butun ko'rinishni iloji
 boricha real qilish. Reja (har biri alohida sessiya va commit):
@@ -73,11 +73,19 @@ boricha real qilish. Reja (har biri alohida sessiya va commit):
 - **R3** kesim yuzalari: 3D kesimda kulrang/oq modda ko'rinishi; Mielin/Nissl'ni preparatga yaqinlashtirish.
 - **R4** mayda detal: mikro-relyef, tomir yaltirashi, pardalar yarim shaffof; telefonda FPS tekshiruvi.
 
-**LG — Liquid Glass (foydalanuvchi talabi 2026-11-15, alohida sessiya):** butun UI (panellar, tugmalar,
-dock, slayderlar) haqiqiy Apple OS Liquid Glass'ga JUDA yaqin bo'lsin. Namuna — foydalanuvchi yozib olgan video:
-`/Users/apple/Desktop/Screen Recording 2026-11-15 at 18.54.53.mov` (avval `ffmpeg` bilan 4–6 kichik kadr
-ajratib ko'ring: sinish/linzalanish, chet yaltirashi, fon xiralashi, bosilganda cho'zilish animatsiyasi).
-Hozirgi uslub: `src/index.css` `.glass`. R2 dan oldin yoki keyin — foydalanuvchidan so'rang.
+**LG — Liquid Glass (foydalanuvchi talabi 2026-11-15):** butun UI haqiqiy Apple OS Liquid Glass'ga JUDA yaqin
+bo'lsin. Namuna video: `/Users/apple/Desktop/Screen Recording 2026-11-15 at 18.54.53.mov` (tab bar: chetda sinish,
+tanlov kapsulasi bosilganda shaffof linzaga aylanib barmoq ortidan sirg'aladi).
+- **LG-1** ✅ boshqaruv elementlari: `src/ui/liquidGlass.ts` — `.glass.lens` elementlariga o'lchamiga mos SVG
+  displacement filtri (`--lg-url`, faqat Chromium → `html.lg-on`; Safari/Firefox'da avvalgi xira shisha qoladi).
+  `src/ui/useLens.ts` + `<span class="lens-blob">` — sirg'aluvchi tanlov kapsulasi (yuqori tablar, yon rels, pastki
+  rejim tablari): bosilganda kattalashadi, sudralsa ergashadi, boshqa tab ustida qo'yib yuborilsa uni tanlaydi.
+  Bosilish fizikasi: `scale` + `--lg-spring`. Uslublar `index.css` oxirida ("Liquid Glass II").
+  Tekshiruv: `node scripts/shot-glass.mjs <papka> [--stripes] [--dpr 2]`.
+  QOIDA: filtrlangan shisha ICHIDAGI elementga `backdrop-filter: url()` qo'ymang — tasvir ikkilanadi.
+- **LG-2** (keyingi): katta panellar (Inspector, tizimlar varag'i, qidiruv, kesim paneli, dars paneli) — sinish +
+  ochilishda tugmadan "o'sib chiqish" morfi; slayder tutqichi ostida haqiqiy linza; telefonda FPS o'lchovi
+  (filtr WebGL kanvas ustida har kadr ishlaydi); Safari uchun zaxira ko'rinishni sayqallash.
 
 Keyin (foydalanuvchi tanlaydi): mavzu viktorinasi (kesim+dars birlashgan), BG-2 yo'llar sxemasi,
 BG-3 kasallik simulyatori, BG-4 Alexander halqalari + DBS; A) kontent: Glasser 179, Destrieux 74,

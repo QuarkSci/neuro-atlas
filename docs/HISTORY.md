@@ -641,6 +641,27 @@ och ranglar ustida) — po'stloq pushti-oq "plastik", suyak butunlay kuygan.
   390 px, atlas↔real ish vaqtida almashtirish, darsga kirib-chiqish.
 - Yangi mashinada `node_modules` to'liq bo'lmasa (`vite: command not found`) — `npm install`.
 
+### LG-1 — Liquid Glass: boshqaruv elementlari (2026-11-15)
+
+Namuna: foydalanuvchining ekran yozuvi (iOS 26 tab bar). Kadrlardan uchta belgi ajratildi: (1) shisha chetida
+orqa fon egiladi; (2) tanlov — bitta kapsula, tablar orasida sirg'aladi, bosilganda bardan chiqib ketadigan
+shaffof linzaga aylanadi va ostidagi belgini kattalashtirib ko'k rangga bo'yaydi; (3) qo'yib yuborilganda
+prujinadek joyiga qaytadi.
+
+- `src/ui/liquidGlass.ts` — `installLiquidGlass()` (`main.tsx`dan chaqiriladi). Har `.lens` element uchun
+  kanvasda displacement xaritasi (yumaloq to'rtburchak SDF, chetdan 5–15 px "bezel", ichkariga yo'nalgan siljish),
+  uch kanal uchun 1 / 0.9 / 0.8 kuch (xromatik hoshiya), `<filter id="lg-WxHrR">`. ResizeObserver + MutationObserver,
+  ishlatilmagan filtrlar o'chiriladi. Faqat Blink (`Chrome/` UA); boshqalarda `lg-on` sinfi qo'yilmaydi.
+- `.lens` olganlar: yuqori panel, belgi tugmasi, yon rels, rejim tablari, gauge, slayder kartasi, kesim tasmasi,
+  dars progressi. Katta panellar hozircha oddiy `.glass` (unumdorlik va o'qilish uchun) — LG-2.
+- `src/ui/useLens.ts` — holat React'da emas, to'g'ridan-to'g'ri style'da (`--bx/--by/--bw/--bh`). Pointer capture
+  ISHLATILMAYDI (aks holda tugmaning o'z `click`i yo'qoladi); boshqa tab ustida qo'yib yuborilsa `target.click()`.
+- Xato va saboq: bosilgan linzaga ham kattalashtiruvchi filtr qo'yilgan edi — ichma-ich `backdrop-filter`da bola
+  faqat ota elementning (deyarli shaffof) tarkibini ko'radi va egilgan nusxani asl ustiga chizadi → yozuv ikkilandi.
+  Yechim: linza ostidagi element `scale: 1.16` (`.lens-over`), filtr faqat yuqori darajadagi shishada.
+- Tekshirildi: DPR 1 va 2 da sinish bir xil (`--stripes` bilan), 900×560 va 390×700, `audit-pick` diff 0,
+  tsc + build. Tekshirilmadi: haqiqiy telefonda FPS, Safari'da ko'rinish (faqat kod bo'yicha zaxira).
+
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
 1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).

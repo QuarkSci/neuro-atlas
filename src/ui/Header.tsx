@@ -1,7 +1,9 @@
+import { useRef } from 'react'
 import { Droplet, Info, Palette, PanelLeft, Pause, RotateCw, Search, Slice } from 'lucide-react'
 import { LEAF_PARTS } from '@/data'
 import { useT } from '@/i18n'
 import { useAtlas, type View } from '@/store/useAtlas'
+import { useLens } from './useLens'
 
 const VIEWS: { id: View; glyph: string }[] = [
   { id: 'three-quarter', glyph: '¾' },
@@ -31,7 +33,7 @@ export function Identity() {
   const t = useT()
   return (
     <header className="identity">
-      <Mark className="identity-mark glass" />
+      <Mark className="identity-mark glass lens" />
       <div className="identity-text">
         <div className="eyebrow">
           <span className="status-dot" /> {t.eyebrow}
@@ -53,13 +55,23 @@ export function TopActions() {
   const t = useT()
   const { panel, setPanel, view, setView, explode, cutaway, setCutaway, autoRotate, setAutoRotate, isolate, lang, setLang, setAboutOpen, colorMode, setColorMode } = useAtlas()
   const frontOnly = explode > 0.8
+  const tabsRef = useRef<HTMLDivElement>(null)
+  const blobRef = useRef<HTMLSpanElement>(null)
+  useLens(tabsRef, blobRef, '.tab')
   return (
-    <nav className="top-actions glass" aria-label={t.tools}>
+    <nav className="top-actions glass lens" aria-label={t.tools}>
       <Mark className="pill-mark" />
-      <button className={`pill-icon ${panel === 'systems' ? 'active' : ''}`} onClick={() => setPanel('systems')} aria-pressed={panel === 'systems'} aria-label={t.systems} title={t.systems}>
+      <button
+        className={`pill-icon ${panel === 'systems' ? 'active' : ''}`}
+        onClick={() => setPanel('systems')}
+        aria-pressed={panel === 'systems'}
+        aria-label={t.systems}
+        title={t.systems}
+      >
         <PanelLeft size={17} />
       </button>
-      <div className="tab-group" role="tablist" aria-label={t.viewControls}>
+      <div className="tab-group" role="tablist" aria-label={t.viewControls} ref={tabsRef}>
+        <span className="lens-blob" ref={blobRef} aria-hidden />
         {VIEWS.map((v) => (
           <button
             key={v.id}
@@ -85,7 +97,13 @@ export function TopActions() {
         <Search size={17} />
       </button>
       <i className="pill-divider" />
-      <button className={`pill-icon ${autoRotate ? 'active' : ''}`} disabled={explode >= 0.4 || isolate} onClick={() => setAutoRotate(!autoRotate)} aria-label={autoRotate ? t.pauseRotate : t.autoRotate} title={t.autoRotate}>
+      <button
+        className={`pill-icon ${autoRotate ? 'active' : ''}`}
+        disabled={explode >= 0.4 || isolate}
+        onClick={() => setAutoRotate(!autoRotate)}
+        aria-label={autoRotate ? t.pauseRotate : t.autoRotate}
+        title={t.autoRotate}
+      >
         {autoRotate ? <Pause size={16} /> : <RotateCw size={16} />}
       </button>
       <button
