@@ -188,93 +188,32 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 45%, transparent 40%, color-mix(in oklab, var(--foreground) 6%, transparent) 100%); }
 
 /*
- * Liquid Glass, rebuilt to match the Figma material rather than approximate
- * it with a flat tinted card. Four things make it read as glass:
+ * Liquid Glass, taken layer for layer from the kit's "BG" component
+ * (falcon-anatomy Figma file) instead of being decorated by hand:
  *
- * 1. A light frost (Frost 6) so the scene stays legible through the body,
- *    with saturation and a touch of brightness lifted — glass gathers light.
- * 2. Depth 30 / Splay 20 / Light Angle 0: the *lower* inner edge is the
- *    brightest line (light entering the top exits through the bottom of the
- *    glass body), the upper inner edge a softer, wider highlight. This pair
- *    is the signature cue; a uniform 1px border reads as plastic instead.
- * 3. Dispersion 20: the rim is a chromatic gradient — cool on one side,
- *    warm on the other — painted as a real 1px ring with a mask, not a
- *    border, so it can vary around the shape.
- * 4. A tight contact shadow plus a wide, soft one, instead of one big drop.
+ *   Fill      a neutral grey body (the kit stacks 25% white, 25% black,
+ *             #444 plus-lighter and #f8f8f8 luminosity; on a dark scene that
+ *             nets out to a soft grey lift, not a white gradient);
+ *   Rim       two hairlines on the left and right flanks (±1.25px, spread
+ *             −0.75px) and a 0.5px contour all round — no bright bottom
+ *             edge, no coloured ring, no painted specular spots;
+ *   Shadow    one soft, wide drop.
+ *
+ * Anything brighter than this at the edge reads as plastic trim.
  */
+:root {
+  --lg-fill: color-mix(in oklab, #868c97 20%, transparent);
+  --lg-rim: 1.25px 0 0 -0.75px color-mix(in oklab, #fff 30%, transparent), -1.25px 0 0 -0.75px color-mix(in oklab, #fff 30%, transparent), 0 0 0 0.5px color-mix(in oklab, #fff 15%, transparent);
+  --lg-drop: 0 8px 24px color-mix(in oklab, #000 26%, transparent);
+}
 .glass {
   position: relative;
-  /* The body is not a flat tint: light pools toward the bottom of the
-     glass, so the fill is a vertical ramp rather than one alpha. */
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, #fff 6%, transparent) 0%,
-    color-mix(in oklab, #fff 9%, transparent) 55%,
-    color-mix(in oklab, #fff 14%, transparent) 100%
-  );
+  background: var(--lg-fill);
   border: 0;
-  backdrop-filter: blur(11px) saturate(1.9) brightness(1.06) contrast(1.04);
-  -webkit-backdrop-filter: blur(11px) saturate(1.9) brightness(1.06) contrast(1.04);
-  box-shadow:
-    /* Depth 30: the lower inner edge is the brightest line on the shape. */
-    inset 0 -2px 1.5px -1px color-mix(in oklab, #fff 60%, transparent),
-    /* Splay 20: the upper inner edge is softer and spreads further in. */
-    inset 0 2px 2px -1.5px color-mix(in oklab, #fff 28%, transparent),
-    inset 0 0 18px -7px color-mix(in oklab, #fff 28%, transparent),
-    /* A hairline of darkness so the shape detaches from the scene. */
-    0 0 0 0.5px color-mix(in oklab, #000 40%, transparent),
-    0 2px 5px color-mix(in oklab, #000 26%, transparent),
-    0 14px 30px -10px color-mix(in oklab, #000 45%, transparent);
+  backdrop-filter: blur(12px) saturate(1.6);
+  -webkit-backdrop-filter: blur(12px) saturate(1.6);
+  box-shadow: var(--lg-rim), var(--lg-drop);
   isolation: isolate;
-}
-/*
- * Specular: a real light source reflects off two spots of a curved body —
- * a wide one at the top-left where the light enters, a weaker one at the
- * bottom-right where it leaves. Sits above the fill, below the content.
- */
-.glass::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  z-index: -1;
-  background:
-    radial-gradient(125% 100% at 16% -25%, color-mix(in oklab, #fff 17%, transparent) 0%, transparent 58%),
-    radial-gradient(95% 85% at 88% 125%, color-mix(in oklab, #fff 11%, transparent) 0%, transparent 62%);
-}
-/*
- * Dispersion 20: the rim is a real 1px ring painted with a *conic*
- * gradient, so the highlight travels around the shape — bright where the
- * light enters and exits, dim on the other two flanks, with a cool tint on
- * one side and a warm one on the other. A border is one flat colour all
- * the way round, which is exactly what made this read as plastic.
- */
-.glass::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  pointer-events: none;
-  background: conic-gradient(
-    from 205deg,
-    color-mix(in oklab, #fff 8%, transparent) 0deg,
-    color-mix(in oklab, #b9d6ff 40%, transparent) 55deg,
-    color-mix(in oklab, #fff 72%, transparent) 115deg,
-    color-mix(in oklab, #fff 10%, transparent) 180deg,
-    color-mix(in oklab, #ffdcb8 38%, transparent) 245deg,
-    color-mix(in oklab, #fff 66%, transparent) 305deg,
-    color-mix(in oklab, #fff 8%, transparent) 360deg
-  );
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  mask-composite: exclude;
 }
 
 
@@ -836,9 +775,8 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 
 /* Refracting controls: a thinner frost, so the bend at the rim stays readable. */
 .lg-on .glass.lens {
-  backdrop-filter: var(--lg-url,) blur(2.5px) saturate(1.8) brightness(1.08);
-  -webkit-backdrop-filter: var(--lg-url,) blur(2.5px) saturate(1.8) brightness(1.08);
-  background: linear-gradient(180deg, color-mix(in oklab, #fff 5%, transparent) 0%, color-mix(in oklab, #fff 7%, transparent) 55%, color-mix(in oklab, #fff 11%, transparent) 100%);
+  backdrop-filter: var(--lg-url,) blur(3px) saturate(1.6);
+  -webkit-backdrop-filter: var(--lg-url,) blur(3px) saturate(1.6);
 }
 
 /* The sliding selection capsule. Items sit above it at rest. */
@@ -846,21 +784,15 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .lens-blob {
   position: absolute; left: 0; top: 0; width: var(--bw, 0px); height: var(--bh, 0px); translate: var(--bx, 0px) var(--by, 0px);
   border-radius: 999px; pointer-events: none; opacity: 0; z-index: 0;
-  background: color-mix(in oklab, #fff 14%, transparent);
-  box-shadow: inset 0 0 0 1px color-mix(in oklab, #fff 16%, transparent), inset 0 1px 0.5px color-mix(in oklab, #fff 26%, transparent);
+  background: color-mix(in oklab, #fff 13%, transparent);
   transition: translate 0.46s var(--lg-glide), width 0.3s ease, height 0.3s ease, scale 0.42s var(--lg-spring), opacity 0.2s, background 0.25s, box-shadow 0.25s;
 }
 .lens-blob.shown { opacity: 1; }
 /* Held: lifted above the items, clear, with a bright rim — a lens, not a tint. */
 .lens-blob.held {
   z-index: 3; scale: 1.2 1.3;
-  background: radial-gradient(120% 120% at 50% 0%, color-mix(in oklab, #fff 13%, transparent), color-mix(in oklab, #fff 3%, transparent) 60%);
-  box-shadow:
-    inset 0 0 0 1px color-mix(in oklab, #fff 46%, transparent),
-    inset 0 -3px 5px -2px color-mix(in oklab, #fff 55%, transparent),
-    inset 0 3px 6px -3px color-mix(in oklab, #fff 30%, transparent),
-    inset 0 0 14px -4px color-mix(in oklab, #9cc8ff 40%, transparent),
-    0 8px 22px -4px color-mix(in oklab, #000 55%, transparent);
+  background: color-mix(in oklab, #fff 9%, transparent);
+  box-shadow: var(--lg-rim), 0 8px 22px -4px color-mix(in oklab, #000 50%, transparent);
 }
 /* Tracking the pointer: no glide lag, it has to stay under the finger. */
 .lens-blob.drag { transition: translate 0.07s linear, width 0.2s ease, height 0.2s ease, scale 0.42s var(--lg-spring), opacity 0.2s, background 0.25s, box-shadow 0.25s; }
@@ -880,12 +812,8 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .mac-slider input[type='range']::-webkit-slider-thumb { transition: scale 0.4s var(--lg-spring), background 0.2s, box-shadow 0.2s; }
 .mac-slider input[type='range']:active::-webkit-slider-thumb {
   scale: 1.55 1.22;
-  background: color-mix(in oklab, #fff 20%, transparent);
-  box-shadow:
-    inset 0 0 0 1px color-mix(in oklab, #fff 70%, transparent),
-    inset 0 -2px 3px -1px color-mix(in oklab, #fff 70%, transparent),
-    inset 0 0 6px color-mix(in oklab, #9cc8ff 45%, transparent),
-    0 4px 12px color-mix(in oklab, #000 45%, transparent);
+  background: color-mix(in oklab, #fff 26%, transparent);
+  box-shadow: 0 0 0 0.5px color-mix(in oklab, #fff 40%, transparent), 0 4px 12px color-mix(in oklab, #000 40%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {

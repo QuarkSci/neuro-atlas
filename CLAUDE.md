@@ -103,6 +103,8 @@ tanlov kapsulasi bosilganda shaffof linzaga aylanib barmoq ortidan sirg'aladi).
     kontur (yorqin pastki chiziq va konus halqa olib tashlanadi); neytral kulrang tana (plus-lighter/luminosity);
     tanlov — tekis to'ldirish; slayder tutqichi 38×24 kapsula, yo'l 6px; varaq tepa radiusi 34px, keng soya;
     "prominent" tugma — aksent to'ldirish. Fayldagi komponentlar faqat Light variantda.
+    ✅ 2026-11-15 hoshiya qismi bajarildi: `.glass` = `--lg-fill` + `--lg-rim` + `--lg-drop`, `::before/::after` yo'q,
+    tanlov kapsulasi tekis, sinish yumshatildi (spread 0.03). QOLDI: slayder tutqichi/yo'li, varaq radiusi, katta panellar.
   - **LG-3** harakat: linza, sirg'alish, varaq ochilishi video kadrlari bilan yonma-yon sozlanadi.
 
 Keyin (foydalanuvchi tanlaydi): mavzu viktorinasi (kesim+dars birlashgan), BG-2 yo'llar sxemasi,
