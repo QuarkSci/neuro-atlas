@@ -10,7 +10,7 @@
 Ochiq, bepul, ta'limiy 3D neyroanatomiya atlasi (1672 qism, 9 qatlam: gross
 BodyParts3D, Julich, Brodmann, Desikan, Destrieux, Glasser, JHU, bstem Allen/AAN,
 suit). Falcon Atlas (`../falcon-atlas`) davomi: Three.js `BrainScene` + zustand
-(`useAtlas`, dev'da `__atlas`) + shadcn, Liquid Glass dizayn, faqat qora rejim.
+(`useAtlas`, dev'da `__atlas`) + shadcn, Liquid Glass dizayn, qora va yorug' rejim (`theme`, `na:theme`).
 Tamoyil: **"perfektlik vaqtdan ustun"** — screenshot bilan tekshirilmagan narsa "tayyor" emas.
 GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scientist` emas).
 
@@ -62,7 +62,7 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 
 ## Joriy holat (2026-11-15)
 
-Tayyor: 0–4c bosqichlar, BG-1, 3 dars, O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1** va **UI-1** (2026-11-15).
+Tayyor: 0–4c bosqichlar, BG-1, 3 dars, O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
 
 **Hozirgi yo'nalish — realizm (foydalanuvchi talabi 2026-11-14):** butun ko'rinishni iloji
 boricha real qilish. Reja (har biri alohida sessiya va commit):
@@ -94,8 +94,13 @@ tanlov kapsulasi bosilganda shaffof linzaga aylanib barmoq ortidan sirg'aladi).
     `SideRail`, `SystemsPanel`, gauge, rejim tablari olib tashlandi. `Mode` o'zgarmagan (`explode|peel|learn`).
     Menyular shisha guruhning BOLASI emas, qo'shnisi (ichma-ich shisha sahnani ko'rmaydi).
     Uslublar: `index.css` oxirida "Layout II"; `--free-x`/`--free-r` — panel ochiq bo'lsa markazni suradi.
-  - **UI-2** (keyingi) yorug' rejim: tema almashtirgichi ("boshqa" menyusida), sahna foni va yoritish, yozuvlar,
-    kesim ko'rinishlari. Falcon'da yorug' rejim olib tashlangan — noldan quriladi.
+  - **UI-2** ✅ yorug' rejim: store `theme` (`dark` standart; "boshqa" menyusida almashtirgich), `<html>`da `dark`
+    sinfi + `data-theme`. CSS: `--ink` (qorada oq, yorug'da to'q) — barcha "N% oq" tuslar endi `var(--ink)`dan;
+    tokenlar `index.css` oxirida "Themes" (`:root` = yorug', `.dark` = qora). `.dark` sinfi istalgan elementda
+    ishlaydi → qora uchun chizilgan panellar yorug' rejimda "qora orol" bo'lib qoladi: HOZIRCHA dars kartasi
+    (`.lesson-panel`) va kesim ko'ruvchisi (`.section-viewer`). Sahna: `BrainScene` `THEMES` (fon, zamin, hemi).
+    QOLDI: dars kartasi va kesim ko'ruvchisini yorug' rejimga o'tkazish; sahna yorliqlari (qora kapsulalar).
+    Tekshiruv: `node scripts/shot.mjs out.png --theme light`, `node scripts/shot-close.mjs out.png light|dark`.
   - **LG-2** material Figma bo'yicha qayta: fayl **falcon-anatomy** (`73v6ZFOiY8ccMLOkQfgjX2`, Figma MCP,
     `get_design_context` + `disableCodeConnect: true`). Figma shisha effektining o'zini kod qilib BERMAYDI
     ("Glass Effect" qatlami bo'sh) — faqat tana retsepti, soya, o'lcham va parametrlar (Refraction 70, Depth 30,
@@ -104,7 +109,9 @@ tanlov kapsulasi bosilganda shaffof linzaga aylanib barmoq ortidan sirg'aladi).
     tanlov — tekis to'ldirish; slayder tutqichi 38×24 kapsula, yo'l 6px; varaq tepa radiusi 34px, keng soya;
     "prominent" tugma — aksent to'ldirish. Fayldagi komponentlar faqat Light variantda.
     ✅ 2026-11-15 hoshiya qismi bajarildi: `.glass` = `--lg-fill` + `--lg-rim` + `--lg-drop`, `::before/::after` yo'q,
-    tanlov kapsulasi tekis, sinish yumshatildi (spread 0.03). QOLDI: slayder tutqichi/yo'li, varaq radiusi, katta panellar.
+    tanlov kapsulasi tekis, rang ajralishi kichik (spread 0.03). Keyin foydalanuvchi "shaffofroq va bo'rtiq" so'radi:
+    `--lg-fill` 8%, `--lg-dome` (ichki soyalar), chuqur bezel (20px), `--lg-through` (qorada orqa fonni xiralashtiradi —
+    yozuv o'qilishi uchun). Slayder kit bo'yicha: yo'l 6px, tutqich 38×24 (`KNOB = 19`). QOLDI: varaq radiusi, katta panellar.
   - **LG-3** harakat: linza, sirg'alish, varaq ochilishi video kadrlari bilan yonma-yon sozlanadi.
 
 Keyin (foydalanuvchi tanlaydi): mavzu viktorinasi (kesim+dars birlashgan), BG-2 yo'llar sxemasi,

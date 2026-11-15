@@ -112,7 +112,7 @@ export function LessonPanel() {
   const topicPlates = last ? (TOPIC_BY_ID.get(topic ?? '')?.sections ?? []).map((id) => SECTION_BY_ID.get(id)).filter((s) => !!s) : []
 
   return (
-    <aside className={`lesson-panel glass ${folded ? 'folded' : ''}`} aria-label={l(ls.title)}>
+    <aside className={`lesson-panel glass dark ${folded ? 'folded' : ''}`} aria-label={l(ls.title)}>
       <header className="lesson-head">
         <div>
           <span className="lesson-eyebrow">

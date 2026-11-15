@@ -50,6 +50,8 @@ export interface SceneSnapshot {
   lessonPick: string | null
   /** Plates of the open topic: only their level markers are drawn (null = all). */
   topicSections: string[] | null
+  /** UI theme: sets the backdrop and ambient light. */
+  theme: 'dark' | 'light'
   /** Fresh-tissue look or the didactic atlas palette (see materials.ts). */
   colorMode: ColorMode
 }
@@ -124,12 +126,12 @@ interface Insets {
 }
 
 /** The atlas renders dark only. */
-const THEME = {
-  clear: '#0b0e14',
-  ground: '#151a22',
-  hemiSky: 0xbfcbe0,
-  hemiGround: 0x1a1d24,
+/** Backdrop and ambient light per UI theme: a dark studio, or a bright neutral room. */
+const THEMES = {
+  dark: { clear: '#0b0e14', ground: '#151a22', hemiSky: 0xbfcbe0, hemiGround: 0x1a1d24, ambient: 1 },
+  light: { clear: '#e9edf3', ground: '#f6f8fb', hemiSky: 0xffffff, hemiGround: 0xaeb4c0, ambient: 1.12 },
 } as const
+const THEME = THEMES.dark
 
 /**
  * Light rig per colour mode. `atlas` is flat and bright so every hue reads;
@@ -1428,11 +1430,20 @@ export class BrainScene {
 
     // Colour mode: light rig, tone curve and every part's surface. Runs
     // before the lesson pass, which may repaint `base` on top of it.
-    if (first || last.colorMode !== s.colorMode) {
+    if (first || last.theme !== s.theme) {
+      const th = THEMES[s.theme]
+      this.renderer.setClearColor(th.clear)
+      this.hemi.color.set(th.hemiSky)
+      this.hemi.groundColor.set(th.hemiGround)
+      const u = (this.ground.material as T.ShaderMaterial).uniforms
+      u.pad.value.set(th.ground)
+      u.sky.value.set(th.clear)
+    }
+    if (first || last.colorMode !== s.colorMode || last.theme !== s.theme) {
       const rig = RIGS[s.colorMode]
       this.renderer.toneMapping = rig.tone
       this.renderer.toneMappingExposure = rig.exposure
-      this.hemi.intensity = rig.hemi
+      this.hemi.intensity = rig.hemi * THEMES[s.theme].ambient
       this.keyLight.intensity = rig.key
       this.rimLight.intensity = rig.rim
       this.fillLight.intensity = rig.fill

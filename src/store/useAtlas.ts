@@ -5,6 +5,7 @@ import type { ColorMode } from '@/scene/materials'
 import { ALL_SYSTEM_IDS, LAYER_BY_ID } from '@/data'
 
 export type Lang = 'en' | 'uz'
+export type Theme = 'dark' | 'light'
 export type View = 'three-quarter' | 'lateral' | 'front' | 'top'
 export type Panel = 'search' | null
 /** Which control the bottom dock shows: explode slider, peel slider or the cross-section atlas. */
@@ -34,6 +35,8 @@ export interface ClipState {
  */
 export interface AtlasState {
   lang: Lang
+  /** Dark studio or light room. A preference: survives reset. */
+  theme: Theme
   /** Fresh-tissue colours and lighting, or the didactic atlas palette. A preference: survives reset. */
   colorMode: ColorMode
   /** Systems currently shown. */
@@ -79,6 +82,7 @@ export interface AtlasState {
   error: string
 
   setLang: (l: Lang) => void
+  setTheme: (t: Theme) => void
   setColorMode: (m: ColorMode) => void
   toggleSystem: (id: SystemId) => void
   showOnly: (ids: SystemId[]) => void
@@ -122,6 +126,22 @@ const initialLang = (): Lang => {
     if (saved === 'uz' || saved === 'en') return saved
   } catch {}
   return navigator.language?.toLowerCase().startsWith('uz') ? 'uz' : 'en'
+}
+
+/** Put the theme on <html> so tokens (and Tailwind's `dark:` variants) follow it. */
+const applyTheme = (theme: Theme) => {
+  if (typeof document === 'undefined') return
+  document.documentElement.classList.toggle('dark', theme === 'dark')
+  document.documentElement.dataset.theme = theme
+}
+
+const initialTheme = (): Theme => {
+  let theme: Theme = 'dark'
+  try {
+    if (localStorage.getItem('na:theme') === 'light') theme = 'light'
+  } catch {}
+  applyTheme(theme)
+  return theme
 }
 
 const initialColorMode = (): ColorMode => {
@@ -199,6 +219,7 @@ const SECTION_SYSTEMS: SystemId[] = ['basal-ganglia', 'brainstem', 'diencephalon
 
 export const useAtlas = create<AtlasState>((set) => ({
   lang: initialLang(),
+  theme: initialTheme(),
   colorMode: initialColorMode(),
   sidebar: initialSidebar(),
   ...sceneDefaults,
@@ -212,6 +233,13 @@ export const useAtlas = create<AtlasState>((set) => ({
       localStorage.setItem('na:lang', lang)
     } catch {}
     set({ lang })
+  },
+  setTheme: (theme) => {
+    try {
+      localStorage.setItem('na:theme', theme)
+    } catch {}
+    applyTheme(theme)
+    set({ theme })
   },
   setColorMode: (colorMode) => {
     try {

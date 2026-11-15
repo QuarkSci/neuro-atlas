@@ -682,6 +682,19 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   sudralgan, `audit-pick` diff 0, tsc + build. Tekshirilmadi: kesim tasmasi (`sectionCut`) va qidiruv paneli
   yangi joyda suratga olinmadi; haqiqiy telefonda sinalmadi.
 
+### UI-2 — yorug' rejim va shisha sozlash (2026-11-15)
+
+- Falcon'dan meros `:root { --background: qora }` shadcn'ning yorug' tokenlarini bosib turardi; endi qora qiymatlar
+  `.dark` ichida, yorug'i `:root`da. `--fa-*` tokenlar bloki `:root, .dark` selektoriga ko'chdi — aks holda `.dark`
+  orol ichida `var(--ink)` qayta hisoblanmaydi (custom property e'lon qilingan elementda yechiladi).
+- 21 ta `color-mix(#fff N%)` → `var(--ink)`. Oqligicha qolganlar: shisha `--lg-rim`/`--lg-dome` (yorug'lik chiziqlari),
+  tugma matni, slayder tutqichi.
+- Sahna: fon `#e9edf3`, zamin `#f6f8fb`, hemi oq/kulrang, ambient ×1.12. To'qima ranglari o'zgarmadi.
+- Shisha: qorada `--lg-through: brightness(0.74)` — miya panel ostiga kelganda yozuv o'qilmay qolayotgan edi.
+- Yon panel + Inspector birga ochiq va oyna <1340px bo'lsa pastki tasma yozuvlarini tashlaydi (yon panelga kirib ketardi).
+- Tekshirildi: yorug'da 1280×760 (Atlas), 1100×680 (Inspector+menyu, dars), 900×440 DPR2 yaqin surat ikkala rejimda,
+  tsc + build, `audit-pick`. Tekshirilmadi: yorug'da telefon ko'rinishi, kesim paneli (PlanesPanel), qidiruv, About.
+
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
 1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).

@@ -137,17 +137,17 @@
  * *light* frost, so the backdrop blur here is 14px rather than the 32px
  * slab it used to be — the scene must stay visible through the glass.
  */
-:root {
+:root, .dark {
   --fa-accent: #0088ff;
   --fa-accent-soft: color-mix(in oklab, var(--fa-accent) 24%, transparent);
-  --fa-glass-border: color-mix(in oklab, #fff 20%, transparent);
+  --fa-glass-border: color-mix(in oklab, var(--ink) 20%, transparent);
   --fa-glass-shadow:
     0 6px 20px color-mix(in oklab, #000 38%, transparent),
-    inset 0 1px 0 color-mix(in oklab, #fff 24%, transparent),
+    inset 0 1px 0 color-mix(in oklab, var(--ink) 24%, transparent),
     inset 0 -1px 0 color-mix(in oklab, #000 20%, transparent);
-  --fa-muted: color-mix(in oklab, #fff 62%, transparent);
-  --fa-line: color-mix(in oklab, #fff 12%, transparent);
-  --fa-fill: color-mix(in oklab, #fff 13%, transparent);
+  --fa-muted: color-mix(in oklab, var(--ink) 62%, transparent);
+  --fa-line: color-mix(in oklab, var(--ink) 12%, transparent);
+  --fa-fill: color-mix(in oklab, var(--ink) 13%, transparent);
 
   /*
    * One base unit, ramping smoothly with the viewport, and every control
@@ -172,12 +172,8 @@
   --slider-w: clamp(210px, 22vw + 90px, 312px);
   --side-panel-w: clamp(276px, 22vw + 100px, 320px);
   --radius: 0.5rem;
-  --background: oklch(0.17 0.012 255);
-  --popover: oklch(0.2 0.012 255);
-  --card: oklch(0.2 0.012 255);
 }
 
-html { color-scheme: dark; }
 html, body, #root { margin: 0; width: 100%; height: 100%; overflow: hidden; }
 body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiased; }
 
@@ -203,6 +199,8 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
  */
 :root {
   --lg-fill: color-mix(in oklab, #9aa1ad 8%, transparent);
+  /* Dims what shows through, so labels stay readable over bright tissue. */
+  --lg-through: brightness(0.74) saturate(1.5);
   --lg-rim: 1.25px 0 0 -0.75px color-mix(in oklab, #fff 30%, transparent), -1.25px 0 0 -0.75px color-mix(in oklab, #fff 30%, transparent), 0 0 0 0.5px color-mix(in oklab, #fff 15%, transparent);
   --lg-drop: 0 8px 24px color-mix(in oklab, #000 26%, transparent);
   /*
@@ -223,8 +221,8 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   position: relative;
   background: var(--lg-fill);
   border: 0;
-  backdrop-filter: blur(8px) saturate(1.5);
-  -webkit-backdrop-filter: blur(8px) saturate(1.5);
+  backdrop-filter: blur(8px) var(--lg-through);
+  -webkit-backdrop-filter: blur(8px) var(--lg-through);
   box-shadow: var(--lg-dome), var(--lg-rim), var(--lg-drop);
   isolation: isolate;
 }
@@ -267,11 +265,11 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
  */
 .sheet-grabber { height: 14px; margin: 0 -13px; cursor: grab; touch-action: none; user-select: none; position: relative; }
 .sheet-grabber:active { cursor: grabbing; }
-.sheet-grabber::after { content: ''; position: absolute; top: 5px; left: 50%; width: 44px; height: 4px; border-radius: 2px; background: color-mix(in oklab, #fff 28%, transparent); transform: translateX(-50%); }
+.sheet-grabber::after { content: ''; position: absolute; top: 5px; left: 50%; width: 44px; height: 4px; border-radius: 2px; background: color-mix(in oklab, var(--ink) 28%, transparent); transform: translateX(-50%); }
 .sheet-head { display: flex; align-items: center; gap: 10px; height: 42px; }
 .sheet-title { flex: 1; text-align: center; font-size: 14.5px; font-weight: 600; letter-spacing: -0.2px; }
 .sheet-round { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--foreground); background: var(--fa-fill); flex-shrink: 0; }
-.sheet-round:hover { background: color-mix(in oklab, #fff 18%, transparent); }
+.sheet-round:hover { background: color-mix(in oklab, var(--ink) 18%, transparent); }
 .sheet-round.accent { background: var(--fa-accent); color: #fff; }
 .sheet-round.accent:hover { filter: brightness(1.08); }
 .panel-heading { display: flex; align-items: center; justify-content: space-between; font-size: 13.5px; min-height: 22px; padding-top: 10px; }
@@ -279,7 +277,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .presets { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 0 12px; border-bottom: 1px solid var(--fa-line); }
 .presets .layer-swatch { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
 .presets button { font-size: 11px; padding: 6px 11px; border: 1px solid var(--fa-line); border-radius: 999px; color: var(--fa-muted); }
-.presets button[aria-pressed='true'] { color: var(--foreground); border-color: color-mix(in oklab, #fff 26%, transparent); background: var(--fa-fill); }
+.presets button[aria-pressed='true'] { color: var(--foreground); border-color: color-mix(in oklab, var(--ink) 26%, transparent); background: var(--fa-fill); }
 .system-list { overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; padding: 6px 0; scrollbar-width: thin; scrollbar-color: var(--fa-line) transparent; }
 .system-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 31px; opacity: 0.5; transition: opacity 0.18s; }
 .system-row.enabled { opacity: 1; }
@@ -338,18 +336,18 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .mac-slider-end { color: var(--fa-muted); display: flex; align-items: center; flex-shrink: 0; }
 .end-glyph { font-size: 15px; line-height: 1; }
 .mac-slider-rail { position: relative; flex: 1; min-width: 0; padding-bottom: 12px; }
-.mac-slider input[type='range'] { -webkit-appearance: none; appearance: none; width: 100%; height: var(--knob); background: none; display: block; margin: 0; cursor: pointer; }
-.mac-slider input[type='range']::-webkit-slider-runnable-track { height: 4px; border-radius: 3px; background: linear-gradient(to right, var(--fa-accent) var(--fill, 0%), color-mix(in oklab, var(--foreground) 14%, transparent) var(--fill, 0%)); }
-.mac-slider input[type='range']::-moz-range-track { height: 4px; border-radius: 3px; background: color-mix(in oklab, var(--foreground) 14%, transparent); }
-.mac-slider input[type='range']::-moz-range-progress { height: 4px; border-radius: 3px; background: var(--fa-accent); }
-.mac-slider input[type='range']::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: var(--knob); height: var(--knob); margin-top: calc((var(--knob) - 4px) / -2); border-radius: 50%; background: #fff; border: 0.5px solid color-mix(in oklab, #000 18%, transparent); box-shadow: 0 1px 3px color-mix(in oklab, #000 35%, transparent), 0 3px 8px color-mix(in oklab, #000 20%, transparent); }
-.mac-slider input[type='range']::-moz-range-thumb { width: calc(var(--knob) - 1px); height: calc(var(--knob) - 1px); border-radius: 50%; background: #fff; border: 0.5px solid color-mix(in oklab, #000 18%, transparent); box-shadow: 0 1px 3px color-mix(in oklab, #000 35%, transparent); }
+.mac-slider input[type='range'] { -webkit-appearance: none; appearance: none; width: 100%; height: 24px; background: none; display: block; margin: 0; cursor: pointer; }
+.mac-slider input[type='range']::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: linear-gradient(to right, var(--fa-accent) var(--fill, 0%), color-mix(in oklab, var(--foreground) 14%, transparent) var(--fill, 0%)); }
+.mac-slider input[type='range']::-moz-range-track { height: 6px; border-radius: 3px; background: color-mix(in oklab, var(--foreground) 14%, transparent); }
+.mac-slider input[type='range']::-moz-range-progress { height: 6px; border-radius: 3px; background: var(--fa-accent); }
+.mac-slider input[type='range']::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 38px; height: 24px; margin-top: -9px; border-radius: 999px; background: #fff; border: 0.5px solid color-mix(in oklab, #000 18%, transparent); box-shadow: 0 1px 3px color-mix(in oklab, #000 35%, transparent), 0 3px 8px color-mix(in oklab, #000 20%, transparent); }
+.mac-slider input[type='range']::-moz-range-thumb { width: 38px; height: 24px; border-radius: 999px; background: #fff; border: 0.5px solid color-mix(in oklab, #000 18%, transparent); box-shadow: 0 1px 3px color-mix(in oklab, #000 35%, transparent); }
 .mac-slider input[type='range']:focus-visible { outline: none; }
 .mac-slider input[type='range']:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px var(--fa-accent-soft), 0 1px 3px color-mix(in oklab, #000 35%, transparent); }
 .mac-ticks { position: absolute; left: 0; right: 0; bottom: 0; height: 10px; pointer-events: none; }
-.mac-tick { position: absolute; bottom: 2px; width: 1px; height: 5px; padding: 0; border-radius: 1px; background: color-mix(in oklab, #fff 26%, transparent); transform: translateX(-50%); }
+.mac-tick { position: absolute; bottom: 2px; width: 1px; height: 5px; padding: 0; border-radius: 1px; background: color-mix(in oklab, var(--ink) 26%, transparent); transform: translateX(-50%); }
 .mac-tick.pressable { pointer-events: auto; cursor: pointer; width: 9px; background: none; height: 10px; bottom: 0; }
-.mac-tick.pressable::after { content: ''; position: absolute; left: 50%; bottom: 2px; width: 1px; height: 5px; border-radius: 1px; background: color-mix(in oklab, #fff 26%, transparent); transform: translateX(-50%); }
+.mac-tick.pressable::after { content: ''; position: absolute; left: 50%; bottom: 2px; width: 1px; height: 5px; border-radius: 1px; background: color-mix(in oklab, var(--ink) 26%, transparent); transform: translateX(-50%); }
 .mac-tick.pressable:hover::after { background: var(--foreground); height: 7px; }
 .mac-tick.pressable.active::after { background: var(--fa-accent); height: 8px; width: 2px; }
 
@@ -477,9 +475,9 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
    and the frost is heavier. Enough that small text stays legible whatever
    the brain behind it is doing; still a ramp, so it reads as glass. */
 .inspector.glass {
-  background: linear-gradient(180deg, color-mix(in oklab, #0b0e14 78%, transparent) 0%, color-mix(in oklab, #0b0e14 74%, transparent) 55%, color-mix(in oklab, #121722 82%, transparent) 100%);
-  backdrop-filter: blur(18px) saturate(1.6) brightness(0.9);
-  -webkit-backdrop-filter: blur(18px) saturate(1.6) brightness(0.9);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--background) 76%, transparent), color-mix(in oklab, var(--background) 68%, transparent));
+  backdrop-filter: blur(18px) saturate(1.5);
+  -webkit-backdrop-filter: blur(18px) saturate(1.5);
 }
 @media (max-width: 640px) {
   /* The dock spans the full width on a phone; the credit tucks under the top bar instead. */
@@ -520,7 +518,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .strip-btn { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; background: var(--fa-fill); }
 .strip-btn.accent { background: var(--fa-accent); color: #fff; }
 .sv-chip { min-width: 34px; height: 26px; padding: 0 8px; border-radius: 999px; font-size: 11.5px; font-weight: 600; background: var(--fa-fill); color: var(--foreground); transition: background 0.15s; }
-.sv-chip:hover { background: color-mix(in oklab, #fff 22%, transparent); }
+.sv-chip:hover { background: color-mix(in oklab, var(--ink) 22%, transparent); }
 .sv-chip.active { background: var(--fa-accent); color: #fff; }
 .sv-code { display: inline-grid; place-items: center; min-width: 30px; height: 26px; padding: 0 7px; border-radius: 8px; background: #5ad1ff; color: #06202c; font-weight: 700; font-size: 13px; flex: none; }
 
@@ -617,7 +615,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .sv-badge.active text:not(.sv-label) { fill: #0b0e14; }
 .sv-legend { display: flex; flex-wrap: wrap; gap: 4px 6px; padding-top: 6px; }
 .sv-legend button { display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; padding: 3px 8px; border-radius: 999px; background: var(--fa-fill); color: var(--fa-muted); }
-.sv-legend button.on { color: #fff; outline: 1px solid color-mix(in oklab, #fff 40%, transparent); }
+.sv-legend button.on { color: #fff; outline: 1px solid color-mix(in oklab, var(--ink) 40%, transparent); }
 .sv-legend button.dim { opacity: 0.5; }
 .sv-legend i, .sv-group-name i { width: 9px; height: 9px; border-radius: 3px; display: inline-block; }
 .sv-locator { position: absolute; right: 14px; top: 44px; width: 116px; height: 122px; border-radius: 14px; background: color-mix(in oklab, #0b0e14 80%, transparent); border: 1px solid var(--fa-line); padding: 4px; }
@@ -640,7 +638,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .sv-cat { font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--cat); }
 .sv-detail h3 { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.3; }
 .sv-detail h3 small { font-weight: 400; color: var(--fa-muted); font-size: 12px; }
-.sv-detail p { font-size: 12.5px; line-height: 1.5; margin: 6px 0 0; color: color-mix(in oklab, #fff 86%, transparent); }
+.sv-detail p { font-size: 12.5px; line-height: 1.5; margin: 6px 0 0; color: color-mix(in oklab, var(--ink) 86%, transparent); }
 .sv-latin { font-style: italic; color: var(--fa-muted) !important; margin-top: 2px !important; }
 .sv-en { color: var(--fa-muted) !important; margin-top: 0 !important; font-size: 11.5px !important; }
 .sv-lesion { padding: 7px 9px; border-radius: 10px; background: color-mix(in oklab, #ef5350 12%, transparent); }
@@ -659,7 +657,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .sv-row-name { min-width: 0; }
 .sv-level { flex: 1; min-height: 0; overflow-y: auto; padding: 0 16px 16px; scrollbar-width: thin; }
 .sv-level h4 { margin: 14px 0 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #5ad1ff; font-weight: 600; }
-.sv-level p { margin: 0; font-size: 12.5px; line-height: 1.55; color: color-mix(in oklab, #fff 86%, transparent); }
+.sv-level p { margin: 0; font-size: 12.5px; line-height: 1.55; color: color-mix(in oklab, var(--ink) 86%, transparent); }
 .sv-syndrome { margin-top: 8px; padding: 9px 11px; border-radius: 12px; background: color-mix(in oklab, #ef5350 9%, #131a24); }
 .sv-syndrome b { font-size: 12.5px; }
 .sv-syndrome p { margin-top: 3px; }
@@ -788,8 +786,8 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 
 /* Refracting controls: a thinner frost, so the bend at the rim stays readable. */
 .lg-on .glass.lens {
-  backdrop-filter: var(--lg-url,) blur(1.2px) saturate(1.5);
-  -webkit-backdrop-filter: var(--lg-url,) blur(1.2px) saturate(1.5);
+  backdrop-filter: var(--lg-url,) blur(1.2px) var(--lg-through);
+  -webkit-backdrop-filter: var(--lg-url,) blur(1.2px) var(--lg-through);
 }
 
 /* The sliding selection capsule. Items sit above it at rest. */
@@ -797,14 +795,14 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .lens-blob {
   position: absolute; left: 0; top: 0; width: var(--bw, 0px); height: var(--bh, 0px); translate: var(--bx, 0px) var(--by, 0px);
   border-radius: 999px; pointer-events: none; opacity: 0; z-index: 0;
-  background: color-mix(in oklab, #fff 13%, transparent);
+  background: color-mix(in oklab, var(--ink) 13%, transparent);
   transition: translate 0.46s var(--lg-glide), width 0.3s ease, height 0.3s ease, scale 0.42s var(--lg-spring), opacity 0.2s, background 0.25s, box-shadow 0.25s;
 }
 .lens-blob.shown { opacity: 1; }
 /* Held: lifted above the items, clear, with a bright rim — a lens, not a tint. */
 .lens-blob.held {
   z-index: 3; scale: 1.2 1.3;
-  background: color-mix(in oklab, #fff 9%, transparent);
+  background: color-mix(in oklab, var(--ink) 9%, transparent);
   box-shadow: var(--lg-rim), 0 8px 22px -4px color-mix(in oklab, #000 50%, transparent);
 }
 /* Tracking the pointer: no glide lag, it has to stay under the finger. */
@@ -824,9 +822,9 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 /* Slider knob: opaque at rest, a stretched drop of clear glass while dragged. */
 .mac-slider input[type='range']::-webkit-slider-thumb { transition: scale 0.4s var(--lg-spring), background 0.2s, box-shadow 0.2s; }
 .mac-slider input[type='range']:active::-webkit-slider-thumb {
-  scale: 1.55 1.22;
-  background: color-mix(in oklab, #fff 26%, transparent);
-  box-shadow: 0 0 0 0.5px color-mix(in oklab, #fff 40%, transparent), 0 4px 12px color-mix(in oklab, #000 40%, transparent);
+  scale: 1.18 1.3;
+  background: color-mix(in oklab, var(--ink) 26%, transparent);
+  box-shadow: 0 0 0 0.5px color-mix(in oklab, var(--ink) 40%, transparent), 0 4px 12px color-mix(in oklab, #000 40%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -890,13 +888,13 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 
 /* Segmented control: a soft track, the active segment marked by the lens blob
    (`.seg-item`) or, in menus, by a plain fill. */
-.seg { position: relative; display: inline-flex; align-items: center; border-radius: 999px; background: color-mix(in oklab, #fff 7%, transparent); }
+.seg { position: relative; display: inline-flex; align-items: center; border-radius: 999px; background: color-mix(in oklab, var(--ink) 7%, transparent); }
 .seg.wide { display: flex; }
 .seg.wide .seg-item { flex: 1; }
 .seg-item { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: var(--tab-h); padding: 0 14px; border-radius: 999px; font-size: 13.5px; font-weight: 500; color: var(--fa-muted); white-space: nowrap; }
 .seg-item.active { color: var(--foreground); }
 .seg > button:not(.seg-item) { height: 30px; padding: 0 11px; border-radius: 999px; font-size: 12.5px; color: var(--fa-muted); transition: background 0.18s, color 0.18s; }
-.seg > button:not(.seg-item).active { background: color-mix(in oklab, #fff 20%, transparent); color: var(--foreground); }
+.seg > button:not(.seg-item).active { background: color-mix(in oklab, var(--ink) 20%, transparent); color: var(--foreground); }
 
 /* Sidebar: a floating glass column; its list scrolls, head and foot stay. */
 .sidebar { position: absolute; left: var(--edge); top: var(--edge); bottom: var(--edge); width: var(--side-w); border-radius: 26px; display: flex; flex-direction: column; z-index: 4; opacity: 0; pointer-events: none; translate: calc(-100% - var(--edge)) 0; transition: translate 0.5s var(--lg-glide), opacity 0.25s; }
@@ -923,7 +921,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 
 .topic-list { display: flex; flex-direction: column; gap: 2px; }
 .topic { border-radius: 16px; transition: background 0.2s; }
-.topic.open { background: color-mix(in oklab, #fff 6%, transparent); }
+.topic.open { background: color-mix(in oklab, var(--ink) 6%, transparent); }
 .topic-head { display: flex; align-items: flex-start; gap: 6px; width: 100%; text-align: left; padding: 9px 10px 9px 6px; border-radius: 14px; }
 .topic-head:hover { background: var(--fa-fill); }
 .topic-caret { flex-shrink: 0; margin-top: 2px; color: var(--fa-muted); transition: rotate 0.3s var(--lg-spring); }
@@ -1000,3 +998,70 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   .studio:has(.inspector.open), .studio:has(.lesson-panel) { --free-r: 0px; }
   .bottom-dock { left: var(--edge); max-width: none; }
 }
+
+/* ── Themes ──────────────────────────────────────────────────────────────
+ *
+ * `--ink` is the colour lines, fills and secondary text are mixed from:
+ * white on the dark studio, near-black in the light room. Everything that
+ * used to be "N% white" is "N% ink", so it flips by itself. `.dark` on any
+ * element (not only <html>) re-declares the whole set, which lets a panel
+ * drawn for a dark ground stay a dark island inside the light theme.
+ */
+:root {
+  --ink: #0d1524;
+  --background: oklch(0.945 0.006 250);
+  --foreground: oklch(0.21 0.02 255);
+  --popover: oklch(0.99 0.002 250);
+  --card: oklch(0.99 0.002 250);
+  color-scheme: light;
+  --fa-muted: color-mix(in oklab, var(--ink) 62%, transparent);
+  --fa-fill: color-mix(in oklab, var(--ink) 7%, transparent);
+  --fa-glass-shadow: 0 6px 20px color-mix(in oklab, #000 12%, transparent);
+  /* The kit's light glass: a milky body, white hairlines, a faint drop. */
+  --lg-fill: color-mix(in oklab, #fff 26%, transparent);
+  --lg-through: brightness(1.05) saturate(1.5);
+  --lg-rim: 1.25px 0 0 -0.75px color-mix(in oklab, #fff 85%, transparent), -1.25px 0 0 -0.75px color-mix(in oklab, #fff 85%, transparent), 0 0 0 0.5px color-mix(in oklab, #0d1524 9%, transparent);
+  --lg-drop: 0 8px 20px color-mix(in oklab, #1d2a44 10%, transparent);
+  --lg-dome:
+    inset 0 1px 0.5px -0.25px color-mix(in oklab, #fff 95%, transparent),
+    inset 0 5px 7px -5px color-mix(in oklab, #fff 70%, transparent),
+    inset 0 -1px 0.5px -0.25px color-mix(in oklab, #fff 60%, transparent),
+    inset 0 -7px 9px -6px color-mix(in oklab, #1d2a44 16%, transparent),
+    inset 0 0 7px 0 color-mix(in oklab, #1d2a44 6%, transparent);
+}
+.dark {
+  --ink: #fff;
+  --background: oklch(0.17 0.012 255);
+  --foreground: oklch(0.985 0 0);
+  --popover: oklch(0.2 0.012 255);
+  --card: oklch(0.2 0.012 255);
+  color: var(--foreground);
+  color-scheme: dark;
+  --fa-muted: color-mix(in oklab, var(--ink) 62%, transparent);
+  --fa-fill: color-mix(in oklab, var(--ink) 13%, transparent);
+  --fa-glass-shadow: 0 6px 20px color-mix(in oklab, #000 38%, transparent), inset 0 1px 0 color-mix(in oklab, #fff 24%, transparent), inset 0 -1px 0 color-mix(in oklab, #000 20%, transparent);
+  --lg-fill: color-mix(in oklab, #9aa1ad 8%, transparent);
+  --lg-through: brightness(0.74) saturate(1.5);
+  --lg-rim: 1.25px 0 0 -0.75px color-mix(in oklab, #fff 30%, transparent), -1.25px 0 0 -0.75px color-mix(in oklab, #fff 30%, transparent), 0 0 0 0.5px color-mix(in oklab, #fff 15%, transparent);
+  --lg-drop: 0 8px 24px color-mix(in oklab, #000 26%, transparent);
+  --lg-dome:
+    inset 0 1px 0.5px -0.25px color-mix(in oklab, #fff 55%, transparent),
+    inset 0 5px 7px -5px color-mix(in oklab, #fff 26%, transparent),
+    inset 0 -1px 0.5px -0.25px color-mix(in oklab, #fff 20%, transparent),
+    inset 0 -7px 9px -6px color-mix(in oklab, #000 42%, transparent),
+    inset 0 0 7px 0 color-mix(in oklab, #000 16%, transparent);
+}
+/* Light room: the selected segment is a white pill, as in the kit. */
+:root:not(.dark) .seg > button:not(.seg-item).active { background: #fff; box-shadow: 0 1px 3px color-mix(in oklab, #000 14%, transparent); }
+:root:not(.dark) .mac-slider input[type='range']::-webkit-slider-thumb { box-shadow: 0 0.5px 4px color-mix(in oklab, #000 12%, transparent), 0 6px 13px color-mix(in oklab, #000 12%, transparent); }
+:root:not(.dark) .part-label { color: var(--foreground); }
+
+
+/* Both side panels open on a narrow window: the strip drops its labels and shortens the slider. */
+@media (max-width: 1340px) {
+  .studio:has(.sidebar.open):has(.inspector.open) .tool-strip .seg-item span,
+  .studio:has(.sidebar.open):has(.lesson-panel) .tool-strip .seg-item span { display: none; }
+  .studio:has(.sidebar.open):has(.inspector.open) .tool-slider { width: clamp(120px, 14vw, 220px); }
+}
+/* Menus sit over text as often as over the model: a denser body than the bars. */
+.menu.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 74%, transparent), color-mix(in oklab, var(--background) 64%, transparent)); backdrop-filter: blur(22px) saturate(1.6); -webkit-backdrop-filter: blur(22px) saturate(1.6); }

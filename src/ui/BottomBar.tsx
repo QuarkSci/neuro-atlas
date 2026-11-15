@@ -8,7 +8,7 @@ import { SECTION_BY_ID } from '@/data/sections'
 import { useLens } from './useLens'
 
 /** Half the knob's width — the travel of a range input is inset by this much at both ends. */
-const KNOB = 12
+const KNOB = 19
 
 /**
  * macOS-style track: a thin rail with tick marks beneath it, an icon at each

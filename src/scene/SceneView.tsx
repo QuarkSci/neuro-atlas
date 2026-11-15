@@ -42,6 +42,7 @@ const snapshot = (s: AtlasState): SceneSnapshot => ({
   lessonPick: s.mode === 'learn' ? (s.lessonPick?.id ?? null) : null,
   topicSections: s.mode === 'learn' && s.topic ? (TOPIC_BY_ID.get(s.topic)?.sections ?? null) : null,
   colorMode: s.colorMode,
+  theme: s.theme,
 })
 
 const sectionNamesFor = (lang: Lang) => Object.fromEntries(SECTIONS.map((s) => [s.id, s.title[lang] ?? s.title.en]))

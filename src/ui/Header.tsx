@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, Check, Ellipsis, Info, Languages, Palette, PanelLeft, RotateCw, Search, Slice } from 'lucide-react'
+import { Box, Check, Ellipsis, Info, Languages, Palette, SunMoon, PanelLeft, RotateCw, Search, Slice } from 'lucide-react'
 import { LEAF_PARTS } from '@/data'
 import { useT } from '@/i18n'
 import { useAtlas, type View } from '@/store/useAtlas'
@@ -86,7 +86,7 @@ export function TabBar() {
  */
 export function ViewGroup() {
   const t = useT()
-  const { view, setView, explode, cutaway, setCutaway, autoRotate, setAutoRotate, isolate, lang, setLang, setAboutOpen, colorMode, setColorMode } = useAtlas()
+  const { view, setView, explode, cutaway, setCutaway, autoRotate, setAutoRotate, isolate, lang, setLang, setAboutOpen, colorMode, setColorMode, theme, setTheme } = useAtlas()
   const [open, setOpen] = useState<'view' | 'more' | null>(null)
   const wrap = useRef<HTMLDivElement>(null)
   const frontOnly = explode > 0.8
@@ -168,6 +168,19 @@ export function ViewGroup() {
             <RotateCw size={16} className="menu-trail" />
           </button>
           <div className="menu-sep" />
+          <div className="menu-row">
+            <span className="menu-label">
+              <SunMoon size={15} /> {t.theme}
+            </span>
+            <div className="seg" role="group" aria-label={t.theme}>
+              <button className={theme === 'dark' ? 'active' : ''} aria-pressed={theme === 'dark'} onClick={() => setTheme('dark')}>
+                {t.themeDark}
+              </button>
+              <button className={theme === 'light' ? 'active' : ''} aria-pressed={theme === 'light'} onClick={() => setTheme('light')}>
+                {t.themeLight}
+              </button>
+            </div>
+          </div>
           <div className="menu-row">
             <span className="menu-label">
               <Palette size={15} /> {t.tissueColours}
