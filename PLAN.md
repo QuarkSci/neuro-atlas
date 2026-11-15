@@ -136,3 +136,80 @@ glasser | julich`), tizim emas.
    HCP shartlari. Har bir qism o'z manbasi/litsenziyasini olib yuradi
    (`part.source`), ATTRIBUTION.md manba bo'yicha bo'linadi. Loyiha kodi
    MIT, ma'lumotlar har biri o'z litsenziyasida.
+
+## 5. Kelajak imkoniyatlari (2026-11-15, foydalanuvchi bilan muhokama)
+
+Maqsad: bakalavrdan PhD gacha foydalanadigan atlas. Tartib foydalanuvchi tanlovi bilan; har biri alohida
+sessiya va commit. Hech biri hali boshlanmagan.
+
+### 5.1 Kesim sxemalarida chegaralar 100% tutashsin (TALAB)
+
+Muammo (foydalanuvchi T2 "Talamus yadrolari" plastinkasida ko'rsatdi): sohalar orasida bo'sh joy bor — masalan
+2 (oldingi yadro) va 3 (mediodorsal) orasi nimaga tegishli ekani tushunarsiz.
+
+Hozirgi holat va sabab:
+- T2 da 2 bilan 3 orasidan **ichki medullyar plastinka** (`th-iml`, 1-raqam, Y shakli) o'tadi, lekin u 7 birlik
+  qalinlikdagi chiziq qilib chizilgan, yadrolar esa unga tegmaydi → ikki yonida `ground: 'thal'` rangidagi
+  egasiz tasma qoladi. VA/VL/VPL, LD/LP va ventral qavat orasidagi bo'shliqlar — sof chizma artefakti: real
+  talamusda bu yadrolar bir-biriga bevosita tutashadi.
+- Sabab: har bir tuzilma mustaqil `B(...)` blob (nuqtalar orqali silliq egri), qo'shnilar umumiy chegarani
+  bo'lishmaydi.
+
+Talab:
+1. Kontur ichidagi har bir nuqta **aniq bitta** nomlangan tuzilmaga tegishli bo'lsin: qoplash 100%, ustma-ustlik 0.
+2. Qo'shni tuzilmalar **bitta umumiy chegara egri chizig'ini** bo'lishsin (ikki mustaqil egri emas).
+3. Haqiqatan ham nomlanmagan to'qima qolsa (masalan intralaminar yadrolar, VM, Pf, reuniens), u ham ro'yxatda
+   alohida element bo'lsin ("boshqa talamus yadrolari") — egasiz fon qolmasin.
+4. Tolali plastinkalar (IML, tashqi medullyar plastinka) chiziq emas, o'z maydoniga ega soha bo'lsin yoki
+   ikki qo'shni yadroning umumiy chegarasi sifatida chizilsin.
+
+Amalga oshirish yo'li (taklif):
+- `shapes.ts`ga topologik model: umumiy **tugunlar** va **qirralar**, har soha qirralar halqasi sifatida
+  (planar bo'linma). Qirra bir marta beriladi, ikki sohada ishlatiladi → tirqish bo'lishi mumkin emas.
+- Tekshiruv: `scripts/audit-sections.mjs`ga qoplash rejimi (`--coverage`): kontur ichini rastr bilan tanlab,
+  egasiz nuqtalar ulushi va ustma-ustlikni chiqaradi. Maqsad: egasiz 0%, ustma-ust 0%.
+- Avval T2, keyin qolgan 21 plastinka (miya ustuni kesimlarida fon — retikulyar formatsiya; uni ham nomlash).
+- Bu 5.2 bilan bog'liq: real tasvir ustidagi konturlar ham xuddi shu tutash bo'linmadan olinadi.
+
+### 5.2 Real tasvir + shtrix kontur (kesim ko'ruvchisida 5-ko'rinish)
+
+Hozir: Sxema · Mielin · Nissl · Atlas (MNI). Qo'shiladi: **Real** — haqiqiy miya kesimi, ustida har tuzilmaning
+konturi shtrix chiziq bilan, sxemadagi raqamlar bilan.
+
+- Tasvir nomzodlari (ikkalasi MNI fazosida, kesim tekisliklarimizga to'g'ri tushadi):
+  BigBrain (gistologiya, 20 mkm; litsenziya TEKSHIRILMAGAN — esda CC BY-NC-SA) va MNI152 MRI shabloni.
+  **Birinchi qadam — litsenziya sahifasini o'qish** (CC BY-ND taqiq). Diskda hozir real tasvir yo'q.
+- Pipeline: hajmdan kesim tekisligi (`sections/plane.ts`) bo'yicha qiya kesim → webp (`pipeline/tools/`).
+- Konturlar: `atlasSlice.ts` (atlas meshlarini shu tekislikda kesadi) → shtrix chiziq; 5.1 tugagach — tutash bo'linma.
+- Cheklov: T2 kesim emas ("tuxum" sxemasi) → Real ko'rinish unga qo'llanmaydi; haqiqiy kesimlarda ishlaydi.
+  Talamus yadrolari uchun atlasdagi bo'linma yetarli maydami — tekshirish kerak.
+- PhD darajasi: kontur ustiga kursor → manba atlas, ehtimollik, kesim maydoni; sxema↔real aralashtirish slayderi.
+
+### 5.3 G'oyalar ro'yxati
+
+Bakalavr (tushunish va yodlash):
+1. **Yo'llar animatsiyasi** (BG-2) — kortikospinal, orqa ustun, spinotalamik: 3D da boshidan oxirigacha, kesishish joyi.
+2. **Shikastlanish simulyatori** (BG-3) — yo'lni "kesish" → qaysi tomonda nima yo'qoladi; teskari rejim: belgilardan o'choqni topish.
+3. **Mavzu viktorinasi + Anki eksporti** — kesim va 3D savollar; xato qilingan tuzilmalar Anki kartasiga.
+4. **Qon ta'minoti hududlari** — arteriya sohasi bo'yaladi; arteriyani "yopish" → insult sindromi.
+
+Ordinator va klinitsist:
+5. **MRI ko'ruvchi** — uch tekislik, 3D model bilan bog'langan (MRIda nuqta → modelda tuzilma).
+6. **Klinik holatlar** — qisqa keys, "o'choq qayerda?", javob 3D da.
+7. **DBS nishonlari** (BG-4) — STN, GPi, Vim, elektrod yo'li, Alexander halqalari.
+
+PhD va tadqiqotchi:
+8. **Koordinata vositasi** — MNI x,y,z → har atlasda qaysi soha; CSV eksport.
+9. **Atlaslarni solishtirish** — bitta soha Julich/Brodmann/Glasser'da yonma-yon, ustma-ustlik foizi.
+10. **Maqola uchun rasm eksporti** — yorliq, masshtab, manba iqtibosi bilan yuqori aniqlikda.
+11. **Retseptor / gen xaritalari** — ochiq ma'lumot bor-yo'qligi tekshirilishi kerak.
+12. **Lupa** — sahna ustida suriladigan linza: mayda yadrolarni kattalashtirib, nomlarini faqat ichida ko'rsatadi.
+
+Tavsiya etilgan tartib: 5.1 (T2) → 5.2 → 1+2 (yo'llar va shikastlanish) → 3 → 8.
+
+### 5.4 Interfeys / Liquid Glass bo'yicha qolgan ishlar
+
+- Dars kartasi va kesim ko'ruvchisini yorug' rejimga o'tkazish (hozir "qora orol").
+- LG-3: linza, sirg'alish, varaq ochilishi — namuna video kadrlari bilan sozlash.
+- Varaq radiusi (34px), katta panellar materiali; telefonda FPS va Safari ko'rinishini tekshirish.
+- Native Apple qobig'i (SwiftUI `.glassEffect()`) — haqiqiy Liquid Glass faqat shu yo'l bilan; alohida loyiha.

@@ -114,6 +114,9 @@ tanlov kapsulasi bosilganda shaffof linzaga aylanib barmoq ortidan sirg'aladi).
     yozuv o'qilishi uchun). Slayder kit bo'yicha: yo'l 6px, tutqich 38×24 (`KNOB = 19`). QOLDI: varaq radiusi, katta panellar.
   - **LG-3** harakat: linza, sirg'alish, varaq ochilishi video kadrlari bilan yonma-yon sozlanadi.
 
+**Kelajak imkoniyatlari — `PLAN.md` 5-bo'lim** (2026-11-15): 5.1 kesim sxemalarida chegaralar 100% tutashsin
+(TALAB; T2 dan boshlanadi), 5.2 Real tasvir + shtrix kontur, 5.3 g'oyalar (bakalavr → PhD), 5.4 UI qoldiqlari.
+
 Keyin (foydalanuvchi tanlaydi): mavzu viktorinasi (kesim+dars birlashgan), BG-2 yo'llar sxemasi,
 BG-3 kasallik simulyatori, BG-4 Alexander halqalari + DBS; A) kontent: Glasser 179, Destrieux 74,
 Desikan 35, JHU 27; C) deploy (Draco + Release asset); D) yangi kesim darajalari.
