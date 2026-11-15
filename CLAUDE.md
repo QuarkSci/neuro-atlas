@@ -73,6 +73,12 @@ boricha real qilish. Reja (har biri alohida sessiya va commit):
 - **R3** kesim yuzalari: 3D kesimda kulrang/oq modda ko'rinishi; Mielin/Nissl'ni preparatga yaqinlashtirish.
 - **R4** mayda detal: mikro-relyef, tomir yaltirashi, pardalar yarim shaffof; telefonda FPS tekshiruvi.
 
+**LG — Liquid Glass (foydalanuvchi talabi 2026-11-15, alohida sessiya):** butun UI (panellar, tugmalar,
+dock, slayderlar) haqiqiy Apple OS Liquid Glass'ga JUDA yaqin bo'lsin. Namuna — foydalanuvchi yozib olgan video:
+`/Users/apple/Desktop/Screen Recording 2026-11-15 at 18.54.53.mov` (avval `ffmpeg` bilan 4–6 kichik kadr
+ajratib ko'ring: sinish/linzalanish, chet yaltirashi, fon xiralashi, bosilganda cho'zilish animatsiyasi).
+Hozirgi uslub: `src/index.css` `.glass`. R2 dan oldin yoki keyin — foydalanuvchidan so'rang.
+
 Keyin (foydalanuvchi tanlaydi): mavzu viktorinasi (kesim+dars birlashgan), BG-2 yo'llar sxemasi,
 BG-3 kasallik simulyatori, BG-4 Alexander halqalari + DBS; A) kontent: Glasser 179, Destrieux 74,
 Desikan 35, JHU 27; C) deploy (Draco + Release asset); D) yangi kesim darajalari.
