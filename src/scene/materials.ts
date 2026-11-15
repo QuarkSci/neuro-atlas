@@ -44,22 +44,22 @@ const TISSUE_SHEEN = '#ffd6c8'
 
 const REAL: Record<SystemId, Preset> = {
   // Pial surface of the cortex: grey matter seen through a film of CSF.
-  telencephalon: { color: '#ab8d82', roughness: 0.38, sheen: 0.2, sheenColor: TISSUE_SHEEN, env: 0.6 },
+  telencephalon: { color: '#ad8a80', roughness: 0.27, sheen: 0.2, sheenColor: TISSUE_SHEEN, env: 0.7 },
   // Deep grey nuclei are a browner, duller grey than cortex.
-  'basal-ganglia': { color: '#9c786c', roughness: 0.45, sheen: 0.22, sheenColor: TISSUE_SHEEN, env: 0.55 },
-  diencephalon: { color: '#a48272', roughness: 0.45, sheen: 0.22, sheenColor: TISSUE_SHEEN, env: 0.55 },
+  'basal-ganglia': { color: '#9c786c', roughness: 0.36, sheen: 0.22, sheenColor: TISSUE_SHEEN, env: 0.55 },
+  diencephalon: { color: '#a48272', roughness: 0.36, sheen: 0.22, sheenColor: TISSUE_SHEEN, env: 0.55 },
   // The brainstem surface is myelinated fibre: creamy white.
-  brainstem: { color: '#bfae94', roughness: 0.4, sheen: 0.15, sheenColor: '#ffe2c8', env: 0.55 },
-  cerebellum: { color: '#a08379', roughness: 0.4, sheen: 0.2, sheenColor: TISSUE_SHEEN, env: 0.6 },
+  brainstem: { color: '#a99e8d', roughness: 0.32, sheen: 0.15, sheenColor: '#ffe2c8', env: 0.55 },
+  cerebellum: { color: '#a37f76', roughness: 0.29, sheen: 0.2, sheenColor: TISSUE_SHEEN, env: 0.7 },
   // Casts of CSF spaces: clear, straw-tinted fluid.
   ventricles: { color: '#9db6bd', roughness: 0.16, env: 0.9 },
-  'white-matter': { color: '#c6b9a1', roughness: 0.46, sheen: 0.12, sheenColor: '#fff0dc', env: 0.5 },
-  'cranial-nerves': { color: '#cfc19c', roughness: 0.4, sheen: 0.1, sheenColor: '#fff3d0', env: 0.55 },
+  'white-matter': { color: '#a9a195', roughness: 0.36, sheen: 0.12, sheenColor: '#fff0dc', env: 0.5 },
+  'cranial-nerves': { color: '#c4b99d', roughness: 0.34, sheen: 0.1, sheenColor: '#fff3d0', env: 0.55 },
   arteries: { color: '#a8231d', roughness: 0.3, env: 0.9 },
   veins: { color: '#43437c', roughness: 0.32, env: 0.9 },
   // Dura: dense, pearly connective tissue.
-  meninges: { color: '#bfb5ad', roughness: 0.5, sheen: 0.2, sheenColor: '#ffffff', env: 0.55 },
-  skull: { color: '#cfc2a6', roughness: 0.72, env: 0.4 },
+  meninges: { color: '#b3a8a2', roughness: 0.44, sheen: 0.2, sheenColor: '#ffffff', env: 0.55 },
+  skull: { color: '#bdb5a4', roughness: 0.66, env: 0.4 },
 }
 
 /** Gross structures whose fresh-tissue colour differs from the rest of their system. */
@@ -69,12 +69,12 @@ const REAL_BY_ID: [RegExp, Partial<Preset>][] = [
   // Iron and dense capillaries.
   [/red-nucleus/, { color: '#b0685d' }],
   // "Pale globe": heavily myelinated.
-  [/globus-pallidus/, { color: '#bba593' }],
+  [/globus-pallidus/, { color: '#b09c8c' }],
   [/choroid-plexus/, { color: '#a44a41', roughness: 0.5 }],
-  [/pituitary-gland/, { color: '#c4857a' }],
+  [/pituitary-gland/, { color: '#ab786c' }],
   [/pineal-body/, { color: '#b48c7c' }],
   // Fibre bundles filed under grey systems.
-  [/cerebral-crus|mammillothalamic-tract|stria-medullaris|stria-terminalis|brachium-of|fornix|commissure|optic-(tract|chiasm)/, { color: '#c2b399' }],
+  [/cerebral-crus|mammillothalamic-tract|stria-medullaris|stria-terminalis|brachium-of|fornix|commissure|optic-(tract|chiasm)/, { color: '#aaa08f' }],
   // Dural venous sinuses: blood seen through dura.
   [/sinus/, { color: '#4b4f84', roughness: 0.4 }],
 ]

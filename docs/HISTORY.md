@@ -620,17 +620,22 @@ och ranglar ustida) — po'stloq pushti-oq "plastik", suyak butunlay kuygan.
   `userData.looks`da saqlaydi; `applyColorMode(m, mode)` roughness/sheen/envMapIntensity ni
   qo'yadi va rejim rangini QAYTARADI (`userData.base`ni chaqiruvchi yozadi, chunki dars uni
   o'quv rangiga bo'yagan bo'lishi mumkin — unda rang `atlasBase`ga yoziladi).
-- `REAL` presetlari: po'stloq `#ab8d82`, chuqur yadrolar jigarrang-kulrang, miya ustuni/oq modda
+- `REAL` presetlari: po'stloq `#ad8a80`, chuqur yadrolar jigarrang-kulrang, miya ustuni/oq modda
   krem, arteriya `#a8231d`, vena `#43437c`, nerv sadafrang, dura, suyak fil suyagi.
   `REAL_BY_ID`: qora modda (neyromelanin), qizil yadro, globus pallidus, xoroid chigal, gipofiz,
   epifiz, kulrang tizimga yozilgan tolalar (fornix, crus cerebri, ...), dural sinuslar.
 - Nam yaltirash clearcoat'siz (kesimni buzadi): roughness 0.3–0.46 + muhit aksi + yengil `sheen`
   (yumshoq to'qima cheti; sheen yoqilishi/o'chishi shader kalitida → `needsUpdate`).
 - `BrainScene.RIGS`: atlas = eski qiymatlar (o'zgarmagan); real = `NeutralToneMapping`,
-  exposure 0.8, hemi 0.1, key 2.3, rim 0.8, fill 0.1. Rang bloki kadr siklida dars blokidan OLDIN.
+  exposure 0.8, hemi 0.1, key 2.1, rim 0.85, fill 0.1. Rang bloki kadr siklida dars blokidan OLDIN.
 - Saboq: muhit xaritasi (`envMapIntensity`) diffuz yoritishni ham oshiradi — uni ko'tarish
   "nam" emas, "yassi" qiladi; shakl uchun yo'nalgan chiroq ko'tariladi, muhit pasaytiriladi.
   Pushti sheen + to'yingan asos = "saqich" ko'rinishi; asos kulrangroq olinadi.
+- Sozlash (2026-11-15): yaqindan po'stloq loydek xira edi → roughness 0.38 → 0.27 (nam yaltirash
+  faqat ~0.3 dan pastda ko'rinadi); oq modda/miya ustuni/suyak sarg'ish va kuygan edi → asos
+  rang neytralroq va to'qroq (`#a9a195`), key 2.3 → 2.1. Saboq: och to'qimalarda albedo ~0.4
+  dan oshsa Neutral tone mapping ham shaklni yuvib yuboradi; yaqin plan (`camera.fov = 15`)
+  bilan ham suratga oling — uzoqdan yaltirash ko'rinmaydi.
 - Parcellation qatlamlari (Julich, Glasser, ...) ikkala rejimda xarita rangida qoladi.
 - Tekshiruv: `audit-pick.mjs` diff 0; screenshotlar ¾, lateral (ichki tizimlar), kesim, telefon
   390 px, atlas↔real ish vaqtida almashtirish, darsga kirib-chiqish.

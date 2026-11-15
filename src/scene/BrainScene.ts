@@ -138,7 +138,7 @@ const THEME = {
  */
 const RIGS: Record<ColorMode, { tone: T.ToneMapping; exposure: number; hemi: number; key: number; rim: number; fill: number }> = {
   atlas: { tone: T.ACESFilmicToneMapping, exposure: 1.05, hemi: 0.8, key: 2.0, rim: 1.4, fill: 0.5 },
-  real: { tone: T.NeutralToneMapping, exposure: 0.8, hemi: 0.1, key: 2.3, rim: 0.8, fill: 0.1 },
+  real: { tone: T.NeutralToneMapping, exposure: 0.8, hemi: 0.1, key: 2.1, rim: 0.85, fill: 0.1 },
 }
 
 /** Systems whose extent defines the model for camera framing. */
