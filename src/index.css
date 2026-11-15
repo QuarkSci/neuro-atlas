@@ -202,17 +202,30 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
  * Anything brighter than this at the edge reads as plastic trim.
  */
 :root {
-  --lg-fill: color-mix(in oklab, #868c97 20%, transparent);
+  --lg-fill: color-mix(in oklab, #9aa1ad 8%, transparent);
   --lg-rim: 1.25px 0 0 -0.75px color-mix(in oklab, #fff 30%, transparent), -1.25px 0 0 -0.75px color-mix(in oklab, #fff 30%, transparent), 0 0 0 0.5px color-mix(in oklab, #fff 15%, transparent);
   --lg-drop: 0 8px 24px color-mix(in oklab, #000 26%, transparent);
+  /*
+   * The dome. A convex slab curves away from the viewer at its rim: the top
+   * shoulder catches the light as a thin line, the rest of the rim turns
+   * away and darkens, and the bottom shoulder shows a faint light that has
+   * travelled through the body. All inset, all soft — the bend itself is
+   * done by the refraction filter, this only shades it.
+   */
+  --lg-dome:
+    inset 0 1px 0.5px -0.25px color-mix(in oklab, #fff 55%, transparent),
+    inset 0 5px 7px -5px color-mix(in oklab, #fff 26%, transparent),
+    inset 0 -1px 0.5px -0.25px color-mix(in oklab, #fff 20%, transparent),
+    inset 0 -7px 9px -6px color-mix(in oklab, #000 42%, transparent),
+    inset 0 0 7px 0 color-mix(in oklab, #000 16%, transparent);
 }
 .glass {
   position: relative;
   background: var(--lg-fill);
   border: 0;
-  backdrop-filter: blur(12px) saturate(1.6);
-  -webkit-backdrop-filter: blur(12px) saturate(1.6);
-  box-shadow: var(--lg-rim), var(--lg-drop);
+  backdrop-filter: blur(8px) saturate(1.5);
+  -webkit-backdrop-filter: blur(8px) saturate(1.5);
+  box-shadow: var(--lg-dome), var(--lg-rim), var(--lg-drop);
   isolation: isolate;
 }
 
@@ -775,8 +788,8 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 
 /* Refracting controls: a thinner frost, so the bend at the rim stays readable. */
 .lg-on .glass.lens {
-  backdrop-filter: var(--lg-url,) blur(3px) saturate(1.6);
-  -webkit-backdrop-filter: var(--lg-url,) blur(3px) saturate(1.6);
+  backdrop-filter: var(--lg-url,) blur(1.2px) saturate(1.5);
+  -webkit-backdrop-filter: var(--lg-url,) blur(1.2px) saturate(1.5);
 }
 
 /* The sliding selection capsule. Items sit above it at rest. */
@@ -863,7 +876,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 
 /* Menus: a sibling of the glass that opens them, growing out of its corner. */
 .menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 256px; padding: 6px; border-radius: 22px; display: flex; flex-direction: column; transform-origin: 85% 0; animation: menu-in 0.34s var(--lg-spring); }
-.menu.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 62%, transparent), color-mix(in oklab, var(--background) 48%, transparent)); backdrop-filter: blur(22px) saturate(1.7); -webkit-backdrop-filter: blur(22px) saturate(1.7); }
+.menu.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 50%, transparent), color-mix(in oklab, var(--background) 38%, transparent)); backdrop-filter: blur(16px) saturate(1.6); -webkit-backdrop-filter: blur(16px) saturate(1.6); }
 @keyframes menu-in { from { opacity: 0; scale: 0.6; } }
 .menu-item { display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 12px 0 8px; border-radius: 14px; font-size: 14px; text-align: left; }
 .menu-item:hover:not(:disabled) { background: var(--fa-fill); }
@@ -889,7 +902,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .sidebar { position: absolute; left: var(--edge); top: var(--edge); bottom: var(--edge); width: var(--side-w); border-radius: 26px; display: flex; flex-direction: column; z-index: 4; opacity: 0; pointer-events: none; translate: calc(-100% - var(--edge)) 0; transition: translate 0.5s var(--lg-glide), opacity 0.25s; }
 .sidebar.open { opacity: 1; pointer-events: auto; translate: 0 var(--sheet-dy, 0px); }
 .sidebar.dragging { transition: opacity 0.22s; }
-.sidebar.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 58%, transparent), color-mix(in oklab, var(--background) 44%, transparent)); backdrop-filter: blur(20px) saturate(1.7); -webkit-backdrop-filter: blur(20px) saturate(1.7); }
+.sidebar.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 44%, transparent), color-mix(in oklab, var(--background) 32%, transparent)); backdrop-filter: blur(14px) saturate(1.6); -webkit-backdrop-filter: blur(14px) saturate(1.6); }
 .sidebar .sheet-grabber { display: none; margin: 0; }
 .side-head { display: flex; align-items: center; gap: 10px; padding: 14px 14px 6px; }
 .side-mark { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--fa-accent); background: var(--fa-fill); flex-shrink: 0; }

@@ -58,7 +58,7 @@ function buildMap(w: number, h: number, r: number): string {
   const hw = w / 2
   const hh = h / 2
   const half = Math.min(hw, hh)
-  const bezel = Math.max(5, Math.min(half * 0.7, 12))
+  const bezel = Math.max(6, Math.min(half * 0.95, 20))
   for (let y = 0; y < h; y++) {
     for (let x = 0; x < w; x++) {
       const [sd, nx, ny] = roundedRect(x + 0.5 - hw, y + 0.5 - hh, hw, hh, r)
@@ -93,7 +93,7 @@ function el<K extends keyof SVGElementTagNameMap>(name: K, attrs: Record<string,
  */
 function buildFilter(id: string, w: number, h: number, r: number): SVGFilterElement {
   const half = Math.min(w, h) / 2
-  const scale = Math.max(8, Math.min(half * 1.1, 24))
+  const scale = Math.max(10, Math.min(half * 1.9, 44))
   // Dispersion 20 in the kit: a hint of colour at the rim, not a rainbow.
   const spread = 0.03
   const filter = el('filter', { id, x: 0, y: 0, width: w, height: h, filterUnits: 'userSpaceOnUse', 'color-interpolation-filters': 'sRGB' })
