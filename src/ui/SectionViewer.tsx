@@ -1,8 +1,28 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowLeft, ArrowUpRight, Box, ChevronLeft, ChevronRight, Eye, EyeOff, GraduationCap, Hash, Layers, Microscope, PenTool, ScanLine, Shuffle, Tags, X } from 'lucide-react'
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  Box,
+  ChevronLeft,
+  ChevronRight,
+  Eye,
+  EyeOff,
+  GraduationCap,
+  Hash,
+  Image as ImageIcon,
+  Layers,
+  Microscope,
+  Spline,
+  PenTool,
+  ScanLine,
+  Shuffle,
+  Tags,
+  X,
+} from 'lucide-react'
 import { CONCEPT_BY_ID, conceptLeafIds } from '@/data'
 import { SECTIONS, SECTION_BY_ID, SECTION_REGIONS, STRUCTURE_BY_ID, type Section, type SectionItem } from '@/data/sections'
 import { shapePath } from '@/data/sections/shapes'
+import { REAL_SLICES } from '@/data/sections/real'
 import type { LayerId } from '@/data/types'
 import { useL, useT } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
@@ -13,7 +33,7 @@ import { TOPIC_BY_ID, topicsOfSection } from '@/data/topics'
 import { badgePositions, itemArea, itemShapes, mix, sectionEntries, type Entry } from './sectionLayout'
 
 /** Layers whose meshes make the 3D cut face informative for each region. */
-const CUT_LAYERS: Record<Section['region'], LayerId[]> = {
+export const CUT_LAYERS: Record<Section['region'], LayerId[]> = {
   medulla: ['gross', 'bstem', 'suit'],
   pons: ['gross', 'bstem', 'suit'],
   midbrain: ['gross', 'bstem'],
@@ -49,7 +69,8 @@ export function SectionViewer() {
   const [revealed, setRevealed] = useState<Set<string>>(new Set())
   const [tab, setTab] = useState<'structures' | 'level'>('structures')
   const [focusCat, setFocusCat] = useState<string | null>(null)
-  const [view, setView] = useState<'scheme' | Stain | 'atlas'>('scheme')
+  const [view, setView] = useState<'scheme' | Stain | 'atlas' | 'real'>('scheme')
+  const [contours, setContours] = useState(true)
   const [atlasSel, setAtlasSel] = useState<string | null>(null)
 
   // A new section starts clean.
@@ -59,7 +80,8 @@ export function SectionViewer() {
     setRevealed(new Set())
     setFocusCat(null)
     setAtlasSel(null)
-    if (section && !section.plane) setView((v) => (v === 'atlas' ? 'scheme' : v))
+    if (section && !section.plane) setView((v) => (v === 'atlas' || v === 'real' ? 'scheme' : v))
+    if (section && !REAL_SLICES[section.id]) setView((v) => (v === 'real' ? 'scheme' : v))
   }, [sectionId])
 
   useEffect(() => {
@@ -80,8 +102,11 @@ export function SectionViewer() {
     return CATEGORY_ORDER.filter((c) => present.has(c))
   }, [numbered])
 
-  const atlas = useAtlasSlice(section ?? SECTIONS[0], section ? CUT_LAYERS[section.region] : [], !!section?.plane && view === 'atlas')
+  const atlas = useAtlasSlice(section ?? SECTIONS[0], section ? CUT_LAYERS[section.region] : [], !!section?.plane && (view === 'atlas' || view === 'real'))
   if (!section) return null
+  const real = REAL_SLICES[section.id]
+  // Both read the atlas cut rather than the drawn schematic.
+  const cutView = view === 'atlas' || view === 'real'
   const index = order.findIndex((s) => s.id === section.id)
   const prev = order[index - 1],
     next = order[index + 1]
@@ -112,17 +137,18 @@ export function SectionViewer() {
   // Selection follows the user across views: a schematic structure linked to
   // a 3D concept lights up its atlas region, and back.
   const switchView = (next: typeof view) => {
-    if (next === 'atlas' && selInfo?.part) setAtlasSel(null)
-    if (view === 'atlas' && next !== 'atlas' && atlasSel) {
+    const nextCut = next === 'atlas' || next === 'real'
+    if (nextCut && !cutView && selInfo?.part) setAtlasSel(null)
+    if (cutView && !nextCut && atlasSel) {
       const concept = PART_BY_ID.get(atlasSel)?.concept
       const match = numbered.find(({ item }) => STRUCTURE_BY_ID.get(item.id)?.part === concept)
       if (match) setSelected(match.item.id)
     }
-    if (next === 'atlas') setQuiz(false)
+    if (nextCut) setQuiz(false)
     setView(next)
   }
   const atlasPart = atlasSel ? atlas?.data?.regions.find((r) => r.part.id === atlasSel) : undefined
-  const viewHint = view === 'myelin' ? t.svViewMyelinHint : view === 'nissl' ? t.svViewNisslHint : view === 'atlas' ? t.svViewAtlasHint : null
+  const viewHint = view === 'myelin' ? t.svViewMyelinHint : view === 'nissl' ? t.svViewNisslHint : view === 'atlas' ? t.svViewAtlasHint : view === 'real' ? t.svViewRealHint : null
 
   return (
     <div className="section-viewer dark" role="dialog" aria-modal="true" aria-label={l(section.title)} onClick={() => openSection(null)}>
@@ -146,7 +172,14 @@ export function SectionViewer() {
                 <span>{t.lnBackLesson}</span>
               </button>
             ) : lessonFor ? (
-              <button className="sv-learn" onClick={() => { openSection(null); setLesson(lessonFor) }} title={t.lnLearn3d}>
+              <button
+                className="sv-learn"
+                onClick={() => {
+                  openSection(null)
+                  setLesson(lessonFor)
+                }}
+                title={t.lnLearn3d}
+              >
                 <GraduationCap size={14} />
                 <span>{t.lnLearn3d}</span>
               </button>
@@ -173,20 +206,22 @@ export function SectionViewer() {
                 </button>
               ))}
             </div>
-          ) : SECTION_REGIONS.map((r) => {
-            const list = SECTIONS.filter((s) => s.region === r.id)
-            if (!list.length) return null
-            return (
-              <div className="sv-region" key={r.id}>
-                <span>{l(r.name)}</span>
-                {list.map((s) => (
-                  <button key={s.id} className={`sv-chip ${s.id === section.id ? 'active' : ''}`} onClick={() => openSection(s.id)} title={l(s.title)}>
-                    {s.code}
-                  </button>
-                ))}
-              </div>
-            )
-          })}
+          ) : (
+            SECTION_REGIONS.map((r) => {
+              const list = SECTIONS.filter((s) => s.region === r.id)
+              if (!list.length) return null
+              return (
+                <div className="sv-region" key={r.id}>
+                  <span>{l(r.name)}</span>
+                  {list.map((s) => (
+                    <button key={s.id} className={`sv-chip ${s.id === section.id ? 'active' : ''}`} onClick={() => openSection(s.id)} title={l(s.title)}>
+                      {s.code}
+                    </button>
+                  ))}
+                </div>
+              )
+            })
+          )}
         </nav>
 
         <div className="sv-body">
@@ -198,6 +233,7 @@ export function SectionViewer() {
                   ['myelin', Layers, t.svViewMyelin],
                   ['nissl', Microscope, t.svViewNissl],
                   ['atlas', ScanLine, t.svViewAtlas],
+                  ['real', ImageIcon, t.svViewReal],
                 ] as const
               ).map(([id, Icon, name]) => (
                 <button
@@ -205,7 +241,8 @@ export function SectionViewer() {
                   role="tab"
                   aria-selected={view === id}
                   className={view === id ? 'on' : ''}
-                  disabled={id === 'atlas' && !section.plane}
+                  disabled={(id === 'atlas' && !section.plane) || (id === 'real' && !real)}
+                  title={id === 'real' && !real ? t.svRealNone : undefined}
                   onClick={() => switchView(id)}
                 >
                   <Icon size={13} />
@@ -214,7 +251,13 @@ export function SectionViewer() {
               ))}
             </div>
             <div className="sv-tools">
-              {view !== 'atlas' && (
+              {view === 'real' && (
+                <button className={contours ? 'on' : ''} onClick={() => setContours(!contours)} title={t.svRealContours}>
+                  <Spline size={13} />
+                  <span>{t.svRealContours}</span>
+                </button>
+              )}
+              {!cutView && (
                 <button className={numbers ? 'on' : ''} onClick={() => setNumbers(!numbers)} title={t.svNumbers}>
                   <Hash size={13} />
                   <span>{t.svNumbers}</span>
@@ -224,7 +267,7 @@ export function SectionViewer() {
                 <Tags size={13} />
                 <span>{t.svLabels}</span>
               </button>
-              {view !== 'atlas' && (
+              {!cutView && (
                 <button
                   className={quiz ? 'on quiz' : ''}
                   onClick={() => {
@@ -239,7 +282,7 @@ export function SectionViewer() {
                   <span>{t.svQuiz}</span>
                 </button>
               )}
-              {quiz && view !== 'atlas' && (
+              {quiz && !cutView && (
                 <>
                   <button onClick={randomQuiz} title={t.svRandom}>
                     <Shuffle size={13} />
@@ -251,11 +294,13 @@ export function SectionViewer() {
                 </>
               )}
             </div>
-            {view === 'atlas' ? (
+            {cutView ? (
               atlas?.data ? (
                 <AtlasSliceView
                   section={section}
                   slice={atlas.data}
+                  real={view === 'real' ? real : undefined}
+                  contours={contours}
                   selected={atlasSel}
                   highlightConcept={atlasSel ? null : (selInfo?.part ?? null)}
                   labels={labels}
@@ -303,7 +348,7 @@ export function SectionViewer() {
               </button>
             </div>
 
-            {tab === 'structures' && view === 'atlas' ? (
+            {tab === 'structures' && cutView ? (
               <AtlasList
                 regions={atlas?.data?.regions ?? []}
                 selected={atlasSel}

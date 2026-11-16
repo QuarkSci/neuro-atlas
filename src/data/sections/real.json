@@ -1,0 +1,257 @@
+{
+ "bg-accumbens": {
+  "file": "bg-accumbens.webp",
+  "mmPerPx": 0.1,
+  "px": [
+   767,
+   449
+  ],
+  "source": "bigbrain",
+  "window": [
+   -38.869,
+   -20.412,
+   37.796,
+   24.521
+  ]
+ },
+ "bg-capsule-axial": {
+  "file": "bg-capsule-axial.webp",
+  "mmPerPx": 0.1,
+  "px": [
+   838,
+   764
+  ],
+  "source": "bigbrain",
+  "window": [
+   -42.272,
+   -34.651,
+   41.561,
+   41.763
+  ]
+ },
+ "bg-commissural": {
+  "file": "bg-commissural.webp",
+  "mmPerPx": 0.1,
+  "px": [
+   841,
+   520
+  ],
+  "source": "bigbrain",
+  "window": [
+   -42.421,
+   -23.731,
+   41.696,
+   28.253
+  ]
+ },
+ "bg-pallidal": {
+  "file": "bg-pallidal.webp",
+  "mmPerPx": 0.1,
+  "px": [
+   851,
+   514
+  ],
+  "source": "bigbrain",
+  "window": [
+   -43.001,
+   -22.849,
+   42.123,
+   28.505
+  ]
+ },
+ "bg-subthalamic": {
+  "file": "bg-subthalamic.webp",
+  "mmPerPx": 0.0999,
+  "px": [
+   851,
+   479
+  ],
+  "source": "bigbrain",
+  "window": [
+   -43.019,
+   -20.141,
+   42.031,
+   27.788
+  ]
+ },
+ "hypothalamus-chiasmatic": {
+  "file": "hypothalamus-chiasmatic.webp",
+  "mmPerPx": 0.0999,
+  "px": [
+   264,
+   256
+  ],
+  "source": "bigbrain",
+  "window": [
+   -13.521,
+   -28.812,
+   12.859,
+   -3.232
+  ]
+ },
+ "hypothalamus-mammillary": {
+  "file": "hypothalamus-mammillary.webp",
+  "mmPerPx": 0.0999,
+  "px": [
+   194,
+   169
+  ],
+  "source": "bigbrain",
+  "window": [
+   -9.315,
+   -24.829,
+   10.066,
+   -7.93
+  ]
+ },
+ "hypothalamus-tuberal": {
+  "file": "hypothalamus-tuberal.webp",
+  "mmPerPx": 0.1002,
+  "px": [
+   257,
+   230
+  ],
+  "source": "bigbrain",
+  "window": [
+   -13.127,
+   -27.674,
+   12.613,
+   -4.641
+  ]
+ },
+ "medulla-olive": {
+  "file": "medulla-olive.webp",
+  "mmPerPx": 0.0999,
+  "px": [
+   384,
+   321
+  ],
+  "source": "bigbrain",
+  "window": [
+   -20.501,
+   -11.642,
+   17.857,
+   20.446
+  ]
+ },
+ "medulla-rostral": {
+  "file": "medulla-rostral.webp",
+  "mmPerPx": 0.1,
+  "px": [
+   529,
+   369
+  ],
+  "source": "bigbrain",
+  "window": [
+   -27.682,
+   -16.315,
+   25.199,
+   20.616
+  ]
+ },
+ "medulla-sensory-decussation": {
+  "file": "medulla-sensory-decussation.webp",
+  "mmPerPx": 0.1001,
+  "px": [
+   313,
+   316
+  ],
+  "source": "bigbrain",
+  "window": [
+   -17.021,
+   -4.815,
+   14.32,
+   26.746
+  ]
+ },
+ "midbrain-inferior-colliculus": {
+  "file": "midbrain-inferior-colliculus.webp",
+  "mmPerPx": 0.1,
+  "px": [
+   497,
+   375
+  ],
+  "source": "bigbrain",
+  "window": [
+   -24.77,
+   -25.947,
+   24.953,
+   11.57
+  ]
+ },
+ "midbrain-pretectal": {
+  "file": "midbrain-pretectal.webp",
+  "mmPerPx": 0.1,
+  "px": [
+   611,
+   446
+  ],
+  "source": "bigbrain",
+  "window": [
+   -31.382,
+   -23.521,
+   29.697,
+   21.043
+  ]
+ },
+ "midbrain-superior-colliculus": {
+  "file": "midbrain-superior-colliculus.webp",
+  "mmPerPx": 0.1001,
+  "px": [
+   540,
+   340
+  ],
+  "source": "bigbrain",
+  "window": [
+   -26.925,
+   -27.587,
+   27.113,
+   6.452
+  ]
+ },
+ "pons-facial-colliculus": {
+  "file": "pons-facial-colliculus.webp",
+  "mmPerPx": 0.0999,
+  "px": [
+   552,
+   413
+  ],
+  "source": "bigbrain",
+  "window": [
+   -28.741,
+   -20.486,
+   26.426,
+   20.796
+  ]
+ },
+ "pons-trigeminal": {
+  "file": "pons-trigeminal.webp",
+  "mmPerPx": 0.1,
+  "px": [
+   529,
+   427
+  ],
+  "source": "bigbrain",
+  "window": [
+   -27.411,
+   -24.095,
+   25.463,
+   18.632
+  ]
+ },
+ "thalamus-coronal": {
+  "file": "thalamus-coronal.webp",
+  "mmPerPx": 0.1,
+  "px": [
+   574,
+   337
+  ],
+  "source": "bigbrain",
+  "window": [
+   -29.638,
+   -14.9,
+   27.772,
+   18.84
+  ]
+ }
+}

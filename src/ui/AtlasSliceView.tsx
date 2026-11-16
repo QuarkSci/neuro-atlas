@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { LAYER_BY_ID, SYSTEM_BY_ID } from '@/data'
 import type { Section } from '@/data/sections'
+import { REAL_SOURCES, realSliceUrl, type RealSlice } from '@/data/sections/real'
 import type { LayerId, Part } from '@/data/types'
 import { atlasSlice, type AtlasSlice, type SliceRegion } from '@/scene/atlasSlice'
 import { LAYER_COLORS } from '@/scene/materials'
@@ -8,6 +9,8 @@ import { useL, useT } from '@/i18n'
 import { mix } from './sectionLayout'
 
 const BASE = '#161b23'
+/** Regions larger than this (mm²) are not outlined over a real slice. */
+const REAL_MAX_AREA = 400
 
 /** Stable per-structure colour: hue from the concept id around the layer's own tint, like the 3D parcellation colours. */
 export function regionColor(part: Part): string {
@@ -80,9 +83,15 @@ export function AtlasSliceView({
   labels,
   axes,
   onPick,
+  real,
+  contours = true,
 }: {
   section: Section
   slice: AtlasSlice
+  /** A real image slice to draw under the regions; they then become dashed outlines. */
+  real?: RealSlice
+  /** Outline visibility in the real view (off = the bare slice). */
+  contours?: boolean
   selected: string | null
   highlightConcept: string | null
   labels: boolean
@@ -94,7 +103,8 @@ export function AtlasSliceView({
   const svg = useRef<SVGSVGElement>(null)
   const [hover, setHover] = useState<string | null>(null)
   const [cursor, setCursor] = useState<[number, number] | null>(null)
-  const [x0, y0, x1, y1] = slice.window
+  // The image dictates the window it was cut for; the live slice normally agrees.
+  const [x0, y0, x1, y1] = real ? real.window : slice.window
   const w = x1 - x0,
     h = y1 - y0
   const pad = Math.max(w, h) * 0.07
@@ -133,10 +143,37 @@ export function AtlasSliceView({
         </defs>
         <rect className="as-field" x={x0} y={-y1} width={w} height={h} rx={Math.min(w, h) * 0.06} />
         <g clipPath="url(#as-window)">
+          {real && <image href={realSliceUrl(real)} x={x0} y={-y1} width={w} height={h} preserveAspectRatio="none" className="as-real" />}
           {ordered.map((r) => {
             const color = regionColor(r.part)
             const on = active === r.part.id || (!!highlightConcept && r.part.concept === highlightConcept)
             const dim = !!active && !on
+            // Lobe-sized territories (lobar white matter, unmapped cortex) would only bury the slice in lines.
+            if (real && r.area > REAL_MAX_AREA && !on) return null
+            if (real)
+              // Over a real slice the tissue must stay visible: a dashed border, a tint only when picked.
+              return (
+                <path
+                  key={r.part.id}
+                  d={regionPath(r)}
+                  fillRule="evenodd"
+                  fill={color}
+                  fillOpacity={on ? 0.3 : 0}
+                  stroke={on ? '#fff' : color}
+                  strokeWidth={on ? 2.2 : 1.5}
+                  strokeDasharray={on ? undefined : '5 4'}
+                  strokeLinejoin="round"
+                  vectorEffect="non-scaling-stroke"
+                  pointerEvents="all"
+                  className={`as-region as-outline ${dim ? 'dim' : ''} ${contours || on ? '' : 'off'}`}
+                  onPointerEnter={() => setHover(r.part.id)}
+                  onPointerLeave={() => setHover(null)}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    onPick(r.part.id)
+                  }}
+                />
+              )
             return (
               <path
                 key={r.part.id}
@@ -157,6 +194,7 @@ export function AtlasSliceView({
             )
           })}
           {labels &&
+            (!real || contours) &&
             placeLabels(ordered, (r) => short(l(r.part.name)), font, (w * h) / 400, slice.window).map((p) => (
               <text key={`t-${p.id}`} className="as-label" x={p.x} y={-p.y} fontSize={font} textAnchor="middle" dominantBaseline="central">
                 {p.text}
@@ -184,6 +222,14 @@ export function AtlasSliceView({
           </text>
         </g>
       </svg>
+      {real && (
+        <p className="as-credit">
+          <a href={REAL_SOURCES[real.source].url} target="_blank" rel="noreferrer">
+            {REAL_SOURCES[real.source].label}
+          </a>{' '}
+          · {REAL_SOURCES[real.source].license} · {Math.round(real.mmPerPx * 1000)} µm/px
+        </p>
+      )}
       <div className="as-readout">
         {hovered ? (
           <>

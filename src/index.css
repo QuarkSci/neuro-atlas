@@ -1065,3 +1065,12 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 }
 /* Menus sit over text as often as over the model: a denser body than the bars. */
 .menu.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 74%, transparent), color-mix(in oklab, var(--background) 64%, transparent)); backdrop-filter: blur(22px) saturate(1.6); -webkit-backdrop-filter: blur(22px) saturate(1.6); }
+
+/* Real view: the slice itself, and atlas borders as dashed outlines over it. */
+.as-real { image-rendering: auto; }
+.as-outline { transition: opacity 0.15s, fill-opacity 0.15s; filter: drop-shadow(0 0 0.5px #000) drop-shadow(0 0 0.5px #000); }
+.as-outline.off { stroke-opacity: 0; }
+.as-outline.dim { opacity: 0.55; }
+.as-credit { font-size: 10.5px; color: var(--fa-muted); margin: 4px 2px 0; }
+.as-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+

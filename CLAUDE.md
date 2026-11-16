@@ -116,6 +116,15 @@ tanlov kapsulasi bosilganda shaffof linzaga aylanib barmoq ortidan sirg'aladi).
 
 **Kelajak imkoniyatlari — `PLAN.md` 5-bo'lim** (2026-11-15): 5.1 kesim sxemalarida chegaralar 100% tutashsin
 (TALAB; T2 dan boshlanadi), 5.2 Real tasvir + shtrix kontur, 5.3 g'oyalar (bakalavr → PhD), 5.4 UI qoldiqlari.
+- **5.2 Real kesim** ✅ v1 (2026-11-16): kesim ko'ruvchisida 5-ko'rinish. BigBrain 100 mkm (CC BY-NC-SA 4.0,
+  `data/raw/bigbrain/`, 1.1 GB gz + 8.7 GB ochilgan, gitignore). Zanjir: `node scripts/export-section-frames.mjs`
+  (ilovaning o'z `atlasSlice()` ramkasi → `pipeline/section_frames.json`) → `pipeline/.venv/bin/python
+  pipeline/tools/real_slices.py data/raw/bigbrain/full8_100um_2009b_sym.nii.gz` → `public/sections/real/*.webp`
+  (17 ta, 452 KB, COMMIT QILINADI) + `src/data/sections/real.json`. Ko'rinish: `AtlasSliceView` `real` prop —
+  tasvir + atlas chegaralari shtrix (400 mm² dan katta sohalar chizilmaydi), "Konturlar" tugmasi.
+  Yo'q: U1 (hajm u darajaga yetmaydi), K3 va Mc (oyna >110 mm — bu oyna xatosi, alohida tuzatish kerak), T2 (kesim emas).
+  QOLDI: konturlarda sxema raqamlari; sxema↔real aralashtirish; MRI varianti; K3/Mc oynasi.
+  `pipeline/.venv` qayta yaratildi (numpy, nibabel, scipy, pillow) — eski muhit diskda yo'q edi.
 
 Keyin (foydalanuvchi tanlaydi): mavzu viktorinasi (kesim+dars birlashgan), BG-2 yo'llar sxemasi,
 BG-3 kasallik simulyatori, BG-4 Alexander halqalari + DBS; A) kontent: Glasser 179, Destrieux 74,

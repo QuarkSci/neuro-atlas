@@ -171,7 +171,12 @@ Amalga oshirish yo'li (taklif):
 - Avval T2, keyin qolgan 21 plastinka (miya ustuni kesimlarida fon — retikulyar formatsiya; uni ham nomlash).
 - Bu 5.2 bilan bog'liq: real tasvir ustidagi konturlar ham xuddi shu tutash bo'linmadan olinadi.
 
-### 5.2 Real tasvir + shtrix kontur (kesim ko'ruvchisida 5-ko'rinish)
+### 5.2 Real tasvir + shtrix kontur (kesim ko'ruvchisida 5-ko'rinish) — ✅ v1 2026-11-16
+
+Bajarildi: BigBrain 100 mkm dan 17 daraja uchun real kesim, ustida atlas chegaralari shtrix chiziq bilan
+(tafsilot — CLAUDE.md "Joriy holat"). Litsenziya o'qildi: CC BY-NC-SA 4.0 (`License.txt`), ND emas.
+Quyidagi matn — dastlabki reja; undan qolganlari: sxema raqamlari, aralashtirish slayderi, MRI varianti.
+
 
 Hozir: Sxema · Mielin · Nissl · Atlas (MNI). Qo'shiladi: **Real** — haqiqiy miya kesimi, ustida har tuzilmaning
 konturi shtrix chiziq bilan, sxemadagi raqamlar bilan.

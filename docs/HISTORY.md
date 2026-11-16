@@ -695,6 +695,23 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
 - Tekshirildi: yorug'da 1280×760 (Atlas), 1100×680 (Inspector+menyu, dars), 900×440 DPR2 yaqin surat ikkala rejimda,
   tsc + build, `audit-pick`. Tekshirilmadi: yorug'da telefon ko'rinishi, kesim paneli (PlanesPanel), qidiruv, About.
 
+### 5.2 — Real kesim ko'rinishi (2026-11-16)
+
+- Litsenziya: BigBrain — `ftp.bigbrainproject.org/bigbrain-ftp/License.txt`: CC BY-NC-SA 4.0 (moslashtirilgan
+  material ruxsat, o'sha litsenziyada ulashiladi). Sayt rasmlaridagi "CC BY-SA" yozuvi ma'lumotga TEGISHLI EMAS.
+  MNI ICBM152 2009b — erkin ruxsatnoma (hozircha ishlatilmadi).
+- Ro'yxatga olish muammosi yo'q: tasvir ilovaning o'z kesim ramkasida (origin, u, v, oyna) namunalanadi, shuning
+  uchun atlas konturlari bilan bir koordinatada. Farq faqat biologik: populyatsiya atlasi ↔ bitta miya (1–2 mm).
+- Hajm 1970×2330×1890 @ 0.1 mm, uint16; `.nii.gz` bir marta ochiladi (8.7 GB) va memmap bilan faqat kerakli blok o'qiladi.
+- Kontrast: butun oyna bo'yicha cho'zilganda miya ustuni oqarib ketdi (atrofdagi miyacha po'stlog'i qora) →
+  foizlar oynaning markazidagi to'qimadan olinadi, gamma 1.25.
+- Yuklash saboqi: bitta ulanish ~430 KB/s; `curl -r` bilan 8 parallel bo'lak ~6 MB/s. Sessiya uzilganda eski curl
+  jarayoni tirik qolib, yangi jarayon bilan BIR faylga yozdi → bo'lak buzildi. Qayta boshlashdan oldin `pkill`,
+  oxirida hajm + `gzip -t` tekshiruvi.
+- Tekshirildi: B3, K2, T1 suratda (tasvir va kontur mos), tsc + build. Tekshirilmadi: qolgan 14 daraja suratda
+  ko'rilmadi; chap/o'ng yo'nalishi simmetrik hajmda ko'z bilan tasdiqlanmaydi (ramka kodi bo'yicha to'g'ri);
+  yorug' rejim va telefon.
+
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
 1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).
