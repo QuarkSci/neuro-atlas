@@ -76,7 +76,7 @@ Haqiqiy qoldiqlar (foydalanuvchi tanlaydi): (a) T1 `thalamus-coronal` — talamu
 (zamin 52%, bir qismi talamus ichida); (b) G4 `hypothalamus-zones` — zamin 75%, T2 ga o'xshash xarita; (c) ustma-ustlik:
 U1 1.8%, K3 1.5%, B1 1.3%, U2 1.1% (qolganlari <1%).
 
-**Keyingi vazifa (foydalanuvchi tasdiqlagan tartib):** Real kesimga sxema raqamlari → yo'llar va shikastlanish →
+**Keyingi vazifa (foydalanuvchi tasdiqlagan tartib):** ~~Real kesimga sxema raqamlari~~ ✅ → yo'llar va shikastlanish →
 viktorina → koordinata vositasi.
 
 ## Joriy holat (2026-11-16)
@@ -142,7 +142,11 @@ tanlov kapsulasi bosilganda shaffof linzaga aylanib barmoq ortidan sirg'aladi).
   (17 ta, 452 KB, COMMIT QILINADI) + `src/data/sections/real.json`. Ko'rinish: `AtlasSliceView` `real` prop —
   tasvir + atlas chegaralari shtrix (400 mm² dan katta sohalar chizilmaydi), "Konturlar" tugmasi.
   Yo'q: U1 (hajm u darajaga yetmaydi), K3 va Mc (oyna >110 mm — bu oyna xatosi, alohida tuzatish kerak), T2 (kesim emas).
-  QOLDI: konturlarda sxema raqamlari; sxema↔real aralashtirish; MRI varianti; K3/Mc oynasi.
+  **Sxema raqamlari ✅ (2026-11-16):** `SectionViewer` `marks` (sxema `part` → atlas qismi) → `AtlasSliceView` `placeMarks()`;
+  bitta atlas sohasi bir necha sxema tuzilmasiga to'g'ri kelsa nishon hammasini yozadi ("4·22", "12·13 +4").
+  QOLDI: sxema↔real aralashtirish; MRI varianti; K3/Mc oynasi; **O2/O3 tekisligi sxemaga mos emas** (O2 da `sc`/`rn`
+  kesilmaydi, O3 da 14 bog'lanishdan 1 tasi); `snc`/`snr` Julich'ga bog'langan, o'rta miya kesimida Julich yo'q;
+  miya ustunida nishon kam (U2 4, O1 9) — `bstem` qatlamida 24 konsept, bu atlas chegarasi.
   `pipeline/.venv` qayta yaratildi (numpy, nibabel, scipy, pillow) — eski muhit diskda yo'q edi.
 
 Keyin (foydalanuvchi tanlaydi): mavzu viktorinasi (kesim+dars birlashgan), BG-2 yo'llar sxemasi,

@@ -85,6 +85,7 @@ export function AtlasSliceView({
   onPick,
   real,
   contours = true,
+  marks,
 }: {
   section: Section
   slice: AtlasSlice
@@ -92,6 +93,8 @@ export function AtlasSliceView({
   real?: RealSlice
   /** Outline visibility in the real view (off = the bare slice). */
   contours?: boolean
+  /** Schematic numbers by part id: the same badge the drawn plate uses, set on the matching atlas region. */
+  marks?: Map<string, SliceMark>
   selected: string | null
   highlightConcept: string | null
   labels: boolean
@@ -123,6 +126,10 @@ export function AtlasSliceView({
   const hovered = hover ? slice.regions.find((r) => r.part.id === hover) : undefined
   const mni = cursor ? slice.toMNI(cursor[0], cursor[1]) : null
   const ordered = slice.regions
+  const win: [number, number, number, number] = [x0, y0, x1, y1]
+  const named = labels && (!real || contours) ? placeLabels(ordered, (r) => short(l(r.part.name)), font, (w * h) / 400, slice.window) : []
+  const badgeR = font * 0.92
+  const badges = marks ? placeMarks(ordered, marks, badgeR, win, new Set(named.map((p) => p.id)), font * 1.5, [x0 + w * 0.04 + bar, y0 + h * 0.05 + font * 1.6]) : []
 
   return (
     <div className="as-wrap">
@@ -193,13 +200,37 @@ export function AtlasSliceView({
               />
             )
           })}
-          {labels &&
-            (!real || contours) &&
-            placeLabels(ordered, (r) => short(l(r.part.name)), font, (w * h) / 400, slice.window).map((p) => (
-              <text key={`t-${p.id}`} className="as-label" x={p.x} y={-p.y} fontSize={font} textAnchor="middle" dominantBaseline="central">
-                {p.text}
-              </text>
-            ))}
+          {named.map((p) => (
+            <text key={`t-${p.id}`} className="as-label" x={p.x} y={-p.y} fontSize={font} textAnchor="middle" dominantBaseline="central">
+              {p.text}
+            </text>
+          ))}
+          {badges.map((b) => {
+            const on = active === b.id
+            return (
+              <g
+                key={`m-${b.id}`}
+                className={`as-mark ${on ? 'active' : ''} ${active && !on ? 'dim' : ''}`}
+                onPointerEnter={() => setHover(b.id)}
+                onPointerLeave={() => setHover(null)}
+                onClick={(e) => {
+                  e.stopPropagation()
+                  onPick(b.id)
+                }}
+              >
+                {b.moved && (
+                  <>
+                    <line x1={b.hx} y1={-b.hy} x2={b.x} y2={-b.y} stroke={b.color} vectorEffect="non-scaling-stroke" />
+                    <circle className="as-mark-dot" cx={b.hx} cy={-b.hy} r={badgeR * 0.22} fill={b.color} />
+                  </>
+                )}
+                <rect x={b.x - b.hw} y={-b.y - badgeR} width={b.hw * 2} height={badgeR * 2} rx={badgeR} stroke={b.color} vectorEffect="non-scaling-stroke" />
+                <text x={b.x} y={-b.y} fontSize={badgeR * 1.05} textAnchor="middle" dominantBaseline="central">
+                  {b.text}
+                </text>
+              </g>
+            )
+          })}
         </g>
         <rect className="as-frame" x={x0} y={-y1} width={w} height={h} rx={Math.min(w, h) * 0.06} vectorEffect="non-scaling-stroke" />
         <text className="as-axis" x={x0 + w / 2} y={-y1 - pad * 0.35} fontSize={font} textAnchor="middle">
@@ -293,6 +324,66 @@ function placeLabels(regions: SliceRegion[], name: (r: SliceRegion) => string, f
     placed.push({ id: r.part.id, text, x, y, w, h })
   }
   return placed
+}
+
+export interface SliceMark {
+  /**
+   * Numbers of the plate structures this atlas region stands for. Usually one;
+   * several when the atlas is coarser than the drawing (one pallidum mesh for
+   * GPe, GPi and the lamina between them) — the badge then lists them all.
+   */
+  ns: number[]
+  color: string
+  /** Schematic structure ids, parallel to `ns`. */
+  items: string[]
+}
+
+/**
+ * Number badges for the regions that have a schematic counterpart, largest
+ * region first. A badge sits at its region's interior point; when that spot
+ * is taken (or a name label is there) it steps aside on a short leader.
+ */
+function placeMarks(
+  regions: SliceRegion[],
+  marks: Map<string, SliceMark>,
+  r: number,
+  [wx0, wy0, wx1, wy1]: [number, number, number, number],
+  labelled: Set<string>,
+  lift: number,
+  [sx, sy]: [number, number],
+) {
+  const out: { id: string; text: string; color: string; x: number; y: number; hw: number; hx: number; hy: number; moved: boolean }[] = []
+  let hw = r
+  // The scale bar keeps its corner (bottom-left, up to sx / sy).
+  const free = (x: number, y: number) =>
+    !(x - hw < sx && y - r < sy) &&
+    x - hw > wx0 &&
+    x + hw < wx1 &&
+    y - r > wy0 &&
+    y + r < wy1 &&
+    !out.some((p) => Math.abs(p.x - x) < (p.hw + hw) * 1.06 && Math.abs(p.y - y) < r * 2.12)
+  for (const reg of regions) {
+    const m = marks.get(reg.part.id)
+    // Slivers under ~0.5 mm² are cut edges of a nucleus, not a level it belongs to.
+    if (!m || reg.area < 0.5) continue
+    // More than three would bury the tissue: the first two and a count, the side panel lists them all.
+    const text = m.ns.length > 3 ? `${m.ns[0]}·${m.ns[1]} +${m.ns.length - 2}` : m.ns.join('·')
+    // A pill as wide as its text: one or two digits fit the circle.
+    hw = Math.max(r, r * 0.42 + text.length * r * 0.31)
+    const [hx, hy] = interior(reg.loops)
+    if (hx < wx0 || hx > wx1 || hy < wy0 || hy > wy1) continue
+    let spot: [number, number] | null = !labelled.has(reg.part.id) && free(hx, hy) ? [hx, hy] : null
+    if (!spot && labelled.has(reg.part.id) && free(hx, hy + lift)) spot = [hx, hy + lift]
+    for (let k = 1; !spot && k <= 3; k++)
+      for (let a = 0; !spot && a < 12; a++) {
+        const x = hx + Math.cos((a * Math.PI) / 6) * (hw + r) * 1.15 * k,
+          y = hy + Math.sin((a * Math.PI) / 6) * r * 2.3 * k
+        if (free(x, y)) spot = [x, y]
+      }
+    if (!spot) continue
+    out.push({ id: reg.part.id, text, color: m.color, x: spot[0], y: spot[1], hw, hx, hy, moved: Math.hypot(spot[0] - hx, spot[1] - hy) > r * 1.6 })
+  }
+  return out
 }
 
 /** A point well inside the largest loop: the grid point farthest from its edge. */

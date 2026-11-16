@@ -35,7 +35,7 @@ try {
   await page.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })
   const ids = only
     ? only.split(',')
-    : ['medulla', 'pons', 'midbrain', 'diencephalon', 'cerebellum'].flatMap((f) =>
+    : ['medulla', 'pons', 'midbrain', 'diencephalon', 'basal', 'cerebellum'].flatMap((f) =>
         [...readFileSync(`src/data/sections/${f}.ts`, 'utf8').matchAll(/^    id: '([a-z0-9-]+)'/gm)].map((m) => m[1]),
       )
   await page.evaluate(() => window.__atlas.getState().setMode('learn'))

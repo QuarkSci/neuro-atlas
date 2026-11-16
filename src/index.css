@@ -1071,6 +1071,14 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .as-outline { transition: opacity 0.15s, fill-opacity 0.15s; filter: drop-shadow(0 0 0.5px #000) drop-shadow(0 0 0.5px #000); }
 .as-outline.off { stroke-opacity: 0; }
 .as-outline.dim { opacity: 0.55; }
+/* Schematic numbers on the real slice: the plate's badge, in millimetres. */
+.as-mark { cursor: pointer; transition: opacity 0.15s; }
+.as-mark rect { fill: rgba(11, 14, 20, 0.88); stroke-width: 1.5; }
+.as-mark line { stroke-width: 1.2; }
+.as-mark text { font-weight: 700; fill: #fff; font-variant-numeric: tabular-nums; pointer-events: none; }
+.as-mark.dim { opacity: 0.4; }
+.as-mark.active rect { fill: #fff; }
+.as-mark.active text { fill: #0b0e14; }
 .as-credit { font-size: 10.5px; color: var(--fa-muted); margin: 4px 2px 0; }
 .as-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 

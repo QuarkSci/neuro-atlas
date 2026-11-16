@@ -27,7 +27,7 @@ import type { LayerId } from '@/data/types'
 import { useL, useT } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
 import { CATEGORY, CATEGORY_ORDER, FIBRE, NISSL_DARK, STAIN, tissueOf, type Stain } from './sectionStyle'
-import { AtlasSliceView, regionColor, useAtlasSlice } from './AtlasSliceView'
+import { AtlasSliceView, regionColor, useAtlasSlice, type SliceMark } from './AtlasSliceView'
 import { LAYER_BY_ID, PART_BY_ID } from '@/data'
 import { TOPIC_BY_ID, topicsOfSection } from '@/data/topics'
 import { badgePositions, itemArea, itemShapes, mix, sectionEntries, type Entry } from './sectionLayout'
@@ -100,6 +100,20 @@ export function SectionViewer() {
   const cats = useMemo(() => {
     const present = new Set(numbered.map(({ item }) => STRUCTURE_BY_ID.get(item.id)?.cat).filter(Boolean))
     return CATEGORY_ORDER.filter((c) => present.has(c))
+  }, [numbered])
+  // The plate's own numbers, keyed by the atlas parts each structure stands for: the real slice reuses them.
+  const marks = useMemo(() => {
+    const m = new Map<string, SliceMark>()
+    for (const { item, n } of numbered) {
+      const info = STRUCTURE_BY_ID.get(item.id)
+      if (!info?.part) continue
+      for (const id of conceptLeafIds(info.part)) {
+        const had = m.get(id)
+        if (had) (had.ns.push(n), had.items.push(item.id))
+        else m.set(id, { ns: [n], color: CATEGORY[info.cat].color, items: [item.id] })
+      }
+    }
+    return m
   }, [numbered])
 
   const atlas = useAtlasSlice(section ?? SECTIONS[0], section ? CUT_LAYERS[section.region] : [], !!section?.plane && (view === 'atlas' || view === 'real'))
@@ -257,8 +271,8 @@ export function SectionViewer() {
                   <span>{t.svRealContours}</span>
                 </button>
               )}
-              {!cutView && (
-                <button className={numbers ? 'on' : ''} onClick={() => setNumbers(!numbers)} title={t.svNumbers}>
+              {(!cutView || view === 'real') && (
+                <button className={numbers ? 'on' : ''} onClick={() => setNumbers(!numbers)} title={view === 'real' ? t.svRealNumbers : t.svNumbers}>
                   <Hash size={13} />
                   <span>{t.svNumbers}</span>
                 </button>
@@ -301,6 +315,7 @@ export function SectionViewer() {
                   slice={atlas.data}
                   real={view === 'real' ? real : undefined}
                   contours={contours}
+                  marks={view === 'real' && numbers ? marks : undefined}
                   selected={atlasSel}
                   highlightConcept={atlasSel ? null : (selInfo?.part ?? null)}
                   labels={labels}
@@ -353,6 +368,7 @@ export function SectionViewer() {
                 regions={atlas?.data?.regions ?? []}
                 selected={atlasSel}
                 part={atlasPart}
+                scheme={atlasSel ? marks.get(atlasSel) : undefined}
                 onPick={setAtlasSel}
                 onScheme={(concept) => {
                   const match = numbered.find(({ item }) => STRUCTURE_BY_ID.get(item.id)?.part === concept)
@@ -819,6 +835,7 @@ function AtlasList({
   regions,
   selected,
   part,
+  scheme,
   onPick,
   onScheme,
   hasScheme,
@@ -827,6 +844,8 @@ function AtlasList({
   regions: import('@/scene/atlasSlice').SliceRegion[]
   selected: string | null
   part: import('@/scene/atlasSlice').SliceRegion | undefined
+  /** The schematic structure this region stands for, if the plate draws one. */
+  scheme?: SliceMark
   onPick: (id: string) => void
   onScheme: (concept: string) => void
   hasScheme: (concept: string) => boolean
@@ -835,11 +854,18 @@ function AtlasList({
   const t = useT()
   const l = useL()
   const fmt = (v: number) => (v >= 0 ? '+' : '−') + Math.abs(v).toFixed(1)
+  // The plate's text describes this region only when it is the region's sole counterpart.
+  const info = scheme?.items.length === 1 ? STRUCTURE_BY_ID.get(scheme.items[0]) : undefined
   return (
     <>
       {part && (
         <div className="sv-detail" style={{ '--cat': regionColor(part.part) } as React.CSSProperties}>
           <div className="sv-detail-top">
+            {scheme?.ns.map((n) => (
+              <span key={n} className="sv-num" style={{ borderColor: scheme.color }}>
+                {n}
+              </span>
+            ))}
             <span className="sv-cat">{l(LAYER_BY_ID.get(part.part.layer)!.short ?? LAYER_BY_ID.get(part.part.layer)!.name)}</span>
           </div>
           <h3>{l(part.part.name)}</h3>
@@ -853,7 +879,12 @@ function AtlasList({
             <dt>{t.asSource}</dt>
             <dd>{part.part.meshSource?.title ?? LAYER_BY_ID.get(part.part.layer)!.source}</dd>
           </dl>
-          {part.part.description && <p>{l(part.part.description)}</p>}
+          {info ? <p>{l(info.info)}</p> : part.part.description && <p>{l(part.part.description)}</p>}
+          {info?.lesion && (
+            <p className="sv-lesion">
+              <b>{t.svLesion}</b> {l(info.lesion)}
+            </p>
+          )}
           <div className="as-actions">
             {hasScheme(part.part.concept) && (
               <button className="sv-3d" onClick={() => onScheme(part.part.concept)}>

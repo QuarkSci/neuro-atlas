@@ -730,6 +730,26 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
 - Tekshirildi: coverage auditi, `--min 0.15` (T2 "ok"), Sxema (raqam va nomlar) hamda Nissl suratda, tsc + build.
   Tekshirilmadi: Mielin ko'rinishi va viktorina rejimi suratda ko'rilmadi (shakl turi o'zgarmagan, kod o'sha).
 
+### 5.2b — Real kesimda sxema raqamlari (2026-11-16)
+
+- `SectionViewer` `marks`: sxema tuzilmasi (`StructureInfo.part`) → `conceptLeafIds` → atlas qismi id → `SliceMark
+  { ns, items, color }`. `AtlasSliceView` `placeMarks()`: nishon sohaning ichki nuqtasida (mm birligida), joy band
+  bo'lsa qisqa chiziq bilan chetga suriladi; masshtab chizig'i burchagi bo'sh qoldiriladi; <0.5 mm² parchalar o'tkaziladi.
+- Atlas sxemadan qo'polroq bo'lsa (bitta rangpar shar meshi = GPe + GPi + plastinkalar) nishon barcha raqamlarni
+  ko'rsatadi ("4·22"; uchtadan ko'p bo'lsa "12·13 +4"), yon panel hammasini sanaydi. Yagona mos kelganda yon panelda
+  sxema matni (vazifa + shikastlanish) chiqadi.
+- "Raqamlar" tugmasi Real ko'rinishda ham bor; "Konturlar"dan mustaqil (konturlarsiz raqam = gistologiyada o'z-o'zini sinash).
+- O'lchov (nishonlar / sxema yozuvlari): B3 29 nishon (25 bog'langan yozuvdan 17 tasi kesilgan), B4 30, B5 25, B2 24,
+  T1 21, G2 11, G1 10, B1 11; miya ustuni U2 4, U3–K2 7, O1 9, O2 4, O3 2.
+- TOPILMA 1: miya ustunida kam nishon — bog'lanish xatosi emas, `bstem` qatlamida atigi 24 konsept bor (traktlar va
+  bosh nerv yadrolari yo'q). Bog'lanmagan mos konseptlar: `rf` ↔ PnO / mRt (bitta `part` yetmaydi), LDTg (sxemada yo'q).
+- TOPILMA 2: O2 va O3 tekisligi sxemaga mos emas — O2 da `sc`, `rn`, `mgb` umuman kesilmaydi, O3 da 14 bog'langan
+  yozuvdan 1 tasi kesiladi (kesim gipotalamus/talamus orqali o'tadi). Tekislikni tekshirish kerak (K3/Mc oynasi bilan birga).
+- TOPILMA 3: `snc`/`snr` Julich'ga (`j-snc`, `j-snr`) bog'langan, lekin `CUT_LAYERS.midbrain` da Julich yo'q → qora modda raqamsiz.
+- `scripts/shot-sections.mjs` ro'yxatiga `basal` qo'shildi (B1–B5 avval o'tkazib yuborilardi).
+- Tekshirildi: 15 ta real kesimda nishonlar soni (DOM), T1 / B3 / O2 suratda, B3 to'liq ko'ruvchi (tanlov + yon panel),
+  tsc + build. Tekshirilmadi: yorug' rejim, telefon kengligi, "Nomlar" yoqilganda nishonning ko'tarilishi suratda ko'rilmadi.
+
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
 1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).
