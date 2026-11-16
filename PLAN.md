@@ -147,6 +147,13 @@ sessiya va commit. Hech biri hali boshlanmagan.
 **T2 ✅ 2026-11-16:** egasiz 33.0% → 0.0%, ustma-ust 0.4% → 0.1% (`tiling()` — `sections/shapes.ts`; `EGG` —
 `diencephalon.ts`). Qolgan 21 plastinka shu usulda; avval auditda hudud to'ldirishlarini egasi deb sanash kerak.
 
+**Audit aniqlashtirildi (2026-11-16) — qolgan plastinkalarda egasiz maydon YO'Q.** Nuqta tartib bilan tuzilma →
+hudud → nomlangan zamin → hech narsa deb sanaladi; hamma 21 plastinkada "hech narsa" 0.0%. Bo'shliqlar raqamlangan,
+bosiladigan zaminga tegishli: miya ustunida tegmentum (retikulyar formatsiya) 25–59%, bazal yadrolarda yarim shar oq
+moddasi 39–47%, gipotalamusda `hypo-grey` 39–75%, miyachada oq modda 59%. Bular haqiqiy to'qima — yadrolar uning
+ichidagi orollar; to'liq bo'linma qilish anatomik xato bo'lardi. Qoldiq nomzodlar: T1 (talamus ichi), G4 (zonalar
+xaritasi, zamin 75%), ustma-ustliklar (U1 1.8%, K3 1.5%, B1 1.3%, U2 1.1%).
+
 Muammo (foydalanuvchi T2 "Talamus yadrolari" plastinkasida ko'rsatdi): sohalar orasida bo'sh joy bor — masalan
 2 (oldingi yadro) va 3 (mediodorsal) orasi nimaga tegishli ekani tushunarsiz.
 

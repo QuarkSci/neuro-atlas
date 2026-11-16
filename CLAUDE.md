@@ -67,13 +67,17 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 yuradi); yopilmagan soha yoki noma'lum tugun/qirra darhol xato beradi. T2: `diencephalon.ts` `EGG` (23 tugun,
 33 qirra, 11 soha + kontur). Ichki medullyar plastinka endi o'z maydoniga ega Y-tasma, CM — uning orqa uchi.
 
+**Qolgan 21 plastinka — o'lchandi (2026-11-16), qayta chizish SHART EMAS:** `audit-sections.mjs --coverage` endi
+nuqtani tartib bilan tuzilma → hudud (`regions`) → nomlangan zamin (`ground`) → hech narsa deb sanaydi. Natija:
+**hamma plastinkada UNOWNED 0.0%**. Bo'shliqlar nomlangan zaminga tegishli (`tegm-med/pons/mid` — retikulyar
+formatsiya, `hemi-wm`, `hypo-grey`, `cb-wm`); miya ustunida yadrolar haqiqatan ham tegmentum ichidagi orollar,
+shuning uchun ularni to'liq bo'linma qilish anatomik XATO bo'lardi. T2 istisno edi: zamini (`thal`) organning o'zi edi.
+Haqiqiy qoldiqlar (foydalanuvchi tanlaydi): (a) T1 `thalamus-coronal` — talamus ichida yadrolar tutashishi kerak
+(zamin 52%, bir qismi talamus ichida); (b) G4 `hypothalamus-zones` — zamin 75%, T2 ga o'xshash xarita; (c) ustma-ustlik:
+U1 1.8%, K3 1.5%, B1 1.3%, U2 1.1% (qolganlari <1%).
+
 **Keyingi vazifa (foydalanuvchi tasdiqlagan tartib):** Real kesimga sxema raqamlari → yo'llar va shikastlanish →
-viktorina → koordinata vositasi. 5.1 ning davomi (qolgan 21 plastinka) — foydalanuvchi so'rasa:
-1. Avval auditni aniqlashtiring: `audit-sections.mjs --coverage` hudud to'ldirishlarini (`sv-region-fill`) egasi
-   deb sanamaydi, shuning uchun boshqa plastinkalar 39–75% "egasiz" ko'rsatadi — bu o'lchov xatosi.
-2. Har plastinka uchun `tiling()` bilan qayta chizish: tugunlarni eski `B(...)` nuqtalaridan oling, `at` ni qo'lda
-   bering (xom yo'l shaklida avtomatik markaz noaniq), `ground` faqat nomsiz to'qima qolsa qoladi.
-3. Tekshiruv: coverage 0/≈0, `--min 0.15` "ok", `node scripts/shot-sections.mjs <papka> --only <id>` (Sxema + Nissl).
+viktorina → koordinata vositasi.
 
 ## Joriy holat (2026-11-16)
 
