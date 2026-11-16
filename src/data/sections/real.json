@@ -168,45 +168,45 @@
   "file": "midbrain-inferior-colliculus.webp",
   "mmPerPx": 0.1,
   "px": [
-   497,
-   375
+   481,
+   399
   ],
   "source": "bigbrain",
   "window": [
-   -24.77,
-   -25.947,
-   24.953,
-   11.57
+   -23.968,
+   -25.421,
+   24.155,
+   14.465
   ]
  },
  "midbrain-pretectal": {
   "file": "midbrain-pretectal.webp",
   "mmPerPx": 0.1,
   "px": [
-   611,
-   446
+   602,
+   487
   ],
   "source": "bigbrain",
   "window": [
-   -31.382,
-   -23.521,
-   29.697,
-   21.043
+   -30.877,
+   -27.75,
+   29.317,
+   20.958
   ]
  },
  "midbrain-superior-colliculus": {
   "file": "midbrain-superior-colliculus.webp",
-  "mmPerPx": 0.1001,
+  "mmPerPx": 0.0999,
   "px": [
-   540,
-   340
+   526,
+   412
   ],
   "source": "bigbrain",
   "window": [
-   -26.925,
-   -27.587,
-   27.113,
-   6.452
+   -26.139,
+   -26.913,
+   26.416,
+   14.285
   ]
  },
  "pons-facial-colliculus": {

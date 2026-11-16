@@ -36,7 +36,7 @@ import { badgePositions, itemArea, itemShapes, mix, sectionEntries, type Entry }
 export const CUT_LAYERS: Record<Section['region'], LayerId[]> = {
   medulla: ['gross', 'bstem', 'suit'],
   pons: ['gross', 'bstem', 'suit'],
-  midbrain: ['gross', 'bstem'],
+  midbrain: ['gross', 'bstem', 'julich'],
   diencephalon: ['gross', 'julich'],
   hypothalamus: ['gross'],
   'basal-ganglia': ['gross', 'julich'],

@@ -3,6 +3,11 @@
  * plane: in this atlas's own geometry the medulla→midbrain axis runs from
  * (y −38, z −55) to (y −24, z −12), i.e. tilted ~18° forward (Meynert's
  * axis). `brainstemPlane(z)` gives the textbook transverse plane at MNI z.
+ *
+ * Pick z from the meshes, not from a textbook figure: in this geometry the
+ * tectum sits low (inferior colliculus best cut at z −19, superior colliculus
+ * with red nucleus at −13, posterior commissure with pineal at −8). The first
+ * midbrain planes (−17 / −9 / −2) missed the very structures they were named for.
  */
 const AXIS = (() => {
   const d = [0, 14, 43]

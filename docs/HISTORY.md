@@ -750,6 +750,19 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
 - Tekshirildi: 15 ta real kesimda nishonlar soni (DOM), T1 / B3 / O2 suratda, B3 to'liq ko'ruvchi (tanlov + yon panel),
   tsc + build. Tekshirilmadi: yorug' rejim, telefon kengligi, "Nomlar" yoqilganda nishonning ko'tarilishi suratda ko'rilmadi.
 
+### 5.2c — O'rta miya tekisliklari tuzatildi (2026-11-16)
+
+- Sabab: `brainstemPlane(z)` uchun z darslikdan olingan edi, bu atlas (BodyParts3D) geometriyasida esa tektum pastroq:
+  yuqori do'nglik markazi z −11, qizil yadro −16. O2 (z −9) ularning ustidan o'tib, gipotalamus/talamusni kesardi.
+- O'lchov (z bo'yicha sinov, bog'langan tuzilmalar kesim yuzasi mm²): O1 −17 → `ic` 3; −19 → `ic` 40 (tegmentum 71).
+  O2 −9 → `sc`/`rn`/`mgb` 0; −13 → `sc` 37, `rn` 29, `mgb` 31, `snc` 65. O3 −2 → faqat `pretect` 2; −8 → `pc` 59, `pin` 41, `hab` 1.
+- Tuzatish: O1 −19, O2 −13, O3 −8; lokator chiziqlari (`loc`) 2 birlik/mm bo'yicha surildi; `CUT_LAYERS.midbrain` ga
+  `julich` qo'shildi (SNc/SNr endi kesiladi va raqam oladi). Uch real kesim qayta kesildi.
+- Natija (nishonlar): O1 9 → 11, O2 4 → 15, O3 2 → 12.
+- Tekshirildi: O2 va O3 Real ko'rinishda suratda, O2 3D kesimi Julich bilan/siz taqqoslandi (farq — qo'shimcha konturlar),
+  tsc + build. Tekshirilmadi: O1 surati ko'rilmadi (faqat son), Atlas (MNI) ko'rinishi va 3D marker o'rni suratda ko'rilmadi.
+- O3 da sxemadagi qizil yadro kesilmaydi (bu geometriyada u z −11 dan pastda tugaydi) — sxema va atlas shu yerda farq qiladi.
+
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
 1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).

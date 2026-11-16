@@ -191,7 +191,7 @@ Amalga oshirish yo'li (taklif):
 Bajarildi: BigBrain 100 mkm dan 17 daraja uchun real kesim, ustida atlas chegaralari shtrix chiziq bilan
 (tafsilot — CLAUDE.md "Joriy holat"). Litsenziya o'qildi: CC BY-NC-SA 4.0 (`License.txt`), ND emas.
 Sxema raqamlari ✅ 2026-11-16 (nishonlar real kesim ustida; tafsilot HISTORY 5.2b).
-Quyidagi matn — dastlabki reja; undan qolganlari: aralashtirish slayderi, MRI varianti, O2/O3 tekisligi.
+Quyidagi matn — dastlabki reja; undan qolganlari: aralashtirish slayderi, MRI varianti. O1–O3 tekisligi ✅ 2026-11-16 (HISTORY 5.2c).
 
 
 Hozir: Sxema · Mielin · Nissl · Atlas (MNI). Qo'shiladi: **Real** — haqiqiy miya kesimi, ustida har tuzilmaning

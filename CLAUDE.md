@@ -144,9 +144,12 @@ tanlov kapsulasi bosilganda shaffof linzaga aylanib barmoq ortidan sirg'aladi).
   Yo'q: U1 (hajm u darajaga yetmaydi), K3 va Mc (oyna >110 mm — bu oyna xatosi, alohida tuzatish kerak), T2 (kesim emas).
   **Sxema raqamlari ✅ (2026-11-16):** `SectionViewer` `marks` (sxema `part` → atlas qismi) → `AtlasSliceView` `placeMarks()`;
   bitta atlas sohasi bir necha sxema tuzilmasiga to'g'ri kelsa nishon hammasini yozadi ("4·22", "12·13 +4").
-  QOLDI: sxema↔real aralashtirish; MRI varianti; K3/Mc oynasi; **O2/O3 tekisligi sxemaga mos emas** (O2 da `sc`/`rn`
-  kesilmaydi, O3 da 14 bog'lanishdan 1 tasi); `snc`/`snr` Julich'ga bog'langan, o'rta miya kesimida Julich yo'q;
-  miya ustunida nishon kam (U2 4, O1 9) — `bstem` qatlamida 24 konsept, bu atlas chegarasi.
+  **O'rta miya tekisliklari ✅ (2026-11-16):** O1 z −19, O2 −13, O3 −8 (avval −17/−9/−2 — nomidagi tuzilmalarni kesmasdi);
+  `CUT_LAYERS.midbrain` ga Julich qo'shildi (SNc/SNr). QOIDA: `brainstemPlane(z)` uchun z meshlardan o'lchanadi
+  (z bo'yicha sinab, bog'langan tuzilmalar kesim yuzasini sanang), darslik rasmidan emas. Tekislik o'zgarsa:
+  `export-section-frames.mjs` → `real_slices.py` (3 s) qayta ishga tushiriladi.
+  QOLDI: sxema↔real aralashtirish; MRI varianti; K3/Mc oynasi; miya ustunida nishon kam (U2 4) — `bstem`
+  qatlamida 24 konsept, bu atlas chegarasi.
   `pipeline/.venv` qayta yaratildi (numpy, nibabel, scipy, pillow) — eski muhit diskda yo'q edi.
 
 Keyin (foydalanuvchi tanlaydi): mavzu viktorinasi (kesim+dars birlashgan), BG-2 yo'llar sxemasi,
