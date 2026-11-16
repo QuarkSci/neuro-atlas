@@ -144,6 +144,9 @@ sessiya va commit. Hech biri hali boshlanmagan.
 
 ### 5.1 Kesim sxemalarida chegaralar 100% tutashsin (TALAB)
 
+**T2 ✅ 2026-11-16:** egasiz 33.0% → 0.0%, ustma-ust 0.4% → 0.1% (`tiling()` — `sections/shapes.ts`; `EGG` —
+`diencephalon.ts`). Qolgan 21 plastinka shu usulda; avval auditda hudud to'ldirishlarini egasi deb sanash kerak.
+
 Muammo (foydalanuvchi T2 "Talamus yadrolari" plastinkasida ko'rsatdi): sohalar orasida bo'sh joy bor — masalan
 2 (oldingi yadro) va 3 (mediodorsal) orasi nimaga tegishli ekani tushunarsiz.
 

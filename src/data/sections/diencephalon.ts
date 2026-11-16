@@ -1,4 +1,4 @@
-import { B, D, E, L, sym } from './shapes'
+import { B, D, E, L, sym, tiling } from './shapes'
 import type { Section } from './types'
 
 const AXES_COR: Section['axes'] = [
@@ -34,11 +34,125 @@ const coronal = (y: number) => ({ point: [0, y, 0] as [number, number, number], 
 /** Hypothalamic crop: 3rd ventricle in the middle, thalamus above, walls either side. */
 // Lateral edge follows the internal capsule: the crop stops where the
 // hypothalamus does, so no lentiform tissue is left unnamed beside it.
-const hypoOutline = [B(...sym([[H, 40], [200, 40], [138, 46], [100, 72], [86, 130], [84, 200], [90, 270], [114, 330], [176, 366], [236, 370], [H, 362]], H))]
+const hypoOutline = [
+  B(
+    ...sym(
+      [
+        [H, 40],
+        [200, 40],
+        [138, 46],
+        [100, 72],
+        [86, 130],
+        [84, 200],
+        [90, 270],
+        [114, 330],
+        [176, 366],
+        [236, 370],
+        [H, 362],
+      ],
+      H,
+    ),
+  ),
+]
 const hypoRegions = (sulcus: number): Section['regions'] => [
-  { id: 'thal', shapes: [B([H - 6, 46], [196, 48], [128, 62], [118, sulcus - 8], [200, sulcus], [H - 6, sulcus + 6]), B([H + 6, 46], [324, 48], [392, 62], [402, sulcus - 8], [320, sulcus], [H + 6, sulcus + 6])], label: { en: 'Thalamus', uz: 'Talamus' }, at: [160, 86] },
+  {
+    id: 'thal',
+    shapes: [
+      B([H - 6, 46], [196, 48], [128, 62], [118, sulcus - 8], [200, sulcus], [H - 6, sulcus + 6]),
+      B([H + 6, 46], [324, 48], [392, 62], [402, sulcus - 8], [320, sulcus], [H + 6, sulcus + 6]),
+    ],
+    label: { en: 'Thalamus', uz: 'Talamus' },
+    at: [160, 86],
+  },
   { shapes: [L(2, [H - 4, sulcus + 8], [196, sulcus + 2]), L(2, [H + 4, sulcus + 8], [324, sulcus + 2])] },
 ]
+
+/**
+ * T2, the thalamic "egg", as a partition (see `tiling`): every border is one
+ * shared edge, so the nuclei abut exactly as they do in the thalamus and no
+ * strip of unnamed ground is left between them. The internal medullary lamina
+ * is a real Y-shaped band with its own area, not a line laid over a gap; the
+ * centromedian nucleus is the swollen caudal end of that band, where the
+ * intralaminar nuclei sit.
+ */
+const EGG = tiling(
+  {
+    // On the outline, clockwise from the rostral pole.
+    La: [110, 200], // lower limb of the lamina, anterior-nucleus side
+    Ub: [148, 110], // upper limb, anterior-nucleus side
+    Ua: [160, 102], // upper limb, mediodorsal side
+    Pd: [452, 96], // pulvinar border, dorsal end
+    Pv: [452, 300], // pulvinar border, ventral end
+    V3: [400, 307], // VPL | VPM
+    V2: [302, 308], // VL | VPL
+    V1: [205, 294], // VA | VL
+    Lb: [112, 214], // lower limb, lateral-group side
+    // Inside.
+    Ja: [286, 177], // fork of the Y, anterior-nucleus corner
+    Jt: [302, 168], // fork, mediodorsal corner
+    Jb: [296, 188], // fork, lateral-group corner
+    A1: [200, 211], // VA | VL meets the lower limb
+    D0: [250, 205], // dorsal | ventral tier border leaves the lower limb
+    Sb: [350, 188], // LD | LP meets the stem
+    Ct: [388, 174], // centromedian, rostral corners
+    Cb: [388, 191],
+    Pt: [434, 174], // centromedian meets the pulvinar
+    Pb: [434, 192],
+    T1: [300, 221], // tier border: VL | VPL
+    T2: [350, 224], // tier border: LD | LP
+    T25: [392, 226], // tier border: VPL | VPM
+    T3: [432, 226], // tier border meets the pulvinar
+  },
+  {
+    oAN: ['La', [113, 162], [128, 131], 'Ub'],
+    oIMLu: ['Ub', 'Ua'],
+    oMD: ['Ua', [214, 82], [336, 74], 'Pd'],
+    oPUL: ['Pd', [526, 150], [548, 214], [516, 276], 'Pv'],
+    oVPM: ['V3', [428, 305], 'Pv'],
+    oVPL: ['V2', [350, 309], 'V3'],
+    oVL: ['V1', [250, 303], 'V2'],
+    oVA: ['Lb', [118, 240], [134, 258], [164, 278], 'V1'],
+    oIMLl: ['La', 'Lb'],
+    upAN: ['Ub', [200, 130], [248, 154], 'Ja'],
+    loAN: ['Ja', [240, 194], [172, 201], 'La'],
+    upMD: ['Ua', [210, 119], [260, 144], 'Jt'],
+    stemT: ['Jt', [345, 171], 'Ct'],
+    cmT: ['Ct', [411, 166], 'Pt'],
+    loVA: ['Lb', [160, 214], 'A1'],
+    loVL: ['A1', 'D0'],
+    loLD: ['D0', [276, 197], 'Jb'],
+    stemLD: ['Jb', [322, 189], 'Sb'],
+    stemLP: ['Sb', 'Cb'],
+    cmB: ['Cb', [411, 199], 'Pb'],
+    cmL: ['Ct', 'Cb'],
+    pulMD: ['Pd', [446, 138], 'Pt'],
+    pulCM: ['Pt', 'Pb'],
+    pulLP: ['Pb', 'T3'],
+    pulVPM: ['T3', [437, 266], 'Pv'],
+    tierVL: ['D0', [276, 214], 'T1'],
+    tierLD: ['T1', 'T2'],
+    tierLPa: ['T2', 'T25'],
+    tierLPb: ['T25', 'T3'],
+    vaVl: ['A1', [210, 252], 'V1'],
+    vlVpl: ['T1', [298, 265], 'V2'],
+    vplVpm: ['T25', [392, 268], 'V3'],
+    ldLp: ['Sb', 'T2'],
+  },
+  {
+    outline: ['oAN', 'oIMLu', 'oMD', 'oPUL', '-oVPM', '-oVPL', '-oVL', '-oVA', '-oIMLl'],
+    an: ['oAN', 'upAN', 'loAN'],
+    iml: ['oIMLu', 'upMD', 'stemT', 'cmL', '-stemLP', '-stemLD', '-loLD', '-loVL', '-loVA', '-oIMLl', '-loAN', '-upAN'],
+    md: ['oMD', 'pulMD', '-cmT', '-stemT', '-upMD'],
+    cm: ['cmT', 'pulCM', '-cmB', '-cmL'],
+    pul: ['oPUL', '-pulVPM', '-pulLP', '-pulCM', '-pulMD'],
+    ld: ['loLD', 'stemLD', 'ldLp', '-tierLD', '-tierVL'],
+    lp: ['stemLP', 'cmB', 'pulLP', '-tierLPb', '-tierLPa', '-ldLp'],
+    va: ['loVA', 'vaVl', '-oVA'],
+    vl: ['loVL', 'tierVL', 'vlVpl', '-oVL', '-vaVl'],
+    vpl: ['tierLD', 'tierLPa', 'vplVpm', '-oVPL', '-vlVpl'],
+    vpm: ['tierLPb', 'pulVPM', '-oVPM', '-vplVpm'],
+  },
+)
 
 export const DIENCEPHALON: Section[] = [
   // ── T1 · Mid-thalamic coronal ──────────────────────────────────────
@@ -55,9 +169,36 @@ export const DIENCEPHALON: Section[] = [
     w: 640,
     h: 420,
     axes: AXES_COR,
-    outline: [B(...sym([[C, 24], [220, 24], [110, 36], [66, 84], [56, 190], [70, 296], [112, 358], [196, 384], [272, 380], [C, 352]], C))],
+    outline: [
+      B(
+        ...sym(
+          [
+            [C, 24],
+            [220, 24],
+            [110, 36],
+            [66, 84],
+            [56, 190],
+            [70, 296],
+            [112, 358],
+            [196, 384],
+            [272, 380],
+            [C, 352],
+          ],
+          C,
+        ),
+      ),
+    ],
     ground: 'hemi-wm',
-    regions: [{ id: 'thal', shapes: [B([310, 112], [280, 104], [244, 108], [214, 124], [196, 152], [192, 196], [204, 236], [232, 262], [270, 272], [304, 268], [312, 240]), B([330, 112], [360, 104], [396, 108], [426, 124], [444, 152], [448, 196], [436, 236], [408, 262], [370, 272], [336, 268], [328, 240])], label: { en: 'Thalamus', uz: 'Talamus' } }],
+    regions: [
+      {
+        id: 'thal',
+        shapes: [
+          B([310, 112], [280, 104], [244, 108], [214, 124], [196, 152], [192, 196], [204, 236], [232, 262], [270, 272], [304, 268], [312, 240]),
+          B([330, 112], [360, 104], [396, 108], [426, 124], [444, 152], [448, 196], [436, 236], [408, 262], [370, 272], [336, 268], [328, 240]),
+        ],
+        label: { en: 'Thalamus', uz: 'Talamus' },
+      },
+    ],
     items: [
       { id: 'cca', mirror: true, at: [214, 52], shapes: [B([C, 36], [250, 34], [180, 42], [124, 62], [130, 78], [188, 60], [254, 52], [C, 54])] },
       { id: 'lv', mirror: true, shapes: [B([304, 62], [254, 62], [210, 72], [214, 88], [258, 84], [304, 80])], note: { en: 'body', uz: 'tanasi' } },
@@ -74,14 +215,26 @@ export const DIENCEPHALON: Section[] = [
       { id: 'th-eml', mirror: true, at: [204, 140], shapes: [L(2.4, [222, 118], [204, 146], [198, 190], [208, 232], [232, 256])] },
       { id: 'th-ret', mirror: true, at: [190, 190], shapes: [B([212, 116], [190, 140], [182, 190], [194, 236], [222, 262], [214, 240], [200, 192], [204, 146], [218, 122])] },
       { id: 'v3', shapes: [B([316, 104], [313, 150], [313, 220], [316, 300], [324, 300], [327, 220], [327, 150], [324, 104])], at: [C, 160] },
-      { id: 'ic3', mirror: true, at: [166, 208], shapes: [B([186, 112], [170, 124], [160, 160], [156, 214], [164, 262], [178, 264], [178, 214], [182, 160], [192, 124])], note: { en: 'posterior limb', uz: "orqa oyog'i" } },
+      {
+        id: 'ic3',
+        mirror: true,
+        at: [166, 208],
+        shapes: [B([186, 112], [170, 124], [160, 160], [156, 214], [164, 262], [178, 264], [178, 214], [182, 160], [192, 124])],
+        note: { en: 'posterior limb', uz: "orqa oyog'i" },
+      },
       { id: 'put', mirror: true, shapes: [B([124, 112], [104, 140], [96, 190], [106, 232], [124, 226], [128, 170], [132, 124])] },
       { id: 'gpe', mirror: true, shapes: [B([137, 150], [128, 178], [132, 210], [140, 198], [142, 168])] },
       { id: 'gpi', mirror: true, shapes: [B([149, 172], [144, 190], [147, 210], [153, 195])] },
       { id: 'zi', mirror: true, at: [236, 278], shapes: [L(4, [298, 284], [266, 282], [232, 278], [204, 272])] },
       { id: 'stn', mirror: true, shapes: [E(250, 302, 26, 9, -12)] },
       { id: 'rn', mirror: true, shapes: [E(290, 318, 14, 13)], note: { en: 'rostral pole', uz: 'rostral qutbi' } },
-      { id: 'snr', mirror: true, at: [236, 330], shapes: [B([262, 322], [238, 318], [220, 334], [244, 344], [266, 336])], note: { en: 'substantia nigra (rostral)', uz: 'qora modda (rostral)' } },
+      {
+        id: 'snr',
+        mirror: true,
+        at: [236, 330],
+        shapes: [B([262, 322], [238, 318], [220, 334], [244, 344], [266, 336])],
+        note: { en: 'substantia nigra (rostral)', uz: 'qora modda (rostral)' },
+      },
       { id: 'crus', mirror: true, at: [196, 330], shapes: [B([222, 312], [196, 306], [168, 294], [150, 286], [146, 312], [168, 344], [204, 360], [232, 352])] },
       { id: 'ot', mirror: true, shapes: [E(144, 336, 11, 7, 30)] },
     ],
@@ -94,9 +247,27 @@ export const DIENCEPHALON: Section[] = [
       uz: "To'rt talamik hudud: tuberotalamik (PCom: oldingi, VA, ventral VL), paramedian / talamoperforant (P1: MD, CM, intralaminar — Percheron arteriyasi), inferolateral / talamogenikulyar (P2: VPL, VPM, VL), orqa xorioidal (pulvinar, LGN, LP). Ichki kapsula orqa oyog'i: oldingi xorioidal va lentikulostriar arteriyalar.",
     },
     syndromes: [
-      { name: { en: 'Dejerine–Roussy (thalamic pain)', uz: "Dejerine–Roussy (talamik og'riq)" }, text: { en: 'Inferolateral (thalamogeniculate) infarct of VPL/VPM: contralateral hemianaesthesia, then burning allodynic central pain; hemiataxia, choreoathetosis.', uz: "VPL/VPM ning inferolateral (talamogenikulyar) infarkti: qarama-qarshi gemianesteziya, keyin achishtiruvchi allodinik markaziy og'riq; gemiataksiya, xoreoatetoz." } },
-      { name: { en: 'Artery of Percheron infarct', uz: 'Percheron arteriyasi infarkti' }, text: { en: 'Bilateral paramedian thalami (MD, intralaminar) ± rostral midbrain: coma or hypersomnolence, vertical gaze palsy, amnesia, apathy.', uz: "Ikki tomonlama paramedian talamus (MD, intralaminar) ± rostral o'rta miya: koma yoki gipersomnoliya, vertikal qarash falaji, amneziya, apatiya." } },
-      { name: { en: 'Hemiballismus', uz: 'Gemiballizm' }, text: { en: 'Lacunar lesion of the subthalamic nucleus: violent flinging movements of the contralateral limbs (loss of STN drive to GPi → thalamic disinhibition).', uz: "Subtalamik yadroning lakunar zararlanishi: qarama-qarshi oyoq-qo'llarning keskin otilib ketuvchi harakatlari (STN → GPi qo'zg'alishi yo'qolishi → talamus tormozdan chiqadi)." } },
+      {
+        name: { en: 'Dejerine–Roussy (thalamic pain)', uz: "Dejerine–Roussy (talamik og'riq)" },
+        text: {
+          en: 'Inferolateral (thalamogeniculate) infarct of VPL/VPM: contralateral hemianaesthesia, then burning allodynic central pain; hemiataxia, choreoathetosis.',
+          uz: "VPL/VPM ning inferolateral (talamogenikulyar) infarkti: qarama-qarshi gemianesteziya, keyin achishtiruvchi allodinik markaziy og'riq; gemiataksiya, xoreoatetoz.",
+        },
+      },
+      {
+        name: { en: 'Artery of Percheron infarct', uz: 'Percheron arteriyasi infarkti' },
+        text: {
+          en: 'Bilateral paramedian thalami (MD, intralaminar) ± rostral midbrain: coma or hypersomnolence, vertical gaze palsy, amnesia, apathy.',
+          uz: "Ikki tomonlama paramedian talamus (MD, intralaminar) ± rostral o'rta miya: koma yoki gipersomnoliya, vertikal qarash falaji, amneziya, apatiya.",
+        },
+      },
+      {
+        name: { en: 'Hemiballismus', uz: 'Gemiballizm' },
+        text: {
+          en: 'Lacunar lesion of the subthalamic nucleus: violent flinging movements of the contralateral limbs (loss of STN drive to GPi → thalamic disinhibition).',
+          uz: "Subtalamik yadroning lakunar zararlanishi: qarama-qarshi oyoq-qo'llarning keskin otilib ketuvchi harakatlari (STN → GPi qo'zg'alishi yo'qolishi → talamus tormozdan chiqadi).",
+        },
+      },
     ],
     sources: SRC_TH,
   },
@@ -107,30 +278,34 @@ export const DIENCEPHALON: Section[] = [
     code: 'T2',
     region: 'diencephalon',
     title: { en: 'Thalamic nuclei — 3D map (dorsolateral view)', uz: "Talamus yadrolari — fazoviy xarita (dorsolateral ko'rinish)" },
-    orientation: { en: 'Not a cut: the classic "egg" diagram of the left thalamus, anterior to the left', uz: "Kesim emas: chap talamusning klassik 'tuxum' sxemasi, old tomon chapda" },
+    orientation: {
+      en: 'Not a cut: the classic "egg" diagram of the left thalamus, anterior to the left',
+      uz: "Kesim emas: chap talamusning klassik 'tuxum' sxemasi, old tomon chapda",
+    },
     contour: THAL_MESH,
     pin: { side: 'top', off: 12 },
     w: 640,
     h: 380,
     axes: AXES_SAG,
-    outline: [B([110, 196], [134, 124], [214, 82], [336, 74], [452, 96], [526, 150], [548, 214], [516, 276], [420, 306], [300, 308], [188, 290], [130, 254])],
-    ground: 'thal',
+    // No `ground`: the partition leaves no unnamed tissue for it to stand for.
+    outline: [EGG.outline],
     items: [
-      { id: 'th-iml', at: [356, 182], shapes: [L(7, [440, 186], [372, 182], [304, 178]), L(7, [304, 178], [252, 146], [176, 120]), L(7, [304, 178], [244, 204], [170, 214])] },
-      { id: 'th-an', shapes: [B([168, 128], [236, 140], [282, 174], [238, 196], [172, 206], [140, 172])] },
-      { id: 'th-md', shapes: [B([270, 96], [350, 86], [420, 104], [446, 150], [420, 172], [340, 170], [292, 156], [262, 128])] },
-      { id: 'th-cm', shapes: [E(410, 184, 18, 8)] },
-      { id: 'th-ld', shapes: [B([300, 192], [340, 190], [348, 212], [306, 216], [282, 208])] },
-      { id: 'th-lp', shapes: [B([352, 192], [416, 196], [424, 220], [356, 222])] },
-      { id: 'th-pul', shapes: [B([452, 108], [520, 152], [544, 214], [512, 270], [460, 278], [432, 236], [430, 196], [448, 172])] },
-      { id: 'th-va', shapes: [B([150, 222], [196, 216], [222, 228], [216, 268], [172, 266], [140, 246])] },
-      { id: 'th-vl', shapes: [B([226, 226], [290, 222], [300, 262], [290, 290], [232, 282], [220, 260])], note: { en: 'VLa (pallidal) + VLp/Vim (cerebellar)', uz: 'VLa (pallidar) + VLp/Vim (miyacha)' } },
-      { id: 'th-vpl', shapes: [B([306, 226], [380, 228], [392, 262], [370, 296], [310, 296], [300, 262])] },
-      { id: 'th-vpm', shapes: [B([384, 232], [426, 236], [432, 270], [400, 298], [378, 290], [394, 262])] },
+      { id: 'th-iml', at: [330, 180], shapes: [EGG.iml] },
+      { id: 'th-an', at: [190, 164], shapes: [EGG.an] },
+      { id: 'th-md', at: [330, 124], shapes: [EGG.md] },
+      { id: 'th-cm', at: [411, 183], shapes: [EGG.cm] },
+      { id: 'th-ld', at: [304, 204], shapes: [EGG.ld] },
+      { id: 'th-lp', at: [392, 208], shapes: [EGG.lp] },
+      { id: 'th-pul', at: [490, 200], shapes: [EGG.pul] },
+      { id: 'th-va', at: [160, 246], shapes: [EGG.va] },
+      { id: 'th-vl', at: [252, 258], shapes: [EGG.vl], note: { en: 'VLa (pallidal) + VLp/Vim (cerebellar)', uz: 'VLa (pallidar) + VLp/Vim (miyacha)' } },
+      { id: 'th-vpl', at: [346, 266], shapes: [EGG.vpl] },
+      { id: 'th-vpm', at: [420, 268], shapes: [EGG.vpm] },
       { id: 'lgn', shapes: [E(476, 312, 26, 16, -10)] },
       { id: 'mgb', shapes: [E(418, 326, 22, 14)] },
-      { id: 'th-ret', at: [128, 214], shapes: [D(3, [120, 220], [140, 272], [196, 302], [300, 318], [420, 316])] },
-      { id: 'th-mid', at: [220, 112], shapes: [D(3, [186, 108], [240, 96], [280, 90])] },
+      { id: 'th-ret', at: [176, 300], shapes: [D(3, [106, 226], [128, 272], [190, 306], [300, 322], [420, 320])] },
+      // A shell on the medial surface: drawn just off the dorsal rim, not over MD.
+      { id: 'th-mid', at: [262, 62], shapes: [D(3, [196, 78], [262, 66], [334, 62])] },
     ],
     landmarks: {
       en: 'Y-shaped internal medullary lamina: anterior group in the fork (Papez circuit), medial group (MD, prefrontal) dorsomedially, lateral group below/lateral. The lateral group has a dorsal tier (LD → LP → pulvinar, association) and a ventral tier from front to back VA → VL → VPL/VPM (motor → somatosensory). Metathalamus: LGN (vision) and MGN (hearing) under the pulvinar. CM (intralaminar) sits in the lamina; the reticular nucleus caps the lateral surface.',
@@ -138,11 +313,23 @@ export const DIENCEPHALON: Section[] = [
     },
     blood: {
       en: 'Tuberothalamic (anterior/VA), paramedian (MD/CM), thalamogeniculate (VL/VPL/VPM), posterior choroidal (pulvinar/LGN/LP).',
-      uz: "Tuberotalamik (oldingi/VA), paramedian (MD/CM), talamogenikulyar (VL/VPL/VPM), orqa xorioidal (pulvinar/LGN/LP).",
+      uz: 'Tuberotalamik (oldingi/VA), paramedian (MD/CM), talamogenikulyar (VL/VPL/VPM), orqa xorioidal (pulvinar/LGN/LP).',
     },
     syndromes: [
-      { name: { en: 'Specific vs non-specific nuclei', uz: 'Spetsifik va nospetsifik yadrolar' }, text: { en: 'Relay (specific) nuclei project to one cortical area (VPL → S1, LGN → V1, VL → M1); association nuclei (MD, pulvinar, LP) to association cortex; non-specific intralaminar/midline nuclei (CM, Pf) diffusely to cortex and striatum — arousal.', uz: "Bo'g'in (spetsifik) yadrolar bitta po'stloq sohasiga (VPL → S1, LGN → V1, VL → M1); assotsiativ yadrolar (MD, pulvinar, LP) assotsiativ po'stloqqa; nospetsifik intralaminar/o'rta chiziq yadrolari (CM, Pf) po'stloq va striatumga diffuz — uyg'oqlik." } },
-      { name: { en: 'Stereotactic targets', uz: 'Stereotaktik nishonlar' }, text: { en: 'Vim (VLp) — tremor (DBS, MRgFUS thalamotomy); anterior nucleus — epilepsy (SANTE trial); CM–Pf — Tourette, generalized epilepsy; pulvinar — experimental for posterior-quadrant epilepsy.', uz: "Vim (VLp) — tremor (DBS, MRgFUS talamotomiya); oldingi yadro — epilepsiya (SANTE tadqiqoti); CM–Pf — Tourette, generallashgan epilepsiya; pulvinar — orqa kvadrant epilepsiyasida eksperimental." } },
+      {
+        name: { en: 'Specific vs non-specific nuclei', uz: 'Spetsifik va nospetsifik yadrolar' },
+        text: {
+          en: 'Relay (specific) nuclei project to one cortical area (VPL → S1, LGN → V1, VL → M1); association nuclei (MD, pulvinar, LP) to association cortex; non-specific intralaminar/midline nuclei (CM, Pf) diffusely to cortex and striatum — arousal.',
+          uz: "Bo'g'in (spetsifik) yadrolar bitta po'stloq sohasiga (VPL → S1, LGN → V1, VL → M1); assotsiativ yadrolar (MD, pulvinar, LP) assotsiativ po'stloqqa; nospetsifik intralaminar/o'rta chiziq yadrolari (CM, Pf) po'stloq va striatumga diffuz — uyg'oqlik.",
+        },
+      },
+      {
+        name: { en: 'Stereotactic targets', uz: 'Stereotaktik nishonlar' },
+        text: {
+          en: 'Vim (VLp) — tremor (DBS, MRgFUS thalamotomy); anterior nucleus — epilepsy (SANTE trial); CM–Pf — Tourette, generalized epilepsy; pulvinar — experimental for posterior-quadrant epilepsy.',
+          uz: 'Vim (VLp) — tremor (DBS, MRgFUS talamotomiya); oldingi yadro — epilepsiya (SANTE tadqiqoti); CM–Pf — Tourette, generallashgan epilepsiya; pulvinar — orqa kvadrant epilepsiyasida eksperimental.',
+        },
+      },
     ],
     sources: SRC_TH,
   },
@@ -165,8 +352,18 @@ export const DIENCEPHALON: Section[] = [
     ground: 'hypo-grey',
     regions: hypoRegions(150),
     items: [
-      { id: 'ac', at: [H, 128], shapes: [B([150, 122], [200, 116], [H, 120], [320, 116], [370, 122], [366, 136], [H, 134], [154, 136])], note: { en: 'just rostral', uz: 'sal oldinda' } },
-      { id: 'v3', shapes: [B([H - 5, 140], [H - 7, 220], [H - 4, 300], [H, 312], [H + 4, 300], [H + 7, 220], [H + 5, 140])], at: [H, 200], note: { en: 'with optic recess', uz: "ko'rish cho'ntagi bilan" } },
+      {
+        id: 'ac',
+        at: [H, 128],
+        shapes: [B([150, 122], [200, 116], [H, 120], [320, 116], [370, 122], [366, 136], [H, 134], [154, 136])],
+        note: { en: 'just rostral', uz: 'sal oldinda' },
+      },
+      {
+        id: 'v3',
+        shapes: [B([H - 5, 140], [H - 7, 220], [H - 4, 300], [H, 312], [H + 4, 300], [H + 7, 220], [H + 5, 140])],
+        at: [H, 200],
+        note: { en: 'with optic recess', uz: "ko'rish cho'ntagi bilan" },
+      },
       { id: 'pvn', mirror: true, shapes: [B([252, 162], [234, 170], [232, 214], [252, 218])] },
       { id: 'fx', mirror: true, shapes: [E(208, 178, 9, 10)], note: { en: 'column — medial | lateral zone border', uz: 'ustuni — medial | lateral zona chegarasi' } },
       { id: 'ahn', mirror: true, shapes: [E(226, 248, 15, 15)] },
@@ -174,7 +371,13 @@ export const DIENCEPHALON: Section[] = [
       { id: 'scn', mirror: true, shapes: [E(246, 300, 8, 9)] },
       { id: 'son', mirror: true, shapes: [B([214, 296], [190, 300], [176, 318], [198, 316], [222, 306])] },
       { id: 'och', at: [196, 336], shapes: [B([150, 318], [200, 316], [H, 320], [320, 316], [370, 318], [372, 344], [H, 350], [148, 344])] },
-      { id: 'ic3', mirror: true, at: [118, 210], shapes: [B([140, 120], [118, 150], [104, 220], [112, 290], [130, 300], [136, 230], [150, 160])], note: { en: 'genu / posterior limb', uz: "tizza / orqa oyog'i" } },
+      {
+        id: 'ic3',
+        mirror: true,
+        at: [118, 210],
+        shapes: [B([140, 120], [118, 150], [104, 220], [112, 290], [130, 300], [136, 230], [150, 160])],
+        note: { en: 'genu / posterior limb', uz: "tizza / orqa oyog'i" },
+      },
       { id: 'gpi', mirror: true, at: [92, 200], shapes: [B([104, 160], [88, 190], [90, 240], [102, 236], [106, 196])] },
     ],
     landmarks: {
@@ -183,12 +386,30 @@ export const DIENCEPHALON: Section[] = [
     },
     blood: {
       en: 'Anterior communicating / A1 perforators and superior hypophyseal arteries (preoptic–supraoptic region, chiasm); anteromedial branches of the circle of Willis.',
-      uz: "Oldingi biriktiruvchi / A1 perforantlari va yuqori gipofizar arteriyalar (preoptik–supraoptik soha, kesishma); Willis halqasining anteromedial shoxlari.",
+      uz: 'Oldingi biriktiruvchi / A1 perforantlari va yuqori gipofizar arteriyalar (preoptik–supraoptik soha, kesishma); Willis halqasining anteromedial shoxlari.',
     },
     syndromes: [
-      { name: { en: 'Central diabetes insipidus', uz: 'Markaziy qandsiz diabet' }, text: { en: 'Damage to SON/PVN or high stalk (craniopharyngioma, surgery, histiocytosis): polyuria of dilute urine, hypernatraemia; responds to desmopressin. Triphasic response after pituitary surgery (DI → SIADH → DI).', uz: "SON/PVN yoki oyoqchaning yuqori qismi zararlanishi (kraniofaringioma, jarrohlik, gistiotsitoz): suyultirilgan siydikli poliuriya, gipernatriyemiya; desmopressinga javob beradi. Gipofiz jarrohligidan keyin uch fazali javob (DI → SIADH → DI)." } },
-      { name: { en: 'Chiasmal syndrome', uz: 'Xiazmal sindrom' }, text: { en: 'Pituitary macroadenoma from below → bitemporal superior quadrantanopia progressing to hemianopia; craniopharyngioma from above → inferior quadrants first.', uz: "Pastdan gipofiz makroadenomasi → bitemporal yuqori kvadrant anopsiyasi, keyin gemianopiya; yuqoridan kraniofaringioma → avval pastki kvadrantlar." } },
-      { name: { en: 'Disturbed circadian rhythm / hyperthermia', uz: 'Sirkad ritm buzilishi / gipertermiya' }, text: { en: 'SCN and anterior hypothalamic (heat-loss) damage → irregular sleep–wake cycle and central hyperthermia.', uz: "SCN va oldingi gipotalamus (issiqlik chiqarish) zararlanishi → tartibsiz uyqu–uyg'oqlik sikli va markaziy gipertermiya." } },
+      {
+        name: { en: 'Central diabetes insipidus', uz: 'Markaziy qandsiz diabet' },
+        text: {
+          en: 'Damage to SON/PVN or high stalk (craniopharyngioma, surgery, histiocytosis): polyuria of dilute urine, hypernatraemia; responds to desmopressin. Triphasic response after pituitary surgery (DI → SIADH → DI).',
+          uz: 'SON/PVN yoki oyoqchaning yuqori qismi zararlanishi (kraniofaringioma, jarrohlik, gistiotsitoz): suyultirilgan siydikli poliuriya, gipernatriyemiya; desmopressinga javob beradi. Gipofiz jarrohligidan keyin uch fazali javob (DI → SIADH → DI).',
+        },
+      },
+      {
+        name: { en: 'Chiasmal syndrome', uz: 'Xiazmal sindrom' },
+        text: {
+          en: 'Pituitary macroadenoma from below → bitemporal superior quadrantanopia progressing to hemianopia; craniopharyngioma from above → inferior quadrants first.',
+          uz: 'Pastdan gipofiz makroadenomasi → bitemporal yuqori kvadrant anopsiyasi, keyin gemianopiya; yuqoridan kraniofaringioma → avval pastki kvadrantlar.',
+        },
+      },
+      {
+        name: { en: 'Disturbed circadian rhythm / hyperthermia', uz: 'Sirkad ritm buzilishi / gipertermiya' },
+        text: {
+          en: 'SCN and anterior hypothalamic (heat-loss) damage → irregular sleep–wake cycle and central hyperthermia.',
+          uz: "SCN va oldingi gipotalamus (issiqlik chiqarish) zararlanishi → tartibsiz uyqu–uyg'oqlik sikli va markaziy gipertermiya.",
+        },
+      },
     ],
     sources: SRC_HY,
   },
@@ -211,7 +432,12 @@ export const DIENCEPHALON: Section[] = [
     ground: 'hypo-grey',
     regions: hypoRegions(140),
     items: [
-      { id: 'v3', shapes: [B([H - 5, 130], [H - 7, 220], [H - 5, 290], [H, 316], [H + 5, 290], [H + 7, 220], [H + 5, 130])], at: [H, 190], note: { en: 'infundibular recess below', uz: "pastida infundibulyar cho'ntak" } },
+      {
+        id: 'v3',
+        shapes: [B([H - 5, 130], [H - 7, 220], [H - 5, 290], [H, 316], [H + 5, 290], [H + 7, 220], [H + 5, 130])],
+        at: [H, 190],
+        note: { en: 'infundibular recess below', uz: "pastida infundibulyar cho'ntak" },
+      },
       { id: 'mtt', mirror: true, shapes: [E(220, 162, 6, 6)] },
       { id: 'fx', mirror: true, shapes: [E(204, 210, 9, 10)], note: { en: 'column', uz: 'ustuni' } },
       { id: 'dmn', mirror: true, shapes: [E(238, 214, 13, 11)] },
@@ -220,7 +446,13 @@ export const DIENCEPHALON: Section[] = [
       { id: 'me', at: [H, 344], shapes: [B([238, 318], [H, 322], [282, 318], [276, 352], [268, 384], [252, 384], [244, 352])] },
       { id: 'lha', mirror: true, shapes: [B([190, 170], [158, 190], [150, 262], [170, 292], [194, 276], [196, 226])] },
       { id: 'ot', mirror: true, shapes: [E(176, 312, 20, 9, -18)] },
-      { id: 'ic3', mirror: true, at: [118, 210], shapes: [B([140, 120], [118, 150], [104, 220], [112, 290], [130, 300], [136, 230], [150, 160])], note: { en: 'posterior limb', uz: "orqa oyog'i" } },
+      {
+        id: 'ic3',
+        mirror: true,
+        at: [118, 210],
+        shapes: [B([140, 120], [118, 150], [104, 220], [112, 290], [130, 300], [136, 230], [150, 160])],
+        note: { en: 'posterior limb', uz: "orqa oyog'i" },
+      },
     ],
     landmarks: {
       en: 'The tuber cinereum bulges at the base and narrows into the median eminence and pituitary stalk; the 3rd ventricle extends into the infundibular recess. Medial zone: arcuate nucleus hugging the recess, the large ventromedial nucleus, dorsomedial nucleus above it. Fornix columns and the mammillothalamic tracts mark the medial–lateral border; optic tracts lie on the ventrolateral surface.',
@@ -231,9 +463,27 @@ export const DIENCEPHALON: Section[] = [
       uz: "Orqa biriktiruvchi arteriya perforantlari (tuberotalamik) va median bo'rtmada birlamchi portal chigalni hosil qiluvchi yuqori gipofizar arteriyalar.",
     },
     syndromes: [
-      { name: { en: 'Hypothalamic obesity', uz: 'Gipotalamik semizlik' }, text: { en: 'VMN/arcuate damage (craniopharyngioma, surgery, radiation): hyperphagia and weight gain resistant to diet; leptin–melanocortin signalling lost.', uz: "VMN/yoysimon yadro zararlanishi (kraniofaringioma, jarrohlik, nurlanish): parhezga chidamli giperfagiya va vazn ortishi; leptin–melanokortin signali yo'qoladi." } },
-      { name: { en: 'Stalk effect', uz: "Oyoqcha ta'siri" }, text: { en: 'Any mass compressing the stalk interrupts tuberoinfundibular dopamine → mild hyperprolactinaemia (usually < 100 ng/mL), distinguishing it from prolactinoma.', uz: "Oyoqchani bosuvchi har qanday hosila tuberoinfundibulyar dofaminni to'xtatadi → yengil giperprolaktinemiya (odatda < 100 ng/mL), prolaktinomadan farqlash belgisi." } },
-      { name: { en: 'Hypothalamic hamartoma', uz: 'Gipotalamik gamartoma' }, text: { en: 'Tuber cinereum hamartoma: gelastic (laughing) seizures and central precocious puberty; laser ablation / endoscopic disconnection.', uz: "Tuber cinereum gamartomasi: gelastik (kulgili) tutqanoqlar va markaziy erta jinsiy yetilish; lazer ablatsiyasi / endoskopik ajratish." } },
+      {
+        name: { en: 'Hypothalamic obesity', uz: 'Gipotalamik semizlik' },
+        text: {
+          en: 'VMN/arcuate damage (craniopharyngioma, surgery, radiation): hyperphagia and weight gain resistant to diet; leptin–melanocortin signalling lost.',
+          uz: "VMN/yoysimon yadro zararlanishi (kraniofaringioma, jarrohlik, nurlanish): parhezga chidamli giperfagiya va vazn ortishi; leptin–melanokortin signali yo'qoladi.",
+        },
+      },
+      {
+        name: { en: 'Stalk effect', uz: "Oyoqcha ta'siri" },
+        text: {
+          en: 'Any mass compressing the stalk interrupts tuberoinfundibular dopamine → mild hyperprolactinaemia (usually < 100 ng/mL), distinguishing it from prolactinoma.',
+          uz: "Oyoqchani bosuvchi har qanday hosila tuberoinfundibulyar dofaminni to'xtatadi → yengil giperprolaktinemiya (odatda < 100 ng/mL), prolaktinomadan farqlash belgisi.",
+        },
+      },
+      {
+        name: { en: 'Hypothalamic hamartoma', uz: 'Gipotalamik gamartoma' },
+        text: {
+          en: 'Tuber cinereum hamartoma: gelastic (laughing) seizures and central precocious puberty; laser ablation / endoscopic disconnection.',
+          uz: 'Tuber cinereum gamartomasi: gelastik (kulgili) tutqanoqlar va markaziy erta jinsiy yetilish; lazer ablatsiyasi / endoskopik ajratish.',
+        },
+      },
     ],
     sources: SRC_HY,
   },
@@ -256,17 +506,34 @@ export const DIENCEPHALON: Section[] = [
     ground: 'hypo-grey',
     regions: hypoRegions(130),
     items: [
-      { id: 'v3', shapes: [B([H - 5, 120], [H - 7, 200], [H - 4, 262], [H, 272], [H + 4, 262], [H + 7, 200], [H + 5, 120])], at: [H, 180], note: { en: 'mammillary recess', uz: "mamillyar cho'ntak" } },
+      {
+        id: 'v3',
+        shapes: [B([H - 5, 120], [H - 7, 200], [H - 4, 262], [H, 272], [H + 4, 262], [H + 7, 200], [H + 5, 120])],
+        at: [H, 180],
+        note: { en: 'mammillary recess', uz: "mamillyar cho'ntak" },
+      },
       { id: 'mtt', mirror: true, at: [222, 196], shapes: [L(4, [238, 278], [228, 234], [220, 190], [214, 146])] },
       { id: 'phn', mirror: true, shapes: [B([252, 200], [236, 206], [234, 248], [252, 256])] },
-      { id: 'fx', mirror: true, at: [214, 262], shapes: [L(5, [200, 220], [212, 256], [228, 288])], note: { en: 'postcommissural fibres entering the MB', uz: "MB ga kiruvchi postkommissural tolalar" } },
+      {
+        id: 'fx',
+        mirror: true,
+        at: [214, 262],
+        shapes: [L(5, [200, 220], [212, 256], [228, 288])],
+        note: { en: 'postcommissural fibres entering the MB', uz: 'MB ga kiruvchi postkommissural tolalar' },
+      },
       { id: 'mb', mirror: true, shapes: [B([H - 2, 278], [236, 278], [220, 296], [226, 324], [248, 332], [H - 2, 322])] },
       { id: 'lha', mirror: true, shapes: [B([196, 164], [170, 180], [166, 236], [184, 256], [200, 236], [202, 196])] },
       { id: 'zi', mirror: true, at: [160, 160], shapes: [L(4, [190, 152], [160, 160], [134, 172])] },
       { id: 'stn', mirror: true, shapes: [E(152, 212, 22, 9, -24)] },
       { id: 'crus', mirror: true, at: [146, 274], shapes: [B([196, 258], [168, 246], [134, 236], [116, 246], [124, 286], [158, 312], [196, 318], [210, 292])] },
       { id: 'ot', mirror: true, shapes: [E(130, 304, 14, 8, 36)] },
-      { id: 'ic3', mirror: true, at: [100, 196], shapes: [B([122, 112], [100, 140], [90, 196], [96, 236], [112, 232], [116, 180], [130, 132])], note: { en: 'posterior limb', uz: "orqa oyog'i" } },
+      {
+        id: 'ic3',
+        mirror: true,
+        at: [100, 196],
+        shapes: [B([122, 112], [100, 140], [90, 196], [96, 236], [112, 232], [116, 180], [130, 132])],
+        note: { en: 'posterior limb', uz: "orqa oyog'i" },
+      },
     ],
     landmarks: {
       en: 'The paired mammillary bodies bulge from the floor behind the tuber cinereum, receiving the postcommissural fornix and emitting the mammillothalamic tract dorsally (to the anterior thalamus). The posterior hypothalamic nucleus lies above them along the ventricle. Laterally the hypothalamus meets the subthalamus (zona incerta, STN) and the cerebral peduncle with the optic tract on its surface.',
@@ -274,11 +541,23 @@ export const DIENCEPHALON: Section[] = [
     },
     blood: {
       en: 'Posterior communicating and P1 perforators (mammillary arteries, thalamoperforating branches); posterior hypothalamus also from the basilar tip.',
-      uz: "Orqa biriktiruvchi va P1 perforantlari (mamillyar arteriyalar, talamoperforant shoxlar); orqa gipotalamus bazilyar uchidan ham.",
+      uz: 'Orqa biriktiruvchi va P1 perforantlari (mamillyar arteriyalar, talamoperforant shoxlar); orqa gipotalamus bazilyar uchidan ham.',
     },
     syndromes: [
-      { name: { en: 'Wernicke–Korsakoff', uz: 'Wernicke–Korsakoff' }, text: { en: 'Thiamine deficiency (alcohol, hyperemesis, bariatric surgery): confusion, ophthalmoplegia, ataxia (Wernicke) → anterograde amnesia with confabulation (Korsakoff); MRI: mammillary, medial thalamic and periaqueductal T2/FLAIR signal. Give thiamine BEFORE glucose.', uz: "Tiamin tanqisligi (alkogol, qayt qilish, bariatrik jarrohlik): chalkashlik, oftalmoplegiya, ataksiya (Wernicke) → konfabulyatsiyali anterograd amneziya (Korsakoff); MRT: so'rg'ichsimon tana, medial talamus va periakveduktal T2/FLAIR signal. Tiaminni glyukozadan OLDIN bering." } },
-      { name: { en: 'Poikilothermia', uz: 'Poykilotermiya' }, text: { en: 'Posterior hypothalamic (heat-conservation) lesions → body temperature drifts with the environment.', uz: "Orqa gipotalamus (issiqlikni saqlash) zararlanishi → tana harorati muhit haroratiga ergashadi." } },
+      {
+        name: { en: 'Wernicke–Korsakoff', uz: 'Wernicke–Korsakoff' },
+        text: {
+          en: 'Thiamine deficiency (alcohol, hyperemesis, bariatric surgery): confusion, ophthalmoplegia, ataxia (Wernicke) → anterograde amnesia with confabulation (Korsakoff); MRI: mammillary, medial thalamic and periaqueductal T2/FLAIR signal. Give thiamine BEFORE glucose.',
+          uz: "Tiamin tanqisligi (alkogol, qayt qilish, bariatrik jarrohlik): chalkashlik, oftalmoplegiya, ataksiya (Wernicke) → konfabulyatsiyali anterograd amneziya (Korsakoff); MRT: so'rg'ichsimon tana, medial talamus va periakveduktal T2/FLAIR signal. Tiaminni glyukozadan OLDIN bering.",
+        },
+      },
+      {
+        name: { en: 'Poikilothermia', uz: 'Poykilotermiya' },
+        text: {
+          en: 'Posterior hypothalamic (heat-conservation) lesions → body temperature drifts with the environment.',
+          uz: 'Orqa gipotalamus (issiqlikni saqlash) zararlanishi → tana harorati muhit haroratiga ergashadi.',
+        },
+      },
     ],
     sources: SRC_HY,
   },
@@ -289,7 +568,7 @@ export const DIENCEPHALON: Section[] = [
     code: 'G4',
     region: 'hypothalamus',
     title: { en: 'Hypothalamus — zones & nuclei map (mid-sagittal)', uz: "Gipotalamus — zonalar va yadrolar xaritasi (o'rta sagittal)" },
-    orientation: { en: 'Not a cut: medial wall of the 3rd ventricle, anterior to the left', uz: "Kesim emas: III qorinchaning medial devori, old tomon chapda" },
+    orientation: { en: 'Not a cut: medial wall of the 3rd ventricle, anterior to the left', uz: 'Kesim emas: III qorinchaning medial devori, old tomon chapda' },
     contour: HYPO_MESH,
     pin: { side: 'front', off: 44, dy: 0 },
     w: 640,
@@ -319,8 +598,18 @@ export const DIENCEPHALON: Section[] = [
       { id: 'vmn', shapes: [E(360, 226, 30, 24)] },
       { id: 'arc', shapes: [B([316, 268], [372, 262], [400, 280], [360, 296], [320, 290])] },
       { id: 'me', at: [362, 326], shapes: [B([320, 300], [400, 296], [384, 340], [370, 392], [352, 392], [340, 340])] },
-      { id: 'lha', at: [300, 118], shapes: [D(3, [228, 112], [300, 110], [400, 116], [470, 136])], note: { en: 'lateral zone, lateral to this plane (shown as dashed)', uz: "lateral zona, bu tekislikdan lateralda (punktir bilan)" } },
-      { id: 'fx', at: [440, 168], shapes: [L(6, [196, 110], [300, 108], [420, 140], [470, 220], [480, 268])], note: { en: 'column, arching back to the mammillary body', uz: "ustuni, so'rg'ichsimon tanaga orqaga egiladi" } },
+      {
+        id: 'lha',
+        at: [300, 118],
+        shapes: [D(3, [228, 112], [300, 110], [400, 116], [470, 136])],
+        note: { en: 'lateral zone, lateral to this plane (shown as dashed)', uz: 'lateral zona, bu tekislikdan lateralda (punktir bilan)' },
+      },
+      {
+        id: 'fx',
+        at: [440, 168],
+        shapes: [L(6, [196, 110], [300, 108], [420, 140], [470, 220], [480, 268])],
+        note: { en: 'column, arching back to the mammillary body', uz: "ustuni, so'rg'ichsimon tanaga orqaga egiladi" },
+      },
       { id: 'phn', shapes: [E(480, 168, 26, 22)] },
       { id: 'mb', shapes: [E(482, 288, 34, 26)] },
       { id: 'mtt', at: [520, 214], shapes: [L(4, [500, 272], [530, 210], [548, 150])] },
@@ -334,8 +623,20 @@ export const DIENCEPHALON: Section[] = [
       uz: "Oldingi: A1/AComm perforantlari; o'rta: PComm (tuberotalamik) va yuqori gipofizar; orqa: P1 / bazilyar uchi perforantlari.",
     },
     syndromes: [
-      { name: { en: 'Three functions, one structure', uz: 'Bitta tuzilma, uch vazifa' }, text: { en: 'Endocrine (magnocellular → posterior pituitary; parvocellular → portal system → anterior pituitary), autonomic (PVN → brainstem & spinal preganglionic neurons) and limbic (Papez circuit via fornix → mammillary body → MTT → anterior thalamus).', uz: "Endokrin (magnotsellyulyar → orqa gipofiz; parvotsellyulyar → portal tizim → oldingi gipofiz), vegetativ (PVN → ustun va orqa miya preganglionar neyronlari) va limbik (gumbaz → so'rg'ichsimon tana → MTT → oldingi talamus orqali Papez halqasi)." } },
-      { name: { en: 'Feeding circuit', uz: 'Ovqatlanish zanjiri' }, text: { en: 'Leptin/insulin excite arcuate POMC/CART and inhibit NPY/AgRP neurons; ghrelin does the reverse. POMC → α-MSH → MC4R in PVN → satiety; NPY/AgRP → LHA orexin/MCH → hunger. VMN lesion → hyperphagic obesity; LHA lesion → aphagia.', uz: "Leptin/insulin yoysimon POMC/CART neyronlarini qo'zg'atadi va NPY/AgRP ni tormozlaydi; grelin aksincha. POMC → α-MSH → PVN'da MC4R → to'qlik; NPY/AgRP → LHA oreksin/MCH → ochlik. VMN zararlanishi → giperfagik semizlik; LHA zararlanishi → afagiya." } },
+      {
+        name: { en: 'Three functions, one structure', uz: 'Bitta tuzilma, uch vazifa' },
+        text: {
+          en: 'Endocrine (magnocellular → posterior pituitary; parvocellular → portal system → anterior pituitary), autonomic (PVN → brainstem & spinal preganglionic neurons) and limbic (Papez circuit via fornix → mammillary body → MTT → anterior thalamus).',
+          uz: "Endokrin (magnotsellyulyar → orqa gipofiz; parvotsellyulyar → portal tizim → oldingi gipofiz), vegetativ (PVN → ustun va orqa miya preganglionar neyronlari) va limbik (gumbaz → so'rg'ichsimon tana → MTT → oldingi talamus orqali Papez halqasi).",
+        },
+      },
+      {
+        name: { en: 'Feeding circuit', uz: 'Ovqatlanish zanjiri' },
+        text: {
+          en: 'Leptin/insulin excite arcuate POMC/CART and inhibit NPY/AgRP neurons; ghrelin does the reverse. POMC → α-MSH → MC4R in PVN → satiety; NPY/AgRP → LHA orexin/MCH → hunger. VMN lesion → hyperphagic obesity; LHA lesion → aphagia.',
+          uz: "Leptin/insulin yoysimon POMC/CART neyronlarini qo'zg'atadi va NPY/AgRP ni tormozlaydi; grelin aksincha. POMC → α-MSH → PVN'da MC4R → to'qlik; NPY/AgRP → LHA oreksin/MCH → ochlik. VMN zararlanishi → giperfagik semizlik; LHA zararlanishi → afagiya.",
+        },
+      },
     ],
     sources: SRC_HY,
   },

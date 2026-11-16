@@ -714,6 +714,22 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   ko'rilmadi; chap/o'ng yo'nalishi simmetrik hajmda ko'z bilan tasdiqlanmaydi (ramka kodi bo'yicha to'g'ri);
   yorug' rejim va telefon.
 
+### 5.1 — T2 tutash bo'linma (2026-11-16)
+
+- `tiling()`: tugunlar (3+ chegara uchrashadigan nuqtalar), qirralar (tugun, erkin nuqtalar, tugun — ochiq
+  Catmull-Rom, har oraliq 8 namunа), sohalar (qirralar tartibi, `-nom` teskari). Qirra bir marta namunalanadi,
+  ikki soha AYNAN shu nuqtalarni ishlatadi → tirqish ham, ustma-ustlik ham geometrik jihatdan mumkin emas.
+  Chiqish — zich ko'pburchakli xom yo'l (`t: 'p'`), Bezier emas: `shapePolygon` yo'ldagi sonlarni o'qiydi,
+  boshqaruv nuqtalari maydon/markaz hisobini buzardi.
+- T2 anatomiyasi: Y-plastinka o'z maydoniga ega tasma (ayrida oldingi yadro, ustida MD, ostida lateral guruh);
+  CM — tasmaning orqa kengaygan uchi (intralaminar yadrolar plastinka ichida yotadi); dorsal qavat LD→LP,
+  ventral qavat VA→VL→VPL→VPM, orqada pulvinar. `ground: 'thal'` olib tashlandi — nomsiz to'qima qolmadi
+  (aks holda "16-raqamli" bo'sh element kontur ustida paydo bo'ldi).
+- `th-mid` (o'rta chiziq yadrolari) endi dorsal chet tashqarisida chiziladi — avval MD ustida ko'rinmay qolgan edi;
+  `th-ret` yorlig'i plastinka limbi ustidan o'z shtrix chizig'i yoniga ko'chdi.
+- Tekshirildi: coverage auditi, `--min 0.15` (T2 "ok"), Sxema (raqam va nomlar) hamda Nissl suratda, tsc + build.
+  Tekshirilmadi: Mielin ko'rinishi va viktorina rejimi suratda ko'rilmadi (shakl turi o'zgarmagan, kod o'sha).
+
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
 1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).

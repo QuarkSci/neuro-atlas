@@ -62,22 +62,18 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 
 ## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-16 da tayyorlangan)
 
-**Vazifa: PLAN.md 5.1 — T2 "Talamus yadrolari" plastinkasida chegaralarni 100% tutashtirish.**
-Foydalanuvchi talabi: sohalar orasida egasiz bo'shliq qolmasin (masalan 2 va 3 orasi). Tasdiqlangan tartib:
-5.1 (T2) → Real kesimga sxema raqamlari → yo'llar va shikastlanish → viktorina → koordinata vositasi.
+**Bajarildi: PLAN 5.1 — T2 plastinkasi tutash bo'linma** (egasiz 33.0% → 0.0%, ustma-ust 0.1% — chegara nuqtalari).
+`sections/shapes.ts` `tiling(nodes, edges, faces)`: chegara = bitta qirra, ikki soha uni bo'lishadi (biri teskari
+yuradi); yopilmagan soha yoki noma'lum tugun/qirra darhol xato beradi. T2: `diencephalon.ts` `EGG` (23 tugun,
+33 qirra, 11 soha + kontur). Ichki medullyar plastinka endi o'z maydoniga ega Y-tasma, CM — uning orqa uchi.
 
-1. Holat: `git status` toza bo'lishi kerak; dev server `curl ... localhost:3019` (`000` bo'lsa fonda `npm run dev`).
-2. Boshlang'ich o'lchov (2026-11-16): `node scripts/audit-sections.mjs --coverage --only thalamus-nuclei-map`
-   → **egasiz 33.0%, ustma-ust 0.4%** (12 to'ldirilgan soha). Maqsad: 0% / 0%.
-3. Ma'lumot: `src/data/sections/diencephalon.ts` (`id: 'thalamus-nuclei-map'`, `items`, `outline`, `ground: 'thal'`);
-   shakllar `sections/shapes.ts` (`B` yopiq spline, `E` ellips, `L`/`D` chiziq); lug'at `structures-forebrain.ts`.
-   Sabab: har soha mustaqil `B(...)`; `th-iml` (ichki medullyar plastinka) 7 birlikli CHIZIQ, yadrolar unga tegmaydi.
-4. Yo'l (PLAN 5.1 da batafsil): umumiy tugun/qirra modeli — qirra bir marta beriladi, ikki sohada ishlatiladi.
-   Nomlanmagan to'qima (intralaminar, VM, Pf, reuniens) alohida element bo'lsin. Avval FAQAT T2; qolgan plastinkalar keyin.
-5. Tekshiruv: coverage auditi 0/0, `audit-sections.mjs --min 0.15` "ok", `node scripts/shot-sections.mjs` bilan surat
-   (Sxema, Mielin, Nissl — uchala ko'rinish ham shu shakllardan chiziladi), viktorina rejimi buzilmaganini ko'rish.
-6. Ehtiyot: boshqa plastinkalarda auditdagi 50–75% "egasiz" — asosan hudud to'ldirishlari (`sv-region-fill`,
-   tegmentum/zamin) egasi deb sanalmagani uchun; bu o'lchov xatosi, T2 dan keyin auditni aniqlashtirish kerak.
+**Keyingi vazifa (foydalanuvchi tasdiqlagan tartib):** Real kesimga sxema raqamlari → yo'llar va shikastlanish →
+viktorina → koordinata vositasi. 5.1 ning davomi (qolgan 21 plastinka) — foydalanuvchi so'rasa:
+1. Avval auditni aniqlashtiring: `audit-sections.mjs --coverage` hudud to'ldirishlarini (`sv-region-fill`) egasi
+   deb sanamaydi, shuning uchun boshqa plastinkalar 39–75% "egasiz" ko'rsatadi — bu o'lchov xatosi.
+2. Har plastinka uchun `tiling()` bilan qayta chizish: tugunlarni eski `B(...)` nuqtalaridan oling, `at` ni qo'lda
+   bering (xom yo'l shaklida avtomatik markaz noaniq), `ground` faqat nomsiz to'qima qolsa qoladi.
+3. Tekshiruv: coverage 0/≈0, `--min 0.15` "ok", `node scripts/shot-sections.mjs <papka> --only <id>` (Sxema + Nissl).
 
 ## Joriy holat (2026-11-16)
 
@@ -134,7 +130,7 @@ tanlov kapsulasi bosilganda shaffof linzaga aylanib barmoq ortidan sirg'aladi).
   - **LG-3** harakat: linza, sirg'alish, varaq ochilishi video kadrlari bilan yonma-yon sozlanadi.
 
 **Kelajak imkoniyatlari — `PLAN.md` 5-bo'lim** (2026-11-15): 5.1 kesim sxemalarida chegaralar 100% tutashsin
-(TALAB; T2 dan boshlanadi), 5.2 Real tasvir + shtrix kontur, 5.3 g'oyalar (bakalavr → PhD), 5.4 UI qoldiqlari.
+(TALAB; **T2 ✅ 2026-11-16**, qolgan 21 plastinka kutmoqda), 5.2 Real tasvir + shtrix kontur, 5.3 g'oyalar (bakalavr → PhD), 5.4 UI qoldiqlari.
 - **5.2 Real kesim** ✅ v1 (2026-11-16): kesim ko'ruvchisida 5-ko'rinish. BigBrain 100 mkm (CC BY-NC-SA 4.0,
   `data/raw/bigbrain/`, 1.1 GB gz + 8.7 GB ochilgan, gitignore). Zanjir: `node scripts/export-section-frames.mjs`
   (ilovaning o'z `atlasSlice()` ramkasi → `pipeline/section_frames.json`) → `pipeline/.venv/bin/python
