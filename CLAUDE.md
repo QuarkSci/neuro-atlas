@@ -60,7 +60,26 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 - Rejimlar: `explode | peel | learn`. Yangi dars/kesim → tegishli mavzuga (`topics.ts`) yozilsin; yangi tab ochilmaydi.
 - Pipeline vositalari: `pipeline/tools/slice_svg.py`, `landmarks.py` (`pipeline/.venv/bin/python`, repo ildizidan).
 
-## Joriy holat (2026-11-15)
+## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-16 da tayyorlangan)
+
+**Vazifa: PLAN.md 5.1 — T2 "Talamus yadrolari" plastinkasida chegaralarni 100% tutashtirish.**
+Foydalanuvchi talabi: sohalar orasida egasiz bo'shliq qolmasin (masalan 2 va 3 orasi). Tasdiqlangan tartib:
+5.1 (T2) → Real kesimga sxema raqamlari → yo'llar va shikastlanish → viktorina → koordinata vositasi.
+
+1. Holat: `git status` toza bo'lishi kerak; dev server `curl ... localhost:3019` (`000` bo'lsa fonda `npm run dev`).
+2. Boshlang'ich o'lchov (2026-11-16): `node scripts/audit-sections.mjs --coverage --only thalamus-nuclei-map`
+   → **egasiz 33.0%, ustma-ust 0.4%** (12 to'ldirilgan soha). Maqsad: 0% / 0%.
+3. Ma'lumot: `src/data/sections/diencephalon.ts` (`id: 'thalamus-nuclei-map'`, `items`, `outline`, `ground: 'thal'`);
+   shakllar `sections/shapes.ts` (`B` yopiq spline, `E` ellips, `L`/`D` chiziq); lug'at `structures-forebrain.ts`.
+   Sabab: har soha mustaqil `B(...)`; `th-iml` (ichki medullyar plastinka) 7 birlikli CHIZIQ, yadrolar unga tegmaydi.
+4. Yo'l (PLAN 5.1 da batafsil): umumiy tugun/qirra modeli — qirra bir marta beriladi, ikki sohada ishlatiladi.
+   Nomlanmagan to'qima (intralaminar, VM, Pf, reuniens) alohida element bo'lsin. Avval FAQAT T2; qolgan plastinkalar keyin.
+5. Tekshiruv: coverage auditi 0/0, `audit-sections.mjs --min 0.15` "ok", `node scripts/shot-sections.mjs` bilan surat
+   (Sxema, Mielin, Nissl — uchala ko'rinish ham shu shakllardan chiziladi), viktorina rejimi buzilmaganini ko'rish.
+6. Ehtiyot: boshqa plastinkalarda auditdagi 50–75% "egasiz" — asosan hudud to'ldirishlari (`sv-region-fill`,
+   tegmentum/zamin) egasi deb sanalmagani uchun; bu o'lchov xatosi, T2 dan keyin auditni aniqlashtirish kerak.
+
+## Joriy holat (2026-11-16)
 
 Tayyor: 0–4c bosqichlar, BG-1, 3 dars, O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
 

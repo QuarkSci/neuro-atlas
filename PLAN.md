@@ -163,10 +163,15 @@ Talab:
 4. Tolali plastinkalar (IML, tashqi medullyar plastinka) chiziq emas, o'z maydoniga ega soha bo'lsin yoki
    ikki qo'shni yadroning umumiy chegarasi sifatida chizilsin.
 
+Boshlang'ich o'lchov (2026-11-16, `node scripts/audit-sections.mjs --coverage`, qadam 1.5):
+T2 — egasiz 33.0%, ustma-ust 0.4%. Boshqa plastinkalar 39–75% egasiz ko'rsatadi, lekin u yerda hudud
+to'ldirishlari (tegmentum, zamin, `sv-region-fill`) egasi deb sanalmagan — audit T2 dan keyin aniqlashtiriladi.
+Ustma-ustlik hamma joyda ≤1.8%.
+
 Amalga oshirish yo'li (taklif):
 - `shapes.ts`ga topologik model: umumiy **tugunlar** va **qirralar**, har soha qirralar halqasi sifatida
   (planar bo'linma). Qirra bir marta beriladi, ikki sohada ishlatiladi → tirqish bo'lishi mumkin emas.
-- Tekshiruv: `scripts/audit-sections.mjs`ga qoplash rejimi (`--coverage`): kontur ichini rastr bilan tanlab,
+- Tekshiruv: `scripts/audit-sections.mjs --coverage` ✅ qo'shildi (2026-11-16): kontur ichini rastr bilan tanlab,
   egasiz nuqtalar ulushi va ustma-ustlikni chiqaradi. Maqsad: egasiz 0%, ustma-ust 0%.
 - Avval T2, keyin qolgan 21 plastinka (miya ustuni kesimlarida fon — retikulyar formatsiya; uni ham nomlash).
 - Bu 5.2 bilan bog'liq: real tasvir ustidagi konturlar ham xuddi shu tutash bo'linmadan olinadi.

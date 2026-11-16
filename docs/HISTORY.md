@@ -15,13 +15,15 @@
 1. Shu faylni to'liq o'qing; `PLAN.md` 3-bo'lim (bosqichlar jadvali) va
    4-bo'lim (xavflar) — qisqa.
 2. Holatni tekshiring: `git status` toza, `git log --oneline | head -3`
-   oxirgi commit — "Hujjatlar: yangi chatga topshirish …" (2026-10-23) yoki
-   undan keyingisi; `git rev-parse HEAD origin/master` bir
+   oxirgi commit — "Hujjatlar: keyingi sessiyaga topshirish …" (2026-11-16) yoki
+   undan keyingisi; **vazifa CLAUDE.md boshidagi "KEYINGI SESSIYA" bo'limida**; `git rev-parse HEAD origin/master` bir
    xil bo'lishi kerak.
 3. Meshlar diskda bor — gitignore'da, QAYTA HOSIL QILISH SHART EMAS:
    `public/meshes/` 196 MB (9 papka: gross 42, glasser 34, julich 29,
    destrieux/brodmann/desikan/jhu, bstem 4.7, suit 4.4 MB),
-   `data/raw/` 154 MB (bp3d, julich, neuroparc, brainstem, suit).
+   `data/raw/` 154 MB (bp3d, julich, neuroparc, brainstem, suit) + `data/raw/bigbrain/` 9.2 GB
+   (Real kesimlar uchun; kesimlar allaqachon `public/sections/real/`da, hajm faqat qayta kesishga kerak).
+   `pipeline/.venv` 2026-11-16 da qayta yaratilgan (numpy, nibabel, scipy, pillow).
    Yangi kompyuterda: `pipeline/README.md` — to'liq retsept, barcha
    yuklab olish URL'lari 2026-09-22 da sinovdan o'tkazilgan (neuroparc
    fayllari baytma-bayt mos chiqdi).

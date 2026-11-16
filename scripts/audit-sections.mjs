@@ -6,6 +6,14 @@
  * above --min (default 0.2) so unintended overlaps can be fixed in the data.
  *
  *   node scripts/audit-sections.mjs [--min 0.2] [--only id,id]
+ *
+ * --coverage switches to the tiling audit (PLAN.md 5.1): the figure's outline
+ * is sampled on a grid and every point is counted as owned by no filled
+ * structure ("unowned"), by exactly one, or by several ("shared"). The goal
+ * for a finished plate is unowned 0 % and shared 0 %. Stroke-only structures
+ * (fibre laminae drawn as lines) own nothing, by design of the measurement.
+ *
+ *   node scripts/audit-sections.mjs --coverage [--only id,id] [--step 1.5]
  */
 import puppeteer from 'puppeteer-core'
 import { readFileSync } from 'node:fs'
@@ -14,10 +22,12 @@ const args = process.argv.slice(2)
 const opt = (n, d) => (args.indexOf(`--${n}`) >= 0 ? args[args.indexOf(`--${n}`) + 1] : d)
 const min = +opt('min', 0.2)
 const only = opt('only', '')
+const coverage = args.includes('--coverage')
+const step = +opt('step', 1.5)
 const ids = only
   ? only.split(',')
-  : ['medulla', 'pons', 'midbrain', 'diencephalon', 'cerebellum'].flatMap((f) =>
-      [...readFileSync(`src/data/sections/${f}.ts`, 'utf8').matchAll(/^    id: '([a-z0-9-]+)'/gm)].map((m) => m[1]),
+  : ['medulla', 'pons', 'midbrain', 'diencephalon', 'basal', 'cerebellum'].flatMap((f) =>
+      [...readFileSync(`src/data/sections/${f}.ts`, 'utf8').matchAll(/^ {2,4}id: '([a-z0-9-]+)'/gm)].map((m) => m[1]),
     )
 
 const browser = await puppeteer.launch({
@@ -34,6 +44,43 @@ try {
   for (const id of ids) {
     await page.evaluate((id) => window.__atlas.getState().openSection(id), id)
     await new Promise((r) => setTimeout(r, 300))
+    if (coverage) {
+      const c = await page.evaluate((step) => {
+        const outline = [...document.querySelectorAll('.sv-svg path.sv-outline')]
+        if (!outline.length) return null
+        const fills = [...document.querySelectorAll('.sv-svg g.sv-item.item[data-id]')].map((g) => [...g.querySelectorAll('path.sv-fill')]).filter((a) => a.length)
+        let x0 = Infinity,
+          y0 = Infinity,
+          x1 = -Infinity,
+          y1 = -Infinity
+        for (const o of outline) {
+          const b = o.getBBox()
+          x0 = Math.min(x0, b.x)
+          y0 = Math.min(y0, b.y)
+          x1 = Math.max(x1, b.x + b.width)
+          y1 = Math.max(y1, b.y + b.height)
+        }
+        const pt = new DOMPoint()
+        let inside = 0,
+          unowned = 0,
+          shared = 0
+        for (let y = y0; y <= y1; y += step)
+          for (let x = x0; x <= x1; x += step) {
+            pt.x = x
+            pt.y = y
+            if (!outline.some((o) => o.isPointInFill(pt))) continue
+            inside++
+            let owners = 0
+            for (const paths of fills) if (paths.some((q) => q.isPointInFill(pt))) owners++
+            if (owners === 0) unowned++
+            else if (owners > 1) shared++
+          }
+        return { inside, unowned, shared, structures: fills.length }
+      }, step)
+      if (!c) console.log(`${id.padEnd(34)} no outline`)
+      else console.log(`${id.padEnd(34)} unowned ${((c.unowned / c.inside) * 100).toFixed(1).padStart(5)}%   shared ${((c.shared / c.inside) * 100).toFixed(1).padStart(5)}%   (${c.structures} filled structures)`)
+      continue
+    }
     const rows = await page.evaluate(() => {
       const groups = [...document.querySelectorAll('.sv-svg g.sv-item.item[data-id]')]
       const items = []
