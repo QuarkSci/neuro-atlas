@@ -226,7 +226,39 @@ PhD va tadqiqotchi:
 11. **Retseptor / gen xaritalari** — ochiq ma'lumot bor-yo'qligi tekshirilishi kerak.
 12. **Lupa** — sahna ustida suriladigan linza: mayda yadrolarni kattalashtirib, nomlarini faqat ichida ko'rsatadi.
 
-Tavsiya etilgan tartib: 5.1 (T2) → 5.2 → 1+2 (yo'llar va shikastlanish) → 3 → 8.
+Tavsiya etilgan tartib: 5.1 (T2) ✅ → 5.2 ✅ → **1+2 (yo'llar va shikastlanish) ← KEYINGI** → 5.5 (A, B, C) → 3 → 8.
+
+### 5.5 Foydalanuvchi talablari (2026-11-16) — hali bajarilmagan
+
+**A. Qon tomirlar simmetrik bo'lsin.** Foydalanuvchi uch surat bilan ko'rsatdi: yuzaki venalar va ko'ndalang sinus
+faqat bir tomonda, arteriyalar ham ikki yarim sharda har xil.
+- O'lchov (`parts.json`, geometriyali qismlar): venalar 45 ta — o'ng 31, chap 1, o'rta 13; arteriyalar 133 ta — o'ng 76,
+  chap 46, o'rta 11. Faqat bir tomonda bor konseptlar: venalarda 44 dan 30 tasi, arteriyalarda 114 dan 84 tasi.
+  Sabab manbada: BodyParts3D venalarni asosan o'ng tomonda bergan.
+- Yo'l: juftsiz yon tomir meshini o'rta sagittal tekislikdan ko'zgulash (MNI x → −x, uchburchak tartibi teskari),
+  `pipeline/build_catalogue.py` da; yangi qism `side` va nomi bilan, `source`da "BodyParts3D, ko'zgulangan" deb belgilanadi
+  (litsenziya o'zgarmaydi, lekin sun'iy ekanligi yashirilmaydi). Avval tekshiring: ko'zgulangan tomir qarama-qarshi
+  yarim shar yuzasiga botib ketmaydimi (yarim sharlar to'liq simmetrik emas) — kerak bo'lsa yuzaga proyeksiya.
+- Ehtiyot: haqiqiy anatomiyada ham asimmetriya bor (ko'ndalang sinus ko'pincha o'ngda yirik) — bu kontentda aytiladi,
+  lekin model ikki tomonda ham tomirni ko'rsatishi kerak. Toq tuzilmalar (yuqori sagittal sinus, bazilyar) ko'zgulanmaydi.
+- PhD darajasi: Villiz doirasi variantlari (fetal PCA, gipoplastik A1) almashtirgichi.
+
+**B. Real preparat tasviri hamma kesimda bo'lsin.** Hozir 22 kesimdan 17 tasida bor. Yo'q:
+- U1 (piramidalar kesishmasi) — BigBrain hajmi bu darajaga yetmaydi (6% to'qima). Boshqa ochiq manba kerak
+  (litsenziyani O'QIB tekshiring; CC BY-ND taqiq) yoki "bu daraja uchun tasvir yo'q" deb halol qoldiriladi.
+- K3 (isthmus) va Mc (miyacha yadrolari) — oyna 145×164 va 124×90 mm: kesim emas, OYNA xatosi (`contour` meshlari
+  `atlasSlice` oynasini kengaytirib yuboradi). Oyna toraytirilsa `real_slices.py` ularni ham kesadi.
+- T2 (talamus xaritasi) va G4 (gipotalamus zonalari) — tekisligi yo'q sxema-xaritalar. Variant: eng yaqin kesim
+  tasvirini ko'rsatish (T2 → aksial talamus kesimi) yoki ularga `plane` berish.
+- Foydalanuvchi "real preparat" deganda haqiqiy bo'yalgan preparat fotosini ham nazarda tutishi mumkin (Mielin/Nissl
+  hozir chizma naqsh) — keyingi sessiyada aniqlashtirilsin.
+
+**C. Tasvirni bosganda kattalashtirish.** Ayniqsa real kesim, lekin sxema/mielin/Nissl/atlas ham.
+- To'liq ekran rejimi (ko'ruvchi kartasi ichida figura butun maydonni egallaydi, Esc bilan qaytadi) + g'ildirak/pinch
+  bilan zoom va sudrab surish (SVG `viewBox`ni o'zgartirish — nishon va konturlar vektor, o'tkirligicha qoladi).
+- Real tasvir 100 mkm/px: kattalashtirganda piksellashadi. PhD darajasi: BigBrain 20 mkm dan yuqori aniqlikdagi
+  plitkalar (faqat kattalashtirilganda yuklanadi) — hajm va litsenziya tekshirilsin.
+- Nishonlar bosiladigan bo'lgani uchun "bosish = kattalashtirish" to'qnashadi: alohida tugma + ikki marta bosish taklif etiladi.
 
 ### 5.4 Interfeys / Liquid Glass bo'yicha qolgan ishlar
 

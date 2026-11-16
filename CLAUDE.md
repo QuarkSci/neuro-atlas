@@ -62,22 +62,27 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 
 ## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-16 da tayyorlangan)
 
-**Bajarildi: PLAN 5.1 — T2 plastinkasi tutash bo'linma** (egasiz 33.0% → 0.0%, ustma-ust 0.1% — chegara nuqtalari).
-`sections/shapes.ts` `tiling(nodes, edges, faces)`: chegara = bitta qirra, ikki soha uni bo'lishadi (biri teskari
-yuradi); yopilmagan soha yoki noma'lum tugun/qirra darhol xato beradi. T2: `diencephalon.ts` `EGG` (23 tugun,
-33 qirra, 11 soha + kontur). Ichki medullyar plastinka endi o'z maydoniga ega Y-tasma, CM — uning orqa uchi.
+**Vazifa: yo'llar va shikastlanish** (PLAN 5.3 ning 1+2-bandlari; foydalanuvchi 2026-11-16 da "davom et" dedi).
+Hali kod yozilmagan. Boshlash uchun TAKLIF (qaror emas — avval foydalanuvchiga qisqa ko'rsating):
+- Uch yo'l: kortikospinal, orqa ustun–medial lemnisk, spinotalamik (ALS). Har biri — tartibli bekatlar ro'yxati:
+  kesim id + sxema tuzilma id (`pyr`, `pyr-dec`, `lcst`, `crus-cst`, `ic-pl`/`cst-ic`; `fg`/`fc` → `ng`/`nc` → `ml` →
+  `th-vpl`; `als` → `th-vpl`), kesishish darajasi va neyron tartibi (1/2/3). Yangi fayl: `src/data/pathways.ts`,
+  mavzuga `topics.ts` orqali ulanadi (yangi tab ochilmaydi).
+- Ko'rinish: (1) kesim ko'ruvchisida yo'l tanlansa, shu darajadagi bekati yonadi, ←/→ bilan yo'l bo'ylab yuqoriga/pastga;
+  (2) 3D da bekatlar markazlari orqali chiziq (kesim tekisligi + sxema nuqtasi → MNI; `atlasSlice.toMNI`).
+- Shikastlanish: daraja + tomon tanlanadi → har yo'l uchun "kesishishdan pastmi/yuqorimi" bo'yicha ipsi/kontra yo'qotish
+  jadvali; teskari rejim (belgilardan o'choqni topish) — PhD/klinik daraja. Kesimlardagi tayyor `syndromes` bilan solishtiring.
+- Manba qoidasi amalda: har da'vo DOI/Bookshelf bilan (Crossref / eutils orqali tekshiriladi).
 
-**Qolgan 21 plastinka — o'lchandi (2026-11-16), qayta chizish SHART EMAS:** `audit-sections.mjs --coverage` endi
-nuqtani tartib bilan tuzilma → hudud (`regions`) → nomlangan zamin (`ground`) → hech narsa deb sanaydi. Natija:
-**hamma plastinkada UNOWNED 0.0%**. Bo'shliqlar nomlangan zaminga tegishli (`tegm-med/pons/mid` — retikulyar
-formatsiya, `hemi-wm`, `hypo-grey`, `cb-wm`); miya ustunida yadrolar haqiqatan ham tegmentum ichidagi orollar,
-shuning uchun ularni to'liq bo'linma qilish anatomik XATO bo'lardi. T2 istisno edi: zamini (`thal`) organning o'zi edi.
-Haqiqiy qoldiqlar (foydalanuvchi tanlaydi): (a) T1 `thalamus-coronal` — talamus ichida yadrolar tutashishi kerak
-(zamin 52%, bir qismi talamus ichida); (b) G4 `hypothalamus-zones` — zamin 75%, T2 ga o'xshash xarita; (c) ustma-ustlik:
-U1 1.8%, K3 1.5%, B1 1.3%, U2 1.1% (qolganlari <1%).
+**Foydalanuvchining 2026-11-16 dagi uch yangi talabi — tafsilot `PLAN.md` 5.5** (navbatda, yo'llardan keyin yoki
+foydalanuvchi aytgan tartibda):
+1. Qon tomirlar simmetrik emas (o'lchandi: venalar 31 o'ng / 1 chap; arteriyalar 76 o'ng / 46 chap).
+2. Real preparat tasviri hamma kesimda yo'q (22 tadan 17 tasida bor; yo'q: U1, K3, Mc, T2, G4).
+3. Tasvirni (ayniqsa real kesimni) bosganda kattalashtirish — to'liq ekran / zoom.
 
-**Keyingi vazifa (foydalanuvchi tasdiqlagan tartib):** ~~Real kesimga sxema raqamlari~~ ✅ → yo'llar va shikastlanish →
-viktorina → koordinata vositasi.
+**Shu sessiyada bajarildi (2026-11-16):** Real kesimda sxema raqamlari (`970cfd0`); o'rta miya tekisliklari O1–O3
+tuzatildi (`a289db0`). 5.1 bo'yicha: T2 tutash bo'linma; qolgan 21 plastinkada UNOWNED 0.0% (qayta chizish shart emas).
+5.1 dan qolgan ixtiyoriy ishlar: T1 talamus ichida yadrolar tutashishi (zamin 52%), G4 (zamin 75%), ustma-ustlik U1 1.8%, K3 1.5%.
 
 ## Joriy holat (2026-11-16)
 
