@@ -74,6 +74,21 @@
    27.788
   ]
  },
+ "cerebellum-deep-nuclei": {
+  "file": "cerebellum-deep-nuclei.webp",
+  "mmPerPx": 0.1123,
+  "px": [
+   1100,
+   802
+  ],
+  "source": "bigbrain",
+  "window": [
+   -63.587,
+   -45.876,
+   59.93,
+   44.157
+  ]
+ },
  "hypothalamus-chiasmatic": {
   "file": "hypothalamus-chiasmatic.webp",
   "mmPerPx": 0.0999,
@@ -222,6 +237,21 @@
    -20.486,
    26.426,
    20.796
+  ]
+ },
+ "pons-isthmus": {
+  "file": "pons-isthmus.webp",
+  "mmPerPx": 0.0999,
+  "px": [
+   452,
+   397
+  ],
+  "source": "bigbrain",
+  "window": [
+   -22.485,
+   -24.473,
+   22.666,
+   15.268
   ]
  },
  "pons-trigeminal": {

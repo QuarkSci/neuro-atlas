@@ -22,7 +22,7 @@ import {
 import { CONCEPT_BY_ID, conceptLeafIds } from '@/data'
 import { SECTIONS, SECTION_BY_ID, SECTION_REGIONS, STRUCTURE_BY_ID, type Section, type SectionItem } from '@/data/sections'
 import { shapePath } from '@/data/sections/shapes'
-import { REAL_SLICES } from '@/data/sections/real'
+import { REAL_SLICES, REAL_STAND_IN } from '@/data/sections/real'
 import type { LayerId } from '@/data/types'
 import { useL, useT } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
@@ -90,8 +90,8 @@ export function SectionViewer() {
     setRevealed(new Set())
     setFocusCat(null)
     setAtlasSel(null)
-    if (section && !section.plane) setView((v) => (v === 'atlas' || v === 'real' ? 'scheme' : v))
-    if (section && !REAL_SLICES[section.id]) setView((v) => (v === 'real' ? 'scheme' : v))
+    if (section && !section.plane) setView((v) => (v === 'atlas' || (v === 'real' && !REAL_STAND_IN[section.id]) ? 'scheme' : v))
+    if (section && !REAL_SLICES[REAL_STAND_IN[section.id] ?? section.id]) setView((v) => (v === 'real' ? 'scheme' : v))
   }, [sectionId])
 
   useEffect(() => {
@@ -129,9 +129,12 @@ export function SectionViewer() {
     return m
   }, [numbered])
 
-  const atlas = useAtlasSlice(section ?? SECTIONS[0], section ? CUT_LAYERS[section.region] : [], !!section?.plane && (view === 'atlas' || view === 'real'))
-  if (!section) return null
-  const real = REAL_SLICES[section.id]
+  // A map without a plane of its own (T2, G4) shows the real slice of the nearest plate that has one.
+  const standIn = section && !section.plane && REAL_STAND_IN[section.id] ? SECTION_BY_ID.get(REAL_STAND_IN[section.id]) : undefined
+  const cutSec = standIn ?? section
+  const atlas = useAtlasSlice(cutSec ?? SECTIONS[0], cutSec ? CUT_LAYERS[cutSec.region] : [], !!cutSec?.plane && (view === 'atlas' || view === 'real'))
+  if (!section || !cutSec) return null
+  const real = REAL_SLICES[cutSec.id]
   // Both read the atlas cut rather than the drawn schematic.
   const cutView = view === 'atlas' || view === 'real'
   const index = order.findIndex((s) => s.id === section.id)
@@ -364,7 +367,7 @@ export function SectionViewer() {
               {cutView ? (
                 atlas?.data ? (
                   <AtlasSliceView
-                    section={section}
+                    section={cutSec}
                     slice={atlas.data}
                     real={view === 'real' ? real : undefined}
                     contours={contours}
@@ -372,7 +375,7 @@ export function SectionViewer() {
                     selected={atlasSel}
                     highlightConcept={atlasSel ? null : (selInfo?.part ?? null)}
                     labels={labels}
-                    axes={section.axes.map((a) => l(a)) as [string, string, string, string]}
+                    axes={cutSec.axes.map((a) => l(a)) as [string, string, string, string]}
                     onPick={setAtlasSel}
                   />
                 ) : (
@@ -396,6 +399,11 @@ export function SectionViewer() {
                 />
               )}
             </ZoomPane>
+            {view === 'real' && standIn && (
+              <p className="sv-view-hint sv-stand-in">
+                {t.svRealStandIn} <b>{standIn.code}</b> · {l(standIn.title)}
+              </p>
+            )}
             {viewHint && <p className="sv-view-hint">{viewHint}</p>}
             <Locator section={section} onPick={(id) => openSection(id)} title={t.svLocator} />
             <div className="sv-legend">

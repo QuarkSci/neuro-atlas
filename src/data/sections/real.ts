@@ -17,6 +17,17 @@ export interface RealSlice {
 
 export const REAL_SLICES = manifest as unknown as Record<string, RealSlice>
 
+/**
+ * Maps without a cutting plane of their own borrow the real slice of the
+ * nearest plate that has one, and say so: the thalamic nuclei map (T2) the
+ * axial cut through the thalamus at the capsule level (B5), the hypothalamic
+ * zones map (G4) the tuberal level (G2), where all three zones are present.
+ */
+export const REAL_STAND_IN: Record<string, string> = {
+  'thalamus-nuclei-map': 'bg-capsule-axial',
+  'hypothalamus-zones': 'hypothalamus-tuberal',
+}
+
 export const realSliceUrl = (s: RealSlice) => `${import.meta.env.BASE_URL}sections/real/${s.file}`
 
 /** Credit line per image source; BigBrain slices are CC BY-NC-SA 4.0. */

@@ -143,7 +143,10 @@ export const PONS: Section[] = [
     title: { en: 'Rostral pons (isthmus) — locus coeruleus & SCP', uz: "Rostral ko'prik (bo'yin) — ko'k dog' va yuqori miyacha oyoqchasi" },
     orientation: ORIENT,
     plane: brainstemPlane(-22),
-    contour: PONS_MESH,
+    // The plane runs just above this atlas's pons mesh (top at z −22.7), so the pons
+    // alone barely cuts and the window fell back to the whole temporal lobes (145 mm).
+    // At the isthmus the cut passes through the crus and the base of the tectum.
+    contour: /^g-(left|right)-(pons|cerebral-crus|inferior-colliculus)$/,
     pin: { side: 'front', dy: 4 },
     loc: [54, 112, 104, 94],
     w: 560,

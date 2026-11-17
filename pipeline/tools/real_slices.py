@@ -36,7 +36,7 @@ MANIFEST = ROOT / 'src' / 'data' / 'sections' / 'real.json'
 
 PX_MM = 0.1  # target sampling, mm per pixel (the volume's own resolution)
 MAX_PX = 1100  # longest side of an output image
-MAX_SPAN_MM = 110  # a window wider than this is not a level close-up; skip it
+MAX_SPAN_MM = 130  # a window wider than this is not a level close-up; skip it (Mc, the whole cerebellum, is 124 mm)
 MIN_TISSUE = 0.25  # share of the window's centre that must hold tissue
 GAMMA = 1.25  # >1 deepens mid-greys: pale fibre-rich levels gain contrast
 
