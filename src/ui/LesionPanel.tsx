@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { ArrowUpRight, Box, Crosshair, Search } from 'lucide-react'
 import { PATHWAYS, type BodySide, type LesionLevel } from '@/data/pathways'
-import { LEVELS, LEVEL_BY_ID, localise, signature, type Findings, type Lesion } from '@/data/lesions'
+import { CRANIAL_SIGNS, LEVELS, LEVEL_BY_ID, signature, type Findings, type Lesion } from '@/data/lesions'
 import { SECTION_BY_ID, STRUCTURE_BY_ID, type Section } from '@/data/sections'
 import { lesionLessonId } from '@/data/lessons/lesion'
 import type { L10n } from '@/data/types'
@@ -10,6 +10,7 @@ import { useAtlas } from '@/store/useAtlas'
 import { plateLevel } from './pathTrace'
 import { CATEGORY } from './sectionStyle'
 import type { TerritoryOnPlate } from './lesionTerritory'
+import { cranialSigns, localiseWithSigns, type CranialFindings } from './lesionSigns'
 
 const TX = {
   forward: { en: 'Lesion → signs', uz: "O'choq → belgilar" },
@@ -43,9 +44,22 @@ const TX = {
     uz: "Bunday birikmani bitta bir tomonlama o'choq bermaydi — ikki o'choq yoki ikki tomonlama jarayonni o'ylang (oldingi spinal arteriya, B12, demiyelinizatsiya).",
   },
   many: {
-    en: 'Long-tract signs alone cannot tell these apart: the level is set by what comes with them — cranial nerves, cortical signs, a sensory level (open each one).',
-    uz: "Faqat uzun yo'l belgilari ularni ajrata olmaydi: darajani ular bilan birga keladigan belgilar aniqlaydi — kalla nervlari, po'stloq belgilari, sezgi sathi (har birini oching).",
+    en: 'These differ in what else they give: check the "also expect" signs at the bedside — the cranial nerves set the level (cortical signs and a sensory level above and below the brainstem).',
+    uz: 'Ular boshqa belgilari bilan farqlanadi: bemorda "yana kutiladi" belgilarini tekshiring — darajani kalla nervlari aniqlaydi (miya ustunidan yuqori va pastda — po\'stloq belgilari va sezgi sathi).',
   },
+  cranial: { en: 'Cranial-nerve and level signs', uz: 'Kalla nervlari va daraja belgilari' },
+  noCranial: {
+    en: 'No cranial-nerve sign: above the brainstem (or in the cord) the level is told by cortical signs, the face or a sensory level.',
+    uz: "Kalla nervi belgisi yo'q: miya ustunidan yuqorida (yoki orqa miyada) darajani po'stloq belgilari, yuz yoki sezgi sathi aytadi.",
+  },
+  crossed: {
+    en: 'Crossed signs: cranial nerve on the side of the lesion, long tract on the other — the hallmark of a brainstem lesion.',
+    uz: "Kesishgan belgilar: kalla nervi o'choq tomonida, uzun yo'l — qarama-qarshi tomonda. Bu miya ustuni o'chog'ining asosiy belgisi.",
+  },
+  cranialAsk: { en: 'Cranial-nerve signs, on which side? (optional)', uz: 'Kalla nervi belgilari, qaysi tomonda? (ixtiyoriy)' },
+  sideL: { en: 'left', uz: 'chap' },
+  sideR: { en: 'right', uz: "o'ng" },
+  expect: { en: 'also expect', uz: 'yana kutiladi' },
   rule: {
     en: 'Rule: a lesion above a tract’s crossing gives signs on the opposite side of the body, below it on the same side.',
     uz: "Qoida: yo'l kesishmasidan yuqoridagi o'choq belgilarni tananing qarama-qarshi tomonida, pastdagisi — o'sha tomonda beradi.",
@@ -86,8 +100,18 @@ export function LesionPanel({
   const level = LEVEL_BY_ID.get(lesion.level)!
   const zone = level.zones.find((z) => z.id === lesion.zone) ?? level.zones[0]
   const sig = useMemo(() => signature(lesion), [lesion])
-  const matches = useMemo(() => localise(findings), [findings])
-  const anyFinding = PATHWAYS.some((p) => (findings[p.id] ?? 'none') !== 'none')
+  const signs = useMemo(() => cranialSigns(lesion), [lesion])
+  const [cranial, setCranial] = useState<CranialFindings>({})
+  const matches = useMemo(() => localiseWithSigns(findings, cranial), [findings, cranial])
+  const anyFinding = PATHWAYS.some((p) => (findings[p.id] ?? 'none') !== 'none') || Object.values(cranial).some((s) => s !== 'none')
+  // Signs some lesion of the simulator can give (others cannot be entered usefully).
+  const askable = useMemo(() => {
+    const ids = new Set(LEVELS.flatMap((lv) => lv.zones.flatMap((z) => cranialSigns({ level: lv.id, side: 'L', zone: z.id }).map((h) => h.sign.id))))
+    return CRANIAL_SIGNS.filter((c) => ids.has(c.id))
+  }, [])
+  // Crossed: a cranial sign on one side, a long tract on the other.
+  const crossed = signs.some((h) => h.side === lesion.side && h.via.length) && PATHWAYS.some((p) => sig[p.id] !== 'none' && sig[p.id] !== lesion.side)
+  const sideText = (s: BodySide | 'B') => (s === 'B' ? l(TX.both) : `${l(s === 'L' ? TX.sideL : TX.sideR)} · ${l(s === lesion.side ? TX.ipsi : TX.contra)}`)
 
   const bodyText = (s: BodySide | 'B') => (s === 'B' ? l(TX.both) : `${l(s === 'L' ? TX.bodyL : TX.bodyR)} · ${l(s === lesion.side ? TX.ipsi : TX.contra)}`)
   const plate = level.plate ? SECTION_BY_ID.get(level.plate) : undefined
@@ -152,6 +176,25 @@ export function LesionPanel({
             })}
           </div>
 
+          <h4>{l(TX.cranial)}</h4>
+          {signs.length ? (
+            <div className="lz-table">
+              {signs.map((h) => (
+                <div key={h.sign.id} className="lz-row hit lz-cn" title={h.via.map((id) => (STRUCTURE_BY_ID.get(id) ? l(STRUCTURE_BY_ID.get(id)!.name) : id)).join(', ')}>
+                  <i />
+                  <span className="lz-mod">
+                    <b>{l(h.sign.name)}</b>
+                    <small>{l(h.sign.detail)}</small>
+                  </span>
+                  <span className="lz-res">{sideText(h.side)}</span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="sv-hint">{l(TX.noCranial)}</p>
+          )}
+          {crossed && <p className="sv-note lz-crossed">{l(TX.crossed)}</p>}
+
           {zone.syndrome && (
             <div className="sv-syndrome lz-syn">
               <b>{l(zone.syndrome.name)}</b>
@@ -212,6 +255,21 @@ export function LesionPanel({
               </div>
             </div>
           ))}
+          <h4>{l(TX.cranialAsk)}</h4>
+          {askable.map((c) => (
+            <div key={c.id} className="lz-find lz-find-cn">
+              <span className="lz-mod">
+                <b>{l(c.name)}</b>
+              </span>
+              <div className="lz-seg">
+                {(['none', 'L', 'R'] as const).map((s) => (
+                  <button key={s} className={(cranial[c.id] ?? 'none') === s ? 'on' : ''} onClick={() => setCranial({ ...cranial, [c.id]: s })}>
+                    {l(s === 'none' ? TX.none : s === 'L' ? TX.sideL : TX.sideR)}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
           <h4>{l(TX.candidates)}</h4>
           {!anyFinding ? (
             <p className="sv-hint">{l(TX.pick)}</p>
@@ -237,6 +295,15 @@ export function LesionPanel({
                         <b>{l(lv.name)}</b> · {l(TX[m.side])} · {l(z.name)}
                       </span>
                       {z.syndrome && <small>{l(z.syndrome.name)}</small>}
+                      {(() => {
+                        // What else this lesion gives that was not entered: the bedside test that would confirm it.
+                        const more = cranialSigns(m).filter((h) => (cranial[h.sign.id] ?? 'none') === 'none')
+                        return more.length ? (
+                          <small className="lz-expect">
+                            {l(TX.expect)}: {more.map((h) => `${l(h.sign.name)} (${l(h.side === 'L' ? TX.sideL : h.side === 'R' ? TX.sideR : TX.both)})`).join(', ')}
+                          </small>
+                        ) : null
+                      })()}
                     </button>
                   )
                 })}

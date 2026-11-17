@@ -141,7 +141,8 @@ const TERRITORY: Partial<Record<LesionLevel, Record<string, Territory>>> = {
         [-0.02, -0.2],
         [1.3, -0.2],
         [1.3, 0.42],
-        [-0.02, 0.42],
+        [0.3, 0.34],
+        [-0.02, 0.32],
       ],
     },
     lateral: {

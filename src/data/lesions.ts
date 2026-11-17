@@ -321,3 +321,164 @@ export function localise(findings: Findings): Lesion[] {
       }
   return out
 }
+
+// ── Cranial-nerve and other "level" signs ──────────────────────────────
+
+/**
+ * What places a brainstem lesion: the cranial-nerve nuclei and fascicles,
+ * cerebellar connections and the descending sympathetics caught with the
+ * long tracts. A sign is given by the plate structures inside the lesion's
+ * territory (ui/lesionSigns runs the territory over the level's own plate),
+ * or — for fibres the plates do not draw — by an explicit list of
+ * territories. Nuclei and fascicles give ipsilateral signs; the red nucleus
+ * (after the SCP has crossed) and the corticobulbar fibres to the lower face
+ * give contralateral ones.
+ */
+export interface CranialSign {
+  id: string
+  name: L10n
+  /** What the examiner finds. */
+  detail: L10n
+  items?: { id: string; side: 'ipsi' | 'contra' }[]
+  /** Item signs only count at these levels. */
+  levels?: LesionLevel[]
+  zones?: { level: LesionLevel; zones: string[]; side: 'ipsi' | 'contra' }[]
+}
+
+const ipsi = (...ids: string[]) => ids.map((id) => ({ id, side: 'ipsi' as const }))
+
+export const CRANIAL_SIGNS: CranialSign[] = [
+  {
+    id: 'cn3',
+    name: { en: 'Oculomotor palsy (III)', uz: 'III nerv falaji' },
+    detail: { en: 'Ptosis, eye down and out, dilated unreactive pupil.', uz: "Ptoz, ko'z pastga-tashqariga, kengaygan va reaksiyasiz qorachiq." },
+    items: ipsi('n3', 'n3-root', 'ew'),
+  },
+  {
+    id: 'ino',
+    name: { en: 'Internuclear ophthalmoplegia (MLF)', uz: 'Internuklear oftalmoplegiya (MLF)' },
+    detail: {
+      en: 'On looking away from the lesion the eye on its side does not adduct; the abducting eye beats in nystagmus. Convergence spared.',
+      uz: "O'choqdan teskari tomonga qaraganda o'sha tomondagi ko'z ichkariga kelmaydi; tashqariga ketgan ko'zda nistagm. Konvergensiya saqlanadi.",
+    },
+    items: ipsi('mlf'),
+    levels: ['pons', 'midbrain'],
+  },
+  {
+    id: 'gaze',
+    name: { en: 'Horizontal gaze palsy (VI nucleus / PPRF)', uz: 'Gorizontal qarash falaji (VI yadrosi / PPRF)' },
+    detail: {
+      en: 'Neither eye can look toward the side of the lesion — the abducens nucleus drives both eyes (via the MLF), so a nuclear lesion gives a gaze palsy, not a lone lateral rectus palsy.',
+      uz: "Ikkala ko'z ham o'choq tomonga qaray olmaydi — VI yadrosi ikkala ko'zni boshqaradi (MLF orqali), shuning uchun yadro o'chog'i alohida lateral to'g'ri mushak falajini emas, qarash falajini beradi.",
+    },
+    items: ipsi('n6', 'pprf'),
+  },
+  {
+    id: 'cn6',
+    name: { en: 'Abducens palsy (VI fascicle)', uz: 'VI nerv falaji (fastikula)' },
+    detail: {
+      en: 'The eye on the side of the lesion cannot abduct; horizontal diplopia worse looking toward it.',
+      uz: "O'choq tomondagi ko'z tashqariga burilmaydi; o'sha tomonga qaraganda kuchayadigan gorizontal diplopiya.",
+    },
+    items: ipsi('n6-root'),
+  },
+  {
+    id: 'cn7',
+    name: { en: 'Peripheral facial palsy (VII)', uz: 'Yuzning periferik falaji (VII)' },
+    detail: {
+      en: 'The whole half of the face, forehead included; with the genu, often together with the VI nucleus (facial colliculus).',
+      uz: "Yuzning butun yarmi, peshona ham; tizza sohasida ko'pincha VI yadrosi bilan birga (yuz do'mboqchasi).",
+    },
+    items: ipsi('n7', 'n7-root', 'n7-genu'),
+  },
+  {
+    id: 'face-central',
+    name: { en: 'Central facial palsy (corticobulbar)', uz: 'Yuzning markaziy falaji (kortikobulbar)' },
+    detail: {
+      en: 'Lower face only on the opposite side — the forehead is spared because its motor neurons get input from both hemispheres.',
+      uz: 'Faqat qarama-qarshi tomonda yuzning pastki qismi — peshona saqlanadi, chunki uning motoneyronlari ikkala yarim shardan tola oladi.',
+    },
+    zones: [
+      { level: 'cortex', zones: ['all', 'motor'], side: 'contra' },
+      { level: 'capsule', zones: ['all', 'motor'], side: 'contra' },
+      { level: 'midbrain', zones: ['all', 'ventral'], side: 'contra' },
+    ],
+  },
+  {
+    id: 'face-pain',
+    name: { en: 'Facial pain & temperature loss (spinal V)', uz: "Yuzda og'riq va harorat sezgisi yo'qolishi (spinal V)" },
+    detail: {
+      en: 'Same side of the face; with the ALS cut too, the body loss is on the other side — crossed (alternating) sensory loss.',
+      uz: "Yuzning o'sha tomonida; ALS ham kesilsa, tanada qarama-qarshi tomonda — kesishgan (almashinuvchi) sezgi buzilishi.",
+    },
+    items: ipsi('sp5t', 'sp5n'),
+    // The tract reaches C2–C3, but a cervical hemisection is taught (and examined) without the face.
+    levels: ['pons', 'medulla-rostral', 'medulla-caudal'],
+  },
+  {
+    id: 'cn5',
+    name: { en: 'Trigeminal touch / jaw weakness (V)', uz: 'Yuz teginish sezgisi / chaynov zaifligi (V)' },
+    detail: {
+      en: 'Facial touch lost (principal nucleus), jaw deviates toward the lesion on opening (motor nucleus).',
+      uz: "Yuzda teginish sezgisi yo'qoladi (asosiy yadro), og'iz ochilganda jag' o'choq tomonga og'adi (harakat yadrosi).",
+    },
+    items: ipsi('pr5', 'mo5', 'n5-root'),
+  },
+  {
+    id: 'vestib',
+    name: { en: 'Vertigo, nystagmus (vestibular nuclei)', uz: 'Bosh aylanishi, nistagm (vestibulyar yadrolar)' },
+    detail: { en: 'Vertigo, vomiting, nystagmus, falling toward the lesion.', uz: "Bosh aylanishi, qusish, nistagm, o'choq tomonga yiqilish." },
+    items: ipsi('vn'),
+  },
+  {
+    id: 'hearing',
+    name: { en: 'Hearing loss (VIII / cochlear nuclei)', uz: 'Eshitish pasayishi (VIII / koxlear yadrolar)' },
+    detail: {
+      en: 'Only at the root or cochlear nuclei: above them hearing is carried on both sides, so a central lesion does not deafen one ear.',
+      uz: "Faqat ildiz yoki koxlear yadrolar darajasida: ulardan yuqorida eshitish ikki tomonlama o'tadi, shuning uchun markaziy o'choq bir quloqni kar qilmaydi.",
+    },
+    items: ipsi('cochn', 'n8-root'),
+  },
+  {
+    id: 'bulbar',
+    name: { en: 'Dysphagia, dysphonia (nucleus ambiguus)', uz: "Disfagiya, disfoniya (ikki ma'noli yadro)" },
+    detail: {
+      en: 'Hoarse voice, difficulty swallowing; the palate and uvula pull away from the lesion, absent gag on that side.',
+      uz: "Xirillagan ovoz, yutish qiyinligi; yumshoq tanglay va tilcha o'choqdan teskari tomonga tortiladi, o'sha tomonda qusish refleksi yo'q.",
+    },
+    items: ipsi('amb', 'n9-root', 'n10-root'),
+  },
+  {
+    id: 'cn12',
+    name: { en: 'Tongue weakness (XII)', uz: 'Til zaifligi (XII)' },
+    detail: {
+      en: 'The protruded tongue deviates toward the lesion; atrophy and fasciculations later.',
+      uz: "Chiqarilgan til o'choq tomonga og'adi; keyinroq atrofiya va fassikulyatsiyalar.",
+    },
+    items: ipsi('n12', 'n12-root'),
+  },
+  {
+    id: 'ataxia',
+    name: { en: 'Limb ataxia (cerebellar connections)', uz: "Oyoq-qo'l ataksiyasi (miyacha aloqalari)" },
+    detail: {
+      en: 'Below the SCP decussation (ICP, MCP, SCP) on the same side; at the red nucleus, after the crossing, on the opposite side (Claude).',
+      uz: "SCP kesishmasidan pastda (ICP, MCP, SCP) o'sha tomonda; qizil yadro darajasida, kesishmadan keyin — qarama-qarshi tomonda (Claude).",
+    },
+    items: [...ipsi('icp', 'mcp', 'scp'), { id: 'rn', side: 'contra' }],
+  },
+  {
+    id: 'horner',
+    name: { en: 'Horner syndrome (descending sympathetics)', uz: 'Horner sindromi (tushuvchi simpatik tolalar)' },
+    detail: {
+      en: 'Ptosis, miosis, facial anhidrosis on the same side: the hypothalamospinal fibres run in the lateral tegmentum to the cord (T1).',
+      uz: "O'sha tomonda ptoz, mioz, yuzda terlash yo'qligi: gipotalamospinal tolalar lateral tegmentumda orqa miyagacha (T1) tushadi.",
+    },
+    zones: [
+      { level: 'pons', zones: ['all', 'lateral'], side: 'ipsi' },
+      { level: 'medulla-rostral', zones: ['all', 'lateral'], side: 'ipsi' },
+      { level: 'medulla-caudal', zones: ['all', 'lateral'], side: 'ipsi' },
+      { level: 'cord', zones: ['all'], side: 'ipsi' },
+    ],
+  },
+]
+export const CRANIAL_BY_ID = new Map(CRANIAL_SIGNS.map((c) => [c.id, c]))

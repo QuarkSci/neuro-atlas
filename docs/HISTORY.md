@@ -824,8 +824,27 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   `flows[]`. `BrainScene.buildFlow`: oqim o'choqqa eng yaqin nuqtada to'xtaydi (30 mm dan uzoq bo'lsa kesilmaydi),
   undan keyingi qism kulrang shtrix (Waller degeneratsiyasi); shar + pulsatsiyalanuvchi halo, `depthTest: false`.
   Kontekst — o'choq tomonidagi yarim shar. PhD: Waller degeneratsiyasining DTI dagi ko'rinishi (Thomalla 2004, Puig 2010).
-- QOLDI: plastinkani bosib o'choq qo'yish; kalla nervlari yadrolarini `signature()`ga qo'shish (hozir faqat hudud
-  ro'yxatida ko'rinadi); trigeminal yo'l; kortikobulbar; po'stloq o'chog'i plastinkasiz (faqat 3D).
+- QOLDI: plastinkani bosib o'choq qo'yish; trigeminal yo'l; po'stloq o'chog'i plastinkasiz (faqat 3D).
+
+### 5.3-3b — Kalla nervlari simulyatorda (2026-11-17)
+
+- `src/data/lesions.ts` `CRANIAL_SIGNS` (14 belgi): III, INO (MLF, faqat ko'prik/o'rta miya), gorizontal qarash (VI
+  yadrosi/PPRF — yadro o'chog'i qarash falajini beradi), VI fastikula, VII periferik, yuzning markaziy falaji
+  (kortikobulbar, qarama-qarshi; po'stloq/kapsula/oyoqcha — hudud qoidasi), spinal V (faqat miya ustuni darajalari),
+  V asosiy/harakat yadrosi, vestibulyar, eshitish (koxlear yadro/ildiz), ikki ma'noli yadro, XII, ataksiya (ICP/MCP/SCP
+  o'sha tomonda, qizil yadro — qarama-qarshi), Horner (lateral miya ustuni + bo'yin yarim kesilishi — hudud qoidasi).
+- `src/ui/lesionSigns.ts`: `cranialSigns(lesion)` — o'choq hududi DARAJANING O'Z plastinkasida (`LEVEL.plate`) yuritiladi,
+  hududga tushgan itemlar → belgi (keshlanadi). Ma'lumot qatlami UI geometriyasiga bog'lanmasin deb UI'da.
+  `localiseWithSigns()`: uzun yo'llar aniq mos, kiritilgan kalla belgilari majburiy, kiritilmaganlari hisobga olinmaydi.
+- Panel: oldinga rejimda "Kalla nervlari va daraja belgilari" ro'yxati + "kesishgan belgilar" eslatmasi; teskari rejimda
+  belgi × tomon tanlovi (faqat biror o'choq bera oladigan belgilar — eshitish hozircha yo'q, koxlear yadrolar U4 da) va
+  har nomzodda "yana kutiladi" (ajratuvchi belgi). Misol: ALS o'ngda + yuz og'rig'i chapda → ko'prik lateral (VII,
+  vestibulyar, ataksiya, Horner) yoki Wallenberg (vestibulyar, disfagiya, ataksiya, Horner).
+- Tekshirilgan: Weber (CST o'ng + III chap → faqat O'rta miya chap ventral), Dejerine (XII chap + CST/DCML o'ng → faqat
+  medial uzunchoq), Benedikt/Claude (qizil yadro → qarama-qarshi ataksiya), Raymond (ko'prik ventral: VI + CST).
+- `medulla-caudal` dorsal hududi medialda sayozlashtirildi (v 0.32) — XII yadrosi orqa ustun o'chog'iga tushmasin.
+- QOLDI: 3D o'choq darsida kalla belgilarini ko'rsatish (dars ma'lumot qatlamida, belgilar UI'da — uzatish kerak);
+  trigeminal yo'l; eshitish belgisi uchun U4 darajasi.
 
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 

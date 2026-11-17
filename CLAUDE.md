@@ -64,6 +64,9 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 
 ## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-17, 5.3-3a dan keyin)
 
+**Kalla nervlari simulyatorda ✅ (2026-11-17)** — `docs/HISTORY.md` "5.3-3b": `CRANIAL_SIGNS` (lesions.ts),
+`src/ui/lesionSigns.ts` (`cranialSigns`, `localiseWithSigns`), panelda oldinga ro'yxat + teskari tanlov + "yana kutiladi".
+
 **O'choq plastinkada va 3D da ✅ (2026-11-17)** — tafsilot `docs/HISTORY.md` "5.3-3a". `src/ui/lesionTerritory.ts`
 (havza = u/v ko'pburchak yoki tuzilma; `territoryOn()` → shakl + hududdagi tuzilmalar), `scripts/audit-lesions.mjs`
 (simulyator bilan mosligi, 0 bo'lishi shart), `src/data/lessons/lesion.ts` (`lesion:<level>:<side>:<zone>` darsi;
@@ -74,15 +77,15 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 avtomatik), `src/ui/pathTrace.ts` (plastinkada yoritish, `store.pathway`), `src/data/lesions.ts` + `src/ui/LesionPanel.tsx`
 (kesim ko'ruvchisining "Shikastlanish" tabi, teskari rejim `localise`). Mantiq tekshiruvi: headless brauzerda
 `import('/src/data/lesions.ts')` → `signature()` (Brown-Séquard, Dejerine, Wallenberg, Weber to'g'ri chiqadi).
-Davomi: kalla nervlari yadrolarini simulyatorga qo'shish; trigeminal yo'l (o'choq chizish ✅ 5.3-3a).
+Davomi: trigeminal yo'l (o'choq chizish ✅ 5.3-3a, kalla nervlari ✅ 5.3-3b).
 
 **5.5 ✅ (2026-11-17)** — tafsilot `docs/HISTORY.md` "5.5": `src/ui/ZoomPane.tsx` (zoom, F = to'liq ekran),
 real kesim 21/22 (`REAL_STAND_IN` T2→B5, G4→G2; U1 manbasiz), `pipeline/mirror_vessels.py` (68 tomir ko'zgu jufti,
 `mirrorOf`, `data/gross_mirrored.json`; meshlar qayta hosil qilinsa — mirror_vessels.py → build_catalogue.py).
 
 **Navbatdagi vazifa — foydalanuvchi tanlaydi** (avval qisqa reja ko'rsating): PLAN 5.3-3 mavzu viktorinasi + Anki;
-Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; kalla nervlari yadrolarini simulyatorga + trigeminal
-yo'l; plastinkani bosib o'choq qo'yish; 5.4 UI qoldiqlari.
+Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; trigeminal yo'l; 3D o'choq darsida kalla belgilari;
+plastinkani bosib o'choq qo'yish; 5.4 UI qoldiqlari.
 
 Ish uslubi bo'yicha eslatmalar (2026-11-17):
 - TS mantiqni tekshirish: `npx -y tsx` ruxsat bermadi → vaqtinchalik `scripts/_x_tmp.mjs` (puppeteer) da dev serverdan
@@ -95,7 +98,7 @@ Ish uslubi bo'yicha eslatmalar (2026-11-17):
 
 ## Joriy holat (2026-11-17)
 
-Tayyor: 0–4c bosqichlar, BG-1, 3 dars + 3 yo'l darsi va shikastlanish simulyatori (5.3 1+2, o'choq plastinkada/3D 5.3-3a), 5.5 (zoom, real kesim 21/22, tomirlar simmetriyasi), O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
+Tayyor: 0–4c bosqichlar, BG-1, 3 dars + 3 yo'l darsi va shikastlanish simulyatori (5.3 1+2, o'choq plastinkada/3D 5.3-3a, kalla nervlari 5.3-3b), 5.5 (zoom, real kesim 21/22, tomirlar simmetriyasi), O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
 
 **Hozirgi yo'nalish — realizm (foydalanuvchi talabi 2026-11-14):** butun ko'rinishni iloji
 boricha real qilish. Reja (har biri alohida sessiya va commit):
