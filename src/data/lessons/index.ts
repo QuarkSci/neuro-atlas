@@ -4,11 +4,12 @@ import type { Lesson, LessonStep, Mni } from './types'
 import { VENTRICLES } from './ventricles'
 import { CALLOSUM } from './callosum'
 import { LIMBIC } from './limbic'
+import { PATHWAY_LESSONS } from './pathways'
 
 export type { Lesson, LessonStep, LessonLabel, Mni } from './types'
 
 /** Guided 3D lessons, in teaching order. */
-export const LESSONS: Lesson[] = [VENTRICLES, CALLOSUM, LIMBIC]
+export const LESSONS: Lesson[] = [VENTRICLES, CALLOSUM, LIMBIC, ...PATHWAY_LESSONS]
 export const LESSON_BY_ID = new Map(LESSONS.map((l) => [l.id, l]))
 
 /** What the 3D scene needs for one lesson step, resolved to mesh ids. */

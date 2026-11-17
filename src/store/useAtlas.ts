@@ -1,4 +1,5 @@
 import { TOPICS } from '@/data/topics'
+import { PATHWAY_BY_ID } from '@/data/pathways'
 import { create } from 'zustand'
 import type { LayerId, SystemId } from '@/data/types'
 import type { ColorMode } from '@/scene/materials'
@@ -62,6 +63,8 @@ export interface AtlasState {
   sectionId: string | null
   /** Section whose oblique plane currently cuts the 3D model, or null. */
   sectionCut: string | null
+  /** Long tract traced on the plates (data/pathways id), or null. */
+  pathway: string | null
   /** Systems shown before entering the sections mode, restored on leaving it. */
   sectionsPrevVisible: SystemId[] | null
   /** Topic open in the learn tab (data/topics), or null for the topic cards. */
@@ -102,6 +105,8 @@ export interface AtlasState {
   jumpToLevel: (mm: number) => void
   /** Opens (or closes, with null) the cross-section viewer. */
   openSection: (id: string | null) => void
+  /** Traces a long tract on the plates (null: off). */
+  setPathway: (id: string | null) => void
   /** Opens a topic in the learn tab (null: back to the topic cards). */
   setTopic: (id: string | null) => void
   /** Starts a lesson at its first step, or (null) returns to the lesson list. */
@@ -188,6 +193,7 @@ const sceneDefaults = {
   hovered: null as string | null,
   sectionId: null as string | null,
   sectionCut: null as string | null,
+  pathway: null as string | null,
   sectionsPrevVisible: null as SystemId[] | null,
   topic: null as string | null,
   lesson: null as { id: string; step: number } | null,
@@ -285,6 +291,7 @@ export const useAtlas = create<AtlasState>((set) => ({
       return base
     }),
   openSection: (sectionId) => set((s) => ({ sectionId, panel: null, sidebar: sectionId && isPhone() ? false : s.sidebar })),
+  setPathway: (pathway) => set({ pathway }),
   setTopic: (topic) =>
     set((s) => ({
       ...enterLearn(s),
@@ -304,6 +311,8 @@ export const useAtlas = create<AtlasState>((set) => ({
       // A lesson opened from outside its topic (a plate's link) lands in it.
       topic: id && !s.topic ? (TOPICS.find((t) => t.lessons.includes(id))?.id ?? null) : s.topic,
       lesson: id ? { id, step: 0 } : null,
+      // A long-tract lesson traces its tract on every plate it opens.
+      pathway: id && PATHWAY_BY_ID.has(id) ? id : s.pathway,
       sidebar: id && isPhone() ? false : s.sidebar,
       lessonPick: null,
       sectionCut: null,

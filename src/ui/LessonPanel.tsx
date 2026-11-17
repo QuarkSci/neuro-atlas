@@ -21,7 +21,14 @@ export function LessonProgress() {
       </button>
       <div className="lesson-dots" role="tablist" aria-label={l(ls.title)}>
         {ls.steps.map((st, i) => (
-          <button key={i} role="tab" aria-selected={i === lesson.step} className={`lesson-dot ${i === lesson.step ? 'on' : i < lesson.step ? 'done' : ''} ${st.quiz ? 'quiz' : ''}`} onClick={() => setLessonStep(i)} title={l(st.title)}>
+          <button
+            key={i}
+            role="tab"
+            aria-selected={i === lesson.step}
+            className={`lesson-dot ${i === lesson.step ? 'on' : i < lesson.step ? 'done' : ''} ${st.quiz ? 'quiz' : ''}`}
+            onClick={() => setLessonStep(i)}
+            title={l(st.title)}
+          >
             {st.quiz ? <GraduationCap size={12} /> : i + 1}
           </button>
         ))}
@@ -38,7 +45,7 @@ export function LessonProgress() {
 export function LessonPanel() {
   const t = useT()
   const l = useL()
-  const { mode, lesson, lessonPick, topic, setLessonStep, setLesson, setLessonPick, openSection } = useAtlas()
+  const { mode, lesson, lessonPick, topic, sectionId, setLessonStep, setLesson, setLessonPick, openSection } = useAtlas()
   const ls = mode === 'learn' && lesson ? LESSON_BY_ID.get(lesson.id) : undefined
   const step = ls && lesson ? ls.steps[lesson.step] : undefined
   const body = useRef<HTMLDivElement>(null)
@@ -94,14 +101,15 @@ export function LessonPanel() {
     if (!ls || !lesson) return
     const key = (e: KeyboardEvent) => {
       const typing = e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement
-      if (typing) return
+      // An open plate owns the arrow keys (its own levels / the pathway).
+      if (typing || sectionId) return
       if (e.key === 'ArrowRight' && lesson.step < ls.steps.length - 1) setLessonStep(lesson.step + 1)
       else if (e.key === 'ArrowLeft' && lesson.step > 0) setLessonStep(lesson.step - 1)
       else if (e.key === 'Escape') setLesson(null)
     }
     window.addEventListener('keydown', key)
     return () => window.removeEventListener('keydown', key)
-  }, [ls, lesson, setLessonStep, setLesson])
+  }, [ls, lesson, sectionId, setLessonStep, setLesson])
 
   if (!ls || !lesson || !step) return null
   const last = lesson.step === ls.steps.length - 1
@@ -141,7 +149,15 @@ export function LessonPanel() {
                 </div>
                 <div className="quiz-ask">{l(quiz[q].ask)}</div>
                 {verdict ? (
-                  <div className={`quiz-verdict ${verdict.ok ? 'ok' : 'bad'}`}>{verdict.ok ? <><Check size={14} /> {t.lsRight}: {verdict.name}</> : <>{t.lsWrong(verdict.name)}</>}</div>
+                  <div className={`quiz-verdict ${verdict.ok ? 'ok' : 'bad'}`}>
+                    {verdict.ok ? (
+                      <>
+                        <Check size={14} /> {t.lsRight}: {verdict.name}
+                      </>
+                    ) : (
+                      <>{t.lsWrong(verdict.name)}</>
+                    )}
+                  </div>
                 ) : (
                   <div className="quiz-hint">{t.lsTapHint}</div>
                 )}
@@ -152,7 +168,14 @@ export function LessonPanel() {
                   {t.lsResult} {score}/{quiz.length}
                 </strong>
                 <span>{score === quiz.length ? t.lsPerfect : t.lsAgainHint}</span>
-                <button className="strip-btn" onClick={() => { setQ(0); setScore(0); setVerdict(null) }}>
+                <button
+                  className="strip-btn"
+                  onClick={() => {
+                    setQ(0)
+                    setScore(0)
+                    setVerdict(null)
+                  }}
+                >
                   <RotateCcw size={14} /> {t.lsRetry}
                 </button>
               </div>

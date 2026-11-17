@@ -31,6 +31,8 @@ import { AtlasSliceView, regionColor, useAtlasSlice, type SliceMark } from './At
 import { LAYER_BY_ID, PART_BY_ID } from '@/data'
 import { TOPIC_BY_ID, topicsOfSection } from '@/data/topics'
 import { badgePositions, itemArea, itemShapes, mix, sectionEntries, type Entry } from './sectionLayout'
+import { PATHWAYS, PATHWAY_BY_ID } from '@/data/pathways'
+import { routePlates, traceOn, type TraceItem } from './pathTrace'
 
 /** Layers whose meshes make the 3D cut face informative for each region. */
 export const CUT_LAYERS: Record<Section['region'], LayerId[]> = {
@@ -54,11 +56,15 @@ type Numbered = Entry
 export function SectionViewer() {
   const t = useT()
   const l = useL()
-  const { sectionId, openSection, cutSection, selectParts, lang, topic, lesson, setLesson } = useAtlas()
+  const { sectionId, openSection, cutSection, selectParts, lang, topic, lesson, setLesson, pathway, setPathway } = useAtlas()
   const section = sectionId ? SECTION_BY_ID.get(sectionId) : undefined
-  // Inside a topic the plates step through that topic only; otherwise through all.
+  const tract = pathway ? PATHWAY_BY_ID.get(pathway) : undefined
+  const route = useMemo(() => (tract ? routePlates(tract) : []), [tract])
+  const trace = useMemo(() => (tract && section ? traceOn(tract, section) : []), [tract, section])
+  // A traced tract steps along its own plates; inside a topic the plates step through that topic only; otherwise through all.
   const tp = topic ? TOPIC_BY_ID.get(topic) : undefined
-  const order = tp && sectionId && tp.sections.includes(sectionId) ? tp.sections.map((id) => SECTION_BY_ID.get(id)!).filter(Boolean) : SECTIONS
+  const onRoute = !!sectionId && route.some((s) => s.id === sectionId)
+  const order = onRoute ? route : tp && sectionId && tp.sections.includes(sectionId) ? tp.sections.map((id) => SECTION_BY_ID.get(id)!).filter(Boolean) : SECTIONS
   // The 3D lesson that teaches this plate's structures (own topic first).
   const lessonFor = sectionId ? (tp?.lessons[0] ?? topicsOfSection(sectionId).find((x) => x.lessons.length)?.lessons[0]) : undefined
   const [selected, setSelected] = useState<string | null>(null)
@@ -238,6 +244,40 @@ export function SectionViewer() {
           )}
         </nav>
 
+        <div className="sv-trace-bar" style={tract ? ({ '--trace': tract.color } as React.CSSProperties) : undefined}>
+          <span className="sv-trace-label">{t.svPath}</span>
+          {PATHWAYS.map((p) => (
+            <button
+              key={p.id}
+              className={`sv-trace-chip ${pathway === p.id ? 'on' : ''}`}
+              style={{ '--c': p.color } as React.CSSProperties}
+              aria-pressed={pathway === p.id}
+              onClick={() => setPathway(pathway === p.id ? null : p.id)}
+              title={l(p.title)}
+            >
+              <i />
+              {l(p.short)}
+            </button>
+          ))}
+          {tract && (
+            <span className="sv-trace-here">
+              {trace.length ? (
+                tract!.stations
+                  .filter((st) => trace.some((x) => x.station === st))
+                  .map((st) => (
+                    <span key={st.id}>
+                      <b>{t[`svNeuron${st.neuron}` as const]}</b> {l(st.name)}
+                      {st.cross && st.plate === section.id && <em> · {t.svPathCross}</em>}
+                    </span>
+                  ))
+              ) : (
+                <span className="dim">{t.svPathNone}</span>
+              )}
+              {onRoute && <span className="sv-trace-keys">{t.svPathHint}</span>}
+            </span>
+          )}
+        </div>
+
         <div className="sv-body">
           <div className="sv-figure">
             <div className="sv-views" role="tablist" aria-label={t.svLevel}>
@@ -335,6 +375,7 @@ export function SectionViewer() {
                 focusCat={focusCat}
                 numbers={numbers}
                 labels={labels && !quiz}
+                trace={tract && trace.length && view === 'scheme' ? { color: tract.color, items: trace } : undefined}
                 nameOf={nameOf}
                 axes={section.axes.map((a) => l(a)) as [string, string, string, string]}
                 onHover={setHover}
@@ -493,6 +534,7 @@ function Figure({
   focusCat,
   numbers,
   labels,
+  trace,
   nameOf,
   axes,
   onHover,
@@ -506,6 +548,8 @@ function Figure({
   focusCat: string | null
   numbers: boolean
   labels: boolean
+  /** A long tract traced over the plate: its items on the traced side. */
+  trace?: { color: string; items: TraceItem[] }
   nameOf: (item: SectionItem) => string
   axes: [string, string, string, string]
   onHover: (id: string | null) => void
@@ -639,6 +683,18 @@ function Figure({
       )}
       {order.strokes.map((e) => paint(e, 'stroke'))}
       {order.fills.map((e) => paint(e, 'fill'))}
+      {trace && (
+        <g className="sv-trace" style={{ '--trace': trace.color } as React.CSSProperties}>
+          {/* A veil over the whole plate: the traced side reads at once, its untraced twin stays in the background. */}
+          <rect className="sv-trace-veil" x={-pad - side} y={-pad} width={section.w + (pad + side) * 2} height={section.h + pad * 2} />
+          {trace.items.flatMap((x) =>
+            x.shapes.map((sh, i) => {
+              const p = shapePath(sh)
+              return <path key={`${x.item.id}-${i}`} d={p.d} className={p.stroke ? 'stroke' : 'fill'} strokeWidth={p.stroke ? strokeW(p.w) + 2.5 : 2.6} />
+            }),
+          )}
+        </g>
+      )}
       {section.outline.map((sh, i) => {
         const p = shapePath(sh)
         return p.stroke ? null : <path key={`rim-${i}`} d={p.d} className="sv-rim" />
