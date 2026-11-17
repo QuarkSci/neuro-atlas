@@ -763,6 +763,24 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   tsc + build. Tekshirilmadi: O1 surati ko'rilmadi (faqat son), Atlas (MNI) ko'rinishi va 3D marker o'rni suratda ko'rilmadi.
 - O3 da sxemadagi qizil yadro kesilmaydi (bu geometriyada u z −11 dan pastda tugaydi) — sxema va atlas shu yerda farq qiladi.
 
+### 5.3 (1+2) — Uzun yo'llar va shikastlanish simulyatori (2026-11-16/17)
+
+- `src/data/pathways.ts`: CST, DCML, ALS — tartibli bekatlar (neyron 1/2/3, `level`, `zones`, `also`, `side`, `cross`,
+  `midline`, sxema `items`, `plate`, 3D `show`, `label`, `at`). Hammasi O'NG tana / CHAP yarim shar uchun chizilgan.
+- `src/data/lessons/pathways.ts`: shu ma'lumotdan 3 ta 3D dars (umumiy → bekatlar → kesishma + viktorina);
+  mavzu `pathways` ("Uzun yo'llar va shikastlanish").
+- Kesim ko'ruvchisi: "Yo'l" tasmasi (`store.pathway`, dars boshlansa avtomatik), plastinka ustida parda + yo'l
+  rangidagi bekat (`src/ui/pathTrace.ts`: tomon x bo'yicha; chiziq qayerdan BOSHLANSA o'sha tomonniki), ←/→ yo'lning
+  o'z plastinkalari bo'ylab. `LessonPanel` plastinka ochiq bo'lsa strelkalarni olmaydi.
+- `src/data/lesions.ts` + `src/ui/LesionPanel.tsx` ("Shikastlanish" tabi): daraja × tomon × hudud → har yo'l uchun
+  qaysi tana tomoni (o'sha / qarama-qarshi), hudud sindromi (StatPearls, eutils bilan tekshirilgan). Teskari rejim:
+  belgilar → barcha mos o'choqlar (`localise`). Tekshirilgan: o'ng yarim kesilish = Brown-Séquard; chap paramedian
+  uzunchoq = Dejerine; chap lateral = Wallenberg; faqat CST o'ngda → po'stloq / kapsula / Weber / ko'prik asosi.
+- 3D nuqtalar meshlardan o'lchandi (JHU CST/ML/CP/PLIC, bstem piramida, Julich VPL/4p/3b — plastinka tekisligidagi
+  kesim markazi). Sxema → MNI chiziqli o'tkazish rad etildi (K3 oynasi xatosi tufayli 20+ mm).
+- QOLDI: o'choqni plastinkada chizish (hudud bo'yalishi), 3D da o'choq; kalla nervlari yadrolarini simulyatorga qo'shish
+  (hozir `extra` matnida); yuz (trigeminal) yo'li; kortikobulbar.
+
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
 1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).

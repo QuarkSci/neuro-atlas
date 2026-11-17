@@ -33,6 +33,7 @@ import { TOPIC_BY_ID, topicsOfSection } from '@/data/topics'
 import { badgePositions, itemArea, itemShapes, mix, sectionEntries, type Entry } from './sectionLayout'
 import { PATHWAYS, PATHWAY_BY_ID } from '@/data/pathways'
 import { routePlates, traceOn, type TraceItem } from './pathTrace'
+import { LesionPanel } from './LesionPanel'
 
 /** Layers whose meshes make the 3D cut face informative for each region. */
 export const CUT_LAYERS: Record<Section['region'], LayerId[]> = {
@@ -73,7 +74,7 @@ export function SectionViewer() {
   const [numbers, setNumbers] = useState(true)
   const [quiz, setQuiz] = useState(false)
   const [revealed, setRevealed] = useState<Set<string>>(new Set())
-  const [tab, setTab] = useState<'structures' | 'level'>('structures')
+  const [tab, setTab] = useState<'structures' | 'level' | 'lesion'>('structures')
   const [focusCat, setFocusCat] = useState<string | null>(null)
   const [view, setView] = useState<'scheme' | Stain | 'atlas' | 'real'>('scheme')
   const [contours, setContours] = useState(true)
@@ -402,9 +403,14 @@ export function SectionViewer() {
               <button role="tab" aria-selected={tab === 'level'} className={tab === 'level' ? 'active' : ''} onClick={() => setTab('level')}>
                 {t.svLevel}
               </button>
+              <button role="tab" aria-selected={tab === 'lesion'} className={tab === 'lesion' ? 'active' : ''} onClick={() => setTab('lesion')}>
+                {t.svLesionTab}
+              </button>
             </div>
 
-            {tab === 'structures' && cutView ? (
+            {tab === 'lesion' ? (
+              <LesionPanel section={section} />
+            ) : tab === 'structures' && cutView ? (
               <AtlasList
                 regions={atlas?.data?.regions ?? []}
                 selected={atlasSel}

@@ -1102,3 +1102,30 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .sv-trace path:not(.sv-trace-veil) { animation: sv-trace-pulse 1.8s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .sv-trace path { animation: none; } }
 .sv-trace .sv-trace-veil { fill: #0b0e14; opacity: 0.5; filter: none; animation: none; }
+
+/* ── Lesion simulator (data/lesions) ────────────────────────────────── */
+.lz { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; display: flex; flex-direction: column; gap: 6px; padding: 0 14px 16px; }
+.lz > * { flex: none; }
+.lz h4 { margin: 8px 0 2px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--fa-muted); }
+.lz-modes, .lz-seg { display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: color-mix(in oklab, #000 35%, transparent); align-self: flex-start; }
+.lz-modes button, .lz-seg button { display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 11px; border-radius: 999px; font-size: 11.5px; color: var(--fa-muted); white-space: nowrap; }
+.lz-modes button.on, .lz-seg button.on { background: var(--fa-accent); color: #fff; }
+.lz-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.lz-chips button { height: 24px; padding: 0 9px; border-radius: 999px; font-size: 11.5px; color: var(--fa-muted); border: 1px solid color-mix(in oklab, #fff 14%, transparent); }
+.lz-chips button.on { color: #fff; background: color-mix(in oklab, var(--fa-accent) 40%, transparent); border-color: var(--fa-accent); }
+.lz-table { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
+.lz-row { display: grid; grid-template-columns: 10px 1fr auto; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 12px; text-align: left; background: color-mix(in oklab, #fff 4%, transparent); border: 1px solid transparent; }
+.lz-row i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.lz-row.hit { border-color: color-mix(in oklab, var(--c) 60%, transparent); background: color-mix(in oklab, var(--c) 14%, transparent); }
+.lz-row.spared { opacity: 0.55; }
+.lz-mod { display: flex; flex-direction: column; min-width: 0; font-size: 12px; }
+.lz-mod small { color: var(--fa-muted); font-size: 10.5px; }
+.lz-res { font-size: 11.5px; text-align: right; }
+.lz-row.hit .lz-res { color: #fff; font-weight: 600; }
+.lz-syn { margin-top: 6px; }
+.lz-find { display: flex; flex-direction: column; gap: 4px; padding: 6px 0 6px 10px; border-left: 3px solid var(--c); }
+.lz-cands { display: flex; flex-direction: column; gap: 4px; }
+.lz-cand { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; padding: 7px 10px; border-radius: 12px; font-size: 12px; text-align: left; background: color-mix(in oklab, #fff 5%, transparent); }
+.lz-cand:hover { background: color-mix(in oklab, var(--fa-accent) 22%, transparent); }
+.lz-cand small { color: var(--fa-muted); font-size: 10.5px; }
+.lz-syn p { font-size: 12px; line-height: 1.5; }

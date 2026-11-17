@@ -47,6 +47,8 @@ export interface PathStation {
   side: BodySide
   /** The fibres cross the midline at this station. */
   cross?: boolean
+  /** The crossing happens right here in the midline: a lesion of this zone on either side catches fibres of both body halves. */
+  midline?: boolean
   /** Lesion zones at this level (data/lesions) that contain the station. */
   zones: string[]
   /** Further levels the same fibres pass through (thalamocortical axons in the capsule…), same side. */
@@ -224,7 +226,7 @@ const CST: Pathway = {
       neuron: 1,
       level: 'pons',
       side: 'L',
-      zones: ['all', 'medial'],
+      zones: ['all', 'medial', 'ventral'],
       items: ['basis-cst'],
       plate: 'pons-trigeminal',
       show: [{ concept: 'wm-corticospinal-tract', side: L }],
@@ -273,6 +275,7 @@ const CST: Pathway = {
       level: 'medulla-caudal',
       side: 'L',
       cross: true,
+      midline: true,
       zones: ['all', 'medial'],
       items: ['pyr-dec', 'pyramid'],
       plate: 'medulla-pyramidal-decussation',
@@ -411,6 +414,7 @@ const DCML: Pathway = {
       level: 'medulla-caudal',
       side: 'R',
       cross: true,
+      midline: true,
       zones: ['all', 'medial'],
       items: ['ia'],
       plate: 'medulla-sensory-decussation',

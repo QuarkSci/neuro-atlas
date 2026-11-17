@@ -60,33 +60,25 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 - Rejimlar: `explode | peel | learn`. Yangi dars/kesim → tegishli mavzuga (`topics.ts`) yozilsin; yangi tab ochilmaydi.
 - Pipeline vositalari: `pipeline/tools/slice_svg.py`, `landmarks.py` (`pipeline/.venv/bin/python`, repo ildizidan).
 
-## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-16 da tayyorlangan)
+## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-17 da yangilandi)
 
-**Vazifa: yo'llar va shikastlanish** (PLAN 5.3 ning 1+2-bandlari; foydalanuvchi 2026-11-16 da "davom et" dedi).
-Hali kod yozilmagan. Boshlash uchun TAKLIF (qaror emas — avval foydalanuvchiga qisqa ko'rsating):
-- Uch yo'l: kortikospinal, orqa ustun–medial lemnisk, spinotalamik (ALS). Har biri — tartibli bekatlar ro'yxati:
-  kesim id + sxema tuzilma id (`pyr`, `pyr-dec`, `lcst`, `crus-cst`, `ic-pl`/`cst-ic`; `fg`/`fc` → `ng`/`nc` → `ml` →
-  `th-vpl`; `als` → `th-vpl`), kesishish darajasi va neyron tartibi (1/2/3). Yangi fayl: `src/data/pathways.ts`,
-  mavzuga `topics.ts` orqali ulanadi (yangi tab ochilmaydi).
-- Ko'rinish: (1) kesim ko'ruvchisida yo'l tanlansa, shu darajadagi bekati yonadi, ←/→ bilan yo'l bo'ylab yuqoriga/pastga;
-  (2) 3D da bekatlar markazlari orqali chiziq (kesim tekisligi + sxema nuqtasi → MNI; `atlasSlice.toMNI`).
-- Shikastlanish: daraja + tomon tanlanadi → har yo'l uchun "kesishishdan pastmi/yuqorimi" bo'yicha ipsi/kontra yo'qotish
-  jadvali; teskari rejim (belgilardan o'choqni topish) — PhD/klinik daraja. Kesimlardagi tayyor `syndromes` bilan solishtiring.
-- Manba qoidasi amalda: har da'vo DOI/Bookshelf bilan (Crossref / eutils orqali tekshiriladi).
+**Yo'llar va shikastlanish ✅ (2026-11-17)** — tafsilot `docs/HISTORY.md` "5.3 (1+2)". Qisqa xarita:
+`src/data/pathways.ts` (CST/DCML/ALS bekatlari, O'NG tana = CHAP yarim shar), `src/data/lessons/pathways.ts` (3D darslar
+avtomatik), `src/ui/pathTrace.ts` (plastinkada yoritish, `store.pathway`), `src/data/lesions.ts` + `src/ui/LesionPanel.tsx`
+(kesim ko'ruvchisining "Shikastlanish" tabi, teskari rejim `localise`). Mantiq tekshiruvi: headless brauzerda
+`import('/src/data/lesions.ts')` → `signature()` (Brown-Séquard, Dejerine, Wallenberg, Weber to'g'ri chiqadi).
+Ixtiyoriy davomi: o'choqni plastinkada / 3D da chizish; kalla nervlari yadrolarini simulyatorga qo'shish; trigeminal yo'l.
 
-**Foydalanuvchining 2026-11-16 dagi uch yangi talabi — tafsilot `PLAN.md` 5.5** (navbatda, yo'llardan keyin yoki
-foydalanuvchi aytgan tartibda):
+**Navbatdagi vazifa — foydalanuvchining 2026-11-16 dagi uch talabi (`PLAN.md` 5.5), avval qisqa reja ko'rsating:**
 1. Qon tomirlar simmetrik emas (o'lchandi: venalar 31 o'ng / 1 chap; arteriyalar 76 o'ng / 46 chap).
 2. Real preparat tasviri hamma kesimda yo'q (22 tadan 17 tasida bor; yo'q: U1, K3, Mc, T2, G4).
 3. Tasvirni (ayniqsa real kesimni) bosganda kattalashtirish — to'liq ekran / zoom.
 
-**Shu sessiyada bajarildi (2026-11-16):** Real kesimda sxema raqamlari (`970cfd0`); o'rta miya tekisliklari O1–O3
-tuzatildi (`a289db0`). 5.1 bo'yicha: T2 tutash bo'linma; qolgan 21 plastinkada UNOWNED 0.0% (qayta chizish shart emas).
 5.1 dan qolgan ixtiyoriy ishlar: T1 talamus ichida yadrolar tutashishi (zamin 52%), G4 (zamin 75%), ustma-ustlik U1 1.8%, K3 1.5%.
 
 ## Joriy holat (2026-11-16)
 
-Tayyor: 0–4c bosqichlar, BG-1, 3 dars, O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
+Tayyor: 0–4c bosqichlar, BG-1, 3 dars + 3 yo'l darsi va shikastlanish simulyatori (5.3 1+2), O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
 
 **Hozirgi yo'nalish — realizm (foydalanuvchi talabi 2026-11-14):** butun ko'rinishni iloji
 boricha real qilish. Reja (har biri alohida sessiya va commit):
