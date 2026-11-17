@@ -1,12 +1,15 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowUpRight, Crosshair, Search } from 'lucide-react'
+import { ArrowUpRight, Box, Crosshair, Search } from 'lucide-react'
 import { PATHWAYS, type BodySide, type LesionLevel } from '@/data/pathways'
 import { LEVELS, LEVEL_BY_ID, localise, signature, type Findings, type Lesion } from '@/data/lesions'
-import { SECTION_BY_ID, type Section } from '@/data/sections'
+import { SECTION_BY_ID, STRUCTURE_BY_ID, type Section } from '@/data/sections'
+import { lesionLessonId } from '@/data/lessons/lesion'
 import type { L10n } from '@/data/types'
 import { useL } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
 import { plateLevel } from './pathTrace'
+import { CATEGORY } from './sectionStyle'
+import type { TerritoryOnPlate } from './lesionTerritory'
 
 const TX = {
   forward: { en: 'Lesion → signs', uz: "O'choq → belgilar" },
@@ -25,6 +28,13 @@ const TX = {
   spared: { en: 'spared', uz: 'saqlanadi' },
   lost: { en: 'Lost', uz: "Yo'qoladi" },
   open: { en: 'Open the plate', uz: 'Plastinkani ochish' },
+  hits: { en: 'Structures in the lesion (this plate)', uz: "O'choqqa tushgan tuzilmalar (shu plastinka)" },
+  hitsHint: {
+    en: 'Everything in the territory, not only the long tracts: the cranial-nerve nuclei here are what place the lesion. Tap one to read it.',
+    uz: "Hududdagi hamma narsa, faqat uzun yo'llar emas: o'choq darajasini aynan shu yerdagi kalla nervlari yadrolari aniqlaydi. O'qish uchun bosing.",
+  },
+  offPlate: { en: 'This level is not on the open plate.', uz: "Bu daraja ochiq plastinkada yo'q." },
+  in3d: { en: 'Show in 3D', uz: "3D da ko'rish" },
   findings: { en: 'Which long-tract signs, on which side of the body?', uz: "Qaysi uzun yo'l belgilari, tananing qaysi tomonida?" },
   candidates: { en: 'Lesions that explain exactly these signs', uz: "Aynan shu belgilarni beradigan o'choqlar" },
   pick: { en: 'Choose at least one finding.', uz: 'Kamida bitta belgini tanlang.' },
@@ -47,11 +57,23 @@ const TX = {
  * territory) and read which long tracts it cuts and on which side of the
  * body; or enter the findings and get every lesion that explains them.
  */
-export function LesionPanel({ section }: { section: Section }) {
+export function LesionPanel({
+  section,
+  lesion,
+  setLesion,
+  territory,
+  onPick,
+}: {
+  section: Section
+  lesion: Lesion
+  setLesion: (f: Lesion | ((x: Lesion) => Lesion)) => void
+  /** The lesion's territory on the open plate (null: the plate does not show this level). */
+  territory: TerritoryOnPlate | null
+  onPick: (itemId: string) => void
+}) {
   const l = useL()
-  const { openSection, setPathway } = useAtlas()
+  const { openSection, setPathway, setLesson } = useAtlas()
   const [mode, setMode] = useState<'forward' | 'reverse'>('forward')
-  const [lesion, setLesion] = useState<Lesion>(() => ({ level: plateLevel(section) ?? 'medulla-rostral', side: 'L', zone: 'all' }))
   const [findings, setFindings] = useState<Findings>({})
 
   // Opening another plate moves the lesion to that plate's level.
@@ -59,7 +81,7 @@ export function LesionPanel({ section }: { section: Section }) {
     const lv = plateLevel(section)
     // A plate opened for the lesion's own level (the cord's is U1) keeps it.
     if (lv) setLesion((x) => (x.level === lv || LEVEL_BY_ID.get(x.level)?.plate === section.id ? x : { ...x, level: lv, zone: 'all' }))
-  }, [section])
+  }, [section, setLesion])
 
   const level = LEVEL_BY_ID.get(lesion.level)!
   const zone = level.zones.find((z) => z.id === lesion.zone) ?? level.zones[0]
@@ -141,11 +163,36 @@ export function LesionPanel({ section }: { section: Section }) {
               )}
             </div>
           )}
-          {plate && plate.id !== section.id && (
-            <button className="sv-3d" onClick={() => openSection(plate.id)}>
-              {l(TX.open)} · {plate.code}
-            </button>
+          {territory ? (
+            <>
+              <h4>{l(TX.hits)}</h4>
+              <div className="lz-hits">
+                {territory.hits.map((id) => {
+                  const info = STRUCTURE_BY_ID.get(id)
+                  if (!info) return null
+                  return (
+                    <button key={id} style={{ '--c': CATEGORY[info.cat].color } as React.CSSProperties} onClick={() => onPick(id)}>
+                      <i />
+                      {l(info.name)}
+                    </button>
+                  )
+                })}
+              </div>
+              <p className="sv-note">{l(TX.hitsHint)}</p>
+            </>
+          ) : (
+            level.plate && <p className="sv-hint">{l(TX.offPlate)}</p>
           )}
+          <div className="lz-actions">
+            <button className="sv-3d" onClick={() => setLesson(lesionLessonId({ ...lesion, zone: zone.id }))}>
+              <Box size={13} /> {l(TX.in3d)}
+            </button>
+            {plate && plate.id !== section.id && (
+              <button className="sv-3d" onClick={() => openSection(plate.id)}>
+                {l(TX.open)} · {plate.code}
+              </button>
+            )}
+          </div>
           <p className="sv-note">{l(TX.rule)}</p>
         </>
       ) : (

@@ -240,7 +240,9 @@ export class BrainScene {
   private lessonLayer: HTMLDivElement
   private lessonSvg: SVGSVGElement
   private lessonLabels: LessonLabelEl[] = []
-  private flow: { group: T.Group; curve: T.CatmullRomCurve3; dots: T.Mesh[]; line: LineSegments2; loop: boolean; t: number; period: number } | null = null
+  /** Lesson flows; `end` is where a cut stream stops (1 = runs the whole course). */
+  private flows: { group: T.Group; curve: T.CatmullRomCurve3; dots: T.Mesh[]; lines: LineSegments2[]; loop: boolean; t: number; period: number; end: number }[] = []
+  private lesionMark: { group: T.Group; halo: T.Mesh; t: number } | null = null
 
   constructor(host: HTMLElement, geometries: LoadedGeometry[], cb: SceneCallbacks) {
     this.host = host
@@ -555,7 +557,7 @@ export class BrainScene {
     this.camera.updateProjectionMatrix()
     this.renderer.setSize(w, h)
     for (const m of this.markers) m.material.resolution.set(w, h)
-    if (this.flow) (this.flow.line.material as LineMaterial).resolution.set(w, h)
+    for (const f of this.flows) for (const l of f.lines) (l.material as LineMaterial).resolution.set(w, h)
     this.markerInsets = null
     this.layoutKey = ''
     this.isolateKey = ''
@@ -1362,7 +1364,8 @@ export class BrainScene {
         // Keep the whole pill on screen and clear of the side panels.
         const pw = l.el.offsetWidth
         const x = side === 0 ? Math.max(leftX, ins.left + 8 + pw) : Math.min(rightX, w - ins.right - 8 - pw)
-        l.el.style.transform = side === 0 ? `translate(-100%, -50%) translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)` : `translate(0, -50%) translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`
+        l.el.style.transform =
+          side === 0 ? `translate(-100%, -50%) translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)` : `translate(0, -50%) translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`
         const elbow = side === 0 ? x + 10 : x - 10
         l.line.setAttribute('points', `${x.toFixed(1)},${y.toFixed(1)} ${elbow.toFixed(1)},${y.toFixed(1)} ${a.x.toFixed(1)},${a.y.toFixed(1)}`)
         l.dot.setAttribute('cx', a.x.toFixed(1))
@@ -1373,44 +1376,92 @@ export class BrainScene {
 
   /** Particles streaming along the step's path (CSF flow, a circuit), drawn over the ghosts. */
   private buildFlow(st: LessonStage | null) {
-    if (this.flow) {
-      this.scene.remove(this.flow.group)
-      this.flow.group.traverse((o) => {
+    const drop = (g: T.Group) => {
+      this.scene.remove(g)
+      g.traverse((o) => {
         if (o instanceof T.Mesh || o instanceof LineSegments2) {
           o.geometry.dispose()
           ;(o.material as T.Material).dispose()
         }
       })
-      this.flow = null
     }
-    if (!st?.flow) return
-    const loop = st.flow.loop
-    const curve = new T.CatmullRomCurve3(st.flow.path.map(mniToScene), loop, 'centripetal')
-    const group = new T.Group()
-    const samples = curve.getSpacedPoints(240)
-    const pos: number[] = []
-    for (let i = 0; i < samples.length - 1; i++) pos.push(samples[i].x, samples[i].y, samples[i].z, samples[i + 1].x, samples[i + 1].y, samples[i + 1].z)
-    const geo = new LineSegmentsGeometry()
-    geo.setPositions(pos)
-    const mat = new LineMaterial({ color: st.flow.color, linewidth: 2, transparent: true, opacity: 0.45, depthTest: false })
-    mat.resolution.set(this.host.clientWidth, this.host.clientHeight)
-    const line = new LineSegments2(geo, mat)
-    line.renderOrder = 30
-    group.add(line)
-    const length = curve.getLength()
-    const n = Math.max(8, Math.round(length / 14))
-    const dotGeo = new T.SphereGeometry(1.1, 12, 8)
-    const dots: T.Mesh[] = []
-    for (let i = 0; i < n; i++) {
-      const d = new T.Mesh(dotGeo, new T.MeshBasicMaterial({ color: st.flow.color, transparent: true, depthTest: false }))
-      d.renderOrder = 31
-      d.raycast = () => {}
-      group.add(d)
-      dots.push(d)
+    for (const f of this.flows) drop(f.group)
+    this.flows = []
+    if (this.lesionMark) drop(this.lesionMark.group)
+    this.lesionMark = null
+    if (!st) return
+    const res = [this.host.clientWidth, this.host.clientHeight] as const
+    const segLine = (pts: T.Vector3[], color: string, opacity: number, dashed: boolean) => {
+      const pos: number[] = []
+      for (let i = 0; i < pts.length - 1; i++) {
+        // A dashed stretch: every other pair of segments left out.
+        if (dashed && i % 4 >= 2) continue
+        pos.push(pts[i].x, pts[i].y, pts[i].z, pts[i + 1].x, pts[i + 1].y, pts[i + 1].z)
+      }
+      const geo = new LineSegmentsGeometry()
+      geo.setPositions(pos)
+      const mat = new LineMaterial({ color, linewidth: 2, transparent: true, opacity, depthTest: false })
+      mat.resolution.set(res[0], res[1])
+      const line = new LineSegments2(geo, mat)
+      line.renderOrder = 30
+      return line
     }
-    this.scene.add(group)
-    // ~22 mm/s: slow enough to follow with the eye.
-    this.flow = { group, curve, dots, line, loop, t: 0, period: Math.max(4, length / 22) }
+    for (const fl of st.flows) {
+      const loop = fl.loop
+      const curve = new T.CatmullRomCurve3(fl.path.map(mniToScene), loop, 'centripetal')
+      const group = new T.Group()
+      const samples = curve.getSpacedPoints(240)
+      // A cut stream stops at the sample nearest the lesion (if the course passes within reach of it).
+      let end = 1
+      let cutAt = samples.length - 1
+      if (fl.cut) {
+        const c = mniToScene(fl.cut)
+        let best = Infinity
+        samples.forEach((p, i) => {
+          const d = p.distanceTo(c)
+          if (d < best) ((best = d), (cutAt = i))
+        })
+        if (best < 30) end = cutAt / (samples.length - 1)
+        else cutAt = samples.length - 1
+      }
+      const lines = [segLine(samples.slice(0, cutAt + 1), fl.color, 0.45, false)]
+      // Beyond the lesion: the disconnected stretch, dark and dashed.
+      if (cutAt < samples.length - 1) lines.push(segLine(samples.slice(cutAt), '#5a6270', 0.55, true))
+      for (const l of lines) group.add(l)
+      const length = curve.getLength() * end
+      const n = Math.max(5, Math.round(length / 14))
+      const dotGeo = new T.SphereGeometry(1.1, 12, 8)
+      const dots: T.Mesh[] = []
+      for (let i = 0; i < n; i++) {
+        const d = new T.Mesh(dotGeo, new T.MeshBasicMaterial({ color: fl.color, transparent: true, depthTest: false }))
+        d.renderOrder = 31
+        d.raycast = () => {}
+        group.add(d)
+        dots.push(d)
+      }
+      this.scene.add(group)
+      // ~22 mm/s: slow enough to follow with the eye.
+      this.flows.push({ group, curve, dots, lines, loop, t: 0, period: Math.max(3, length / 22), end })
+    }
+    if (st.lesion && st.lesion.r > 0) {
+      const group = new T.Group()
+      group.position.copy(mniToScene(st.lesion.at))
+      const core = new T.Mesh(
+        new T.SphereGeometry(st.lesion.r, 32, 20),
+        new T.MeshBasicMaterial({ color: '#ff3b30', transparent: true, opacity: 0.42, depthTest: false, depthWrite: false }),
+      )
+      core.renderOrder = 32
+      const halo = new T.Mesh(
+        new T.SphereGeometry(st.lesion.r * 1.45, 32, 20),
+        new T.MeshBasicMaterial({ color: '#ff3b30', transparent: true, opacity: 0.14, depthTest: false, depthWrite: false }),
+      )
+      halo.renderOrder = 32
+      core.raycast = () => {}
+      halo.raycast = () => {}
+      group.add(halo, core)
+      this.scene.add(group)
+      this.lesionMark = { group, halo, t: 0 }
+    }
   }
 
   // ── Frame loop ──────────────────────────────────────────────────────
@@ -1515,7 +1566,8 @@ export class BrainScene {
       this.endLesson()
       lessonEnded = true
     }
-    const visibilityChanged = first || peeling || lessonEnded || last.visible !== s.visible || last.layers !== s.layers || last.selected !== s.selected || last.isolate !== s.isolate
+    const visibilityChanged =
+      first || peeling || lessonEnded || last.visible !== s.visible || last.layers !== s.layers || last.selected !== s.selected || last.isolate !== s.isolate
     if (visibilityChanged && !s.lesson) {
       // A finer layer replaces the gross part it subdivides (parcellation →
       // cortex, brainstem layer → pons/medulla) rather than hiding inside it.
@@ -1578,17 +1630,22 @@ export class BrainScene {
     }
 
     // Lesson flow particles run continuously.
-    if (this.flow) {
-      const f = this.flow
+    for (const f of this.flows) {
       f.t = (f.t + dt / f.period) % 1
       const n = f.dots.length
       f.dots.forEach((d, i) => {
-        const u = (f.t + i / n) % 1
-        f.curve.getPointAt(u, d.position)
-        // Open paths fade in at the source and out at the exit.
+        const k = (f.t + i / n) % 1
+        f.curve.getPointAt(k * f.end, d.position)
+        // Open paths fade in at the source and out at the exit (or into the lesion).
         const m = d.material as T.MeshBasicMaterial
-        m.opacity = f.loop ? 0.95 : 0.95 * Math.min(1, u * 8, (1 - u) * 8)
+        m.opacity = f.loop ? 0.95 : 0.95 * Math.min(1, k * 8, (1 - k) * 8)
       })
+      this.dirty = true
+    }
+    if (this.lesionMark) {
+      const L = this.lesionMark
+      L.t += dt
+      L.halo.scale.setScalar(1 + 0.12 * Math.sin(L.t * 2.6))
       this.dirty = true
     }
 

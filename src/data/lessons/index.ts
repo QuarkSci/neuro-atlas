@@ -5,12 +5,29 @@ import { VENTRICLES } from './ventricles'
 import { CALLOSUM } from './callosum'
 import { LIMBIC } from './limbic'
 import { PATHWAY_LESSONS } from './pathways'
+import { LESION_PREFIX, lesionLesson, parseLesionId } from './lesion'
 
 export type { Lesson, LessonStep, LessonLabel, Mni } from './types'
 
 /** Guided 3D lessons, in teaching order. */
 export const LESSONS: Lesson[] = [VENTRICLES, CALLOSUM, LIMBIC, ...PATHWAY_LESSONS]
-export const LESSON_BY_ID = new Map(LESSONS.map((l) => [l.id, l]))
+
+/** The lesson registry; a lesion simulator lesson ('lesion:<level>:<side>:<zone>') is built the first time it is asked for. */
+class LessonRegistry extends Map<string, Lesson> {
+  get(id: string) {
+    const known = super.get(id)
+    if (known || !id.startsWith(LESION_PREFIX)) return known
+    const lesion = parseLesionId(id)
+    if (!lesion) return undefined
+    const made = lesionLesson(lesion)
+    this.set(id, made)
+    return made
+  }
+  has(id: string) {
+    return !!this.get(id)
+  }
+}
+export const LESSON_BY_ID = new LessonRegistry(LESSONS.map((l) => [l.id, l]))
 
 /** What the 3D scene needs for one lesson step, resolved to mesh ids. */
 export interface LessonStage {
@@ -19,7 +36,8 @@ export interface LessonStage {
   context: string[]
   labels: { text: string; at: Mni; color?: string }[]
   view: Mni
-  flow: { path: Mni[]; color: string; loop: boolean } | null
+  flows: { path: Mni[]; color: string; loop: boolean; cut?: Mni }[]
+  lesion: { at: Mni; r: number } | null
   layers: LayerId[]
 }
 
@@ -55,11 +73,12 @@ export function lessonStage(lesson: Lesson, index: number, lang: 'en' | 'uz', qu
     }
   }
   const context = [...new Set((step.context ?? []).flatMap((c) => contextIds(c.ref, c.side)))].filter((id) => !seen.has(id))
-  let flow: LessonStage['flow'] = null
+  const flows: LessonStage['flows'] = []
   if (step.flow) {
     const path = step.flow.path ?? (step.flow.via ?? []).map((v) => conceptCentroid(v.concept, v.side)).filter((p): p is Mni => !!p)
-    if (path.length > 1) flow = { path, color: step.flow.color, loop: !!step.flow.loop }
+    if (path.length > 1) flows.push({ path, color: step.flow.color, loop: !!step.flow.loop })
   }
+  for (const f of step.flows ?? []) if (f.path.length > 1) flows.push({ path: f.path, color: f.color, loop: false, cut: f.cut })
   const layers = [...new Set([...(step.layers ?? []), ...focus.map((f) => PART_BY_ID.get(f.id)!.layer)])]
   return {
     key: `${lesson.id}:${index}:${quiz ? 'q' : ''}`,
@@ -67,7 +86,8 @@ export function lessonStage(lesson: Lesson, index: number, lang: 'en' | 'uz', qu
     context,
     labels: quiz ? [] : (step.labels ?? []).map((l) => ({ text: l.text[lang] ?? l.text.en, at: l.at, color: l.color })),
     view: step.view,
-    flow: quiz ? null : flow,
+    flows: quiz ? [] : flows,
+    lesion: step.lesion ?? null,
     layers,
   }
 }

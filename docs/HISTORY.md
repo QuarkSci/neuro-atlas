@@ -778,7 +778,7 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   uzunchoq = Dejerine; chap lateral = Wallenberg; faqat CST o'ngda → po'stloq / kapsula / Weber / ko'prik asosi.
 - 3D nuqtalar meshlardan o'lchandi (JHU CST/ML/CP/PLIC, bstem piramida, Julich VPL/4p/3b — plastinka tekisligidagi
   kesim markazi). Sxema → MNI chiziqli o'tkazish rad etildi (K3 oynasi xatosi tufayli 20+ mm).
-- QOLDI: o'choqni plastinkada chizish (hudud bo'yalishi), 3D da o'choq; kalla nervlari yadrolarini simulyatorga qo'shish
+- ✅ o'choqni plastinkada chizish va 3D da o'choq — "5.3-3a" bo'limiga qarang. QOLDI: kalla nervlari yadrolarini simulyatorga qo'shish
   (hozir `extra` matnida); yuz (trigeminal) yo'li; kortikobulbar.
 
 ### 5.5 — Zoom, real kesim qamrovi, tomirlar simmetriyasi (2026-11-17)
@@ -795,6 +795,37 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   81 o'ng (avval 46/76), venalar 27/31 (avval 1/31). `content/index.ts`: konsept nomidagi left↔right almashtirilgan
   yozuvga qaytadi (twin'lar kontent va "Chap ..." uz nomini oladi). audit-pick diff 0.
 - QOLDI: U1 real tasviri (boshqa ochiq histologik manba); Villiz doirasi variantlari (PhD); BigBrain 20 mkm plitkalar.
+
+### 5.3-3a — O'choq plastinkada va 3D da (2026-11-17)
+
+- `src/ui/lesionTerritory.ts`: o'choq hududi. Miya ustuni/orqa miya — yarim kesimning o'z koordinatasidagi ko'pburchak
+  (u: o'rta chiziq 0 → lateral chet 1; v: dorsal 0 → ventral 1, kontur bbox'idan), shuning uchun bitta qon tomir havzasi
+  o'sha darajaning barcha plastinkalariga mos keladi. Kontur bilan qirqiladi (`clipPath`). Oldingi miya — tuzilmaning
+  o'zi (kapsula: `ic-pl`/`cst-ic`, talamus: `th-vpl`/`th-vpm`). Havzalar Tatu 1996 (Neurology, doi:10.1212/WNL.47.5.1125)
+  bo'yicha: paramedian / qisqa / uzun aylanma. Tuzilma hududga tushadi = o'choq tomonidagi namuna nuqtalarining ≥34%
+  ichida (ikkinchi nusxa hisobga olinmaydi — aks holda ulush ikki baravar kamayadi); likvor bo'shliqlari chiqarilgan.
+  Sagittal plastinkalarda chizilmaydi. `plateShows()`: `plateLevel(plate) === level` yoki darajaning o'z plastinkasi.
+- Natija: U3 lateral = vestibulyar yadrolar, ICP, spinal V trakt+yadro, ikki ma'noli yadro, X ildizi, ALS (Wallenberg
+  to'liq); U3 medial = XII yadrosi+ildizi, MLF, ML, piramida (Dejerine); K1 lateral = VII yadrosi va ildizi, spinal V,
+  vestibulyar, MCP, ALS (AICA); K1 medial = VI, VII tizzasi, PPRF, ML, CST (Foville/Millard-Gubler); O2 ventral = oyoqcha
+  + III ildizi (Weber); O2 dorsal = qizil yadro, ML, ALS, III yadrosi (Claude/Benedikt).
+- `scripts/audit-lesions.mjs` (dev server kerak): 86 hudud × yo'l bekatlari — simulyator "kesiladi" degan bekatning
+  kamida bitta itemi ichida, "saqlanadi" deganlari tashqarida. `--hits` hamma ro'yxatni chiqaradi. Hozir 0 nomuvofiqlik.
+  Hudud o'zgarsa — shu audit. `also` o'tishlari faqat plastinkasi yo'q bekat uchun tekshiriladi (`als-vpl` kapsulada
+  `th-vpl` itemi bilan chizilmaydi).
+- Kesim ko'ruvchisi: o'choq holati `SectionViewer`ga ko'chirildi (`LesionPanel` props: `lesion`, `setLesion`,
+  `territory`, `onPick`); "Shikastlanish" tabi ochiq bo'lsa `Figure` qizil shtrixli hududni chizadi (`.sv-lesion-zone`).
+  Panelda "O'choqqa tushgan tuzilmalar" (bosilsa tuzilma tanlanadi) va "3D da ko'rish".
+- 3D: `src/data/lessons/lesion.ts` — o'choqdan dars yasaladi (id `lesion:<level>:<side>:<zone>`, `LESSON_BY_ID`
+  `LessonRegistry` uni birinchi so'ralganda quradi). Qadamlar: umumiy → har kesilgan yo'l (ipsi/kontra sababi bilan) →
+  hudud sindromi. `lesionSphere()`: kesilgan bekatlar `at` nuqtalarining o'rtasi (o'choq tomoniga ko'zgulangan), radius
+  = tarqoqlik + 2.5 (4.5–10 mm); faqat `also` o'tish bo'lsa — o'sha darajadagi bekatlar balandligi. Chap tana nusxasi =
+  yo'l `path`ining ko'zgusi. `LessonStep.flows[]` (bir nechta oqim, `cut`) va `lesion` (shar); `LessonStage.flow` →
+  `flows[]`. `BrainScene.buildFlow`: oqim o'choqqa eng yaqin nuqtada to'xtaydi (30 mm dan uzoq bo'lsa kesilmaydi),
+  undan keyingi qism kulrang shtrix (Waller degeneratsiyasi); shar + pulsatsiyalanuvchi halo, `depthTest: false`.
+  Kontekst — o'choq tomonidagi yarim shar. PhD: Waller degeneratsiyasining DTI dagi ko'rinishi (Thomalla 2004, Puig 2010).
+- QOLDI: plastinkani bosib o'choq qo'yish; kalla nervlari yadrolarini `signature()`ga qo'shish (hozir faqat hudud
+  ro'yxatida ko'rinadi); trigeminal yo'l; kortikobulbar; po'stloq o'chog'i plastinkasiz (faqat 3D).
 
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 

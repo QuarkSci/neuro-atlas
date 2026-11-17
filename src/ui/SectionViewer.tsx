@@ -34,6 +34,9 @@ import { badgePositions, itemArea, itemShapes, mix, sectionEntries, type Entry }
 import { PATHWAYS, PATHWAY_BY_ID } from '@/data/pathways'
 import { routePlates, traceOn, type TraceItem } from './pathTrace'
 import { LesionPanel } from './LesionPanel'
+import { territoryOn, type TerritoryOnPlate } from './lesionTerritory'
+import type { Lesion } from '@/data/lesions'
+import { plateLevel } from './pathTrace'
 import { ZoomPane } from './ZoomPane'
 
 /** Layers whose meshes make the 3D cut face informative for each region. */
@@ -76,6 +79,9 @@ export function SectionViewer() {
   const [quiz, setQuiz] = useState(false)
   const [revealed, setRevealed] = useState<Set<string>>(new Set())
   const [tab, setTab] = useState<'structures' | 'level' | 'lesion'>('structures')
+  // The simulated lesion lives here so the figure can draw its territory.
+  const [lesion, setLesion] = useState<Lesion>(() => ({ level: (section && plateLevel(section)) || 'medulla-rostral', side: 'L', zone: 'all' }))
+  const territory = useMemo(() => (section && tab === 'lesion' ? territoryOn(section, lesion) : null), [section, lesion, tab])
   const [focusCat, setFocusCat] = useState<string | null>(null)
   const [view, setView] = useState<'scheme' | Stain | 'atlas' | 'real'>('scheme')
   const [contours, setContours] = useState(true)
@@ -392,6 +398,7 @@ export function SectionViewer() {
                   numbers={numbers}
                   labels={labels && !quiz}
                   trace={tract && trace.length && view === 'scheme' ? { color: tract.color, items: trace } : undefined}
+                  lesion={territory ?? undefined}
                   nameOf={nameOf}
                   axes={section.axes.map((a) => l(a)) as [string, string, string, string]}
                   onHover={setHover}
@@ -430,7 +437,7 @@ export function SectionViewer() {
             </div>
 
             {tab === 'lesion' ? (
-              <LesionPanel section={section} />
+              <LesionPanel section={section} lesion={lesion} setLesion={setLesion} territory={territory} onPick={pick} />
             ) : tab === 'structures' && cutView ? (
               <AtlasList
                 regions={atlas?.data?.regions ?? []}
@@ -562,6 +569,7 @@ function Figure({
   numbers,
   labels,
   trace,
+  lesion,
   nameOf,
   axes,
   onHover,
@@ -577,6 +585,8 @@ function Figure({
   labels: boolean
   /** A long tract traced over the plate: its items on the traced side. */
   trace?: { color: string; items: TraceItem[] }
+  /** The simulated lesion's territory on this plate. */
+  lesion?: TerritoryOnPlate
   nameOf: (item: SectionItem) => string
   axes: [string, string, string, string]
   onHover: (id: string | null) => void
@@ -720,6 +730,31 @@ function Figure({
               return <path key={`${x.item.id}-${i}`} d={p.d} className={p.stroke ? 'stroke' : 'fill'} strokeWidth={p.stroke ? strokeW(p.w) + 2.5 : 2.6} />
             }),
           )}
+        </g>
+      )}
+      {lesion && (
+        <g className="sv-lesion-zone" clipPath={lesion.clip ? 'url(#sv-lesion-clip)' : undefined}>
+          <defs>
+            <clipPath id="sv-lesion-clip">
+              {section.outline.map((sh, i) => {
+                const p = shapePath(sh)
+                return p.stroke ? null : <path key={i} d={p.d} />
+              })}
+            </clipPath>
+            <pattern id="sv-lesion-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+              <rect width="7" height="7" fill="rgba(255,59,48,0.22)" />
+              <line x1="0" y1="0" x2="0" y2="7" stroke="#ff3b30" strokeWidth="2" strokeOpacity="0.8" />
+            </pattern>
+          </defs>
+          {lesion.shapes.map((sh, i) => {
+            const p = shapePath(sh)
+            // A forebrain lesion is the structure itself: a halo around it (strokes thickened to read as an area).
+            return p.stroke ? (
+              <path key={i} d={p.d} className="stroke" strokeWidth={strokeW(p.w) + 9} />
+            ) : (
+              <path key={i} d={p.d} className="fill" strokeWidth={lesion.clip ? 2 : 4} />
+            )
+          })}
         </g>
       )}
       {section.outline.map((sh, i) => {

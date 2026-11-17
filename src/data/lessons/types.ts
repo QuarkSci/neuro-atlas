@@ -44,6 +44,10 @@ export interface LessonStep {
   view: Mni
   /** Animated particles along a path: explicit MNI points, or through the centroids of concepts. */
   flow?: { path?: Mni[]; via?: { concept: string; side?: 'left' | 'right' }[]; color: string; loop?: boolean }
+  /** Further flows (several tracts at once); `cut` stops the stream at that point and darkens the rest of the course. */
+  flows?: { path: Mni[]; color: string; cut?: Mni }[]
+  /** A lesion drawn as a red sphere, MNI mm. */
+  lesion?: { at: Mni; r: number }
   /** Extra atlas layers the step needs (e.g. Julich hippocampal subfields). */
   layers?: LayerId[]
   /** A cross-section plate (data/sections id) showing this step's structures in section. */
