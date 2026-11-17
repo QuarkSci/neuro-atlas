@@ -1,0 +1,1974 @@
+[
+ {
+  "id": "fma50349-fj5035-mirror",
+  "name": "Anteromedial frontal branch of left callosomarginal artery",
+  "of": "g-anteromedial-frontal-branch-of-right-callosomarginal-artery",
+  "fma": "FMA50349",
+  "side": "left",
+  "faces": 1866,
+  "bbox": [
+   [
+    -26.5,
+    48.39,
+    -2.13
+   ],
+   [
+    -2.9,
+    78.26,
+    36.46
+   ]
+  ],
+  "centroid": [
+   -8.71,
+   66.3,
+   17.88
+  ],
+  "sunk": [
+   0.0,
+   0.025
+  ]
+ },
+ {
+  "id": "fma77439-fj1664m-mirror",
+  "name": "Left artery of central sulcus",
+  "of": "g-artery-of-central-sulcus",
+  "fma": "FMA77439",
+  "side": "left",
+  "faces": 21464,
+  "bbox": [
+   [
+    -73.12,
+    -30.0,
+    -9.63
+   ],
+   [
+    73.47,
+    6.19,
+    77.15
+   ]
+  ],
+  "centroid": [
+   -8.83,
+   -8.45,
+   26.33
+  ],
+  "sunk": [
+   0.028,
+   0.013
+  ]
+ },
+ {
+  "id": "fma50147-fj1674m-mirror",
+  "name": "Branch of right anterior choroidal artery to posterior limb of right internal capsule",
+  "of": "g-branch-of-left-anterior-choroidal-artery-to-posterior-limb-of-left-internal-capsule",
+  "fma": "FMA50147",
+  "side": "right",
+  "faces": 346,
+  "bbox": [
+   [
+    21.09,
+    -21.74,
+    -17.96
+   ],
+   [
+    34.32,
+    -8.0,
+    18.23
+   ]
+  ],
+  "centroid": [
+   29.21,
+   -17.15,
+   -2.76
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50131-fj5067-mirror",
+  "name": "Branch of left anterior choroidal artery to left lateral ventricle",
+  "of": "g-branch-of-right-anterior-choroidal-artery-to-right-lateral-ventricle",
+  "fma": "FMA50131",
+  "side": "left",
+  "faces": 644,
+  "bbox": [
+   [
+    -37.18,
+    -42.56,
+    -20.97
+   ],
+   [
+    -24.66,
+    -11.46,
+    0.42
+   ]
+  ],
+  "centroid": [
+   -32.26,
+   -29.06,
+   -10.33
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50138-fj5053-mirror",
+  "name": "Branch of left anterior choroidal artery to left optic tract",
+  "of": "g-branch-of-right-anterior-choroidal-artery-to-right-optic-tract",
+  "fma": "FMA50138",
+  "side": "left",
+  "faces": 310,
+  "bbox": [
+   [
+    -30.26,
+    -13.27,
+    -21.76
+   ],
+   [
+    -19.03,
+    -4.93,
+    -16.18
+   ]
+  ],
+  "centroid": [
+   -25.66,
+   -9.81,
+   -19.06
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma49822-fj5063-mirror",
+  "name": "Cavernous branch of left internal carotid artery",
+  "of": "g-cavernous-branch-of-right-internal-carotid-artery",
+  "fma": "FMA49822",
+  "side": "left",
+  "faces": 214,
+  "bbox": [
+   [
+    -19.21,
+    -9.2,
+    -44.93
+   ],
+   [
+    -15.58,
+    1.82,
+    -39.95
+   ]
+  ],
+  "centroid": [
+   -17.62,
+   -2.67,
+   -42.33
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50412-fj5066-mirror",
+  "name": "Chiasmatic branch of left posterior communicating artery",
+  "of": "g-chiasmatic-branch-of-right-posterior-communicating-artery",
+  "fma": "FMA50412",
+  "side": "left",
+  "faces": 170,
+  "bbox": [
+   [
+    -12.09,
+    1.01,
+    -30.53
+   ],
+   [
+    -6.26,
+    2.69,
+    -22.98
+   ]
+  ],
+  "centroid": [
+   -9.34,
+   1.93,
+   -27.29
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma49731-fj5086-mirror",
+  "name": "Frontal branch of left middle meningeal artery",
+  "of": "g-frontal-branch-of-right-middle-meningeal-artery",
+  "fma": "FMA49731",
+  "side": "left",
+  "faces": 8038,
+  "bbox": [
+   [
+    -75.5,
+    -38.5,
+    -44.51
+   ],
+   [
+    -10.81,
+    25.21,
+    86.51
+   ]
+  ],
+  "centroid": [
+   -53.66,
+   7.07,
+   27.71
+  ],
+  "sunk": [
+   0.057,
+   0.045
+  ]
+ },
+ {
+  "id": "fma50820-fj5092-mirror",
+  "name": "Inferior bulb of left internal jugular vein",
+  "of": "g-inferior-bulb-of-right-internal-jugular-vein",
+  "fma": "FMA50820",
+  "side": "left",
+  "faces": 680,
+  "bbox": [
+   [
+    -26.87,
+    -70.38,
+    -234.07
+   ],
+   [
+    -14.26,
+    -60.02,
+    -207.24
+   ]
+  ],
+  "centroid": [
+   -20.88,
+   -65.3,
+   -220.88
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50986-fj4679-mirror",
+  "name": "Left inferior cerebral vein",
+  "of": "g-inferior-cerebral-vein",
+  "fma": "FMA50986",
+  "side": "left",
+  "faces": 2116,
+  "bbox": [
+   [
+    -72.14,
+    -63.7,
+    -48.89
+   ],
+   [
+    -21.03,
+    -4.32,
+    -8.15
+   ]
+  ],
+  "centroid": [
+   -54.14,
+   -28.83,
+   -28.88
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50089-fj1658m-mirror",
+  "name": "Right anterior choroidal artery",
+  "of": "g-left-anterior-choroidal-artery",
+  "fma": "FMA50089",
+  "side": "right",
+  "faces": 418,
+  "bbox": [
+   [
+    12.02,
+    -36.11,
+    -28.43
+   ],
+   [
+    37.32,
+    5.0,
+    -0.98
+   ]
+  ],
+  "centroid": [
+   27.81,
+   -8.64,
+   -19.5
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma49729-fj5144-mirror",
+  "name": "Orbital branch of left middle meningeal artery",
+  "of": "g-orbital-branch-of-right-middle-meningeal-artery",
+  "fma": "FMA49729",
+  "side": "left",
+  "faces": 1268,
+  "bbox": [
+   [
+    -43.16,
+    15.13,
+    -47.13
+   ],
+   [
+    -27.01,
+    48.39,
+    -35.52
+   ]
+  ],
+  "centroid": [
+   -33.77,
+   28.42,
+   -38.36
+  ],
+  "sunk": [
+   0.037,
+   0.035
+  ]
+ },
+ {
+  "id": "fma49727-fj5149-mirror",
+  "name": "Parietal branch of left middle meningeal artery",
+  "of": "g-parietal-branch-of-right-middle-meningeal-artery",
+  "fma": "FMA49727",
+  "side": "left",
+  "faces": 9052,
+  "bbox": [
+   [
+    -76.49,
+    -96.55,
+    -53.62
+   ],
+   [
+    -30.21,
+    16.88,
+    67.28
+   ]
+  ],
+  "centroid": [
+   -55.84,
+   -32.83,
+   0.84
+  ],
+  "sunk": [
+   0.038,
+   0.025
+  ]
+ },
+ {
+  "id": "fma50668-fj5175-mirror",
+  "name": "Posterolateral central branch of left posterior cerebral artery",
+  "of": "g-posterolateral-central-branch-of-right-posterior-cerebral-artery",
+  "fma": "FMA50668",
+  "side": "left",
+  "faces": 516,
+  "bbox": [
+   [
+    -18.69,
+    -36.38,
+    -21.7
+   ],
+   [
+    1.79,
+    -25.01,
+    -3.72
+   ]
+  ],
+  "centroid": [
+   -13.29,
+   -31.73,
+   -13.78
+  ],
+  "sunk": [
+   0.271,
+   0.255
+  ]
+ },
+ {
+  "id": "fma50661-fj1721m-mirror",
+  "name": "Posteromedial central branch of right posterior cerebral artery",
+  "of": "g-posteromedial-central-branch-of-left-posterior-cerebral-artery",
+  "fma": "FMA50661",
+  "side": "right",
+  "faces": 252,
+  "bbox": [
+   [
+    14.85,
+    -15.88,
+    -27.88
+   ],
+   [
+    27.35,
+    -10.29,
+    -17.19
+   ]
+  ],
+  "centroid": [
+   20.77,
+   -12.72,
+   -24.02
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51307-fj4680-mirror",
+  "name": "Left anterior cerebral vein",
+  "of": "g-right-anterior-cerebral-vein",
+  "fma": "FMA51307",
+  "side": "left",
+  "faces": 1438,
+  "bbox": [
+   [
+    -7.4,
+    5.45,
+    -30.53
+   ],
+   [
+    -1.98,
+    70.83,
+    -3.15
+   ]
+  ],
+  "centroid": [
+   -3.73,
+   34.06,
+   -20.51
+  ],
+  "sunk": [
+   0.077,
+   0.042
+  ]
+ },
+ {
+  "id": "fma13319-fj5025-mirror",
+  "name": "Left anterior jugular vein",
+  "of": "g-right-anterior-jugular-vein",
+  "fma": "FMA13319",
+  "side": "left",
+  "faces": 3902,
+  "bbox": [
+   [
+    -47.08,
+    -75.35,
+    -219.93
+   ],
+   [
+    -6.05,
+    -19.05,
+    -152.76
+   ]
+  ],
+  "centroid": [
+   -22.92,
+   -51.0,
+   -201.15
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51637-fj5033-mirror",
+  "name": "Left anterolateral medullary vein",
+  "of": "g-right-anterolateral-medullary-vein",
+  "fma": "FMA51637",
+  "side": "left",
+  "faces": 642,
+  "bbox": [
+   [
+    -12.81,
+    -61.61,
+    -84.88
+   ],
+   [
+    1.27,
+    -36.62,
+    -50.58
+   ]
+  ],
+  "centroid": [
+   -7.33,
+   -51.82,
+   -67.36
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51635-fj5034-mirror",
+  "name": "Left anterolateral pontine vein",
+  "of": "g-right-anterolateral-pontine-vein",
+  "fma": "FMA51635",
+  "side": "left",
+  "faces": 744,
+  "bbox": [
+   [
+    -21.54,
+    -42.03,
+    -54.42
+   ],
+   [
+    -7.37,
+    -15.34,
+    -26.0
+   ]
+  ],
+  "centroid": [
+   -15.84,
+   -27.42,
+   -42.42
+  ],
+  "sunk": [
+   0.102,
+   0.022
+  ]
+ },
+ {
+  "id": "fma50690-fj5114-mirror",
+  "name": "Left calcarine artery",
+  "of": "g-right-calcarine-artery",
+  "fma": "FMA50690",
+  "side": "left",
+  "faces": 2052,
+  "bbox": [
+   [
+    -11.99,
+    -111.14,
+    -11.78
+   ],
+   [
+    0.89,
+    -38.61,
+    13.4
+   ]
+  ],
+  "centroid": [
+   -5.52,
+   -67.68,
+   -0.77
+  ],
+  "sunk": [
+   0.037,
+   0.022
+  ]
+ },
+ {
+  "id": "fma51402-fj5064-mirror",
+  "name": "Left cavernous sinus",
+  "of": "g-right-cavernous-sinus",
+  "fma": "FMA51402",
+  "side": "left",
+  "faces": 1646,
+  "bbox": [
+   [
+    -23.49,
+    -19.54,
+    -46.22
+   ],
+   [
+    -11.91,
+    6.86,
+    -31.7
+   ]
+  ],
+  "centroid": [
+   -17.61,
+   -6.74,
+   -38.51
+  ],
+  "sunk": [
+   0.222,
+   0.19
+  ]
+ },
+ {
+  "id": "fma50666-fj5071-mirror",
+  "name": "Left collicular artery",
+  "of": "g-right-collicular-artery",
+  "fma": "FMA50666",
+  "side": "left",
+  "faces": 490,
+  "bbox": [
+   [
+    -18.84,
+    -26.25,
+    -26.96
+   ],
+   [
+    -11.65,
+    -7.6,
+    -13.25
+   ]
+  ],
+  "centroid": [
+   -16.38,
+   -18.92,
+   -23.3
+  ],
+  "sunk": [
+   0.338,
+   0.254
+  ]
+ },
+ {
+  "id": "fma51311-fj4988-mirror",
+  "name": "Left deep middle cerebral vein",
+  "of": "g-right-deep-middle-cerebral-vein",
+  "fma": "FMA51311",
+  "side": "left",
+  "faces": 862,
+  "bbox": [
+   [
+    -41.28,
+    2.96,
+    -18.26
+   ],
+   [
+    -7.18,
+    16.78,
+    3.54
+   ]
+  ],
+  "centroid": [
+   -23.01,
+   9.0,
+   -10.01
+  ],
+  "sunk": [
+   0.204,
+   0.209
+  ]
+ },
+ {
+  "id": "fma50341-fj4712-mirror",
+  "name": "Left distal medial striate artery",
+  "of": "g-right-distal-medial-striate-artery",
+  "fma": "FMA50341",
+  "side": "left",
+  "faces": 438,
+  "bbox": [
+   [
+    -25.31,
+    8.86,
+    -24.08
+   ],
+   [
+    -2.75,
+    18.27,
+    -7.1
+   ]
+  ],
+  "centroid": [
+   -14.01,
+   16.0,
+   -16.7
+  ],
+  "sunk": [
+   0.066,
+   0.066
+  ]
+ },
+ {
+  "id": "fma13111-fj5082-mirror",
+  "name": "Left external jugular vein",
+  "of": "g-right-external-jugular-vein",
+  "fma": "FMA13111",
+  "side": "left",
+  "faces": 4348,
+  "bbox": [
+   [
+    -54.1,
+    -78.55,
+    -233.39
+   ],
+   [
+    -40.7,
+    -36.15,
+    -89.23
+   ]
+  ],
+  "centroid": [
+   -47.79,
+   -61.99,
+   -166.78
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51250-fj4992-mirror",
+  "name": "Left inferior ophthalmic vein",
+  "of": "g-right-inferior-ophthalmic-vein",
+  "fma": "FMA51250",
+  "side": "left",
+  "faces": 1346,
+  "bbox": [
+   [
+    -24.75,
+    6.18,
+    -70.63
+   ],
+   [
+    -16.08,
+    49.28,
+    -37.46
+   ]
+  ],
+  "centroid": [
+   -22.63,
+   22.71,
+   -55.2
+  ],
+  "sunk": [
+   0.092,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51291-fj5098-mirror",
+  "name": "Left inferior petrosal sinus",
+  "of": "g-right-inferior-petrosal-sinus",
+  "fma": "FMA51291",
+  "side": "left",
+  "faces": 600,
+  "bbox": [
+   [
+    -31.15,
+    -47.81,
+    -62.59
+   ],
+   [
+    -13.24,
+    -13.45,
+    -43.98
+   ]
+  ],
+  "centroid": [
+   -19.43,
+   -33.76,
+   -52.52
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51004-fj4690-mirror",
+  "name": "Left internal cerebral vein",
+  "of": "g-right-internal-cerebral-vein",
+  "fma": "FMA51004",
+  "side": "left",
+  "faces": 442,
+  "bbox": [
+   [
+    -4.58,
+    -44.15,
+    -9.08
+   ],
+   [
+    0.8,
+    2.38,
+    8.87
+   ]
+  ],
+  "centroid": [
+   -2.47,
+   -24.01,
+   2.43
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51378-fj4691-mirror",
+  "name": "Left interpeduncular vein",
+  "of": "g-right-interpeduncular-vein",
+  "fma": "FMA51378",
+  "side": "left",
+  "faces": 414,
+  "bbox": [
+   [
+    -16.8,
+    -11.45,
+    -28.13
+   ],
+   [
+    -0.14,
+    0.05,
+    -12.47
+   ]
+  ],
+  "centroid": [
+   -6.05,
+   -4.75,
+   -16.89
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50449-fj5119-mirror",
+  "name": "Left mammillary artery",
+  "of": "g-right-mammillary-artery",
+  "fma": "FMA50449",
+  "side": "left",
+  "faces": 124,
+  "bbox": [
+   [
+    -7.24,
+    -7.01,
+    -26.26
+   ],
+   [
+    -2.06,
+    -4.23,
+    -18.36
+   ]
+  ],
+  "centroid": [
+   -4.97,
+   -5.17,
+   -22.75
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma49504-fj5166-mirror",
+  "name": "Left posterior meningeal artery",
+  "of": "g-right-posterior-meningeal-artery",
+  "fma": "FMA49504",
+  "side": "left",
+  "faces": 342,
+  "bbox": [
+   [
+    -31.97,
+    -76.59,
+    -62.9
+   ],
+   [
+    -19.79,
+    -49.29,
+    -57.87
+   ]
+  ],
+  "centroid": [
+   -26.71,
+   -59.58,
+   -59.86
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50315-fj5180-mirror",
+  "name": "Left proximal medial striate artery",
+  "of": "g-right-proximal-medial-striate-artery",
+  "fma": "FMA50315",
+  "side": "left",
+  "faces": 990,
+  "bbox": [
+   [
+    -5.11,
+    -0.25,
+    -35.42
+   ],
+   [
+    -0.66,
+    17.71,
+    1.49
+   ]
+  ],
+  "centroid": [
+   -3.08,
+   12.6,
+   -13.79
+  ],
+  "sunk": [
+   0.032,
+   0.027
+  ]
+ },
+ {
+  "id": "fma51293-fj5005-mirror",
+  "name": "Left sigmoid sinus",
+  "of": "g-right-sigmoid-sinus",
+  "fma": "FMA51293",
+  "side": "left",
+  "faces": 1962,
+  "bbox": [
+   [
+    -66.45,
+    -69.57,
+    -61.95
+   ],
+   [
+    -28.42,
+    -42.47,
+    -21.98
+   ]
+  ],
+  "centroid": [
+   -53.25,
+   -52.61,
+   -42.57
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50984-fj5194-mirror",
+  "name": "Left superficial middle cerebral vein",
+  "of": "g-right-superficial-middle-cerebral-vein",
+  "fma": "FMA50984",
+  "side": "left",
+  "faces": 4072,
+  "bbox": [
+   [
+    -74.77,
+    -78.28,
+    -39.55
+   ],
+   [
+    -19.92,
+    50.78,
+    28.7
+   ]
+  ],
+  "centroid": [
+   -58.37,
+   -4.34,
+   -0.59
+  ],
+  "sunk": [
+   0.037,
+   0.003
+  ]
+ },
+ {
+  "id": "fma52452-fj4700-mirror",
+  "name": "Left superior cerebellar vein",
+  "of": "g-right-superior-cerebellar-vein",
+  "fma": "FMA52452",
+  "side": "left",
+  "faces": 722,
+  "bbox": [
+   [
+    -57.96,
+    -80.65,
+    -29.85
+   ],
+   [
+    -15.5,
+    -50.67,
+    -14.19
+   ]
+  ],
+  "centroid": [
+   -35.96,
+   -60.64,
+   -24.73
+  ],
+  "sunk": [
+   0.002,
+   0.0
+  ]
+ },
+ {
+  "id": "fma49850-fj5201-mirror",
+  "name": "Left superior hypophyseal artery",
+  "of": "g-right-superior-hypophyseal-artery",
+  "fma": "FMA49850",
+  "side": "left",
+  "faces": 534,
+  "bbox": [
+   [
+    -14.01,
+    -2.51,
+    -34.9
+   ],
+   [
+    -0.84,
+    6.01,
+    -24.31
+   ]
+  ],
+  "centroid": [
+   -5.47,
+   0.96,
+   -28.75
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51248-fj5010-mirror",
+  "name": "Left superior ophthalmic vein",
+  "of": "g-right-superior-ophthalmic-vein",
+  "fma": "FMA51248",
+  "side": "left",
+  "faces": 1418,
+  "bbox": [
+   [
+    -26.03,
+    4.21,
+    -41.17
+   ],
+   [
+    -20.61,
+    63.86,
+    -33.64
+   ]
+  ],
+  "centroid": [
+   -22.08,
+   29.75,
+   -37.83
+  ],
+  "sunk": [
+   0.203,
+   0.14
+  ]
+ },
+ {
+  "id": "fma51289-fj5207-mirror",
+  "name": "Left superior petrosal sinus",
+  "of": "g-right-superior-petrosal-sinus",
+  "fma": "FMA51289",
+  "side": "left",
+  "faces": 1386,
+  "bbox": [
+   [
+    -65.21,
+    -64.96,
+    -44.87
+   ],
+   [
+    -16.12,
+    -16.4,
+    -24.45
+   ]
+  ],
+  "centroid": [
+   -44.07,
+   -42.41,
+   -33.43
+  ],
+  "sunk": [
+   0.0,
+   0.003
+  ]
+ },
+ {
+  "id": "fma50999-fj5219-mirror",
+  "name": "Left superior thalamostriate vein",
+  "of": "g-right-superior-thalamostriate-vein",
+  "fma": "FMA50999",
+  "side": "left",
+  "faces": 314,
+  "bbox": [
+   [
+    -18.26,
+    -31.99,
+    3.15
+   ],
+   [
+    -3.93,
+    3.07,
+    15.15
+   ]
+  ],
+  "centroid": [
+   -9.55,
+   -13.14,
+   11.82
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50425-fj5220-mirror",
+  "name": "Left thalamotuberal artery",
+  "of": "g-right-thalamotuberal-artery",
+  "fma": "FMA50425",
+  "side": "left",
+  "faces": 344,
+  "bbox": [
+   [
+    -13.39,
+    -8.19,
+    -27.15
+   ],
+   [
+    -3.3,
+    -3.25,
+    -0.6
+   ]
+  ],
+  "centroid": [
+   -6.17,
+   -6.19,
+   -15.31
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51400-fj4701-mirror",
+  "name": "Left transverse medullary vein",
+  "of": "g-right-transverse-medullary-vein",
+  "fma": "FMA51400",
+  "side": "left",
+  "faces": 322,
+  "bbox": [
+   [
+    -8.81,
+    -51.78,
+    -71.96
+   ],
+   [
+    0.83,
+    -35.31,
+    -56.82
+   ]
+  ],
+  "centroid": [
+   -3.99,
+   -42.32,
+   -64.32
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51355-fj4702-mirror",
+  "name": "Left transverse pontine vein",
+  "of": "g-right-transverse-pontine-vein",
+  "fma": "FMA51355",
+  "side": "left",
+  "faces": 354,
+  "bbox": [
+   [
+    -17.98,
+    -28.46,
+    -52.01
+   ],
+   [
+    0.4,
+    -12.12,
+    -32.8
+   ]
+  ],
+  "centroid": [
+   -7.25,
+   -18.78,
+   -42.05
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50764-fj5222-mirror",
+  "name": "Left transverse sinus",
+  "of": "g-right-transverse-sinus",
+  "fma": "FMA50764",
+  "side": "left",
+  "faces": 2882,
+  "bbox": [
+   [
+    -64.59,
+    -111.98,
+    -28.12
+   ],
+   [
+    -11.72,
+    -64.09,
+    -17.5
+   ]
+  ],
+  "centroid": [
+   -39.58,
+   -92.91,
+   -22.84
+  ],
+  "sunk": [
+   0.05,
+   0.0
+  ]
+ },
+ {
+  "id": "fma71693-fj5048-mirror",
+  "name": "Left set of branches of cavernous part of internal carotid artery to nerves",
+  "of": "g-set-of-branches-of-cavernous-part-of-internal-carotid-artery-to-nerves",
+  "fma": "FMA71693",
+  "side": "left",
+  "faces": 206,
+  "bbox": [
+   [
+    -22.26,
+    -3.76,
+    -38.79
+   ],
+   [
+    -15.14,
+    6.66,
+    -34.53
+   ]
+  ],
+  "centroid": [
+   -18.4,
+   0.18,
+   -36.22
+  ],
+  "sunk": [
+   0.129,
+   0.056
+  ]
+ },
+ {
+  "id": "fma71578-fj4689-mirror",
+  "name": "Left set of inferior veins of cerebellar hemisphere",
+  "of": "g-set-of-inferior-veins-of-cerebellar-hemisphere",
+  "fma": "FMA71578",
+  "side": "left",
+  "faces": 1694,
+  "bbox": [
+   [
+    -52.16,
+    -99.68,
+    -62.61
+   ],
+   [
+    -4.7,
+    -42.79,
+    -37.24
+   ]
+  ],
+  "centroid": [
+   -25.93,
+   -72.66,
+   -53.92
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50816-fj5008-mirror",
+  "name": "Superior bulb of left internal jugular vein",
+  "of": "g-superior-bulb-of-right-internal-jugular-vein",
+  "fma": "FMA50816",
+  "side": "left",
+  "faces": 174,
+  "bbox": [
+   [
+    -33.09,
+    -48.69,
+    -65.68
+   ],
+   [
+    -27.99,
+    -40.17,
+    -57.57
+   ]
+  ],
+  "centroid": [
+   -30.51,
+   -44.44,
+   -61.64
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma50978-fj4696-mirror",
+  "name": "Left superior cerebral vein",
+  "of": "g-superior-cerebral-vein",
+  "fma": "FMA50978",
+  "side": "left",
+  "faces": 8146,
+  "bbox": [
+   [
+    -66.83,
+    -107.28,
+    -18.01
+   ],
+   [
+    0.55,
+    79.18,
+    85.25
+   ]
+  ],
+  "centroid": [
+   -7.95,
+   -19.68,
+   39.54
+  ],
+  "sunk": [
+   0.013,
+   0.04
+  ]
+ },
+ {
+  "id": "fma49535-fj5074-mirror",
+  "name": "Third part of left lingual artery",
+  "of": "g-third-part-of-right-lingual-artery",
+  "fma": "FMA49535",
+  "side": "left",
+  "faces": 308,
+  "bbox": [
+   [
+    -8.29,
+    -0.46,
+    -140.2
+   ],
+   [
+    -1.38,
+    25.82,
+    -128.07
+   ]
+  ],
+  "centroid": [
+   -5.61,
+   12.89,
+   -136.32
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma76156-fj4770-mirror",
+  "name": "Trunk of artery of right precentral sulcus",
+  "of": "g-trunk-of-artery-of-left-precentral-sulcus",
+  "fma": "FMA76156",
+  "side": "right",
+  "faces": 4380,
+  "bbox": [
+   [
+    -73.69,
+    -11.86,
+    -7.12
+   ],
+   [
+    72.04,
+    5.23,
+    60.67
+   ]
+  ],
+  "centroid": [
+   18.24,
+   -1.52,
+   23.22
+  ],
+  "sunk": [
+   0.027,
+   0.022
+  ]
+ },
+ {
+  "id": "fma75908-fj5070-mirror",
+  "name": "Trunk of clivus branch of left internal carotid artery",
+  "of": "g-trunk-of-clivus-branch-of-right-internal-carotid-artery",
+  "fma": "FMA75908",
+  "side": "left",
+  "faces": 332,
+  "bbox": [
+   [
+    -13.57,
+    -20.81,
+    -44.81
+   ],
+   [
+    -1.16,
+    -14.64,
+    -37.47
+   ]
+  ],
+  "centroid": [
+   -7.77,
+   -17.46,
+   -40.68
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma86079-fj5124-mirror",
+  "name": "Trunk of medial branch of left superior cerebellar artery",
+  "of": "g-trunk-of-medial-branch-of-right-superior-cerebellar-artery",
+  "fma": "FMA86079",
+  "side": "left",
+  "faces": 354,
+  "bbox": [
+   [
+    -21.95,
+    -76.16,
+    -28.62
+   ],
+   [
+    -8.89,
+    -31.31,
+    -7.82
+   ]
+  ],
+  "centroid": [
+   -13.37,
+   -45.91,
+   -17.72
+  ],
+  "sunk": [
+   0.023,
+   0.018
+  ]
+ },
+ {
+  "id": "fma75886-fj5130-mirror",
+  "name": "Trunk of meningeal branch of cavernous part of left internal carotid artery",
+  "of": "g-trunk-of-meningeal-branch-of-cavernous-part-of-right-internal-carotid-artery",
+  "fma": "FMA75886",
+  "side": "left",
+  "faces": 308,
+  "bbox": [
+   [
+    -37.4,
+    0.55,
+    -50.11
+   ],
+   [
+    -13.98,
+    7.74,
+    -39.34
+   ]
+  ],
+  "centroid": [
+   -25.04,
+   2.69,
+   -44.02
+  ],
+  "sunk": [
+   0.395,
+   0.278
+  ]
+ },
+ {
+  "id": "fma76135-fj4873-mirror",
+  "name": "Trunk of middle temporal branch of right middle cerebral artery",
+  "of": "g-trunk-of-middle-temporal-branch-of-left-middle-cerebral-artery",
+  "fma": "FMA76135",
+  "side": "right",
+  "faces": 4362,
+  "bbox": [
+   [
+    39.98,
+    -19.06,
+    -17.85
+   ],
+   [
+    57.93,
+    9.67,
+    20.94
+   ]
+  ],
+  "centroid": [
+   47.11,
+   -7.03,
+   4.91
+  ],
+  "sunk": [
+   0.19,
+   0.165
+  ]
+ },
+ {
+  "id": "fma75971-fj5182-mirror",
+  "name": "Trunk of recurrent meningeal branch of left lacrimal artery",
+  "of": "g-trunk-of-recurrent-meningeal-branch-of-right-lacrimal-artery",
+  "fma": "FMA75971",
+  "side": "left",
+  "faces": 498,
+  "bbox": [
+   [
+    -48.74,
+    20.01,
+    -46.01
+   ],
+   [
+    -42.47,
+    42.47,
+    -28.27
+   ]
+  ],
+  "centroid": [
+   -46.45,
+   30.72,
+   -39.17
+  ],
+  "sunk": [
+   0.117,
+   0.156
+  ]
+ },
+ {
+  "id": "fma76062-fj5043-mirror",
+  "name": "Trunk of left anterior cerebral artery",
+  "of": "g-trunk-of-right-anterior-cerebral-artery",
+  "fma": "FMA76062",
+  "side": "left",
+  "faces": 124,
+  "bbox": [
+   [
+    -10.09,
+    -2.09,
+    -28.88
+   ],
+   [
+    -4.14,
+    -1.16,
+    -21.47
+   ]
+  ],
+  "centroid": [
+   -7.38,
+   -1.51,
+   -25.68
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma76254-fj5022-mirror",
+  "name": "Trunk of left anterior choroidal artery",
+  "of": "g-trunk-of-right-anterior-choroidal-artery",
+  "fma": "FMA76254",
+  "side": "left",
+  "faces": 1850,
+  "bbox": [
+   [
+    -34.52,
+    -40.33,
+    -25.99
+   ],
+   [
+    -3.11,
+    7.08,
+    14.34
+   ]
+  ],
+  "centroid": [
+   -19.31,
+   -17.84,
+   -6.5
+  ],
+  "sunk": [
+   0.002,
+   0.0
+  ]
+ },
+ {
+  "id": "fma75898-fj5094-mirror",
+  "name": "Trunk of left inferior hypophyseal artery",
+  "of": "g-trunk-of-right-inferior-hypophyseal-artery",
+  "fma": "FMA75898",
+  "side": "left",
+  "faces": 298,
+  "bbox": [
+   [
+    -14.83,
+    -5.23,
+    -41.57
+   ],
+   [
+    -1.6,
+    -2.01,
+    -34.38
+   ]
+  ],
+  "centroid": [
+   -9.35,
+   -3.92,
+   -38.17
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma66447-fj5117-mirror",
+  "name": "Trunk of left lingual artery",
+  "of": "g-trunk-of-right-lingual-artery",
+  "fma": "FMA66447",
+  "side": "left",
+  "faces": 654,
+  "bbox": [
+   [
+    -29.7,
+    -45.0,
+    -138.16
+   ],
+   [
+    -3.89,
+    0.52,
+    -121.54
+   ]
+  ],
+  "centroid": [
+   -16.95,
+   -26.34,
+   -129.75
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma61991-fj5134-mirror",
+  "name": "Trunk of left middle cerebral artery",
+  "of": "g-trunk-of-right-middle-cerebral-artery",
+  "fma": "FMA61991",
+  "side": "left",
+  "faces": 818,
+  "bbox": [
+   [
+    -74.5,
+    -68.8,
+    -28.98
+   ],
+   [
+    -46.46,
+    -5.56,
+    13.87
+   ]
+  ],
+  "centroid": [
+   -65.8,
+   -29.71,
+   -3.35
+  ],
+  "sunk": [
+   0.012,
+   0.01
+  ]
+ },
+ {
+  "id": "fma79494-fj5133-mirror",
+  "name": "Trunk of left middle meningeal artery",
+  "of": "g-trunk-of-right-middle-meningeal-artery",
+  "fma": "FMA79494",
+  "side": "left",
+  "faces": 234,
+  "bbox": [
+   [
+    -43.15,
+    -21.47,
+    -74.43
+   ],
+   [
+    -30.27,
+    -18.43,
+    -51.69
+   ]
+  ],
+  "centroid": [
+   -35.73,
+   -20.04,
+   -63.65
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma79455-fj5137-mirror",
+  "name": "Trunk of left middle temporal artery",
+  "of": "g-trunk-of-right-middle-temporal-artery",
+  "fma": "FMA79455",
+  "side": "left",
+  "faces": 2886,
+  "bbox": [
+   [
+    -69.69,
+    -12.37,
+    -31.3
+   ],
+   [
+    -2.54,
+    82.55,
+    70.45
+   ]
+  ],
+  "centroid": [
+   -50.02,
+   42.41,
+   11.7
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma70525-fj5143-mirror",
+  "name": "Trunk of left ophthalmic artery",
+  "of": "g-trunk-of-right-ophthalmic-artery",
+  "fma": "FMA70525",
+  "side": "left",
+  "faces": 790,
+  "bbox": [
+   [
+    -44.02,
+    5.23,
+    -51.29
+   ],
+   [
+    -12.92,
+    53.55,
+    -35.25
+   ]
+  ],
+  "centroid": [
+   -22.74,
+   28.64,
+   -39.72
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma86070-fj5003-mirror",
+  "name": "Trunk of left posterior inferior cerebellar artery",
+  "of": "g-trunk-of-right-posterior-inferior-cerebellar-artery",
+  "fma": "FMA86070",
+  "side": "left",
+  "faces": 796,
+  "bbox": [
+   [
+    -55.03,
+    -81.99,
+    -60.47
+   ],
+   [
+    -12.46,
+    -44.43,
+    -29.08
+   ]
+  ],
+  "centroid": [
+   -26.58,
+   -67.61,
+   -52.93
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma79522-fj5181-mirror",
+  "name": "Trunk of left pterygomeningeal artery",
+  "of": "g-trunk-of-right-pterygomeningeal-artery",
+  "fma": "FMA79522",
+  "side": "left",
+  "faces": 3232,
+  "bbox": [
+   [
+    -59.05,
+    -34.2,
+    -80.97
+   ],
+   [
+    -10.35,
+    -9.52,
+    -33.49
+   ]
+  ],
+  "centroid": [
+   -32.78,
+   -18.64,
+   -57.34
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma86076-fj5199-mirror",
+  "name": "Trunk of left superior cerebellar artery",
+  "of": "g-trunk-of-right-superior-cerebellar-artery",
+  "fma": "FMA86076",
+  "side": "left",
+  "faces": 468,
+  "bbox": [
+   [
+    -22.05,
+    -33.23,
+    -38.27
+   ],
+   [
+    1.09,
+    -9.21,
+    -26.77
+   ]
+  ],
+  "centroid": [
+   -13.18,
+   -17.52,
+   -32.12
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma75911-fj5215-mirror",
+  "name": "Trunk of tentorial basal branch of left internal carotid artery",
+  "of": "g-trunk-of-tentorial-basal-branch-of-right-internal-carotid-artery",
+  "fma": "FMA75911",
+  "side": "left",
+  "faces": 508,
+  "bbox": [
+   [
+    -54.01,
+    -64.04,
+    -45.37
+   ],
+   [
+    -12.75,
+    -11.48,
+    -19.01
+   ]
+  ],
+  "centroid": [
+   -33.06,
+   -33.01,
+   -34.84
+  ],
+  "sunk": [
+   0.249,
+   0.313
+  ]
+ },
+ {
+  "id": "fma75914-fj5216-mirror",
+  "name": "Trunk of tentorial marginal branch of left internal carotid artery",
+  "of": "g-trunk-of-tentorial-marginal-branch-of-right-internal-carotid-artery",
+  "fma": "FMA75914",
+  "side": "left",
+  "faces": 538,
+  "bbox": [
+   [
+    -22.14,
+    -45.09,
+    -42.52
+   ],
+   [
+    -4.45,
+    -2.46,
+    -11.48
+   ]
+  ],
+  "centroid": [
+   -15.52,
+   -25.68,
+   -33.41
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "id": "fma51014-fj5234-mirror",
+  "name": "Vein of left caudate nucleus",
+  "of": "g-vein-of-right-caudate-nucleus",
+  "fma": "FMA51014",
+  "side": "left",
+  "faces": 608,
+  "bbox": [
+   [
+    -12.98,
+    -17.71,
+    8.91
+   ],
+   [
+    -3.23,
+    7.6,
+    20.16
+   ]
+  ],
+  "centroid": [
+   -6.73,
+   -5.02,
+   14.88
+  ],
+  "sunk": [
+   0.0,
+   0.0
+  ]
+ }
+]

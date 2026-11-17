@@ -80,6 +80,27 @@ for name, group in by_name.items():
             faces=p['faces'], ref=p['fma'],
         ))
 
+# ── Mirrored twins of one-sided vessels (pipeline/mirror_vessels.py) ───
+# BodyParts3D gives most veins on the right only; the twin is the original
+# mesh mirrored and fitted to this specimen's other hemisphere — marked so,
+# never passed off as a separate source mesh.
+MIRRORED = ROOT / 'data/gross_mirrored.json'
+if MIRRORED.exists():
+    have = {p['id'] for p in parts}
+    for p in json.load(open(MIRRORED)):
+        n = p['name']
+        base = re.sub(r'^(Left|Right) ', '', n)
+        pid = f"g-{slug(n)}"
+        assert pid not in have, f'mirrored twin collides: {pid}'
+        have.add(pid)
+        parts.append(dict(
+            id=pid, name={'en': n}, system=gross_system(n), layer='gross', side=p['side'],
+            concept=slug(base), mesh=f"gross/{p['id']}.glb", centroid=p['centroid'], bbox=p['bbox'],
+            faces=p['faces'], ref=p['fma'], mirrorOf=p['of'],
+            meshSource=dict(title=f"BodyParts3D 4.3 · mirrored from the {'right' if p['side'] == 'left' else 'left'} side (the source models it on one side only) · CC BY-SA 2.1 JP",
+                            url='https://lifesciencedb.jp/bp3d/'),
+        ))
+
 # ── Julich-Brain ────────────────────────────────────────────────────────
 groups = {}
 for p in J:

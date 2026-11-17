@@ -112,6 +112,7 @@ glasser | julich`), tizim emas.
 | 4c | Kesim ko'rinishlari | ✅ 2026-10-03: 3D daraja konturlari bitta toza tashqi chiziq (orqasi yashirin), zinapoya yorliqlar; sxemalar atlas-plastinka uslubida (fon to'qima nomlangan, shaffofmas, kattadan kichikka, raqamlar avto-ajratiladi, ustma-ust audit); Mielin/Nissl bo'yoq ko'rinishlari; Atlas (MNI) — haqiqiy meshlar kesimi, MNI kursor, mm², markaz, mm shkala; tekislik tenglamasi |
 | O'rganish | Kesimlar + Darslar bitta tabda | ✅ 2026-10-09: mavzular bo'yicha (7 mavzu), har mavzuda 3D dars + kesim plastinkalari, dars ↔ kesim havolalari, 3D'da faqat mavzu markerlari; pastda 3 tab |
 | Darslar | 3D qadamma-qadam darslar | ✅ 2026-10-09: 4-tab Darslar — qorinchalar va likvor yo'li (8), qadoqsimon tana (7), gippokamp/fornix/Papez (6): fokus + xira kontekst, o'quv ranglari, 3D yorliqlar, oqim animatsiyasi, Eslab qoling / Chuqurroq qutilari, 3D'da bosiladigan viktorina |
+| 5.5 | Zoom, real kesim, tomirlar | ✅ 2026-11-17: plastinkalarda zoom/surish/to'liq ekran; real kesim 21/22 (K3, Mc tuzatildi; T2, G4 eng yaqin kesimdan; U1 manba yo'q); 68 juftsiz tomirga ko'zgu juft (affin moslangan, belgilangan) |
 | 5.3 | Yo'llar va shikastlanish | ✅ 2026-11-17: CST / DCML / ALS bekatlari (`pathways.ts`), 3 ta 3D dars, plastinkalarda yo'l yoritish (←/→ yo'l bo'ylab), "Shikastlanish" tabi: daraja×tomon×hudud → yo'qotish jadvali + sindrom; teskari rejim (belgilar → o'choqlar). Keyin: o'choqni plastinkada chizish, kalla nervlari |
 | BG-1 | Bazal yadrolar: kesimlar | ✅ 2026-10-09: `basal-ganglia` tizimi (20 qism), B1–B5 masshtabli plastinkalar (accumbens, AC/VP/Ch4, GPe/GPi/ansa, STN/Forel H-H1-H2, ichki kapsula aksial), 30 yangi tuzilma PhD tafsilot bilan. Keyin BG-2 yo'llar, BG-3 kasallik simulyatori, BG-4 halqalar/DBS/3D |
 | UI-2 | Yorug' rejim | ✅ 2026-11-15: tema almashtirgichi, `--ink` tokeni, yorug' sahna foni va yoritish, shisha yorug' varianti (Figma kiti). Dars kartasi va kesim ko'ruvchisi hozircha qora orol. Shisha: shaffofroq, bo'rtiq, slayder kit o'lchamida |
@@ -227,9 +228,9 @@ PhD va tadqiqotchi:
 11. **Retseptor / gen xaritalari** — ochiq ma'lumot bor-yo'qligi tekshirilishi kerak.
 12. **Lupa** — sahna ustida suriladigan linza: mayda yadrolarni kattalashtirib, nomlarini faqat ichida ko'rsatadi.
 
-Tavsiya etilgan tartib: 5.1 (T2) ✅ → 5.2 ✅ → 1+2 (yo'llar va shikastlanish) ✅ → **5.5 (A, B, C) ← KEYINGI** → 3 → 8.
+Tavsiya etilgan tartib: 5.1 (T2) ✅ → 5.2 ✅ → 1+2 (yo'llar va shikastlanish) ✅ → 5.5 (A, B, C) ✅ → **3 (mavzu viktorinasi + Anki) yoki foydalanuvchi tanlovi ← KEYINGI** → 8.
 
-### 5.5 Foydalanuvchi talablari (2026-11-16) — hali bajarilmagan
+### 5.5 Foydalanuvchi talablari (2026-11-16) — ✅ 2026-11-17 bajarildi (A, B 21/22, C); qoldiqlar `docs/HISTORY.md` "5.5"
 
 **A. Qon tomirlar simmetrik bo'lsin.** Foydalanuvchi uch surat bilan ko'rsatdi: yuzaki venalar va ko'ndalang sinus
 faqat bir tomonda, arteriyalar ham ikki yarim sharda har xil.

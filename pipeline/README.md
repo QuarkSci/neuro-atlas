@@ -28,6 +28,17 @@ pipeline/.venv/bin/python pipeline/align_bp3d.py                 # 20 landmarks 
 pipeline/.venv/bin/python pipeline/bp3d_to_glb.py                # (2) aligned → public/meshes/gross + data/gross.json
 ```
 
+One-sided vessels (BodyParts3D models most veins on the right only) get a
+mirrored twin — mirror, then a right→left affine fitted on 97 bilateral
+centroids (RMS 2.8 → 1.4 mm), with a check that no twin sinks deeper under the
+opposite cortex than its original. Unpaired midline vessels are skipped; twins
+carry `mirrorOf` and a `meshSource` saying they are mirrored:
+
+```bash
+pipeline/.venv/bin/python pipeline/mirror_vessels.py   # → public/meshes/gross/*-mirror.glb + data/gross_mirrored.json (needs trimesh)
+python3 pipeline/build_catalogue.py                    # appends the twins to src/data/parts.json
+```
+
 ## 2. Julich-Brain 3.1 (508 parts)
 
 ```bash

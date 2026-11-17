@@ -23,7 +23,15 @@ export interface ContentEntry {
 }
 
 type ContentFile = Record<string, ContentEntry>
-const FILES: ContentFile[] = [brain as ContentFile, vessels as ContentFile, julichGroups as ContentFile, brodmann as ContentFile, brainstem as ContentFile, cerebellum as ContentFile, julichAreas as ContentFile]
+const FILES: ContentFile[] = [
+  brain as ContentFile,
+  vessels as ContentFile,
+  julichGroups as ContentFile,
+  brodmann as ContentFile,
+  brainstem as ContentFile,
+  cerebellum as ContentFile,
+  julichAreas as ContentFile,
+]
 const BY_CONCEPT = new Map<string, ContentEntry>()
 for (const f of FILES) for (const [k, v] of Object.entries(f)) BY_CONCEPT.set(k, v)
 
@@ -33,9 +41,15 @@ for (const f of FILES) for (const [k, v] of Object.entries(f)) BY_CONCEPT.set(k,
  * its nucleus/gyrus group. Tried in order; first match wins.
  */
 const FAMILIES: [RegExp, string][] = [
-  [/middle cerebral artery|artery of .*(central|precentral|postcentral) sulcus|temporal branch|temporo-occipital|prefrontal artery|frontobasal artery|parietal artery|angular gyrus|polar temporal|anterolateral central/i, 'trunk-of-right-middle-cerebral-artery'],
+  [
+    /middle cerebral artery|artery of .*(central|precentral|postcentral) sulcus|temporal branch|temporo-occipital|prefrontal artery|frontobasal artery|parietal artery|angular gyrus|polar temporal|anterolateral central/i,
+    'trunk-of-right-middle-cerebral-artery',
+  ],
   [/anterior cerebral artery|pericallosal|callosomarginal|paracentral branch|precuneal|medial striate|median commissural|splenial artery/i, 'anterior-cerebral-artery'],
-  [/posterior cerebral artery|calcarine artery|collicular|posteromedial central|posterolateral central|thalamogeniculate|thalamoperforating|posterior medial choroidal/i, 'postcommunicating-part-of-right-posterior-cerebral-artery'],
+  [
+    /posterior cerebral artery|calcarine artery|collicular|posteromedial central|posterolateral central|thalamogeniculate|thalamoperforating|posterior medial choroidal/i,
+    'postcommunicating-part-of-right-posterior-cerebral-artery',
+  ],
   [/posterior communicating|hypothalamic branch|chiasmatic branch|mammillary artery|thalamotuberal/i, 'posterior-communicating-artery'],
   [/anterior choroidal/i, 'anterior-choroidal-artery'],
   [/superior cerebellar artery|superior vermian/i, 'superior-cerebellar-artery'],
@@ -72,7 +86,9 @@ export interface Resolved {
 }
 
 export function contentFor(part: Part, parentConcept?: string): Resolved | undefined {
-  const own = BY_CONCEPT.get(part.concept)
+  // Concepts that carry a side in their name ("trunk-of-right-middle-cerebral-artery") share the
+  // other side's entry: its text and uz name are side-neutral (mirrored vessels rely on this).
+  const own = BY_CONCEPT.get(part.concept) ?? BY_CONCEPT.get(part.concept.replace(/\b(left|right)\b/g, (m) => (m === 'left' ? 'right' : 'left')))
   if (own) return { entry: own, inherited: false }
   if (parentConcept) {
     const group = BY_CONCEPT.get(parentConcept)

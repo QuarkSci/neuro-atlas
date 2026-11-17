@@ -781,6 +781,21 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
 - QOLDI: o'choqni plastinkada chizish (hudud bo'yalishi), 3D da o'choq; kalla nervlari yadrolarini simulyatorga qo'shish
   (hozir `extra` matnida); yuz (trigeminal) yo'li; kortikobulbar.
 
+### 5.5 — Zoom, real kesim qamrovi, tomirlar simmetriyasi (2026-11-17)
+
+- **C (`9345a50`)** `src/ui/ZoomPane.tsx`: barcha 5 ko'rinishda g'ildirak/pinch zoom (1–8x), sudrab surish, ikki marta
+  bosish, tugmalar (o'ng pastda); F — to'liq ekran, Esc avval undan chiqadi. CSS transform (SVG o'tkir qoladi);
+  nishonlar faqat √zoom bilan o'sadi (`--zs`). 4 px dan ortiq siljish — surish, click tuzilmani tanlamaydi.
+- **B (`a650ccc`)** 22 dan 21 tasida real tasvir. K3: tekislik ko'prik meshi tepasidan (z −22.7) o'tardi → oyna barcha
+  sohalarga qaytib 145 mm bo'lardi; contour = pons + cerebral-crus + inferior-colliculus (45×40). Mc: `MAX_SPAN_MM` 130
+  (butun miyacha, 124 mm haqiqiy). T2 → B5, G4 → G2 (`REAL_STAND_IN`, sariq yozuv bilan). U1 — manba yo'q, halol qoldi.
+- **A** `pipeline/mirror_vessels.py`: 68 ta juftsiz tomirga ko'zgu juft (mirror + o'ng→chap affin, 97 juft markaz bo'yicha,
+  RMS 2.82 → 1.36 mm; botish tekshiruvi: hech biri yomonlashmadi). Toq: Galen venasi, qo'shilish, ensa sinusi, dorsal
+  medullyar vena — ko'zgulanmaydi. `build_catalogue.py` → `mirrorOf` + `meshSource` ("mirrored"). Arteriyalar 83 chap /
+  81 o'ng (avval 46/76), venalar 27/31 (avval 1/31). `content/index.ts`: konsept nomidagi left↔right almashtirilgan
+  yozuvga qaytadi (twin'lar kontent va "Chap ..." uz nomini oladi). audit-pick diff 0.
+- QOLDI: U1 real tasviri (boshqa ochiq histologik manba); Villiz doirasi variantlari (PhD); BigBrain 20 mkm plitkalar.
+
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 
 1. trimesh GLB eksporti normal yozmaydi → meshlar qora (`include_normals`).
