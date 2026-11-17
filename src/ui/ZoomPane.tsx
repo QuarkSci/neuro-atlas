@@ -14,6 +14,9 @@ const MAX = 8
  * Number badges grow only with √zoom (`--zs`) so they label the detail
  * instead of covering it.
  * A drag never turns into a click on the structure under it.
+ * A click on the figure outside any structure (background, the slice image
+ * between atlas regions) opens it full-screen; it waits out the double-click
+ * window so a double-click still only zooms.
  */
 export function ZoomPane({
   children,
@@ -36,6 +39,8 @@ export function ZoomPane({
   const drag = useRef<{ pts: Map<number, { x: number; y: number }>; moved: boolean; last?: { x: number; y: number; d: number } }>({ pts: new Map(), moved: false })
 
   useEffect(() => setV(ID), [resetKey])
+  const clickTimer = useRef<number | undefined>(undefined)
+  useEffect(() => () => window.clearTimeout(clickTimer.current), [])
 
   /** Zoom to scale k keeping the box point (px, py) fixed; clamped so the figure never leaves the box. */
   const zoomAt = (k: number, px: number, py: number, from = view.current) => {
@@ -117,7 +122,16 @@ export function ZoomPane({
       drag.current.moved = false
     }
   }
+  // Structures, badges, labels and the controls keep their own click.
+  const click = (e: React.MouseEvent) => {
+    if (full || (e.target as Element).closest('.sv-zoom-ctl, .sv-item, .sv-badge, .sv-leader, .as-region, .as-mark, button, a')) return
+    window.clearTimeout(clickTimer.current)
+    // The second click of a double-click: that one zooms instead.
+    if (e.detail > 1) return
+    clickTimer.current = window.setTimeout(() => onFull(true), 260)
+  }
   const dbl = (e: React.MouseEvent) => {
+    window.clearTimeout(clickTimer.current)
     const p = local(e)
     if (view.current.k >= MAX / 2) setV(ID)
     else zoomAt(view.current.k * 2, p.x, p.y)
@@ -127,12 +141,13 @@ export function ZoomPane({
   return (
     <div
       ref={box}
-      className={`sv-zoom ${v.k > 1 ? 'zoomed' : ''}`}
+      className={`sv-zoom ${v.k > 1 ? 'zoomed' : ''} ${full ? '' : 'can-full'}`}
       onPointerDown={down}
       onPointerMove={move}
       onPointerUp={up}
       onPointerCancel={up}
       onClickCapture={clickCapture}
+      onClick={click}
       onDoubleClick={dbl}
     >
       <div className="sv-zoom-inner" style={{ transform: `translate(${v.x}px, ${v.y}px) scale(${v.k})`, '--zs': Math.sqrt(v.k) } as React.CSSProperties}>

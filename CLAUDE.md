@@ -66,7 +66,7 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 
 **Trigeminotalamik yo'l ✅ (2026-11-17)** — `docs/HISTORY.md` "5.3-3c": `path-v` (4-yo'l, `body: 'face'`), yuz og'rig'i
 endi kalla belgisi emas, yo'l. Kattalashtirish (PLAN 5.5 C) allaqachon bor: `ZoomPane` (g'ildirak, ikki marta bosish,
-tugmalar, F).
+tugmalar, F; bo'sh joyni bir marta bosish — to'liq ekran).
 
 **Kalla nervlari simulyatorda ✅ (2026-11-17)** — `docs/HISTORY.md` "5.3-3b": `CRANIAL_SIGNS` (lesions.ts),
 `src/ui/lesionSigns.ts` (`cranialSigns`, `localiseWithSigns`), panelda oldinga ro'yxat + teskari tanlov + "yana kutiladi";

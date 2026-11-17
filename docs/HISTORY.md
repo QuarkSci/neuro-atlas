@@ -859,6 +859,14 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   rostral uzunchoq butun yarmi — yuz ikki tomonda (kesishmagan trakt + kesishgan trakt). Kesishgan sezgi + disfagiya
   → faqat Wallenberg.
 - `topics.ts` pathways mavzusiga `path-v` darsi (7 qadam, viktorina — VPM). audit-lesions 0.
+
+### 5.5 D — Bosib to'liq ekranga (2026-11-17)
+
+- `ZoomPane`: rasmning BO'SH joyiga (tuzilma, nishon, yorliq, atlas sohasi, tugma emas — `closest()` bilan) bitta bosish
+  → `onFull(true)`. 260 ms kutadi va `e.detail > 1` ni o'tkazib yuboradi — ikki marta bosish faqat zoom qiladi.
+  Kursor `zoom-in` (`.sv-zoom.can-full:not(.zoomed)`, atlas/real `.as-svg` ham). Esc / F / tugma — chiqish.
+  Sxemada zamin to'qimasi ham tuzilma, shuning uchun bo'sh joy = kesim siluetidan tashqari; real kesimda — sohalar orasi.
+  Headless tekshiruv: tuzilma → tanlandi, to'liq ekran yo'q; ikki marta → zoom, to'liq ekran yo'q; bo'sh → to'liq; Esc → chiqdi.
 - ✅ 3D darsda (2026-11-17): `lessons/lesion.ts` `setLesionSignProvider()` — `ui/lesionSigns.ts` yuklanganda o'zini
   ro'yxatdan o'tkazadi (darslar so'ralganda quriladi, shuning uchun tartib xavfsiz; ma'lumot qatlami UI'ni import
   qilmaydi). Umumiy qadam matniga "Daraja belgilari: ..." qo'shildi; yangi 2-qadam "Darajani aniqlaydigan belgilar":
