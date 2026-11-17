@@ -1,7 +1,8 @@
 import { CRANIAL_SIGNS, LEVELS, LEVEL_BY_ID, signature, type CranialSign, type Findings, type Lesion } from '@/data/lesions'
 import { PATHWAYS, type BodySide } from '@/data/pathways'
-import { SECTION_BY_ID } from '@/data/sections'
+import { SECTION_BY_ID, STRUCTURE_BY_ID as STRUCT } from '@/data/sections'
 import { territoryOn } from './lesionTerritory'
+import { setLesionSignProvider } from '@/data/lessons/lesion'
 
 /**
  * The cranial-nerve (level) signs of a lesion, read off its territory on the
@@ -68,3 +69,14 @@ export function localiseWithSigns(findings: Findings, cranial: CranialFindings):
       }
   return out
 }
+
+// The 3D lesion lesson reads the same signs (built lazily, after this module has loaded).
+setLesionSignProvider((lesion) =>
+  cranialSigns(lesion).map((h) => ({
+    name: h.sign.name,
+    short: h.sign.short,
+    detail: h.sign.detail,
+    side: h.side,
+    concepts: [...new Set(h.via.map((id) => STRUCT.get(id)?.part).filter((p): p is string => !!p))],
+  })),
+)

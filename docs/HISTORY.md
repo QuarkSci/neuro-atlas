@@ -843,8 +843,13 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
 - Tekshirilgan: Weber (CST o'ng + III chap → faqat O'rta miya chap ventral), Dejerine (XII chap + CST/DCML o'ng → faqat
   medial uzunchoq), Benedikt/Claude (qizil yadro → qarama-qarshi ataksiya), Raymond (ko'prik ventral: VI + CST).
 - `medulla-caudal` dorsal hududi medialda sayozlashtirildi (v 0.32) — XII yadrosi orqa ustun o'chog'iga tushmasin.
-- QOLDI: 3D o'choq darsida kalla belgilarini ko'rsatish (dars ma'lumot qatlamida, belgilar UI'da — uzatish kerak);
-  trigeminal yo'l; eshitish belgisi uchun U4 darajasi.
+- QOLDI: trigeminal yo'l; eshitish belgisi uchun U4 darajasi.
+- ✅ 3D darsda (2026-11-17): `lessons/lesion.ts` `setLesionSignProvider()` — `ui/lesionSigns.ts` yuklanganda o'zini
+  ro'yxatdan o'tkazadi (darslar so'ralganda quriladi, shuning uchun tartib xavfsiz; ma'lumot qatlami UI'ni import
+  qilmaydi). Umumiy qadam matniga "Daraja belgilari: ..." qo'shildi; yangi 2-qadam "Darajani aniqlaydigan belgilar":
+  har belgi alohida qatorda (`.lesson-text` `white-space: pre-line`), kesishgan belgilar bo'lsa `memo`; o'choq atrofida
+  to'q sariq yorliqlar (`CranialSign.short`); 3D meshi bor tuzilmalar (miyacha oyoqchalari, qizil yadro) to'q sariq
+  yoritiladi — kalla nervi yadrolarining atlasda meshi yo'q.
 
 ## 4. Ma'lum xatolar tarixi (takrorlamaslik uchun)
 

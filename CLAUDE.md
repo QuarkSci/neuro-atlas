@@ -65,7 +65,8 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 ## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-17, 5.3-3a dan keyin)
 
 **Kalla nervlari simulyatorda ✅ (2026-11-17)** — `docs/HISTORY.md` "5.3-3b": `CRANIAL_SIGNS` (lesions.ts),
-`src/ui/lesionSigns.ts` (`cranialSigns`, `localiseWithSigns`), panelda oldinga ro'yxat + teskari tanlov + "yana kutiladi".
+`src/ui/lesionSigns.ts` (`cranialSigns`, `localiseWithSigns`), panelda oldinga ro'yxat + teskari tanlov + "yana kutiladi";
+3D o'choq darsida ham ("Darajani aniqlaydigan belgilar" qadami, `setLesionSignProvider`).
 
 **O'choq plastinkada va 3D da ✅ (2026-11-17)** — tafsilot `docs/HISTORY.md` "5.3-3a". `src/ui/lesionTerritory.ts`
 (havza = u/v ko'pburchak yoki tuzilma; `territoryOn()` → shakl + hududdagi tuzilmalar), `scripts/audit-lesions.mjs`
@@ -84,7 +85,7 @@ real kesim 21/22 (`REAL_STAND_IN` T2→B5, G4→G2; U1 manbasiz), `pipeline/mirr
 `mirrorOf`, `data/gross_mirrored.json`; meshlar qayta hosil qilinsa — mirror_vessels.py → build_catalogue.py).
 
 **Navbatdagi vazifa — foydalanuvchi tanlaydi** (avval qisqa reja ko'rsating): PLAN 5.3-3 mavzu viktorinasi + Anki;
-Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; trigeminal yo'l; 3D o'choq darsida kalla belgilari;
+Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; trigeminal yo'l;
 plastinkani bosib o'choq qo'yish; 5.4 UI qoldiqlari.
 
 Ish uslubi bo'yicha eslatmalar (2026-11-17):

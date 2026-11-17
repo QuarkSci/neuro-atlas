@@ -337,6 +337,8 @@ export function localise(findings: Findings): Lesion[] {
 export interface CranialSign {
   id: string
   name: L10n
+  /** For a 3D label. */
+  short: L10n
   /** What the examiner finds. */
   detail: L10n
   items?: { id: string; side: 'ipsi' | 'contra' }[]
@@ -350,12 +352,14 @@ const ipsi = (...ids: string[]) => ids.map((id) => ({ id, side: 'ipsi' as const 
 export const CRANIAL_SIGNS: CranialSign[] = [
   {
     id: 'cn3',
+    short: { en: 'III palsy', uz: 'III falaji' },
     name: { en: 'Oculomotor palsy (III)', uz: 'III nerv falaji' },
     detail: { en: 'Ptosis, eye down and out, dilated unreactive pupil.', uz: "Ptoz, ko'z pastga-tashqariga, kengaygan va reaksiyasiz qorachiq." },
     items: ipsi('n3', 'n3-root', 'ew'),
   },
   {
     id: 'ino',
+    short: { en: 'INO (MLF)', uz: 'INO (MLF)' },
     name: { en: 'Internuclear ophthalmoplegia (MLF)', uz: 'Internuklear oftalmoplegiya (MLF)' },
     detail: {
       en: 'On looking away from the lesion the eye on its side does not adduct; the abducting eye beats in nystagmus. Convergence spared.',
@@ -366,6 +370,7 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'gaze',
+    short: { en: 'Gaze palsy', uz: 'Qarash falaji' },
     name: { en: 'Horizontal gaze palsy (VI nucleus / PPRF)', uz: 'Gorizontal qarash falaji (VI yadrosi / PPRF)' },
     detail: {
       en: 'Neither eye can look toward the side of the lesion — the abducens nucleus drives both eyes (via the MLF), so a nuclear lesion gives a gaze palsy, not a lone lateral rectus palsy.',
@@ -375,6 +380,7 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'cn6',
+    short: { en: 'VI palsy', uz: 'VI falaji' },
     name: { en: 'Abducens palsy (VI fascicle)', uz: 'VI nerv falaji (fastikula)' },
     detail: {
       en: 'The eye on the side of the lesion cannot abduct; horizontal diplopia worse looking toward it.',
@@ -384,6 +390,7 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'cn7',
+    short: { en: 'Facial palsy (VII)', uz: 'Yuz falaji (VII)' },
     name: { en: 'Peripheral facial palsy (VII)', uz: 'Yuzning periferik falaji (VII)' },
     detail: {
       en: 'The whole half of the face, forehead included; with the genu, often together with the VI nucleus (facial colliculus).',
@@ -393,6 +400,7 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'face-central',
+    short: { en: 'Central facial palsy', uz: 'Markaziy yuz falaji' },
     name: { en: 'Central facial palsy (corticobulbar)', uz: 'Yuzning markaziy falaji (kortikobulbar)' },
     detail: {
       en: 'Lower face only on the opposite side — the forehead is spared because its motor neurons get input from both hemispheres.',
@@ -406,6 +414,7 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'face-pain',
+    short: { en: 'Face pain/temp (V)', uz: "Yuz og'riq/harorat (V)" },
     name: { en: 'Facial pain & temperature loss (spinal V)', uz: "Yuzda og'riq va harorat sezgisi yo'qolishi (spinal V)" },
     detail: {
       en: 'Same side of the face; with the ALS cut too, the body loss is on the other side — crossed (alternating) sensory loss.',
@@ -417,6 +426,7 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'cn5',
+    short: { en: 'V touch / jaw', uz: "V teginish / jag'" },
     name: { en: 'Trigeminal touch / jaw weakness (V)', uz: 'Yuz teginish sezgisi / chaynov zaifligi (V)' },
     detail: {
       en: 'Facial touch lost (principal nucleus), jaw deviates toward the lesion on opening (motor nucleus).',
@@ -426,12 +436,14 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'vestib',
+    short: { en: 'Vertigo, nystagmus', uz: 'Bosh aylanishi, nistagm' },
     name: { en: 'Vertigo, nystagmus (vestibular nuclei)', uz: 'Bosh aylanishi, nistagm (vestibulyar yadrolar)' },
     detail: { en: 'Vertigo, vomiting, nystagmus, falling toward the lesion.', uz: "Bosh aylanishi, qusish, nistagm, o'choq tomonga yiqilish." },
     items: ipsi('vn'),
   },
   {
     id: 'hearing',
+    short: { en: 'Hearing loss', uz: 'Eshitish pasayishi' },
     name: { en: 'Hearing loss (VIII / cochlear nuclei)', uz: 'Eshitish pasayishi (VIII / koxlear yadrolar)' },
     detail: {
       en: 'Only at the root or cochlear nuclei: above them hearing is carried on both sides, so a central lesion does not deafen one ear.',
@@ -441,6 +453,7 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'bulbar',
+    short: { en: 'Dysphagia, dysphonia', uz: 'Disfagiya, disfoniya' },
     name: { en: 'Dysphagia, dysphonia (nucleus ambiguus)', uz: "Disfagiya, disfoniya (ikki ma'noli yadro)" },
     detail: {
       en: 'Hoarse voice, difficulty swallowing; the palate and uvula pull away from the lesion, absent gag on that side.',
@@ -450,6 +463,7 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'cn12',
+    short: { en: 'Tongue (XII)', uz: 'Til (XII)' },
     name: { en: 'Tongue weakness (XII)', uz: 'Til zaifligi (XII)' },
     detail: {
       en: 'The protruded tongue deviates toward the lesion; atrophy and fasciculations later.',
@@ -459,6 +473,7 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'ataxia',
+    short: { en: 'Ataxia', uz: 'Ataksiya' },
     name: { en: 'Limb ataxia (cerebellar connections)', uz: "Oyoq-qo'l ataksiyasi (miyacha aloqalari)" },
     detail: {
       en: 'Below the SCP decussation (ICP, MCP, SCP) on the same side; at the red nucleus, after the crossing, on the opposite side (Claude).',
@@ -468,6 +483,7 @@ export const CRANIAL_SIGNS: CranialSign[] = [
   },
   {
     id: 'horner',
+    short: { en: 'Horner', uz: 'Horner' },
     name: { en: 'Horner syndrome (descending sympathetics)', uz: 'Horner sindromi (tushuvchi simpatik tolalar)' },
     detail: {
       en: 'Ptosis, miosis, facial anhidrosis on the same side: the hypothalamospinal fibres run in the lateral tegmentum to the cord (T1).',

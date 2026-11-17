@@ -109,6 +109,26 @@ function itemsFor(p: Pathway, body: BodySide): StageItem[] {
 
 const pathFor = (p: Pathway, body: BodySide): Mni[] => (body === 'R' ? p.path : p.path.map(mirror))
 
+/**
+ * Cranial-nerve / level signs of a lesion. They are computed from the plate
+ * geometry in the UI layer (ui/lesionSigns), which registers itself here at
+ * load — before any lesson is built, since lessons are built on demand.
+ */
+export interface LessonSign {
+  name: L10n
+  short: L10n
+  detail: L10n
+  side: BodySide | 'B'
+  /** 3D concepts that carry the sign, where the atlas has them (cerebellar peduncles, red nucleus). */
+  concepts: string[]
+}
+let signProvider: ((l: Lesion) => LessonSign[]) | null = null
+export const setLesionSignProvider = (f: (l: Lesion) => LessonSign[]) => {
+  signProvider = f
+}
+
+export const SIGN_COLOR = '#ff9f0a'
+
 export function lesionLesson(lesion: Lesion): Lesson {
   const level = LEVEL_BY_ID.get(lesion.level)!
   const zone = level.zones.find((z) => z.id === lesion.zone) ?? level.zones[0]
@@ -145,14 +165,40 @@ export function lesionLesson(lesion: Lesion): Lesson {
   const flows = cut.flatMap(({ p, sides }) => sides.map((s) => ({ path: pathFor(p, s), color: p.color, cut: sphere.at })))
   const show = cut.flatMap(({ p, sides }) => sides.flatMap((s) => itemsFor(p, s)))
 
+  const signs = signProvider?.(lesion) ?? []
+  // Crossed signs (cranial nerve on the lesion's side, long tract on the other) are the hallmark of a brainstem lesion.
+  const crossedMemo: L10n | undefined =
+    signs.some((h) => h.side === lesion.side) && cut.some(({ sides }) => sides.length === 1 && sides[0] !== lesion.side)
+      ? {
+          en: 'Crossed signs — cranial nerve on the side of the lesion, body on the other — mean the brainstem.',
+          uz: "Kesishgan belgilar — kalla nervi o'choq tomonida, tana qarama-qarshi tomonda — miya ustunini bildiradi.",
+        }
+      : undefined
+  const signSide = (s: BodySide | 'B', lang: 'en' | 'uz') =>
+    s === 'B'
+      ? lang === 'en'
+        ? 'both sides'
+        : 'ikki tomonda'
+      : `${lang === 'en' ? TX[s].en : uz(TX[s])}${s === lesion.side ? (lang === 'en' ? ', ipsilateral' : ", o'sha tomonda") : lang === 'en' ? ', contralateral' : ', qarama-qarshi'}`
+  const signList = (lang: 'en' | 'uz') => join(signs.map((h) => `${lang === 'en' ? h.name.en : uz(h.name)} (${signSide(h.side, lang)})`))
+  // Sign labels fan out around the lesion, on its outer side, so each one's leader ends at the lesion.
+  const out = lesion.side === 'L' ? -1 : 1
+  const signLabels = signs.map((h, i) => ({
+    text: h.short,
+    at: [sphere.at[0] + out * sphere.r * 0.6, sphere.at[1], sphere.at[2] + (i - (signs.length - 1) / 2) * 1.2] as Mni,
+    color: SIGN_COLOR,
+  }))
+  const hemi = lesion.side === 'L' ? ('left' as const) : ('right' as const)
+  const signShow: StageItem[] = [...new Set(signs.flatMap((h) => h.concepts))].map((concept) => ({ concept, side: hemi, color: SIGN_COLOR }))
+
   const overview: LessonStep = {
     title: { en: `${TX.title.en}: ${where.en}`, uz: `${TX.title.uz}: ${where.uz}` },
     text: {
       en: cut.length
-        ? `${TX.cut.en}: ${join(cut.map(({ p, sides }) => `${p.short.en} → ${bodyText(sides, 'en')}`))}. ${spared.length ? `${TX.spared.en}: ${join(spared.map((p) => p.short.en))}.` : ''} Each tract streams from its origin up to the lesion; the dark stretch beyond it has lost its input and will undergo Wallerian degeneration.`
+        ? `${TX.cut.en}: ${join(cut.map(({ p, sides }) => `${p.short.en} → ${bodyText(sides, 'en')}`))}. ${spared.length ? `${TX.spared.en}: ${join(spared.map((p) => p.short.en))}.` : ''} ${signs.length ? `Level signs: ${signList('en')}.` : ''} Each tract streams from its origin up to the lesion; the dark stretch beyond it has lost its input and will undergo Wallerian degeneration.`
         : `${TX.cut.en}: ${TX.none.en}.`,
       uz: cut.length
-        ? `${TX.cut.uz}: ${join(cut.map(({ p, sides }) => `${uz(p.short)} → ${bodyText(sides, 'uz')}`))}. ${spared.length ? `${TX.spared.uz}: ${join(spared.map((p) => uz(p.short)))}.` : ''} Har bir yo'l boshidan o'choqqacha oqadi; undan keyingi qorong'i qism kirishini yo'qotgan va Waller degeneratsiyasiga uchraydi.`
+        ? `${TX.cut.uz}: ${join(cut.map(({ p, sides }) => `${uz(p.short)} → ${bodyText(sides, 'uz')}`))}. ${spared.length ? `${TX.spared.uz}: ${join(spared.map((p) => uz(p.short)))}.` : ''} ${signs.length ? `Daraja belgilari: ${signList('uz')}.` : ''} Har bir yo'l boshidan o'choqqacha oqadi; undan keyingi qorong'i qism kirishini yo'qotgan va Waller degeneratsiyasiga uchraydi.`
         : `${TX.cut.uz}: ${TX.none.uz}.`,
     },
     deep: {
@@ -187,6 +233,28 @@ export function lesionLesson(lesion: Lesion): Lesson {
     }
   })
 
+  // What sets the level: the cranial-nerve nuclei and fascicles in the territory (most have no 3D mesh — the labels stand in).
+  const signStep: LessonStep[] = signs.length
+    ? [
+        {
+          title: { en: 'Signs that set the level', uz: 'Darajani aniqlaydigan belgilar' },
+          text: {
+            en: `${signs.map((h) => `• ${h.name.en} — ${signSide(h.side, 'en')}. ${h.detail.en}`).join('\n')}\n\nLong-tract signs only say "above or below a crossing"; these say exactly where.`,
+            uz: `${signs.map((h) => `• ${uz(h.name)} — ${signSide(h.side, 'uz')}. ${uz(h.detail)}`).join('\n')}\n\nUzun yo'l belgilari faqat "kesishmadan yuqori yoki past" deydi; bular aniq joyni aytadi.`,
+          },
+          memo: crossedMemo,
+          show: signShow.length ? [...signShow, ...show] : show,
+          context: ghost(lesion),
+          labels: [lesionLabel, ...signLabels],
+          view,
+          flows,
+          lesion: sphere,
+          layers: LAYERS,
+          section: level.plate,
+        },
+      ]
+    : []
+
   const syndrome: LessonStep[] = zone.syndrome
     ? [
         {
@@ -208,7 +276,7 @@ export function lesionLesson(lesion: Lesion): Lesson {
     id: lesionLessonId(lesion),
     title: { en: `${TX.title.en} · ${where.en}`, uz: `${TX.title.uz} · ${where.uz}` },
     blurb: where,
-    steps: [overview, ...steps, ...syndrome],
+    steps: [overview, ...signStep, ...steps, ...syndrome],
     sources: [...(zone.syndrome?.source ? [zone.syndrome.source] : []), ...cut.flatMap(({ p }) => p.sources.slice(0, 1)), ...WALLER],
   }
 }
