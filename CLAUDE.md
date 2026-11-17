@@ -7,7 +7,7 @@
 
 ## Loyiha
 
-Ochiq, bepul, ta'limiy 3D neyroanatomiya atlasi (1672 qism, 9 qatlam: gross
+Ochiq, bepul, ta'limiy 3D neyroanatomiya atlasi (1740 qism, shu jumladan 68 ko'zgulangan tomir; 9 qatlam: gross
 BodyParts3D, Julich, Brodmann, Desikan, Destrieux, Glasser, JHU, bstem Allen/AAN,
 suit). Falcon Atlas (`../falcon-atlas`) davomi: Three.js `BrainScene` + zustand
 (`useAtlas`, dev'da `__atlas`) + shadcn, Liquid Glass dizayn, qora va yorug' rejim (`theme`, `na:theme`).
@@ -54,8 +54,10 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 - `src/scene/BrainScene.ts` — sahna, kesim tekisliklari, markerlar, dars rejimi; `loader.ts` (MNI→sahna `(−x,z,y)`),
   `materials.ts`, `slice.ts`, `atlasSlice.ts`.
 - `src/data/` — `parts.json` (`pipeline/build_catalogue.py`), `index.ts`, `levels.ts`, `topics.ts` (O'rganish mavzulari),
-  `sections/` (17+5 kesim, `structures-*.ts` lug'at), `lessons/` (3 dars), `content/*.json` (487 yozuv).
-- `src/ui/` — `Header` (`TabBar`, `ViewGroup`, `Identity`), `Sidebar`, `BottomBar` (kontekstli tasma), `SectionViewer`,
+  `sections/` (17+5 kesim, `structures-*.ts` lug'at), `lessons/` (3 dars + 3 yo'l darsi `pathways.ts` dan),
+  `pathways.ts`, `lesions.ts`, `content/*.json` (487 yozuv).
+- `src/ui/` — `Header` (`TabBar`, `ViewGroup`, `Identity`), `Sidebar`, `BottomBar` (kontekstli tasma), `SectionViewer`
+  (+ `ZoomPane`, `LesionPanel`, `pathTrace.ts`),
   `AtlasSliceView`, `LessonPanel`, `ViewControls`, Inspector; `liquidGlass.ts`, `useLens.ts`.
 - Rejimlar: `explode | peel | learn`. Yangi dars/kesim → tegishli mavzuga (`topics.ts`) yozilsin; yangi tab ochilmaydi.
 - Pipeline vositalari: `pipeline/tools/slice_svg.py`, `landmarks.py` (`pipeline/.venv/bin/python`, repo ildizidan).
@@ -76,9 +78,16 @@ real kesim 21/22 (`REAL_STAND_IN` T2→B5, G4→G2; U1 manbasiz), `pipeline/mirr
 **Navbatdagi vazifa — foydalanuvchi tanlaydi** (avval qisqa reja ko'rsating): PLAN 5.3-3 mavzu viktorinasi + Anki;
 Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; o'choqni plastinkada/3D da chizish; 5.4 UI qoldiqlari.
 
+Ish uslubi bo'yicha eslatmalar (2026-11-17):
+- TS mantiqni tekshirish: `npx -y tsx` ruxsat bermadi → vaqtinchalik `scripts/_x_tmp.mjs` (puppeteer) da dev serverdan
+  `await import('/src/...ts')` qilib, keyin faylni o'chiring.
+- `pipeline/.venv` ga `trimesh` o'rnatildi (mirror_vessels.py uchun).
+- `build_catalogue.py` qayta ishga tushirilsa parts.json aynan qayta hosil bo'ladi (cmp bilan tekshirilgan) — xavfsiz.
+- Kesim ko'ruvchisi tablari: Tuzilmalar | Daraja haqida | Shikastlanish; tepada "Yo'l" tasmasi.
+
 5.1 dan qolgan ixtiyoriy ishlar: T1 talamus ichida yadrolar tutashishi (zamin 52%), G4 (zamin 75%), ustma-ustlik U1 1.8%, K3 1.5%.
 
-## Joriy holat (2026-11-16)
+## Joriy holat (2026-11-17)
 
 Tayyor: 0–4c bosqichlar, BG-1, 3 dars + 3 yo'l darsi va shikastlanish simulyatori (5.3 1+2), 5.5 (zoom, real kesim 21/22, tomirlar simmetriyasi), O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
 
