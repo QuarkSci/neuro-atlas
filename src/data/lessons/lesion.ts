@@ -145,11 +145,13 @@ export function lesionLesson(lesion: Lesion): Lesson {
   const firstHit = cut.length ? (hitStations(cut[0].p, lesion).find((h) => h.own) ?? hitStations(cut[0].p, lesion)[0]) : undefined
   const view: Mni = firstHit ? (lesion.side === firstHit.st.side ? firstHit.st.view : mirror(firstHit.st.view)) : [lesion.side === 'L' ? -1 : 1, 0.3, 0.2]
 
-  const bodyText = (sides: BodySide[], lang: 'en' | 'uz') => {
+  const bodyText = (sides: BodySide[], lang: 'en' | 'uz', face?: boolean) => {
     if (sides.length === 2) return lang === 'en' ? 'both sides of the body' : 'tananing ikki tomonida'
     const s = sides[0]
     const ipsi = s === lesion.side
-    return lang === 'en' ? `${TX[s].en} body (${ipsi ? 'ipsilateral' : 'contralateral'})` : `${uz(TX[s])} tanada (${ipsi ? "o'sha tomonda" : 'qarama-qarshi'})`
+    return lang === 'en'
+      ? `${TX[s].en} ${face ? 'face' : 'body'} (${ipsi ? 'ipsilateral' : 'contralateral'})`
+      : `${uz(TX[s])} ${face ? 'yuzda' : 'tanada'} (${ipsi ? "o'sha tomonda" : 'qarama-qarshi'})`
   }
   const why = (sides: BodySide[], p: Pathway, lang: 'en' | 'uz') => {
     if (sides.length === 2)
@@ -195,10 +197,10 @@ export function lesionLesson(lesion: Lesion): Lesson {
     title: { en: `${TX.title.en}: ${where.en}`, uz: `${TX.title.uz}: ${where.uz}` },
     text: {
       en: cut.length
-        ? `${TX.cut.en}: ${join(cut.map(({ p, sides }) => `${p.short.en} → ${bodyText(sides, 'en')}`))}. ${spared.length ? `${TX.spared.en}: ${join(spared.map((p) => p.short.en))}.` : ''} ${signs.length ? `Level signs: ${signList('en')}.` : ''} Each tract streams from its origin up to the lesion; the dark stretch beyond it has lost its input and will undergo Wallerian degeneration.`
+        ? `${TX.cut.en}: ${join(cut.map(({ p, sides }) => `${p.short.en} → ${bodyText(sides, 'en', p.body === 'face')}`))}. ${spared.length ? `${TX.spared.en}: ${join(spared.map((p) => p.short.en))}.` : ''} ${signs.length ? `Level signs: ${signList('en')}.` : ''} Each tract streams from its origin up to the lesion; the dark stretch beyond it has lost its input and will undergo Wallerian degeneration.`
         : `${TX.cut.en}: ${TX.none.en}.`,
       uz: cut.length
-        ? `${TX.cut.uz}: ${join(cut.map(({ p, sides }) => `${uz(p.short)} → ${bodyText(sides, 'uz')}`))}. ${spared.length ? `${TX.spared.uz}: ${join(spared.map((p) => uz(p.short)))}.` : ''} ${signs.length ? `Daraja belgilari: ${signList('uz')}.` : ''} Har bir yo'l boshidan o'choqqacha oqadi; undan keyingi qorong'i qism kirishini yo'qotgan va Waller degeneratsiyasiga uchraydi.`
+        ? `${TX.cut.uz}: ${join(cut.map(({ p, sides }) => `${uz(p.short)} → ${bodyText(sides, 'uz', p.body === 'face')}`))}. ${spared.length ? `${TX.spared.uz}: ${join(spared.map((p) => uz(p.short)))}.` : ''} ${signs.length ? `Daraja belgilari: ${signList('uz')}.` : ''} Har bir yo'l boshidan o'choqqacha oqadi; undan keyingi qorong'i qism kirishini yo'qotgan va Waller degeneratsiyasiga uchraydi.`
         : `${TX.cut.uz}: ${TX.none.uz}.`,
     },
     deep: {
@@ -219,7 +221,7 @@ export function lesionLesson(lesion: Lesion): Lesson {
     const hits = hitStations(p, lesion)
     const st = (hits.find((h) => h.own) ?? hits[0]).st
     return {
-      title: { en: `${p.short.en}: ${bodyText(sides, 'en')}`, uz: `${uz(p.short)}: ${bodyText(sides, 'uz')}` },
+      title: { en: `${p.short.en}: ${bodyText(sides, 'en', p.body === 'face')}`, uz: `${uz(p.short)}: ${bodyText(sides, 'uz', p.body === 'face')}` },
       text: { en: `${p.modality.en} — lost. ${why(sides, p, 'en')}`, uz: `${uz(p.modality)} — yo'qoladi. ${why(sides, p, 'uz')}` },
       memo: st.memo,
       show: sides.flatMap((s) => itemsFor(p, s)),

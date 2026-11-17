@@ -23,6 +23,8 @@ const TX = {
   none: { en: 'None', uz: "Yo'q" },
   bodyL: { en: 'left body', uz: 'chap tana' },
   bodyR: { en: 'right body', uz: "o'ng tana" },
+  faceL: { en: 'left face', uz: 'chap yuz' },
+  faceR: { en: 'right face', uz: "o'ng yuz" },
   both: { en: 'both sides', uz: 'ikki tomonda' },
   ipsi: { en: 'ipsilateral', uz: "o'sha tomonda" },
   contra: { en: 'contralateral', uz: 'qarama-qarshi' },
@@ -113,7 +115,8 @@ export function LesionPanel({
   const crossed = signs.some((h) => h.side === lesion.side && h.via.length) && PATHWAYS.some((p) => sig[p.id] !== 'none' && sig[p.id] !== lesion.side)
   const sideText = (s: BodySide | 'B') => (s === 'B' ? l(TX.both) : `${l(s === 'L' ? TX.sideL : TX.sideR)} · ${l(s === lesion.side ? TX.ipsi : TX.contra)}`)
 
-  const bodyText = (s: BodySide | 'B') => (s === 'B' ? l(TX.both) : `${l(s === 'L' ? TX.bodyL : TX.bodyR)} · ${l(s === lesion.side ? TX.ipsi : TX.contra)}`)
+  const half = (s: BodySide, face?: boolean) => l(face ? (s === 'L' ? TX.faceL : TX.faceR) : s === 'L' ? TX.bodyL : TX.bodyR)
+  const bodyText = (s: BodySide | 'B', face?: boolean) => (s === 'B' ? l(TX.both) : `${half(s, face)} · ${l(s === lesion.side ? TX.ipsi : TX.contra)}`)
   const plate = level.plate ? SECTION_BY_ID.get(level.plate) : undefined
 
   return (
@@ -170,7 +173,7 @@ export function LesionPanel({
                     <b>{l(p.short)}</b>
                     <small>{l(p.modality)}</small>
                   </span>
-                  <span className="lz-res">{s === 'none' ? l(TX.spared) : `${l(TX.lost)}: ${bodyText(s)}`}</span>
+                  <span className="lz-res">{s === 'none' ? l(TX.spared) : `${l(TX.lost)}: ${bodyText(s, p.body === 'face')}`}</span>
                 </button>
               )
             })}
@@ -249,7 +252,7 @@ export function LesionPanel({
               <div className="lz-seg">
                 {(['none', 'L', 'R'] as const).map((s) => (
                   <button key={s} className={(findings[p.id] ?? 'none') === s ? 'on' : ''} onClick={() => setFindings({ ...findings, [p.id]: s })}>
-                    {l(s === 'none' ? TX.none : s === 'L' ? TX.bodyL : TX.bodyR)}
+                    {s === 'none' ? l(TX.none) : half(s, p.body === 'face')}
                   </button>
                 ))}
               </div>

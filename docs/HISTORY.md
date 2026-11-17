@@ -843,7 +843,22 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
 - Tekshirilgan: Weber (CST o'ng + III chap → faqat O'rta miya chap ventral), Dejerine (XII chap + CST/DCML o'ng → faqat
   medial uzunchoq), Benedikt/Claude (qizil yadro → qarama-qarshi ataksiya), Raymond (ko'prik ventral: VI + CST).
 - `medulla-caudal` dorsal hududi medialda sayozlashtirildi (v 0.32) — XII yadrosi orqa ustun o'chog'iga tushmasin.
-- QOLDI: trigeminal yo'l; eshitish belgisi uchun U4 darajasi.
+- QOLDI: eshitish belgisi uchun U4 darajasi.
+
+### 5.3-3c — Trigeminotalamik yo'l (2026-11-17)
+
+- `src/data/pathways.ts` `V5` (`path-v`, rang `#2ecfb4`, `body: 'face'`): o'ng yuz → chap yarim shar. Bekatlar: `v-root`
+  (tugun + ildiz, ko'prik lateral, `n5-root`, K2) → `v-tract` (spinal V trakt, PASTGA, rostral uzunchoq lateral +
+  ko'prik lateral, `sp5t`, U3) → `v-caudalis` (2-neyron, kesishma, kaudal uzunchoq dorsal, `sp5t`/`sp5n`, U2) →
+  `v-ascending` (ventral trigeminotalamik, ko'prik medial, `ml` itemi bilan; rostral uzunchoqda faqat `all` —
+  Dejerine ham, Wallenberg ham qarama-qarshi yuzga tegmaydi; o'rta miya dorsal) → `v-vpm` (VPM → S1 yuz, `th-vpm`).
+  Manba: StatPearls NBK482283 (eutils bilan tekshirilgan). 3D: uchlik nerv tanasi (gross), j-vpm, j-area-3b.
+- Simulyatorda yuz og'rig'i endi UZUN YO'L (kesishma qoidasi bilan): `CRANIAL_SIGNS`dan `face-pain` olib tashlandi.
+  `Pathway.body = 'face'` → panel va darsda "chap/o'ng yuz", teskari rejimda ham. Natija: Wallenberg/AICA — yuz o'sha
+  tomonda, tana qarama-qarshi; o'rta miya dorsal, talamus, po'stloq — yuz ham, tana ham qarama-qarshi; ko'prik va
+  rostral uzunchoq butun yarmi — yuz ikki tomonda (kesishmagan trakt + kesishgan trakt). Kesishgan sezgi + disfagiya
+  → faqat Wallenberg.
+- `topics.ts` pathways mavzusiga `path-v` darsi (7 qadam, viktorina — VPM). audit-lesions 0.
 - ✅ 3D darsda (2026-11-17): `lessons/lesion.ts` `setLesionSignProvider()` — `ui/lesionSigns.ts` yuklanganda o'zini
   ro'yxatdan o'tkazadi (darslar so'ralganda quriladi, shuning uchun tartib xavfsiz; ma'lumot qatlami UI'ni import
   qilmaydi). Umumiy qadam matniga "Daraja belgilari: ..." qo'shildi; yangi 2-qadam "Darajani aniqlaydigan belgilar":

@@ -413,18 +413,6 @@ export const CRANIAL_SIGNS: CranialSign[] = [
     ],
   },
   {
-    id: 'face-pain',
-    short: { en: 'Face pain/temp (V)', uz: "Yuz og'riq/harorat (V)" },
-    name: { en: 'Facial pain & temperature loss (spinal V)', uz: "Yuzda og'riq va harorat sezgisi yo'qolishi (spinal V)" },
-    detail: {
-      en: 'Same side of the face; with the ALS cut too, the body loss is on the other side — crossed (alternating) sensory loss.',
-      uz: "Yuzning o'sha tomonida; ALS ham kesilsa, tanada qarama-qarshi tomonda — kesishgan (almashinuvchi) sezgi buzilishi.",
-    },
-    items: ipsi('sp5t', 'sp5n'),
-    // The tract reaches C2–C3, but a cervical hemisection is taught (and examined) without the face.
-    levels: ['pons', 'medulla-rostral', 'medulla-caudal'],
-  },
-  {
     id: 'cn5',
     short: { en: 'V touch / jaw', uz: "V teginish / jag'" },
     name: { en: 'Trigeminal touch / jaw weakness (V)', uz: 'Yuz teginish sezgisi / chaynov zaifligi (V)' },

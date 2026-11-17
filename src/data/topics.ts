@@ -65,7 +65,7 @@ export const TOPICS: Topic[] = [
       en: 'Corticospinal, dorsal column and spinothalamic: where they run, where they cross, what a lesion takes.',
       uz: "Kortikospinal, orqa ustun va spinotalamik: qayerdan o'tadi, qayerda kesishadi, o'choq nimani oladi.",
     },
-    lessons: ['path-cst', 'path-dcml', 'path-als'],
+    lessons: ['path-cst', 'path-dcml', 'path-als', 'path-v'],
     sections: [
       'medulla-pyramidal-decussation',
       'medulla-sensory-decussation',

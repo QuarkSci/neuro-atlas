@@ -73,6 +73,8 @@ export interface Pathway {
   color: string
   /** What the pathway carries — what is lost when it is cut. */
   modality: L10n
+  /** What the deficit is felt in: the body (default) or the face (trigeminal). */
+  body?: 'face'
   /** Ascending (receptor → cortex) or descending (cortex → cord). */
   dir: 'up' | 'down'
   /** Where the fibres cross the midline, in one line. */
@@ -692,5 +694,164 @@ const ALS: Pathway = {
   sources: [SRC.stt, SRC.thal, { title: 'StatPearls — Dejerine-Roussy Syndrome', url: 'https://www.ncbi.nlm.nih.gov/books/NBK519047/' }],
 }
 
-export const PATHWAYS: Pathway[] = [CST, DCML, ALS]
+// ── Trigeminothalamic (face pain and temperature) ──────────────────────
+
+const V5: Pathway = {
+  id: 'path-v',
+  short: { en: 'Trigeminothalamic', uz: 'Trigeminotalamik' },
+  title: { en: 'Trigeminothalamic pathway — pain and temperature of the face', uz: "Trigeminotalamik yo'l — yuzning og'riq va harorat sezgisi" },
+  blurb: {
+    en: 'The face’s spinothalamic tract: in through the pons, DOWN the spinal trigeminal tract to the caudal medulla, across, then up beside the lemniscus to VPM.',
+    uz: "Yuzning spinotalamik yo'li: ko'prik orqali kiradi, spinal trigeminal trakt bo'ylab uzunchoq miyaning pastki qismigacha PASTGA tushadi, kesishadi, so'ng lemnisk yonida VPM ga ko'tariladi.",
+  },
+  color: '#2ecfb4',
+  modality: { en: 'Pain and temperature of the face', uz: "Yuzning og'riq va harorat sezgisi" },
+  body: 'face',
+  dir: 'up',
+  crossing: {
+    en: 'Crosses in the caudal medulla, after descending to the spinal trigeminal nucleus (pars caudalis).',
+    uz: 'Spinal trigeminal yadroga (kaudal qism) tushgandan keyin uzunchoq miyaning pastki qismida kesishadi.',
+  },
+  path: [
+    [27, -16, -36],
+    [23.5, -27.4, -37.3],
+    [15, -31, -33],
+    [11.5, -37, -42],
+    [10, -40.5, -52],
+    [8.5, -43, -60],
+    [7, -45, -67],
+    [3, -44, -66],
+    [-2, -42, -63],
+    [-5.5, -39.5, -56],
+    [-7, -37.5, -44],
+    [-7.5, -35.5, -29],
+    [-10, -29, -20],
+    [-11.5, -23.5, -12.5],
+    [-13, -22, -3],
+    [-22, -23, 14],
+    [-40, -20, 28],
+    [-56, -17, 33],
+  ],
+  stations: [
+    {
+      id: 'v-root',
+      label: { en: 'V root (ganglion)', uz: 'V ildizi (tugun)' },
+      name: { en: 'Trigeminal ganglion and sensory root', uz: 'Uchlik nerv tuguni va sezgi ildizi' },
+      text: {
+        en: 'The first neuron sits in the trigeminal (Gasserian) ganglion in Meckel’s cave. Its central process enters the lateral pons with the sensory root. Touch fibres end in the principal nucleus at this level; pain and temperature fibres turn DOWN.',
+        uz: "Birinchi neyron Mekkel bo'shlig'idagi uchlik nerv (Gasser) tugunida yotadi. Uning markaziy o'simtasi sezgi ildizi bilan ko'prikning lateral qismiga kiradi. Teginish tolalari shu darajada asosiy yadroda tugaydi; og'riq va harorat tolalari PASTGA buriladi.",
+      },
+      deep: {
+        en: 'Trigeminal neuralgia: lancinating V2/V3 pain from compression of the root entry zone, most often by the superior cerebellar artery. Microvascular decompression (Jannetta) treats the cause; percutaneous rhizotomy and Gamma Knife target the root or ganglion.',
+        uz: "Uchlik nerv nevralgiyasi: ildizning kirish sohasi, ko'pincha yuqori miyacha arteriyasi bosishidan V2/V3 da sanchiqli og'riq. Mikrovaskulyar dekompressiya (Jannetta) sababni yo'qotadi; teri orqali rizotomiya va Gamma Knife ildiz yoki tugunga qaratiladi.",
+      },
+      neuron: 1,
+      level: 'pons',
+      side: 'R',
+      zones: ['all', 'lateral'],
+      items: ['n5-root'],
+      plate: 'pons-trigeminal',
+      show: [{ concept: 'trunk-of-right-trigeminal-nerve' }],
+      at: [23.5, -27.4, -37.3],
+      view: [0.7, 0.7, 0.1],
+    },
+    {
+      id: 'v-tract',
+      label: { en: 'Spinal V tract', uz: 'Spinal V trakt' },
+      name: { en: 'Spinal trigeminal tract (descending)', uz: 'Spinal trigeminal trakt (tushuvchi)' },
+      text: {
+        en: 'Still the first neuron, still uncrossed: the fibres descend in the spinal trigeminal tract on the lateral surface of the medulla, right beside the crossed spinothalamic fibres from the body.',
+        uz: 'Hali birinchi neyron, hali kesishmagan: tolalar uzunchoq miyaning lateral yuzasidagi spinal trigeminal traktda — tanadan kelgan kesishgan spinotalamik tolalar yonida pastga tushadi.',
+      },
+      memo: {
+        en: 'Face uncrossed, body crossed — side by side in the lateral medulla: one PICA stroke, two sides of pain loss.',
+        uz: "Yuz kesishmagan, tana kesishgan — lateral uzunchoq miyada yonma-yon: bitta PICA insulti, og'riq ikki xil tomonda yo'qoladi.",
+      },
+      neuron: 1,
+      level: 'medulla-rostral',
+      side: 'R',
+      zones: ['all', 'lateral'],
+      also: [{ level: 'pons', zones: ['all', 'lateral'] }],
+      items: ['sp5t'],
+      plate: 'medulla-olive',
+      show: [{ concept: 'bs-inferior-olive', side: R }],
+      at: [10, -40.5, -54],
+      view: [0.8, 0.5, 0.1],
+    },
+    {
+      id: 'v-caudalis',
+      label: { en: 'Pars caudalis → cross', uz: 'Kaudal qism → kesishma' },
+      name: { en: 'Spinal trigeminal nucleus, pars caudalis', uz: 'Spinal trigeminal yadro, kaudal qism' },
+      text: {
+        en: 'The second neuron lies in pars caudalis — the medullary dorsal horn, continuous with the cord’s laminae I–II down to C2. Its axon crosses the midline and ascends as the ventral trigeminothalamic tract.',
+        uz: "Ikkinchi neyron kaudal qismda — C2 gacha orqa miyaning I–II plastinkalari bilan davom etuvchi 'medullyar orqa shox'da yotadi. Uning aksoni o'rta chiziqni kesib o'tadi va ventral trigeminotalamik trakt bo'lib ko'tariladi.",
+      },
+      deep: {
+        en: 'The face is mapped "onion-skin" along the nucleus: perioral area rostrally, the outer face caudally (Dejerine). A low lesion (syrinx, C1–C2) spares the mouth and nose. Trigeminal tractotomy–nucleotomy at the obex once treated intractable facial pain.',
+        uz: "Yuz yadro bo'ylab 'piyoz po'sti' shaklida joylashgan: og'iz atrofi rostralda, yuzning tashqi qismi kaudalda (Dejerine). Pastdagi o'choq (siringobulbiya, C1–C2) og'iz va burunni saqlab qoladi. Obeks darajasidagi trigeminal traktotomiya–nukleotomiya bir paytlar davolab bo'lmaydigan yuz og'rig'ida qo'llangan.",
+      },
+      neuron: 2,
+      level: 'medulla-caudal',
+      side: 'R',
+      cross: true,
+      zones: ['all', 'dorsal'],
+      items: ['sp5t', 'sp5n'],
+      plate: 'medulla-sensory-decussation',
+      show: [{ concept: 'bs-pyramid-of-medulla-oblongata', side: R }],
+      at: [7, -45, -67],
+      view: [-0.3, -0.9, 0.1],
+    },
+    {
+      id: 'v-ascending',
+      label: { en: 'Ventral trigeminothalamic', uz: 'Ventral trigeminotalamik' },
+      name: { en: 'Ventral trigeminothalamic tract', uz: 'Ventral trigeminotalamik trakt' },
+      text: {
+        en: 'Crossed, the tract climbs through the brainstem medially, alongside the medial lemniscus, to the thalamus. In the rostral medulla it lies between the lemniscus and the lateral zone, so neither a medial nor a lateral medullary infarct usually reaches it.',
+        uz: "Kesishgan trakt miya ustunida medialda, medial lemnisk yonida talamusga ko'tariladi. Uzunchoq miyaning yuqori qismida u lemnisk va lateral hudud orasida yotadi, shuning uchun odatda medial ham, lateral ham medullyar infarkt unga yetmaydi.",
+      },
+      neuron: 2,
+      level: 'pons',
+      side: 'L',
+      zones: ['all', 'medial'],
+      also: [
+        { level: 'medulla-rostral', zones: ['all'] },
+        { level: 'midbrain', zones: ['all', 'dorsal'] },
+      ],
+      items: ['ml'],
+      plate: 'pons-trigeminal',
+      show: [{ concept: 'bs-pontine-tegmentum', side: L }],
+      at: [-7.5, -35.5, -29],
+      view: FROM_LEFT,
+    },
+    {
+      id: 'v-vpm',
+      label: { en: 'VPM → S1 face', uz: 'VPM → S1 yuz' },
+      name: { en: 'VPM → face area of the postcentral gyrus', uz: 'VPM → orqa markaziy pushtaning yuz sohasi' },
+      text: {
+        en: 'The third neuron in the ventral posteromedial nucleus (VPM) projects through the posterior limb of the internal capsule to the lateral, lower postcentral gyrus — the face of the homunculus.',
+        uz: "Ventral orqa medial yadrodagi (VPM) uchinchi neyron ichki kapsulaning orqa oyog'i orqali orqa markaziy pushtaning pastki-lateral qismiga — gomunkulusning yuziga boradi.",
+      },
+      memo: { en: 'VPM = Mouth (face); VPL = Limbs (body).', uz: "VPM — 'Mouth' (yuz); VPL — 'Limbs' (tana)." },
+      neuron: 3,
+      level: 'thalamus',
+      side: 'L',
+      zones: ['all'],
+      also: [
+        { level: 'capsule', zones: ['all'] },
+        { level: 'cortex', zones: ['all', 'sensory'] },
+      ],
+      items: ['th-vpm'],
+      plate: 'thalamus-coronal',
+      show: [
+        { concept: 'j-vpm', side: L },
+        { concept: 'j-area-3b', side: L },
+      ],
+      at: [-13, -22, -3],
+      view: FROM_LEFT,
+    },
+  ],
+  sources: [{ title: 'StatPearls — Neuroanatomy, Cranial Nerve 5 (Trigeminal)', url: 'https://www.ncbi.nlm.nih.gov/books/NBK482283/' }, SRC.thal],
+}
+
+export const PATHWAYS: Pathway[] = [CST, DCML, ALS, V5]
 export const PATHWAY_BY_ID = new Map(PATHWAYS.map((p) => [p.id, p]))

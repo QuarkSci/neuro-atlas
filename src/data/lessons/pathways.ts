@@ -20,6 +20,7 @@ const GHOST: ContextItem[] = [{ ref: '@brainstem' }, { ref: '@diencephalon', sid
 const QUIZ: Record<string, { ask: L10n; answer: string[] }> = {
   'path-cst': { ask: { en: 'Tap the cerebral peduncle the tract runs through.', uz: "Trakt o'tadigan miya oyoqchasini bosing." }, answer: ['wm-cerebral-peduncle'] },
   'path-dcml': { ask: { en: 'Tap the medial lemniscus.', uz: 'Medial lemniskni bosing.' }, answer: ['wm-medial-lemniscus'] },
+  'path-v': { ask: { en: 'Tap the thalamic relay of the face.', uz: 'Yuzning talamusdagi relesini bosing.' }, answer: ['j-vpm'] },
   'path-als': { ask: { en: 'Tap the thalamic relay of the pathway.', uz: "Yo'lning talamusdagi relesini bosing." }, answer: ['j-vpl'] },
 }
 
@@ -38,8 +39,8 @@ function pathwayLesson(p: Pathway): Lesson {
   const overview: LessonStep = {
     title: p.title,
     text: {
-      en: `${p.blurb.en} Carries: ${p.modality.en.toLowerCase()}. ${p.crossing.en} Traced here for the right half of the body (left hemisphere).`,
-      uz: `${p.blurb.uz} Olib boradi: ${(p.modality.uz ?? p.modality.en).toLowerCase()}. ${p.crossing.uz} Bu yerda tananing o'ng yarmi (chap yarim shar) uchun ko'rsatilgan.`,
+      en: `${p.blurb.en} Carries: ${p.modality.en.toLowerCase()}. ${p.crossing.en} Traced here for the right half of the ${p.body === 'face' ? 'face' : 'body'} (left hemisphere).`,
+      uz: `${p.blurb.uz} Olib boradi: ${(p.modality.uz ?? p.modality.en).toLowerCase()}. ${p.crossing.uz} Bu yerda ${p.body === 'face' ? 'yuzning' : 'tananing'} o'ng yarmi (chap yarim shar) uchun ko'rsatilgan.`,
     },
     show: all,
     context: GHOST,
