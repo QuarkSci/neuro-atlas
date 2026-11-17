@@ -34,6 +34,7 @@ import { badgePositions, itemArea, itemShapes, mix, sectionEntries, type Entry }
 import { PATHWAYS, PATHWAY_BY_ID } from '@/data/pathways'
 import { routePlates, traceOn, type TraceItem } from './pathTrace'
 import { LesionPanel } from './LesionPanel'
+import { ZoomPane } from './ZoomPane'
 
 /** Layers whose meshes make the 3D cut face informative for each region. */
 export const CUT_LAYERS: Record<Section['region'], LayerId[]> = {
@@ -79,6 +80,8 @@ export function SectionViewer() {
   const [view, setView] = useState<'scheme' | Stain | 'atlas' | 'real'>('scheme')
   const [contours, setContours] = useState(true)
   const [atlasSel, setAtlasSel] = useState<string | null>(null)
+  // The figure filling the whole card (side panel and level strips hidden).
+  const [full, setFull] = useState(false)
 
   // A new section starts clean.
   useEffect(() => {
@@ -94,6 +97,9 @@ export function SectionViewer() {
   useEffect(() => {
     if (!section) return
     const key = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return
+      if (e.key === 'Escape' && full) return setFull(false)
+      if (e.key === 'f' || e.key === 'F') return setFull((v) => !v)
       if (e.key === 'Escape') openSection(null)
       const i = order.findIndex((s) => s.id === section.id)
       if (e.key === 'ArrowRight' && i < order.length - 1) openSection(order[i + 1].id)
@@ -101,7 +107,7 @@ export function SectionViewer() {
     }
     window.addEventListener('keydown', key)
     return () => window.removeEventListener('keydown', key)
-  }, [section, openSection, order])
+  }, [section, openSection, order, full])
 
   const numbered: Numbered[] = useMemo(() => (section ? sectionEntries(section) : []), [section])
   const cats = useMemo(() => {
@@ -173,7 +179,7 @@ export function SectionViewer() {
 
   return (
     <div className="section-viewer dark" role="dialog" aria-modal="true" aria-label={l(section.title)} onClick={() => openSection(null)}>
-      <div className="sv-card glass" onClick={(e) => e.stopPropagation()}>
+      <div className={`sv-card glass ${full ? 'full' : ''}`} onClick={(e) => e.stopPropagation()}>
         <header className="sv-head">
           <span className="sv-code">{section.code}</span>
           <div className="sv-heading">
@@ -349,40 +355,47 @@ export function SectionViewer() {
                 </>
               )}
             </div>
-            {cutView ? (
-              atlas?.data ? (
-                <AtlasSliceView
-                  section={section}
-                  slice={atlas.data}
-                  real={view === 'real' ? real : undefined}
-                  contours={contours}
-                  marks={view === 'real' && numbers ? marks : undefined}
-                  selected={atlasSel}
-                  highlightConcept={atlasSel ? null : (selInfo?.part ?? null)}
-                  labels={labels}
-                  axes={section.axes.map((a) => l(a)) as [string, string, string, string]}
-                  onPick={setAtlasSel}
-                />
+            <ZoomPane
+              resetKey={`${section.id}|${view}|${labels}`}
+              full={full}
+              onFull={setFull}
+              labels={{ zoomIn: t.svZoomIn, zoomOut: t.svZoomOut, reset: t.svZoomReset, full: t.svFull, exitFull: t.svFullExit }}
+            >
+              {cutView ? (
+                atlas?.data ? (
+                  <AtlasSliceView
+                    section={section}
+                    slice={atlas.data}
+                    real={view === 'real' ? real : undefined}
+                    contours={contours}
+                    marks={view === 'real' && numbers ? marks : undefined}
+                    selected={atlasSel}
+                    highlightConcept={atlasSel ? null : (selInfo?.part ?? null)}
+                    labels={labels}
+                    axes={section.axes.map((a) => l(a)) as [string, string, string, string]}
+                    onPick={setAtlasSel}
+                  />
+                ) : (
+                  <div className="as-status">{atlas ? t.asEmpty : t.asLoading}</div>
+                )
               ) : (
-                <div className="as-status">{atlas ? t.asEmpty : t.asLoading}</div>
-              )
-            ) : (
-              <Figure
-                stain={view === 'scheme' ? undefined : view}
-                section={section}
-                numbered={numbered}
-                active={active}
-                selected={selected}
-                focusCat={focusCat}
-                numbers={numbers}
-                labels={labels && !quiz}
-                trace={tract && trace.length && view === 'scheme' ? { color: tract.color, items: trace } : undefined}
-                nameOf={nameOf}
-                axes={section.axes.map((a) => l(a)) as [string, string, string, string]}
-                onHover={setHover}
-                onPick={pick}
-              />
-            )}
+                <Figure
+                  stain={view === 'scheme' ? undefined : view}
+                  section={section}
+                  numbered={numbered}
+                  active={active}
+                  selected={selected}
+                  focusCat={focusCat}
+                  numbers={numbers}
+                  labels={labels && !quiz}
+                  trace={tract && trace.length && view === 'scheme' ? { color: tract.color, items: trace } : undefined}
+                  nameOf={nameOf}
+                  axes={section.axes.map((a) => l(a)) as [string, string, string, string]}
+                  onHover={setHover}
+                  onPick={pick}
+                />
+              )}
+            </ZoomPane>
             {viewHint && <p className="sv-view-hint">{viewHint}</p>}
             <Locator section={section} onPick={(id) => openSection(id)} title={t.svLocator} />
             <div className="sv-legend">

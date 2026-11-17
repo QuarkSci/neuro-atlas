@@ -1129,3 +1129,23 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .lz-cand:hover { background: color-mix(in oklab, var(--fa-accent) 22%, transparent); }
 .lz-cand small { color: var(--fa-muted); font-size: 10.5px; }
 .lz-syn p { font-size: 12px; line-height: 1.5; }
+
+/* ── Plate zoom / full screen (ZoomPane) ────────────────────────────── */
+.sv-zoom { position: relative; flex: 1; min-height: 0; display: flex; overflow: hidden; border-radius: 14px; touch-action: none; }
+.sv-zoom.zoomed { cursor: grab; }
+.sv-zoom.zoomed:active { cursor: grabbing; }
+.sv-zoom-inner { flex: 1; min-width: 0; min-height: 0; display: flex; flex-direction: column; transform-origin: 0 0; }
+.sv-zoom-inner > .sv-svg, .sv-zoom-inner > .as-wrap { flex: 1; min-height: 0; }
+.sv-zoom-ctl { position: absolute; left: 8px; bottom: 8px; display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: color-mix(in oklab, #000 45%, transparent); backdrop-filter: blur(8px); }
+.sv-zoom-ctl button { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-width: 28px; height: 28px; padding: 0 7px; border-radius: 999px; color: var(--fa-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.sv-zoom-ctl button:hover:not(:disabled) { color: #fff; background: color-mix(in oklab, #fff 10%, transparent); }
+.sv-zoom-ctl button.on { color: #fff; background: var(--fa-accent); }
+.sv-zoom-ctl button:disabled { opacity: 0.35; }
+.sv-card.full .sv-body { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+.sv-card.full .sv-side, .sv-card.full .sv-regions, .sv-card.full .sv-trace-bar, .sv-card.full .sv-legend, .sv-card.full .sv-locator { display: none; }
+/* Badges grow with √zoom only: each shape shrinks about its own centre, leader lines keep their length. */
+.sv-zoom.zoomed :is(.sv-badge circle, .sv-badge text, .as-mark rect, .as-mark text, .as-mark-dot, .as-label) {
+  transform: scale(calc(1 / var(--zs, 1)));
+  transform-box: fill-box;
+  transform-origin: center;
+}
