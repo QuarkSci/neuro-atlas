@@ -886,7 +886,16 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   jadvali (hudud rejimi bilan umumiy `tractTable`/`signTable`), "kesishgan belgilar", klassik hududlar %, tuzilmalar ulush
   % bilan, "Butun hudud bilan solishtirish" (eng ko'p ustma-ust hududga o'tadi) va "3D da ko'rish" (o'sha hudud darsi).
 - audit-lesions 0 (hudud rejimi o'zgarmagan; `uvPolygon` faqat ajratib olindi).
-- QOLDI / PhD: bir nechta o'choq (ko'p o'choqli SM, ikki tomonlama lakunalar); real kesim / atlas ko'rinishida bosish
+- **Bir nechta o'choq (2026-11-19):** `foci: FocalLesion[]`, faol o'choq (radius slayderi unga), "Yana o'choq" (keyingi
+  bosish qo'shadi), chiplar (raqam · plastinka · mm, × o'chirish, bosilsa o'sha plastinka ochiladi), "Hammasini
+  tozalash". Faol o'choq boshqa plastinkada bo'lsa, bosish yangi o'choq qo'shadi — turli darajalardagi o'choqlar
+  (SM: "makonda tarqalish"). `focalSet()`: har o'choq o'z plastinkasida (`SECTION_BY_ID`), yo'l va kalla belgilari
+  tomonlari qo'shiladi (L+R = B); `focalTerritory()`: ochiq plastinkadagi disklar, nishonlar klip tashqarisida raqam
+  bilan. Panel: "Barcha o'choqlar birgalikda" jadvali + eslatma (bir daraja: ikki tomonlama → o'rta chiziq jarayoni;
+  turli daraja: SM, emboliya, metastaz, vaskulit), so'ng faol o'choq tafsiloti. Bir necha o'choq turli tomonda
+  bo'lsa "o'sha tomonda/qarama-qarshi" yozilmaydi. Tekshiruv: ikki tomonlama PICA → ALS, disfagiya, Horner B;
+  K1 MLF chap + O2 oyoqcha o'ng → 2 daraja, CST chap tana, INO chap; ikki tomonlama ko'prik asosi → CST B.
+- QOLDI / PhD: vaqt o'qi (SM "vaqtda tarqalish"); real kesim / atlas ko'rinishida bosish
   (MNI nuqta → atlas sohalari); 3D darsda aynan shu disk (hozir eng yaqin hudud darsi); tomir havzasi chegara zonasi
   ehtimolligi (Tatu 1996 xaritalari ehtimollik emas).
 

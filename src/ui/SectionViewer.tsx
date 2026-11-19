@@ -35,7 +35,7 @@ import { PATHWAYS, PATHWAY_BY_ID } from '@/data/pathways'
 import { routePlates, traceOn, type TraceItem } from './pathTrace'
 import { LesionPanel } from './LesionPanel'
 import { territoryOn, type TerritoryOnPlate } from './lesionTerritory'
-import { focalOn, focalPlate, type FocalLesion } from './lesionFocal'
+import { focalPlate, focalSet, focalTerritory, type FocalLesion } from './lesionFocal'
 import type { Lesion } from '@/data/lesions'
 import { plateLevel } from './pathTrace'
 import { ZoomPane } from './ZoomPane'
@@ -84,13 +84,25 @@ export function SectionViewer() {
   const [lesion, setLesion] = useState<Lesion>(() => ({ level: (section && plateLevel(section)) || 'medulla-rostral', side: 'L', zone: 'all' }))
   // A free lesion: a disc dropped on the plate (point mode) instead of a whole territory.
   const [pointMode, setPointMode] = useState(false)
-  const [focal, setFocal] = useState<FocalLesion | null>(null)
-  const focalRes = useMemo(() => (section && focal ? focalOn(section, focal) : null), [section, focal])
+  // Several free lesions (one plate or several levels); a click moves the active one, or adds one when `adding`.
+  const [foci, setFoci] = useState<FocalLesion[]>([])
+  const [activeFocus, setActiveFocus] = useState(0)
+  const [adding, setAdding] = useState(false)
+  const fociSet = useMemo(() => focalSet(foci), [foci])
   const placing = !!section && tab === 'lesion' && pointMode && !!focalPlate(section)
   const territory = useMemo(
-    () => (section && tab === 'lesion' ? (pointMode ? (focalRes?.territory ?? null) : territoryOn(section, lesion)) : null),
-    [section, lesion, tab, pointMode, focalRes],
+    () => (section && tab === 'lesion' ? (pointMode ? focalTerritory(section, foci, fociSet, activeFocus) : territoryOn(section, lesion)) : null),
+    [section, lesion, tab, pointMode, foci, fociSet, activeFocus],
   )
+  const placeFocus = (plate: string, x: number, y: number) => {
+    const cur = foci[activeFocus]
+    // A new lesion when asked for one, when there is none yet, or when the active one sits on another plate.
+    if (adding || !cur || cur.plate !== plate) {
+      setFoci([...foci, { plate, x, y, rMm: cur?.rMm ?? 3 }])
+      setActiveFocus(foci.length)
+      setAdding(false)
+    } else setFoci(foci.map((f, i) => (i === activeFocus ? { ...f, x, y } : f)))
+  }
   const [focusCat, setFocusCat] = useState<string | null>(null)
   const [view, setView] = useState<'scheme' | Stain | 'atlas' | 'real'>('scheme')
   const [contours, setContours] = useState(true)
@@ -408,7 +420,7 @@ export function SectionViewer() {
                   labels={labels && !quiz}
                   trace={tract && trace.length && view === 'scheme' ? { color: tract.color, items: trace } : undefined}
                   lesion={territory ?? undefined}
-                  onPlace={placing ? (x, y) => setFocal((f) => ({ plate: section.id, x, y, rMm: f?.rMm ?? 3 })) : undefined}
+                  onPlace={placing ? (x, y) => placeFocus(section.id, x, y) : undefined}
                   nameOf={nameOf}
                   axes={section.axes.map((a) => l(a)) as [string, string, string, string]}
                   onHover={setHover}
@@ -453,7 +465,7 @@ export function SectionViewer() {
                 setLesion={setLesion}
                 territory={territory}
                 onPick={pick}
-                point={{ on: pointMode, set: setPointMode, focal, setFocal, result: focalRes }}
+                point={{ on: pointMode, set: setPointMode, foci, setFoci, active: activeFocus, setActive: setActiveFocus, adding, setAdding, set$: fociSet }}
               />
             ) : tab === 'structures' && cutView ? (
               <AtlasList
@@ -781,17 +793,23 @@ function Figure({
             return p.stroke ? (
               <path key={i} d={p.d} className="stroke" strokeWidth={strokeW(p.w) + 9} />
             ) : (
-              <path key={i} d={p.d} className={`fill ${lesion.pin ? 'pinned' : ''}`} strokeWidth={lesion.clip ? 2 : 4} />
+              <path key={i} d={p.d} className={`fill ${lesion.pins ? 'pinned' : ''}`} strokeWidth={lesion.clip ? 2 : 4} />
             )
           })}
-          {lesion.pin && (
-            <g className="sv-lesion-pin" transform={`translate(${lesion.pin[0]} ${lesion.pin[1]})`}>
-              <path d="M-7,0H-2.5M2.5,0H7M0,-7V-2.5M0,2.5V7" />
-              <circle r="1.6" />
-            </g>
-          )}
         </g>
       )}
+      {lesion?.pins?.map((pin) => (
+        // Outside the silhouette clip, so the number stays readable at the edge.
+        <g key={pin.n} className={`sv-lesion-pin ${pin.active ? 'active' : ''}`} transform={`translate(${pin.at[0]} ${pin.at[1]})`}>
+          <path d="M-7,0H-2.5M2.5,0H7M0,-7V-2.5M0,2.5V7" />
+          <circle r="1.6" />
+          {lesion.pins!.length > 1 && (
+            <text x="6" y="-6">
+              {pin.n}
+            </text>
+          )}
+        </g>
+      ))}
       {section.outline.map((sh, i) => {
         const p = shapePath(sh)
         return p.stroke ? null : <path key={`rim-${i}`} d={p.d} className="sv-rim" />

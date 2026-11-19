@@ -1,5 +1,5 @@
 import type { Section, Shape } from '@/data/sections'
-import { STRUCTURE_BY_ID } from '@/data/sections'
+import { SECTION_BY_ID, STRUCTURE_BY_ID } from '@/data/sections'
 import { CRANIAL_SIGNS, LEVEL_BY_ID, type LesionZone } from '@/data/lesions'
 import { PATHWAYS, type BodySide, type LesionLevel } from '@/data/pathways'
 import frames from '../../pipeline/section_frames.json'
@@ -213,6 +213,61 @@ export function focalOn(section: Section, f: FocalLesion): FocalResult | null {
     sig,
     signs,
     zones,
-    territory: { shapes: [disc], clip: true, hits: hits.map((h) => h.id), pin: [f.x, f.y] },
+    territory: { shapes: [disc], clip: true, hits: hits.map((h) => h.id), pins: [{ at: [f.x, f.y], n: 1, active: true }] },
   }
+}
+
+/**
+ * Several free lesions at once — on one plate or at different levels (the
+ * multifocal picture of MS, bilateral lacunes). Each is read on its own
+ * plate; the deficits add up: a tract lost on the left by one lesion and on
+ * the right by another is lost on both sides.
+ */
+export interface FocalSet {
+  /** One per lesion, in order (null: its plate cannot take a lesion). */
+  each: (FocalResult | null)[]
+  sig: Record<string, BodySide | 'none' | 'B'>
+  signs: SignHit[]
+  /** Distinct levels the lesions are at. */
+  levels: LesionLevel[]
+}
+
+const merge = (a: BodySide | 'none' | 'B', b: BodySide | 'none' | 'B') => (a === 'none' ? b : b === 'none' || a === b ? a : 'B')
+
+export function focalSet(foci: FocalLesion[]): FocalSet {
+  const each = foci.map((f) => {
+    const s = SECTION_BY_ID.get(f.plate)
+    return s ? focalOn(s, f) : null
+  })
+  const sig: FocalSet['sig'] = Object.fromEntries(PATHWAYS.map((p) => [p.id, 'none' as const]))
+  const signs = new Map<string, SignHit>()
+  for (const r of each) {
+    if (!r) continue
+    for (const p of PATHWAYS) sig[p.id] = merge(sig[p.id], r.sig[p.id])
+    for (const h of r.signs) {
+      const was = signs.get(h.sign.id)
+      signs.set(h.sign.id, was ? { sign: h.sign, side: merge(was.side, h.side) as BodySide | 'B', via: [...new Set([...was.via, ...h.via])] } : h)
+    }
+  }
+  return {
+    each,
+    sig,
+    signs: CRANIAL_SIGNS.flatMap((c) => signs.get(c.id) ?? []),
+    levels: [...new Set(each.flatMap((r) => (r ? [r.level] : [])))],
+  }
+}
+
+/** What the open plate draws: the discs of the lesions placed on it, numbered. */
+export function focalTerritory(section: Section, foci: FocalLesion[], set: FocalSet, active: number): TerritoryOnPlate | null {
+  const shapes: Shape[] = []
+  const pins: NonNullable<TerritoryOnPlate['pins']> = []
+  const hits = new Set<string>()
+  foci.forEach((f, i) => {
+    const r = set.each[i]
+    if (!r || f.plate !== section.id) return
+    shapes.push(...r.territory.shapes)
+    pins.push({ at: [f.x, f.y], n: i + 1, active: i === active })
+    r.territory.hits.forEach((h) => hits.add(h))
+  })
+  return shapes.length ? { shapes, clip: true, hits: [...hits], pins } : null
 }

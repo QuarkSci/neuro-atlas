@@ -72,7 +72,9 @@ kalla belgilari → `029790f` trigeminotalamik yo'l → `aa49ecd` bo'sh joyni bo
 plastinkani bosish → disk (radius 0.5–12 mm, ≈ masshtab `pipeline/section_frames.json` oynasidan). `src/ui/lesionFocal.ts`
 (`focalOn()`: tuzilmalar ulushi, yo'llar, kalla belgilari, klassik hududlar bilan ustma-ustlik %). Markazdagi tuzilma =
 eng ichki kontur yoki chiziq (aks holda kapsula lakunasi butun orqa oyoqni "oladi"); `TRANSIT` — kapsulada talamokortikal
-tolalar (`ic-pl`, `tcr`).
+tolalar (`ic-pl`, `tcr`). **Bir nechta o'choq ✅ (2026-11-19):** `SectionViewer` `foci[]` + `activeFocus` + `adding`
+("Yana o'choq" → keyingi bosish qo'shadi; boshqa plastinkada bosish ham yangi o'choq), `focalSet()` (har biri o'z
+plastinkasida, tomonlar qo'shiladi: L+R = B), `focalTerritory()` (shu plastinkadagi disklar, raqamli nishon).
 
 **Trigeminotalamik yo'l ✅ (2026-11-17)** — `docs/HISTORY.md` "5.3-3c": `path-v` (4-yo'l, `body: 'face'`), yuz og'rig'i
 endi kalla belgisi emas, yo'l. Kattalashtirish (PLAN 5.5 C) allaqachon bor: `ZoomPane` (g'ildirak, ikki marta bosish,
@@ -98,10 +100,15 @@ O'choq chizish ✅ 5.3-3a, kalla nervlari ✅ 5.3-3b, trigeminal ✅ 5.3-3c.
 real kesim 21/22 (`REAL_STAND_IN` T2→B5, G4→G2; U1 manbasiz), `pipeline/mirror_vessels.py` (68 tomir ko'zgu jufti,
 `mirrorOf`, `data/gross_mirrored.json`; meshlar qayta hosil qilinsa — mirror_vessels.py → build_catalogue.py).
 
+**⚠️ Foydalanuvchi xabari (2026-11-19): "Real kesim" ko'rinishida harakat juda kech, interfeys qotib ishlayapti.**
+Sabab hali o'rganilmagan. Tekshirish: `AtlasSliceView` (`real` prop) — har zoom/surishda webp + shtrix konturlar
+(ko'p SVG path) va nishonlar qayta chiziladimi; `ZoomPane` transform'i rasm qatlamini GPU'da ushlaydimi
+(`will-change`); atlas kesimi (`atlasSlice`) qayta hisoblanmayaptimi. Avval Performance profil, keyin tuzatish.
+
 **Navbatdagi vazifa — foydalanuvchi tanlaydi** (avval qisqa reja ko'rsating): PLAN 5.3-3 mavzu viktorinasi + Anki;
 Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; BigBrain 20 mkm plitkalar (zoomda);
-5.4 UI qoldiqlari; erkin o'choqning PhD davomi (bir nechta o'choq, real kesimda/atlas ko'rinishida bosish, 3D da aynan
-shu disk).
+5.4 UI qoldiqlari; erkin o'choqning PhD davomi (real kesimda/atlas ko'rinishida bosish, 3D da aynan shu disklar,
+vaqt o'qi — SM'da "vaqtda tarqalish", McDonald mezonlari); real kesim qotishi (yuqorida ⚠️).
 
 Ish uslubi bo'yicha eslatmalar (2026-11-17):
 - TS mantiqni tekshirish: `npx -y tsx` ruxsat bermadi → vaqtinchalik `scripts/_x_tmp.mjs` (puppeteer) da dev serverdan

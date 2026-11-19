@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowUpRight, Box, Crosshair, MousePointerClick, Search, Shapes } from 'lucide-react'
+import { ArrowUpRight, Box, Crosshair, MousePointerClick, Plus, Search, Shapes, Trash2, X } from 'lucide-react'
 import { PATHWAYS, type BodySide, type LesionLevel } from '@/data/pathways'
 import { CRANIAL_SIGNS, LEVELS, LEVEL_BY_ID, signature, type Findings, type Lesion } from '@/data/lesions'
 import { SECTION_BY_ID, STRUCTURE_BY_ID, type Section } from '@/data/sections'
@@ -11,7 +11,7 @@ import { plateLevel } from './pathTrace'
 import { CATEGORY } from './sectionStyle'
 import type { TerritoryOnPlate } from './lesionTerritory'
 import { cranialSigns, localiseWithSigns, type CranialFindings, type SignHit } from './lesionSigns'
-import { focalPlate, type FocalLesion, type FocalResult } from './lesionFocal'
+import { focalPlate, type FocalLesion, type FocalSet } from './lesionFocal'
 
 const TX = {
   forward: { en: 'Lesion → signs', uz: "O'choq → belgilar" },
@@ -70,6 +70,23 @@ const TX = {
     uz: "O'choq qo'yish uchun plastinkaning istalgan joyini bosing; boshqa joyni bossangiz o'choq o'sha yerga ko'chadi.",
   },
   radius: { en: 'Radius', uz: 'Radius' },
+  add: { en: 'Another lesion', uz: "Yana o'choq" },
+  addHint: {
+    en: 'Tap the plate to add the new lesion — here or on another level (open its plate first).',
+    uz: "Yangi o'choqni qo'shish uchun plastinkani bosing — shu yerda yoki boshqa darajada (avval o'sha plastinkani oching).",
+  },
+  remove: { en: 'Remove', uz: "O'chirish" },
+  clear: { en: 'Clear all', uz: 'Hammasini tozalash' },
+  together: { en: 'All lesions together', uz: "Barcha o'choqlar birgalikda" },
+  oneFocus: { en: 'Lesion {n}', uz: "{n}-o'choq" },
+  multiLevel: {
+    en: 'Lesions at different levels: a picture no single lesion explains — think multiple sclerosis (lesions separated in space), emboli, metastases or vasculitis.',
+    uz: "Turli darajadagi o'choqlar: buni bitta o'choq bilan tushuntirib bo'lmaydi — tarqoq skleroz (makonda tarqalgan o'choqlar), emboliya, metastaz yoki vaskulitni o'ylang.",
+  },
+  multiSame: {
+    en: 'Deficits add up: a tract lost on the left by one lesion and on the right by another is lost on both sides — bilateral signs at one level point to a midline process.',
+    uz: "Yetishmovchiliklar qo'shiladi: bir o'choq chapda, ikkinchisi o'ngda kesgan yo'l ikki tomonda yo'qoladi — bir darajadagi ikki tomonlama belgilar o'rta chiziq jarayoniga ishora qiladi.",
+  },
   approx: {
     en: 'The plates are schematic: millimetres are estimated from the atlas cut of the same level (≈).',
     uz: 'Plastinkalar sxematik: millimetr shu darajadagi atlas kesimidan taxminan hisoblanadi (≈).',
@@ -116,9 +133,14 @@ export function LesionPanel({
   point: {
     on: boolean
     set: (on: boolean) => void
-    focal: FocalLesion | null
-    setFocal: (f: FocalLesion | null) => void
-    result: FocalResult | null
+    foci: FocalLesion[]
+    setFoci: (f: FocalLesion[]) => void
+    active: number
+    setActive: (i: number) => void
+    /** The next click adds a lesion instead of moving the active one. */
+    adding: boolean
+    setAdding: (on: boolean) => void
+    set$: FocalSet
   }
 }) {
   const l = useL()
@@ -148,8 +170,9 @@ export function LesionPanel({
   // Crossed: a cranial sign on one side, a long tract on the other.
   const crossed = signs.some((h) => h.side === lesion.side && h.via.length) && PATHWAYS.some((p) => sig[p.id] !== 'none' && sig[p.id] !== lesion.side)
   // Ipsi / contra relative to the lesion's side (none for a free lesion across the midline).
-  const fr = point.on ? point.result : null
-  const refSide: BodySide | 'B' = fr ? fr.side : lesion.side
+  // Several lesions on different sides have no single "ipsilateral".
+  const fsides = new Set(point.set$.each.flatMap((r) => (r ? [r.side] : [])))
+  const refSide: BodySide | 'B' = point.on && fsides.size ? (fsides.size === 1 ? [...fsides][0] : 'B') : lesion.side
   const rel = (s: BodySide) => (refSide === 'B' ? '' : ` · ${l(s === refSide ? TX.ipsi : TX.contra)}`)
   const sideText = (s: BodySide | 'B') => (s === 'B' ? l(TX.both) : `${l(s === 'L' ? TX.sideL : TX.sideR)}${rel(s)}`)
 
@@ -201,32 +224,88 @@ export function LesionPanel({
   const isCrossed = (sg: Record<string, BodySide | 'none' | 'B'>, list: SignHit[], side: BodySide | 'B') =>
     side !== 'B' && list.some((h) => h.side === side && h.via.length) && PATHWAYS.some((p) => sg[p.id] !== 'none' && sg[p.id] !== side)
 
-  // Point mode: what a disc dropped on the plate takes in.
+  // Point mode: what the discs dropped on the plates take in — each one, and all of them together.
   const focalView = () => {
-    const f = point.focal
-    const r = point.result
+    const { foci, active, set$ } = point
+    const f = foci[active]
+    const r = set$.each[active] ?? null
     const rMm = f?.rMm ?? 3
     const best = r?.zones[0]
+    const many = foci.length > 1
+    const remove = (i: number) => {
+      point.setFoci(foci.filter((_, j) => j !== i))
+      point.setActive(Math.max(0, Math.min(active > i ? active - 1 : active, foci.length - 2)))
+    }
     return (
       <>
-        <p className="sv-hint">{l(TX.placeHint)}</p>
-        <h4>
-          {l(TX.radius)} · {r?.mmPerUnit ? '≈ ' : ''}
-          {rMm.toFixed(1)} mm
-        </h4>
-        <input
-          className="lz-range"
-          type="range"
-          min={0.5}
-          max={12}
-          step={0.5}
-          value={rMm}
-          disabled={!f}
-          onChange={(e) => f && point.setFocal({ ...f, rMm: Number(e.target.value) })}
-          aria-label={l(TX.radius)}
-        />
+        <p className="sv-hint">{l(point.adding ? TX.addHint : TX.placeHint)}</p>
+        <div className="lz-foci">
+          {foci.map((x, i) => (
+            <span key={i} className={`lz-focus ${i === active ? 'on' : ''}`}>
+              <button
+                onClick={() => {
+                  point.setActive(i)
+                  if (x.plate !== section.id) openSection(x.plate)
+                }}
+              >
+                <b>{i + 1}</b> {SECTION_BY_ID.get(x.plate)?.code} · {x.rMm.toFixed(1)} mm
+              </button>
+              <button className="x" onClick={() => remove(i)} aria-label={l(TX.remove)} title={l(TX.remove)}>
+                <X size={11} />
+              </button>
+            </span>
+          ))}
+          {foci.length > 0 && (
+            <button className={`lz-add ${point.adding ? 'on' : ''}`} onClick={() => point.setAdding(!point.adding)}>
+              <Plus size={12} /> {l(TX.add)}
+            </button>
+          )}
+          {many && (
+            <button
+              className="lz-add"
+              onClick={() => {
+                point.setFoci([])
+                point.setActive(0)
+                point.setAdding(false)
+              }}
+            >
+              <Trash2 size={12} /> {l(TX.clear)}
+            </button>
+          )}
+        </div>
+        {f && (
+          <>
+            <h4>
+              {many ? `${active + 1} · ` : ''}
+              {l(TX.radius)} · {r?.mmPerUnit ? '≈ ' : ''}
+              {rMm.toFixed(1)} mm
+            </h4>
+            <input
+              className="lz-range"
+              type="range"
+              min={0.5}
+              max={12}
+              step={0.5}
+              value={rMm}
+              onChange={(e) => point.setFoci(foci.map((x, i) => (i === active ? { ...x, rMm: Number(e.target.value) } : x)))}
+              aria-label={l(TX.radius)}
+            />
+          </>
+        )}
+        {many && (
+          <>
+            <h4>
+              {l(TX.together)} · {foci.length} · {set$.levels.map((lv) => l(LEVEL_BY_ID.get(lv)!.name)).join(', ')}
+            </h4>
+            {tractTable(set$.sig)}
+            <h4>{l(TX.cranial)}</h4>
+            {signTable(set$.signs)}
+            <p className="sv-note">{l(set$.levels.length > 1 ? TX.multiLevel : TX.multiSame)}</p>
+          </>
+        )}
         {r && (
           <>
+            {many && <h4 className="lz-sub">{l(TX.oneFocus).replace('{n}', String(active + 1))}</h4>}
             <p className="sv-note">
               <b>{l(LEVEL_BY_ID.get(r.level)!.name)}</b> · {r.side === 'B' ? l(TX.midline) : l(TX[r.side])}
               {rMm * 2 < 15 ? ` — ${l(TX.lacune)}` : ''}

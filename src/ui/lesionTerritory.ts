@@ -183,8 +183,8 @@ export interface TerritoryOnPlate {
   clip: boolean
   /** Ids of the plate's structures the lesion takes in (each counted once). */
   hits: string[]
-  /** A free (point) lesion's centre: drawn with a crosshair. */
-  pin?: [number, number]
+  /** Free (point) lesions' centres: drawn with a crosshair and their number. */
+  pins?: { at: [number, number]; n: number; active: boolean }[]
 }
 
 /** Does this plate stand for the lesion's level (and show it in a transverse / coronal / axial cut)? */
