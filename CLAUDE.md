@@ -54,15 +54,19 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 - `src/scene/BrainScene.ts` — sahna, kesim tekisliklari, markerlar, dars rejimi; `loader.ts` (MNI→sahna `(−x,z,y)`),
   `materials.ts`, `slice.ts`, `atlasSlice.ts`.
 - `src/data/` — `parts.json` (`pipeline/build_catalogue.py`), `index.ts`, `levels.ts`, `topics.ts` (O'rganish mavzulari),
-  `sections/` (17+5 kesim, `structures-*.ts` lug'at), `lessons/` (3 dars + 3 yo'l darsi `pathways.ts` dan),
-  `pathways.ts`, `lesions.ts`, `content/*.json` (487 yozuv).
+  `sections/` (17+5 kesim, `structures-*.ts` lug'at), `lessons/` (3 dars + 4 yo'l darsi `pathways.ts` dan + `lesion.ts`
+  o'choq darslari), `pathways.ts` (CST/DCML/ALS/V), `lesions.ts` (+ `CRANIAL_SIGNS`), `content/*.json` (487 yozuv).
 - `src/ui/` — `Header` (`TabBar`, `ViewGroup`, `Identity`), `Sidebar`, `BottomBar` (kontekstli tasma), `SectionViewer`
-  (+ `ZoomPane`, `LesionPanel`, `pathTrace.ts`),
+  (+ `ZoomPane`, `LesionPanel`, `pathTrace.ts`, `lesionTerritory.ts`, `lesionSigns.ts`),
   `AtlasSliceView`, `LessonPanel`, `ViewControls`, Inspector; `liquidGlass.ts`, `useLens.ts`.
 - Rejimlar: `explode | peel | learn`. Yangi dars/kesim → tegishli mavzuga (`topics.ts`) yozilsin; yangi tab ochilmaydi.
 - Pipeline vositalari: `pipeline/tools/slice_svg.py`, `landmarks.py` (`pipeline/.venv/bin/python`, repo ildizidan).
 
-## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-17, 5.3-3a dan keyin)
+## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-19, 5.3-3c va 5.5 D dan keyin)
+
+Oxirgi sessiya (2026-11-17) commitlari: `676b069` o'choq plastinkada/3D → `c1560c6` kalla nervlari → `2130a2e` 3D darsda
+kalla belgilari → `029790f` trigeminotalamik yo'l → `aa49ecd` bo'sh joyni bosish = to'liq ekran. Hammasi push qilingan,
+`git status` toza. Tekshiruv zanjiri: `node scripts/audit-lesions.mjs` (0) + tsc + build + 2–4 screenshot.
 
 **Trigeminotalamik yo'l ✅ (2026-11-17)** — `docs/HISTORY.md` "5.3-3c": `path-v` (4-yo'l, `body: 'face'`), yuz og'rig'i
 endi kalla belgisi emas, yo'l. Kattalashtirish (PLAN 5.5 C) allaqachon bor: `ZoomPane` (g'ildirak, ikki marta bosish,
