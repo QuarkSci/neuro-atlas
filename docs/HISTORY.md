@@ -899,6 +899,20 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   (MNI nuqta → atlas sohalari); 3D darsda aynan shu disk (hozir eng yaqin hudud darsi); tomir havzasi chegara zonasi
   ehtimolligi (Tatu 1996 xaritalari ehtimollik emas).
 
+### PERF-1 — Real kesimda qotish (2026-11-19)
+
+- Foydalanuvchi: "real suratda harakat juda kech, interfeys qotib ishlavotti". `scripts/perf-real.mjs` (CDP
+  `Performance.getMetrics`, har hodisaga script/style/layout/task): B5 real kesim — sichqoncha harakati 369 ms script
+  (sxemada 10 ms).
+- Sabab: `AtlasSliceView` `onPointerMove` → `setCursor` (MNI o'qi) → butun komponent qayta render: har soha uchun
+  `regionPath` (minglab nuqta → satr), `placeLabels` (`interior()` qidiruvi), `placeMarks` — har harakatda.
+- Tuzatish: `regionPath` natijasi `WeakMap<SliceRegion,string>`da; `named`/`badges` `useMemo` (til — `useAtlas(s=>s.lang)`,
+  chunki `useL()` har renderda yangi funksiya); kursor `MniCursor` komponentida (ref orqali bog'langan setter), SVG
+  qayta render bo'lmaydi. `ZoomPane`: g'ildirak, pinch va surish paytida `.sv-zoom-inner.moving` (`will-change:
+  transform`, 180 ms sukunatdan keyin olinadi) — qatlam GPU'da suriladi, keyin aniq rasterlanadi.
+- Natija (task ms/hodisa): real hover 377 → 12–15, surish 16 → 3–6, g'ildirak 5–6 (o'zgarmagan); atlas va U3 ham
+  shunday. MNI kursori ishlaydi (tekshirilgan), zoomdan keyin rasm o'tkir (screenshot).
+
 ### 5.5 D — Bosib to'liq ekranga (2026-11-17)
 
 - `ZoomPane`: rasmning BO'SH joyiga (tuzilma, nishon, yorliq, atlas sohasi, tugma emas — `closest()` bilan) bitta bosish

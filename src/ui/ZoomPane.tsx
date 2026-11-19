@@ -41,6 +41,16 @@ export function ZoomPane({
   useEffect(() => setV(ID), [resetKey])
   const clickTimer = useRef<number | undefined>(undefined)
   useEffect(() => () => window.clearTimeout(clickTimer.current), [])
+  // While a gesture runs the figure is its own GPU layer (moved, not repainted — the real slice and
+  // hundreds of outlines would otherwise be redrawn every frame); afterwards it is rasterised sharp again.
+  const [moving, setMoving] = useState(false)
+  const idle = useRef<number | undefined>(undefined)
+  const kick = () => {
+    setMoving(true)
+    window.clearTimeout(idle.current)
+    idle.current = window.setTimeout(() => setMoving(false), 180)
+  }
+  useEffect(() => () => window.clearTimeout(idle.current), [])
 
   /** Zoom to scale k keeping the box point (px, py) fixed; clamped so the figure never leaves the box. */
   const zoomAt = (k: number, px: number, py: number, from = view.current) => {
@@ -68,6 +78,7 @@ export function ZoomPane({
       e.preventDefault()
       const p = local(e)
       const step = e.ctrlKey ? 0.01 : 0.0018 // trackpad pinch arrives as ctrl+wheel
+      kick()
       zoomAt(view.current.k * Math.exp(-e.deltaY * step), p.x, p.y)
     }
     el.addEventListener('wheel', wheel, { passive: false })
@@ -100,6 +111,7 @@ export function ZoomPane({
       }
       d.last = mid
       d.moved = true
+      kick()
       return
     }
     const dx = p.x - start.x,
@@ -108,7 +120,10 @@ export function ZoomPane({
     if (!d.moved) box.current?.setPointerCapture(e.pointerId)
     d.moved = true
     d.pts.set(e.pointerId, p)
-    if (view.current.k > 1) setV((c) => clamp({ k: c.k, x: c.x + dx, y: c.y + dy }, box.current!))
+    if (view.current.k > 1) {
+      kick()
+      setV((c) => clamp({ k: c.k, x: c.x + dx, y: c.y + dy }, box.current!))
+    }
   }
   const up = (e: React.PointerEvent) => {
     drag.current.pts.delete(e.pointerId)
@@ -150,7 +165,10 @@ export function ZoomPane({
       onClick={click}
       onDoubleClick={dbl}
     >
-      <div className="sv-zoom-inner" style={{ transform: `translate(${v.x}px, ${v.y}px) scale(${v.k})`, '--zs': Math.sqrt(v.k) } as React.CSSProperties}>
+      <div
+        className={`sv-zoom-inner ${moving ? 'moving' : ''}`}
+        style={{ transform: `translate(${v.x}px, ${v.y}px) scale(${v.k})`, '--zs': Math.sqrt(v.k) } as React.CSSProperties}
+      >
         {children}
       </div>
       <div className="sv-zoom-ctl" onPointerDown={(e) => e.stopPropagation()} onDoubleClick={(e) => e.stopPropagation()}>

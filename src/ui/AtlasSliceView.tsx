@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState, type MutableRefObject } from 'react'
 import { LAYER_BY_ID, SYSTEM_BY_ID } from '@/data'
 import type { Section } from '@/data/sections'
 import { REAL_SOURCES, realSliceUrl, type RealSlice } from '@/data/sections/real'
@@ -6,6 +6,7 @@ import type { LayerId, Part } from '@/data/types'
 import { atlasSlice, type AtlasSlice, type SliceRegion } from '@/scene/atlasSlice'
 import { LAYER_COLORS } from '@/scene/materials'
 import { useL, useT } from '@/i18n'
+import { useAtlas } from '@/store/useAtlas'
 import { mix } from './sectionLayout'
 
 const BASE = '#161b23'
@@ -43,8 +44,14 @@ function hslHex(h: number, s: number, l: number) {
 }
 
 export function regionPath(r: SliceRegion) {
-  return r.loops.map((l) => `M${l.map(([x, y]) => `${x.toFixed(2)},${(-y).toFixed(2)}`).join('L')}Z`).join('')
+  const known = PATHS.get(r)
+  if (known) return known
+  const d = r.loops.map((l) => `M${l.map(([x, y]) => `${x.toFixed(2)},${(-y).toFixed(2)}`).join('L')}Z`).join('')
+  PATHS.set(r, d)
+  return d
 }
+/** A region's path string is built once: a slice has thousands of outline points and the figure re-renders on hover. */
+const PATHS = new WeakMap<SliceRegion, string>()
 
 if (import.meta.env.DEV) (window as unknown as { __atlasSlice: typeof atlasSlice }).__atlasSlice = atlasSlice
 
@@ -105,7 +112,8 @@ export function AtlasSliceView({
   const t = useT()
   const svg = useRef<SVGSVGElement>(null)
   const [hover, setHover] = useState<string | null>(null)
-  const [cursor, setCursor] = useState<[number, number] | null>(null)
+  // The MNI cursor lives in the readout only: setting it here re-rendered the whole figure on every pointer move.
+  const setCursor = useRef<((c: [number, number] | null) => void) | null>(null)
   // The image dictates the window it was cut for; the live slice normally agrees.
   const [x0, y0, x1, y1] = real ? real.window : slice.window
   const w = x1 - x0,
@@ -121,15 +129,24 @@ export function AtlasSliceView({
     const m = el?.getScreenCTM()
     if (!el || !m) return
     const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse())
-    setCursor([p.x, -p.y])
+    setCursor.current?.([p.x, -p.y])
   }
   const hovered = hover ? slice.regions.find((r) => r.part.id === hover) : undefined
-  const mni = cursor ? slice.toMNI(cursor[0], cursor[1]) : null
   const ordered = slice.regions
-  const win: [number, number, number, number] = [x0, y0, x1, y1]
-  const named = labels && (!real || contours) ? placeLabels(ordered, (r) => short(l(r.part.name)), font, (w * h) / 400, slice.window) : []
+  const showNames = labels && (!real || contours)
+  // `l` is a new function each render; the language is what the names depend on.
+  const lang = useAtlas((s) => s.lang)
+  // Label and badge placement search the outlines: computed once per figure, not per hover.
+  const named = useMemo(
+    () => (showNames ? placeLabels(ordered, (r) => short(l(r.part.name)), font, (w * h) / 400, slice.window) : []),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [showNames, ordered, lang, font, w, h, slice.window],
+  )
   const badgeR = font * 0.92
-  const badges = marks ? placeMarks(ordered, marks, badgeR, win, new Set(named.map((p) => p.id)), font * 1.5, [x0 + w * 0.04 + bar, y0 + h * 0.05 + font * 1.6]) : []
+  const badges = useMemo(
+    () => (marks ? placeMarks(ordered, marks, badgeR, [x0, y0, x1, y1], new Set(named.map((p) => p.id)), font * 1.5, [x0 + w * 0.04 + bar, y0 + h * 0.05 + font * 1.6]) : []),
+    [marks, ordered, badgeR, x0, y0, x1, y1, named, font, w, h, bar],
+  )
 
   return (
     <div className="as-wrap">
@@ -138,7 +155,7 @@ export function AtlasSliceView({
         className="sv-svg as-svg"
         viewBox={vb}
         onPointerMove={move}
-        onPointerLeave={() => setCursor(null)}
+        onPointerLeave={() => setCursor.current?.(null)}
         onClick={() => onPick(null)}
         role="img"
         aria-label={section.code}
@@ -273,14 +290,27 @@ export function AtlasSliceView({
         ) : (
           <span>{t.asHint}</span>
         )}
-        {mni && (
-          <code>
-            MNI x {fmt(mni[0])} · y {fmt(mni[1])} · z {fmt(mni[2])} mm
-          </code>
-        )}
+        <MniCursor slice={slice} bind={setCursor} />
       </div>
     </div>
   )
+}
+
+/** The MNI coordinate under the pointer: its own state, so a pointer move repaints one line. */
+function MniCursor({ slice, bind }: { slice: AtlasSlice; bind: MutableRefObject<((c: [number, number] | null) => void) | null> }) {
+  const [cursor, setCursor] = useState<[number, number] | null>(null)
+  useEffect(() => {
+    bind.current = setCursor
+    return () => {
+      bind.current = null
+    }
+  }, [bind])
+  const mni = cursor ? slice.toMNI(cursor[0], cursor[1]) : null
+  return mni ? (
+    <code>
+      MNI x {fmt(mni[0])} · y {fmt(mni[1])} · z {fmt(mni[2])} mm
+    </code>
+  ) : null
 }
 
 const fmt = (v: number) => (v >= 0 ? '+' : '−') + Math.abs(v).toFixed(1)

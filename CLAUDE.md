@@ -100,10 +100,13 @@ O'choq chizish ✅ 5.3-3a, kalla nervlari ✅ 5.3-3b, trigeminal ✅ 5.3-3c.
 real kesim 21/22 (`REAL_STAND_IN` T2→B5, G4→G2; U1 manbasiz), `pipeline/mirror_vessels.py` (68 tomir ko'zgu jufti,
 `mirrorOf`, `data/gross_mirrored.json`; meshlar qayta hosil qilinsa — mirror_vessels.py → build_catalogue.py).
 
-**⚠️ Foydalanuvchi xabari (2026-11-19): "Real kesim" ko'rinishida harakat juda kech, interfeys qotib ishlayapti.**
-Sabab hali o'rganilmagan. Tekshirish: `AtlasSliceView` (`real` prop) — har zoom/surishda webp + shtrix konturlar
-(ko'p SVG path) va nishonlar qayta chiziladimi; `ZoomPane` transform'i rasm qatlamini GPU'da ushlaydimi
-(`will-change`); atlas kesimi (`atlasSlice`) qayta hisoblanmayaptimi. Avval Performance profil, keyin tuzatish.
+**Real kesim qotishi ✅ (2026-11-19)** — foydalanuvchi: "real suratda harakat juda kech, interfeys qotib ishlavotti".
+Sabab: `AtlasSliceView`da MNI kursor holati har pointer harakatida butun SVG'ni qayta qurardi (soha yo'llari matni,
+`placeLabels`, `placeMarks`) — B5 da 369 ms/harakat. Tuzatish: `regionPath` WeakMap keshi, yorliq/nishonlar `useMemo`
+(`lang` bo'yicha — `useL()` har renderda yangi funksiya), kursor alohida `MniCursor`da; `ZoomPane` imo-ishora paytida
+`.moving` → `will-change: transform` (180 ms dan keyin o'chadi, rasm yana o'tkir). Natija 4.5 ms/harakat.
+O'lchash: `node scripts/perf-real.mjs [plate] ["Real kesim"|"Atlas"|"Sxema"]` (CDP: script/style/layout har hodisaga;
+headless "wall" vaqti dasturiy GPU tufayli shovqinli). QOIDA: pointermove'da katta komponent holatini o'zgartirmang.
 
 **Navbatdagi vazifa — foydalanuvchi tanlaydi** (avval qisqa reja ko'rsating): PLAN 5.3-3 mavzu viktorinasi + Anki;
 Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; BigBrain 20 mkm plitkalar (zoomda);
