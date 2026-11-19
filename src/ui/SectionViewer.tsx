@@ -35,6 +35,7 @@ import { PATHWAYS, PATHWAY_BY_ID } from '@/data/pathways'
 import { routePlates, traceOn, type TraceItem } from './pathTrace'
 import { LesionPanel } from './LesionPanel'
 import { territoryOn, type TerritoryOnPlate } from './lesionTerritory'
+import { focalOn, focalPlate, type FocalLesion } from './lesionFocal'
 import type { Lesion } from '@/data/lesions'
 import { plateLevel } from './pathTrace'
 import { ZoomPane } from './ZoomPane'
@@ -81,7 +82,15 @@ export function SectionViewer() {
   const [tab, setTab] = useState<'structures' | 'level' | 'lesion'>('structures')
   // The simulated lesion lives here so the figure can draw its territory.
   const [lesion, setLesion] = useState<Lesion>(() => ({ level: (section && plateLevel(section)) || 'medulla-rostral', side: 'L', zone: 'all' }))
-  const territory = useMemo(() => (section && tab === 'lesion' ? territoryOn(section, lesion) : null), [section, lesion, tab])
+  // A free lesion: a disc dropped on the plate (point mode) instead of a whole territory.
+  const [pointMode, setPointMode] = useState(false)
+  const [focal, setFocal] = useState<FocalLesion | null>(null)
+  const focalRes = useMemo(() => (section && focal ? focalOn(section, focal) : null), [section, focal])
+  const placing = !!section && tab === 'lesion' && pointMode && !!focalPlate(section)
+  const territory = useMemo(
+    () => (section && tab === 'lesion' ? (pointMode ? (focalRes?.territory ?? null) : territoryOn(section, lesion)) : null),
+    [section, lesion, tab, pointMode, focalRes],
+  )
   const [focusCat, setFocusCat] = useState<string | null>(null)
   const [view, setView] = useState<'scheme' | Stain | 'atlas' | 'real'>('scheme')
   const [contours, setContours] = useState(true)
@@ -399,6 +408,7 @@ export function SectionViewer() {
                   labels={labels && !quiz}
                   trace={tract && trace.length && view === 'scheme' ? { color: tract.color, items: trace } : undefined}
                   lesion={territory ?? undefined}
+                  onPlace={placing ? (x, y) => setFocal((f) => ({ plate: section.id, x, y, rMm: f?.rMm ?? 3 })) : undefined}
                   nameOf={nameOf}
                   axes={section.axes.map((a) => l(a)) as [string, string, string, string]}
                   onHover={setHover}
@@ -437,7 +447,14 @@ export function SectionViewer() {
             </div>
 
             {tab === 'lesion' ? (
-              <LesionPanel section={section} lesion={lesion} setLesion={setLesion} territory={territory} onPick={pick} />
+              <LesionPanel
+                section={section}
+                lesion={lesion}
+                setLesion={setLesion}
+                territory={territory}
+                onPick={pick}
+                point={{ on: pointMode, set: setPointMode, focal, setFocal, result: focalRes }}
+              />
             ) : tab === 'structures' && cutView ? (
               <AtlasList
                 regions={atlas?.data?.regions ?? []}
@@ -570,6 +587,7 @@ function Figure({
   labels,
   trace,
   lesion,
+  onPlace,
   nameOf,
   axes,
   onHover,
@@ -587,6 +605,8 @@ function Figure({
   trace?: { color: string; items: TraceItem[] }
   /** The simulated lesion's territory on this plate. */
   lesion?: TerritoryOnPlate
+  /** Point mode: a click anywhere on the plate drops the lesion there (plate units). */
+  onPlace?: (x: number, y: number) => void
   nameOf: (item: SectionItem) => string
   axes: [string, string, string, string]
   onHover: (id: string | null) => void
@@ -623,8 +643,17 @@ function Figure({
   const handlers = (id: string) => ({
     onPointerEnter: () => onHover(id),
     onPointerLeave: () => onHover(null),
-    onClick: () => onPick(id),
+    onClick: () => !onPlace && onPick(id),
   })
+  const place = (e: React.MouseEvent<SVGSVGElement>) => {
+    if (!onPlace) return
+    const m = e.currentTarget.getScreenCTM()
+    if (!m) return
+    const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse())
+    // Not the zoom pane's "empty spot → full screen".
+    e.stopPropagation()
+    onPlace(p.x, p.y)
+  }
   const paint = (e: Numbered, which: 'fill' | 'stroke') => {
     const info = STRUCTURE_BY_ID.get(e.item.id)
     if (!info) return null
@@ -666,7 +695,7 @@ function Figure({
     )
   }
   return (
-    <svg className={`sv-svg ${stain ? `stained ${stain}` : ''}`} viewBox={vb} role="img" aria-label={section.code}>
+    <svg className={`sv-svg ${stain ? `stained ${stain}` : ''} ${onPlace ? 'placing' : ''}`} viewBox={vb} role="img" aria-label={section.code} onClick={place}>
       <defs>
         <StainDefs />
         {cats.map((c) => (
@@ -752,9 +781,15 @@ function Figure({
             return p.stroke ? (
               <path key={i} d={p.d} className="stroke" strokeWidth={strokeW(p.w) + 9} />
             ) : (
-              <path key={i} d={p.d} className="fill" strokeWidth={lesion.clip ? 2 : 4} />
+              <path key={i} d={p.d} className={`fill ${lesion.pin ? 'pinned' : ''}`} strokeWidth={lesion.clip ? 2 : 4} />
             )
           })}
+          {lesion.pin && (
+            <g className="sv-lesion-pin" transform={`translate(${lesion.pin[0]} ${lesion.pin[1]})`}>
+              <path d="M-7,0H-2.5M2.5,0H7M0,-7V-2.5M0,2.5V7" />
+              <circle r="1.6" />
+            </g>
+          )}
         </g>
       )}
       {section.outline.map((sh, i) => {

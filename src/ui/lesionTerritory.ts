@@ -183,6 +183,8 @@ export interface TerritoryOnPlate {
   clip: boolean
   /** Ids of the plate's structures the lesion takes in (each counted once). */
   hits: string[]
+  /** A free (point) lesion's centre: drawn with a crosshair. */
+  pin?: [number, number]
 }
 
 /** Does this plate stand for the lesion's level (and show it in a transverse / coronal / axial cut)? */
@@ -219,6 +221,34 @@ const onSide = (section: Section, side: 'L' | 'R', x: number) => {
   return side === 'L' ? x >= cx - 1 : x <= cx + 1
 }
 
+/** A uv territory in plate units on one side: the half-section frame from the silhouette's bounding box. */
+function uvPolygon(section: Section, uv: P[], side: 'L' | 'R'): P[] | null {
+  const pts = section.outline.flatMap((s) => shapePolygon(s) ?? [])
+  if (!pts.length) return null
+  const cx = section.w / 2
+  const xs = pts.map((p) => p[0]),
+    ys = pts.map((p) => p[1])
+  const top = Math.min(...ys),
+    bottom = Math.max(...ys)
+  const edge = side === 'L' ? Math.max(...xs) : Math.min(...xs)
+  return uv.map(([u, v]) => [cx + u * (edge - cx), top + v * (bottom - top)])
+}
+
+/**
+ * A zone of a level on one side of the plate, for a free (clicked) lesion
+ * to be compared with: the polygon of a vascular territory, or the named
+ * structures of a forebrain one. Null when the level has no such zone.
+ */
+export function zoneOn(section: Section, level: LesionLevel, zone: string, side: 'L' | 'R'): { poly: P[] } | { items: string[] } | null {
+  const t = TERRITORY[level]?.[zone]
+  if (!t) return null
+  if ('items' in t) return { items: t.items }
+  const poly = uvPolygon(section, t.uv, side)
+  return poly ? { poly } : null
+}
+
+export { inside as insidePolygon, samples as shapeSamples }
+
 export function territoryOn(section: Section, lesion: Lesion): TerritoryOnPlate | null {
   if (!plateShows(section, lesion.level)) return null
   const t = TERRITORY[lesion.level]?.[lesion.zone]
@@ -239,16 +269,8 @@ export function territoryOn(section: Section, lesion: Lesion): TerritoryOnPlate 
     return shapes.length ? { shapes, clip: false, hits } : null
   }
 
-  // The half-section frame from the silhouette's bounding box.
-  const pts = section.outline.flatMap((s) => shapePolygon(s) ?? [])
-  if (!pts.length) return null
-  const cx = section.w / 2
-  const xs = pts.map((p) => p[0]),
-    ys = pts.map((p) => p[1])
-  const top = Math.min(...ys),
-    bottom = Math.max(...ys)
-  const edge = lesion.side === 'L' ? Math.max(...xs) : Math.min(...xs)
-  const poly: P[] = t.uv.map(([u, v]) => [cx + u * (edge - cx), top + v * (bottom - top)])
+  const poly = uvPolygon(section, t.uv, lesion.side)
+  if (!poly) return null
 
   const hits: string[] = []
   for (const e of entries) {

@@ -860,6 +860,36 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   → faqat Wallenberg.
 - `topics.ts` pathways mavzusiga `path-v` darsi (7 qadam, viktorina — VPM). audit-lesions 0.
 
+### 5.3-3d — Plastinkani bosib erkin o'choq (2026-11-19)
+
+- Shikastlanish tabi → "O'choq → belgilar" ichida "Hudud | Nuqta" (faqat ko'ndalang/koronar/aksial plastinkada —
+  `focalPlate()` = `plateLevel` + `plateShows`). Nuqta rejimida `Figure` `onPlace` oladi: SVG `getScreenCTM()` orqali
+  plastinka birligi, `stopPropagation` (ZoomPane bo'sh joy → to'liq ekranga o'tmaydi), tuzilmalarni bosish tanlamaydi.
+  Sudrash — surish, o'choq qo'ymaydi (ZoomPane `clickCapture`). Disk + oq nishon (`pin`), radius slayderi 0.5–12 mm.
+- `src/ui/lesionFocal.ts` `focalOn(section, {plate,x,y,rMm})`:
+  - masshtab: `pipeline/section_frames.json` oynasi (darajaning o'z meshlari + 5 mm chegara) − 10 mm, plastinka
+    silueti kengligiga bo'linadi. U1 0.058 … B5 0.160 mm/birlik. Taxminiy, UI'da "≈".
+  - tuzilma tushadi: har yarmida alohida, kontur namunalarining ≥20% diskda, yoki markaz shu tuzilmada (ENG ICHKI
+    kontur yoki chiziqqa ≤ eni masofa — aks holda CST lakunasi `ic-pl`ni ham olib sezgi yo'lini kesardi), chiziq
+    tuzilmalar uchun istalgan namuna.
+  - yo'l kesiladi: shu darajadagi bekat itemi S tomonda tushsa → S === bekat tomoni ? o'ng tana : chap tana; o'rta chiziq
+    bekati + disk o'rta chiziqni kesib o'tsa → ikki tomon. `also` orqali o'tuvchi bekatlarga `TRANSIT` itemlari qo'shiladi
+    (kapsula: `ic-pl`, `tcr` — DCML/ALS/V talamokortikal tolalari).
+  - klassik hududlar: diskdagi 9×9 to'r nuqtalarining hudud ko'pburchagiga tushgan ulushi (`zoneOn()` —
+    `lesionTerritory.ts` dan eksport); uv `all` (butun yarim) tashlanadi, kapsula/talamus `all` (tuzilma) qoladi.
+    Hududga bog'liq kalla belgilari (Horner, markaziy yuz falaji) — ustma-ustlik ≥50% bo'lsa.
+- Natija (headless): U3 ALS r2 → ALS qarama-qarshi + disfagiya + Horner, PICA 100%; U3 piramida → CST + XII (Dejerine);
+  U3 o'rta chiziq r3 → DCML ikki tomonda; K1 VI yadrosi → INO + qarash falaji + VI + VII (Foville), paramedian 99%;
+  O2 qizil yadro → III + qarama-qarshi ataksiya (Claude); B5 `cst-ic` r1–2 → faqat CST (sof harakat lakunasi),
+  `tcr` → DCML+ALS+V (sof sezgi), `ic-pl` r4 → sensomotor; U1 `lcst` → CST o'sha tomonda + Horner.
+- Panel: daraja · tomon (o'rta chiziq → "ikki tomonda"), diametr <15 mm → lakuna eslatmasi, yo'llar va kalla belgilari
+  jadvali (hudud rejimi bilan umumiy `tractTable`/`signTable`), "kesishgan belgilar", klassik hududlar %, tuzilmalar ulush
+  % bilan, "Butun hudud bilan solishtirish" (eng ko'p ustma-ust hududga o'tadi) va "3D da ko'rish" (o'sha hudud darsi).
+- audit-lesions 0 (hudud rejimi o'zgarmagan; `uvPolygon` faqat ajratib olindi).
+- QOLDI / PhD: bir nechta o'choq (ko'p o'choqli SM, ikki tomonlama lakunalar); real kesim / atlas ko'rinishida bosish
+  (MNI nuqta → atlas sohalari); 3D darsda aynan shu disk (hozir eng yaqin hudud darsi); tomir havzasi chegara zonasi
+  ehtimolligi (Tatu 1996 xaritalari ehtimollik emas).
+
 ### 5.5 D — Bosib to'liq ekranga (2026-11-17)
 
 - `ZoomPane`: rasmning BO'SH joyiga (tuzilma, nishon, yorliq, atlas sohasi, tugma emas — `closest()` bilan) bitta bosish

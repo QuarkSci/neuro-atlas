@@ -1171,3 +1171,13 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   transform-origin: center;
 }
 .sv-stand-in { color: #ffd27a !important; }
+
+/* Free (point) lesion — 5.3-3d */
+.sv-svg.placing, .sv-svg.placing * { cursor: crosshair; }
+.lz-how { margin-top: 2px; }
+.lz-range { width: 100%; accent-color: #ff3b30; }
+.lz-hits button small { opacity: 0.6; font-size: 10px; margin-left: 2px; }
+.lz-zone { --c: #ff3b30; }
+.sv-lesion-zone path.fill.pinned { stroke-dasharray: none; stroke-width: 2.4; }
+.sv-lesion-pin path { stroke: #fff; stroke-width: 1.6; stroke-linecap: round; }
+.sv-lesion-pin circle { fill: #ff3b30; stroke: #fff; stroke-width: 0.8; }

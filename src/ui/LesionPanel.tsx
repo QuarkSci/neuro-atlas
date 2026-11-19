@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowUpRight, Box, Crosshair, Search } from 'lucide-react'
+import { ArrowUpRight, Box, Crosshair, MousePointerClick, Search, Shapes } from 'lucide-react'
 import { PATHWAYS, type BodySide, type LesionLevel } from '@/data/pathways'
 import { CRANIAL_SIGNS, LEVELS, LEVEL_BY_ID, signature, type Findings, type Lesion } from '@/data/lesions'
 import { SECTION_BY_ID, STRUCTURE_BY_ID, type Section } from '@/data/sections'
@@ -10,7 +10,8 @@ import { useAtlas } from '@/store/useAtlas'
 import { plateLevel } from './pathTrace'
 import { CATEGORY } from './sectionStyle'
 import type { TerritoryOnPlate } from './lesionTerritory'
-import { cranialSigns, localiseWithSigns, type CranialFindings } from './lesionSigns'
+import { cranialSigns, localiseWithSigns, type CranialFindings, type SignHit } from './lesionSigns'
+import { focalPlate, type FocalLesion, type FocalResult } from './lesionFocal'
 
 const TX = {
   forward: { en: 'Lesion → signs', uz: "O'choq → belgilar" },
@@ -62,6 +63,30 @@ const TX = {
   sideL: { en: 'left', uz: 'chap' },
   sideR: { en: 'right', uz: "o'ng" },
   expect: { en: 'also expect', uz: 'yana kutiladi' },
+  byZone: { en: 'Territory', uz: 'Hudud' },
+  byPoint: { en: 'Point', uz: 'Nuqta' },
+  placeHint: {
+    en: 'Tap anywhere on the plate to drop a lesion there; tap again to move it.',
+    uz: "O'choq qo'yish uchun plastinkaning istalgan joyini bosing; boshqa joyni bossangiz o'choq o'sha yerga ko'chadi.",
+  },
+  radius: { en: 'Radius', uz: 'Radius' },
+  approx: {
+    en: 'The plates are schematic: millimetres are estimated from the atlas cut of the same level (≈).',
+    uz: 'Plastinkalar sxematik: millimetr shu darajadagi atlas kesimidan taxminan hisoblanadi (≈).',
+  },
+  where: { en: 'Where it lies', uz: 'Qayerda joylashgan' },
+  midline: { en: 'crosses the midline — signs on both sides', uz: "o'rta chiziqni kesib o'tadi — belgilar ikki tomonda" },
+  inZone: { en: 'Classic territories under the lesion', uz: "O'choq ostidagi klassik hududlar" },
+  noZone: {
+    en: 'Outside every classic territory (or between them): a border-zone or atypical lesion.',
+    uz: "Birorta klassik hududga to'g'ri kelmaydi (yoki ular orasida): chegara zonasi yoki atipik o'choq.",
+  },
+  toZone: { en: 'Compare with the whole territory', uz: 'Butun hudud bilan solishtirish' },
+  share: { en: 'share of the structure in the lesion', uz: "tuzilmaning o'choqqa tushgan ulushi" },
+  lacune: {
+    en: 'under 15 mm across: the size of a lacune (a single penetrating artery).',
+    uz: "diametri 15 mm dan kichik: lakuna o'lchami (bitta penetratsiyalovchi arteriya).",
+  },
   rule: {
     en: 'Rule: a lesion above a tract’s crossing gives signs on the opposite side of the body, below it on the same side.',
     uz: "Qoida: yo'l kesishmasidan yuqoridagi o'choq belgilarni tananing qarama-qarshi tomonida, pastdagisi — o'sha tomonda beradi.",
@@ -79,6 +104,7 @@ export function LesionPanel({
   setLesion,
   territory,
   onPick,
+  point,
 }: {
   section: Section
   lesion: Lesion
@@ -86,6 +112,14 @@ export function LesionPanel({
   /** The lesion's territory on the open plate (null: the plate does not show this level). */
   territory: TerritoryOnPlate | null
   onPick: (itemId: string) => void
+  /** Point mode: a free disc lesion dropped on the plate. */
+  point: {
+    on: boolean
+    set: (on: boolean) => void
+    focal: FocalLesion | null
+    setFocal: (f: FocalLesion | null) => void
+    result: FocalResult | null
+  }
 }) {
   const l = useL()
   const { openSection, setPathway, setLesson } = useAtlas()
@@ -113,11 +147,158 @@ export function LesionPanel({
   }, [])
   // Crossed: a cranial sign on one side, a long tract on the other.
   const crossed = signs.some((h) => h.side === lesion.side && h.via.length) && PATHWAYS.some((p) => sig[p.id] !== 'none' && sig[p.id] !== lesion.side)
-  const sideText = (s: BodySide | 'B') => (s === 'B' ? l(TX.both) : `${l(s === 'L' ? TX.sideL : TX.sideR)} · ${l(s === lesion.side ? TX.ipsi : TX.contra)}`)
+  // Ipsi / contra relative to the lesion's side (none for a free lesion across the midline).
+  const fr = point.on ? point.result : null
+  const refSide: BodySide | 'B' = fr ? fr.side : lesion.side
+  const rel = (s: BodySide) => (refSide === 'B' ? '' : ` · ${l(s === refSide ? TX.ipsi : TX.contra)}`)
+  const sideText = (s: BodySide | 'B') => (s === 'B' ? l(TX.both) : `${l(s === 'L' ? TX.sideL : TX.sideR)}${rel(s)}`)
 
   const half = (s: BodySide, face?: boolean) => l(face ? (s === 'L' ? TX.faceL : TX.faceR) : s === 'L' ? TX.bodyL : TX.bodyR)
-  const bodyText = (s: BodySide | 'B', face?: boolean) => (s === 'B' ? l(TX.both) : `${half(s, face)} · ${l(s === lesion.side ? TX.ipsi : TX.contra)}`)
+  const bodyText = (s: BodySide | 'B', face?: boolean) => (s === 'B' ? l(TX.both) : `${half(s, face)}${rel(s)}`)
   const plate = level.plate ? SECTION_BY_ID.get(level.plate) : undefined
+  const canPlace = !!focalPlate(section)
+
+  const tractTable = (sg: Record<string, BodySide | 'none' | 'B'>) => (
+    <div className="lz-table">
+      {PATHWAYS.map((p) => {
+        const s = sg[p.id]
+        return (
+          <button
+            key={p.id}
+            className={`lz-row ${s === 'none' ? 'spared' : 'hit'}`}
+            style={{ '--c': p.color } as React.CSSProperties}
+            onClick={() => setPathway(p.id)}
+            title={l(p.title)}
+          >
+            <i />
+            <span className="lz-mod">
+              <b>{l(p.short)}</b>
+              <small>{l(p.modality)}</small>
+            </span>
+            <span className="lz-res">{s === 'none' ? l(TX.spared) : `${l(TX.lost)}: ${bodyText(s, p.body === 'face')}`}</span>
+          </button>
+        )
+      })}
+    </div>
+  )
+  const signTable = (list: SignHit[]) =>
+    list.length ? (
+      <div className="lz-table">
+        {list.map((h) => (
+          <div key={h.sign.id} className="lz-row hit lz-cn" title={h.via.map((id) => (STRUCTURE_BY_ID.get(id) ? l(STRUCTURE_BY_ID.get(id)!.name) : id)).join(', ')}>
+            <i />
+            <span className="lz-mod">
+              <b>{l(h.sign.name)}</b>
+              <small>{l(h.sign.detail)}</small>
+            </span>
+            <span className="lz-res">{sideText(h.side)}</span>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <p className="sv-hint">{l(TX.noCranial)}</p>
+    )
+  const isCrossed = (sg: Record<string, BodySide | 'none' | 'B'>, list: SignHit[], side: BodySide | 'B') =>
+    side !== 'B' && list.some((h) => h.side === side && h.via.length) && PATHWAYS.some((p) => sg[p.id] !== 'none' && sg[p.id] !== side)
+
+  // Point mode: what a disc dropped on the plate takes in.
+  const focalView = () => {
+    const f = point.focal
+    const r = point.result
+    const rMm = f?.rMm ?? 3
+    const best = r?.zones[0]
+    return (
+      <>
+        <p className="sv-hint">{l(TX.placeHint)}</p>
+        <h4>
+          {l(TX.radius)} · {r?.mmPerUnit ? '≈ ' : ''}
+          {rMm.toFixed(1)} mm
+        </h4>
+        <input
+          className="lz-range"
+          type="range"
+          min={0.5}
+          max={12}
+          step={0.5}
+          value={rMm}
+          disabled={!f}
+          onChange={(e) => f && point.setFocal({ ...f, rMm: Number(e.target.value) })}
+          aria-label={l(TX.radius)}
+        />
+        {r && (
+          <>
+            <p className="sv-note">
+              <b>{l(LEVEL_BY_ID.get(r.level)!.name)}</b> · {r.side === 'B' ? l(TX.midline) : l(TX[r.side])}
+              {rMm * 2 < 15 ? ` — ${l(TX.lacune)}` : ''}
+            </p>
+            {tractTable(r.sig)}
+            <h4>{l(TX.cranial)}</h4>
+            {signTable(r.signs)}
+            {isCrossed(r.sig, r.signs, r.side) && <p className="sv-note lz-crossed">{l(TX.crossed)}</p>}
+
+            <h4>{l(TX.inZone)}</h4>
+            {r.zones.length ? (
+              <div className="lz-table">
+                {r.zones.map((z) => (
+                  <div key={`${z.zone.id}-${z.side}`} className="lz-row lz-zone">
+                    <i />
+                    <span className="lz-mod">
+                      <b>
+                        {l(z.zone.name)} · {l(TX[z.side])}
+                      </b>
+                      {z.zone.syndrome && <small>{l(z.zone.syndrome.name)}</small>}
+                    </span>
+                    <span className="lz-res">{Math.round(z.overlap * 100)}%</span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="sv-hint">{l(TX.noZone)}</p>
+            )}
+
+            <h4>{l(TX.hits)}</h4>
+            <div className="lz-hits">
+              {r.hits.map((h) => {
+                const info = STRUCTURE_BY_ID.get(h.id)
+                if (!info) return null
+                return (
+                  <button
+                    key={h.id}
+                    style={{ '--c': CATEGORY[info.cat].color } as React.CSSProperties}
+                    onClick={() => onPick(h.id)}
+                    title={`${Math.round(h.share * 100)}% — ${l(TX.share)}`}
+                  >
+                    <i />
+                    {l(info.name)}
+                    <small>{Math.round(h.share * 100)}%</small>
+                  </button>
+                )
+              })}
+            </div>
+            <div className="lz-actions">
+              {best && (
+                <button
+                  className="sv-3d"
+                  onClick={() => {
+                    setLesion({ level: r.level, side: best.side, zone: best.zone.id })
+                    point.set(false)
+                  }}
+                >
+                  <Shapes size={13} /> {l(TX.toZone)}
+                </button>
+              )}
+              {best && (
+                <button className="sv-3d" onClick={() => setLesson(lesionLessonId({ level: r.level, side: best.side, zone: best.zone.id }))}>
+                  <Box size={13} /> {l(TX.in3d)}
+                </button>
+              )}
+            </div>
+            {r.mmPerUnit && <p className="sv-note">{l(TX.approx)}</p>}
+          </>
+        )}
+      </>
+    )
+  }
 
   return (
     <div className="lz">
@@ -130,7 +311,20 @@ export function LesionPanel({
         ))}
       </div>
 
-      {mode === 'forward' ? (
+      {mode === 'forward' && canPlace && (
+        <div className="lz-seg lz-how">
+          <button className={!point.on ? 'on' : ''} onClick={() => point.set(false)}>
+            <Shapes size={13} /> {l(TX.byZone)}
+          </button>
+          <button className={point.on ? 'on' : ''} onClick={() => point.set(true)}>
+            <MousePointerClick size={13} /> {l(TX.byPoint)}
+          </button>
+        </div>
+      )}
+
+      {mode === 'forward' && point.on && canPlace ? (
+        focalView()
+      ) : mode === 'forward' ? (
         <>
           <h4>{l(TX.level)}</h4>
           <div className="lz-chips">
@@ -157,45 +351,10 @@ export function LesionPanel({
             ))}
           </div>
 
-          <div className="lz-table">
-            {PATHWAYS.map((p) => {
-              const s = sig[p.id]
-              return (
-                <button
-                  key={p.id}
-                  className={`lz-row ${s === 'none' ? 'spared' : 'hit'}`}
-                  style={{ '--c': p.color } as React.CSSProperties}
-                  onClick={() => setPathway(p.id)}
-                  title={l(p.title)}
-                >
-                  <i />
-                  <span className="lz-mod">
-                    <b>{l(p.short)}</b>
-                    <small>{l(p.modality)}</small>
-                  </span>
-                  <span className="lz-res">{s === 'none' ? l(TX.spared) : `${l(TX.lost)}: ${bodyText(s, p.body === 'face')}`}</span>
-                </button>
-              )
-            })}
-          </div>
+          {tractTable(sig)}
 
           <h4>{l(TX.cranial)}</h4>
-          {signs.length ? (
-            <div className="lz-table">
-              {signs.map((h) => (
-                <div key={h.sign.id} className="lz-row hit lz-cn" title={h.via.map((id) => (STRUCTURE_BY_ID.get(id) ? l(STRUCTURE_BY_ID.get(id)!.name) : id)).join(', ')}>
-                  <i />
-                  <span className="lz-mod">
-                    <b>{l(h.sign.name)}</b>
-                    <small>{l(h.sign.detail)}</small>
-                  </span>
-                  <span className="lz-res">{sideText(h.side)}</span>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="sv-hint">{l(TX.noCranial)}</p>
-          )}
+          {signTable(signs)}
           {crossed && <p className="sv-note lz-crossed">{l(TX.crossed)}</p>}
 
           {zone.syndrome && (
