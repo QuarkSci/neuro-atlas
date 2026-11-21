@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowUpRight, Box, Crosshair, MousePointerClick, Plus, Search, Shapes, Trash2, X } from 'lucide-react'
+import { ArrowUpRight, Box, Crosshair, GraduationCap, MousePointerClick, Plus, Search, Shapes, Trash2, X } from 'lucide-react'
 import { PATHWAYS, type BodySide, type LesionLevel } from '@/data/pathways'
 import { CRANIAL_SIGNS, LEVELS, LEVEL_BY_ID, signature, type Findings, type Lesion } from '@/data/lesions'
 import { SECTION_BY_ID, STRUCTURE_BY_ID, type Section } from '@/data/sections'
@@ -12,6 +12,8 @@ import { CATEGORY } from './sectionStyle'
 import type { TerritoryOnPlate } from './lesionTerritory'
 import { cranialSigns, localiseWithSigns, type CranialFindings, type SignHit } from './lesionSigns'
 import { focalPlate, type FocalLesion, type FocalSet } from './lesionFocal'
+import { FocusTime, McDonaldPanel } from './McDonaldPanel'
+import { msCase } from './mcdonald'
 
 const TX = {
   forward: { en: 'Lesion → signs', uz: "O'choq → belgilar" },
@@ -78,6 +80,11 @@ const TX = {
   remove: { en: 'Remove', uz: "O'chirish" },
   clear: { en: 'Clear all', uz: 'Hammasini tozalash' },
   together: { en: 'All lesions together', uz: "Barcha o'choqlar birgalikda" },
+  msCase: { en: 'MS case', uz: 'TS keysi' },
+  msCaseHint: {
+    en: 'Teaching case: INO from an enhancing MLF plaque, a silent periventricular lesion, a new juxtacortical one at 6 months.',
+    uz: "O'quv keysi: Gd+ MLF o'chog'idan INO, belgisiz periventrikulyar o'choq, 6 oyda yangi po'stloq yoni o'chog'i.",
+  },
   oneFocus: { en: 'Lesion {n}', uz: "{n}-o'choq" },
   multiLevel: {
     en: 'Lesions at different levels: a picture no single lesion explains — think multiple sclerosis (lesions separated in space), emboli, metastases or vasculitis.',
@@ -141,6 +148,9 @@ export function LesionPanel({
     adding: boolean
     setAdding: (on: boolean) => void
     set$: FocalSet
+    /** Time axis position in months (null: every lesion). */
+    now: number | null
+    setNow: (t: number | null) => void
   }
 }) {
   const l = useL()
@@ -260,6 +270,20 @@ export function LesionPanel({
               <Plus size={12} /> {l(TX.add)}
             </button>
           )}
+          <button
+            className="lz-add"
+            title={l(TX.msCaseHint)}
+            onClick={() => {
+              const c = msCase()
+              point.setFoci(c)
+              point.setActive(0)
+              point.setAdding(false)
+              point.setNow(null)
+              if (c[0] && c[0].plate !== section.id) openSection(c[0].plate)
+            }}
+          >
+            <GraduationCap size={12} /> {l(TX.msCase)}
+          </button>
           {many && (
             <button
               className="lz-add"
@@ -290,6 +314,7 @@ export function LesionPanel({
               onChange={(e) => point.setFoci(foci.map((x, i) => (i === active ? { ...x, rMm: Number(e.target.value) } : x)))}
               aria-label={l(TX.radius)}
             />
+            <FocusTime f={f} set={(g) => point.setFoci(foci.map((x, i) => (i === active ? g : x)))} />
           </>
         )}
         {many && (
@@ -375,6 +400,7 @@ export function LesionPanel({
             {r.mmPerUnit && <p className="sv-note">{l(TX.approx)}</p>}
           </>
         )}
+        {foci.length > 0 && <McDonaldPanel foci={foci} set$={set$} now={point.now} setNow={point.setNow} active={active} setActive={point.setActive} />}
       </>
     )
   }

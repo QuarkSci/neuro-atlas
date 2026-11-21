@@ -88,7 +88,9 @@ export function SectionViewer() {
   const [foci, setFoci] = useState<FocalLesion[]>([])
   const [activeFocus, setActiveFocus] = useState(0)
   const [adding, setAdding] = useState(false)
-  const fociSet = useMemo(() => focalSet(foci), [foci])
+  // Time axis: months since the first lesion; null shows every lesion.
+  const [now, setNow] = useState<number | null>(null)
+  const fociSet = useMemo(() => focalSet(foci, now), [foci, now])
   const placing = !!section && tab === 'lesion' && pointMode && !!focalPlate(section)
   const territory = useMemo(
     () => (section && tab === 'lesion' ? (pointMode ? focalTerritory(section, foci, fociSet, activeFocus) : territoryOn(section, lesion)) : null),
@@ -98,7 +100,8 @@ export function SectionViewer() {
     const cur = foci[activeFocus]
     // A new lesion when asked for one, when there is none yet, or when the active one sits on another plate.
     if (adding || !cur || cur.plate !== plate) {
-      setFoci([...foci, { plate, x, y, rMm: cur?.rMm ?? 3 }])
+      // It appears at the time the axis shows (or with the latest lesion).
+      setFoci([...foci, { plate, x, y, rMm: cur?.rMm ?? 3, t: now ?? Math.max(0, ...foci.map((f) => f.t ?? 0)) }])
       setActiveFocus(foci.length)
       setAdding(false)
     } else setFoci(foci.map((f, i) => (i === activeFocus ? { ...f, x, y } : f)))
@@ -465,7 +468,7 @@ export function SectionViewer() {
                 setLesion={setLesion}
                 territory={territory}
                 onPick={pick}
-                point={{ on: pointMode, set: setPointMode, foci, setFoci, active: activeFocus, setActive: setActiveFocus, adding, setAdding, set$: fociSet }}
+                point={{ on: pointMode, set: setPointMode, foci, setFoci, active: activeFocus, setActive: setActiveFocus, adding, setAdding, set$: fociSet, now, setNow }}
               />
             ) : tab === 'structures' && cutView ? (
               <AtlasList

@@ -31,6 +31,10 @@ export interface FocalLesion {
   y: number
   /** Radius in mm. */
   rMm: number
+  /** When it appeared, months from the first lesion (time axis; default 0). */
+  t?: number
+  /** Gadolinium-enhancing on MRI (an active lesion, weeks old). */
+  gd?: boolean
 }
 
 export interface FocalHit {
@@ -234,10 +238,11 @@ export interface FocalSet {
 
 const merge = (a: BodySide | 'none' | 'B', b: BodySide | 'none' | 'B') => (a === 'none' ? b : b === 'none' || a === b ? a : 'B')
 
-export function focalSet(foci: FocalLesion[]): FocalSet {
+/** `now`: the time on the time axis (months) — lesions that appear later are left out; null takes them all. */
+export function focalSet(foci: FocalLesion[], now: number | null = null): FocalSet {
   const each = foci.map((f) => {
     const s = SECTION_BY_ID.get(f.plate)
-    return s ? focalOn(s, f) : null
+    return s && (now === null || (f.t ?? 0) <= now) ? focalOn(s, f) : null
   })
   const sig: FocalSet['sig'] = Object.fromEntries(PATHWAYS.map((p) => [p.id, 'none' as const]))
   const signs = new Map<string, SignHit>()

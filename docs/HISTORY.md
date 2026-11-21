@@ -899,6 +899,30 @@ teng. Kesimlar alohida tab emas, O'rganish mavzulari ichida qoladi.
   (MNI nuqta → atlas sohalari); 3D darsda aynan shu disk (hozir eng yaqin hudud darsi); tomir havzasi chegara zonasi
   ehtimolligi (Tatu 1996 xaritalari ehtimollik emas).
 
+### 5.3-3e — Vaqt o'qi va McDonald mezonlari (2026-11-21)
+
+Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erkin o'choqning PhD davomi (SM: vaqtda tarqalish).
+- `FocalLesion` ga `t` (birinchi o'choqdan oylar) va `gd` (Gd+). `focalSet(foci, now)` — `now` dan keyin paydo bo'lgan
+  o'choqlar `each[i] = null` (plastinkada chizilmaydi, jadvallarga kirmaydi). `SectionViewer`: `now` holati (null = hammasi);
+  yangi o'choq `now` (yoki eng oxirgi `t`) vaqtida qo'yiladi.
+- `src/ui/mcdonald.ts`: `mcArea()` — miya ustuni darajasi → infratentorial; oldingi miya plastinkasida disk `lv` ga
+  (≤ radius + 1 mm) tegsa → periventrikulyar, `ins` ga → po'stloq yoni, aks holda "chuqur" (soha emas). Diametr <3 mm
+  hisoblanmaydi. Xuruj = belgili yangi o'choq paydo bo'lgan har bir vaqt (+ optik nevrit). DIT: bitta MRTda Gd+ va Gd−
+  (eskiroq o'choq Gd− hisoblanadi), kuzatuvda yangi o'choq, likvor OCB, 2-xuruj. 2017 jadvali (xurujlar × belgili o'choqlar);
+  2024 (soddalashtirilgan): 5 soha (+ ko'ruv nervi), ≥4 → TS; 2–3 → DIT / likvor / CVS·PRL; RIS ham bo'lishi mumkin.
+  Ogohlantirishlar: >2 sm (tumefaktiv), bir vaqtda ≥8 mm va arterial hududni ≥80% to'ldirgan o'choqlar (insult).
+  `msCase()` — o'quv keysi: K1 MLF Gd+ (INO, 0 oy) + B2 yon qorincha (0 oy) + B3 orolcha (6 oy).
+- Manbalar (Crossref bilan tekshirilgan): Thompson 2018 Lancet Neurol 17:162, doi:10.1016/S1474-4422(17)30470-2;
+  Montalban 2025 Lancet Neurol 24:850, doi:10.1016/S1474-4422(25)00270-4.
+- UI: `src/ui/McDonaldPanel.tsx` — faol o'choq uchun "Paydo bo'lgan vaqti" (0/1/3/6/12/24 oy) + Gd+; vaqt o'qi SVG
+  (√t masshtab, soha rangi, belgili = to'liq, Gd+ = sariq shtrix halqa, tikni bosish = shu vaqt) + slayder (oxiri = hammasi);
+  soha kartalari, plastinkadan tashqari topilmalar (orqa miya, po'stloq, ko'ruv nervi, optik nevrit xuruji, likvor, CVS/PRL),
+  xurujlar/DIS/DIT qatorlari, 2017 va 2024 xulosasi ("hali emas: …" nima yetishmasligi bilan).
+- Tekshiruv: 10 stsenariy headless (CIS → DIS+DIT kerak; Gd+ MLF + Gd− PV → TS; 3 oyda DIT yo'q, 6 oyda yangi o'choq → TS;
+  OCB → TS; RIS; 2024 4 soha → TS; tumefaktiv bayroq), audit-lesions 0, tsc, build, 4 screenshot.
+- QOLDI / PhD: 3D da aynan shu disklar (plastinka → MNI), real kesim/atlasda bosish → MNI nuqta; PPMS yo'li (1 yil
+  progressiya); o'choq shakli (Douson barmoqlari — kallozal-septal oval), MRT T2/FLAIR ko'rinishi.
+
 ### PERF-1 — Real kesimda qotish (2026-11-19)
 
 - Foydalanuvchi: "real suratda harakat juda kech, interfeys qotib ishlavotti". `scripts/perf-real.mjs` (CDP
