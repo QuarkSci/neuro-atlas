@@ -132,7 +132,7 @@ export const openrouter = compat({
   base: () => 'https://openrouter.ai/api/v1',
   headers: (c) => ({ ...bearer(c), 'HTTP-Referer': location.origin, 'X-Title': 'Neuro Atlas' }),
   // The three families the panel offers (OpenRouter lists hundreds).
-  keep: (m) => /^(anthropic|openai|google)\//.test(m.id),
+  keep: (m) => /^(anthropic|openai|google)\//.test(m.id) && !/(tts|image|audio|embedding|realtime|transcribe|live)/i.test(m.id),
   publicModels: true,
 })
 

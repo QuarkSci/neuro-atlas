@@ -4,26 +4,52 @@ import { sse } from '../sse'
 /** Google Gemini API (AI Studio key), streamGenerateContent over SSE. */
 const BASE = 'https://generativelanguage.googleapis.com/v1beta'
 
+/**
+ * Gemini variants that are not chat models, though they list generateContent:
+ * speech (TTS), image and video generation, embeddings, live/native audio,
+ * computer use, robotics. They reject a system instruction, tools or text
+ * answers ("Developer instruction is not enabled for this model").
+ */
+const NOT_CHAT = /(tts|image|imagen|veo|lyria|embedding|aqa|audio|live|native|transcri|computer-use|robotics|learnlm)/i
+
 export const gemini: Provider = {
   id: 'google',
   async listModels(cred, signal) {
     const res = await call(`${BASE}/models?pageSize=1000`, { headers: { 'x-goog-api-key': cred.key ?? '' }, signal })
     const body = await res.json()
     return (body.models ?? [])
-      .filter((m: { name: string; supportedGenerationMethods?: string[] }) => m.name.includes('gemini') && m.supportedGenerationMethods?.includes('generateContent'))
+      .filter(
+        (m: { name: string; supportedGenerationMethods?: string[] }) =>
+          m.name.includes('gemini') && !NOT_CHAT.test(m.name) && m.supportedGenerationMethods?.includes('generateContent'),
+      )
       .map((m: { name: string; displayName?: string }) => ({ id: m.name.replace(/^models\//, ''), name: m.displayName || m.name }))
   },
   async *stream(cred, req): AsyncGenerator<StreamEvent> {
-    const res = await call(`${BASE}/models/${encodeURIComponent(req.model)}:streamGenerateContent?alt=sse`, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json', 'x-goog-api-key': cred.key ?? '' },
-      body: JSON.stringify({
-        systemInstruction: { parts: [{ text: req.system }] },
-        contents: toContents(req.messages),
-        ...(req.tools?.length ? { tools: [{ functionDeclarations: req.tools.map((t) => ({ name: t.name, description: t.description, parameters: clean(t.parameters) })) }] } : {}),
-      }),
-      signal: req.signal,
-    })
+    const post = (system: boolean) => {
+      const contents = toContents(req.messages)
+      // Without a system instruction the tutor's brief goes in front of the first user turn.
+      if (!system && contents[0]?.role === 'user') contents[0] = { role: 'user', parts: [{ text: `${req.system}\n\n---\n` }, ...contents[0].parts] }
+      return call(`${BASE}/models/${encodeURIComponent(req.model)}:streamGenerateContent?alt=sse`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-goog-api-key': cred.key ?? '' },
+        body: JSON.stringify({
+          ...(system ? { systemInstruction: { parts: [{ text: req.system }] } } : {}),
+          contents,
+          ...(req.tools?.length
+            ? { tools: [{ functionDeclarations: req.tools.map((t) => ({ name: t.name, description: t.description, parameters: clean(t.parameters) })) }] }
+            : {}),
+        }),
+        signal: req.signal,
+      })
+    }
+    let res: Response
+    try {
+      res = await post(true)
+    } catch (e) {
+      // Some models (Gemma, a few previews) take no system instruction: send it as text instead.
+      if (!(e instanceof AIError && e.kind === 'bad' && /instruction|system/i.test(e.message))) throw e
+      res = await post(false)
+    }
     let usage: StreamEvent | null = null
     // Every part the model sent (thought signatures included) goes back unchanged on the next turn.
     const parts: GPart[] = []

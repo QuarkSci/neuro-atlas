@@ -27,7 +27,7 @@ const PREFER: Partial<Record<ProviderId, RegExp[]>> = {
   anthropic: [/^claude-opus-5-5$/, /^claude-opus/, /^claude-sonnet/],
   openrouter: [/^anthropic\/claude-opus/, /^anthropic\/claude-sonnet/, /^openai\/gpt-5/, /^google\/gemini/],
   openai: [/^gpt-5(\.\d+)?$/, /^gpt-5/, /^gpt-4\.1$/, /^gpt-4o$/],
-  google: [/^gemini-[\d.]+-pro$/, /^gemini-[\d.]+-pro/, /^gemini-[\d.]+-flash$/],
+  google: [/^gemini-[\d.]+-pro$/, /^gemini-[\d.]+-flash$/, /^gemini-[\d.]+-pro(-latest)?$/, /^gemini-[\d.]+-flash(-latest)?$/, /^gemini-[\d.]+-pro/, /^gemini-[\d.]+-flash/],
 }
 
 export function pickModel(p: ProviderId, models: ModelInfo[]): string | null {

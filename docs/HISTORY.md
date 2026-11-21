@@ -947,6 +947,19 @@ Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erk
 - Tekshiruv: B5 `cst-ic` lakunasi → CST po'stloqdan aynan sharga qadar oqadi, pastda qorong'i (screenshot); TS keysi
   3D (4 qadam); eski `lesion:pons:L:medial` darsi o'zgarishsiz; McDonald xulosasi; audit-lesions 0; tsc; build.
 
+### AI-fix — Gemini: chatga yaramaydigan modellar (2026-11-21)
+
+- Foydalanuvchi xatosi: avtomatik tanlangan `gemini-3.8-flash-lite-tts` → "Developer instruction is not enabled for this
+  model". Sabab: `generateContent` ni TTS/rasm/audio/embedding modellari ham e'lon qiladi; afzallik regexlari mos kelmasa
+  ro'yxatning birinchisi olinardi.
+- `gemini.ts`: `NOT_CHAT` (tts, image, imagen, veo, lyria, embedding, aqa, audio, live, native, transcri, computer-use,
+  robotics, learnlm) ro'yxatdan chiqariladi; tizim ko'rsatmasi rad etilsa (400 "instruction/system") so'rov bir marta
+  `systemInstruction`siz, ko'rsatma birinchi user qismiga qo'yilib qayta yuboriladi. OpenRouter ro'yxatidan ham tts/image/
+  audio/embedding/realtime/live olib tashlandi. `pickModel` google: `-pro` → `-flash` (aniq, keyin `-latest`, keyin har qanday).
+- Saqlangan eski model keyingi `loadModels`da ro'yxatda bo'lmagani uchun avtomatik almashadi (sahifani yangilash yetarli).
+- Tekshiruv: soxta ro'yxat (11 model) → 4 chat modeli qoldi, `gemini-3.8-pro` tanlandi; 400 dan keyin ko'rsatmasiz qayta
+  urinish matn qaytardi.
+
 ### AI-5 — PhD qatlami: rejimlar, yashirin simulyator, adabiyot, Anki (2026-11-21)
 
 - Rejimlar (`useAI.mode`, `na:ai`da saqlanadi; panelda model ostida 4 tugma): **Repetitor** (tushuntirish + ko'rsatish),
