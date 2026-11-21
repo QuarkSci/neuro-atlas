@@ -23,7 +23,8 @@ import type { L10n } from '@/data/types'
 import { useL } from '@/i18n'
 import { PROVIDER_META, PROVIDER_ORDER } from '@/ai/providers'
 import { DEFAULT_LOCAL_URL } from '@/ai/providers/compat'
-import { connected, useAI, type ChatMessage } from '@/ai/useAI'
+import { connected, useAI, type ChatMessage, type TutorMode } from '@/ai/useAI'
+import { BookOpen, Download, GraduationCap, MessageCircleQuestion, Stethoscope } from 'lucide-react'
 import type { AIErrorKind, ProviderId } from '@/ai/types'
 import { Markdown } from './aiMarkdown'
 import { capturePlate, captureFile, plateFigure } from './plateCapture'
@@ -101,6 +102,33 @@ const TX = {
   refused: { en: 'The model declined to answer this.', uz: 'Model bunga javob berishdan bosh tortdi.' },
   tokens: { en: 'tokens', uz: 'token' },
   redo: { en: 'Do it again', uz: 'Qayta bajarish' },
+  modeTutor: { en: 'Tutor', uz: 'Repetitor' },
+  modeSocratic: { en: 'Socratic', uz: 'Sokratik' },
+  modeCase: { en: 'Case', uz: 'Keys' },
+  modeResearch: { en: 'Research', uz: 'Tadqiqot' },
+  modeTutorHint: { en: 'Explains and shows on the model.', uz: "Tushuntiradi va modelda ko'rsatadi." },
+  modeSocraticHint: { en: 'Leads you to the answer with one question at a time.', uz: 'Javobga bittadan savol bilan olib boradi.' },
+  modeCaseHint: {
+    en: 'A patient case built from the simulator: you localise the lesion, it grades with the reverse mode and shows it.',
+    uz: "Simulyatordan qurilgan bemor keysi: siz o'choqni topasiz, u teskari rejim bilan baholaydi va ko'rsatadi.",
+  },
+  modeResearchHint: {
+    en: 'PhD level, with PubMed and Crossref: cites only references it has checked.',
+    uz: 'PhD darajasi, PubMed va Crossref bilan: faqat tekshirilgan manbalarni keltiradi.',
+  },
+  unverified: { en: 'Not verified by PubMed/Crossref in this chat — check before using:', uz: 'Bu suhbatda PubMed/Crossref bilan tekshirilmagan — ishlatishdan oldin tekshiring:' },
+  cardsTitle: { en: 'Anki cards', uz: 'Anki kartalari' },
+  cardsDownload: { en: 'Download for Anki (.txt)', uz: 'Anki uchun yuklab olish (.txt)' },
+  cardsHow: { en: 'Anki → File → Import → this file (tab-separated: front, back).', uz: 'Anki → File → Import → shu fayl (tab bilan ajratilgan: savol, javob).' },
+  c1: { en: 'Give me a brainstem case to localise', uz: 'Menga topish uchun miya ustuni keysini ber' },
+  c2: { en: 'A harder case: two lesions, PhD level', uz: "Qiyinroq keys: ikki o'choq, PhD darajasi" },
+  c3: { en: 'An internal capsule lacune case', uz: 'Ichki kapsula lakunasi keysi' },
+  q1: { en: 'Why is the lesion contralateral above the decussation?', uz: "Nega kesishmadan yuqoridagi o'choq qarama-qarshi tomonda belgi beradi?" },
+  q2: { en: 'Help me work out the blood supply of the medulla', uz: "Uzunchoq miyaning qon ta'minotini o'zim topishimga yordam ber" },
+  q3: { en: 'Quiz me on the facial colliculus', uz: "Yuz do'ngligi bo'yicha meni sinab ko'r" },
+  r1: { en: 'Current evidence on lateral medullary syndrome outcomes', uz: "Lateral uzunchoq miya sindromi oqibatlari bo'yicha hozirgi dalillar" },
+  r2: { en: 'Central vein sign in MS diagnosis: what does the literature say?', uz: 'TS tashxisida markaziy vena belgisi: adabiyot nima deydi?' },
+  r3: { en: 'DTI of the corticospinal tract after capsular stroke', uz: "Kapsula insultidan keyin kortikospinal yo'lning DTI tasviri" },
   attach: { en: 'Attach a picture', uz: 'Rasm biriktirish' },
   shot3d: { en: '3D view as it is now', uz: "3D ko'rinish (hozirgi holati)" },
   shotPlate: { en: 'The open plate', uz: 'Ochiq kesim plastinkasi' },
@@ -204,7 +232,7 @@ function Connect() {
 
 function Chat() {
   const l = useL()
-  const { messages, busy, send, stop, attachments } = useAI()
+  const { messages, busy, send, stop, attachments, mode } = useAI()
   const [draft, setDraft] = useState('')
   const list = useRef<HTMLDivElement>(null)
   const input = useRef<HTMLTextAreaElement>(null)
@@ -229,11 +257,12 @@ function Chat() {
   return (
     <>
       <ModelPicker />
+      <ModeBar />
       <div className="ai-body ai-messages" ref={list}>
         {messages.length === 0 && (
           <div className="ai-suggest">
             <span>{l(TX.suggest)}</span>
-            {[TX.s1, TX.s2, TX.s3].map((s) => (
+            {SUGGEST[mode].map((s) => (
               <button key={s.en} onClick={() => submit(l(s))}>
                 {l(s)}
               </button>
@@ -304,6 +333,12 @@ function Message({ m }: { m: ChatMessage }) {
             </button>
           ))}
         </div>
+      )}
+      {m.actions?.flatMap((x, i) => (x.cards ? [<Flashcards key={`c${i}`} deck={x.cards.deck} cards={x.cards.cards} />] : []))}
+      {m.unverified && (
+        <p className="ai-note ai-unverified">
+          <TriangleAlert size={12} /> {l(TX.unverified)} {m.unverified.join(', ')}
+        </p>
       )}
       {m.refusal && <p className="ai-note">{l(TX.refused) + (typeof m.refusal === 'string' ? ` (${m.refusal})` : '')}</p>}
       {m.error && (
@@ -630,6 +665,70 @@ function Attachments() {
           </button>
         </span>
       ))}
+    </div>
+  )
+}
+
+const MODES: { id: TutorMode; name: L10n; hint: L10n; icon: typeof Sparkles }[] = [
+  { id: 'tutor', name: TX.modeTutor, hint: TX.modeTutorHint, icon: GraduationCap },
+  { id: 'socratic', name: TX.modeSocratic, hint: TX.modeSocraticHint, icon: MessageCircleQuestion },
+  { id: 'case', name: TX.modeCase, hint: TX.modeCaseHint, icon: Stethoscope },
+  { id: 'research', name: TX.modeResearch, hint: TX.modeResearchHint, icon: BookOpen },
+]
+
+const SUGGEST: Record<TutorMode, L10n[]> = {
+  tutor: [TX.s1, TX.s2, TX.s3],
+  socratic: [TX.q1, TX.q2, TX.q3],
+  case: [TX.c1, TX.c2, TX.c3],
+  research: [TX.r1, TX.r2, TX.r3],
+}
+
+/** How the tutor teaches: explain, question, run a case, or research with checked sources. */
+function ModeBar() {
+  const l = useL()
+  const { mode, setMode } = useAI()
+  return (
+    <div className="ai-modes" role="radiogroup" aria-label="Mode">
+      {MODES.map((m) => (
+        <button key={m.id} role="radio" aria-checked={mode === m.id} className={mode === m.id ? 'on' : ''} onClick={() => setMode(m.id)} title={l(m.hint)}>
+          <m.icon size={13} /> {l(m.name)}
+        </button>
+      ))}
+    </div>
+  )
+}
+
+/** Cards from make_flashcards: a preview and a tab-separated file Anki imports. */
+function Flashcards({ deck, cards }: { deck: string; cards: { front: string; back: string }[] }) {
+  const l = useL()
+  const download = () => {
+    // Tabs and newlines inside a field would break the columns.
+    const clean = (x: string) => x.replace(/[\t\r\n]+/g, ' ').trim()
+    const text = ['#separator:tab', '#html:false', `#deck:${clean(deck)}`, ...cards.map((c) => `${clean(c.front)}\t${clean(c.back)}`)].join('\n')
+    const url = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }))
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `${clean(deck).replace(/[^\w-]+/g, '_') || 'neuro-atlas'}.txt`
+    a.click()
+    setTimeout(() => URL.revokeObjectURL(url), 1000)
+  }
+  return (
+    <div className="ai-cards">
+      <b>
+        <Layers size={12} /> {l(TX.cardsTitle)} · {deck} · {cards.length}
+      </b>
+      <ul>
+        {cards.slice(0, 4).map((c, i) => (
+          <li key={i}>
+            <span>{c.front}</span>
+            <small>{c.back}</small>
+          </li>
+        ))}
+      </ul>
+      <button className="ai-secondary" onClick={download}>
+        <Download size={13} /> {l(TX.cardsDownload)}
+      </button>
+      <small>{l(TX.cardsHow)}</small>
     </div>
   )
 }

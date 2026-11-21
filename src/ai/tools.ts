@@ -1,13 +1,13 @@
 import { CONCEPT_BY_ID, LAYERS, PART_BY_ID, leafIds, conceptLeafIds } from '@/data'
 import { LESSONS, LESSON_BY_ID } from '@/data/lessons'
 import { lesionLessonId } from '@/data/lessons/lesion'
-import { LEVELS, LEVEL_BY_ID, signature, type Lesion } from '@/data/lesions'
+import { CRANIAL_SIGNS, LEVELS, LEVEL_BY_ID, signature, type Lesion } from '@/data/lesions'
 import { PATHWAYS, PATHWAY_BY_ID, type BodySide, type LesionLevel } from '@/data/pathways'
 import { normalise, resultLeaves, searchAtlas } from '@/data/search'
-import { SECTIONS, SECTION_BY_ID, STRUCTURE_BY_ID } from '@/data/sections'
-import type { LayerId, Part } from '@/data/types'
+import { SECTIONS, SECTION_BY_ID, STRUCTURE_BY_ID, type Section } from '@/data/sections'
+import type { L10n, LayerId, Part } from '@/data/types'
 import { useAtlas, type View } from '@/store/useAtlas'
-import { cranialSigns } from '@/ui/lesionSigns'
+import { cranialSigns, localiseWithSigns } from '@/ui/lesionSigns'
 import { focalOn, focalPlate, focalSet, structureCentre, type FocalLesion } from '@/ui/lesionFocal'
 import { focalLesson } from '@/ui/focalLesson'
 import { useScreen } from './screen'
@@ -99,6 +99,66 @@ export const TOOLS: ToolSpec[] = [
     parameters: obj({ lesson: str, step: { type: 'number', description: 'Step index from 0' } }, ['lesson']),
   },
   {
+    name: 'simulate_lesion',
+    description:
+      "Compute what a disc lesion would do WITHOUT showing it (for building a case the student must localise): same arguments and read-out as place_lesion. Never invent a case's signs — take them from here.",
+    parameters: obj(
+      {
+        plate: { ...str, description: 'Plate code or id' },
+        structure: { ...str, description: 'Structure id or name on that plate' },
+        side: { type: 'string', enum: ['left', 'right', 'midline'] },
+        radius_mm: { type: 'number', description: 'Radius in mm, 0.5–12 (default 2)' },
+      },
+      ['plate', 'structure', 'side'],
+    ),
+  },
+  {
+    name: 'simulate_territory',
+    description: "Compute a classic territory lesion's read-out WITHOUT showing it (for a case). Same levels and zones as set_lesion_territory.",
+    parameters: obj({ level: { type: 'string', enum: LEVELS.map((l) => l.id) }, side: { type: 'string', enum: ['left', 'right'] }, zone: str }, ['level', 'side', 'zone']),
+  },
+  {
+    name: 'localise',
+    description: `Reverse mode of the simulator: every one-sided territory lesion that gives these findings — use it to check a student's answer and to list the differential. Tracts: ${PATHWAYS.map((p) => `${p.id} (${p.short.en})`).join(', ')}; value = patient side of the deficit. Cranial signs (ids): ${CRANIAL_SIGNS.map((c) => `${c.id} (${c.name.en})`).join(', ')}.`,
+    parameters: obj({
+      tracts: {
+        type: 'array',
+        description: 'Long-tract deficits',
+        items: obj({ tract: { type: 'string', enum: PATHWAYS.map((p) => p.id) }, side: { type: 'string', enum: ['left', 'right'] } }, ['tract', 'side']),
+      },
+      cranial_signs: {
+        type: 'array',
+        description: 'Cranial / level signs',
+        items: obj({ sign: { type: 'string', enum: CRANIAL_SIGNS.map((c) => c.id) }, side: { type: 'string', enum: ['left', 'right'] } }, ['sign', 'side']),
+      },
+    }),
+  },
+  {
+    name: 'search_pubmed',
+    description:
+      'Search PubMed (NCBI E-utilities) by relevance. Returns PMID, title, authors, journal, year, publication types and DOI. In research answers, cite ONLY items returned here or by verify_doi.',
+    parameters: obj({ query: { ...str, description: 'PubMed query (MeSH terms and boolean operators allowed)' }, max: { type: 'number', description: '1–10, default 6' } }, [
+      'query',
+    ]),
+  },
+  {
+    name: 'verify_doi',
+    description: 'Check a DOI in Crossref before citing it (title, journal, year). A DOI that fails here must not be cited.',
+    parameters: obj({ doi: str }, ['doi']),
+  },
+  {
+    name: 'make_flashcards',
+    description:
+      'Make Anki flashcards from what was just taught (the student downloads them as a tab-separated file Anki imports). One fact per card; front = question, back = short answer.',
+    parameters: obj(
+      {
+        deck: { ...str, description: 'Deck name' },
+        cards: { type: 'array', items: obj({ front: str, back: str }, ['front', 'back']) },
+      },
+      ['cards'],
+    ),
+  },
+  {
     name: 'set_view',
     description: `Turn the 3D model to a view and/or choose the atlas layers shown. Layers: ${LAYERS.map((l) => `${l.id} (${l.name.en})`).join(', ')}.`,
     parameters: obj({
@@ -112,9 +172,11 @@ export const TOOLS: ToolSpec[] = [
 export interface ActionNote {
   text: string
   ok: boolean
+  /** make_flashcards: the cards, for the download button. */
+  cards?: { deck: string; cards: { front: string; back: string }[] }
 }
 
-type Out = { content: unknown; note: string; ok?: boolean }
+type Out = { content: unknown; note: string; ok?: boolean; cards?: { deck: string; cards: { front: string; back: string }[] } }
 const side = (s: BodySide | 'B') => (s === 'B' ? 'both' : s === 'L' ? 'left' : 'right')
 
 /** Plate by code or id (case-insensitive). */
@@ -164,9 +226,54 @@ function lesionReadout(lesion: Lesion) {
   }
 }
 
+/** Plate + structure + side → a disc lesion, or a failure the model can read. */
+type Resolved = { fail: Out } | { s: Section; id: string; f: FocalLesion; name: L10n }
+function resolveLesion(a: Record<string, unknown>, uz: boolean): Resolved {
+  const s = plateOf(a.plate)
+  if (!s) return { fail: { content: `unknown plate "${a.plate}"`, note: uz ? 'Plastinka topilmadi' : 'Plate not found', ok: false } as Out }
+  if (!focalPlate(s))
+    return {
+      fail: {
+        content: `${s.code} takes no free lesion (brainstem, thalamus and capsule plates do)`,
+        note: `${s.code}: ${uz ? "o'choq qo'yib bo'lmaydi" : 'no lesions here'}`,
+        ok: false,
+      } as Out,
+    }
+  const id = structureOn(s.id, a.structure)
+  if (!id)
+    return {
+      fail: { content: { error: `no structure "${a.structure}" on ${s.code}`, ...plateContent(s.id) }, note: uz ? 'Tuzilma topilmadi' : 'Structure not found', ok: false } as Out,
+    }
+  const c = structureCentre(s.id, id, a.side === 'right' ? 'R' : a.side === 'midline' ? 'M' : 'L')
+  if (!c) return { fail: { content: 'structure has no outline', note: uz ? "Kontur yo'q" : 'No outline', ok: false } as Out }
+  const f: FocalLesion = { plate: s.id, x: c[0], y: c[1], rMm: num(a.radius_mm, 0.5, 12, 2), t: num(a.time_months, 0, 120, 0), gd: a.gd === true }
+  return { s, id, f, name: STRUCTURE_BY_ID.get(id)!.name }
+}
+
+/** The simulator's read-out for one disc lesion. */
+function focalReadout(s: Section, f: FocalLesion, id: string, sideName: string) {
+  const r = focalOn(s, f)!
+  return {
+    lesion: `${s.code} · ${STRUCTURE_BY_ID.get(id)?.name.en} · ${sideName} · ⌀ ${(f.rMm * 2).toFixed(1)} mm · ${f.t} mo${f.gd ? ' · Gd+' : ''}`,
+    level: LEVEL_BY_ID.get(r.level)?.name.en,
+    crosses_midline: r.side === 'B',
+    structures: r.hits.slice(0, 8).map((h) => `${STRUCTURE_BY_ID.get(h.id)?.name.en ?? h.id} ${Math.round(h.share * 100)}%`),
+    tracts_lost: PATHWAYS.filter((p) => r.sig[p.id] !== 'none').map((p) => `${p.short.en} → ${side(r.sig[p.id] as BodySide | 'B')} ${p.body === 'face' ? 'face' : 'body'}`),
+    cranial_signs: r.signs.map((h) => `${h.sign.name.en} (${side(h.side)})`),
+    classic_territories: r.zones.slice(0, 3).map((z) => `${z.zone.name.en} ${side(z.side)} ${Math.round(z.overlap * 100)}%`),
+  }
+}
+
+/** PMIDs and DOIs the literature tools returned in this conversation — the only ones the tutor may cite. */
+export const VERIFIED = { pmids: new Set<string>(), dois: new Set<string>() }
+function remember(pmid: string | null, doi: string | null) {
+  if (pmid) VERIFIED.pmids.add(pmid)
+  if (doi) VERIFIED.dois.add(doi.toLowerCase())
+}
+
 const num = (v: unknown, lo: number, hi: number, d: number) => (typeof v === 'number' && Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : d)
 
-const RUN: Record<string, (a: Record<string, unknown>, uz: boolean) => Out> = {
+const RUN: Record<string, (a: Record<string, unknown>, uz: boolean) => Out | Promise<Out>> = {
   find_structure: (a, uz) => {
     const hits = searchAtlas(String(a.query ?? ''), (n) => n.en, 8)
     return {
@@ -209,37 +316,107 @@ const RUN: Record<string, (a: Record<string, unknown>, uz: boolean) => Out> = {
   },
 
   place_lesion: (a, uz) => {
-    const s = plateOf(a.plate)
-    if (!s) return { content: `unknown plate "${a.plate}"`, note: uz ? 'Plastinka topilmadi' : 'Plate not found', ok: false }
-    if (!focalPlate(s))
+    const r = resolveLesion(a, uz)
+    if ('fail' in r) return r.fail
+    useAtlas.getState().openSection(r.s.id)
+    useScreen.getState().setCommand({ plate: r.s.id, kind: 'focal', foci: [r.f], replace: a.replace === true })
+    return {
+      content: { ...focalReadout(r.s, r.f, r.id, String(a.side)), note: 'Schematic plate; mm are approximate. Added to any lesions already placed unless replace=true.' },
+      note: `${uz ? "O'choq" : 'Lesion'}: ${r.s.code} · ${uz ? (r.name.uz ?? r.name.en) : r.name.en} · ${uz ? { left: 'chap', right: "o'ng", midline: "o'rta" }[a.side as string] : a.side}`,
+    }
+  },
+
+  // AI-5: the same read-out without touching the screen — to build a case the student must solve.
+  simulate_lesion: (a, uz) => {
+    const r = resolveLesion(a, uz)
+    if ('fail' in r) return r.fail
+    return { content: focalReadout(r.s, r.f, r.id, String(a.side)), note: uz ? 'Simulyator (yashirin)' : 'Simulator (hidden)' }
+  },
+  simulate_territory: (a, uz) => {
+    const lv = LEVEL_BY_ID.get(a.level as LesionLevel)
+    const z = lv?.zones.find((x) => x.id === a.zone)
+    if (!lv || !z) return { content: `unknown level/zone. ${levelList}`, note: uz ? 'Hudud topilmadi' : 'Territory not found', ok: false }
+    return { content: lesionReadout({ level: lv.id, side: a.side === 'right' ? 'R' : 'L', zone: z.id }), note: uz ? 'Simulyator (yashirin)' : 'Simulator (hidden)' }
+  },
+  localise: (a, uz) => {
+    const list = (v: unknown, key: string) => (Array.isArray(v) ? v : []).map((x) => x as Record<string, unknown>).filter((x) => typeof x[key] === 'string')
+    const sd = (v: unknown): BodySide | 'none' => (v === 'left' ? 'L' : v === 'right' ? 'R' : 'none')
+    const tracts = Object.fromEntries(list(a.tracts, 'tract').map((x) => [x.tract as string, sd(x.side)]))
+    const findings = Object.fromEntries(PATHWAYS.map((p) => [p.id, tracts[p.id] ?? 'none']))
+    const cranial = Object.fromEntries(list(a.cranial_signs, 'sign').map((x) => [x.sign as string, sd(x.side)]))
+    const hits = localiseWithSigns(findings, cranial)
+    return {
+      content: hits.length
+        ? hits.slice(0, 12).map((l) => ({ ...lesionReadout(l), lesson_3d: lesionLessonId(l) }))
+        : 'No single one-sided lesion in the simulator explains these findings: think of two lesions, a bilateral/midline process, or findings outside the brainstem levels modelled.',
+      note: `${uz ? 'Lokalizatsiya' : 'Localisation'}: ${hits.length}`,
+    }
+  },
+
+  search_pubmed: async (a) => {
+    const q = String(a.query ?? '').trim()
+    const n = num(a.max, 1, 10, 6)
+    const base = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils'
+    const tag = '&tool=neuro-atlas'
+    const es = await (await fetch(`${base}/esearch.fcgi?db=pubmed&retmode=json&sort=relevance&retmax=${n}&term=${encodeURIComponent(q)}${tag}`)).json()
+    const ids: string[] = es?.esearchresult?.idlist ?? []
+    if (!ids.length) return { content: 'no PubMed results', note: `PubMed: “${q}” · 0`, ok: false }
+    const sum = await (await fetch(`${base}/esummary.fcgi?db=pubmed&retmode=json&id=${ids.join(',')}${tag}`)).json()
+    const items = ids.map((id) => {
+      const d = sum?.result?.[id] ?? {}
+      const doi = (d.articleids ?? []).find((x: { idtype: string }) => x.idtype === 'doi')?.value
       return {
-        content: `${s.code} takes no free lesion (brainstem, thalamus and capsule plates do)`,
-        note: `${s.code}: ${uz ? "o'choq qo'yib bo'lmaydi" : 'no lesions here'}`,
-        ok: false,
+        pmid: id,
+        title: d.title,
+        authors:
+          (d.authors ?? [])
+            .slice(0, 3)
+            .map((x: { name: string }) => x.name)
+            .join(', ') + ((d.authors ?? []).length > 3 ? ' et al.' : ''),
+        journal: d.fulljournalname ?? d.source,
+        year: String(d.pubdate ?? '').slice(0, 4),
+        types: d.pubtype,
+        doi: doi ?? null,
+        url: `https://pubmed.ncbi.nlm.nih.gov/${id}/`,
       }
-    const id = structureOn(s.id, a.structure)
-    if (!id) return { content: { error: `no structure "${a.structure}" on ${s.code}`, ...plateContent(s.id) }, note: uz ? 'Tuzilma topilmadi' : 'Structure not found', ok: false }
-    const sd = a.side === 'right' ? 'R' : a.side === 'midline' ? 'M' : 'L'
-    const c = structureCentre(s.id, id, sd)
-    if (!c) return { content: 'structure has no outline', note: uz ? 'Kontur yo‘q' : 'No outline', ok: false }
-    const f: FocalLesion = { plate: s.id, x: c[0], y: c[1], rMm: num(a.radius_mm, 0.5, 12, 2), t: num(a.time_months, 0, 120, 0), gd: a.gd === true }
-    const replace = a.replace === true
-    useAtlas.getState().openSection(s.id)
-    useScreen.getState().setCommand({ plate: s.id, kind: 'focal', foci: [f], replace })
-    const r = focalOn(s, f)!
-    const name = STRUCTURE_BY_ID.get(id)!.name
+    })
+    for (const it of items) remember(it.pmid, it.doi)
+    return { content: { query: q, results: items, rule: 'Cite only these (PMID / DOI links).' }, note: `PubMed: “${q.slice(0, 40)}” · ${items.length}` }
+  },
+  verify_doi: async (a) => {
+    const doi = String(a.doi ?? '')
+      .trim()
+      .replace(/^https?:\/\/(dx\.)?doi\.org\//i, '')
+    const res = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`)
+    if (!res.ok) return { content: `DOI ${doi} not found in Crossref (${res.status}) — do not cite it`, note: `DOI ✗ ${doi.slice(0, 30)}`, ok: false }
+    const m = (await res.json()).message
+    remember(null, doi)
     return {
       content: {
-        placed: `${s.code} · ${name.en} · ${a.side} · ⌀ ${(f.rMm * 2).toFixed(1)} mm · ${f.t} mo${f.gd ? ' · Gd+' : ''}`,
-        level: LEVEL_BY_ID.get(r.level)?.name.en,
-        crosses_midline: r.side === 'B',
-        structures: r.hits.slice(0, 8).map((h) => `${STRUCTURE_BY_ID.get(h.id)?.name.en ?? h.id} ${Math.round(h.share * 100)}%`),
-        tracts_lost: PATHWAYS.filter((p) => r.sig[p.id] !== 'none').map((p) => `${p.short.en} → ${side(r.sig[p.id] as BodySide | 'B')} ${p.body === 'face' ? 'face' : 'body'}`),
-        cranial_signs: r.signs.map((h) => `${h.sign.name.en} (${side(h.side)})`),
-        classic_territories: r.zones.slice(0, 3).map((z) => `${z.zone.name.en} ${side(z.side)} ${Math.round(z.overlap * 100)}%`),
-        note: 'Schematic plate; mm are approximate. Added to any lesions already placed unless replace=true.',
+        doi,
+        title: m.title?.[0],
+        journal: m['container-title']?.[0],
+        year: m.issued?.['date-parts']?.[0]?.[0],
+        authors: (m.author ?? [])
+          .slice(0, 3)
+          .map((x: { family?: string }) => x.family)
+          .join(', '),
+        url: `https://doi.org/${doi}`,
       },
-      note: `${uz ? "O'choq" : 'Lesion'}: ${s.code} · ${uz ? (name.uz ?? name.en) : name.en} · ${uz ? { left: 'chap', right: "o'ng", midline: "o'rta" }[a.side as string] : a.side}`,
+      note: `DOI ✓ ${(m.title?.[0] ?? doi).slice(0, 40)}`,
+    }
+  },
+  make_flashcards: (a, uz) => {
+    const cards = (Array.isArray(a.cards) ? a.cards : [])
+      .map((c) => ({ front: String((c as { front?: unknown }).front ?? '').trim(), back: String((c as { back?: unknown }).back ?? '').trim() }))
+      .filter((c) => c.front && c.back)
+      .slice(0, 60)
+    if (!cards.length) return { content: 'no cards (each needs front and back)', note: uz ? "Karta yo'q" : 'No cards', ok: false }
+    const deck = String(a.deck ?? 'Neuro Atlas').slice(0, 80)
+    return {
+      content: `${cards.length} cards ready for the student to download (deck "${deck}")`,
+      note: `${uz ? 'Anki kartalari' : 'Anki cards'}: ${cards.length}`,
+      cards: { deck, cards },
     }
   },
 
@@ -312,19 +489,19 @@ const RUN: Record<string, (a: Record<string, unknown>, uz: boolean) => Out> = {
 }
 
 /** Run one tool call against the app. Unknown tools and bad input come back as errors the model can read. */
-export function runTool(call: ToolCall, uz: boolean): { result: ToolResult; note: ActionNote } {
+export async function runTool(call: ToolCall, uz: boolean): Promise<{ result: ToolResult; note: ActionNote }> {
   const fn = RUN[call.name]
   let out: Out
   try {
     if (!fn) out = { content: `unknown tool ${call.name}`, note: call.name, ok: false }
     else if ('__invalid_json' in call.args) out = { content: 'invalid JSON arguments — call again with valid JSON', note: call.name, ok: false }
-    else out = fn(call.args ?? {}, uz)
+    else out = await fn(call.args ?? {}, uz)
   } catch (e) {
     out = { content: `failed: ${(e as Error).message}`, note: call.name, ok: false }
   }
   const ok = out.ok !== false
   return {
     result: { id: call.id, name: call.name, content: typeof out.content === 'string' ? out.content : JSON.stringify(out.content), isError: !ok },
-    note: { text: out.note, ok },
+    note: { text: out.note, ok, ...(out.cards ? { cards: out.cards } : {}) },
   }
 }

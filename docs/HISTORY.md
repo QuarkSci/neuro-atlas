@@ -947,6 +947,30 @@ Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erk
 - Tekshiruv: B5 `cst-ic` lakunasi → CST po'stloqdan aynan sharga qadar oqadi, pastda qorong'i (screenshot); TS keysi
   3D (4 qadam); eski `lesion:pons:L:medial` darsi o'zgarishsiz; McDonald xulosasi; audit-lesions 0; tsc; build.
 
+### AI-5 — PhD qatlami: rejimlar, yashirin simulyator, adabiyot, Anki (2026-11-21)
+
+- Rejimlar (`useAI.mode`, `na:ai`da saqlanadi; panelda model ostida 4 tugma): **Repetitor** (tushuntirish + ko'rsatish),
+  **Sokratik** (bittadan savol, 3 urinishdan keyin yoki so'ralganda javob), **Keys** (simulyatordan bemor keysi: belgilar
+  FAQAT `simulate_*` natijasidan; talaba topadi; `localise` bilan baholanadi va differensial; `place_lesion`/
+  `set_lesion_territory` bilan ochiladi; keyin Anki), **Tadqiqot** (PhD/neyroxirurg; avval `search_pubmed`/`verify_doi`,
+  faqat shular qaytargan ishlarni PMID/DOI havolasi bilan keltiradi, dalil turi). Har rejimga o'z tez savollari.
+- Yangi tool'lar (`src/ai/tools.ts`, jami 15; `runTool` endi async): `simulate_lesion`, `simulate_territory` (ekranni
+  o'zgartirmaydi — keys uchun), `localise` (teskari rejim `localiseWithSigns`; parametrlar massiv — Gemini sxemasiga mos),
+  `search_pubmed` (NCBI E-utilities esearch `sort=relevance` + esummary: PMID, sarlavha, mualliflar, jurnal, yil, nashr
+  turlari, DOI; `tool=neuro-atlas`, email yuborilmaydi), `verify_doi` (Crossref), `make_flashcards` (≤ 60 karta).
+  `resolveLesion`/`focalReadout` — place/simulate uchun umumiy. NCBI va Crossref brauzerdan CORS bilan ishlaydi (tekshirildi).
+- Uydirma havolaga qarshi: `VERIFIED` (shu suhbatda tool'lar qaytargan PMID/DOI) + kontekst brief'idagi atlas manbalari;
+  javob oxirida matndagi DOI va PMID'lar tekshiriladi → tekshirilmaganlari xabar ostida to'q sariq ogohlantirish.
+- Anki: `make_flashcards` natijasi xabarda karta ko'rinishi (4 tasi) + "Anki uchun yuklab olish (.txt)" — `#separator:tab`,
+  `#html:false`, `#deck:` sarlavhalari bilan tab bilan ajratilgan fayl (foydalanuvchi bosganda yuklanadi).
+- Mock: keys rejimida `simulate_territory`, tadqiqotda `search_pubmed` (haqiqiy tarmoq), "anki/karta" → kartalar;
+  "uydirma" so'zi bo'lsa javobga soxta DOI qo'shadi — ogohlantirishni sinash uchun.
+- Tekshiruv: tadqiqot (haqiqiy PubMed → Montalban 2024, PMID tekshirilgan, 10.9999/fake… ogohlantirildi), keys + Anki
+  screenshotlari; `runTool`: simulate (Wallenberg o'ng), localise (ALS chap + V o'ng + Horner o'ng → lateral ko'prik va
+  Wallenberg — differensial), simulate_lesion K1 MLF, verify_doi haqiqiy ✓ / soxta 404; ekran o'zgarmadi. tsc, build,
+  audit-lesions 0.
+- QOLDI: `look_at_screen` tool; AI-6 (ChatGPT/Google hisob bilan kirish); suhbatni saqlash/eksport.
+
 ### AI-4 — Ko'rish: AI'ga sahna, plastinka yoki o'z rasmingizni yuborish (2026-11-21)
 
 - 3D: `BrainScene.snapshot(maxSide)` — kadr shu vazifada render qilinib nusxalanadi (`preserveDrawingBuffer` kerak emas),
