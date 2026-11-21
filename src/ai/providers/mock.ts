@@ -50,6 +50,16 @@ export const mock: Provider = {
       yield { type: 'turn', calls: [] }
       return
     }
+    // A picture attached: say what arrived (size, kind), as a vision model would see it.
+    if (last?.role === 'user' && last.images?.length) {
+      const kb = last.images.map((im) => `${im.mediaType} · ${Math.round((im.data.length * 3) / 4 / 1024)} KB`).join(', ')
+      yield* say(
+        `${uz ? 'Rasm(lar) qabul qilindi' : 'Image(s) received'}: ${last.images.length} (${kb}).\n\n${uz ? 'Bu yerda haqiqiy model rasmni tasvirlaydi.' : 'A real model would describe the picture here.'}`,
+        req.signal,
+      )
+      yield { type: 'turn', calls: [] }
+      return
+    }
     if (/^error:(\w+)/.test(q)) throw new AIError(q.slice(6) as AIError['kind'], 'mock error', 401)
     const calls = req.tools?.length ? plan(q) : []
     if (calls.length) {

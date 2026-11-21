@@ -96,7 +96,13 @@ function compat(o: Opts): Provider {
 function toMessages(turns: ChatTurn[]) {
   const out: Record<string, unknown>[] = []
   for (const t of turns) {
-    if (t.role === 'user') out.push({ role: 'user', content: t.text })
+    if (t.role === 'user')
+      out.push({
+        role: 'user',
+        content: t.images?.length
+          ? [{ type: 'text', text: t.text }, ...t.images.map((im) => ({ type: 'image_url', image_url: { url: `data:${im.mediaType};base64,${im.data}` } }))]
+          : t.text,
+      })
     else if (t.role === 'tool') for (const r of t.results) out.push({ role: 'tool', tool_call_id: r.id, content: r.content })
     else
       out.push({

@@ -3,6 +3,7 @@ import { LEAF_PARTS, PART_BY_ID } from '@/data'
 import type { LayerId } from '@/data/types'
 import { useAtlas, type AtlasState, type Lang } from '@/store/useAtlas'
 import { useT } from '@/i18n'
+import { registerSnapshot } from './capture'
 import { BrainScene, type SceneSnapshot } from './BrainScene'
 import { loadGeometries } from './loader'
 import { SECTIONS } from '@/data/sections'
@@ -131,6 +132,7 @@ export function SceneView() {
         scene.setLabels(labelsFor(lang))
         scene.setSectionNames(sectionNamesFor(lang))
         scene.setState(snapshot(store.getState()))
+        registerSnapshot((max) => scene!.snapshot(max))
         if (import.meta.env.DEV) (window as unknown as { __scene: BrainScene }).__scene = scene
         setProgress(100)
         for (const l of neededLayers(store.getState())) void loadLayer(l)
@@ -153,6 +155,7 @@ export function SceneView() {
     return () => {
       cancelled = true
       unsubscribe()
+      registerSnapshot(null)
       scene?.dispose()
     }
   }, [])

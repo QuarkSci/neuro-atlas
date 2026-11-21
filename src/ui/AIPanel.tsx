@@ -1,5 +1,24 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowUp, Check, Eye, EyeOff, ExternalLink, KeyRound, LoaderCircle, LogOut, MapPin, RotateCcw, Sparkles, Square, TriangleAlert, X } from 'lucide-react'
+import {
+  ArrowUp,
+  Box,
+  Check,
+  Eye,
+  EyeOff,
+  ExternalLink,
+  FileImage,
+  ImagePlus,
+  KeyRound,
+  Layers,
+  LoaderCircle,
+  LogOut,
+  MapPin,
+  RotateCcw,
+  Sparkles,
+  Square,
+  TriangleAlert,
+  X,
+} from 'lucide-react'
 import type { L10n } from '@/data/types'
 import { useL } from '@/i18n'
 import { PROVIDER_META, PROVIDER_ORDER } from '@/ai/providers'
@@ -7,6 +26,9 @@ import { DEFAULT_LOCAL_URL } from '@/ai/providers/compat'
 import { connected, useAI, type ChatMessage } from '@/ai/useAI'
 import type { AIErrorKind, ProviderId } from '@/ai/types'
 import { Markdown } from './aiMarkdown'
+import { capturePlate, captureFile, plateFigure } from './plateCapture'
+import { sceneSnapshot } from '@/scene/capture'
+import { SECTION_BY_ID } from '@/data/sections'
 import { brief } from '@/ai/context'
 import { useScreen } from '@/ai/screen'
 import { useAtlas } from '@/store/useAtlas'
@@ -79,6 +101,13 @@ const TX = {
   refused: { en: 'The model declined to answer this.', uz: 'Model bunga javob berishdan bosh tortdi.' },
   tokens: { en: 'tokens', uz: 'token' },
   redo: { en: 'Do it again', uz: 'Qayta bajarish' },
+  attach: { en: 'Attach a picture', uz: 'Rasm biriktirish' },
+  shot3d: { en: '3D view as it is now', uz: "3D ko'rinish (hozirgi holati)" },
+  shotPlate: { en: 'The open plate', uz: 'Ochiq kesim plastinkasi' },
+  shotFile: { en: 'From a file… (MRI, figure)', uz: 'Fayldan… (MRT, rasm)' },
+  shotPaste: { en: 'or paste an image into the box', uz: 'yoki rasmni yozish maydoniga joylashtiring' },
+  removeImage: { en: 'Remove', uz: 'Olib tashlash' },
+  noScene: { en: 'The 3D view is not ready yet', uz: "3D ko'rinish hali tayyor emas" },
   context: { en: 'Context', uz: 'Kontekst' },
   contextOff: { en: 'off — the AI does not see the screen', uz: "o'chiq — AI ekranni ko'rmaydi" },
   contextNone: { en: 'nothing selected yet', uz: 'hali hech narsa tanlanmagan' },
@@ -175,7 +204,7 @@ function Connect() {
 
 function Chat() {
   const l = useL()
-  const { messages, busy, send, stop } = useAI()
+  const { messages, busy, send, stop, attachments } = useAI()
   const [draft, setDraft] = useState('')
   const list = useRef<HTMLDivElement>(null)
   const input = useRef<HTMLTextAreaElement>(null)
@@ -192,7 +221,7 @@ function Chat() {
   }, [open])
 
   const submit = (text = draft) => {
-    if (!text.trim() || busy) return
+    if ((!text.trim() && !attachments.length) || busy) return
     setDraft('')
     send(text.trim())
   }
@@ -216,6 +245,7 @@ function Chat() {
         ))}
       </div>
       <ContextBar />
+      <Attachments />
       <form
         className="ai-composer"
         onSubmit={(e) => {
@@ -223,8 +253,16 @@ function Chat() {
           submit()
         }}
       >
+        <AttachButton />
         <textarea
           ref={input}
+          onPaste={(e) => {
+            // A pasted screenshot or figure becomes an attachment.
+            const file = [...e.clipboardData.files].find((f) => f.type.startsWith('image/'))
+            if (!file) return
+            e.preventDefault()
+            captureFile(file).then((url) => url && useAI.getState().attach({ url, label: file.name || 'pasted image' }))
+          }}
           value={draft}
           rows={1}
           placeholder={l(TX.placeholder)}
@@ -241,7 +279,7 @@ function Chat() {
             <Square size={12} fill="currentColor" />
           </button>
         ) : (
-          <button type="submit" className="ai-send" disabled={!draft.trim()} aria-label={l(TX.send)} title={l(TX.send)}>
+          <button type="submit" className="ai-send" disabled={!draft.trim() && !attachments.length} aria-label={l(TX.send)} title={l(TX.send)}>
             <ArrowUp size={16} />
           </button>
         )}
@@ -454,6 +492,13 @@ function UserMessage({ m }: { m: ChatMessage }) {
   const [open, setOpen] = useState(false)
   return (
     <>
+      {m.images && (
+        <div className="ai-sent-images">
+          {m.images.map((im, i) => (
+            <img key={i} src={im.url} alt={im.label} title={im.label} />
+          ))}
+        </div>
+      )}
       <div className="ai-msg user">{m.text}</div>
       {m.context && (
         <button className="ai-sent-context" onClick={() => setOpen(!open)} title={l(TX.sentContext)}>
@@ -490,6 +535,101 @@ function ContextBar() {
         )}
       </div>
       {show && withContext && <pre className="ai-context-text">{b.text}</pre>}
+    </div>
+  )
+}
+
+const VIEW_NAMES: Record<string, string> = { scheme: 'schematic', myelin: 'myelin style', nissl: 'Nissl style', atlas: 'atlas cut (MNI)', real: 'real BigBrain slice' }
+
+/** Picture sources: the 3D view, the open plate, a file (or a paste into the box). */
+function AttachButton() {
+  const l = useL()
+  const [open, setOpen] = useState(false)
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+  const file = useRef<HTMLInputElement>(null)
+  const wrap = useRef<HTMLDivElement>(null)
+  const attach = useAI((s) => s.attach)
+  useEffect(() => {
+    if (!open) return
+    const away = (e: PointerEvent) => !wrap.current?.contains(e.target as Node) && setOpen(false)
+    window.addEventListener('pointerdown', away)
+    return () => window.removeEventListener('pointerdown', away)
+  }, [open])
+  const plate = useScreen((s) => s.plate)
+  const hasPlate = !!plate && !!plateFigure()
+
+  const take3d = () => {
+    setOpen(false)
+    const url = sceneSnapshot()
+    if (!url) return setError(l(TX.noScene))
+    const a = useAtlas.getState()
+    attach({ url, label: `3D view · ${a.view}${a.selected.length ? ' · selection highlighted' : ''}` })
+  }
+  const takePlate = async () => {
+    setOpen(false)
+    setBusy(true)
+    try {
+      const url = await capturePlate()
+      const sec = plate ? SECTION_BY_ID.get(plate.plate) : undefined
+      if (url) attach({ url, label: `Plate ${sec?.code ?? ''} · ${VIEW_NAMES[plate?.view ?? ''] ?? plate?.view ?? ''}` })
+    } catch (e) {
+      setError((e as Error).message)
+    } finally {
+      setBusy(false)
+    }
+  }
+  return (
+    <div className="ai-attach" ref={wrap}>
+      <button type="button" className="ai-attach-btn" onClick={() => (setOpen(!open), setError(''))} aria-label={l(TX.attach)} title={error || l(TX.attach)} aria-expanded={open}>
+        {busy ? <LoaderCircle size={15} className="spin" /> : <ImagePlus size={16} />}
+      </button>
+      {open && (
+        <div className="ai-attach-menu menu glass" role="menu">
+          <button type="button" role="menuitem" className="menu-item" onClick={take3d}>
+            <Box size={14} /> {l(TX.shot3d)}
+          </button>
+          <button type="button" role="menuitem" className="menu-item" onClick={takePlate} disabled={!hasPlate}>
+            <Layers size={14} /> {l(TX.shotPlate)}
+          </button>
+          <button type="button" role="menuitem" className="menu-item" onClick={() => (setOpen(false), file.current?.click())}>
+            <FileImage size={14} /> {l(TX.shotFile)}
+          </button>
+          <small>{l(TX.shotPaste)}</small>
+        </div>
+      )}
+      <input
+        ref={file}
+        type="file"
+        accept="image/*"
+        hidden
+        onChange={async (e) => {
+          const f = e.target.files?.[0]
+          e.target.value = ''
+          if (!f) return
+          const url = await captureFile(f)
+          if (url) attach({ url, label: f.name })
+        }}
+      />
+    </div>
+  )
+}
+
+/** Pictures waiting to be sent, removable. */
+function Attachments() {
+  const l = useL()
+  const { attachments, detach } = useAI()
+  if (!attachments.length) return null
+  return (
+    <div className="ai-attachments">
+      {attachments.map((a, i) => (
+        <span key={i} className="ai-thumb" title={a.label}>
+          <img src={a.url} alt={a.label} />
+          <button onClick={() => detach(i)} aria-label={l(TX.removeImage)}>
+            <X size={11} />
+          </button>
+        </span>
+      ))}
     </div>
   )
 }

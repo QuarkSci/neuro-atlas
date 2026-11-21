@@ -3,6 +3,7 @@ import { useAtlas } from '@/store/useAtlas'
 import { PROVIDERS, pickModel } from './providers'
 import { AIError, type AIErrorKind, type ChatTurn, type Credential, type ModelInfo, type ProviderId, type ToolCall, type ToolResult } from './types'
 import { TOOLS, runTool, type ActionNote } from './tools'
+import type { ImagePart } from './types'
 import { finishOpenRouterLogin, startOpenRouterLogin } from './openrouterAuth'
 import { brief, briefSection } from './context'
 
@@ -22,6 +23,8 @@ export interface ChatMessage {
   refusal?: string | true
   /** User turns: the on-screen context sent with it (chip label and the full brief), when context was on. */
   context?: { label: string; text: string }
+  /** User turns: pictures sent with it (AI-4), as data URLs for the thumbnails. */
+  images?: { url: string; label: string }[]
   /** Assistant turns: the app actions it took (AI-3), each re-runnable from its chip. */
   actions?: (ActionNote & { call: ToolCall })[]
   /** Still streaming. */
@@ -29,6 +32,18 @@ export interface ChatMessage {
 }
 
 type Creds = Partial<Record<ProviderId, Credential>>
+
+export interface Attachment {
+  /** JPEG/PNG data URL. */
+  url: string
+  /** What it shows, for the model and the chip ("3D view · lateral", "Plate K3 · real slice", a file name). */
+  label: string
+}
+
+const toPart = (url: string): ImagePart | null => {
+  const m = /^data:(image\/(?:jpeg|png|webp));base64,(.+)$/.exec(url)
+  return m ? { mediaType: m[1] as ImagePart['mediaType'], data: m[2] } : null
+}
 
 interface AIState {
   open: boolean
@@ -41,6 +56,8 @@ interface AIState {
   messages: ChatMessage[]
   /** The conversation as the models see it (tool calls and results included). */
   turns: ChatTurn[]
+  /** Pictures waiting to go with the next message (AI-4). */
+  attachments: Attachment[]
   busy: boolean
   /** OpenRouter sign-in in progress / just finished with an error. */
   login: 'idle' | 'working' | { error: string }
@@ -59,6 +76,8 @@ interface AIState {
   signInOpenRouter: () => Promise<void>
   send: (text: string) => Promise<void>
   stop: () => void
+  attach: (a: Attachment) => void
+  detach: (i: number) => void
   redo: (call: ToolCall) => ActionNote
   clear: () => void
 }
@@ -127,6 +146,7 @@ export const useAI = create<AIState>((set, get) => ({
   models: {},
   messages: [],
   turns: [],
+  attachments: [],
   busy: false,
   login: 'idle',
 
@@ -176,9 +196,17 @@ export const useAI = create<AIState>((set, get) => ({
     }
   },
 
-  send: async (text) => {
+  send: async (typed) => {
     const { provider, creds, busy } = get()
-    if (busy || !text.trim()) return
+    // A picture alone is a question too.
+    const text =
+      typed.trim() ||
+      (get().attachments.length
+        ? useAtlas.getState().lang === 'uz'
+          ? 'Bu rasmda nima ko‘rinyapti? Tuzilmalarni nomlab tushuntir.'
+          : 'What does this picture show? Name and explain the structures.'
+        : '')
+    if (busy || !text) return
     if (!provider) {
       set({ view: 'accounts' })
       return
@@ -194,7 +222,15 @@ export const useAI = create<AIState>((set, get) => ({
     // The screen as it is now, sent with this message only (history keeps its own snapshots in the UI).
     const b = get().withContext ? brief() : null
     const context = b?.text ? { label: b.label, text: b.text } : undefined
-    set({ messages: [...get().messages, { role: 'user', text, context }, reply], busy: true })
+    const att = get().attachments
+    const images = att.flatMap((a) => toPart(a.url) ?? [])
+    // The model is told what each picture is; the pictures themselves go with this message only.
+    const said = att.length ? `${text}\n\n[Attached: ${att.map((a) => a.label).join('; ')}]` : text
+    set({
+      messages: [...get().messages, { role: 'user', text, context, ...(att.length ? { images: att.map((a) => ({ url: a.url, label: a.label })) } : {}) }, reply],
+      attachments: [],
+      busy: true,
+    })
     controller = new AbortController()
     const patch = (p: Partial<ChatMessage>) =>
       set((s) => {
@@ -203,7 +239,7 @@ export const useAI = create<AIState>((set, get) => ({
         return { messages }
       })
     const uz = useAtlas.getState().lang === 'uz'
-    const turns: ChatTurn[] = [...get().turns, { role: 'user', text }]
+    const turns: ChatTurn[] = [...get().turns, { role: 'user', text: said, ...(images.length ? { images } : {}) }]
     const actions: NonNullable<ChatMessage['actions']> = []
     const usage = { input: 0, output: 0 }
     let acc = ''
@@ -262,6 +298,11 @@ export const useAI = create<AIState>((set, get) => ({
       // Keep only whole rounds: a tool call always travels with its result.
       const last = turns.at(-1)
       if (last?.role === 'assistant' && last.calls?.length) turns.pop()
+      // Pictures are not resent with every later message (cost): the text keeps what they were.
+      for (let i = 0; i < turns.length; i++) {
+        const t = turns[i]
+        if (t.role === 'user' && t.images) turns[i] = { role: 'user', text: `${t.text} (sent earlier; not shown again)` }
+      }
       set({ turns, busy: false })
       controller = null
     }
@@ -269,9 +310,11 @@ export const useAI = create<AIState>((set, get) => ({
   /** Re-run an action from its chip (the same call, against the app as it is now). */
   redo: (call: ToolCall) => runTool(call, useAtlas.getState().lang === 'uz').note,
   stop: () => controller?.abort(),
+  attach: (a) => set({ attachments: [...get().attachments, a].slice(-4) }),
+  detach: (i) => set({ attachments: get().attachments.filter((_, j) => j !== i) }),
   clear: () => {
     controller?.abort()
-    set({ messages: [], turns: [] })
+    set({ messages: [], turns: [], attachments: [] })
   },
 }))
 

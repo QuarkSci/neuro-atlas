@@ -43,8 +43,14 @@ export interface ToolResult {
  * provider's own content (`raw`) — Anthropic thinking blocks and Gemini thought
  * signatures must go back unchanged in a tool loop; another provider ignores it.
  */
+/** An image the user attached (AI-4): base64 without the data: prefix. */
+export interface ImagePart {
+  mediaType: 'image/jpeg' | 'image/png' | 'image/webp'
+  data: string
+}
+
 export type ChatTurn =
-  | { role: 'user'; text: string }
+  | { role: 'user'; text: string; images?: ImagePart[] }
   | { role: 'assistant'; text: string; calls?: ToolCall[]; raw?: { provider: ProviderId; content: unknown } }
   | { role: 'tool'; results: ToolResult[] }
 

@@ -63,6 +63,7 @@ export const gemini: Provider = {
 
 interface GPart {
   text?: string
+  inlineData?: { mimeType: string; data: string }
   thought?: boolean
   thoughtSignature?: string
   functionCall?: { id?: string; name: string; args?: Record<string, unknown> }
@@ -84,7 +85,7 @@ function clean(v: unknown): unknown {
 function toContents(turns: ChatTurn[]) {
   const out: { role: 'user' | 'model'; parts: GPart[] }[] = []
   for (const t of turns) {
-    if (t.role === 'user') out.push({ role: 'user', parts: [{ text: t.text }] })
+    if (t.role === 'user') out.push({ role: 'user', parts: [...(t.images ?? []).map((im) => ({ inlineData: { mimeType: im.mediaType, data: im.data } })), { text: t.text }] })
     else if (t.role === 'tool')
       out.push({
         role: 'user',

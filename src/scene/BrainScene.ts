@@ -1707,6 +1707,23 @@ export class BrainScene {
       this.dirty = false
     }
   }
+
+  /**
+   * The model as it is on screen, as a JPEG data URL no larger than
+   * `maxSide` px (for the AI tutor, AI-4). The drawing buffer is not kept
+   * between frames, so the frame is rendered and copied in the same task.
+   * HTML overlays (labels, markers) are not part of the canvas.
+   */
+  snapshot(maxSide = 1280): string {
+    this.renderer.render(this.scene, this.camera)
+    const src = this.renderer.domElement
+    const k = Math.min(1, maxSide / Math.max(src.width, src.height))
+    const out = document.createElement('canvas')
+    out.width = Math.round(src.width * k)
+    out.height = Math.round(src.height * k)
+    out.getContext('2d')!.drawImage(src, 0, 0, out.width, out.height)
+    return out.toDataURL('image/jpeg', 0.88)
+  }
 }
 
 /** Ease-in-out so pieces settle gently at both ends of a phase. */

@@ -947,6 +947,30 @@ Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erk
 - Tekshiruv: B5 `cst-ic` lakunasi → CST po'stloqdan aynan sharga qadar oqadi, pastda qorong'i (screenshot); TS keysi
   3D (4 qadam); eski `lesion:pons:L:medial` darsi o'zgarishsiz; McDonald xulosasi; audit-lesions 0; tsc; build.
 
+### AI-4 — Ko'rish: AI'ga sahna, plastinka yoki o'z rasmingizni yuborish (2026-11-21)
+
+- 3D: `BrainScene.snapshot(maxSide)` — kadr shu vazifada render qilinib nusxalanadi (`preserveDrawingBuffer` kerak emas),
+  JPEG ≤ 1280 px; `src/scene/capture.ts` (`registerSnapshot` — SceneView sahna tirikligida ro'yxatdan o'tkazadi,
+  `sceneSnapshot()`). HTML ustqatlamlar (yorliqlar, markerlar) suratga kirmaydi.
+- Plastinka: `src/ui/plateCapture.ts` `capturePlate()` — ko'rinib turgan `.sv-svg` (sxema, mielin/Nissl, atlas, real)
+  klonlanadi, har elementga hisoblangan uslublar (fill/stroke/opacity/shrift…) yoziladi, `<image>` (BigBrain webp)
+  data URL ga aylantiriladi, ko'ruvchi foni ustida JPEG. `captureFile()` — foydalanuvchi rasmi (MRT, darslik rasmi),
+  ≤ 1568 px JPEG. Hajm ~85–90 KB.
+- Turlar: `ImagePart` (`mediaType`, base64), user turn `images`. Provayderlar: Anthropic `image` bloki (base64) matndan
+  oldin, OpenAI-mos `image_url` (data URL) matndan keyin, Gemini `inlineData` matndan oldin; mock — kelgan rasmlar soni
+  va hajmini aytadi.
+- `useAI`: `attachments` (≤ 4, `attach`/`detach`), yuborishda modelga "[Attached: …]" bilan nima ekanini aytadi; rasm
+  faqat O'Z xabari bilan (va shu xabarning tool raundlarida) yuboriladi — keyin tarixda matn ("sent earlier") qoladi
+  (narx). Bo'sh matn + rasm → standart savol ("Bu rasmda nima ko'rinyapti? …").
+- UI: yozish maydonida rasm tugmasi → menyu (3D ko'rinish, ochiq kesim plastinkasi — faqat plastinka ochiq bo'lsa,
+  fayldan); rasmni maydonga joylashtirish (paste); kichik rasmlar × bilan; yuborilgan xabar ustida rasmlar.
+  QOIDA: forma ichidagi tugmalarga `type="button"` (aks holda bosish xabarni yuboradi — shu xato topilib tuzatildi).
+- Tekshiruv: 3D, K3 sxema, K3 real kesim suratlari diskka saqlanib ko'rildi (to'liq, shtrix va raqamlar bilan); panel
+  orqali 3D + plastinka biriktirildi va yuborildi (mock: 2 rasm, 88 + 86 KB); 3 provayder yuklamasi (image/image_url/
+  inlineData) soxta fetch bilan; tsc, build, audit-lesions 0.
+- QOLDI / PhD: `look_at_screen` tool (AI o'zi surat so'raydi — Anthropic tool_result rasm oladi, OpenAI uchun alohida
+  user xabari kerak); 3D suratga yorliqlarni chizish; MRT ustida o'choqni aniqlab plastinkaga qo'yish (AI-5).
+
 ### AI-3 — AI ilovani boshqaradi (tools + amal chiplari) (2026-11-21)
 
 - Turlar (`src/ai/types.ts`): `ToolSpec` (JSON Schema), `ToolCall`, `ToolResult`; `ChatTurn` = user | assistant (`calls`,
