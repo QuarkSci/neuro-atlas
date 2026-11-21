@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, Check, Ellipsis, Info, Languages, Palette, SunMoon, PanelLeft, RotateCw, Search, Slice } from 'lucide-react'
+import { Box, Check, Ellipsis, Info, Languages, Palette, SunMoon, PanelLeft, RotateCw, Search, Slice, Sparkles } from 'lucide-react'
 import { LEAF_PARTS } from '@/data'
 import { useT } from '@/i18n'
 import { useAtlas, type View } from '@/store/useAtlas'
 import { useLens } from './useLens'
+import { useAI } from '@/ai/useAI'
 
 const VIEWS: View[] = ['three-quarter', 'lateral', 'front', 'top']
 
@@ -88,6 +89,8 @@ export function ViewGroup() {
   const t = useT()
   const { view, setView, explode, cutaway, setCutaway, autoRotate, setAutoRotate, isolate, lang, setLang, setAboutOpen, colorMode, setColorMode, theme, setTheme } = useAtlas()
   const [open, setOpen] = useState<'view' | 'more' | null>(null)
+  const aiOpen = useAI((s) => s.open)
+  const toggleAI = useAI((s) => s.toggle)
   const wrap = useRef<HTMLDivElement>(null)
   const frontOnly = explode > 0.8
 
@@ -127,6 +130,18 @@ export function ViewGroup() {
           title={t.cutaway}
         >
           <Slice size={18} />
+        </button>
+        <button
+          className={`bar-icon ${aiOpen ? 'active' : ''}`}
+          onClick={() => {
+            setOpen(null)
+            toggleAI()
+          }}
+          aria-pressed={aiOpen}
+          aria-label={t.aiPanel}
+          title={`${t.aiPanel} (⌘/)`}
+        >
+          <Sparkles size={18} />
         </button>
         <button
           className={`bar-icon ${open === 'more' ? 'active' : ''}`}

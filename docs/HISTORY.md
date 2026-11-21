@@ -947,6 +947,37 @@ Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erk
 - Tekshiruv: B5 `cst-ic` lakunasi → CST po'stloqdan aynan sharga qadar oqadi, pastda qorong'i (screenshot); TS keysi
   3D (4 qadam); eski `lesion:pons:L:medial` darsi o'zgarishsiz; McDonald xulosasi; audit-lesions 0; tsc; build.
 
+### AI-1 — AI panel: provayderlar, Hisoblar, oqimli chat (2026-11-21)
+
+Reja va faktlar: `PLAN.md` 5.6. Qarorlar: OpenRouter bilan kirish + o'z API kaliti + lokal model; panel o'ngdan varaq.
+- `src/ai/types.ts` (`Provider`: `listModels`, `stream` → `text | usage | refusal`; `AIError.kind`: auth/credit/rate/model/
+  network/server/bad/abort; `call()` — fetch xatosi → `network`, abort → `abort`), `src/ai/sse.ts` (SSE: CRLF, ko'p qatorli
+  `data`, izohlar, oxirgi bo'sh qatorsiz hodisa).
+- Provayderlar `src/ai/providers/`: `anthropic.ts` — rasmiy `@anthropic-ai/sdk` 1.12 (foydalanuvchi ruxsati bilan qo'shildi;
+  dinamik import → alohida `sdk-*.js` bo'lak 378 KB / 82 KB gzip, asosiy bundle'ga kirmaydi), `dangerouslyAllowBrowser`,
+  `fetch: globalThis.fetch` (testda almashtirish uchun), `beta.messages.stream`, `max_tokens` 64000, Fable 5.2/5.1, Opus
+  5.5/5, Sonnet 5.5 uchun `fallbacks: "default"` (`server-side-fallback-2026-07-01`), `refusal` → eslatma; `compat.ts` —
+  OpenAI Chat Completions (OpenAI, OpenRouter — `HTTP-Referer`/`X-Title`, ochiq model ro'yxati faqat anthropic/openai/google;
+  lokal — standart `http://localhost:11434/v1`); `gemini.ts` — `streamGenerateContent?alt=sse`, `x-goog-api-key`, `thought`
+  qismlari tashlanadi; `mock.ts` — faqat dev (headless sinov). `pickModel()` — model ro'yxatidan afzallik tartibi (qattiq id yo'q;
+  Anthropic'da `claude-opus-5-5` birinchi).
+- `src/ai/openrouterAuth.ts`: PKCE (S256, verifier sessionStorage'da), `openrouter.ai/auth?callback_url=<sahifa>` →
+  qaytishda `?code=` → `POST /api/v1/auth/keys` → foydalanuvchining kaliti; kod URL'dan darhol olib tashlanadi.
+- `src/ai/useAI.ts` (zustand, dev'da `__ai`): `creds` (eslab qolish yoqilsa localStorage `na:ai:creds`, aks holda
+  sessionStorage), `provider`/`model` (`na:ai`), `models` keshi, `messages` (xotirada), `send`/`stop`/`clear`;
+  AI-1 tizim prompti (ta'limiy repetitor, ilova tilida, ishonchsiz bo'lsa "bilmayman", bemor ma'lumoti yo'q).
+- UI: `src/ui/AIPanel.tsx` (+ `aiMarkdown.tsx` — React tugunlari, HTML yo'q: paragraf, sarlavha, ro'yxat, iqtibos, kod,
+  qalin/kursiv, faqat http(s) havola). Ulanmagan bo'lsa — "AI hisobini ulang" (OpenRouter bilan kirish / API kalit);
+  model tanlagich (ulangan provayderlar bo'yicha guruh), tez savollar, Enter yuborish / Shift+Enter qator, to'xtatish,
+  token soni, xatolar odam tilida. Hisoblar: har provayder qatori (kirish/kalit/chiqish/tekshirish → "N model"), lokal URL,
+  "Bu qurilmada eslab qolish", maxfiylik eslatmasi. `ViewGroup`da ✨ tugma, `⌘/` (Ctrl+/). Telefonda pastki varaq.
+  Uslublar `index.css` oxirida "AI panel" — tokenlar bilan (yorug' rejimda "qora orol" emas), z 24 (kesim ko'ruvchisidan yuqori).
+- Tekshiruv: mock bilan headless (ulanish ekrani, Hisoblar, oqimli javob + markdown, `error:auth`, yorug' rejim, telefon);
+  5 provayder oqim tahlilchisi soxta fetch bilan (OpenAI, OpenRouter izoh qatori bilan, lokal, Gemini `thought`, Anthropic SDK
+  hodisalari) — matn va token to'g'ri; 401 → auth, server o'chiq → network. tsc, build, audit-lesions 0.
+- SINALMAGAN: haqiqiy kalitlar va OpenRouter redirect (foydalanuvchi hisobi kerak) — foydalanuvchi o'zi sinaydi.
+- QOLDI: CSP (`<meta http-equiv>` — `connect-src` faqat provayderlar + o'z domen); suhbatni saqlash; AI-2 kontekst.
+
 ### 5.3-3g — Real kesim va atlasda o'choq qo'yish (2026-11-21)
 
 - `lesionFocal.ts`: `cutMatrix(plate)` (affin yoki quti — ikkalasi ham 2×3), `plateToCut()` va teskarisi `cutToPlate()`;

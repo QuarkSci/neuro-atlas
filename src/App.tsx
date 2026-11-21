@@ -12,6 +12,8 @@ import { BottomBar } from '@/ui/BottomBar'
 import { Inspector } from '@/ui/Inspector'
 import { About } from '@/ui/About'
 import { Credit, Footer, HoverLabel, Loading } from '@/ui/Overlays'
+import { AIPanel } from '@/ui/AIPanel'
+import { completeOpenRouterLogin, useAI } from '@/ai/useAI'
 
 export default function App() {
   const t = useT()
@@ -25,6 +27,12 @@ export default function App() {
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
       const typing = e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement
+      // ⌘/ (Ctrl+/): the AI panel, from anywhere.
+      if (e.key === '/' && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault()
+        useAI.getState().toggle()
+        return
+      }
       if (e.key === '/' && !typing) {
         e.preventDefault()
         if (useAtlas.getState().panel !== 'search') setPanel('search')
@@ -33,6 +41,11 @@ export default function App() {
     window.addEventListener('keydown', key)
     return () => window.removeEventListener('keydown', key)
   }, [setPanel])
+
+  // Back from openrouter.ai with ?code=: finish the sign-in.
+  useEffect(() => {
+    completeOpenRouterLogin()
+  }, [])
 
   return (
     <main className="studio">
@@ -53,6 +66,7 @@ export default function App() {
       <About />
       <SectionViewer />
       <LessonPanel />
+      <AIPanel />
     </main>
   )
 }

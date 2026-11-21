@@ -115,9 +115,12 @@ Sabab: `AtlasSliceView`da MNI kursor holati har pointer harakatida butun SVG'ni 
 O'lchash: `node scripts/perf-real.mjs [plate] ["Real kesim"|"Atlas"|"Sxema"]` (CDP: script/style/layout har hodisaga;
 headless "wall" vaqti dasturiy GPU tufayli shovqinli). QOIDA: pointermove'da katta komponent holatini o'zgartirmang.
 
-**AI panel — KEYINGI (2026-11-21 rejalashtirildi):** `PLAN.md` 5.6 (faktlar, arxitektura, AI-1…AI-6, qarorlar).
-Boshlash: AI-1 (provayder qatlami + Hisoblar oynasi + oqimli chat, `src/ai/`, `src/ui/AIPanel.tsx`). Haqiqiy kalitlar
-repoga YOZILMAYDI — headless tekshiruv `mock` provayder bilan; haqiqiy sinovni foydalanuvchi o'z kaliti bilan qiladi.
+**AI panel — AI-1 ✅ (2026-11-21), KEYINGI: AI-2 kontekst** — reja `PLAN.md` 5.6, tafsilot `docs/HISTORY.md` "AI-1".
+`src/ai/` (`types.ts`, `sse.ts`, `providers/` anthropic (rasmiy SDK, dinamik import) | compat (OpenAI/OpenRouter/lokal) |
+gemini | mock (dev), `openrouterAuth.ts` PKCE, `useAI.ts` — dev'da `__ai`), `src/ui/AIPanel.tsx` + `aiMarkdown.tsx`, ✨ tugma
+va `⌘/`. Headless sinov: `__ai.getState().setCred('mock',{key:'mock'})`, `choose('mock','mock-tutor')`, `send(...)`;
+`send('error:auth')` — xato ko'rinishi. Haqiqiy kalitlar repoga YOZILMAYDI. AI-2: `src/ai/context.ts` (tanlov, plastinka,
+o'choqlar/McDonald, dars qadami → tizim promptiga).
 
 **Navbatdagi vazifa — foydalanuvchi tanlaydi** (avval qisqa reja ko'rsating): PLAN 5.3-3 mavzu viktorinasi + Anki;
 Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; BigBrain 20 mkm plitkalar (zoomda);
@@ -135,7 +138,7 @@ Ish uslubi bo'yicha eslatmalar (2026-11-17):
 
 ## Joriy holat (2026-11-21)
 
-Tayyor: 0–4c bosqichlar, BG-1, 3 dars + 3 yo'l darsi va shikastlanish simulyatori (5.3 1+2, o'choq plastinkada/3D 5.3-3a, kalla nervlari 5.3-3b, trigeminal 5.3-3c, erkin o'choq + bir nechta o'choq 5.3-3d, vaqt o'qi + McDonald 5.3-3e, 3D da 5.3-3f, real kesimda 5.3-3g), PERF-1 (real kesim tezligi), 5.5 (zoom, real kesim 21/22, tomirlar simmetriyasi), O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
+Tayyor: 0–4c bosqichlar, BG-1, 3 dars + 3 yo'l darsi va shikastlanish simulyatori (5.3 1+2, o'choq plastinkada/3D 5.3-3a, kalla nervlari 5.3-3b, trigeminal 5.3-3c, erkin o'choq + bir nechta o'choq 5.3-3d, vaqt o'qi + McDonald 5.3-3e, 3D da 5.3-3f, real kesimda 5.3-3g), AI panel AI-1, PERF-1 (real kesim tezligi), 5.5 (zoom, real kesim 21/22, tomirlar simmetriyasi), O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
 
 **Hozirgi yo'nalish — realizm (foydalanuvchi talabi 2026-11-14):** butun ko'rinishni iloji
 boricha real qilish. Reja (har biri alohida sessiya va commit):

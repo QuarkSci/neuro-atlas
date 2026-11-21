@@ -1,0 +1,425 @@
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { ArrowUp, Check, ExternalLink, KeyRound, LoaderCircle, LogOut, RotateCcw, Sparkles, Square, X } from 'lucide-react'
+import type { L10n } from '@/data/types'
+import { useL } from '@/i18n'
+import { PROVIDER_META, PROVIDER_ORDER } from '@/ai/providers'
+import { DEFAULT_LOCAL_URL } from '@/ai/providers/compat'
+import { connected, useAI, type ChatMessage } from '@/ai/useAI'
+import type { AIErrorKind, ProviderId } from '@/ai/types'
+import { Markdown } from './aiMarkdown'
+
+const TX = {
+  title: { en: 'AI tutor', uz: 'AI yordamchi' },
+  accounts: { en: 'Accounts', uz: 'Hisoblar' },
+  back: { en: 'Back to chat', uz: 'Suhbatga qaytish' },
+  clear: { en: 'New chat', uz: 'Yangi suhbat' },
+  close: { en: 'Close', uz: 'Yopish' },
+  placeholder: { en: 'Ask about any structure, tract or lesion…', uz: "Istalgan tuzilma, yo'l yoki o'choq haqida so'rang…" },
+  send: { en: 'Send', uz: 'Yuborish' },
+  stop: { en: 'Stop', uz: "To'xtatish" },
+  thinking: { en: 'Thinking…', uz: "O'ylayapti…" },
+  disclaimer: {
+    en: 'AI can be wrong — check against the atlas and your textbook. Education only, not medical advice.',
+    uz: "AI xato qilishi mumkin — atlas va darslik bilan solishtiring. Faqat ta'lim uchun, tibbiy maslahat emas.",
+  },
+  connectTitle: { en: 'Connect an AI account', uz: 'AI hisobini ulang' },
+  connectText: {
+    en: 'Sign in with OpenRouter (Claude, GPT and Gemini in one account) or add your own Anthropic, OpenAI or Google key. You pay the provider directly; Neuro Atlas has no server and never sees your key.',
+    uz: "OpenRouter bilan kiring (Claude, GPT va Gemini bitta hisobda) yoki o'z Anthropic, OpenAI yoki Google kalitingizni qo'shing. To'lovni to'g'ridan-to'g'ri provayderga qilasiz; Neuro Atlas'ning serveri yo'q va kalitingizni ko'rmaydi.",
+  },
+  signInOR: { en: 'Sign in with OpenRouter', uz: 'OpenRouter bilan kirish' },
+  addKey: { en: 'Add an API key', uz: "API kalit qo'shish" },
+  suggest: { en: 'Try', uz: "Sinab ko'ring" },
+  s1: { en: 'Explain the thalamic nuclei and where each one projects', uz: 'Talamus yadrolarini va har biri qayerga proyeksiya berishini tushuntir' },
+  s2: { en: 'Why does a lateral medullary lesion give crossed sensory loss?', uz: "Nega lateral uzunchoq miya o'chog'i kesishgan sezgi yo'qolishini beradi?" },
+  s3: { en: 'Quiz me on the brainstem cranial nerve nuclei', uz: "Miya ustunidagi kalla nervi yadrolari bo'yicha meni sinab ko'r" },
+  model: { en: 'Model', uz: 'Model' },
+  noModels: { en: 'Connect an account to pick a model', uz: 'Model tanlash uchun hisob ulang' },
+  // Accounts sheet
+  connectedTo: { en: 'Connected', uz: 'Ulangan' },
+  active: { en: 'Active', uz: 'Faol' },
+  use: { en: 'Use', uz: 'Tanlash' },
+  signOut: { en: 'Sign out', uz: 'Chiqish' },
+  save: { en: 'Save', uz: 'Saqlash' },
+  connect: { en: 'Connect', uz: 'Ulash' },
+  getKey: { en: 'Get a key', uz: 'Kalit olish' },
+  checking: { en: 'Checking…', uz: 'Tekshirilmoqda…' },
+  models: { en: 'models', uz: 'model' },
+  remember: { en: 'Remember on this device', uz: 'Bu qurilmada eslab qolish' },
+  rememberOff: { en: 'Off: keys are forgotten when this tab closes.', uz: "O'chiq: kalitlar shu tab yopilganda unutiladi." },
+  privacy: {
+    en: 'Keys stay in this browser and go only to their own provider. Neuro Atlas has no server. Anyone with access to this browser profile can read them — use "Remember" only on your own device.',
+    uz: "Kalitlar faqat shu brauzerda saqlanadi va faqat o'z provayderiga yuboriladi. Neuro Atlas'ning serveri yo'q. Bu brauzer profiliga kira oladigan odam ularni o'qiy oladi — \"Eslab qolish\"ni faqat o'z qurilmangizda yoqing.",
+  },
+  orText: {
+    en: 'One click: Claude, GPT and Gemini models in one account. You approve on openrouter.ai and top up credit there.',
+    uz: "Bir bosishda: Claude, GPT va Gemini modellari bitta hisobda. openrouter.ai sahifasida ruxsat berasiz va hisobni o'sha yerda to'ldirasiz.",
+  },
+  orKey: { en: 'or paste a key', uz: 'yoki kalitni kiriting' },
+  anthropicText: {
+    en: 'Claude models with your Anthropic Console API key. (A Claude.ai Pro/Max subscription cannot be used by other apps.)',
+    uz: 'Anthropic Console API kalitingiz bilan Claude modellari. (Claude.ai Pro/Max obunasini boshqa ilovalar ishlata olmaydi.)',
+  },
+  openaiText: {
+    en: 'GPT models with your OpenAI Platform API key. Signing in with a ChatGPT plan is not yet available to websites.',
+    uz: 'OpenAI Platform API kalitingiz bilan GPT modellari. ChatGPT rejasi bilan kirish hozircha veb-saytlar uchun mavjud emas.',
+  },
+  googleText: { en: 'Gemini models with a Google AI Studio key (has a free tier).', uz: 'Google AI Studio kaliti bilan Gemini modellari (bepul tarifi bor).' },
+  localText: {
+    en: 'A model on your own computer (Ollama, LM Studio): free, offline, private. Ollama must allow this site: OLLAMA_ORIGINS="*".',
+    uz: 'O\'z kompyuteringizdagi model (Ollama, LM Studio): bepul, oflayn, maxfiy. Ollama bu saytga ruxsat berishi kerak: OLLAMA_ORIGINS="*".',
+  },
+  mockText: { en: 'Scripted answers for development.', uz: 'Ishlab chiqish uchun tayyor javoblar.' },
+  loginWorking: { en: 'Opening openrouter.ai…', uz: 'openrouter.ai ochilmoqda…' },
+  loginFailed: { en: 'OpenRouter sign-in failed: ', uz: 'OpenRouter orqali kirish amalga oshmadi: ' },
+  refused: { en: 'The model declined to answer this.', uz: 'Model bunga javob berishdan bosh tortdi.' },
+  tokens: { en: 'tokens', uz: 'token' },
+} satisfies Record<string, L10n>
+
+const ERR: Record<AIErrorKind, L10n> = {
+  auth: {
+    en: 'The key was rejected (invalid, expired or without access). Check it in Accounts.',
+    uz: "Kalit rad etildi (noto'g'ri, muddati o'tgan yoki ruxsati yo'q). Hisoblarda tekshiring.",
+  },
+  credit: { en: 'No credit left on this account — top up with the provider.', uz: "Bu hisobda mablag' qolmagan — provayder sahifasida to'ldiring." },
+  rate: { en: 'Too many requests right now — wait a moment and try again.', uz: "Hozir so'rovlar juda ko'p — biroz kutib, qayta urinib ko'ring." },
+  model: { en: 'This model is not available to your account — pick another one.', uz: 'Bu model hisobingizda mavjud emas — boshqasini tanlang.' },
+  network: {
+    en: 'Could not reach the provider (network or browser block). For a local server, start it with CORS allowed (OLLAMA_ORIGINS="*").',
+    uz: "Provayderga ulanib bo'lmadi (tarmoq yoki brauzer to'sig'i). Lokal server bo'lsa, CORS ruxsati bilan ishga tushiring (OLLAMA_ORIGINS=\"*\").",
+  },
+  server: { en: 'The provider had an error — try again in a little while.', uz: 'Provayder tomonida xato — birozdan keyin qayta urinib ko‘ring.' },
+  bad: { en: 'The provider refused the request:', uz: "Provayder so'rovni qabul qilmadi:" },
+  abort: { en: 'Stopped.', uz: "To'xtatildi." },
+}
+
+/**
+ * The AI panel (PLAN 5.6, AI-1): a sheet from the right with the chat and,
+ * behind the key icon, the accounts list — Xcode's Intelligence settings in
+ * spirit: sign in with OpenRouter, or bring your own Anthropic / OpenAI /
+ * Google key, or a local model.
+ */
+export function AIPanel() {
+  const l = useL()
+  const { open, view, setOpen, setView, clear, messages, provider } = useAI()
+  useEffect(() => {
+    if (!open) return
+    const key = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
+    window.addEventListener('keydown', key)
+    return () => window.removeEventListener('keydown', key)
+  }, [open, setOpen])
+
+  return (
+    <aside className={`ai-panel glass ${open ? 'open' : ''}`} aria-hidden={!open} aria-label={l(TX.title)}>
+      <header className="ai-head">
+        <span className="ai-title">
+          <Sparkles size={16} /> {view === 'accounts' ? l(TX.accounts) : l(TX.title)}
+        </span>
+        <span className="ai-head-actions">
+          {view === 'chat' && messages.length > 0 && (
+            <button className="icon-button" onClick={clear} aria-label={l(TX.clear)} title={l(TX.clear)}>
+              <RotateCcw size={15} />
+            </button>
+          )}
+          <button
+            className={`icon-button ${view === 'accounts' ? 'active' : ''}`}
+            onClick={() => setView(view === 'accounts' ? 'chat' : 'accounts')}
+            aria-label={view === 'accounts' ? l(TX.back) : l(TX.accounts)}
+            title={view === 'accounts' ? l(TX.back) : l(TX.accounts)}
+          >
+            <KeyRound size={15} />
+          </button>
+          <button className="icon-button" onClick={() => setOpen(false)} aria-label={l(TX.close)} title={l(TX.close)}>
+            <X size={16} />
+          </button>
+        </span>
+      </header>
+      {view === 'accounts' ? <Accounts /> : provider ? <Chat /> : <Connect />}
+    </aside>
+  )
+}
+
+function Connect() {
+  const l = useL()
+  const { signInOpenRouter, setView, login } = useAI()
+  return (
+    <div className="ai-body ai-connect">
+      <Sparkles size={28} className="ai-connect-mark" />
+      <h3>{l(TX.connectTitle)}</h3>
+      <p>{l(TX.connectText)}</p>
+      <button className="ai-primary" onClick={signInOpenRouter} disabled={login === 'working'}>
+        {login === 'working' ? <LoaderCircle size={15} className="spin" /> : null}
+        {login === 'working' ? l(TX.loginWorking) : l(TX.signInOR)}
+      </button>
+      <button className="ai-secondary" onClick={() => setView('accounts')}>
+        <KeyRound size={14} /> {l(TX.addKey)}
+      </button>
+      {typeof login === 'object' && <p className="ai-error">{l(TX.loginFailed) + login.error}</p>}
+    </div>
+  )
+}
+
+function Chat() {
+  const l = useL()
+  const { messages, busy, send, stop } = useAI()
+  const [draft, setDraft] = useState('')
+  const list = useRef<HTMLDivElement>(null)
+  const input = useRef<HTMLTextAreaElement>(null)
+  const open = useAI((s) => s.open)
+
+  // Follow the answer as it streams, unless the reader scrolled up.
+  const last = messages.at(-1)?.text.length ?? 0
+  useEffect(() => {
+    const el = list.current
+    if (el && el.scrollHeight - el.scrollTop - el.clientHeight < 120) el.scrollTop = el.scrollHeight
+  }, [messages.length, last])
+  useEffect(() => {
+    if (open) input.current?.focus()
+  }, [open])
+
+  const submit = (text = draft) => {
+    if (!text.trim() || busy) return
+    setDraft('')
+    send(text.trim())
+  }
+
+  return (
+    <>
+      <ModelPicker />
+      <div className="ai-body ai-messages" ref={list}>
+        {messages.length === 0 && (
+          <div className="ai-suggest">
+            <span>{l(TX.suggest)}</span>
+            {[TX.s1, TX.s2, TX.s3].map((s) => (
+              <button key={s.en} onClick={() => submit(l(s))}>
+                {l(s)}
+              </button>
+            ))}
+          </div>
+        )}
+        {messages.map((m, i) => (
+          <Message key={i} m={m} />
+        ))}
+      </div>
+      <form
+        className="ai-composer"
+        onSubmit={(e) => {
+          e.preventDefault()
+          submit()
+        }}
+      >
+        <textarea
+          ref={input}
+          value={draft}
+          rows={1}
+          placeholder={l(TX.placeholder)}
+          onChange={(e) => setDraft(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) {
+              e.preventDefault()
+              submit()
+            }
+          }}
+        />
+        {busy ? (
+          <button type="button" className="ai-send stop" onClick={stop} aria-label={l(TX.stop)} title={l(TX.stop)}>
+            <Square size={12} fill="currentColor" />
+          </button>
+        ) : (
+          <button type="submit" className="ai-send" disabled={!draft.trim()} aria-label={l(TX.send)} title={l(TX.send)}>
+            <ArrowUp size={16} />
+          </button>
+        )}
+      </form>
+      <p className="ai-foot">{l(TX.disclaimer)}</p>
+    </>
+  )
+}
+
+function Message({ m }: { m: ChatMessage }) {
+  const l = useL()
+  if (m.role === 'user') return <div className="ai-msg user">{m.text}</div>
+  return (
+    <div className="ai-msg assistant">
+      {m.text ? <Markdown text={m.text} /> : m.live ? <span className="ai-thinking">{l(TX.thinking)}</span> : null}
+      {m.refusal && <p className="ai-note">{l(TX.refused) + (typeof m.refusal === 'string' ? ` (${m.refusal})` : '')}</p>}
+      {m.error && (
+        <p className="ai-error">
+          {l(ERR[m.error.kind])}
+          {m.error.kind === 'bad' || m.error.kind === 'server' ? <small> {m.error.message}</small> : null}
+        </p>
+      )}
+      {!m.live && (m.usage || m.model) && (
+        <span className="ai-meta">
+          {m.model}
+          {m.usage ? ` · ${(m.usage.input ?? 0) + (m.usage.output ?? 0)} ${l(TX.tokens)}` : ''}
+        </span>
+      )}
+    </div>
+  )
+}
+
+/** Provider · model, from the connected accounts; lists load on first open. */
+function ModelPicker() {
+  const l = useL()
+  const { creds, provider, model, models, choose, loadModels } = useAI()
+  const live = PROVIDER_ORDER.filter((p) => connected(p, creds))
+  useEffect(() => {
+    if (provider && !models[provider]) loadModels(provider).catch(() => {})
+  }, [provider, models, loadModels])
+  const value = provider ? `${provider}|${model[provider] ?? ''}` : ''
+  return (
+    <label className="ai-model">
+      <span>{l(TX.model)}</span>
+      <select
+        value={value}
+        onFocus={() => live.forEach((p) => !models[p] && loadModels(p).catch(() => {}))}
+        onChange={(e) => {
+          const [p, ...rest] = e.target.value.split('|')
+          choose(p as ProviderId, rest.join('|') || undefined)
+        }}
+      >
+        {!live.length && <option value="">{l(TX.noModels)}</option>}
+        {live.map((p) => (
+          <optgroup key={p} label={PROVIDER_META[p].name}>
+            {(models[p] ?? (model[p] ? [{ id: model[p]!, name: model[p]! }] : [{ id: '', name: '…' }])).map((m) => (
+              <option key={m.id} value={`${p}|${m.id}`}>
+                {m.name}
+              </option>
+            ))}
+          </optgroup>
+        ))}
+      </select>
+    </label>
+  )
+}
+
+const ROW_TEXT: Record<ProviderId, L10n> = {
+  openrouter: TX.orText,
+  anthropic: TX.anthropicText,
+  openai: TX.openaiText,
+  google: TX.googleText,
+  local: TX.localText,
+  mock: TX.mockText,
+}
+
+function Accounts() {
+  const l = useL()
+  const { remember, setRemember, login } = useAI()
+  return (
+    <div className="ai-body ai-accounts">
+      {typeof login === 'object' && <p className="ai-error">{l(TX.loginFailed) + login.error}</p>}
+      {PROVIDER_ORDER.map((p) => (
+        <AccountRow key={p} p={p} />
+      ))}
+      <label className="ai-remember">
+        <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} />
+        <span>
+          {l(TX.remember)}
+          {!remember && <small>{l(TX.rememberOff)}</small>}
+        </span>
+      </label>
+      <p className="ai-foot">{l(TX.privacy)}</p>
+    </div>
+  )
+}
+
+function AccountRow({ p }: { p: ProviderId }) {
+  const l = useL()
+  const { creds, provider, setCred, signOut, choose, loadModels, signInOpenRouter, models, login } = useAI()
+  const meta = PROVIDER_META[p]
+  const on = connected(p, creds)
+  const [key, setKey] = useState('')
+  const [url, setUrl] = useState(creds.local?.baseUrl ?? DEFAULT_LOCAL_URL)
+  const [status, setStatus] = useState<'idle' | 'checking' | { ok: number } | { error: string }>('idle')
+  const count = useMemo(() => models[p]?.length, [models, p])
+
+  const check = async () => {
+    setStatus('checking')
+    try {
+      setStatus({ ok: (await loadModels(p)).length })
+    } catch (e) {
+      const kind = (e as { kind?: AIErrorKind }).kind
+      setStatus({ error: kind ? l(ERR[kind]) : (e as Error).message })
+    }
+  }
+  const connect = (c: { key?: string; baseUrl?: string }) => {
+    setCred(p, c)
+    setKey('')
+    check()
+  }
+
+  return (
+    <section className={`ai-account ${on ? 'on' : ''} ${provider === p ? 'active' : ''}`}>
+      <div className="ai-account-head">
+        <b>{meta.name}</b>
+        {on && (
+          <span className="ai-badge">
+            <Check size={11} /> {provider === p ? l(TX.active) : l(TX.connectedTo)}
+          </span>
+        )}
+      </div>
+      <p>{l(ROW_TEXT[p])}</p>
+      {on ? (
+        <div className="ai-account-actions">
+          {provider !== p && (
+            <button className="ai-secondary" onClick={() => choose(p)}>
+              {l(TX.use)}
+            </button>
+          )}
+          <button className="ai-secondary" onClick={check}>
+            {status === 'checking' ? <LoaderCircle size={13} className="spin" /> : null}
+            {status === 'checking' ? l(TX.checking) : count !== undefined ? `${count} ${l(TX.models)}` : l(TX.connect)}
+          </button>
+          <button className="ai-secondary" onClick={() => (signOut(p), setStatus('idle'))}>
+            <LogOut size={13} /> {l(TX.signOut)}
+          </button>
+        </div>
+      ) : p === 'mock' ? (
+        <div className="ai-account-actions">
+          <button className="ai-secondary" onClick={() => connect({ key: 'mock' })}>
+            {l(TX.connect)}
+          </button>
+        </div>
+      ) : (
+        <>
+          {p === 'openrouter' && (
+            <button className="ai-primary" onClick={signInOpenRouter} disabled={login === 'working'}>
+              {login === 'working' ? l(TX.loginWorking) : l(TX.signInOR)}
+            </button>
+          )}
+          {p === 'local' && <input className="ai-input" value={url} onChange={(e) => setUrl(e.target.value)} spellCheck={false} aria-label="Base URL" />}
+          <form
+            className="ai-key"
+            onSubmit={(e) => {
+              e.preventDefault()
+              if (p === 'local') connect({ baseUrl: url.trim(), key: key.trim() || undefined })
+              else if (key.trim()) connect({ key: key.trim() })
+            }}
+          >
+            <input
+              className="ai-input"
+              type="password"
+              value={key}
+              onChange={(e) => setKey(e.target.value)}
+              placeholder={p === 'openrouter' ? l(TX.orKey) : p === 'local' ? 'API key (optional)' : (meta.keyHint ?? 'API key')}
+              autoComplete="off"
+              spellCheck={false}
+              aria-label={`${meta.name} API key`}
+            />
+            <button className="ai-secondary" type="submit" disabled={p !== 'local' && !key.trim()}>
+              {p === 'local' ? l(TX.connect) : l(TX.save)}
+            </button>
+          </form>
+          {meta.keyUrl && (
+            <a className="ai-link" href={meta.keyUrl} target="_blank" rel="noreferrer noopener">
+              {l(TX.getKey)} <ExternalLink size={11} />
+            </a>
+          )}
+        </>
+      )}
+      {typeof status === 'object' && 'error' in status && <p className="ai-error">{status.error}</p>}
+      {typeof status === 'object' && 'ok' in status && <p className="ai-ok">✓ {`${status.ok} ${l(TX.models)}`}</p>}
+    </section>
+  )
+}

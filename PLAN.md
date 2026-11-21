@@ -120,7 +120,7 @@ glasser | julich`), tizim emas.
 | LG-1 | Liquid Glass: boshqaruv elementlari | ✅ 2026-11-15: chetda sinish (SVG displacement, Chromium), sirg'aluvchi linza-tanlov kapsulasi (3 ta tab guruhi), bosilish fizikasi (prujina), slayder tutqichi sudralganda shisha tomchi. Keyin LG-2: katta panellar, ochilish morfi, telefonda FPS |
 | R1 | Realizm: yorug'lik/material | ✅ 2026-11-14: "Real / Atlas rangi" almashtirgichi (standart Real) — to'qima ranglari (po'stloq, chuqur yadrolar, oq modda, arteriya/vena, nerv, dura, suyak; qora modda/qizil yadro/xoroid chigal alohida), nam yaltirash (past roughness + sheen, clearcoat 0), Neutral tone mapping, bitta iliq asosiy chiroq. Keyin R2 chuqurlik (AO/soya), R3 kesim yuzalari, R4 mayda detal |
 | 5 | Kontent | 🟡 2026-09-24: 487 yozuv (`src/data/content/*.json`, en/uz + manbalar); barcha yozuvlarda `uz` nom; Julich 206 alohida hudud tugadi. Qolgan: Glasser 179, Destrieux 74, Desikan 35, JHU 27 |
-| AI | AI panel (5.6) | ⏳ 2026-11-21 reja: OpenRouter bilan kirish + o'z API kaliti (Anthropic/OpenAI/Google) + lokal model; AI-1…AI-6 |
+| AI | AI panel (5.6) | 🟡 2026-11-21: AI-1 ✅ (5 provayder + mock, OpenRouter PKCE kirish, API kalitlar, lokal model, oqimli chat, Hisoblar, ⌘/); keyingi AI-2 kontekst |
 | 6 | Deploy | Pages, meshlar GitHub Release'da, README, ATTRIBUTION.md |
 | 7 | v2 | Orqa miya, qo'shimcha atlaslar (neuroparc, Allen) |
 
@@ -319,7 +319,7 @@ o'zi boshqaradi va har amalni chip bilan ko'rsatadi; panel — o'ngdan chiquvchi
 
 | # | Bosqich | Tayyor mezoni |
 |---|---|---|
-| AI-1 | Provayder qatlami + Hisoblar | 5 provayder + mock; OpenRouter PKCE kirish; kalit kiritish/chiqish; oqimli chat; xatolar odam tilida (401, 429, CORS, kredit yo'q); mock bilan headless screenshot; foydalanuvchi o'z kaliti bilan sinaydi |
+| AI-1 ✅ 2026-11-21 | Provayder qatlami + Hisoblar | 5 provayder + mock; OpenRouter PKCE kirish; kalit kiritish/chiqish; oqimli chat; xatolar odam tilida (401, 429, CORS, kredit yo'q); mock bilan headless screenshot; foydalanuvchi o'z kaliti bilan sinaydi |
 | AI-2 | Kontekst | AI "nimaga qarayapman"ni biladi (tanlov, plastinka, o'choqlar, dars); javob ilova tilida; atlas `content` manbalariga havola |
 | AI-3 | Ilovani boshqarish (tools) | "Menga Wallenberg o'chog'ini ko'rsat" → plastinka ochiladi, o'choq qo'yiladi, 3D dars; amal chiplari; har provayderda tool calling sinovi |
 | AI-4 | Ko'rish (vision) | 3D sahna / plastinka surati yuboriladi (`canvas` → PNG, bir martalik render); "Bu nima?" |
