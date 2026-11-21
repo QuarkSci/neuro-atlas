@@ -120,6 +120,7 @@ glasser | julich`), tizim emas.
 | LG-1 | Liquid Glass: boshqaruv elementlari | ✅ 2026-11-15: chetda sinish (SVG displacement, Chromium), sirg'aluvchi linza-tanlov kapsulasi (3 ta tab guruhi), bosilish fizikasi (prujina), slayder tutqichi sudralganda shisha tomchi. Keyin LG-2: katta panellar, ochilish morfi, telefonda FPS |
 | R1 | Realizm: yorug'lik/material | ✅ 2026-11-14: "Real / Atlas rangi" almashtirgichi (standart Real) — to'qima ranglari (po'stloq, chuqur yadrolar, oq modda, arteriya/vena, nerv, dura, suyak; qora modda/qizil yadro/xoroid chigal alohida), nam yaltirash (past roughness + sheen, clearcoat 0), Neutral tone mapping, bitta iliq asosiy chiroq. Keyin R2 chuqurlik (AO/soya), R3 kesim yuzalari, R4 mayda detal |
 | 5 | Kontent | 🟡 2026-09-24: 487 yozuv (`src/data/content/*.json`, en/uz + manbalar); barcha yozuvlarda `uz` nom; Julich 206 alohida hudud tugadi. Qolgan: Glasser 179, Destrieux 74, Desikan 35, JHU 27 |
+| AI | AI panel (5.6) | ⏳ 2026-11-21 reja: OpenRouter bilan kirish + o'z API kaliti (Anthropic/OpenAI/Google) + lokal model; AI-1…AI-6 |
 | 6 | Deploy | Pages, meshlar GitHub Release'da, README, ATTRIBUTION.md |
 | 7 | v2 | Orqa miya, qo'shimcha atlaslar (neuroparc, Allen) |
 
@@ -268,3 +269,69 @@ faqat bir tomonda, arteriyalar ham ikki yarim sharda har xil.
 - LG-3: linza, sirg'alish, varaq ochilishi — namuna video kadrlari bilan sozlash.
 - Varaq radiusi (34px), katta panellar materiali; telefonda FPS va Safari ko'rinishini tekshirish.
 - Native Apple qobig'i (SwiftUI `.glassEffect()`) — haqiqiy Liquid Glass faqat shu yo'l bilan; alohida loyiha.
+
+### 5.6 AI panel — "Xcode Intelligence" uslubida (2026-11-21, rejalashtirish; hali kod yo'q)
+
+Talab (foydalanuvchi): ilovada AI panel; foydalanuvchi o'z AI hisobi bilan kiradi (Xcode kabi) va foydalanadi;
+provayderlar — Anthropic, OpenAI, Google.
+
+#### A. Kirish usullari — tekshirilgan faktlar (2026-11-21)
+
+Ilova STATIK (GitHub Pages, backend yo'q) — bu qaror hamma narsani belgilaydi.
+
+| Provayder | "Hisob bilan kirish" | Statik sayt uchun haqiqiy yo'l |
+|---|---|---|
+| Anthropic | **Taqiqlangan.** 2026-fevral shartlari: uchinchi tomon ilovalari Claude.ai (Free/Pro/Max) login'ini taklif qilmaydi, 2026-04-04 dan majburiy. Xcode'dagi Claude login — Apple bilan alohida kelishuv. | API kalit (console.anthropic.com). Brauzerdan to'g'ridan-to'g'ri: `anthropic-dangerous-direct-browser-access: true` sarlavhasi (CORS). |
+| OpenAI | "Sign in with ChatGPT" (SIWC) — Plus/Pro rejasi bilan modelga murojaat: **preview**, "open-source va lokal ilovalar" uchun; redirect faqat `http://127.0.0.1:<port>` (loopback), `localhost` emas; inference — `POST /v1/responses`, `stream=true`, `store=false`; `temperature`, `max_output_tokens` yo'q. Statik sahifa loopback callback qabul qila olmaydi. | Hozir: API kalit (platform.openai.com). Keyin: SIWC lokal yordamchi (desktop qobiq yoki `npx neuro-atlas-ai` loopback) orqali — AI-6. |
+| Google | Gemini API OAuth bor, lekin Cloud loyiha + OAuth client + scope tekshiruvi (verifikatsiya) kerak; hujjatda faqat desktop/server oqimi. | API kalit (aistudio.google.com, bepul tarif bor). OAuth — AI-6 da tadqiqot. |
+| OpenRouter | **Haqiqiy bir bosishli kirish**: OAuth PKCE, client ID/secret va backend kerak emas; `openrouter.ai/auth?callback_url=…` → `code` → `POST /api/v1/auth/keys` → foydalanuvchining o'z kaliti. Bitta hisob orqali Claude, GPT va Gemini modellari; to'lovni foydalanuvchi qiladi. | Xcode'ga eng yaqin tajriba — **asosiy "Kirish" tugmasi**. |
+| Lokal | Ollama / LM Studio (OpenAI-mos `localhost` API) — Xcode ham qo'llaydi. | URL + model; Ollama uchun `OLLAMA_ORIGINS` sozlanadi. Bepul, oflayn, maxfiy. |
+
+Manbalar: Apple "Setting up coding intelligence"; The Register 2026-02-20 (Anthropic); developers.openai.com/siwc
+(quickstart, token-sharing-open-source); openrouter.ai/docs/guides/overview/auth/oauth; ai.google.dev/gemini-api/docs/oauth.
+
+Xulosa: "Hisoblar" oynasida 3 xil ulanish — **OpenRouter bilan kirish** (bir bosish, uchala provayder modellari),
+**o'z API kalitingiz** (Anthropic / OpenAI / Google), **lokal model**. ChatGPT rejasi bilan kirish — keyinroq (AI-6).
+
+**Qarorlar (foydalanuvchi, 2026-11-21):** asosiy kirish — OpenRouter + o'z API kaliti (+ lokal model); AI ilovani
+o'zi boshqaradi va har amalni chip bilan ko'rsatadi; panel — o'ngdan chiquvchi varaq (telefonda pastki varaq).
+
+#### B. Arxitektura
+
+- `src/ai/providers/` — `anthropic.ts`, `openai.ts` (Chat Completions + Responses), `gemini.ts`, `openrouter.ts`,
+  `local.ts` (OpenAI-mos), `mock.ts` (faqat dev — headless test va screenshot uchun). Umumiy interfeys:
+  `listModels()`, `stream(messages, tools, signal) → AsyncIterable<text | tool_call | usage | error>`.
+  SDK'siz `fetch` + SSE tahlilchisi (bundle kichik; har provayderning oqim formati alohida test fixture bilan).
+- `src/ai/accounts.ts` — kalitlar `localStorage` `na:ai:*` ("bu qurilmada eslab qol" o'chirilsa — faqat sessiya);
+  OpenRouter PKCE (`code_verifier` sessionStorage'da, qaytishda `?code=` ushlanadi va URL tozalanadi); "Chiqish" =
+  kalitni o'chirish. Kalit faqat o'z provayderiga yuboriladi; CSP `connect-src` ro'yxati.
+- `src/ai/context.ts` — ilova holatidan qisqa kontekst: til, tanlangan qism + `content/*.json` yozuvi va manbalari,
+  ochiq kesim plastinkasi va tuzilmalari, yo'l, o'choqlar (`focalSet`, McDonald natijasi), dars qadami. Hajm chegarasi.
+- `src/ai/tools.ts` — AI ilovani boshqaradi (function calling → store amallari): `find_structure`, `select_structure`,
+  `open_section`, `set_view`, `open_lesson`, `trace_pathway`, `place_lesion` (plastinka + tuzilma + radius + vaqt),
+  `get_structure_info`. Har amal chatda "chip" bo'lib ko'rinadi (bosilsa takrorlanadi). Faqat UI amallari — qaytariladigan.
+- UI: `src/ui/AIPanel.tsx` — o'ngdan chiquvchi Liquid Glass varaq (`ViewGroup`da ✨ tugma, `⌘/`), oqimli markdown,
+  model tanlagich, to'xtatish, "Kontekst: K3 · 2 o'choq" yorlig'i, tez savollar. `AccountsSheet` — Xcode Intelligence
+  ro'yxati kabi: provayder qatori → Kirish / Kalit / Chiqish, modellar, "Ulanishni tekshirish". uz/en.
+- Store: `aiOpen`, `aiProvider`, `aiModel` (persist); suhbat tarixi xotirada (ixtiyoriy saqlash keyin).
+
+#### C. Bosqichlar (har biri alohida sessiya va commit)
+
+| # | Bosqich | Tayyor mezoni |
+|---|---|---|
+| AI-1 | Provayder qatlami + Hisoblar | 5 provayder + mock; OpenRouter PKCE kirish; kalit kiritish/chiqish; oqimli chat; xatolar odam tilida (401, 429, CORS, kredit yo'q); mock bilan headless screenshot; foydalanuvchi o'z kaliti bilan sinaydi |
+| AI-2 | Kontekst | AI "nimaga qarayapman"ni biladi (tanlov, plastinka, o'choqlar, dars); javob ilova tilida; atlas `content` manbalariga havola |
+| AI-3 | Ilovani boshqarish (tools) | "Menga Wallenberg o'chog'ini ko'rsat" → plastinka ochiladi, o'choq qo'yiladi, 3D dars; amal chiplari; har provayderda tool calling sinovi |
+| AI-4 | Ko'rish (vision) | 3D sahna / plastinka surati yuboriladi (`canvas` → PNG, bir martalik render); "Bu nima?" |
+| AI-5 | PhD qatlami | Sokratik repetitor (javobni aytmay savol beradi), klinik keys generatori (simulyator bilan tekshiriladi — AI keysi `focalSet` natijasiga mos kelmasa ko'rsatiladi), adabiyot: PubMed E-utilities + Crossref (DOI tekshiriladi, to'qilgan havola yo'q), "Viktorina" va Anki eksport bilan bog'lanish |
+| AI-6 | Hisob bilan kirish kengaytmalari | ChatGPT rejasi (SIWC) — lokal yordamchi/desktop qobiq orqali, OpenAI'ning open-source partner shartlari tekshirilgach; Google OAuth (Cloud loyiha, verifikatsiya) |
+
+#### D. Xavflar va qoidalar
+
+- Kalit brauzerda: XSS bo'lsa o'g'irlanadi → tashqi skript yo'q, CSP, kalit faqat provayder domeniga; UI'da ogohlantirish
+  va "faqat sessiya" rejimi. Bizning serverimiz yo'q — kalit hech qachon bizga kelmaydi (README'da yoziladi).
+- Tibbiy aniqlik: tizim prompti — ta'limiy, bemor ma'lumotini kiritmaslik, ishonchsiz bo'lsa "bilmayman", atlas
+  ma'lumotiga tayanish; javoblar ostida "AI xato qilishi mumkin" eslatmasi.
+- Narx: foydalanuvchi to'laydi; har javobda token/narx taxmini; standart model — arzon/tez, "chuqur" rejim — kuchli model.
+- Provayder API'lari tez o'zgaradi: model ro'yxati qattiq yozilmaydi (`listModels`), har provayderga fixture-test.
+- OpenAI SIWC va Anthropic shartlari o'zgarishi mumkin — AI-6 dan oldin qayta tekshirilsin.

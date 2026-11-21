@@ -115,6 +115,10 @@ Sabab: `AtlasSliceView`da MNI kursor holati har pointer harakatida butun SVG'ni 
 O'lchash: `node scripts/perf-real.mjs [plate] ["Real kesim"|"Atlas"|"Sxema"]` (CDP: script/style/layout har hodisaga;
 headless "wall" vaqti dasturiy GPU tufayli shovqinli). QOIDA: pointermove'da katta komponent holatini o'zgartirmang.
 
+**AI panel — KEYINGI (2026-11-21 rejalashtirildi):** `PLAN.md` 5.6 (faktlar, arxitektura, AI-1…AI-6, qarorlar).
+Boshlash: AI-1 (provayder qatlami + Hisoblar oynasi + oqimli chat, `src/ai/`, `src/ui/AIPanel.tsx`). Haqiqiy kalitlar
+repoga YOZILMAYDI — headless tekshiruv `mock` provayder bilan; haqiqiy sinovni foydalanuvchi o'z kaliti bilan qiladi.
+
 **Navbatdagi vazifa — foydalanuvchi tanlaydi** (avval qisqa reja ko'rsating): PLAN 5.3-3 mavzu viktorinasi + Anki;
 Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; BigBrain 20 mkm plitkalar (zoomda);
 5.4 UI qoldiqlari (dars kartasi va kesim ko'ruvchisi yorug' rejimda "qora orol"); erkin o'choqning PhD davomi
