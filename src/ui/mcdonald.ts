@@ -3,7 +3,7 @@ import { SECTION_BY_ID } from '@/data/sections'
 import type { LesionLevel } from '@/data/pathways'
 import { itemShapes, shapePolygon } from './sectionLayout'
 import { insidePolygon, shapeSamples } from './lesionTerritory'
-import type { FocalLesion, FocalResult } from './lesionFocal'
+import { structureCentre, type FocalLesion, type FocalResult } from './lesionFocal'
 
 /**
  * Multiple sclerosis criteria over the free lesions: the lesions the user
@@ -113,19 +113,6 @@ export function mcArea(f: FocalLesion, r: FocalResult): McArea | 'deep' {
   return 'deep'
 }
 
-/** Centre of an item's copy on the patient's left (the figure's right half). */
-function itemCentre(plate: string, id: string): [number, number] | null {
-  const s = SECTION_BY_ID.get(plate)
-  const it = s?.items.find((i) => i.id === id)
-  if (!s || !it) return null
-  const polys = itemShapes(s, it)
-    .map((sh) => shapePolygon(sh) ?? [])
-    .filter((q) => q.length)
-  const mean = (q: [number, number][], k: 0 | 1) => q.reduce((a, b) => a + b[k], 0) / q.length
-  const q = polys.find((q) => mean(q, 0) > s.w / 2) ?? polys[0]
-  return q ? [mean(q, 0), mean(q, 1)] : null
-}
-
 /**
  * A teaching case: internuclear ophthalmoplegia from an enhancing MLF plaque
  * in the rostral pons (the first attack), a silent periventricular lesion on the same scan, and a
@@ -140,7 +127,7 @@ export function msCase(): FocalLesion[] {
     ['bg-pallidal', 'ins', 6, false, 2.5],
   ]
   return spec.flatMap(([plate, id, t, gd, rMm]) => {
-    const c = itemCentre(plate, id)
+    const c = structureCentre(plate, id, 'L')
     return c ? [{ plate, x: c[0], y: c[1], rMm, t, gd }] : []
   })
 }

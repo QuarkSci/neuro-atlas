@@ -1,4 +1,4 @@
-import { AIError, call, type Credential, type ModelInfo, type Provider, type ProviderId, type StreamEvent } from '../types'
+import { AIError, call, type ChatTurn, type Credential, type ModelInfo, type Provider, type ProviderId, type StreamEvent } from '../types'
 import { sse } from '../sse'
 
 /**
@@ -33,10 +33,15 @@ function compat(o: Opts): Provider {
           model: req.model,
           stream: true,
           stream_options: { include_usage: true },
-          messages: [{ role: 'system', content: req.system }, ...req.messages.map((m) => ({ role: m.role, content: m.text }))],
+          messages: [{ role: 'system', content: req.system }, ...toMessages(req.messages)],
+          ...(req.tools?.length ? { tools: req.tools.map((t) => ({ type: 'function', function: { name: t.name, description: t.description, parameters: t.parameters } })) } : {}),
         }),
         signal: req.signal,
       })
+      // Tool calls stream in pieces by index: id and name first, arguments as JSON fragments.
+      const calls: { id: string; name: string; args: string }[] = []
+      let text = ''
+      let finish = ''
       try {
         for await (const { data } of sse(res, req.signal)) {
           if (data === '[DONE]') break
@@ -47,17 +52,60 @@ function compat(o: Opts): Provider {
             continue
           }
           if (j.error) throw new AIError('server', j.error.message ?? 'stream error', j.error.code)
-          const t = j.choices?.[0]?.delta?.content
-          if (t) yield { type: 'text', text: t }
-          if (j.choices?.[0]?.finish_reason === 'content_filter') yield { type: 'refusal' }
+          const ch = j.choices?.[0]
+          const t = ch?.delta?.content
+          if (t) {
+            text += t
+            yield { type: 'text', text: t }
+          }
+          for (const tc of ch?.delta?.tool_calls ?? []) {
+            const i = tc.index ?? calls.length
+            calls[i] ??= { id: '', name: '', args: '' }
+            if (tc.id) calls[i].id = tc.id
+            if (tc.function?.name) calls[i].name += tc.function.name
+            if (tc.function?.arguments) calls[i].args += tc.function.arguments
+          }
+          if (ch?.finish_reason) finish = ch.finish_reason
+          if (finish === 'content_filter') yield { type: 'refusal' }
           if (j.usage) yield { type: 'usage', input: j.usage.prompt_tokens, output: j.usage.completion_tokens }
         }
       } catch (e) {
         if ((e as Error)?.name === 'AbortError') throw new AIError('abort', 'aborted')
         throw e
       }
+      // A turn cut off by the length limit may hold half a call: run none of it.
+      const done = finish === 'length' ? [] : calls.filter((c) => c?.name)
+      yield {
+        type: 'turn',
+        calls: done.map((c, i) => {
+          let args: Record<string, unknown> = {}
+          try {
+            args = c.args ? JSON.parse(c.args) : {}
+          } catch {
+            args = { __invalid_json: c.args }
+          }
+          return { id: c.id || `call_${i}`, name: c.name, args }
+        }),
+        raw: { text },
+      }
     },
   }
+}
+
+/** Neutral turns → Chat Completions messages (assistant tool_calls, then one `tool` message per result). */
+function toMessages(turns: ChatTurn[]) {
+  const out: Record<string, unknown>[] = []
+  for (const t of turns) {
+    if (t.role === 'user') out.push({ role: 'user', content: t.text })
+    else if (t.role === 'tool') for (const r of t.results) out.push({ role: 'tool', tool_call_id: r.id, content: r.content })
+    else
+      out.push({
+        role: 'assistant',
+        content: t.text || null,
+        ...(t.calls?.length ? { tool_calls: t.calls.map((c) => ({ id: c.id, type: 'function', function: { name: c.name, arguments: JSON.stringify(c.args) } })) } : {}),
+      })
+  }
+  return out
 }
 
 const bearer = (c: Credential): Record<string, string> => (c.key ? { authorization: `Bearer ${c.key}` } : {})

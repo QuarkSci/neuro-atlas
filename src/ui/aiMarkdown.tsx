@@ -71,7 +71,8 @@ function blocks(src: string): ReactNode[] {
   return out
 }
 
-const INLINE = /(`[^`]+`)|(\*\*[^*]+\*\*)|(\*[^*\s][^*]*\*|_[^_\s][^_]*_)|(\[[^\]]+\]\(https?:\/\/[^\s)]+\))/g
+// `_x_` italics only at word edges, so snake_case ids stay as they are.
+const INLINE = /(`[^`]+`)|(\*\*[^*]+\*\*)|(\*[^*\s][^*]*\*|(?<![\w])_[^_\s][^_]*_(?![\w]))|(\[[^\]]+\]\(https?:\/\/[^\s)]+\))/g
 
 function inline(s: string): ReactNode[] {
   const out: ReactNode[] = []

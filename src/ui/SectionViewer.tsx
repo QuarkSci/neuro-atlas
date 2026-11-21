@@ -123,6 +123,31 @@ export function SectionViewer() {
       )
   }, [sectionId, tab, view, selected, atlasSel, pointMode, lesion, foci, activeFocus, now])
   useEffect(() => () => useScreen.getState().setPlate(null), [])
+  // Orders from the AI tools (ai/tools.ts) for the plate that is open: lesions, territory, tab.
+  const command = useScreen((s) => s.command)
+  useEffect(() => {
+    if (!command || !sectionId || (command.plate !== '*' && command.plate !== sectionId)) return
+    useScreen.getState().setCommand(null)
+    if (command.kind === 'tab') setTab(command.tab)
+    else if (command.kind === 'territory') {
+      setTab('lesion')
+      setPointMode(false)
+      setLesion(command.lesion)
+    } else if (command.kind === 'clear') {
+      setFoci([])
+      setActiveFocus(0)
+      setAdding(false)
+    } else {
+      const next = command.replace ? command.foci : [...foci, ...command.foci]
+      setTab('lesion')
+      setPointMode(true)
+      setNow(null)
+      setAdding(false)
+      setFoci(next)
+      setActiveFocus(next.length - 1)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [command, sectionId])
 
   // A new section starts clean.
   useEffect(() => {

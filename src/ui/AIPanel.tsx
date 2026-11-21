@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowUp, Check, Eye, EyeOff, ExternalLink, KeyRound, LoaderCircle, LogOut, MapPin, RotateCcw, Sparkles, Square, X } from 'lucide-react'
+import { ArrowUp, Check, Eye, EyeOff, ExternalLink, KeyRound, LoaderCircle, LogOut, MapPin, RotateCcw, Sparkles, Square, TriangleAlert, X } from 'lucide-react'
 import type { L10n } from '@/data/types'
 import { useL } from '@/i18n'
 import { PROVIDER_META, PROVIDER_ORDER } from '@/ai/providers'
@@ -36,7 +36,7 @@ const TX = {
   suggest: { en: 'Try', uz: "Sinab ko'ring" },
   s1: { en: 'Explain the thalamic nuclei and where each one projects', uz: 'Talamus yadrolarini va har biri qayerga proyeksiya berishini tushuntir' },
   s2: { en: 'Why does a lateral medullary lesion give crossed sensory loss?', uz: "Nega lateral uzunchoq miya o'chog'i kesishgan sezgi yo'qolishini beradi?" },
-  s3: { en: 'Quiz me on the brainstem cranial nerve nuclei', uz: "Miya ustunidagi kalla nervi yadrolari bo'yicha meni sinab ko'r" },
+  s3: { en: 'Show me a Wallenberg lesion and explain the signs', uz: "Wallenberg o'chog'ini ko'rsat va belgilarini tushuntir" },
   model: { en: 'Model', uz: 'Model' },
   noModels: { en: 'Connect an account to pick a model', uz: 'Model tanlash uchun hisob ulang' },
   // Accounts sheet
@@ -78,6 +78,7 @@ const TX = {
   loginFailed: { en: 'OpenRouter sign-in failed: ', uz: 'OpenRouter orqali kirish amalga oshmadi: ' },
   refused: { en: 'The model declined to answer this.', uz: 'Model bunga javob berishdan bosh tortdi.' },
   tokens: { en: 'tokens', uz: 'token' },
+  redo: { en: 'Do it again', uz: 'Qayta bajarish' },
   context: { en: 'Context', uz: 'Kontekst' },
   contextOff: { en: 'off — the AI does not see the screen', uz: "o'chiq — AI ekranni ko'rmaydi" },
   contextNone: { en: 'nothing selected yet', uz: 'hali hech narsa tanlanmagan' },
@@ -252,10 +253,20 @@ function Chat() {
 
 function Message({ m }: { m: ChatMessage }) {
   const l = useL()
+  const redo = useAI((s) => s.redo)
   if (m.role === 'user') return <UserMessage m={m} />
   return (
     <div className="ai-msg assistant">
       {m.text ? <Markdown text={m.text} /> : m.live ? <span className="ai-thinking">{l(TX.thinking)}</span> : null}
+      {m.actions && m.actions.length > 0 && (
+        <div className="ai-actions">
+          {m.actions.map((x, i) => (
+            <button key={i} className={`ai-action ${x.ok ? '' : 'failed'}`} onClick={() => redo(x.call)} title={l(TX.redo)}>
+              {x.ok ? <Check size={11} /> : <TriangleAlert size={11} />} {x.text}
+            </button>
+          ))}
+        </div>
+      )}
       {m.refusal && <p className="ai-note">{l(TX.refused) + (typeof m.refusal === 'string' ? ` (${m.refusal})` : '')}</p>}
       {m.error && (
         <p className="ai-error">

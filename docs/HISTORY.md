@@ -947,6 +947,43 @@ Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erk
 - Tekshiruv: B5 `cst-ic` lakunasi → CST po'stloqdan aynan sharga qadar oqadi, pastda qorong'i (screenshot); TS keysi
   3D (4 qadam); eski `lesion:pons:L:medial` darsi o'zgarishsiz; McDonald xulosasi; audit-lesions 0; tsc; build.
 
+### AI-3 — AI ilovani boshqaradi (tools + amal chiplari) (2026-11-21)
+
+- Turlar (`src/ai/types.ts`): `ToolSpec` (JSON Schema), `ToolCall`, `ToolResult`; `ChatTurn` = user | assistant (`calls`,
+  `raw` — provayderning o'z kontenti) | tool (`results`); `StreamEvent` `turn` — model navbati oxirida chaqiruvlar + raw.
+- Provayderlar: Anthropic — `tools` (`input_schema`, `eager_input_streaming: true`), `finalMessage()` dan `tool_use`
+  (faqat `stop_reason === 'tool_use'`; `max_tokens`/refusal — hech nima bajarilmaydi), Claude'ning o'z navbatlari
+  (thinking bloklari imzosi bilan) keyingi so'rovga O'ZGARISHSIZ qaytadi, boshqa provayderniki — text + tool_use;
+  natija — `tool_result` (+ `is_error`). OpenAI-mos — `tools[].function`, oqimda `delta.tool_calls` indeks bo'yicha
+  yig'iladi (id/nom, argument JSON bo'laklari), `finish_reason: length` → chaqiruv yo'q, yaroqsiz JSON → `__invalid_json`
+  (tool xato qaytaradi), natija — `role: tool`. Gemini — `functionDeclarations` (`additionalProperties` olib tashlanadi),
+  `functionCall` qismlari, model qismlari (`thoughtSignature` bilan) o'zgarishsiz qaytadi, natija — `functionResponse`
+  (`id` faqat model bergan bo'lsa).
+- `src/ai/tools.ts` — 9 tool: `find_structure` (umumiy `src/data/search.ts` — qidiruv paneldan ajratildi),
+  `select_structure` (concept/part/nom → `selectParts`, ochiq plastinkani yopadi), `open_plate` (kod yoki id; javobda
+  plastinkadagi tuzilmalar id: nom), `place_lesion` (plastinka + tuzilma + tomon, radius/vaqt/Gd/almashtirish; javobda
+  `focalOn` natijasi), `set_lesion_territory` (daraja/tomon/hudud → sindrom, yo'llar, belgilar, 3D dars id),
+  `clear_lesions`, `trace_pathway`, `open_lesson` (+ "placed-lesions" → `focalLesson`), `set_view` (ko'rinish, qatlamlar).
+  Tavsiflarda plastinkalar, darslar, daraja/hududlar ro'yxati. Har kirish tekshiriladi (enum, son chegaralari, nom → id).
+  `runTool()` → `{ result, note }`; noma'lum tool / xato → `isError`.
+- Kesim ko'ruvchisi buyruqlari: `useScreen.command` (`focal` | `territory` | `clear` | `tab`, `plate: '*'` — ochiq
+  plastinka); `SectionViewer` o'z plastinkasi ochilganda bajaradi va o'chiradi. `structureCentre(plate, id, side)` —
+  `lesionFocal.ts` ga ko'chirildi (`msCase` ham shuni ishlatadi).
+- `useAI`: `turns` (modellar ko'radigan to'liq tarix), agent sikli ≤ 6 raund (stream → chaqiruvlar → `runTool` →
+  natijalar → yana), matnlar bitta javobga qo'shiladi, token yig'iladi; tool qo'llamaydigan model/server
+  (400 "tool/function") — birinchi raundda tool'siz qayta urinadi; yakunda natijasiz chaqiruv tarixdan olib tashlanadi.
+  `redo(call)` — chip bosilsa amal qayta bajariladi. Tizim promptida: kerak bo'lganda 1–2 amal, id'ni o'ylab topmaslik,
+  amaldan keyin ekranda nima borligini tushuntirish.
+- UI: javob ichida amal chiplari (✓ yashil / ⚠ to'q sariq, bosilsa qayta bajariladi); tez savol "Wallenberg o'chog'ini
+  ko'rsat va belgilarini tushuntir". Markdown: `_kursiv_` faqat so'z chegarasida (snake_case buzilmaydi).
+- Mock: "wallenberg" → `set_lesion_territory`, "MLF/INO" → `place_lesion` K3, "talamus … ko'rsat" → `select_structure`;
+  tool natijasidan keyin xulosa.
+- Tekshiruv: headless — Wallenberg (U3 ochildi, chap lateral hudud, kontekst "U3 · Lateral medullyar (Wallenberg)"),
+  MLF (K3 da o'choq, "K3 · 1 o'choq"), talamus tanlandi; soxta fetch bilan 3 format to'liq aylanish (OpenAI bo'lakli
+  argumentlar → 2-raundda `tool_calls` + `tool`; Gemini `thoughtSignature` saqlandi, sxemada `additionalProperties` yo'q;
+  Anthropic thinking `THINKSIG` + text + tool_use → `tool_result`); `runTool` xato yo'li. tsc, build, audit-lesions 0.
+- QOLDI: inspektor kartasi AI panel ostida qoladi (ikkalasi o'ngda) — joylashuvni keyin hal qilish; AI-4 vision.
+
 ### AI-2 — Kontekst: AI ekranda nima borligini biladi (2026-11-21)
 
 - `src/ai/screen.ts` (`useScreen`): kesim ko'ruvchisi o'z ichki holatini ko'zgulaydi — plastinka, tab, ko'rinish, sxemada

@@ -153,6 +153,24 @@ export function focalMni(f: FocalLesion): { at: [number, number, number]; r: num
   return { at, r: f.rMm }
 }
 
+/**
+ * Centre of a plate structure on one side of the patient: the copy whose
+ * centre is in that half (the figure's right half is the patient's left);
+ * 'M' takes the copy nearest the midline. Fibre strokes use their samples.
+ */
+export function structureCentre(plate: string, id: string, side: BodySide | 'M' = 'L'): [number, number] | null {
+  const s = SECTION_BY_ID.get(plate)
+  const it = s?.items.find((i) => i.id === id)
+  if (!s || !it) return null
+  const pts = itemShapes(s, it)
+    .map((sh) => shapePolygon(sh) ?? shapeSamples(sh))
+    .filter((q) => q.length)
+  const mean = (q: P[], k: 0 | 1) => q.reduce((a, b) => a + b[k], 0) / q.length
+  const cx = s.w / 2
+  const q = side === 'M' ? [...pts].sort((a, b) => Math.abs(mean(a, 0) - cx) - Math.abs(mean(b, 0) - cx))[0] : (pts.find((q) => mean(q, 0) >= cx === (side === 'L')) ?? pts[0])
+  return q ? [mean(q, 0), mean(q, 1)] : null
+}
+
 /** Can a free lesion be placed on this plate? */
 export const focalPlate = (section: Section) => {
   const lv = plateLevel(section)

@@ -1,5 +1,5 @@
 import type Anthropic from '@anthropic-ai/sdk'
-import { AIError, kindOf, type Credential, type Provider, type StreamEvent } from '../types'
+import { AIError, kindOf, type ChatTurn, type Credential, type Provider, type StreamEvent } from '../types'
 
 /**
  * Claude through the official SDK, loaded only when the AI panel first calls
@@ -46,7 +46,13 @@ export const anthropic: Provider = {
           model: req.model,
           max_tokens: 64000,
           system: req.system,
-          messages: req.messages.map((m) => ({ role: m.role, content: m.text })),
+          messages: toMessages(req.messages),
+          ...(req.tools?.length
+            ? {
+                // Streamed tool input arrives as generated; tools.ts validates every input before it runs.
+                tools: req.tools.map((t) => ({ name: t.name, description: t.description, input_schema: t.parameters, eager_input_streaming: true })),
+              }
+            : {}),
           ...(FALLBACK.has(req.model) ? { betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default' as const } : {}),
         },
         { signal: req.signal },
@@ -54,9 +60,44 @@ export const anthropic: Provider = {
       for await (const ev of stream) if (ev.type === 'content_block_delta' && ev.delta.type === 'text_delta') yield { type: 'text', text: ev.delta.text }
       const final = await stream.finalMessage()
       yield { type: 'usage', input: final.usage.input_tokens, output: final.usage.output_tokens }
-      if (final.stop_reason === 'refusal') yield { type: 'refusal', detail: final.stop_details?.explanation ?? undefined }
+      if (final.stop_reason === 'refusal') {
+        yield { type: 'refusal', detail: final.stop_details?.explanation ?? undefined }
+        yield { type: 'turn', calls: [] }
+        return
+      }
+      // A turn cut off by max_tokens may hold a half-written tool call: run none of it.
+      const calls =
+        final.stop_reason === 'tool_use'
+          ? final.content.flatMap((b) => (b.type === 'tool_use' ? [{ id: b.id, name: b.name, args: (b.input ?? {}) as Record<string, unknown> }] : []))
+          : []
+      yield { type: 'turn', calls, raw: final.content }
     } catch (e) {
       throw mapError(A, e)
     }
   },
+}
+
+/**
+ * Neutral turns → Messages API. Claude's own earlier turns go back exactly as
+ * returned (thinking blocks included — required in a tool loop); turns from
+ * another provider become plain text and tool_use blocks.
+ */
+function toMessages(turns: ChatTurn[]): Anthropic.Beta.BetaMessageParam[] {
+  const out: Anthropic.Beta.BetaMessageParam[] = []
+  for (const t of turns) {
+    if (t.role === 'user') out.push({ role: 'user', content: t.text })
+    else if (t.role === 'tool')
+      out.push({
+        role: 'user',
+        content: t.results.map((r) => ({ type: 'tool_result' as const, tool_use_id: r.id, content: r.content, ...(r.isError ? { is_error: true } : {}) })),
+      })
+    else if (t.raw?.provider === 'anthropic') out.push({ role: 'assistant', content: t.raw.content as Anthropic.Beta.BetaContentBlockParam[] })
+    else {
+      const content: Anthropic.Beta.BetaContentBlockParam[] = []
+      if (t.text) content.push({ type: 'text', text: t.text })
+      for (const c of t.calls ?? []) content.push({ type: 'tool_use', id: c.id, name: c.name, input: c.args })
+      if (content.length) out.push({ role: 'assistant', content })
+    }
+  }
+  return out
 }

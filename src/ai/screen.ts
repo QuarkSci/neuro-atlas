@@ -25,16 +25,31 @@ export interface PlateScreen {
   now: number | null
 }
 
+/**
+ * A request from the AI tools to the plate viewer (AI-3): the viewer owns its
+ * lesion state, so the tool leaves an order here and the viewer carries it out
+ * once the plate it names is open. `plate: '*'` — whichever plate is open.
+ */
+export type PlateCommand =
+  | { plate: string; kind: 'focal'; foci: FocalLesion[]; replace: boolean }
+  | { plate: string; kind: 'territory'; lesion: Lesion }
+  | { plate: string; kind: 'clear' }
+  | { plate: string; kind: 'tab'; tab: PlateScreen['tab'] }
+
 interface Screen {
   plate: PlateScreen | null
   mcExtra: McExtra | null
+  command: PlateCommand | null
   setPlate: (p: PlateScreen | null) => void
   setMcExtra: (x: McExtra | null) => void
+  setCommand: (c: PlateCommand | null) => void
 }
 
 export const useScreen = create<Screen>((set) => ({
   plate: null,
   mcExtra: null,
+  command: null,
   setPlate: (plate) => set({ plate }),
+  setCommand: (command) => set({ command }),
   setMcExtra: (mcExtra) => set({ mcExtra }),
 }))

@@ -18,15 +18,41 @@ export interface ModelInfo {
   name: string
 }
 
-export interface ChatTurn {
-  role: 'user' | 'assistant'
-  text: string
+/** A tool the model may call (JSON Schema parameters). */
+export interface ToolSpec {
+  name: string
+  description: string
+  parameters: { type: 'object'; properties: Record<string, unknown>; required?: string[]; additionalProperties?: false }
 }
+
+export interface ToolCall {
+  id: string
+  name: string
+  args: Record<string, unknown>
+}
+
+export interface ToolResult {
+  id: string
+  name: string
+  content: string
+  isError?: boolean
+}
+
+/**
+ * The conversation in provider-neutral form. An assistant turn may carry the
+ * provider's own content (`raw`) — Anthropic thinking blocks and Gemini thought
+ * signatures must go back unchanged in a tool loop; another provider ignores it.
+ */
+export type ChatTurn =
+  | { role: 'user'; text: string }
+  | { role: 'assistant'; text: string; calls?: ToolCall[]; raw?: { provider: ProviderId; content: unknown } }
+  | { role: 'tool'; results: ToolResult[] }
 
 export interface ChatRequest {
   model: string
   system: string
   messages: ChatTurn[]
+  tools?: ToolSpec[]
   signal: AbortSignal
 }
 
@@ -35,6 +61,8 @@ export type StreamEvent =
   | { type: 'usage'; input?: number; output?: number }
   /** The model declined (Anthropic `refusal` stop reason). */
   | { type: 'refusal'; detail?: string }
+  /** End of the model's turn: the tool calls it made (empty: a final answer) and its raw content. */
+  | { type: 'turn'; calls: ToolCall[]; raw?: unknown }
 
 export interface Provider {
   id: ProviderId

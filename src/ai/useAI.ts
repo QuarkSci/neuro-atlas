@@ -1,7 +1,8 @@
 import { create } from 'zustand'
 import { useAtlas } from '@/store/useAtlas'
 import { PROVIDERS, pickModel } from './providers'
-import { AIError, type AIErrorKind, type Credential, type ModelInfo, type ProviderId } from './types'
+import { AIError, type AIErrorKind, type ChatTurn, type Credential, type ModelInfo, type ProviderId, type ToolCall, type ToolResult } from './types'
+import { TOOLS, runTool, type ActionNote } from './tools'
 import { finishOpenRouterLogin, startOpenRouterLogin } from './openrouterAuth'
 import { brief, briefSection } from './context'
 
@@ -21,6 +22,8 @@ export interface ChatMessage {
   refusal?: string | true
   /** User turns: the on-screen context sent with it (chip label and the full brief), when context was on. */
   context?: { label: string; text: string }
+  /** Assistant turns: the app actions it took (AI-3), each re-runnable from its chip. */
+  actions?: (ActionNote & { call: ToolCall })[]
   /** Still streaming. */
   live?: boolean
 }
@@ -36,6 +39,8 @@ interface AIState {
   model: Partial<Record<ProviderId, string>>
   models: Partial<Record<ProviderId, ModelInfo[]>>
   messages: ChatMessage[]
+  /** The conversation as the models see it (tool calls and results included). */
+  turns: ChatTurn[]
   busy: boolean
   /** OpenRouter sign-in in progress / just finished with an error. */
   login: 'idle' | 'working' | { error: string }
@@ -54,6 +59,7 @@ interface AIState {
   signInOpenRouter: () => Promise<void>
   send: (text: string) => Promise<void>
   stop: () => void
+  redo: (call: ToolCall) => ActionNote
   clear: () => void
 }
 
@@ -102,6 +108,7 @@ function systemPrompt() {
       : 'Answer in English unless the user writes in another language.',
     'Be concise and precise. Use short paragraphs, lists and **bold** key terms (Markdown). If you are not sure, say so instead of guessing; do not invent references.',
     'This is education, not medical advice: do not diagnose or treat real patients, and remind the user to keep patient data out of the chat if they share any.',
+    'You can drive the app with tools: select structures in 3D, open cross-section plates, place lesions and read the simulator, trace tracts, open lessons, turn the view. Use them when the user asks to show, open, place or find something, or when one or two actions make your explanation clearly better — not for every answer. Never invent ids: get them from find_structure or open_plate. After acting, say briefly what is now on screen and explain the result (e.g. why those signs appear).',
   ].join('\n')
 }
 
@@ -119,6 +126,7 @@ export const useAI = create<AIState>((set, get) => ({
   model: prefs.model ?? {},
   models: {},
   messages: [],
+  turns: [],
   busy: false,
   login: 'idle',
 
@@ -182,7 +190,6 @@ export const useAI = create<AIState>((set, get) => ({
       } catch {}
       model = get().model[provider]
     }
-    const history = get().messages.filter((m) => !m.error && m.text)
     const reply: ChatMessage = { role: 'assistant', text: '', provider, model, live: true }
     // The screen as it is now, sent with this message only (history keeps its own snapshots in the UI).
     const b = get().withContext ? brief() : null
@@ -195,33 +202,76 @@ export const useAI = create<AIState>((set, get) => ({
         messages[messages.length - 1] = { ...messages[messages.length - 1], ...p }
         return { messages }
       })
+    const uz = useAtlas.getState().lang === 'uz'
+    const turns: ChatTurn[] = [...get().turns, { role: 'user', text }]
+    const actions: NonNullable<ChatMessage['actions']> = []
+    const usage = { input: 0, output: 0 }
+    let acc = ''
+    let tools = true
     try {
       if (!model) throw new AIError('model', 'no model')
-      const turns = [...history, { role: 'user' as const, text }].map((m) => ({ role: m.role, text: m.text }))
-      let acc = ''
-      for await (const ev of PROVIDERS[provider].stream(creds[provider] ?? {}, {
-        model,
-        system: systemPrompt() + (b ? briefSection(b) : ''),
-        messages: turns,
-        signal: controller.signal,
-      })) {
-        if (ev.type === 'text') patch({ text: (acc += ev.text) })
-        else if (ev.type === 'usage') patch({ usage: { input: ev.input, output: ev.output } })
-        else if (ev.type === 'refusal') patch({ refusal: ev.detail ?? true })
+      // The tool loop: the model may act on the app, read the results and go on, a few rounds at most.
+      for (let round = 0; round < 6; round++) {
+        let said = ''
+        let calls: ToolCall[] = []
+        let raw: unknown
+        if (acc && !acc.endsWith('\n')) patch({ text: (acc += '\n\n') })
+        try {
+          for await (const ev of PROVIDERS[provider].stream(creds[provider] ?? {}, {
+            model,
+            system: systemPrompt() + (b ? briefSection(b) : ''),
+            messages: turns,
+            tools: tools ? TOOLS : undefined,
+            signal: controller.signal,
+          })) {
+            if (ev.type === 'text') {
+              said += ev.text
+              patch({ text: (acc += ev.text) })
+            } else if (ev.type === 'usage') {
+              usage.input += ev.input ?? 0
+              usage.output += ev.output ?? 0
+              patch({ usage: { ...usage } })
+            } else if (ev.type === 'refusal') patch({ refusal: ev.detail ?? true })
+            else if (ev.type === 'turn') ((calls = ev.calls), (raw = ev.raw))
+          }
+        } catch (e) {
+          // A model or local server without tool support: carry on as plain chat.
+          if (tools && round === 0 && !said && e instanceof AIError && e.kind === 'bad' && /tool|function/i.test(e.message)) {
+            tools = false
+            round--
+            continue
+          }
+          throw e
+        }
+        turns.push({ role: 'assistant', text: said, calls, raw: raw === undefined ? undefined : { provider, content: raw } })
+        if (!calls.length) break
+        const results: ToolResult[] = []
+        for (const c of calls) {
+          const { result, note } = runTool(c, uz)
+          results.push(result)
+          actions.push({ ...note, call: c })
+          patch({ actions: [...actions] })
+        }
+        turns.push({ role: 'tool', results })
       }
       patch({ live: false })
     } catch (e) {
       const err = e instanceof AIError ? e : new AIError('bad', (e as Error)?.message ?? String(e))
       patch({ live: false, ...(err.kind === 'abort' ? {} : { error: { kind: err.kind, message: err.message } }) })
     } finally {
+      // Keep only whole rounds: a tool call always travels with its result.
+      const last = turns.at(-1)
+      if (last?.role === 'assistant' && last.calls?.length) turns.pop()
+      set({ turns, busy: false })
       controller = null
-      set({ busy: false })
     }
   },
+  /** Re-run an action from its chip (the same call, against the app as it is now). */
+  redo: (call: ToolCall) => runTool(call, useAtlas.getState().lang === 'uz').note,
   stop: () => controller?.abort(),
   clear: () => {
     controller?.abort()
-    set({ messages: [] })
+    set({ messages: [], turns: [] })
   },
 }))
 
