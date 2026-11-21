@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 import type { L10n } from '@/data/types'
 import { useL } from '@/i18n'
-import { PROVIDER_META, PROVIDER_ORDER } from '@/ai/providers'
+import { PROVIDER_META, PROVIDER_ORDER, pickModel } from '@/ai/providers'
 import { DEFAULT_LOCAL_URL } from '@/ai/providers/compat'
 import { connected, useAI, type ChatMessage, type TutorMode } from '@/ai/useAI'
 import { BookOpen, Download, GraduationCap, MessageCircleQuestion, Stethoscope } from 'lucide-react'
@@ -102,6 +102,9 @@ const TX = {
   refused: { en: 'The model declined to answer this.', uz: 'Model bunga javob berishdan bosh tortdi.' },
   tokens: { en: 'tokens', uz: 'token' },
   redo: { en: 'Do it again', uz: 'Qayta bajarish' },
+  retrying: { en: 'The provider is busy — trying again ({n}/2)…', uz: 'Provayder band — qayta urinilyapti ({n}/2)…' },
+  retry: { en: 'Try again', uz: 'Qayta urinish' },
+  otherModel: { en: 'Use', uz: 'Boshqa model:' },
   modeTutor: { en: 'Tutor', uz: 'Repetitor' },
   modeSocratic: { en: 'Socratic', uz: 'Sokratik' },
   modeCase: { en: 'Case', uz: 'Keys' },
@@ -270,7 +273,7 @@ function Chat() {
           </div>
         )}
         {messages.map((m, i) => (
-          <Message key={i} m={m} />
+          <Message key={i} m={m} last={i === messages.length - 1} />
         ))}
       </div>
       <ContextBar />
@@ -318,13 +321,19 @@ function Chat() {
   )
 }
 
-function Message({ m }: { m: ChatMessage }) {
+function Message({ m, last }: { m: ChatMessage; last?: boolean }) {
   const l = useL()
   const redo = useAI((s) => s.redo)
   if (m.role === 'user') return <UserMessage m={m} />
   return (
     <div className="ai-msg assistant">
-      {m.text ? <Markdown text={m.text} /> : m.live ? <span className="ai-thinking">{l(TX.thinking)}</span> : null}
+      {m.text ? (
+        <Markdown text={m.text} />
+      ) : m.retrying ? (
+        <span className="ai-thinking">{l(TX.retrying).replace('{n}', String(m.retrying))}</span>
+      ) : m.live ? (
+        <span className="ai-thinking">{l(TX.thinking)}</span>
+      ) : null}
       {m.actions && m.actions.length > 0 && (
         <div className="ai-actions">
           {m.actions.map((x, i) => (
@@ -344,9 +353,10 @@ function Message({ m }: { m: ChatMessage }) {
       {m.error && (
         <p className="ai-error">
           {l(ERR[m.error.kind])}
-          {m.error.kind === 'bad' || m.error.kind === 'server' ? <small> {m.error.message}</small> : null}
+          {m.error.kind === 'bad' || m.error.kind === 'server' || m.error.kind === 'rate' ? <small> {m.error.message}</small> : null}
         </p>
       )}
+      {m.error && last && <RetryBar m={m} />}
       {!m.live && (m.usage || m.model) && (
         <span className="ai-meta">
           {m.model}
@@ -729,6 +739,35 @@ function Flashcards({ deck, cards }: { deck: string; cards: { front: string; bac
         <Download size={13} /> {l(TX.cardsDownload)}
       </button>
       <small>{l(TX.cardsHow)}</small>
+    </div>
+  )
+}
+
+/** After a failed answer: send it again, or on another model of the same account (busy, limit, model not available). */
+function RetryBar({ m }: { m: ChatMessage }) {
+  const l = useL()
+  const { retry, models, busy } = useAI()
+  const kind = m.error?.kind
+  if (!kind || kind === 'auth' || kind === 'credit' || kind === 'abort') return null
+  const list = m.provider ? (models[m.provider] ?? []) : []
+  const alt =
+    m.provider && (kind === 'server' || kind === 'rate' || kind === 'model' || kind === 'bad')
+      ? pickModel(
+          m.provider,
+          list.filter((x) => x.id !== m.model),
+        )
+      : null
+  const altName = alt ? (list.find((x) => x.id === alt)?.name ?? alt) : null
+  return (
+    <div className="ai-retry">
+      <button className="ai-secondary" onClick={() => retry()} disabled={busy}>
+        <RotateCcw size={12} /> {l(TX.retry)}
+      </button>
+      {alt && (
+        <button className="ai-secondary" onClick={() => retry(alt)} disabled={busy} title={alt}>
+          {l(TX.otherModel)} {altName}
+        </button>
+      )}
     </div>
   )
 }

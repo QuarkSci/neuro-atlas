@@ -50,6 +50,8 @@ function uzbek(turns: ChatTurn[]) {
   return !!first && first.role === 'user' && /[ʻ'’]|qayer|nima|qanday|tushuntir|ko'rsat/i.test(first.text)
 }
 
+let busyCalls = 0
+
 export const mock: Provider = {
   id: 'mock',
   async listModels() {
@@ -81,6 +83,8 @@ export const mock: Provider = {
       yield { type: 'turn', calls: [] }
       return
     }
+    // "busy": the first call fails as overloaded (503), the retry succeeds — checks the automatic retry.
+    if (q === 'busy' && busyCalls++ % 2 === 0) throw new AIError('server', 'This model is currently experiencing high demand.', 503)
     if (/^error:(\w+)/.test(q)) throw new AIError(q.slice(6) as AIError['kind'], 'mock error', 401)
     const calls = req.tools?.length ? plan(q, req.system) : []
     if (calls.length) {

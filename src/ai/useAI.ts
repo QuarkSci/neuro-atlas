@@ -31,6 +31,8 @@ export interface ChatMessage {
   actions?: (ActionNote & { call: ToolCall })[]
   /** Still streaming. */
   live?: boolean
+  /** Waiting to retry a busy provider (attempt number). */
+  retrying?: number
 }
 
 type Creds = Partial<Record<ProviderId, Credential>>
@@ -84,6 +86,8 @@ interface AIState {
   attach: (a: Attachment) => void
   detach: (i: number) => void
   redo: (call: ToolCall) => Promise<ActionNote>
+  /** Send the last question again (optionally on another model): after an error. */
+  retry: (model?: string) => void
   clear: () => void
 }
 
@@ -162,6 +166,12 @@ function systemPrompt() {
 }
 
 let controller: AbortController | null = null
+
+const wait = (ms: number, signal: AbortSignal) =>
+  new Promise<void>((ok, no) => {
+    const t = setTimeout(ok, ms)
+    signal.addEventListener('abort', () => (clearTimeout(t), no(new AIError('abort', 'aborted'))), { once: true })
+  })
 
 const { prefs, creds } = load()
 
@@ -279,6 +289,7 @@ export const useAI = create<AIState>((set, get) => ({
     const usage = { input: 0, output: 0 }
     let acc = ''
     let tools = true
+    let busyTries = 0
     try {
       if (!model) throw new AIError('model', 'no model')
       // The tool loop: the model may act on the app, read the results and go on, a few rounds at most.
@@ -309,6 +320,15 @@ export const useAI = create<AIState>((set, get) => ({
           // A model or local server without tool support: carry on as plain chat.
           if (tools && round === 0 && !said && e instanceof AIError && e.kind === 'bad' && /tool|function/i.test(e.message)) {
             tools = false
+            round--
+            continue
+          }
+          // Busy or rate-limited (Gemini "high demand", Anthropic overloaded, 429): wait and try again, twice.
+          if (!said && e instanceof AIError && (e.kind === 'server' || e.kind === 'rate') && busyTries < 2) {
+            busyTries++
+            patch({ retrying: busyTries })
+            await wait(busyTries === 1 ? 2000 : 5000, controller.signal)
+            patch({ retrying: undefined })
             round--
             continue
           }
@@ -358,6 +378,17 @@ export const useAI = create<AIState>((set, get) => ({
   stop: () => controller?.abort(),
   attach: (a) => set({ attachments: [...get().attachments, a].slice(-4) }),
   detach: (i) => set({ attachments: get().attachments.filter((_, j) => j !== i) }),
+  retry: (model) => {
+    const { messages, turns, provider } = get()
+    const i = messages.map((m) => m.role).lastIndexOf('user')
+    if (i < 0 || get().busy) return
+    const q = messages[i]
+    // The failed exchange leaves the transcript; its pictures go back to the composer.
+    const t = turns.at(-1)?.role === 'user' ? turns.slice(0, -1) : turns
+    set({ messages: messages.slice(0, i), turns: t, attachments: (q.images ?? []).map((im) => ({ url: im.url, label: im.label })) })
+    if (model && provider) get().choose(provider, model)
+    get().send(q.text)
+  },
   clear: () => {
     controller?.abort()
     set({ messages: [], turns: [], attachments: [] })

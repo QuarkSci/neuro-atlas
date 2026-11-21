@@ -947,6 +947,17 @@ Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erk
 - Tekshiruv: B5 `cst-ic` lakunasi → CST po'stloqdan aynan sharga qadar oqadi, pastda qorong'i (screenshot); TS keysi
   3D (4 qadam); eski `lesion:pons:L:medial` darsi o'zgarishsiz; McDonald xulosasi; audit-lesions 0; tsc; build.
 
+### AI-fix 2 — Band provayder: avtomatik qayta urinish, "Boshqa model" (2026-11-21)
+
+- Foydalanuvchi: `gemini-3.8-flash` → 503 "This model is currently experiencing high demand" (Google tomonidagi vaqtinchalik
+  yuklama). `useAI.send`: raundda hali matn kelmagan bo'lsa `server`/`rate` xatoda 2 marta qayta urinadi (2 s, 5 s; `wait`
+  bekor qilinadi), xabarda "Provayder band — qayta urinilyapti (n/2)…" (`retrying`).
+- `retry(model?)`: oxirgi savol-javob transkriptdan va `turns` dan olinadi (takrorlanmaydi), rasmlar biriktirmalarga
+  qaytadi, ixtiyoriy boshqa model tanlanadi va savol qayta yuboriladi. `RetryBar` (faqat oxirgi xabarda; auth/credit/abort
+  bundan mustasno): "Qayta urinish" va "Boshqa model: …" (`pickModel` joriy modelsiz).
+- Mock: `busy` — birinchi chaqiruv 503, keyingisi javob. Tekshiruv: `busy` avtomatik tiklandi; `error:server` → tugmalar;
+  `retry('mock-lite')` → bitta user + bitta assistant qoldi, `turns` 1, model almashdi. tsc, build.
+
 ### AI-fix — Gemini: chatga yaramaydigan modellar (2026-11-21)
 
 - Foydalanuvchi xatosi: avtomatik tanlangan `gemini-3.8-flash-lite-tts` → "Developer instruction is not enabled for this

@@ -1371,3 +1371,4 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .ai-cards li small { color: var(--fa-muted); }
 .ai-cards .ai-secondary { align-self: flex-start; }
 .ai-cards > small { font-size: 10.5px; color: var(--fa-muted); }
+.ai-retry { display: flex; flex-wrap: wrap; gap: 6px; }
