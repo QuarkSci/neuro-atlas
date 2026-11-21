@@ -62,11 +62,13 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 - Rejimlar: `explode | peel | learn`. Yangi dars/kesim → tegishli mavzuga (`topics.ts`) yozilsin; yangi tab ochilmaydi.
 - Pipeline vositalari: `pipeline/tools/slice_svg.py`, `landmarks.py` (`pipeline/.venv/bin/python`, repo ildizidan).
 
-## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-19, 5.3-3d erkin o'choqdan keyin)
+## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-21, erkin o'choq + real kesim tezligidan keyin)
 
-Oxirgi sessiya (2026-11-17) commitlari: `676b069` o'choq plastinkada/3D → `c1560c6` kalla nervlari → `2130a2e` 3D darsda
-kalla belgilari → `029790f` trigeminotalamik yo'l → `aa49ecd` bo'sh joyni bosish = to'liq ekran. Hammasi push qilingan,
-`git status` toza. Tekshiruv zanjiri: `node scripts/audit-lesions.mjs` (0) + tsc + build + 2–4 screenshot.
+Oxirgi sessiya (2026-11-19) commitlari: `651ff5a` erkin (nuqtali) o'choq → `32908c2` bir nechta o'choq, turli darajalarda
+→ `d8f2a15` real kesim qotishi tuzatildi (369 → 4.5 ms/harakat). Hammasi push qilingan, `git status` toza.
+Tekshiruv zanjiri: `node scripts/audit-lesions.mjs` (0) + tsc + build + 2–4 screenshot; tezlik —
+`node scripts/perf-real.mjs`. Erkin o'choqni headless sinash: Shikastlanish tabi → "Nuqta" tugmasi → `.sv-svg` ichidagi
+`[data-id=...] path` markaziga `MouseEvent('click')` (namuna setup tarixda — "5.3-3d").
 
 **Erkin (nuqtali) o'choq ✅ (2026-11-19)** — `docs/HISTORY.md` "5.3-3d": Shikastlanish tabida "Hudud | Nuqta";
 plastinkani bosish → disk (radius 0.5–12 mm, ≈ masshtab `pipeline/section_frames.json` oynasidan). `src/ui/lesionFocal.ts`
@@ -110,8 +112,9 @@ headless "wall" vaqti dasturiy GPU tufayli shovqinli). QOIDA: pointermove'da kat
 
 **Navbatdagi vazifa — foydalanuvchi tanlaydi** (avval qisqa reja ko'rsating): PLAN 5.3-3 mavzu viktorinasi + Anki;
 Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; BigBrain 20 mkm plitkalar (zoomda);
-5.4 UI qoldiqlari; erkin o'choqning PhD davomi (real kesimda/atlas ko'rinishida bosish, 3D da aynan shu disklar,
-vaqt o'qi — SM'da "vaqtda tarqalish", McDonald mezonlari); real kesim qotishi (yuqorida ⚠️).
+5.4 UI qoldiqlari (dars kartasi va kesim ko'ruvchisi yorug' rejimda "qora orol"); erkin o'choqning PhD davomi
+(real kesimda/atlas ko'rinishida bosish → MNI nuqta, 3D da aynan shu disklar, vaqt o'qi — SM'da "vaqtda tarqalish",
+McDonald mezonlari). Tezlik: real kesimni foydalanuvchi o'z brauzerida hali tasdiqlamagan — so'rang.
 
 Ish uslubi bo'yicha eslatmalar (2026-11-17):
 - TS mantiqni tekshirish: `npx -y tsx` ruxsat bermadi → vaqtinchalik `scripts/_x_tmp.mjs` (puppeteer) da dev serverdan
@@ -122,9 +125,9 @@ Ish uslubi bo'yicha eslatmalar (2026-11-17):
 
 5.1 dan qolgan ixtiyoriy ishlar: T1 talamus ichida yadrolar tutashishi (zamin 52%), G4 (zamin 75%), ustma-ustlik U1 1.8%, K3 1.5%.
 
-## Joriy holat (2026-11-17)
+## Joriy holat (2026-11-21)
 
-Tayyor: 0–4c bosqichlar, BG-1, 3 dars + 3 yo'l darsi va shikastlanish simulyatori (5.3 1+2, o'choq plastinkada/3D 5.3-3a, kalla nervlari 5.3-3b, trigeminal 5.3-3c, erkin o'choq 5.3-3d), 5.5 (zoom, real kesim 21/22, tomirlar simmetriyasi), O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
+Tayyor: 0–4c bosqichlar, BG-1, 3 dars + 3 yo'l darsi va shikastlanish simulyatori (5.3 1+2, o'choq plastinkada/3D 5.3-3a, kalla nervlari 5.3-3b, trigeminal 5.3-3c, erkin o'choq + bir nechta o'choq 5.3-3d), PERF-1 (real kesim tezligi), 5.5 (zoom, real kesim 21/22, tomirlar simmetriyasi), O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
 
 **Hozirgi yo'nalish — realizm (foydalanuvchi talabi 2026-11-14):** butun ko'rinishni iloji
 boricha real qilish. Reja (har biri alohida sessiya va commit):
