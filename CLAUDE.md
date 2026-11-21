@@ -62,7 +62,16 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 - Rejimlar: `explode | peel | learn`. Yangi dars/kesim → tegishli mavzuga (`topics.ts`) yozilsin; yangi tab ochilmaydi.
 - Pipeline vositalari: `pipeline/tools/slice_svg.py`, `landmarks.py` (`pipeline/.venv/bin/python`, repo ildizidan).
 
-## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-21, McDonald va 3D o'choqlardan keyin)
+## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-21, ish Antigravity bilan taqsimlandi)
+
+**Ikki agent:** vazifalar taqsimoti `docs/TASKS.md` (AG-* — Antigravity, CL-* — Claude); umumiy qoidalar `AGENTS.md`
+(Antigravity o'qiydi; mazmuni shu fayl bilan bir xil). Antigravity `ag/<id>` branchlarida ishlaydi. **Sessiya boshida:**
+`git fetch && git branch -r | grep ag/` — tayyor branchlarni ko'rib chiqing (diff, tsc, build, screenshot), foydalanuvchi
+rozi bo'lsa birlashtiring va `docs/TASKS.md` da ✅ qo'ying. CL-* vazifalarda AG fayllariga tegmang.
+
+**Birinchi vazifa — CL-1:** AI panel foydalanuvchining haqiqiy Gemini kaliti bilan "ishlamayapti" (2 tuzatishdan keyin ham;
+sababi aniqlanmagan) — `docs/TASKS.md` CL-1 da tekshirish rejasi. Foydalanuvchi bilan birga, DevTools Network orqali.
+
 
 Oxirgi sessiya (2026-11-21): erkin o'choqqa vaqt o'qi + McDonald 2017/2024 (`docs/HISTORY.md` "5.3-3e"),
 so'ng erkin o'choqlar 3D da ("5.3-3f": `focalMni` + `pipeline/plate_affine.json`, `src/ui/focalLesson.ts`).
