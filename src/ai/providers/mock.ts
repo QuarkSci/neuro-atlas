@@ -23,7 +23,16 @@ export const mock: Provider = {
     const text = uz
       ? `**Talamus** — oraliq miyaning eng katta qismi, po'stloqqa boradigan deyarli barcha sezgi yo'llarining **bekati**.\n\n- **VPL** — tanadan (orqa ustun va spinotalamik yo'l)\n- **VPM** — yuzdan (trigeminal)\n- **LGN** — ko'ruv, **MGN** — eshitish\n\nShikastlansa: qarama-qarshi tomonda barcha sezgilar yo'qoladi, keyin *Dejerine–Roussy* og'rig'i paydo bo'lishi mumkin.\n\n> Savolingiz: "${q.slice(0, 80)}"`
       : `The **thalamus** is the largest part of the diencephalon and the **relay** for nearly every sensory pathway on its way to the cortex.\n\n- **VPL** — body (dorsal columns, spinothalamic)\n- **VPM** — face (trigeminal)\n- **LGN** vision, **MGN** hearing\n\nA lesion takes all sensation on the opposite side, sometimes followed by *Dejerine–Roussy* pain.\n\n> You asked: "${q.slice(0, 80)}"`
-    const words = text.split(/(?<=\s)/)
+    // Echo the first lines of the live-state brief, so a headless check can see the context arrive.
+    const live = req.system.split('## Live state')[1]
+    const seen = live
+      ? live
+          .split('\n')
+          .filter((x) => /^(Selected|Cross-section|  Free|  #1|  McDonald|3D lesson)/.test(x))
+          .slice(0, 4)
+      : []
+    const tail = seen.length ? `\n\n${uz ? 'Kontekstdan' : 'From context'}:\n${seen.map((x) => `- ${x.trim().slice(0, 140)}`).join('\n')}` : ''
+    const words = (text + tail).split(/(?<=\s)/)
     for (const w of words) {
       await sleep(18, req.signal)
       yield { type: 'text', text: w }

@@ -3,6 +3,7 @@ import { useAtlas } from '@/store/useAtlas'
 import { PROVIDERS, pickModel } from './providers'
 import { AIError, type AIErrorKind, type Credential, type ModelInfo, type ProviderId } from './types'
 import { finishOpenRouterLogin, startOpenRouterLogin } from './openrouterAuth'
+import { brief, briefSection } from './context'
 
 /**
  * The AI panel's state: accounts (credentials per provider), the chosen
@@ -18,6 +19,8 @@ export interface ChatMessage {
   usage?: { input?: number; output?: number }
   error?: { kind: AIErrorKind; message: string }
   refusal?: string | true
+  /** User turns: the on-screen context sent with it (chip label and the full brief), when context was on. */
+  context?: { label: string; text: string }
   /** Still streaming. */
   live?: boolean
 }
@@ -36,6 +39,8 @@ interface AIState {
   busy: boolean
   /** OpenRouter sign-in in progress / just finished with an error. */
   login: 'idle' | 'working' | { error: string }
+  /** Send what is on screen (AI-2) with each message. */
+  withContext: boolean
 
   setOpen: (v: boolean) => void
   toggle: () => void
@@ -43,6 +48,7 @@ interface AIState {
   setCred: (p: ProviderId, c: Credential) => void
   signOut: (p: ProviderId) => void
   setRemember: (v: boolean) => void
+  setWithContext: (v: boolean) => void
   choose: (p: ProviderId, model?: string) => void
   loadModels: (p: ProviderId) => Promise<ModelInfo[]>
   signInOpenRouter: () => Promise<void>
@@ -56,6 +62,7 @@ const CREDS = 'na:ai:creds'
 
 interface Saved {
   remember?: boolean
+  withContext?: boolean
   provider?: ProviderId | null
   model?: AIState['model']
 }
@@ -71,9 +78,9 @@ function load(): { prefs: Saved; creds: Creds } {
   return { prefs, creds }
 }
 
-function save(s: Pick<AIState, 'remember' | 'provider' | 'model' | 'creds'>) {
+function save(s: Pick<AIState, 'remember' | 'provider' | 'model' | 'creds' | 'withContext'>) {
   try {
-    localStorage.setItem(PREFS, JSON.stringify({ remember: s.remember, provider: s.provider, model: s.model }))
+    localStorage.setItem(PREFS, JSON.stringify({ remember: s.remember, provider: s.provider, model: s.model, withContext: s.withContext }))
     const keep = s.remember ? localStorage : sessionStorage
     const drop = s.remember ? sessionStorage : localStorage
     keep.setItem(CREDS, JSON.stringify(s.creds))
@@ -107,6 +114,7 @@ export const useAI = create<AIState>((set, get) => ({
   view: 'chat',
   creds,
   remember: prefs.remember !== false,
+  withContext: prefs.withContext !== false,
   provider: prefs.provider && connected(prefs.provider, creds) ? prefs.provider : null,
   model: prefs.model ?? {},
   models: {},
@@ -130,6 +138,10 @@ export const useAI = create<AIState>((set, get) => ({
     const provider = get().provider === p ? ((Object.keys(creds) as ProviderId[]).find((x) => connected(x, creds)) ?? null) : get().provider
     set({ creds, provider, models: { ...get().models, [p]: undefined } })
     save({ ...get(), creds, provider })
+  },
+  setWithContext: (withContext) => {
+    set({ withContext })
+    save(get())
   },
   setRemember: (remember) => {
     set({ remember })
@@ -172,7 +184,10 @@ export const useAI = create<AIState>((set, get) => ({
     }
     const history = get().messages.filter((m) => !m.error && m.text)
     const reply: ChatMessage = { role: 'assistant', text: '', provider, model, live: true }
-    set({ messages: [...get().messages, { role: 'user', text }, reply], busy: true })
+    // The screen as it is now, sent with this message only (history keeps its own snapshots in the UI).
+    const b = get().withContext ? brief() : null
+    const context = b?.text ? { label: b.label, text: b.text } : undefined
+    set({ messages: [...get().messages, { role: 'user', text, context }, reply], busy: true })
     controller = new AbortController()
     const patch = (p: Partial<ChatMessage>) =>
       set((s) => {
@@ -184,7 +199,12 @@ export const useAI = create<AIState>((set, get) => ({
       if (!model) throw new AIError('model', 'no model')
       const turns = [...history, { role: 'user' as const, text }].map((m) => ({ role: m.role, text: m.text }))
       let acc = ''
-      for await (const ev of PROVIDERS[provider].stream(creds[provider] ?? {}, { model, system: systemPrompt(), messages: turns, signal: controller.signal })) {
+      for await (const ev of PROVIDERS[provider].stream(creds[provider] ?? {}, {
+        model,
+        system: systemPrompt() + (b ? briefSection(b) : ''),
+        messages: turns,
+        signal: controller.signal,
+      })) {
         if (ev.type === 'text') patch({ text: (acc += ev.text) })
         else if (ev.type === 'usage') patch({ usage: { input: ev.input, output: ev.output } })
         else if (ev.type === 'refusal') patch({ refusal: ev.detail ?? true })

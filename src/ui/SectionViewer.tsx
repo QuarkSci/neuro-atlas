@@ -39,6 +39,7 @@ import { cutToPlate, focalPlate, focalSet, focalTerritory, plateToCut, type Foca
 import type { Lesion } from '@/data/lesions'
 import { plateLevel } from './pathTrace'
 import { ZoomPane } from './ZoomPane'
+import { useScreen } from '@/ai/screen'
 
 /** Layers whose meshes make the 3D cut face informative for each region. */
 export const CUT_LAYERS: Record<Section['region'], LayerId[]> = {
@@ -112,6 +113,16 @@ export function SectionViewer() {
   const [atlasSel, setAtlasSel] = useState<string | null>(null)
   // The figure filling the whole card (side panel and level strips hidden).
   const [full, setFull] = useState(false)
+
+  // Mirror what the viewer shows for the AI tutor's context (ai/screen.ts); cleared when it closes.
+  useEffect(() => {
+    useScreen
+      .getState()
+      .setPlate(
+        sectionId ? { plate: sectionId, tab, view, picked: selected, atlasPicked: atlasSel, lesionMode: pointMode ? 'point' : 'zone', lesion, foci, activeFocus, now } : null,
+      )
+  }, [sectionId, tab, view, selected, atlasSel, pointMode, lesion, foci, activeFocus, now])
+  useEffect(() => () => useScreen.getState().setPlate(null), [])
 
   // A new section starts clean.
   useEffect(() => {

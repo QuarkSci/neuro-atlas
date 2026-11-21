@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowUp, Check, ExternalLink, KeyRound, LoaderCircle, LogOut, RotateCcw, Sparkles, Square, X } from 'lucide-react'
+import { ArrowUp, Check, Eye, EyeOff, ExternalLink, KeyRound, LoaderCircle, LogOut, MapPin, RotateCcw, Sparkles, Square, X } from 'lucide-react'
 import type { L10n } from '@/data/types'
 import { useL } from '@/i18n'
 import { PROVIDER_META, PROVIDER_ORDER } from '@/ai/providers'
@@ -7,6 +7,10 @@ import { DEFAULT_LOCAL_URL } from '@/ai/providers/compat'
 import { connected, useAI, type ChatMessage } from '@/ai/useAI'
 import type { AIErrorKind, ProviderId } from '@/ai/types'
 import { Markdown } from './aiMarkdown'
+import { brief } from '@/ai/context'
+import { useScreen } from '@/ai/screen'
+import { useAtlas } from '@/store/useAtlas'
+import { useShallow } from 'zustand/react/shallow'
 
 const TX = {
   title: { en: 'AI tutor', uz: 'AI yordamchi' },
@@ -74,6 +78,15 @@ const TX = {
   loginFailed: { en: 'OpenRouter sign-in failed: ', uz: 'OpenRouter orqali kirish amalga oshmadi: ' },
   refused: { en: 'The model declined to answer this.', uz: 'Model bunga javob berishdan bosh tortdi.' },
   tokens: { en: 'tokens', uz: 'token' },
+  context: { en: 'Context', uz: 'Kontekst' },
+  contextOff: { en: 'off — the AI does not see the screen', uz: "o'chiq — AI ekranni ko'rmaydi" },
+  contextNone: { en: 'nothing selected yet', uz: 'hali hech narsa tanlanmagan' },
+  contextShow: { en: 'Show what is sent', uz: "Nima yuborilishini ko'rsatish" },
+  contextHint: {
+    en: 'Sent with your next message: what is selected, the open lesson and plate, and the lesion simulator read-out. Nothing else leaves the app.',
+    uz: 'Keyingi xabaringiz bilan yuboriladi: tanlangan tuzilma, ochiq dars va plastinka, shikastlanish simulyatori natijasi. Boshqa hech narsa ilovadan chiqmaydi.',
+  },
+  sentContext: { en: 'Context sent with this message', uz: 'Shu xabar bilan yuborilgan kontekst' },
 } satisfies Record<string, L10n>
 
 const ERR: Record<AIErrorKind, L10n> = {
@@ -201,6 +214,7 @@ function Chat() {
           <Message key={i} m={m} />
         ))}
       </div>
+      <ContextBar />
       <form
         className="ai-composer"
         onSubmit={(e) => {
@@ -238,7 +252,7 @@ function Chat() {
 
 function Message({ m }: { m: ChatMessage }) {
   const l = useL()
-  if (m.role === 'user') return <div className="ai-msg user">{m.text}</div>
+  if (m.role === 'user') return <UserMessage m={m} />
   return (
     <div className="ai-msg assistant">
       {m.text ? <Markdown text={m.text} /> : m.live ? <span className="ai-thinking">{l(TX.thinking)}</span> : null}
@@ -421,5 +435,50 @@ function AccountRow({ p }: { p: ProviderId }) {
       {typeof status === 'object' && 'error' in status && <p className="ai-error">{status.error}</p>}
       {typeof status === 'object' && 'ok' in status && <p className="ai-ok">✓ {`${status.ok} ${l(TX.models)}`}</p>}
     </section>
+  )
+}
+
+function UserMessage({ m }: { m: ChatMessage }) {
+  const l = useL()
+  const [open, setOpen] = useState(false)
+  return (
+    <>
+      <div className="ai-msg user">{m.text}</div>
+      {m.context && (
+        <button className="ai-sent-context" onClick={() => setOpen(!open)} title={l(TX.sentContext)}>
+          <MapPin size={11} /> {m.context.label || l(TX.context)}
+        </button>
+      )}
+      {open && m.context && <pre className="ai-context-text">{m.context.text}</pre>}
+    </>
+  )
+}
+
+/** What the tutor will be told about the screen with the next message — live, and inspectable. */
+function ContextBar() {
+  const l = useL()
+  const { withContext, setWithContext } = useAI()
+  const [show, setShow] = useState(false)
+  // Re-read the brief when what it describes changes — not on hover or camera moves (they re-render often).
+  const atlasKey = useAtlas(useShallow((s) => [s.selected, s.lesson, s.pathway, s.topic, s.mode, s.view, s.layers, s.lang]))
+  const screen = useScreen()
+  const open = useAI((s) => s.open)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const b = useMemo(() => (open ? brief() : { text: '', label: '' }), [open, screen, ...atlasKey])
+  return (
+    <div className="ai-context">
+      <div className="ai-context-row">
+        <button className={`ai-context-toggle ${withContext ? 'on' : ''}`} onClick={() => setWithContext(!withContext)} aria-pressed={withContext} title={l(TX.contextHint)}>
+          <MapPin size={12} /> {l(TX.context)}
+        </button>
+        <span className="ai-context-label">{withContext ? b.label || l(TX.contextNone) : l(TX.contextOff)}</span>
+        {withContext && b.text && (
+          <button className="icon-button" onClick={() => setShow(!show)} aria-label={l(TX.contextShow)} title={l(TX.contextShow)}>
+            {show ? <EyeOff size={13} /> : <Eye size={13} />}
+          </button>
+        )}
+      </div>
+      {show && withContext && <pre className="ai-context-text">{b.text}</pre>}
+    </div>
   )
 }

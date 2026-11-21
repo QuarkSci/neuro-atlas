@@ -1325,3 +1325,13 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   /* Phone: a bottom sheet over the lower part of the screen. */
   .ai-panel { top: auto; left: var(--gap-edge); right: var(--gap-edge); bottom: var(--gap-edge); width: auto; height: min(72dvh, 620px); transform: translateY(24px); }
 }
+/* AI-2: the context chip above the composer and the snapshot under a sent message */
+.ai-context { margin: 0 12px 6px; display: flex; flex-direction: column; gap: 4px; }
+.ai-context-row { display: flex; align-items: center; gap: 7px; min-height: 28px; }
+.ai-context-row .icon-button { min-width: 26px; min-height: 26px; margin-left: auto; }
+.ai-context-toggle { display: inline-flex; align-items: center; gap: 4px; flex: none; height: 24px; padding: 0 9px; border-radius: 999px; font-size: 11.5px; color: var(--fa-muted); border: 1px dashed color-mix(in oklab, var(--ink) 25%, transparent); }
+.ai-context-toggle.on { color: #fff; background: color-mix(in oklab, #8b5cf6 75%, transparent); border: 1px solid transparent; }
+.ai-context-label { font-size: 11.5px; color: var(--fa-muted); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; min-width: 0; }
+.ai-context-text { max-height: 180px; overflow: auto; margin: 0; padding: 8px 10px; border-radius: 10px; font-size: 10.5px; line-height: 1.45; white-space: pre-wrap; color: var(--fa-muted); background: var(--fa-fill); }
+.ai-sent-context { align-self: flex-end; display: inline-flex; align-items: center; gap: 3px; margin-top: -4px; font-size: 10.5px; color: var(--fa-muted); max-width: 86%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.ai-sent-context:hover { color: var(--foreground); }

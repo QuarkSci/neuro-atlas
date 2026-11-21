@@ -947,6 +947,30 @@ Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erk
 - Tekshiruv: B5 `cst-ic` lakunasi → CST po'stloqdan aynan sharga qadar oqadi, pastda qorong'i (screenshot); TS keysi
   3D (4 qadam); eski `lesion:pons:L:medial` darsi o'zgarishsiz; McDonald xulosasi; audit-lesions 0; tsc; build.
 
+### AI-2 — Kontekst: AI ekranda nima borligini biladi (2026-11-21)
+
+- `src/ai/screen.ts` (`useScreen`): kesim ko'ruvchisi o'z ichki holatini ko'zgulaydi — plastinka, tab, ko'rinish, sxemada
+  va atlasda tanlangan tuzilma, o'choq rejimi, hudud o'chog'i, erkin o'choqlar, faol o'choq, vaqt o'qi; `McDonaldPanel`
+  plastinkadan tashqari topilmalarni (`mcExtra`). Ko'ruvchi yopilganda tozalanadi. Ko'ruvchi AI haqida hech narsa bilmaydi.
+- `src/ai/context.ts` `brief()` → `{ text, label }`: ilova tabi va 3D ko'rinish, qatlamlar, mavzu; 3D da tanlangan qism
+  (nomi + uz nomi, qatlam, tizim, tomon, MNI markaz, atlas matni / funksiya / klinika qisqartirilgan, manbalar Markdown
+  havola sifatida); kuzatilayotgan yo'l; dars va qadam matni; ochiq plastinka (kod, nom, yo'nalish, ko'rinish), unda
+  tanlangan tuzilma (`info`, `lesion`); hudud rejimi — daraja/tomon/hudud = sindrom, kesilgan yo'llar (bemor tomoni),
+  kalla belgilari; erkin o'choqlar — har biri: plastinka, daraja, tomon, diametr, vaqt, Gd, tuzilmalar %, yo'llar, belgilar,
+  klassik hududlar; birgalikdagi natija; McDonald 2017/2024 (ilova hisobi). Matn modelga inglizcha, nomlar uz bilan.
+  `briefSection()` — tizim promptiga "Live state" bo'limi + qanday ishlatish ("bu/shu" deganda; atlas manbalarini havola
+  qilish; tashqi bilim bo'lsa aytish; simulyator sxematik ekanini eslatish).
+- `useAI`: `withContext` (standart yoqiq, `na:ai`da saqlanadi); har yuborishda o'sha paytdagi `brief()` tizim promptiga
+  qo'shiladi va foydalanuvchi xabarida `context` (yorliq + to'liq matn) saqlanadi.
+- UI: yozish maydoni ustida "Kontekst" chipi (yoqish/o'chirish) + jonli yorliq ("Chap talamus", "K3 · 3 o'choq"), ko'z
+  tugmasi — AI'ga aynan nima yuborilishi; yuborilgan xabar ostida 📍 yorliq — bosilsa o'sha suratni ko'rsatadi.
+  `ContextBar` faqat tegishli store maydonlariga obuna (`useShallow`), hover/kamera harakatida qayta hisoblanmaydi.
+- Mock: tizim promptidagi "Live state" dan bir necha qatorni javob oxiriga qaytaradi — kontekst yetib borganini headless
+  ko'rish uchun.
+- Tekshiruv: 3D da chap talamus tanlangan → chip "Chap talamus", oldindan ko'rishda atlas matni va MNI markaz; B2 → TS keysi
+  → panel kesim ko'ruvchisi ustida, javobda K3, 3 o'choq, #1 MLF 100% Gd+, McDonald qatorlari. tsc, build, audit-lesions 0.
+- QOLDI: AI-3 (tools — ilovani boshqarish), kontekstga vision (AI-4).
+
 ### AI-1 — AI panel: provayderlar, Hisoblar, oqimli chat (2026-11-21)
 
 Reja va faktlar: `PLAN.md` 5.6. Qarorlar: OpenRouter bilan kirish + o'z API kaliti + lokal model; panel o'ngdan varaq.

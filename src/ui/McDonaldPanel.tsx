@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { useScreen } from '@/ai/screen'
 import { Check, Clock, X } from 'lucide-react'
 import type { L10n } from '@/data/types'
 import { useL } from '@/i18n'
@@ -108,6 +109,11 @@ export function McDonaldPanel({
 }) {
   const l = useL()
   const [extra, setExtra] = useState<McExtra>(NO_EXTRA)
+  // The findings outside the plates are part of the AI context too.
+  useEffect(() => {
+    useScreen.getState().setMcExtra(extra)
+    return () => useScreen.getState().setMcExtra(null)
+  }, [extra])
   const mc = useMemo(() => mcdonald(foci, set$.each, extra), [foci, set$, extra])
   const maxT = Math.max(24, ...foci.map((f) => f.t ?? 0))
   const W = 300
