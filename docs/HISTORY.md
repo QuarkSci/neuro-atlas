@@ -911,7 +911,8 @@ Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erk
   (eskiroq o'choq Gd− hisoblanadi), kuzatuvda yangi o'choq, likvor OCB, 2-xuruj. 2017 jadvali (xurujlar × belgili o'choqlar);
   2024 (soddalashtirilgan): 5 soha (+ ko'ruv nervi), ≥4 → TS; 2–3 → DIT / likvor / CVS·PRL; RIS ham bo'lishi mumkin.
   Ogohlantirishlar: >2 sm (tumefaktiv), bir vaqtda ≥8 mm va arterial hududni ≥80% to'ldirgan o'choqlar (insult).
-  `msCase()` — o'quv keysi: K1 MLF Gd+ (INO, 0 oy) + B2 yon qorincha (0 oy) + B3 orolcha (6 oy).
+  `msCase()` — o'quv keysi: K3 MLF Gd+ r 1.5 (sof chap INO, 0 oy; K1 da xuddi shu disk VI yadro va VII tizzasini ham
+  oladi — "bir yarim" sindromi) + B2 yon qorincha (0 oy) + B3 orolcha (6 oy).
 - Manbalar (Crossref bilan tekshirilgan): Thompson 2018 Lancet Neurol 17:162, doi:10.1016/S1474-4422(17)30470-2;
   Montalban 2025 Lancet Neurol 24:850, doi:10.1016/S1474-4422(25)00270-4.
 - UI: `src/ui/McDonaldPanel.tsx` — faol o'choq uchun "Paydo bo'lgan vaqti" (0/1/3/6/12/24 oy) + Gd+; vaqt o'qi SVG
@@ -922,6 +923,29 @@ Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erk
   OCB → TS; RIS; 2024 4 soha → TS; tumefaktiv bayroq), audit-lesions 0, tsc, build, 4 screenshot.
 - QOLDI / PhD: 3D da aynan shu disklar (plastinka → MNI), real kesim/atlasda bosish → MNI nuqta; PPMS yo'li (1 yil
   progressiya); o'choq shakli (Douson barmoqlari — kallozal-septal oval), MRT T2/FLAIR ko'rinishi.
+
+### 5.3-3f — Erkin o'choqlar 3D da (2026-11-21)
+
+- Plastinka → MNI: `focalMni(f)` (`src/ui/lesionFocal.ts`). Asos — kesim ramkasi (`section_frames.json`: MNI = origin +
+  a·u + b·v). Plastinka (x, y) → (a, b) uchun `pipeline/plate_affine.json` — `scripts/export-plate-affine.mjs` har
+  plastinkada 3D jufti bor tuzilmalarni (`StructureInfo.part`) ilovaning o'z atlas kesimidagi shu tuzilma bilan
+  (tomon bo'yicha, eng katta kesim) juftlaydi: kontur maydon markazi ↔ soha markazi; eng kichik kvadratlar affin,
+  2.5×mediandan katta qoldiqlar tashlanib qayta moslanadi. Qoldiq median: O1 1.2, U4 2.0, T1 2.2, O2 2.5, B2 3.0,
+  K1–K3 3.5–3.9, B1 3.9, B3/B4 4.4–4.5, B5 6.0 mm (cho'zinchoq tuzilmalar — dum, qorincha — markaz solishtirishning
+  o'zi noaniq). U1–U3 (juft <4) — quti usuli (siluet qutisi → o'z meshlar qutisi, y teskari). B5 aksialda quti usuli
+  teskari ag'darilgan edi (det > 0) — affin buni o'zi tuzatdi. Plastinka chizmasi yoki tekislik o'zgarsa:
+  `export-section-frames.mjs` → `export-plate-affine.mjs`.
+- Sahna: `LessonStep.lesions[]` (`color`, `dim`), `LessonStage.lesions` (eski `lesion` ham shu ro'yxatga qo'shiladi);
+  `BrainScene.lesionMarks[]` — har biri o'z halosi bilan. `frameLesson` xira bo'lmagan o'choqlarni ≥7 mm atrofi bilan
+  kadrga oladi (belgisiz o'choq ekranni to'ldirmaydi, boshqa darajadagi xira o'choqlar kamerani uzoqlashtirmaydi).
+- `src/ui/focalLesson.ts` `focalLesson(foci, set)`: `focal:<vaqt>` darsi `LESSON_BY_ID`ga yoziladi (oldingisi
+  o'chiriladi). Umumiy qadam (barcha sharlar raqam bilan, Gd+ sariq; kesilgan yo'l vaqt bo'yicha birinchi kesgan
+  o'choqqacha oqadi) + har o'choq uchun qadam (vaqt tartibida; boshqalari xira; daraja, tomon, diametr, Gd, kesilgan
+  yo'llar, daraja belgilari yorliq bilan; "Kesimda ko'rish" o'sha plastinka). Bitta o'choqda umumiy qadam yo'q.
+  Kontekst: oldingi miya faqat o'rta chiziqdan >4 mm uzoq o'choqlar tomonida.
+- Panel: "Barcha o'choqlar 3D da" (bir nechta), "Shu o'choq 3D da" (bitta); eski tugma "Eng yaqin hudud 3D da".
+- Tekshiruv: B5 `cst-ic` lakunasi → CST po'stloqdan aynan sharga qadar oqadi, pastda qorong'i (screenshot); TS keysi
+  3D (4 qadam); eski `lesion:pons:L:medial` darsi o'zgarishsiz; McDonald xulosasi; audit-lesions 0; tsc; build.
 
 ### PERF-1 — Real kesimda qotish (2026-11-19)
 

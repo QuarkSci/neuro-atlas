@@ -128,18 +128,20 @@ function itemCentre(plate: string, id: string): [number, number] | null {
 
 /**
  * A teaching case: internuclear ophthalmoplegia from an enhancing MLF plaque
- * (the first attack), a silent periventricular lesion on the same scan, and a
+ * in the rostral pons (the first attack), a silent periventricular lesion on the same scan, and a
  * new juxtacortical lesion at six months — DIS and DIT both met.
  */
 export function msCase(): FocalLesion[] {
-  const spec: [string, string, number, boolean][] = [
-    ['pons-facial-colliculus', 'mlf', 0, true],
-    ['bg-commissural', 'lv', 0, false],
-    ['bg-pallidal', 'ins', 6, false],
+  // The MLF in the rostral pons (K3), 3 mm across: a pure left INO — at the facial colliculus (K1) the same disc
+  // would also take the VI nucleus and the facial genu (a one-and-a-half syndrome).
+  const spec: [string, string, number, boolean, number][] = [
+    ['pons-isthmus', 'mlf', 0, true, 1.5],
+    ['bg-commissural', 'lv', 0, false, 2.5],
+    ['bg-pallidal', 'ins', 6, false, 2.5],
   ]
-  return spec.flatMap(([plate, id, t, gd]) => {
+  return spec.flatMap(([plate, id, t, gd, rMm]) => {
     const c = itemCentre(plate, id)
-    return c ? [{ plate, x: c[0], y: c[1], rMm: 2.5, t, gd }] : []
+    return c ? [{ plate, x: c[0], y: c[1], rMm, t, gd }] : []
   })
 }
 

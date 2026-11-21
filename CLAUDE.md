@@ -62,9 +62,10 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 - Rejimlar: `explode | peel | learn`. Yangi dars/kesim → tegishli mavzuga (`topics.ts`) yozilsin; yangi tab ochilmaydi.
 - Pipeline vositalari: `pipeline/tools/slice_svg.py`, `landmarks.py` (`pipeline/.venv/bin/python`, repo ildizidan).
 
-## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-21, McDonald mezonlaridan keyin)
+## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-21, McDonald va 3D o'choqlardan keyin)
 
-Oxirgi sessiya (2026-11-21): erkin o'choqqa vaqt o'qi + McDonald 2017/2024 (`docs/HISTORY.md` "5.3-3e").
+Oxirgi sessiya (2026-11-21): erkin o'choqqa vaqt o'qi + McDonald 2017/2024 (`docs/HISTORY.md` "5.3-3e"),
+so'ng erkin o'choqlar 3D da ("5.3-3f": `focalMni` + `pipeline/plate_affine.json`, `src/ui/focalLesson.ts`).
 Tekshiruv zanjiri: `node scripts/audit-lesions.mjs` (0) + tsc + build + 2–4 screenshot; tezlik —
 `node scripts/perf-real.mjs`. Erkin o'choqni headless sinash: Shikastlanish tabi → "Nuqta" → "TS keysi" tugmasi (3 o'choq
 tayyor) yoki `.sv-svg` ichidagi `[data-id=...] path` markaziga `MouseEvent('click')`; vaqt — `.mc-tick` ni bosish.
@@ -116,7 +117,8 @@ headless "wall" vaqti dasturiy GPU tufayli shovqinli). QOIDA: pointermove'da kat
 **Navbatdagi vazifa — foydalanuvchi tanlaydi** (avval qisqa reja ko'rsating): PLAN 5.3-3 mavzu viktorinasi + Anki;
 Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; BigBrain 20 mkm plitkalar (zoomda);
 5.4 UI qoldiqlari (dars kartasi va kesim ko'ruvchisi yorug' rejimda "qora orol"); erkin o'choqning PhD davomi
-(real kesimda/atlas ko'rinishida bosish → MNI nuqta, 3D da aynan shu disklar, PPMS yo'li, T2/FLAIR ko'rinishi). Tezlik: real kesimni foydalanuvchi o'z brauzerida hali tasdiqlamagan — so'rang.
+(real kesimda/atlas ko'rinishida bosish → o'choq — `focalMni`ning teskarisi, PPMS yo'li, T2/FLAIR ko'rinishi, 3D da o'choqni
+sudrash). Tezlik: real kesimni foydalanuvchi o'z brauzerida hali tasdiqlamagan — so'rang.
 
 Ish uslubi bo'yicha eslatmalar (2026-11-17):
 - TS mantiqni tekshirish: `npx -y tsx` ruxsat bermadi → vaqtinchalik `scripts/_x_tmp.mjs` (puppeteer) da dev serverdan
@@ -129,7 +131,7 @@ Ish uslubi bo'yicha eslatmalar (2026-11-17):
 
 ## Joriy holat (2026-11-21)
 
-Tayyor: 0–4c bosqichlar, BG-1, 3 dars + 3 yo'l darsi va shikastlanish simulyatori (5.3 1+2, o'choq plastinkada/3D 5.3-3a, kalla nervlari 5.3-3b, trigeminal 5.3-3c, erkin o'choq + bir nechta o'choq 5.3-3d, vaqt o'qi + McDonald 5.3-3e), PERF-1 (real kesim tezligi), 5.5 (zoom, real kesim 21/22, tomirlar simmetriyasi), O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
+Tayyor: 0–4c bosqichlar, BG-1, 3 dars + 3 yo'l darsi va shikastlanish simulyatori (5.3 1+2, o'choq plastinkada/3D 5.3-3a, kalla nervlari 5.3-3b, trigeminal 5.3-3c, erkin o'choq + bir nechta o'choq 5.3-3d, vaqt o'qi + McDonald 5.3-3e, 3D da 5.3-3f), PERF-1 (real kesim tezligi), 5.5 (zoom, real kesim 21/22, tomirlar simmetriyasi), O'rganish tabi, kontent 487 yozuv (🟡), **R1** (2026-11-14), **LG-1**, **UI-1**, **UI-2** (2026-11-15).
 
 **Hozirgi yo'nalish — realizm (foydalanuvchi talabi 2026-11-14):** butun ko'rinishni iloji
 boricha real qilish. Reja (har biri alohida sessiya va commit):

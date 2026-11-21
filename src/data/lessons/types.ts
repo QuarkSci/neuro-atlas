@@ -48,6 +48,8 @@ export interface LessonStep {
   flows?: { path: Mni[]; color: string; cut?: Mni }[]
   /** A lesion drawn as a red sphere, MNI mm. */
   lesion?: { at: Mni; r: number }
+  /** Several lesions (free lesions from the plates); `dim` draws one faintly next to the one in focus. */
+  lesions?: { at: Mni; r: number; color?: string; dim?: boolean }[]
   /** Extra atlas layers the step needs (e.g. Julich hippocampal subfields). */
   layers?: LayerId[]
   /** A cross-section plate (data/sections id) showing this step's structures in section. */

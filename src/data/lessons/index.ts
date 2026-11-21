@@ -37,7 +37,7 @@ export interface LessonStage {
   labels: { text: string; at: Mni; color?: string }[]
   view: Mni
   flows: { path: Mni[]; color: string; loop: boolean; cut?: Mni }[]
-  lesion: { at: Mni; r: number } | null
+  lesions: { at: Mni; r: number; color?: string; dim?: boolean }[]
   layers: LayerId[]
 }
 
@@ -87,7 +87,7 @@ export function lessonStage(lesson: Lesson, index: number, lang: 'en' | 'uz', qu
     labels: quiz ? [] : (step.labels ?? []).map((l) => ({ text: l.text[lang] ?? l.text.en, at: l.at, color: l.color })),
     view: step.view,
     flows: quiz ? [] : flows,
-    lesion: step.lesion ?? null,
+    lesions: [...(step.lesion ? [step.lesion] : []), ...(step.lesions ?? [])].filter((x) => x.r > 0),
     layers,
   }
 }

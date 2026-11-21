@@ -3,6 +3,7 @@ import { SECTION_BY_ID, STRUCTURE_BY_ID } from '@/data/sections'
 import { CRANIAL_SIGNS, LEVEL_BY_ID, type LesionZone } from '@/data/lesions'
 import { PATHWAYS, type BodySide, type LesionLevel } from '@/data/pathways'
 import frames from '../../pipeline/section_frames.json'
+import affine from '../../pipeline/plate_affine.json'
 import { itemShapes, polygonArea, sectionEntries, shapePolygon } from './sectionLayout'
 import { plateLevel } from './pathTrace'
 import { insidePolygon, plateShows, shapeSamples, zoneOn, type TerritoryOnPlate } from './lesionTerritory'
@@ -74,18 +75,53 @@ export interface FocalResult {
  */
 const TRANSIT: Partial<Record<LesionLevel, string[]>> = { capsule: ['ic-pl', 'tcr'] }
 
-const FRAME = new Map((frames as { id: string; window: number[] }[]).map((f) => [f.id, f.window]))
+/** The atlas cut of each plate (scripts/export-section-frames.mjs): MNI = origin + a·u + b·v, window [a0, b0, a1, b1]. */
+interface Frame {
+  id: string
+  origin: number[]
+  u: number[]
+  v: number[]
+  window: number[]
+}
+const FRAMES = new Map((frames as Frame[]).map((f) => [f.id, f]))
 const DEFAULT_UNITS_PER_MM = 8
 
 /** Estimated mm per plate unit: the atlas cut's width over the silhouette's. */
 export function mmPerUnit(section: Section): number | null {
-  const w = FRAME.get(section.id)
+  const w = FRAMES.get(section.id)?.window
   const pts = section.outline.flatMap((s) => shapePolygon(s) ?? [])
   if (!w || !pts.length) return null
   const xs = pts.map((p) => p[0])
   const units = Math.max(...xs) - Math.min(...xs)
   const mm = w[2] - w[0] - 10
   return units > 0 && mm > 0 ? mm / units : null
+}
+
+/** Plate (x, y) → cut plane (a, b) affine maps fitted on matching structures (scripts/export-plate-affine.mjs). */
+const AFFINE = affine as Record<string, { m: number[][]; n: number; median: number; max: number }>
+
+/**
+ * Where a free lesion sits in MNI space (mm), through the atlas cut of the
+ * same level. Where the plate has enough structures with a 3D counterpart,
+ * the landmark-fitted affine map (median residual 1–6 mm); otherwise (the
+ * caudal medulla) the plate's silhouette box laid onto the box of the level's
+ * own meshes (the frame window less its 5 mm margin), the figure's y running
+ * down while the cut's b runs up. Approximate (≈), like the plate's scale.
+ */
+export function focalMni(f: FocalLesion): { at: [number, number, number]; r: number } | null {
+  const section = SECTION_BY_ID.get(f.plate)
+  const fr = FRAMES.get(f.plate)
+  const pts = section?.outline.flatMap((s) => shapePolygon(s) ?? []) ?? []
+  if (!section || !fr || !pts.length) return null
+  const xs = pts.map((p) => p[0])
+  const ys = pts.map((p) => p[1])
+  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)]
+  const [a0, b0, a1, b1] = fr.window
+  const m = AFFINE[f.plate]?.m
+  const a = m ? m[0][0] * f.x + m[0][1] * f.y + m[0][2] : (a0 + a1) / 2 + (f.x - (x0 + x1) / 2) * ((a1 - a0 - 10) / (x1 - x0))
+  const b = m ? m[1][0] * f.x + m[1][1] * f.y + m[1][2] : (b0 + b1) / 2 - (f.y - (y0 + y1) / 2) * ((b1 - b0 - 10) / (y1 - y0))
+  const at = [0, 1, 2].map((i) => fr.origin[i] + a * fr.u[i] + b * fr.v[i]) as [number, number, number]
+  return { at, r: f.rMm }
 }
 
 /** Can a free lesion be placed on this plate? */

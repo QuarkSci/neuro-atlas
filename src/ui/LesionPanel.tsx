@@ -14,6 +14,7 @@ import { cranialSigns, localiseWithSigns, type CranialFindings, type SignHit } f
 import { focalPlate, type FocalLesion, type FocalSet } from './lesionFocal'
 import { FocusTime, McDonaldPanel } from './McDonaldPanel'
 import { msCase } from './mcdonald'
+import { focalLesson } from './focalLesson'
 
 const TX = {
   forward: { en: 'Lesion → signs', uz: "O'choq → belgilar" },
@@ -81,6 +82,9 @@ const TX = {
   clear: { en: 'Clear all', uz: 'Hammasini tozalash' },
   together: { en: 'All lesions together', uz: "Barcha o'choqlar birgalikda" },
   msCase: { en: 'MS case', uz: 'TS keysi' },
+  all3d: { en: 'All lesions in 3D', uz: "Barcha o'choqlar 3D da" },
+  focal3d: { en: 'This lesion in 3D', uz: "Shu o'choq 3D da" },
+  zone3d: { en: 'Nearest territory in 3D', uz: 'Eng yaqin hudud 3D da' },
   msCaseHint: {
     en: 'Teaching case: INO from an enhancing MLF plaque, a silent periventricular lesion, a new juxtacortical one at 6 months.',
     uz: "O'quv keysi: Gd+ MLF o'chog'idan INO, belgisiz periventrikulyar o'choq, 6 oyda yangi po'stloq yoni o'chog'i.",
@@ -242,6 +246,11 @@ export function LesionPanel({
     const rMm = f?.rMm ?? 3
     const best = r?.zones[0]
     const many = foci.length > 1
+    // The lesions as spheres at their own places (not the nearest territory's lesson).
+    const open3d = () => {
+      const id = focalLesson(foci, set$)
+      if (id) setLesson(id)
+    }
     const remove = (i: number) => {
       point.setFoci(foci.filter((_, j) => j !== i))
       point.setActive(Math.max(0, Math.min(active > i ? active - 1 : active, foci.length - 2)))
@@ -325,6 +334,11 @@ export function LesionPanel({
             {tractTable(set$.sig)}
             <h4>{l(TX.cranial)}</h4>
             {signTable(set$.signs)}
+            <div className="lz-actions">
+              <button className="sv-3d" onClick={() => open3d()}>
+                <Box size={13} /> {l(TX.all3d)}
+              </button>
+            </div>
             <p className="sv-note">{l(set$.levels.length > 1 ? TX.multiLevel : TX.multiSame)}</p>
           </>
         )}
@@ -380,6 +394,11 @@ export function LesionPanel({
               })}
             </div>
             <div className="lz-actions">
+              {!many && (
+                <button className="sv-3d" onClick={() => open3d()}>
+                  <Box size={13} /> {l(TX.focal3d)}
+                </button>
+              )}
               {best && (
                 <button
                   className="sv-3d"
@@ -393,7 +412,7 @@ export function LesionPanel({
               )}
               {best && (
                 <button className="sv-3d" onClick={() => setLesson(lesionLessonId({ level: r.level, side: best.side, zone: best.zone.id }))}>
-                  <Box size={13} /> {l(TX.in3d)}
+                  <Box size={13} /> {l(TX.zone3d)}
                 </button>
               )}
             </div>

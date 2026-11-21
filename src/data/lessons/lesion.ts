@@ -22,7 +22,7 @@ const ghost = (l: Lesion): ContextItem[] => {
   const side = l.side === 'L' ? 'left' : 'right'
   return [{ ref: '@brainstem' }, { ref: '@diencephalon', side }, { ref: '@telencephalon', side }]
 }
-const LAYERS = ['jhu', 'julich', 'bstem'] as LessonStep['layers']
+export const LAYERS = ['jhu', 'julich', 'bstem'] as LessonStep['layers']
 
 const TX = {
   lesion: { en: 'Lesion', uz: "O'choq" },
@@ -34,7 +34,7 @@ const TX = {
   none: { en: 'no long tract', uz: "uzun yo'l yo'q" },
 } satisfies Record<string, L10n>
 
-const WALLER = [
+export const WALLER = [
   {
     title: 'Thomalla et al. 2004, NeuroImage — DTI detects early Wallerian degeneration of the pyramidal tract after ischemic stroke',
     url: 'https://doi.org/10.1016/j.neuroimage.2004.03.041',
@@ -45,7 +45,7 @@ const WALLER = [
   },
 ]
 
-const mirror = (p: Mni): Mni => [-p[0], p[1], p[2]]
+export const mirror = (p: Mni): Mni => [-p[0], p[1], p[2]]
 const flipSide = (s?: 'left' | 'right') => (s === 'left' ? 'right' : s === 'right' ? 'left' : undefined)
 const join = (xs: string[]) => xs.join(', ')
 const uz = (x: L10n) => x.uz ?? x.en
@@ -97,7 +97,7 @@ export function lesionSphere(lesion: Lesion): { at: Mni; r: number } {
 }
 
 /** The tract's stage items for one body half (the left half is the mirror copy). */
-function itemsFor(p: Pathway, body: BodySide): StageItem[] {
+export function itemsFor(p: Pathway, body: BodySide): StageItem[] {
   const out: StageItem[] = []
   for (const st of p.stations)
     for (const s of st.show) {
@@ -107,7 +107,7 @@ function itemsFor(p: Pathway, body: BodySide): StageItem[] {
   return out
 }
 
-const pathFor = (p: Pathway, body: BodySide): Mni[] => (body === 'R' ? p.path : p.path.map(mirror))
+export const pathFor = (p: Pathway, body: BodySide): Mni[] => (body === 'R' ? p.path : p.path.map(mirror))
 
 /**
  * Cranial-nerve / level signs of a lesion. They are computed from the plate

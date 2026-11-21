@@ -242,7 +242,7 @@ export class BrainScene {
   private lessonLabels: LessonLabelEl[] = []
   /** Lesson flows; `end` is where a cut stream stops (1 = runs the whole course). */
   private flows: { group: T.Group; curve: T.CatmullRomCurve3; dots: T.Mesh[]; lines: LineSegments2[]; loop: boolean; t: number; period: number; end: number }[] = []
-  private lesionMark: { group: T.Group; halo: T.Mesh; t: number } | null = null
+  private lesionMarks: { group: T.Group; halo: T.Mesh; t: number }[] = []
 
   constructor(host: HTMLElement, geometries: LoadedGeometry[], cb: SceneCallbacks) {
     this.host = host
@@ -1271,6 +1271,13 @@ export class BrainScene {
       if (p) box.union(p.bounds)
     }
     for (const l of st.labels) box.expandByPoint(mniToScene(l.at))
+    // A lesion with nothing else in focus (a silent one) is framed with ~7 mm of its surroundings, not filling the view.
+    for (const les of st.lesions) {
+      if (les.dim) continue
+      const c = mniToScene(les.at)
+      const m = Math.max(7, les.r * 2)
+      box.expandByPoint(c.clone().addScalar(m)).expandByPoint(c.clone().addScalar(-m))
+    }
     if (box.isEmpty()) return false
     this.markerInsets = null
     const dir = mniToScene(st.view).normalize()
@@ -1387,8 +1394,8 @@ export class BrainScene {
     }
     for (const f of this.flows) drop(f.group)
     this.flows = []
-    if (this.lesionMark) drop(this.lesionMark.group)
-    this.lesionMark = null
+    for (const m of this.lesionMarks) drop(m.group)
+    this.lesionMarks = []
     if (!st) return
     const res = [this.host.clientWidth, this.host.clientHeight] as const
     const segLine = (pts: T.Vector3[], color: string, opacity: number, dashed: boolean) => {
@@ -1443,24 +1450,25 @@ export class BrainScene {
       // ~22 mm/s: slow enough to follow with the eye.
       this.flows.push({ group, curve, dots, lines, loop, t: 0, period: Math.max(3, length / 22), end })
     }
-    if (st.lesion && st.lesion.r > 0) {
+    for (const les of st.lesions) {
       const group = new T.Group()
-      group.position.copy(mniToScene(st.lesion.at))
+      group.position.copy(mniToScene(les.at))
+      const color = les.color ?? '#ff3b30'
       const core = new T.Mesh(
-        new T.SphereGeometry(st.lesion.r, 32, 20),
-        new T.MeshBasicMaterial({ color: '#ff3b30', transparent: true, opacity: 0.42, depthTest: false, depthWrite: false }),
+        new T.SphereGeometry(les.r, 32, 20),
+        new T.MeshBasicMaterial({ color, transparent: true, opacity: les.dim ? 0.2 : 0.42, depthTest: false, depthWrite: false }),
       )
       core.renderOrder = 32
       const halo = new T.Mesh(
-        new T.SphereGeometry(st.lesion.r * 1.45, 32, 20),
-        new T.MeshBasicMaterial({ color: '#ff3b30', transparent: true, opacity: 0.14, depthTest: false, depthWrite: false }),
+        new T.SphereGeometry(les.r * 1.45, 32, 20),
+        new T.MeshBasicMaterial({ color, transparent: true, opacity: les.dim ? 0.05 : 0.14, depthTest: false, depthWrite: false }),
       )
       halo.renderOrder = 32
       core.raycast = () => {}
       halo.raycast = () => {}
       group.add(halo, core)
       this.scene.add(group)
-      this.lesionMark = { group, halo, t: 0 }
+      this.lesionMarks.push({ group, halo, t: 0 })
     }
   }
 
@@ -1642,8 +1650,7 @@ export class BrainScene {
       })
       this.dirty = true
     }
-    if (this.lesionMark) {
-      const L = this.lesionMark
+    for (const L of this.lesionMarks) {
       L.t += dt
       L.halo.scale.setScalar(1 + 0.12 * Math.sin(L.t * 2.6))
       this.dirty = true
