@@ -27,7 +27,7 @@ import type { LayerId } from '@/data/types'
 import { useL, useT } from '@/i18n'
 import { useAtlas } from '@/store/useAtlas'
 import { CATEGORY, CATEGORY_ORDER, FIBRE, NISSL_DARK, STAIN, tissueOf, type Stain } from './sectionStyle'
-import { AtlasSliceView, regionColor, useAtlasSlice, type SliceMark } from './AtlasSliceView'
+import { AtlasSliceView, regionColor, useAtlasSlice, type FocalOnCut, type SliceMark } from './AtlasSliceView'
 import { LAYER_BY_ID, PART_BY_ID } from '@/data'
 import { TOPIC_BY_ID, topicsOfSection } from '@/data/topics'
 import { badgePositions, itemArea, itemShapes, mix, sectionEntries, type Entry } from './sectionLayout'
@@ -35,7 +35,7 @@ import { PATHWAYS, PATHWAY_BY_ID } from '@/data/pathways'
 import { routePlates, traceOn, type TraceItem } from './pathTrace'
 import { LesionPanel } from './LesionPanel'
 import { territoryOn, type TerritoryOnPlate } from './lesionTerritory'
-import { focalPlate, focalSet, focalTerritory, type FocalLesion } from './lesionFocal'
+import { cutToPlate, focalPlate, focalSet, focalTerritory, plateToCut, type FocalLesion } from './lesionFocal'
 import type { Lesion } from '@/data/lesions'
 import { plateLevel } from './pathTrace'
 import { ZoomPane } from './ZoomPane'
@@ -167,6 +167,20 @@ export function SectionViewer() {
   const real = REAL_SLICES[cutSec.id]
   // Both read the atlas cut rather than the drawn schematic.
   const cutView = view === 'atlas' || view === 'real'
+  // Free lesions on the atlas / real cut: drawn in mm on the cut plane; in point mode a click drops one, mapped back onto the plate.
+  const cutFocal: FocalOnCut | undefined =
+    tab === 'lesion' && pointMode && cutSec === section && focalPlate(section)
+      ? {
+          discs: foci.flatMap((f, i) => {
+            const ab = f.plate === section.id && fociSet.each[i] ? plateToCut(f.plate, f.x, f.y) : null
+            return ab ? [{ a: ab[0], b: ab[1], r: f.rMm, n: i + 1, active: i === activeFocus, gd: f.gd }] : []
+          }),
+          onPlace: (a, b) => {
+            const p = cutToPlate(section.id, a, b)
+            if (p) placeFocus(section.id, p[0], p[1])
+          },
+        }
+      : undefined
   const index = order.findIndex((s) => s.id === section.id)
   const prev = order[index - 1],
     next = order[index + 1]
@@ -407,6 +421,7 @@ export function SectionViewer() {
                     labels={labels}
                     axes={cutSec.axes.map((a) => l(a)) as [string, string, string, string]}
                     onPick={setAtlasSel}
+                    focal={cutFocal}
                   />
                 ) : (
                   <div className="as-status">{atlas ? t.asEmpty : t.asLoading}</div>

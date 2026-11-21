@@ -108,19 +108,48 @@ const AFFINE = affine as Record<string, { m: number[][]; n: number; median: numb
  * own meshes (the frame window less its 5 mm margin), the figure's y running
  * down while the cut's b runs up. Approximate (≈), like the plate's scale.
  */
-export function focalMni(f: FocalLesion): { at: [number, number, number]; r: number } | null {
-  const section = SECTION_BY_ID.get(f.plate)
-  const fr = FRAMES.get(f.plate)
+/** The plate → cut-plane map as a 2×3 matrix [[a_x, a_y, a_0], [b_x, b_y, b_0]] (both methods are affine). */
+function cutMatrix(plate: string): number[][] | null {
+  const m = AFFINE[plate]?.m
+  if (m) return m
+  const section = SECTION_BY_ID.get(plate)
+  const fr = FRAMES.get(plate)
   const pts = section?.outline.flatMap((s) => shapePolygon(s) ?? []) ?? []
   if (!section || !fr || !pts.length) return null
   const xs = pts.map((p) => p[0])
   const ys = pts.map((p) => p[1])
   const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)]
   const [a0, b0, a1, b1] = fr.window
-  const m = AFFINE[f.plate]?.m
-  const a = m ? m[0][0] * f.x + m[0][1] * f.y + m[0][2] : (a0 + a1) / 2 + (f.x - (x0 + x1) / 2) * ((a1 - a0 - 10) / (x1 - x0))
-  const b = m ? m[1][0] * f.x + m[1][1] * f.y + m[1][2] : (b0 + b1) / 2 - (f.y - (y0 + y1) / 2) * ((b1 - b0 - 10) / (y1 - y0))
-  const at = [0, 1, 2].map((i) => fr.origin[i] + a * fr.u[i] + b * fr.v[i]) as [number, number, number]
+  const sa = (a1 - a0 - 10) / (x1 - x0)
+  const sb = (b1 - b0 - 10) / (y1 - y0)
+  return [
+    [sa, 0, (a0 + a1) / 2 - ((x0 + x1) / 2) * sa],
+    [0, -sb, (b0 + b1) / 2 + ((y0 + y1) / 2) * sb],
+  ]
+}
+
+/** A plate point in the plane of the level's atlas cut (a, b mm — the atlas and real-slice views' coordinates). */
+export function plateToCut(plate: string, x: number, y: number): [number, number] | null {
+  const m = cutMatrix(plate)
+  return m ? [m[0][0] * x + m[0][1] * y + m[0][2], m[1][0] * x + m[1][1] * y + m[1][2]] : null
+}
+
+/** The inverse: a point clicked on the atlas / real slice, back on the schematic plate. */
+export function cutToPlate(plate: string, a: number, b: number): [number, number] | null {
+  const m = cutMatrix(plate)
+  if (!m) return null
+  const det = m[0][0] * m[1][1] - m[0][1] * m[1][0]
+  if (Math.abs(det) < 1e-12) return null
+  const da = a - m[0][2]
+  const db = b - m[1][2]
+  return [(m[1][1] * da - m[0][1] * db) / det, (-m[1][0] * da + m[0][0] * db) / det]
+}
+
+export function focalMni(f: FocalLesion): { at: [number, number, number]; r: number } | null {
+  const fr = FRAMES.get(f.plate)
+  const ab = plateToCut(f.plate, f.x, f.y)
+  if (!fr || !ab) return null
+  const at = [0, 1, 2].map((i) => fr.origin[i] + ab[0] * fr.u[i] + ab[1] * fr.v[i]) as [number, number, number]
   return { at, r: f.rMm }
 }
 

@@ -1227,3 +1227,14 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .sv-zoom-inner.moving { will-change: transform; }
 .mc-scrub { display: flex; flex-direction: column; gap: 2px; font-size: 11px; color: var(--fa-muted); }
 .mc-scrub b { color: #fff; font-weight: 600; }
+
+/* Free lesions on the atlas / real cut */
+.as-svg.placing { cursor: crosshair; }
+.as-focus circle { fill: color-mix(in oklab, #ff3b30 22%, transparent); stroke: #ff3b30; stroke-width: 1.6; pointer-events: none; }
+.as-focus.gd circle { stroke: #ffd60a; fill: color-mix(in oklab, #ffd60a 18%, transparent); }
+.as-focus circle.pin { fill: #ff3b30; stroke: #fff; stroke-width: 1.2; }
+.as-focus.gd circle.pin { fill: #c9a500; }
+.as-focus:not(.active) { opacity: 0.6; }
+.as-focus text { fill: #fff; font-weight: 700; pointer-events: none; }
+.as-under { font-size: 11.5px; color: var(--fa-muted); }
+.as-under b { color: #ff6b61; }

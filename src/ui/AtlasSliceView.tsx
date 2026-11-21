@@ -93,6 +93,7 @@ export function AtlasSliceView({
   real,
   contours = true,
   marks,
+  focal,
 }: {
   section: Section
   slice: AtlasSlice
@@ -107,6 +108,8 @@ export function AtlasSliceView({
   labels: boolean
   axes: [string, string, string, string]
   onPick: (id: string | null) => void
+  /** Free lesions on this cut (mm, cut plane) and, in point mode, a click that drops one. */
+  focal?: FocalOnCut
 }) {
   const l = useL()
   const t = useT()
@@ -124,13 +127,23 @@ export function AtlasSliceView({
   const font = Math.max(w, h) / 46
   const bar = w > 60 ? 10 : 5
 
-  const move = (e: React.PointerEvent) => {
-    const el = svg.current
-    const m = el?.getScreenCTM()
-    if (!el || !m) return
+  // Pointer → cut plane (a, b mm); the figure draws b upwards.
+  const toCut = (e: { clientX: number; clientY: number }): [number, number] | null => {
+    const m = svg.current?.getScreenCTM()
+    if (!m) return null
     const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse())
-    setCursor.current?.([p.x, -p.y])
+    return [p.x, -p.y]
   }
+  const move = (e: React.PointerEvent) => {
+    const c = toCut(e)
+    if (c) setCursor.current?.(c)
+  }
+  const placing = !!focal?.onPlace
+  // What the active lesion takes in on the atlas itself: the share of the disc in each region of the cut.
+  const activeDisc = focal?.discs.find((d) => d.active)
+  // Keyed on the numbers: the disc object is new on every render (hovering a region re-renders the figure).
+  const [da, db, dr] = activeDisc ? [activeDisc.a, activeDisc.b, activeDisc.r] : [0, 0, 0]
+  const under = useMemo(() => (dr > 0 ? regionsUnder(slice.regions, { a: da, b: db, r: dr }) : []), [da, db, dr, slice.regions])
   const hovered = hover ? slice.regions.find((r) => r.part.id === hover) : undefined
   const ordered = slice.regions
   const showNames = labels && (!real || contours)
@@ -152,11 +165,18 @@ export function AtlasSliceView({
     <div className="as-wrap">
       <svg
         ref={svg}
-        className="sv-svg as-svg"
         viewBox={vb}
         onPointerMove={move}
         onPointerLeave={() => setCursor.current?.(null)}
-        onClick={() => onPick(null)}
+        onClick={(e) => {
+          const c = placing ? toCut(e) : null
+          if (c) {
+            // Not a tap on empty space (ZoomPane would go full screen).
+            e.stopPropagation()
+            focal!.onPlace!(c[0], c[1])
+          } else onPick(null)
+        }}
+        className={`sv-svg as-svg ${placing ? 'placing' : ''}`}
         role="img"
         aria-label={section.code}
       >
@@ -193,6 +213,7 @@ export function AtlasSliceView({
                   onPointerEnter={() => setHover(r.part.id)}
                   onPointerLeave={() => setHover(null)}
                   onClick={(e) => {
+                    if (placing) return
                     e.stopPropagation()
                     onPick(r.part.id)
                   }}
@@ -211,6 +232,7 @@ export function AtlasSliceView({
                 onPointerEnter={() => setHover(r.part.id)}
                 onPointerLeave={() => setHover(null)}
                 onClick={(e) => {
+                  if (placing) return
                   e.stopPropagation()
                   onPick(r.part.id)
                 }}
@@ -231,6 +253,7 @@ export function AtlasSliceView({
                 onPointerEnter={() => setHover(b.id)}
                 onPointerLeave={() => setHover(null)}
                 onClick={(e) => {
+                  if (placing) return
                   e.stopPropagation()
                   onPick(b.id)
                 }}
@@ -248,6 +271,15 @@ export function AtlasSliceView({
               </g>
             )
           })}
+          {focal?.discs.map((d) => (
+            <g key={`f-${d.n}`} className={`as-focus ${d.active ? 'active' : ''} ${d.gd ? 'gd' : ''}`}>
+              <circle cx={d.a} cy={-d.b} r={d.r} vectorEffect="non-scaling-stroke" />
+              <circle className="pin" cx={d.a} cy={-d.b} r={font * 0.62} vectorEffect="non-scaling-stroke" />
+              <text x={d.a} y={-d.b} fontSize={font * 0.8} textAnchor="middle" dominantBaseline="central">
+                {d.n}
+              </text>
+            </g>
+          ))}
         </g>
         <rect className="as-frame" x={x0} y={-y1} width={w} height={h} rx={Math.min(w, h) * 0.06} vectorEffect="non-scaling-stroke" />
         <text className="as-axis" x={x0 + w / 2} y={-y1 - pad * 0.35} fontSize={font} textAnchor="middle">
@@ -279,7 +311,15 @@ export function AtlasSliceView({
         </p>
       )}
       <div className="as-readout">
-        {hovered ? (
+        {under.length > 0 && !hovered ? (
+          <span className="as-under">
+            <b>{t.asUnder}</b>{' '}
+            {under
+              .slice(0, 6)
+              .map((u) => `${short(l(u.part.name))} ${Math.round(u.share * 100)}%`)
+              .join(' · ')}
+          </span>
+        ) : hovered ? (
           <>
             <b>{l(hovered.part.name)}</b>
             <span>
@@ -294,6 +334,40 @@ export function AtlasSliceView({
       </div>
     </div>
   )
+}
+
+/** Free lesions drawn on the cut (centre and radius in mm on the cut plane). */
+export interface FocalOnCut {
+  discs: { a: number; b: number; r: number; n: number; active: boolean; gd?: boolean }[]
+  onPlace?: (a: number, b: number) => void
+}
+
+/** Even-odd: inside a region whose outline may have holes. */
+function inLoops(loops: [number, number][][], x: number, y: number) {
+  let c = false
+  for (const l of loops)
+    for (let i = 0, j = l.length - 1; i < l.length; j = i++) {
+      const [xi, yi] = l[i],
+        [xj, yj] = l[j]
+      if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) c = !c
+    }
+  return c
+}
+
+/** Atlas regions under a disc, by the share of the disc (a grid over it) each covers. Finer layers overlap coarser ones, so shares need not sum to 1. */
+function regionsUnder(regions: SliceRegion[], d: { a: number; b: number; r: number }) {
+  const pts: [number, number][] = []
+  const n = 15
+  for (let i = 0; i < n; i++)
+    for (let j = 0; j < n; j++) {
+      const x = d.a - d.r + ((i + 0.5) * 2 * d.r) / n
+      const y = d.b - d.r + ((j + 0.5) * 2 * d.r) / n
+      if ((x - d.a) ** 2 + (y - d.b) ** 2 <= d.r * d.r) pts.push([x, y])
+    }
+  return regions
+    .map((r) => ({ part: r.part, share: pts.filter(([x, y]) => inLoops(r.loops, x, y)).length / pts.length }))
+    .filter((u) => u.share >= 0.05)
+    .sort((a, b) => b.share - a.share)
 }
 
 /** The MNI coordinate under the pointer: its own state, so a pointer move repaints one line. */

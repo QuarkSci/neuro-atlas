@@ -69,8 +69,8 @@ const TX = {
   byZone: { en: 'Territory', uz: 'Hudud' },
   byPoint: { en: 'Point', uz: 'Nuqta' },
   placeHint: {
-    en: 'Tap anywhere on the plate to drop a lesion there; tap again to move it.',
-    uz: "O'choq qo'yish uchun plastinkaning istalgan joyini bosing; boshqa joyni bossangiz o'choq o'sha yerga ko'chadi.",
+    en: 'Tap anywhere on the plate — the scheme, the real slice or the atlas cut — to drop a lesion there; tap again to move it.',
+    uz: "O'choq qo'yish uchun plastinkaning istalgan joyini bosing — sxemada, real kesimda yoki atlasda; boshqa joyni bossangiz o'choq o'sha yerga ko'chadi.",
   },
   radius: { en: 'Radius', uz: 'Radius' },
   add: { en: 'Another lesion', uz: "Yana o'choq" },

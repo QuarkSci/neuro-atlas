@@ -947,6 +947,23 @@ Foydalanuvchi: "nima ustida bo'lsak shuni oxirgi max darajaga olib chiq" → erk
 - Tekshiruv: B5 `cst-ic` lakunasi → CST po'stloqdan aynan sharga qadar oqadi, pastda qorong'i (screenshot); TS keysi
   3D (4 qadam); eski `lesion:pons:L:medial` darsi o'zgarishsiz; McDonald xulosasi; audit-lesions 0; tsc; build.
 
+### 5.3-3g — Real kesim va atlasda o'choq qo'yish (2026-11-21)
+
+- `lesionFocal.ts`: `cutMatrix(plate)` (affin yoki quti — ikkalasi ham 2×3), `plateToCut()` va teskarisi `cutToPlate()`;
+  `focalMni` endi `plateToCut` + ramka.
+- `AtlasSliceView` `focal` prop (`FocalOnCut`): disklar kesim tekisligida HAQIQIY mm radiusda (raqamli nishon, Gd+ sariq,
+  faol bo'lmagani xira); Nuqta rejimida bosish → (a, b) → `cutToPlate` → `placeFocus` (sxemadagi bilan bir xil o'choq:
+  surish, "Yana o'choq", vaqt, McDonald, 3D). Soha bosish o'choq rejimida tanlamaydi; `stopPropagation` — ZoomPane to'liq
+  ekranga o'tmaydi. Faqat `cutSec === section` (T2/G4 o'rinbosar kesimida emas).
+- "O'choq ostida (atlas)": faol disk ustidagi 15×15 to'r nuqtalarining har bir atlas sohasi (`inLoops`, even-odd)
+  ichidagi ulushi ≥5% — sxema hisobiga (`focalOn`) qarshi mustaqil tekshiruv. Qatlamlar ustma-ust, yig'indi 1 emas.
+  Memo raqamlar bo'yicha (hover qayta chizishda qayta hisoblanmaydi).
+- Tekshiruv: B5 real kesim (BigBrain) bosish → ichki kapsula 81%, talamus 17%; sxemada o'sha o'choq kapsula tizzasi
+  yonida (B5 qoldig'i ~6 mm). K1 atlas: chap ko'prik asosi → "ko'prikning bazilyar qismi 100%", CST o'ng tanada.
+  audit-lesions 0, tsc, build.
+- QOLDI / PhD: sxema va atlas ostidagi tuzilmalar farq qilsa ogohlantirish; atlas sohalaridan bevosita yo'l belgilari
+  (JHU tolalari → yo'llar); PPMS; T2/FLAIR.
+
 ### PERF-1 — Real kesimda qotish (2026-11-19)
 
 - Foydalanuvchi: "real suratda harakat juda kech, interfeys qotib ishlavotti". `scripts/perf-real.mjs` (CDP
