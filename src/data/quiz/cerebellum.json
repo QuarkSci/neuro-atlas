@@ -10,20 +10,20 @@
     },
     "options": [
       {
-        "en": "Flocculonodular lobe (lobule X — flocculus and nodulus), separated by the posterolateral fissure",
-        "uz": "Flokkulonodulyar bo'lak (X bo'lakcha — flokkulus va nodulus), orqa-lateral yoriq bilan ajralgan"
+        "en": "Flocculonodular lobe (lobule X — flocculus and nodulus)",
+        "uz": "Flokkulonodulyar bo'lak (X bo'lakcha — flokkulus va nodulus)"
       },
       {
-        "en": "Anterior lobe (lobules I–V), separated from the posterior lobe by the primary fissure",
-        "uz": "Oldingi bo'lak (I–V bo'lakchalar), orqa bo'lakdan birlamchi yoriq bilan ajralgan"
+        "en": "Anterior lobe (lobules I–V, rostral to the primary fissure)",
+        "uz": "Oldingi bo'lak (I–V bo'lakchalar, birlamchi yoriqdan oldinda)"
       },
       {
-        "en": "Lateral posterior lobe hemispheres (Crus I and Crus II / neocerebellum)",
-        "uz": "Orqa bo'lak lateral yarimsharlari (Crus I va Crus II / neoserebellum)"
+        "en": "Lateral posterior lobe hemispheres (Crus I and Crus II)",
+        "uz": "Orqa bo'lak lateral yarimsharlari (Crus I va Crus II)"
       },
       {
-        "en": "Cerebellar tonsils (lobule IX) on the inferior vermian aspect",
-        "uz": "Pastki chuvalchang yuzasidagi miyacha bodomchalari (IX bo'lakcha)"
+        "en": "Cerebellar tonsils (lobule IX on the inferior vermian aspect)",
+        "uz": "Miyacha bodomchalari (pastki chuvalchang yonidagi IX bo'lakcha)"
       }
     ],
     "answer": 0,
@@ -59,16 +59,16 @@
         "uz": "Birlamchi yoriq (fissura prima)"
       },
       {
-        "en": "Posterolateral fissure",
+        "en": "Posterolateral fissure (fissura posterolateralis)",
         "uz": "Orqa-lateral yoriq (fissura posterolateralis)"
       },
       {
-        "en": "Horizontal fissure (splitting Crus I and Crus II)",
-        "uz": "Gorizontal yoriq (Crus I va Crus II ni ajratuvchi)"
+        "en": "Horizontal fissure (between Crus I and Crus II)",
+        "uz": "Gorizontal yoriq (Crus I va Crus II orasida)"
       },
       {
-        "en": "Retrotonsillar fissure",
-        "uz": "Retrotonsillyar yoriq"
+        "en": "Retrotonsillar fissure (dorsal to lobule IX)",
+        "uz": "Retrotonsillyar yoriq (IX bo'lakcha orqasida)"
       }
     ],
     "answer": 0,
@@ -144,20 +144,20 @@
     },
     "options": [
       {
-        "en": "Purkinje cells — purely inhibitory (GABAergic) projections onto the deep cerebellar and vestibular nuclei",
-        "uz": "Purkine hujayralari — chuqur miyacha va vestibulyar yadrolarga sof tormozlovchi (GAMK-ergik) proyeksiyalar"
+        "en": "Purkinje cells — purely inhibitory (GABAergic) projections to deep nuclei",
+        "uz": "Purkine hujayralari — chuqur yadrolarga sof tormozlovchi (GAMK-ergik) chiqish"
       },
       {
-        "en": "Granule cells — excitatory (glutamatergic) axons leaving via the superior cerebellar peduncle",
-        "uz": "Donador hujayralar — ustki miyacha oyoqchasi orqali chiquvchi qo'zg'atuvchi (glutamatergik) aksonlar"
+        "en": "Granule cells — excitatory (glutamatergic) axons leaving via the superior peduncle",
+        "uz": "Donador hujayralar — ustki oyoqcha orqali chiquvchi qo'zg'atuvchi (glutamatergik) aksonlar"
       },
       {
         "en": "Basket and stellate cells — excitatory projections directly to the motor thalamus",
-        "uz": "Savatcha va yulduzsimon hujayralar — motor talamusga to'g'ridan-to'g'ri qo'zg'atuvchi proyeksiyalar"
+        "uz": "Savatcha va yulduzsimon hujayralar — motor talamusga bevosita qo'zg'atuvchi proyeksiyalar"
       },
       {
-        "en": "Golgi cells — cholinergic projections to the inferior olivary nucleus",
-        "uz": "Golji hujayralari — pastki oliva yadrosiga xolinergik proyeksiyalar"
+        "en": "Golgi cells — inhibitory (glycinergic) projections to the inferior olivary nucleus",
+        "uz": "Golji hujayralari — pastki oliva yadrosiga tormozlovchi (glitsinergik) proyeksiyalar"
       }
     ],
     "answer": 0,
@@ -197,7 +197,7 @@
         "uz": "Pastki miyacha oyoqchasi (arqonsimon va yukstarestiform tanalar)"
       },
       {
-        "en": "Superior medullary velum",
+        "en": "Superior medullary velum (velum medullare superius)",
         "uz": "Ustki miya chodiri (velum medullare superius)"
       }
     ],
@@ -235,17 +235,17 @@
       },
       {
         "en": "Inferior cerebellar peduncle (restiform body)",
-        "uz": "Pastki miyacha oyoqchasi (arqonsimon tana)"
+        "uz": "Pastki miyacha oyoqchasi (corpus restiforme)"
       },
       {
-        "en": "Cerebral peduncle (crus cerebri)",
-        "uz": "Miya oyoqchasi (crus cerebri)"
+        "en": "Ventral cerebral peduncle (crus cerebri)",
+        "uz": "Ventral miya oyoqchasi (crus cerebri)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The superior cerebellar peduncle (SCP / brachium conjunctivum) forms the principal efferent outflow of the cerebellum. Originating mainly from the dentate, emboliform, and globose nuclei, its fibres ascend in the dorsolateral pontine roof and decussate completely at the caudal midbrain (inferior colliculus level, O1) to reach the contralateral red nucleus and VLp (Vim) thalamus.",
-      "uz": "Ustki miyacha oyoqchasi (SCP / brachium conjunctivum) miyachaning asosiy efferent chiqish yo'lidir. Asosan tishsimon, tiqinsimon va sharsimon yadrolardan boshlanib, uning tolalari ko'prik tomining dorsolateral qismida ko'tariladi va kaudal o'rta miyada (pastki tepaliklar sathi, O1) to'liq kesishib, qarama-qarshi qizil yadro hamda talamusning VLp (Vim) yadrosiga boradi."
+      "en": "The superior cerebellar peduncle (SCP / brachium conjunctivum) forms the principal efferent outflow of the cerebellum. Originating mainly from the dentate, emboliform, and globose nuclei, its fibres ascend in the dorsolateral pontine roof and decussate completely at the caudal midbrain (inferior colliculus level, plate O1) to reach the contralateral red nucleus and VLp (Vim) thalamus.",
+      "uz": "Ustki miyacha oyoqchasi (SCP / brachium conjunctivum) miyachaning asosiy efferent chiqish yo'lidir. Asosan tishsimon, tiqinsimon va sharsimon yadrolardan boshlanib, uning tolalari ko'prik tomining dorsolateral qismida ko'tariladi va kaudal o'rta miyada (pastki tepaliklar sathi, O1 plastinkasi) to'liq kesishib, qarama-qarshi qizil yadro hamda talamusning VLp (Vim) yadrosiga boradi."
     },
     "refs": ["bs-superior-cerebellar-peduncle", "cb-dentate-nucleus", "scp", "scp-dec"],
     "plate": "cerebellum-deep-nuclei",
@@ -271,26 +271,26 @@
     },
     "options": [
       {
-        "en": "Double crossing: the right cerebellum projects across the SCP decussation to the LEFT thalamus/motor cortex, whose corticospinal tract then crosses BACK at the pyramidal decussation to the RIGHT spinal cord",
-        "uz": "Ikki marta kesishish: o'ng miyacha SCP kesishmasi orqali CHAP talamus/motor po'stloqqa boradi, u yerdan tushuvchi kortikospinal yo'l esa piramida kesishmasida QAYTA O'NG orqa miyaga o'tadi"
+        "en": "Double crossing: dentatothalamic fibres cross in the midbrain, and corticospinal fibres cross back in the medulla",
+        "uz": "Ikki marta kesishish: dentatotalamik tolalar o'rta miyada, kortikospinal tolalar esa uzunchoq miyada qayta kesishadi"
       },
       {
-        "en": "Neither the dentatothalamic tract nor the lateral corticospinal tract crosses the midline",
-        "uz": "Na dentatotalamik yo'l, na lateral kortikospinal yo'l o'rta chiziqni kesib o'tmaydi"
+        "en": "Uncrossed loop: neither the dentatothalamic tract nor the lateral corticospinal tract decussates across the midline",
+        "uz": "Kesishmagan halqa: na dentatotalamik yo'l, na lateral kortikospinal yo'l o'rta chiziqni kesib o'tmaydi"
       },
       {
-        "en": "Purkinje cells send direct uncrossed axons down the spinal cord to alpha motor neurons",
-        "uz": "Purkine hujayralari orqa miyadagi alfa-motoneyronlarga to'g'ridan-to'g'ri kesishmagan aksonlar yuboradi"
+        "en": "Direct spinal output: right Purkinje cells send uncrossed axons directly down the cord to right alpha motor neurons",
+        "uz": "Bevosita spinal chiqish: o'ng Purkine hujayralari o'ng alfa-motoneyronlarga kesishmagan aksonlarni to'g'ridan-to'g'ri yuboradi"
       },
       {
-        "en": "Spinocerebellar inputs from the left body exclusively control the right limbs",
-        "uz": "Chap tanadan keluvchi spinoserebellyar signallar faqat o'ng oyoq-qo'llarni boshqaradi"
+        "en": "Single pontine crossing: corticopontine fibres cross once in the pons while all cerebellar efferents stay ipsilateral",
+        "uz": "Yagona ko'prik kesishmasi: kortikopontin tolalar ko'prikda bir marta kesishadi, barcha miyacha efferentlari esa ipsilateral qoladi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The cerebellum controls the ipsilateral body because of a 'double decussation': (1) ascending dentatothalamic fibres cross at the superior cerebellar peduncle decussation in the caudal midbrain to influence the contralateral motor cortex (and red nucleus), and (2) the descending lateral corticospinal (and rubrospinal) tracts cross back across the midline to innervate motor neurons on the original side.",
-      "uz": "Miyacha tananing o'z tomonini (ipsilateral) 'ikki marta kesishish' tufayli boshqaradi: (1) ko'tariluvchi dentatotalamik tolalar kaudal o'rta miyadagi ustki miyacha oyoqchasi kesishmasida qarama-qarshi motor po'stloqqa (va qizil yadroga) o'tadi, va (2) tushuvchi lateral kortikospinal (hamda rubrospinal) yo'llar o'rta chiziqni qayta kesib o'tib, dastlabki tomondagi motoneyronlarni innervatsiya qiladi."
+      "en": "The cerebellum controls the ipsilateral body because of a 'double decussation': (1) ascending dentatothalamic fibres from the right cerebellum cross at the superior cerebellar peduncle decussation in the caudal midbrain to influence the left thalamus, motor cortex, and red nucleus, and (2) the descending lateral corticospinal (and rubrospinal) tracts cross back across the midline at the pyramidal decussation to innervate motor neurons on the right side.",
+      "uz": "Miyacha tananing o'z tomonini (ipsilateral) 'ikki marta kesishish' tufayli boshqaradi: (1) o'ng miyachadan ko'tariluvchi dentatotalamik tolalar kaudal o'rta miyadagi ustki miyacha oyoqchasi kesishmasida chap talamus, motor po'stloq va qizil yadroga o'tadi, va (2) tushuvchi lateral kortikospinal (hamda rubrospinal) yo'llar piramida kesishmasida o'rta chiziqni qayta kesib o'tib, o'ng tomondagi motoneyronlarni innervatsiya qiladi."
     },
     "refs": ["cerebellum", "cb-dentate-nucleus", "bs-superior-cerebellar-peduncle", "scp-dec"],
     "plate": "midbrain-inferior-colliculus",
@@ -312,26 +312,26 @@
     },
     "options": [
       {
-        "en": "The branching medullary core of cerebellar white matter extending into the folia and housing the deep cerebellar nuclei",
-        "uz": "Miyacha bargchalariga (folia) shoxlanib kiruvchi va ichida chuqur yadrolarni saqlovchi miyacha oq moddasi o'zagi"
+        "en": "The branching medullary core of cerebellar white matter extending into the folia",
+        "uz": "Miyacha bargchalariga (folia) shoxlanib kiruvchi markaziy oq modda o'zagi"
       },
       {
-        "en": "The choroid plexus vascular tuft of the fourth ventricle roof",
-        "uz": "To'rtinchi qorincha tomidagi xoroid chigal tomir tutami"
+        "en": "The choroid plexus vascular tuft lining the inferior roof of the fourth ventricle",
+        "uz": "To'rtinchi qorincha pastki tomini qoplovchi xoroid chigal tomir tutami"
       },
       {
-        "en": "The branching dendritic tree of a single Purkinje cell viewed with the naked eye",
-        "uz": "Bitta Purkine hujayrasining oddiy ko'z bilan ko'rinadigan shoxlangan dendrit daraxti"
+        "en": "The flattened dendritic tree of a single Purkinje cell in the molecular layer",
+        "uz": "Molekulyar qavatdagi bitta Purkine hujayrasining yassilangan dendrit daraxti"
       },
       {
-        "en": "The arterial branches of the posterior inferior cerebellar artery on the pial surface",
-        "uz": "Orqa pastki miyacha arteriyasining yumshoq parda yuzasidagi shoxlari"
+        "en": "The pial arterial arborization of the posterior inferior cerebellar artery",
+        "uz": "Orqa pastki miyacha arteriyasining yumshoq parda yuzasidagi shoxlanishi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "On a sagittal cut through the vermis, the central white matter (corpus medullare / cb-wm) branches into primary and secondary laminae inside the grey-matter folia, creating a fern- or tree-like silhouette historically named the arbor vitae ('tree of life').",
-      "uz": "Chuvalchang orqali o'tgan sagittal kesimda markaziy oq modda (corpus medullare / cb-wm) kulrang modda bargchalari (folia) ichiga birlamchi va ikkilamchi plastinkalar bo'lib shoxlanadi va tarixan 'arbor vitae' ('hayot daraxti') deb atalgan daraxtsimon siluetni hosil qiladi."
+      "en": "On a sagittal cut through the vermis, the central white matter (corpus medullare, housing the deep cerebellar nuclei) branches into primary and secondary laminae inside the grey-matter folia, creating a fern- or tree-like silhouette historically named the arbor vitae ('tree of life').",
+      "uz": "Chuvalchang orqali o'tgan sagittal kesimda markaziy oq modda (corpus medullare, ichida chuqur yadrolarni saqlaydi) kulrang modda bargchalari (folia) ichiga birlamchi va ikkilamchi plastinkalar bo'lib shoxlanadi va tarixan 'arbor vitae' ('hayot daraxti') deb atalgan daraxtsimon siluetni hosil qiladi."
     },
     "refs": ["cerebellum", "cb-wm", "vermis"],
     "plate": "cerebellum-deep-nuclei",
@@ -348,30 +348,30 @@
     "topic": "cerebellum",
     "type": "mcq",
     "q": {
-      "en": "Which functional division of the cerebellum (spinocerebellum / paleocerebellum) occupies the vermis and paravermal (intermediate) zone and receives continuous somatosensory feedback from the spinal cord to adjust ongoing posture and limb movement?",
-      "uz": "Miyachaning qaysi funksional bo'limi (spinoserebellum / paleoserebellum) chuvalchang va paravermal (oraliq) zonani egallab, davom etayotgan tana holati va qo'l-oyoq harakatlarini to'g'rilash uchun orqa miyadan uzluksiz somatosensor qayta aloqa oladi?"
+      "en": "Which functional division of the cerebellum occupies the vermis and paravermal (intermediate) zone and receives continuous somatosensory feedback from the spinal cord to adjust posture and ongoing limb movement?",
+      "uz": "Miyachaning qaysi funksional bo'limi chuvalchang va paravermal (oraliq) zonani egallab, tana holati va davom etayotgan qo'l-oyoq harakatlarini to'g'rilash uchun orqa miyadan uzluksiz somatosensor qayta aloqa oladi?"
     },
     "options": [
       {
-        "en": "Spinocerebellum — projecting via the fastigial (vermis) and interposed/globose-emboliform (paravermis) nuclei",
-        "uz": "Spinoserebellum — cho'qqi (chuvalchang) va oraliq/sharsimon-tiqinsimon (paravermis) yadrolar orqali proyeksiya beruvchi bo'lim"
+        "en": "Spinocerebellum (paleocerebellum) — projecting via the fastigial and interposed nuclei",
+        "uz": "Spinoserebellum (paleoserebellum) — cho'qqi va oraliq yadrolar orqali proyeksiya beradi"
       },
       {
-        "en": "Cerebrocerebellum — lateral hemispheres (Crus I/II) projecting via the dentate nucleus for motor planning and cognition",
-        "uz": "Serebroserebellum — harakatni rejalashtirish va kognitsiya uchun tishsimon yadro orqali proyeksiya beruvchi lateral yarimsharlar (Crus I/II)"
+        "en": "Cerebrocerebellum (neocerebellum) — lateral hemispheres projecting via the dentate nucleus",
+        "uz": "Serebroserebellum (neoserebellum) — tishsimon yadro orqali proyeksiya beruvchi yarimsharlar"
       },
       {
-        "en": "Vestibulocerebellum — flocculonodular lobe (lobule X) projecting directly to vestibular nuclei",
-        "uz": "Vestibuloserebellum — vestibulyar yadrolarga bevosita proyeksiya beruvchi flokkulonodulyar bo'lak (X bo'lakcha)"
+        "en": "Vestibulocerebellum (archicerebellum) — flocculonodular lobe projecting to vestibular nuclei",
+        "uz": "Vestibuloserebellum (arxiserebellum) — vestibulyar yadrolarga chiquvchi flokkulonodulyar bo'lak"
       },
       {
-        "en": "Pontocerebellar tegmentum",
-        "uz": "Pontoserebellyar tegmentum"
+        "en": "Pontocerebellum — posterior lobe Crus I/II projecting via the middle cerebellar peduncle",
+        "uz": "Pontoserebellum — o'rta miyacha oyoqchasi orqali proyeksiya beruvchi orqa bo'lak Crus I/II"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The spinocerebellum (paleocerebellum) comprises the midline vermis (controlling axial/proximal musculature via the fastigial nucleus) and the adjacent intermediate/paravermal cortex (controlling distal limb execution via the interposed [globose + emboliform] nuclei), heavily represented in the anterior lobe (I–V) and lobule VIII.",
+      "en": "The spinocerebellum (paleocerebellum) comprises the midline vermis (controlling axial and proximal musculature via the fastigial nucleus) and the adjacent intermediate/paravermal cortex (controlling distal limb execution via the interposed [globose + emboliform] nuclei), heavily represented in the anterior lobe (I–V) and lobule VIII.",
       "uz": "Spinoserebellum (paleoserebellum) o'rta chiziqdagi chuvalchang (cho'qqi yadrosi orqali tana o'qi va proksimal mushaklarni boshqaradi) hamda unga tutash oraliq/paravermal po'stloqdan (oraliq [sharsimon + tiqinsimon] yadrolar orqali distal oyoq-qo'l harakatlarini boshqaradi) iborat bo'lib, oldingi bo'lakda (I–V) va VIII bo'lakchada keng namoyon bo'lgan."
     },
     "refs": ["cb-anterior-lobe", "cb-interposed-nucleus", "j-nfast", "vermis", "fast", "glob", "embol"],
@@ -393,31 +393,31 @@
     "topic": "cerebellum",
     "type": "mcq",
     "q": {
-      "en": "Which is the largest and phylogenetically newest division of the human cerebellum (cerebrocerebellum / neocerebellum), greatly expanded in the posterior lobe (lobules VI, Crus I, Crus II, VIIb) and projecting through the dentate nucleus?",
-      "uz": "Inson miyachasining orqa bo'lakda (VI, Crus I, Crus II, VIIb bo'lakchalar) keskin kengaygan va tishsimon yadro orqali proyeksiya beradigan eng yirik hamda filogenetik eng yangi bo'limi (serebroserebellum / neoserebellum) qaysi?"
+      "en": "Which is the largest and phylogenetically newest division of the human cerebellum, greatly expanded in the posterior lobe (lobules VI, Crus I, Crus II, VIIb) and projecting through the dentate nucleus?",
+      "uz": "Inson miyachasining orqa bo'lakda (VI, Crus I, Crus II, VIIb bo'lakchalar) keskin kengaygan va tishsimon yadro orqali proyeksiya beradigan eng yirik hamda filogenetik eng yangi bo'limi qaysi?"
     },
     "options": [
       {
-        "en": "Lateral cerebellar hemispheres (cerebrocerebellum), supporting motor planning, skilled coordination, and executive/language cognition",
-        "uz": "Miyachaning lateral yarimsharlari (serebroserebellum) — harakatni rejalashtirish, nozik koordinatsiya hamda ijrochi/nutq kognitsiyasini ta'minlaydi"
+        "en": "Lateral cerebellar hemispheres (cerebrocerebellum)",
+        "uz": "Lateral yarimsharlar (serebroserebellum / neoserebellum)"
       },
       {
-        "en": "Lingula and centralis (lobules I–III) of the anterior vermis",
-        "uz": "Oldingi chuvalchangning tilcha va markaziy bo'lakchalari (I–III bo'lakchalar)"
+        "en": "Anterior vermian lobules I–III (lingula and centralis)",
+        "uz": "Oldingi chuvalchangning I–III bo'lakchalari (lingula va centralis)"
       },
       {
-        "en": "Flocculus and nodulus (lobule X)",
-        "uz": "Flokkulus va nodulus (X bo'lakcha)"
+        "en": "Flocculonodular lobe (archicerebellum / lobule X)",
+        "uz": "Flokkulonodulyar bo'lak (arxiserebellum / X bo'lakcha)"
       },
       {
-        "en": "Fastigial-vestibular midline strip",
-        "uz": "Cho'qqi-vestibulyar o'rta chiziq tasmasi"
+        "en": "Paravermal intermediate strip (spinocerebellar zone)",
+        "uz": "Paravermal oraliq tasma (spinoserebellyar zona)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The cerebrocerebellum (neocerebellum) comprises the expansive lateral cerebellar hemispheres (especially lobules VI, Crus I, Crus II, and VIIb of the posterior lobe). It receives massive corticopontocerebellar input via the middle cerebellar peduncle and projects via the dentate nucleus and superior cerebellar peduncle to the motor, prefrontal, and parietal association thalamocortical loops.",
-      "uz": "Serebroserebellum (neoserebellum) miyachaning keng lateral yarimsharlaridan (ayniqsa orqa bo'lakning VI, Crus I, Crus II va VIIb bo'lakchalari) iborat. U o'rta miyacha oyoqchasi orqali katta hajmdagi kortikopontoserebellyar signallarni qabul qiladi va tishsimon yadro hamda ustki miyacha oyoqchasi orqali motor, prefrontal va parietal assotsiativ talamokortikal halqalarga proyeksiya beradi."
+      "en": "The cerebrocerebellum (neocerebellum) comprises the expansive lateral cerebellar hemispheres (especially lobules VI, Crus I, Crus II, and VIIb of the posterior lobe). It receives massive corticopontocerebellar input via the middle cerebellar peduncle and projects via the dentate nucleus and superior cerebellar peduncle to motor, prefrontal, and parietal association thalamocortical loops, supporting motor planning, skilled coordination, and executive/language cognition.",
+      "uz": "Serebroserebellum (neoserebellum) miyachaning keng lateral yarimsharlaridan (ayniqsa orqa bo'lakning VI, Crus I, Crus II va VIIb bo'lakchalari) iborat. U o'rta miyacha oyoqchasi orqali katta hajmdagi kortikopontoserebellyar signallarni qabul qiladi va tishsimon yadro hamda ustki miyacha oyoqchasi orqali motor, prefrontal va parietal assotsiativ talamokortikal halqalarga proyeksiya berib, harakatni rejalashtirish, nozik koordinatsiya va ijrochi/nutq kognitsiyasini ta'minlaydi."
     },
     "refs": ["cb-posterior-lobe", "cb-crus-i", "cb-crus-ii", "cb-dentate-nucleus", "hemi", "dent"],
     "plate": "cerebellum-deep-nuclei",
@@ -438,25 +438,25 @@
     "topic": "cerebellum",
     "type": "mcq",
     "q": {
-      "en": "How do climbing fibres and mossy fibres differ in their anatomical origin, termination layer, and physiological firing pattern on Purkinje cells?",
-      "uz": "Chirmashuvchi tolalar (climbing fibers) va yo'sinsimon tolalar (mossy fibers) o'zlarining anatomik manbasi, tugash qavati hamda Purkine hujayralaridagi fiziologik impuls berish xususiyati bilan qanday farq qiladi?"
+      "en": "How do climbing fibres and mossy fibres differ in their anatomical origin, synaptic target, and firing pattern on Purkinje cells?",
+      "uz": "Chirmashuvchi tolalar (climbing fibers) va yo'sinsimon tolalar (mossy fibers) o'zlarining anatomik manbasi, sinaptik nishoni hamda Purkine hujayralaridagi impuls berish xususiyati bilan qanday farq qiladi?"
     },
     "options": [
       {
-        "en": "Climbing fibres arise exclusively from the contralateral inferior olive (1:1 onto Purkinje dendrites → complex spikes); mossy fibres arise from spinal/pontine/vestibular nuclei (synapsing on granule cells → parallel fibres → simple spikes)",
-        "uz": "Chirmashuvchi tolalar faqat qarama-qarshi pastki olivadan chiqadi (Purkine dendritlarida 1:1 → murakkab spayklar); yo'sinsimon tolalar orqa miya/ko'prik/vestibulyar yadrolardan keladi (donador hujayralarda sinaps → parallel tolalar → oddiy spayklar)"
+        "en": "Climbing fibres: contralateral inferior olive → Purkinje dendrites (complex spikes); mossy fibres: spinal/pontine/vestibular → granule cells (simple spikes)",
+        "uz": "Chirmashuvchi: qarama-qarshi pastki oliva → Purkine dendritlari (murakkab spayklar); yo'sinsimon: orqa miya/ko'prik/vestibulyar → donador hujayralar (oddiy spayklar)"
       },
       {
-        "en": "Mossy fibres arise from the inferior olive and synapse directly on Purkinje cell somata, whereas climbing fibres arise from the pontine nuclei",
-        "uz": "Yo'sinsimon tolalar pastki olivadan chiqib, Purkine hujayralari tanasida sinaps hosil qiladi, chirmashuvchi tolalar esa ko'prik yadrolaridan boshlanadi"
+        "en": "Mossy fibres: contralateral inferior olive → Purkinje cell somata (complex spikes); climbing fibres: basilar pontine nuclei → granule cells (simple spikes)",
+        "uz": "Yo'sinsimon: qarama-qarshi pastki oliva → Purkine tanasi (murakkab spayklar); chirmashuvchi: bazilyar ko'prik yadrolari → donador hujayralar (oddiy spayklar)"
       },
       {
-        "en": "Both climbing and mossy fibres are GABAergic inhibitory afferents originating in the red nucleus",
-        "uz": "Chirmashuvchi va yo'sinsimon tolalarning ikkalasi ham qizil yadrodan boshlanuvchi GAMK-ergik tormozlovchi afferentlardir"
+        "en": "Climbing fibres: ipsilateral red nucleus → basket interneurons (GABAergic inhibition); mossy fibres: dentate nucleus → stellate cells (burst firing)",
+        "uz": "Chirmashuvchi: ipsilateral qizil yadro → savatcha interneyronlari (GAMK tormozlash); yo'sinsimon: tishsimon yadro → yulduzsimon hujayralar (tutamli razryad)"
       },
       {
-        "en": "Climbing fibres enter exclusively through the middle cerebellar peduncle, whereas mossy fibres enter only through the superior medullary velum",
-        "uz": "Chirmashuvchi tolalar faqat o'rta miyacha oyoqchasi orqali, yo'sinsimon tolalar esa faqat ustki miya chodiri orqali kiradi"
+        "en": "Climbing fibres: middle cerebellar peduncle → Golgi cells (tonic simple spikes); mossy fibres: superior medullary velum → Purkinje axons (complex spikes)",
+        "uz": "Chirmashuvchi: o'rta miyacha oyoqchasi → Golji hujayralari (tonik oddiy spayklar); yo'sinsimon: ustki miya chodiri → Purkine aksonlari (murakkab spayklar)"
       }
     ],
     "answer": 0,
@@ -480,30 +480,30 @@
     "type": "mcq",
     "q": {
       "en": "Contrast the anatomical trajectories of the dorsal spinocerebellar tract (DSCT) and ventral spinocerebellar tract (VSCT) on their way to the spinocerebellum:",
-      "uz": "Spinoserebellumga yo'naluvchi orqa (dorsal) spinoserebellyar yo'l (DSCT) va oldingi (ventral) spinoserebellyar yo'l (VSCT) anatomik yo'nalishlarini taqqoslang:"
+      "uz": "Spinoserebellumga yo'naluvchi dorsal spinoserebellyar yo'l (DSCT) va ventral spinoserebellyar yo'l (VSCT) anatomik yo'nalishlarini taqqoslang:"
     },
     "options": [
       {
-        "en": "DSCT arises from Clarke's column (T1–L2) and enters IPSILATERALLY via the ICP; VSCT crosses in the spinal cord, enters via the SCP, and crosses back inside the cerebellum ('double-crosser')",
-        "uz": "DSCT Klark ustunidan (T1–L2) boshlanib, ICP orqali IPSILATERAL kiradi; VSCT orqa miyada kesishadi, SCP orqali kiradi va miyacha ichida qayta kesishadi ('ikki marta kesishuvchi')"
+        "en": "DSCT ascends ipsilaterally via the ICP; VSCT crosses in the cord, enters via the SCP, and crosses back inside the cerebellum",
+        "uz": "DSCT ICP orqali ipsilateral kiradi; VSCT orqa miyada kesishadi, SCP orqali kiradi va miyacha ichida qayta kesishadi"
       },
       {
-        "en": "DSCT enters via the middle cerebellar peduncle, whereas VSCT enters via the juxtarestiform body",
-        "uz": "DSCT o'rta miyacha oyoqchasi orqali, VSCT esa yukstarestiform tana orqali kiradi"
+        "en": "DSCT crosses in the cord and enters via the MCP; VSCT ascends ipsilaterally from Clarke's column and enters via the ICP",
+        "uz": "DSCT orqa miyada kesishib MCP orqali kiradi; VSCT Klark ustunidan ipsilateral ko'tarilib ICP orqali kiradi"
       },
       {
-        "en": "Both DSCT and VSCT cross at the pyramidal decussation and terminate in the contralateral dentate nucleus",
-        "uz": "DSCT va VSCT ning ikkalasi ham piramida kesishmasida kesishib, qarama-qarshi tishsimon yadroda tugaydi"
+        "en": "Both DSCT and VSCT decussate at the medullary pyramidal decussation and terminate directly in the contralateral dentate nucleus",
+        "uz": "DSCT va VSCT ning ikkalasi ham uzunchoq miya piramida kesishmasida kesishib, qarama-qarshi tishsimon yadroda tugaydi"
       },
       {
-        "en": "DSCT conveys upper-limb proprioception from the cuneate nucleus, whereas VSCT conveys vestibular input",
-        "uz": "DSCT ponasimon yadrodan qo'l propriotsepsiyasini, VSCT esa vestibulyar signalni tashiydi"
+        "en": "DSCT enters via the juxtarestiform body for upper-limb proprioception; VSCT enters via the restiform body for vestibular input",
+        "uz": "DSCT qo'l propriotsepsiyasi uchun yukstarestiform tanadan; VSCT esa vestibulyar signal uchun arqonsimon tanadan kiradi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The dorsal spinocerebellar tract (DSCT) arises from Clarke's nucleus (T1–L2, lower limb/trunk muscle spindles), ascends uncrossed, and enters the cerebellum via the inferior cerebellar peduncle (ICP). The ventral spinocerebellar tract (VSCT, conveying spinal interneuron/Golgi tendon organ copy) crosses in the anterior white commissure of the cord, ascends to enter via the superior cerebellar peduncle (SCP), and crosses a second time within the cerebellar white matter so both tracts ultimately represent the ipsilateral body.",
-      "uz": "Dorsal spinoserebellyar yo'l (DSCT) Klark yadrosidan (T1–L2, oyoq va tana mushak dukchalari) boshlanib, kesishmasdan ko'tariladi va pastki miyacha oyoqchasi (ICP) orqali kiradi. Ventral spinoserebellyar yo'l (VSCT, orqa miya oraliq neyronlari/Golji pay reseptorlari nusxasi) orqa miyada oldingi oq bitishmada kesishadi, ustki miyacha oyoqchasi (SCP) orqali kiradi va miyacha oq moddasida ikkinchi marta kesishadi — natijada ikkala yo'l ham tananing o'z (ipsilateral) tomonini aks ettiradi."
+      "en": "The dorsal spinocerebellar tract (DSCT) arises from Clarke's column (T1–L2, lower limb and trunk muscle spindles), ascends uncrossed, and enters the cerebellum via the inferior cerebellar peduncle (ICP). The ventral spinocerebellar tract (VSCT, conveying spinal interneuron and Golgi tendon organ copy) crosses in the anterior white commissure of the cord, ascends to enter via the superior cerebellar peduncle (SCP), and crosses a second time within the cerebellar white matter ('double-crosser') so both tracts ultimately represent the ipsilateral body.",
+      "uz": "Dorsal spinoserebellyar yo'l (DSCT) Klark ustunidan (T1–L2, oyoq va tana mushak dukchalari) boshlanib, kesishmasdan ko'tariladi va pastki miyacha oyoqchasi (ICP) orqali kiradi. Ventral spinoserebellyar yo'l (VSCT, orqa miya oraliq neyronlari va Golji pay reseptorlari nusxasi) orqa miyada oldingi oq bitishmada kesishadi, ustki miyacha oyoqchasi (SCP) orqali kiradi va miyacha oq moddasida ikkinchi marta kesishadi ('ikki marta kesishuvchi') — natijada ikkala yo'l ham tananing o'z (ipsilateral) tomonini aks ettiradi."
     },
     "refs": ["bs-inferior-cerebellar-peduncle", "bs-superior-cerebellar-peduncle", "dsct", "vsct", "icp", "scp"],
     "plate": "medulla-rostral",
@@ -525,26 +525,26 @@
     },
     "options": [
       {
-        "en": "Via the cuneocerebellar tract — primary afferents ascend in the fasciculus cuneatus to the lateral (accessory) cuneate nucleus in the medulla, which projects ipsilaterally through the ICP",
-        "uz": "Kuneoserebellyar yo'l orqali — birlamchi tolalar ponasimon tutamda uzunchoq miyadagi lateral (qo'shimcha) ponasimon yadrogacha ko'tarilib, ICP orqali ipsilateral miyachaga kiradi"
+        "en": "Cuneocerebellar tract from the lateral (accessory) cuneate nucleus via the ipsilateral ICP",
+        "uz": "Lateral (qo'shimcha) ponasimon yadrodan ipsilateral ICP orqali chiquvchi kuneoserebellyar yo'l"
       },
       {
-        "en": "Via the medial lemniscus directly through the middle cerebellar peduncle",
-        "uz": "Medial qovuzloq orqali to'g'ridan-to'g'ri o'rta miyacha oyoqchasidan"
+        "en": "Medial lemniscus from the main cuneate nucleus crossing to enter the contralateral MCP",
+        "uz": "Asosiy ponasimon yadrodan kesishib qarama-qarshi MCP ga kiruvchi medial qovuzloq"
       },
       {
-        "en": "Via the central tegmental tract from the red nucleus",
-        "uz": "Qizil yadrodan markaziy tegmental yo'l orqali"
+        "en": "Rostral spinocerebellar fibres descending from the red nucleus in the central tegmental tract",
+        "uz": "Qizil yadrodan markaziy tegmental yo'l bo'ylab tushuvchi rostral spinoserebellyar tolalar"
       },
       {
-        "en": "Via the fasciculus gracilis to the fastigial nucleus",
-        "uz": "Nozik tutam orqali cho'qqi yadrosiga"
+        "en": "Fasciculus gracilis projecting uncrossed through the juxtarestiform body to the fastigial nucleus",
+        "uz": "Yukstarestiform tana orqali cho'qqi yadrosiga kesishmasdan boruvchi nozik tutam"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The lateral (external or accessory) cuneate nucleus (acn) in the dorsolateral medulla is the upper-limb homologue of Clarke's column. It receives C1–T5 proprioceptive afferents ascending in the cuneate fasciculus and sends uncrossed cuneocerebellar mossy fibres into the cerebellum via the inferior cerebellar peduncle (restiform body).",
-      "uz": "Dorsolateral uzunchoq miyadagi lateral (tashqi yoki qo'shimcha) ponasimon yadro (acn) Klark ustunining qo'l uchun gomologidir. U ponasimon tutamda ko'tariluvchi C1–T5 propriotseptiv tolalarni qabul qiladi va kesishmagan kuneoserebellyar yo'sinsimon tolalarni pastki miyacha oyoqchasi (arqonsimon tana) orqali miyachaga yuboradi."
+      "en": "The lateral (external or accessory) cuneate nucleus in the dorsolateral medulla is the upper-limb homologue of Clarke's column. It receives C1–T5 proprioceptive afferents ascending in the fasciculus cuneatus and sends uncrossed cuneocerebellar mossy fibres into the cerebellum via the inferior cerebellar peduncle (restiform body).",
+      "uz": "Dorsolateral uzunchoq miyadagi lateral (tashqi yoki qo'shimcha) ponasimon yadro Klark ustunining qo'l uchun gomologidir. U ponasimon tutamda ko'tariluvchi C1–T5 propriotseptiv tolalarni qabul qiladi va kesishmagan kuneoserebellyar yo'sinsimon tolalarni pastki miyacha oyoqchasi (arqonsimon tana) orqali miyachaga yuboradi."
     },
     "refs": ["acn", "icp", "bs-inferior-cerebellar-peduncle"],
     "plate": "medulla-olive",
@@ -561,31 +561,31 @@
     "topic": "cerebellum",
     "type": "mcq",
     "q": {
-      "en": "How are the two sensorimotor body representations (somatotopic homunculi) organized in the human cerebellar cortex according to probabilistic fMRI/MR mapping (Diedrichsen et al. 2009)?",
-      "uz": "Ehtimoliy fMRI/MR xaritalashga (Diedrichsen va boshq., 2009) ko'ra, inson miyacha po'stlog'idagi ikkita sensorimotor tana xaritasi (somatotopik gomunkuluslar) qayerda joylashgan?"
+      "en": "How are the two sensorimotor body representations (somatotopic homunculi) organized in the human cerebellar cortex according to probabilistic fMRI/MR mapping?",
+      "uz": "Ehtimoliy fMRI/MR xaritalashga ko'ra, inson miyacha po'stlog'idagi ikkita sensorimotor tana xaritasi (somatotopik gomunkuluslar) qayerda joylashgan?"
     },
     "options": [
       {
-        "en": "A primary inverted somatotopic map in the anterior lobe (lobules I–V extending into VI) and a secondary upright representation in lobule VIII of the inferior posterior lobe, separated by cognitive/association zones (Crus I/II)",
-        "uz": "Oldingi bo'lakda (VI ga o'tuvchi I–V bo'lakchalar) birlamchi teskari somatotopik xarita va pastki orqa bo'lakning VIII bo'lakchasida ikkilamchi to'g'ri xarita joylashib, ularning orasini kognitiv/assotsiativ zonalar (Crus I/II) ajratib turadi"
+        "en": "Inverted map in the anterior lobe (lobules I–VI) and upright map in lobule VIII, separated by Crus I/II",
+        "uz": "Oldingi bo'lakda (I–VI bo'lakchalar) teskari xarita va VIII bo'lakchada to'g'ri xarita, orasida Crus I/II"
       },
       {
-        "en": "A single motor homunculus restricted entirely to the flocculonodular lobe (lobule X)",
-        "uz": "Butunlay flokkulonodulyar bo'lakda (X bo'lakcha) joylashgan yagona motor gomunkulus"
+        "en": "A single upright motor homunculus restricted entirely to the flocculonodular lobe (lobule X) and tonsils",
+        "uz": "Butunlay flokkulonodulyar bo'lak (X bo'lakcha) va bodomchalarda joylashgan yagona to'g'ri motor xarita"
       },
       {
-        "en": "Left body in the right cerebellar hemisphere and right body in the left cerebellar hemisphere",
-        "uz": "Chap tana o'ng miyacha yarimsharida va o'ng tana chap miyacha yarimsharida"
+        "en": "Contralateral maps where the left body is represented in the right anterior lobe and right posterior lobe",
+        "uz": "Chap tana o'ng oldingi va o'ng orqa bo'laklarda ifodalangan kontralateral somatotopik xaritalar"
       },
       {
-        "en": "Motor representation exclusively in Crus I and Crus II, with cognition in lobules I–IV",
-        "uz": "Motor vakillik faqat Crus I va Crus II da, kognitsiya esa I–IV bo'lakchalarda"
+        "en": "Primary sensorimotor representation in Crus I and Crus II, with executive cognition confined to lobules I–IV",
+        "uz": "Birlamchi sensorimotor vakillik Crus I va Crus II da, ijrochi kognitsiya esa faqat I–IV bo'lakchalarda"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Human neuroimaging confirms two distinct ipsilateral sensorimotor body maps: an inverted map in the anterior lobe (leg in lobules I–IV, hand in V, face/lips extending into VI) and a second map in lobule VIII (VIIIa/VIIIb). Between them, the massive expansion of lobule VII (Crus I, Crus II, VIIb) connects with prefrontal and parietal association cortices rather than primary motor cortex.",
-      "uz": "Inson neyrovizualizatsiyasi ikkita alohida ipsilateral sensorimotor tana xaritasini tasdiqlaydi: oldingi bo'lakdagi teskari xarita (oyoq I–IV bo'lakchalarda, qo'l V da, yuz/lablar VI gacha davom etadi) va VIII bo'lakchadagi (VIIIa/VIIIb) ikkinchi xarita. Ularning orasida kengaygan VII bo'lakcha (Crus I, Crus II, VIIb) birlamchi motor po'stloq bilan emas, balki prefrontal va parietal assotsiativ po'stloq bilan bog'langan."
+      "en": "Human neuroimaging (Diedrichsen et al. 2009) confirms two distinct ipsilateral sensorimotor body maps: an inverted map in the anterior lobe (leg in lobules I–IV, hand in V, face/lips extending into VI) and a second upright map in lobule VIII (VIIIa/VIIIb). Between them, the massive expansion of lobule VII (Crus I, Crus II, VIIb) connects with prefrontal and parietal association cortices rather than primary motor cortex.",
+      "uz": "Inson neyrovizualizatsiyasi (Diedrichsen va boshq., 2009) ikkita alohida ipsilateral sensorimotor tana xaritasini tasdiqlaydi: oldingi bo'lakdagi teskari xarita (oyoq I–IV bo'lakchalarda, qo'l V da, yuz/lablar VI gacha davom etadi) va VIII bo'lakchadagi (VIIIa/VIIIb) ikkinchi to'g'ri xarita. Ularning orasida kengaygan VII bo'lakcha (Crus I, Crus II, VIIb) birlamchi motor po'stloq bilan emas, balki prefrontal va parietal assotsiativ po'stloq bilan bog'langan."
     },
     "refs": ["cb-anterior-lobe", "cb-lobules-i-iv", "cb-lobule-v", "cb-lobule-vi", "cb-crus-i", "cb-crus-ii", "cb-lobule-viiia", "cb-lobule-viiib"],
     "sources": [
@@ -610,26 +610,26 @@
     },
     "options": [
       {
-        "en": "Fastigial → vestibular nuclei & reticular formation; Interposed (globose/emboliform) → magnocellular red nucleus & VL thalamus; Dentate → parvocellular red nucleus & VLp (Vim) / VA thalamus",
-        "uz": "Cho'qqi (fastigii) → vestibulyar yadrolar va retikulyar formatsiya; Oraliq (sharsimon/tiqinsimon) → yirik hujayrali qizil yadro va VL talamus; Tishsimon (dentatus) → mayda hujayrali qizil yadro va VLp (Vim) / VA talamus"
+        "en": "Fastigial → vestibular/reticular; Interposed → magnocellular red nucleus & VL; Dentate → parvocellular red nucleus & VLp (Vim)",
+        "uz": "Cho'qqi → vestibulyar/retikulyar; Oraliq → yirik hujayrali qizil yadro va VL; Tishsimon → mayda hujayrali qizil yadro va VLp (Vim)"
       },
       {
-        "en": "Fastigial → prefrontal thalamus; Dentate → lateral vestibular nucleus; Interposed → Edinger–Westphal nucleus",
-        "uz": "Cho'qqi → prefrontal talamus; Tishsimon → lateral vestibulyar yadro; Oraliq → Edinger–Vestfal yadrosi"
+        "en": "Fastigial → prefrontal MD thalamus; Interposed → Edinger–Westphal & superior colliculus; Dentate → lateral vestibular nucleus",
+        "uz": "Cho'qqi → prefrontal MD talamus; Oraliq → Edinger–Vestfal va ustki tepalik; Tishsimon → lateral vestibulyar yadro"
       },
       {
-        "en": "All four deep nuclei project exclusively to the ipsilateral inferior olivary nucleus via the restiform body",
-        "uz": "To'rtta chuqur yadroning barchasi arqonsimon tana orqali faqat ipsilateral pastki oliva yadrosiga proyeksiya beradi"
+        "en": "Fastigial → contralateral inferior olive; Interposed → ipsilateral pontine nuclei; Dentate → direct spinal alpha motor neurons",
+        "uz": "Cho'qqi → qarama-qarshi pastki oliva; Oraliq → ipsilateral ko'prik yadrolari; Tishsimon → bevosita spinal alfa-motoneyronlar"
       },
       {
-        "en": "Dentate → direct monosynaptic projection to spinal alpha motor neurons",
-        "uz": "Tishsimon → orqa miya alfa-motoneyronlariga to'g'ridan-to'g'ri monosinaptik proyeksiya"
+        "en": "Fastigial → parvocellular red nucleus & Vim; Interposed → vestibular & reticular nuclei; Dentate → magnocellular red nucleus",
+        "uz": "Cho'qqi → mayda hujayrali qizil yadro va Vim; Oraliq → vestibulyar va retikulyar yadrolar; Tishsimon → yirik hujayrali qizil yadro"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Each longitudinal zone has a dedicated nuclear outflow: (1) medial vermis → fastigial nucleus → bilateral vestibular nuclei and pontomedullary reticular formation (via juxtarestiform body and uncinate fasciculus of Russell); (2) paravermis → interposed (globose + emboliform) nuclei → SCP → contralateral magnocellular red nucleus (rubrospinal) and VL thalamus; (3) lateral hemisphere → dentate nucleus → SCP → contralateral VLp/Vim thalamus (to motor/premotor/prefrontal cortex) and parvocellular red nucleus (to inferior olive).",
-      "uz": "Har bir bo'ylama zona o'z yadroviy chiqish yo'liga ega: (1) medial chuvalchang → cho'qqi yadrosi → ikki tomonlama vestibulyar yadrolar va pontomedullyar retikulyar formatsiya (yukstarestiform tana va Rasselning ilmoqsimon tutami orqali); (2) paravermis → oraliq (sharsimon + tiqinsimon) yadrolar → SCP → qarama-qarshi yirik hujayrali qizil yadro (rubrospinal) va VL talamus; (3) lateral yarimshar → tishsimon yadro → SCP → qarama-qarshi VLp/Vim talamus (motor/premotor/prefrontal po'stloqqa) va mayda hujayrali qizil yadro (pastki olivaga)."
+      "en": "Each longitudinal zone has a dedicated nuclear outflow: (1) medial vermis → fastigial nucleus → bilateral vestibular nuclei and pontomedullary reticular formation (via juxtarestiform body and uncinate fasciculus of Russell); (2) paravermis → interposed (globose + emboliform) nuclei → SCP → contralateral magnocellular red nucleus (rubrospinal) and VL thalamus; (3) lateral hemisphere → dentate nucleus → SCP → contralateral VLp/Vim (and VA) thalamus (to motor/premotor/prefrontal cortex) and parvocellular red nucleus (to inferior olive).",
+      "uz": "Har bir bo'ylama zona o'z yadroviy chiqish yo'liga ega: (1) medial chuvalchang → cho'qqi yadrosi → ikki tomonlama vestibulyar yadrolar va pontomedullyar retikulyar formatsiya (yukstarestiform tana va Rasselning ilmoqsimon tutami orqali); (2) paravermis → oraliq (sharsimon + tiqinsimon) yadrolar → SCP → qarama-qarshi yirik hujayrali qizil yadro (rubrospinal) va VL talamus; (3) lateral yarimshar → tishsimon yadro → SCP → qarama-qarshi VLp/Vim (va VA) talamus (motor/premotor/prefrontal po'stloqqa) va mayda hujayrali qizil yadro (pastki olivaga)."
     },
     "refs": ["cb-dentate-nucleus", "cb-interposed-nucleus", "j-nfast", "dent", "embol", "glob", "fast", "rn", "vn", "th-vl"],
     "plate": "cerebellum-deep-nuclei",
@@ -655,20 +655,20 @@
     },
     "options": [
       {
-        "en": "Posterior superior vermis — lobules VI and VII (declive, folium, and tuber)",
-        "uz": "Orqa ustki chuvalchang — VI va VII bo'lakchalar (declive, folium va tuber)"
+        "en": "Posterior superior vermis — lobules VI and VII (declive, folium, tuber)",
+        "uz": "Orqa ustki chuvalchang — VI va VII bo'lakchalar (declive, folium, tuber)"
       },
       {
-        "en": "Anterior vermis — lobules I–IV (lingula and centralis)",
-        "uz": "Oldingi chuvalchang — I–IV bo'lakchalar (lingula va centralis)"
+        "en": "Anterior superior vermis — lobules I–IV (lingula, centralis, culmen)",
+        "uz": "Oldingi ustki chuvalchang — I–IV bo'lakchalar (lingula, centralis, culmen)"
       },
       {
-        "en": "Lateral Crus II hemisphere",
-        "uz": "Lateral Crus II yarimshari"
+        "en": "Lateral posterior hemisphere — Crus I and Crus II (neocerebellar zone)",
+        "uz": "Lateral orqa yarimshar — Crus I va Crus II (neoserebellyar zona)"
       },
       {
-        "en": "Anterior lobe paravermal lobule V",
-        "uz": "Oldingi bo'lak paravermal V bo'lakchasi"
+        "en": "Inferior vermis and tonsils — lobules VIII and IX (pyramis and uvula)",
+        "uz": "Pastki chuvalchang va bodomchalar — VIII va IX bo'lakchalar (pyramis, uvula)"
       }
     ],
     "answer": 0,
@@ -700,26 +700,26 @@
     },
     "options": [
       {
-        "en": "Anterior superior vermis (lobules I–V) — causing a wide-based truncal and lower-limb gait ataxia with relative sparing of upper-limb finger-to-nose coordination and speech",
-        "uz": "Oldingi ustki chuvalchang (I–V bo'lakchalar) — qo'lning barmoq-burun koordinatsiyasi va nutq nisbatan saqlangan holda, keng qadamli tana va oyoq yurish ataksiyasini chaqiradi"
+        "en": "Anterior superior vermis (lobules I–V) — wide-based truncal and gait ataxia with relatively spared arms and speech",
+        "uz": "Oldingi ustki chuvalchang (I–V bo'lakchalar) — qo'l va nutq nisbatan saqlangan holda keng qadamli tana va yurish ataksiyasi"
       },
       {
-        "en": "Lateral posterior lobe (Crus I and Crus II) — causing isolated upper-limb intention tremor and dysarthria with normal gait",
-        "uz": "Lateral orqa bo'lak (Crus I va Crus II) — yurish normal qolgan holda faqat qo'l intension tremori va dizartriyani chaqiradi"
+        "en": "Lateral posterior lobe (Crus I and Crus II) — isolated upper-limb intention tremor and scanning dysarthria with normal gait",
+        "uz": "Lateral orqa bo'lak (Crus I va Crus II) — yurish normal qolgan holda yakka qo'l intension tremori va skanerlovchi dizartriya"
       },
       {
-        "en": "Flocculus (lobule X) — causing isolated bilateral sensorineural deafness",
-        "uz": "Flokkulus (X bo'lakcha) — faqat ikki tomonlama neyrosensor karlikni chaqiradi"
+        "en": "Flocculonodular lobe (lobule X) — bilateral sensorineural hearing loss and peripheral facial palsy with normal stance",
+        "uz": "Flokkulonodulyar bo'lak (X bo'lakcha) — turish barqaror qolgan holda ikki tomonlama neyrosensor karlik va yuz falaji"
       },
       {
-        "en": "Dentate nucleus — causing palatal myoclonus",
-        "uz": "Tishsimon yadro — tanglay mioklonusini chaqiradi"
+        "en": "Bilateral dentate nuclei and SCP — acute symptomatic palatal myoclonus and pendular nystagmus without gait ataxia",
+        "uz": "Ikki tomonlama tishsimon yadrolar va SCP — yurish ataksiyasisiz o'tkir simptomatik tanglay mioklonusi va mayatniksimon nistagm"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Alcoholic/nutritional cerebellar degeneration preferentially causes atrophy of the anterior superior vermis (lobules I–V), where the lower limbs and trunk are somatotopically represented in the inverted anterior-lobe map. Patients present with prominent wide-based stance and gait ataxia and heel-to-shin dysmetria, while upper-limb coordination and oculomotor/speech functions remain comparatively preserved.",
-      "uz": "Alkogolli/alimentar miyacha degeneratsiyasi asosan oldingi ustki chuvalchangning (I–V bo'lakchalar) atrofiyasini chaqiradi; oldingi bo'lakning teskari somatotopik xaritasida aynan shu joyda oyoqlar va tana gavdasi joylashgan. Bemorlarda keng qadamli turish va yurish ataksiyasi hamda tovon-boldir sinamasida dismetriya yaqqol namoyon bo'ladi, qo'l koordinatsiyasi va nutq esa nisbatan saqlanib qoladi."
+      "en": "Alcoholic/nutritional cerebellar degeneration preferentially causes atrophy of the anterior superior vermis (lobules I–V), where the lower limbs and trunk are somatotopically represented in the inverted anterior-lobe map. Patients present with prominent wide-based stance and gait ataxia and heel-to-shin dysmetria, while upper-limb finger-to-nose coordination and oculomotor/speech functions remain comparatively preserved.",
+      "uz": "Alkogolli/alimentar miyacha degeneratsiyasi asosan oldingi ustki chuvalchangning (I–V bo'lakchalar) atrofiyasini chaqiradi; oldingi bo'lakning teskari somatotopik xaritasida aynan shu joyda oyoqlar va tana gavdasi joylashgan. Bemorlarda keng qadamli turish va yurish ataksiyasi hamda tovon-boldir sinamasida dismetriya yaqqol namoyon bo'ladi, qo'lning barmoq-burun koordinatsiyasi va nutq esa nisbatan saqlanib qoladi."
     },
     "refs": ["cb-anterior-lobe", "cb-lobules-i-iv", "cb-lobule-v", "vermis"],
     "sources": [
@@ -744,20 +744,20 @@
     },
     "options": [
       {
-        "en": "SCA supplies the superior cerebellar surface, superior peduncle (SCP), and main bulk of the dentate nucleus; AICA supplies the anteroinferior surface, flocculus, and middle peduncle (MCP); PICA supplies the posteroinferior surface/vermis, tonsils (IX), and inferior peduncle (ICP)",
-        "uz": "SCA miyacha ustki yuzasi, ustki oyoqcha (SCP) va tishsimon yadroning asosiy qismini; AICA old-pastki yuza, flokkulus va o'rta oyoqchani (MCP); PICA orqa-pastki yuza/chuvalchang, bodomchalar (IX) va pastki oyoqchani (ICP) qon bilan ta'minlaydi"
+        "en": "SCA: superior surface, SCP, dentate; AICA: anteroinferior surface, flocculus, MCP; PICA: posteroinferior surface, tonsils, ICP",
+        "uz": "SCA: ustki yuza, SCP, tishsimon yadro; AICA: old-pastki yuza, flokkulus, MCP; PICA: orqa-pastki yuza, bodomchalar, ICP"
       },
       {
-        "en": "PICA supplies the entire superior lobe and SCP; SCA supplies only the cerebellar tonsils and medulla",
-        "uz": "PICA butun ustki bo'lak va SCP ni; SCA esa faqat miyacha bodomchalari va uzunchoq miyani qon bilan ta'minlaydi"
+        "en": "SCA: posteroinferior surface, tonsils, ICP; AICA: superior surface, SCP, dentate; PICA: anteroinferior surface, flocculus, MCP",
+        "uz": "SCA: orqa-pastki yuza, bodomchalar, ICP; AICA: ustki yuza, SCP, tishsimon yadro; PICA: old-pastki yuza, flokkulus, MCP"
       },
       {
-        "en": "All three cerebellar arteries arise directly from the internal carotid artery",
-        "uz": "Uchala miyacha arteriyasi ham bevosita ichki uyqu arteriyasidan chiqadi"
+        "en": "SCA: anterior lobe and MCP only; AICA: dentate nucleus and ICP only; PICA: flocculus, labyrinth, and superior cerebellar surface",
+        "uz": "SCA: faqat oldingi bo'lak va MCP; AICA: faqat tishsimon yadro va ICP; PICA: flokkulus, ichki quloq va ustki miyacha yuzasi"
       },
       {
-        "en": "AICA supplies the dentate nucleus exclusively without contributing to the middle cerebellar peduncle or inner ear",
-        "uz": "AICA o'rta miyacha oyoqchasi yoki ichki quloqqa shox bermasdan, faqat tishsimon yadroni ta'minlaydi"
+        "en": "SCA: superior vermis and ICP; AICA: entire posterior lobe and tonsils (IX); PICA: deep cerebellar nuclei, SCP, and basis pontis",
+        "uz": "SCA: ustki chuvalchang va ICP; AICA: butun orqa bo'lak va bodomchalar (IX); PICA: chuqur yadrolar, SCP va ko'prik asosi"
       }
     ],
     "answer": 0,
@@ -781,30 +781,30 @@
     "type": "mcq",
     "q": {
       "en": "Which cerebellar lobule forms the cerebellar tonsils on the ventromedial inferior surface, and why is an expansile posterior fossa mass a contraindication to lumbar puncture?",
-      "uz": "Pastki ventromedial yuzadagi miyacha bodomchalarini (tonsilla cerebelli) qaysi bo'lakcha hosil qiladi va nima uchun orqa kalla chuqurchasidagi hajmli hosila bel punksiyasi (lyumbal punksiya) uchun qarshi ko'rsatma hisoblanadi?"
+      "uz": "Pastki ventromedial yuzadagi miyacha bodomchalarini (tonsilla cerebelli) qaysi bo'lakcha hosil qiladi va nima uchun orqa kalla chuqurchasidagi hajmli hosila bel punksiyasi uchun qarshi ko'rsatma hisoblanadi?"
     },
     "options": [
       {
-        "en": "Hemispheric lobule IX (adjacent to the uvula) — lowering lumbar CSF pressure causes downward tonsillar herniation through the foramen magnum, compressing the medulla and cardiorespiratory centres",
-        "uz": "Yarimsharning IX bo'lakchasi (uvula yonida) — belda likvor bosimini tushirish bodomchalarning katta ensa teshigi orqali pastga ponasimon tiqilishiga va uzunchoq miyadagi yurak-nafas markazlarining ezilishiga olib keladi"
+        "en": "Lobule IX — lowering lumbar CSF pressure drives tonsillar herniation through the foramen magnum, compressing the medulla",
+        "uz": "IX bo'lakcha — belda likvor bosimini tushirish bodomchalarni katta ensa teshigiga tiqib, uzunchoq miyani ezib qo'yadi"
       },
       {
-        "en": "Lobule I (lingula) — herniating upward through the foramen of Monro",
-        "uz": "I bo'lakcha (tilcha) — Monro teshigi orqali yuqoriga churra hosil qiladi"
+        "en": "Lobule I (lingula) — lowering lumbar CSF pressure pulls the anterior vermis upward through the tentorial notch into the midbrain",
+        "uz": "I bo'lakcha (lingula) — belda likvor bosimini tushirish oldingi chuvalchangni chodir teshigi orqali yuqoriga o'rta miyaga tortadi"
       },
       {
-        "en": "Crus I (lobule VIIa) — compressing the optic chiasm directly",
-        "uz": "Crus I (VIIa bo'lakcha) — ko'ruv kesishmasini bevosita ezadi"
+        "en": "Lobule X (flocculus) — lowering lumbar CSF pressure forces the flocculus laterally into the cerebellopontine angle cistern",
+        "uz": "X bo'lakcha (flokkulus) — belda likvor bosimini tushirish flokkulusni lateral yo'nalishda ko'prik-miyacha burchagiga siqib chiqaradi"
       },
       {
-        "en": "Flocculus (lobule X) — herniating through the jugular foramen",
-        "uz": "Flokkulus (X bo'lakcha) — bo'yinturuq teshigi orqali churra hosil qiladi"
+        "en": "Lobule VIII (biventer) — lowering lumbar CSF pressure collapses the fourth ventricle and ruptures the superior medullary velum",
+        "uz": "VIII bo'lakcha (biventer) — belda likvor bosimini tushirish IV qorinchani puchaytirib, ustki miya chodirini yirtib yuboradi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Hemispheric lobule IX corresponds to the cerebellar tonsils (flanking the midline vermian uvula, directly above the foramen magnum). In Chiari I malformation or posterior fossa mass lesions, withdrawing lumbar CSF creates a craniospinal pressure gradient that drives the tonsils downward through the foramen magnum ('coning'), acutely compressing the vital medullary respiratory and vasomotor centres.",
-      "uz": "Yarimsharning IX bo'lakchasi miyacha bodomchalariga (o'rta chiziqdagi chuvalchang tilchasi — uvula ikki yonida, bevosita katta ensa teshigi ustida) to'g'ri keladi. Kiari I malformatsiyasida yoki orqa kalla chuqurchasi hajmli hosilalarida beldan likvor olish kraniospinal bosim gradiyentini yuzaga keltirib, bodomchalarni katta ensa teshigi orqali pastga suradi ('ponalanish') va uzunchoq miyaning hayotiy muhim nafas hamda vazomotor markazlarini o'tkir ezib qo'yadi."
+      "en": "Hemispheric lobule IX corresponds to the cerebellar tonsils (flanking the midline vermian uvula, directly above the foramen magnum). In Chiari I malformation or posterior fossa mass lesions, withdrawing lumbar CSF creates a craniospinal pressure gradient that drives the tonsils downward through the foramen magnum ('coning'), acutely compressing the vital medullary cardiorespiratory and vasomotor centres.",
+      "uz": "Yarimsharning IX bo'lakchasi miyacha bodomchalariga (o'rta chiziqdagi chuvalchang tilchasi — uvula ikki yonida, bevosita katta ensa teshigi ustida) to'g'ri keladi. Kiari I malformatsiyasida yoki orqa kalla chuqurchasi hajmli hosilalarida beldan likvor olish kraniospinal bosim gradiyentini yuzaga keltirib, bodomchalarni katta ensa teshigi orqali pastga suradi ('ponalanish') va uzunchoq miyaning hayotiy muhim yurak-nafas hamda vazomotor markazlarini o'tkir ezib qo'yadi."
     },
     "refs": ["cb-lobule-ix", "cb-vermis-ix", "fourth-ventricle"],
     "sources": [
@@ -829,20 +829,20 @@
     },
     "options": [
       {
-        "en": "The restiform body is purely afferent (DSCT, cuneocerebellar, olivocerebellar climbing fibres); the medial juxtarestiform body carries bidirectional vestibulocerebellar and fastigiovestibular/reticular fibres",
-        "uz": "Arqonsimon tana sof afferent (DSCT, kuneoserebellyar, olivoserebellyar chirmashuvchi tolalar); medial yukstarestiform tana esa ikki yo'nalishli vestibuloserebellyar va fastigiovestibulyar/retikulyar tolalarni tashiydi"
+        "en": "Restiform body is purely afferent (DSCT, cuneocerebellar, olivocerebellar); juxtarestiform body is bidirectional (vestibular/fastigial)",
+        "uz": "Arqonsimon tana sof afferent (DSCT, kuneoserebellyar, olivoserebellyar); yukstarestiform tana ikki yo'nalishli (vestibulyar/cho'qqi)"
       },
       {
-        "en": "The restiform body carries dentatothalamic efferents, whereas the juxtarestiform body carries pontocerebellar afferents",
-        "uz": "Arqonsimon tana dentatotalamik efferentlarni, yukstarestiform tana esa pontoserebellyar afferentlarni tashiydi"
+        "en": "Restiform body carries dentatothalamic efferents to the thalamus; juxtarestiform body carries crossed pontocerebellar afferents",
+        "uz": "Arqonsimon tana talamusga dentatotalamik efferentlarni; yukstarestiform tana esa kesishgan pontoserebellyar afferentlarni tashiydi"
       },
       {
-        "en": "Both subdivisions carry exclusively descending corticospinal motor axons",
-        "uz": "Ikkala qism ham faqat tushuvchi kortikospinal motor aksonlarni tashiydi"
+        "en": "Restiform body is purely efferent (fastigioreticular and rubrocerebellar); juxtarestiform body is purely afferent (ventral spinocerebellar)",
+        "uz": "Arqonsimon tana sof efferent (fastigioretikulyar va rubroserebellyar); yukstarestiform tana esa sof afferent (ventral spinoserebellyar)"
       },
       {
-        "en": "The juxtarestiform body connects the dentate nucleus to the superior colliculus",
-        "uz": "Yukstarestiform tana tishsimon yadroni ustki tepalik bilan bog'laydi"
+        "en": "Both subdivisions are purely afferent, conveying mossy fibres from the basilar pontine nuclei and climbing fibres from the red nucleus",
+        "uz": "Ikkala qism ham sof afferent bo'lib, bazilyar ko'prik yadrolaridan yo'sinsimon tolalarni va qizil yadrodan chirmashuvchi tolalarni tashiydi"
       }
     ],
     "answer": 0,
@@ -865,31 +865,31 @@
     "topic": "cerebellum",
     "type": "mcq",
     "q": {
-      "en": "Compare Patient A (7-year-old child with a midline tumour arising from the roof of the fourth ventricle: severe truncal instability, falling backward while sitting, titubation, and positional downbeat nystagmus, but normal finger-to-nose testing when lying supine) with Patient B (62-year-old with right arm intention tremor, past-pointing dysmetria, dysdiadochokinesia, and ipsilateral hypotonia). Where are the two lesions?",
-      "uz": "A bemorni (IV qorincha tomidan o'sib chiqqan o'rta chiziq o'smasi bor 7 yoshli bola: o'tirganda orqaga yiqilish bilan kechuvchi og'ir tana nomutanosibligi, titubatsiya va pozitsion pastga uruvchi nistagm, ammo yotgan holatda barmoq-burun sinamasi normal) B bemor bilan (o'ng qo'lda intension tremor, mo'ljaldan o'tib ketish dismetriyasi, disdiadoxokineziya va ipsilateral gipotoniya bor 62 yoshli bemor) taqqoslang. Ikkala o'choq qayerda joylashgan?"
+      "en": "Compare Patient A (7-year-old with a fourth-ventricle roof tumour: severe truncal ataxia, falling backward while sitting, titubation, and downbeat nystagmus, but normal supine finger-to-nose) with Patient B (62-year-old with right arm intention tremor, past-pointing, dysdiadochokinesia, and ipsilateral hypotonia). Where are the two lesions?",
+      "uz": "A bemorni (IV qorincha tomi o'smasi bor 7 yoshli bola: og'ir tana ataksiyasi, o'tirganda orqaga yiqilish, titubatsiya va pastga uruvchi nistagm, ammo yotganda barmoq-burun sinamasi normal) B bemor bilan (o'ng qo'lda intension tremor, mo'ljaldan o'tib ketish, disdiadoxokineziya va ipsilateral gipotoniya bor 62 yoshli bemor) taqqoslang. Ikkala o'choq qayerda joylashgan?"
     },
     "options": [
       {
-        "en": "Patient A: midline vermis / flocculonodular lobe (nodulus X and fastigial nucleus); Patient B: right lateral cerebellar hemisphere and/or right dentate nucleus",
-        "uz": "A bemor: o'rta chiziq chuvalchangi / flokkulonodulyar bo'lak (nodulus X va cho'qqi yadrosi); B bemor: o'ng lateral miyacha yarimshari va/yoki o'ng tishsimon yadro"
+        "en": "Patient A: midline vermis / flocculonodular lobe (fastigial); Patient B: right lateral hemisphere / right dentate nucleus",
+        "uz": "A bemor: o'rta chiziq chuvalchangi / flokkulonodulyar bo'lak; B bemor: o'ng lateral yarimshar / o'ng tishsimon yadro"
       },
       {
-        "en": "Patient A: left lateral cerebellar hemisphere; Patient B: left cerebellar hemisphere (contralateral to the ataxic arm)",
-        "uz": "A bemor: chap lateral miyacha yarimshari; B bemor: chap miyacha yarimshari (ataksiyali qo'lga qarama-qarshi)"
+        "en": "Patient A: left lateral cerebellar hemisphere / left dentate; Patient B: left lateral hemisphere (contralateral to right arm)",
+        "uz": "A bemor: chap lateral miyacha yarimshari / chap tishsimon yadro; B bemor: chap lateral yarimshar (o'ng qo'lga qarama-qarshi)"
       },
       {
-        "en": "Patient A: bilateral dentate nuclei; Patient B: midline flocculonodular lobe",
-        "uz": "A bemor: ikki tomonlama tishsimon yadrolar; B bemor: o'rta chiziq flokkulonodulyar bo'lagi"
+        "en": "Patient A: bilateral dentate nuclei and superior peduncles; Patient B: midline flocculonodular lobe and nodulus (lobule X)",
+        "uz": "A bemor: ikki tomonlama tishsimon yadrolar va ustki oyoqchalar; B bemor: o'rta chiziq flokkulonodulyar bo'lagi (X bo'lakcha)"
       },
       {
-        "en": "Patient A: anterior limb of the internal capsule; Patient B: contralateral subthalamic nucleus",
-        "uz": "A bemor: ichki kapsula oldingi oyoqchasi; B bemor: qarama-qarshi subtalamik yadro"
+        "en": "Patient A: right anterior paravermal lobe (interposed nuclei); Patient B: left ventral lateral thalamus and internal capsule",
+        "uz": "A bemor: o'ng oldingi paravermal bo'lak (oraliq yadrolar); B bemor: chap ventral lateral talamus va ichki kapsula"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Midline vermian / flocculonodular lesions (classic in childhood medulloblastoma invading the nodulus X and fastigial nucleus at the fourth-ventricle roof) disrupt axial/vestibular control, causing truncal ataxia (inability to sit or stand without support), head/trunk titubation, and nystagmus while sparing supine appendicular coordination. Lateral hemispheric / dentate lesions (Patient B) disrupt the ipsilateral cerebrocerebellar loop, producing appendicular dysmetria, kinetic/intention tremor, dysdiadochokinesia, and hypotonia on the same (right) side.",
-      "uz": "O'rta chiziq chuvalchang / flokkulonodulyar zararlanishlar (bolalikdagi medulloblastomaning IV qorincha tomidagi nodulus X va cho'qqi yadrosiga o'sib kirishiga xos) tana o'qi/vestibulyar boshqaruvni izdan chiqarib, yotganda qo'l-oyoq koordinatsiyasi saqlangan holda tana ataksiyasi (tayanchsiz o'tira olmaslik yoki tura olmaslik), bosh/tana titubatsiyasi va nistagmni chaqiradi. Lateral yarimshar / tishsimon yadro zararlanishi (B bemor) esa ipsilateral serebroserebellyar halqani buzib, xuddi shu (o'ng) tomonda qo'l-oyoq dismetriyasi, kinetik/intension tremor, disdiadoxokineziya va gipotoniyani yuzaga keltiradi."
+      "en": "Midline vermian / flocculonodular lesions (classic in childhood medulloblastoma invading the nodulus X and fastigial nucleus at the fourth-ventricle roof) disrupt axial and vestibular control, causing truncal ataxia (inability to sit or stand without support), head/trunk titubation, and downbeat nystagmus while sparing supine appendicular coordination. Lateral hemispheric / dentate lesions (Patient B) disrupt the ipsilateral cerebrocerebellar loop, producing appendicular dysmetria, kinetic/intention tremor, dysdiadochokinesia, and hypotonia on the same (right) side.",
+      "uz": "O'rta chiziq chuvalchang / flokkulonodulyar zararlanishlar (bolalikdagi medulloblastomaning IV qorincha tomidagi nodulus X va cho'qqi yadrosiga o'sib kirishiga xos) tana o'qi va vestibulyar boshqaruvni izdan chiqarib, yotganda qo'l-oyoq koordinatsiyasi saqlangan holda tana ataksiyasi, bosh/tana titubatsiyasi va pastga uruvchi nistagmni chaqiradi. Lateral yarimshar / tishsimon yadro zararlanishi (B bemor) esa ipsilateral serebroserebellyar halqani buzib, xuddi shu (o'ng) tomonda qo'l-oyoq dismetriyasi, intension tremor, disdiadoxokineziya va gipotoniyani yuzaga keltiradi."
     },
     "refs": ["cb-flocculonodular-lobe", "cb-dentate-nucleus", "j-nfast", "vermis", "hemi", "nod", "fast", "dent"],
     "plate": "cerebellum-deep-nuclei",
@@ -910,31 +910,31 @@
     "topic": "cerebellum",
     "type": "mcq",
     "q": {
-      "en": "Trace the three limbs of the Guillain–Mollaret triangle (dentato-rubro-olivary circuit). Why does a haemorrhage in the right dentate nucleus (or right SCP) cause delayed HYPERTROPHIC olivary degeneration of the LEFT inferior olive, whereas a lesion of the left inferior cerebellar peduncle (ICP) does NOT?",
-      "uz": "Giyen–Mollare uchburchagining (dentato-rubro-olivar halqa) uchta bo'g'inini kuzating. Nima uchun o'ng tishsimon yadrodagi (yoki o'ng SCP dagi) qon quyilish kechikkan CHAP pastki oliva GIPERTROFIK degeneratsiyasini chaqiradi, ammo chap pastki miyacha oyoqchasi (ICP) zararlanishi buni CHAQIRMAYDI?"
+      "en": "Trace the Guillain–Mollaret triangle (dentato-rubro-olivary circuit). Why does a right dentate (or right SCP) haemorrhage cause delayed HYPERTROPHIC degeneration of the LEFT inferior olive, whereas a left ICP lesion does NOT?",
+      "uz": "Giyen–Mollare uchburchagini (dentato-rubro-olivar halqa) kuzating. Nima uchun o'ng tishsimon yadro (yoki o'ng SCP) qon quyilishi kechikkan CHAP pastki oliva GIPERTROFIK degeneratsiyasini chaqiradi, chap ICP zararlanishi esa CHAQIRMAYDI?"
     },
     "options": [
       {
-        "en": "The triangle runs unilaterally from right dentate → crossed via SCP to LEFT red nucleus → down LEFT central tegmental tract (CTT) to LEFT inferior olive → crossed via ICP back to right cerebellum; deafferentation of the olive (dentate/SCP or CTT lesion) triggers trans-synaptic vacuolar hypertrophy, whereas ICP lesions are post-olivary (efferent)",
-        "uz": "Uchburchak bir yo'nalishda o'ng tishsimon yadrodan → SCP orqali kesishib CHAP qizil yadroga → CHAP markaziy tegmental yo'l (CTT) bo'ylab CHAP pastki olivaga → ICP orqali kesishib qayta o'ng miyachaga boradi; olivaning deafferentatsiyasi (dentat/SCP yoki CTT zararlanishi) trans-sinaptik vakuolyar gipertrofiyani chaqiradi, ICP esa olivadan keyingi (efferent) bo'g'indir"
+        "en": "Right dentate → crossed SCP → LEFT red nucleus → LEFT CTT → LEFT olive; dentate/SCP/CTT lesions deafferent the olive, whereas ICP is post-olivary",
+        "uz": "O'ng tishsimon → SCP kesishmasi → CHAP qizil yadro → CHAP CTT → CHAP oliva; dentat/SCP/CTT olivani deafferentatsiya qiladi, ICP esa efferent"
       },
       {
-        "en": "The right dentate projects uncrossed via the CTT directly to the right inferior olive",
-        "uz": "O'ng tishsimon yadro CTT orqali kesishmasdan to'g'ridan-to'g'ri o'ng pastki olivaga boradi"
+        "en": "Right dentate → uncrossed MCP → right red nucleus → crossed CTT → LEFT olive; ICP lesions are spared because climbing fibres regenerate rapidly",
+        "uz": "O'ng tishsimon → kesishmagan MCP → o'ng qizil yadro → kesishgan CTT → CHAP oliva; ICP da esa chirmashuvchi tolalar tez regeneratsiya qiladi"
       },
       {
-        "en": "Hypertrophic olivary degeneration occurs only when the middle cerebellar peduncle is transected",
-        "uz": "Gipertrofik oliva degeneratsiyasi faqat o'rta miyacha oyoqchasi kesilganda yuzaga keladi"
+        "en": "Right dentate → crossed ICP → LEFT red nucleus → LEFT medial lemniscus → LEFT olive; hypertrophy occurs only when excitatory inputs are cut",
+        "uz": "O'ng tishsimon → kesishgan ICP → CHAP qizil yadro → CHAP medial qovuzloq → CHAP oliva; gipertrofiya faqat qo'zg'atuvchi kirish uzilganda bo'ladi"
       },
       {
-        "en": "ICP lesions cause bilateral olivary hypertrophy within 2 hours of stroke",
-        "uz": "ICP zararlanishi insultdan 2 soat o'tib ikki tomonlama oliva gipertrofiyasini chaqiradi"
+        "en": "Right dentate → uncrossed CTT → right inferior olive → crossed SCP → LEFT olive; ICP lesions cause acute olivary atrophy rather than hypertrophy",
+        "uz": "O'ng tishsimon → kesishmagan CTT → o'ng oliva → kesishgan SCP → CHAP oliva; ICP zararlanishi gipertrofiya emas, o'tkir oliva atrofiyasini beradi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The Guillain–Mollaret triangle is unidirectional: (1) Dentate nucleus → ascends via SCP and crosses at the caudal midbrain decussation (O1) to the contralateral parvocellular red nucleus; (2) Red nucleus → descends ipsilaterally in the central tegmental tract (CTT) to the inferior olivary nucleus (ION); (3) ION → sends climbing fibres across the midline via the ICP back to the original dentate/Purkinje cortex. Interrupting the first two afferent limbs (dentate/SCP or contralateral CTT) deafferents the ION, causing unique trans-synaptic olivary enlargement/T2 hyperintensity and ~2 Hz symptomatic oculopalatal tremor months later. Interrupting the third limb (ICP) cuts olivary axons rather than olivary inputs and does not cause hypertrophy.",
-      "uz": "Giyen–Mollare uchburchagi bir yo'nalishlidir: (1) Tishsimon yadro → SCP orqali ko'tarilib, kaudal o'rta miya kesishmasida (O1) qarama-qarshi mayda hujayrali qizil yadroga o'tadi; (2) Qizil yadro → markaziy tegmental yo'l (CTT) bo'ylab ipsilateral pastki oliva yadrosiga (ION) tushadi; (3) ION → chirmashuvchi tolalarni o'rta chiziq orqali kesib o'tib, ICP orqali dastlabki tishsimon yadro/Purkine po'stlog'iga qaytaradi. Dastlabki ikki afferent bo'g'inning (tishsimon/SCP yoki qarama-qarshi CTT) uzilishi ION ni deafferentatsiyaga uchratib, bir necha oydan so'ng noyob trans-sinaptik oliva kattalashishi (T2 giperintensivligi) va ~2 Gs simptomatik okulopalatal tremorni chaqiradi. Uchinchi bo'g'inning (ICP) zararlanishi esa olivaga kiruvchi emas, undan chiquvchi aksonlarni uzadi va gipertrofiya chaqirmaydi."
+      "en": "The Guillain–Mollaret triangle is unidirectional: (1) Dentate nucleus → ascends via SCP and crosses at the caudal midbrain decussation (plate O1) to the contralateral parvocellular red nucleus; (2) Red nucleus → descends ipsilaterally in the central tegmental tract (CTT) to the inferior olivary nucleus (ION); (3) ION → sends climbing fibres across the midline via the ICP back to the original dentate/Purkinje cortex. Interrupting the first two afferent limbs (dentate/SCP or contralateral CTT) deafferents the ION, causing unique trans-synaptic vacuolar olivary enlargement/T2 hyperintensity and ~2 Hz symptomatic oculopalatal tremor months later. Interrupting the third limb (ICP) cuts post-olivary efferent axons rather than olivary inputs and does not cause hypertrophy.",
+      "uz": "Giyen–Mollare uchburchagi bir yo'nalishlidir: (1) Tishsimon yadro → SCP orqali ko'tarilib, kaudal o'rta miya kesishmasida (O1 plastinkasi) qarama-qarshi mayda hujayrali qizil yadroga o'tadi; (2) Qizil yadro → markaziy tegmental yo'l (CTT) bo'ylab ipsilateral pastki oliva yadrosiga (ION) tushadi; (3) ION → chirmashuvchi tolalarni o'rta chiziq orqali kesib o'tib, ICP orqali dastlabki tishsimon yadro/Purkine po'stlog'iga qaytaradi. Dastlabki ikki afferent bo'g'inning (tishsimon/SCP yoki qarama-qarshi CTT) uzilishi ION ni deafferentatsiyaga uchratib, bir necha oydan so'ng noyob trans-sinaptik vakuolyar oliva kattalashishi (T2 giperintensivligi) va ~2 Gs simptomatik okulopalatal tremorni chaqiradi. Uchinchi bo'g'inning (ICP) zararlanishi esa olivaga kiruvchi emas, undan chiquvchi efferent aksonlarni uzadi va gipertrofiya chaqirmaydi."
     },
     "refs": ["cb-dentate-nucleus", "bs-superior-cerebellar-peduncle", "red-nucleus", "bs-inferior-olive", "dent", "scp", "scp-dec", "rn", "ctt", "ion", "icp"],
     "plate": "cerebellum-deep-nuclei",
@@ -955,31 +955,31 @@
     "topic": "cerebellum",
     "type": "mcq",
     "q": {
-      "en": "How do you clinically differentiate a classic superior cerebellar artery (SCA) territorial infarct from an isolated cerebellar-branch posterior inferior cerebellar artery (PICA) infarct, and what is the life-threatening neurosurgical complication of a large PICA stroke?",
-      "uz": "Klinik jihatdan klassik ustki miyacha arteriyasi (SCA) havzasi infarktini orqa pastki miyacha arteriyasining (PICA) miyacha shoxi infarktidan qanday farqlaysiz va yirik PICA insultining hayotga xavf soluvchi neyroxirurgik asorati nima?"
+      "en": "How do you clinically differentiate a classic superior cerebellar artery (SCA) infarct from a cerebellar-branch posterior inferior cerebellar artery (PICA) infarct, and what is the life-threatening complication of a large PICA stroke?",
+      "uz": "Klinik jihatdan klassik ustki miyacha arteriyasi (SCA) infarktini orqa pastki miyacha arteriyasi (PICA) miyacha shoxi infarktidan qanday farqlaysiz va yirik PICA insultining hayotga xavf soluvchi asorati nima?"
     },
     "options": [
       {
-        "en": "SCA infarct involves the dentate nucleus, SCP, and dorsolateral pontine tegmentum (prominent ipsilateral limb intention tremor/dysmetria, scanning dysarthria, ipsilateral Horner, contralateral pain/temp loss with minimal vertigo); large PICA infarct causes acute severe vertigo/truncal ataxia and can swell within 24–72 h to compress the 4th ventricle (acute obstructive hydrocephalus) and brainstem",
-        "uz": "SCA infarkti tishsimon yadro, SCP va dorsolateral ko'prik tegmentumini qamrab oladi (bosh aylanishi minimal bo'lgan holda yaqqol ipsilateral qo'l-oyoq intension tremori/dismetriyasi, skanerlovchi dizartriya, ipsilateral Gorner va kontralateral og'riq/harorat yo'qolishi); yirik PICA infarkti esa o'tkir kuchli bosh aylanishi/tana ataksiyasini chaqiradi hamda 24–72 soat ichida shishib, IV qorinchani (o'tkir obstruktiv gidrosefaliya) va miya ustunini ezib qo'yishi mumkin"
+        "en": "SCA: limb dysmetria/intention tremor and dysarthria with little vertigo; large PICA: severe vertigo/truncal ataxia and oedema causing hydrocephalus",
+        "uz": "SCA: minimal bosh aylanishi bilan qo'l-oyoq dismetriyasi va dizartriya; yirik PICA: kuchli bosh aylanishi/tana ataksiyasi va 24–72 soatda o'tkir gidrosefaliya"
       },
       {
-        "en": "SCA infarct causes ipsilateral facial paralysis and deafness, whereas PICA infarct causes bitemporal hemianopia",
-        "uz": "SCA infarkti ipsilateral yuz falaji va karlikni, PICA infarkti esa bitemporal gemianopsiyani chaqiradi"
+        "en": "SCA: severe vertigo, ipsilateral facial paralysis, and deafness with spared limb coordination; large PICA: isolated contralateral hemiparesis and bitemporal hemianopia",
+        "uz": "SCA: kuchli bosh aylanishi, ipsilateral yuz falaji va karlik bilan qo'l koordinatsiyasi saqlanadi; yirik PICA: yakka kontralateral gemiparez va bitemporal gemianopiya"
       },
       {
-        "en": "PICA supplies the dentate nucleus exclusively, so PICA strokes never cause vertigo or hydrocephalus",
-        "uz": "PICA faqat tishsimon yadroni ta'minlaydi, shuning uchun PICA insultlari hech qachon bosh aylanishi yoki gidrosefaliya chaqirmaydi"
+        "en": "SCA: isolated truncal ataxia requiring urgent lumbar puncture decompression; large PICA: dentate nucleus necrosis causing delayed palatal tremor without hydrocephalus",
+        "uz": "SCA: shoshilinch bel punksiyasi talab etuvchi yakka tana ataksiyasi; yirik PICA: gidrosefaliyasiz kechikkan tanglay tremorini chaqiruvchi tishsimon yadro nekrozi"
       },
       {
-        "en": "SCA infarcts routinely require lumbar puncture decompression",
-        "uz": "SCA infarktlari odatda bel punksiyasi orqali dekompressiya qilishni talab etadi"
+        "en": "SCA: acute severe vertigo and fourth-ventricle compression within 24 hours; large PICA: pure ipsilateral limb intention tremor with preserved stance and minimal oedema",
+        "uz": "SCA: 24 soat ichida kuchli bosh aylanishi va IV qorincha ezilishi; yirik PICA: minimal shish va barqaror turish bilan sof ipsilateral qo'l-oyoq intension tremori"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Because the SCA supplies the superior cerebellar hemisphere, the bulk of the dentate nucleus, the SCP, and the dorsolateral rostral pontine tegmentum (spinothalamic tract + descending sympathetic fibres), SCA strokes produce severe ipsilateral limb kinetic tremor/dysmetria and dysarthria (plus ipsilateral Horner and contralateral body spinothalamic loss if the tegmental branch is occluded) with little vertigo. Conversely, PICA strokes hit the posteroinferior vermis/hemisphere (vestibulocerebellar connections), mimicking acute vestibular neuritis with explosive vertigo, nausea, and truncal ataxia; space-occupying cytotoxic oedema in the tight posterior fossa can efface the fourth ventricle (acute hydrocephalus) and cause tonsillar/upward herniation within 24–72 hours, requiring urgent suboccipital decompressive craniectomy.",
-      "uz": "SCA miyacha ustki yarimsharini, tishsimon yadroning asosiy qismini, SCP ni va ko'prik rostral dorsolateral tegmentumini (spinotalamik yo'l + tushuvchi simpatik tolalar) ta'minlagani uchun, SCA insultlari bosh aylanishi deyarli bo'lmagan holda og'ir ipsilateral qo'l-oyoq kinetik tremori/dismetriyasi va dizartriyani (tegmental shox berkilsa, ipsilateral Gorner va kontralateral tana og'riq/harorat yo'qolishi bilan birga) chaqiradi. Aksincha, PICA insultlari orqa-pastki chuvalchang/yarimsharni (vestibuloserebellyar aloqalar) zararlab, kuchli bosh aylanishi, ko'ngil aynishi va tana ataksiyasi bilan o'tkir vestibulyar nevritni eslatadi; tor orqa kalla chuqurchasidagi shish 24–72 soat ichida IV qorinchani bekilib qolishiga (o'tkir gidrosefaliya) va bodomchalar churrasiga olib kelib, shoshilinch suboksipital dekompressiv kraniektomiyani talab qilishi mumkin."
+      "en": "Because the SCA supplies the superior cerebellar hemisphere, the bulk of the dentate nucleus, the SCP, and the dorsolateral rostral pontine tegmentum (spinothalamic tract + descending sympathetic fibres), SCA strokes produce severe ipsilateral limb kinetic tremor/dysmetria and scanning dysarthria (plus ipsilateral Horner and contralateral body spinothalamic loss if the tegmental branch is occluded) with little vertigo. Conversely, PICA strokes hit the posteroinferior vermis/hemisphere (vestibulocerebellar connections), mimicking acute vestibular neuritis with explosive vertigo, nausea, and truncal ataxia; space-occupying cytotoxic oedema in the tight posterior fossa can efface the fourth ventricle (acute obstructive hydrocephalus) and cause tonsillar/upward herniation within 24–72 hours, requiring urgent suboccipital decompressive craniectomy.",
+      "uz": "SCA miyacha ustki yarimsharini, tishsimon yadroning asosiy qismini, SCP ni va ko'prik rostral dorsolateral tegmentumini (spinotalamik yo'l + tushuvchi simpatik tolalar) ta'minlagani uchun, SCA insultlari bosh aylanishi deyarli bo'lmagan holda og'ir ipsilateral qo'l-oyoq kinetik tremori/dismetriyasi va skanerlovchi dizartriyani (tegmental shox berkilsa, ipsilateral Gorner va kontralateral tana og'riq/harorat yo'qolishi bilan birga) chaqiradi. Aksincha, PICA insultlari orqa-pastki chuvalchang/yarimsharni (vestibuloserebellyar aloqalar) zararlab, kuchli bosh aylanishi, ko'ngil aynishi va tana ataksiyasi bilan o'tkir vestibulyar nevritni eslatadi; tor orqa kalla chuqurchasidagi shish 24–72 soat ichida IV qorinchani ezib (o'tkir obstruktiv gidrosefaliya) va bodomchalar churrasini chaqirib, shoshilinch suboksipital dekompressiv kraniektomiyani talab qilishi mumkin."
     },
     "refs": ["superior-cerebellar-artery", "posterior-inferior-cerebellar-artery", "cb-dentate-nucleus", "fourth-ventricle", "dent", "scp"],
     "plate": "cerebellum-deep-nuclei",
@@ -1000,25 +1000,25 @@
     "topic": "cerebellum",
     "type": "mcq",
     "q": {
-      "en": "What is the anatomical basis of (1) the Cerebellar Cognitive Affective Syndrome (CCAS / Schmahmann syndrome) in adults and (2) Post-operative Cerebellar Mutism Syndrome (posterior fossa syndrome) in children after fourth-ventricle tumour resection?",
-      "uz": "(1) Kattalardagi Miyacha kognitiv-affektiv sindromi (CCAS / Shmamann sindromi) hamda (2) bolalarda IV qorincha o'smasi olib tashlangandan keyin rivojlanadigan Operatsiyadan keyingi miyacha mutizmi sindromining (orqa kalla chuqurchasi sindromi) anatomik asosi nima?"
+      "en": "What is the anatomical basis of (1) Cerebellar Cognitive Affective Syndrome (CCAS / Schmahmann syndrome) in adults and (2) Post-operative Cerebellar Mutism Syndrome in children after fourth-ventricle tumour resection?",
+      "uz": "(1) Kattalardagi Miyacha kognitiv-affektiv sindromi (CCAS / Shmamann sindromi) hamda (2) bolalarda IV qorincha o'smasi olib tashlangandan keyingi Operatsiyadan keyingi miyacha mutizmi sindromining anatomik asosi nima?"
     },
     "options": [
       {
-        "en": "CCAS results from posterior lobe neocerebellar lesions (Crus I, Crus II, VIIb) disrupting dentato-thalamo-prefrontal/parietal loops; cerebellar mutism results from bilateral surgical/oedema disruption of the proximal dentato-rubro-thalamic outflow (dentate nuclei and superior cerebellar peduncles)",
-        "uz": "CCAS orqa bo'lak neoserebellyar sohalarining (Crus I, Crus II, VIIb) zararlanishi natijasida dentato-talamo-prefrontal/parietal halqalarning uzilishidan kelib chiqadi; miyacha mutizmi esa proksimal dentato-rubro-talamik chiqish yo'lining (tishsimon yadrolar va ustki miyacha oyoqchalari) ikki tomonlama jarrohlik/shish tufayli shikastlanishidan yuzaga keladi"
+        "en": "CCAS: posterior lobe neocerebellar lesions (Crus I/II, VIIb) disrupting prefrontal loops; mutism: bilateral proximal dentate/SCP outflow injury",
+        "uz": "CCAS: orqa bo'lak neoserebellyar (Crus I/II, VIIb) halqalari uzilishi; mutizm: proksimal tishsimon yadro/SCP chiqishining ikki tomonlama shikastlanishi"
       },
       {
-        "en": "CCAS is caused by isolated anterior-lobe (lobules I–IV) lesions, whereas cerebellar mutism is caused by damage to Broca's area during posterior fossa surgery",
-        "uz": "CCAS faqat oldingi bo'lak (I–IV bo'lakchalar) zararlanishidan, miyacha mutizmi esa orqa kalla chuqurchasi operatsiyasi vaqtida Broka markazi shikastlanishidan kelib chiqadi"
+        "en": "CCAS: isolated anterior lobe lesions (lobules I–IV) disrupting spinocerebellar loops; mutism: direct surgical retraction injury to Broca's area",
+        "uz": "CCAS: oldingi bo'lak (I–IV bo'lakchalar) spinoserebellyar halqasi uzilishi; mutizm: operatsiya vaqtida Broka markazining bevosita shikastlanishi"
       },
       {
-        "en": "Both syndromes result from isolated damage to the dorsal spinocerebellar tract in the cervical cord",
-        "uz": "Ikkala sindrom ham bo'yin orqa miyasida dorsal spinoserebellyar yo'lning yakka zararlanishidan kelib chiqadi"
+        "en": "CCAS: unilateral flocculonodular lobe (lobule X) lesions disrupting vestibular loops; mutism: isolated damage to the dorsal spinocerebellar tract",
+        "uz": "CCAS: flokkulonodulyar bo'lak (X bo'lakcha) vestibulyar halqasi uzilishi; mutizm: dorsal spinoserebellyar yo'lning yakka shikastlanishi"
       },
       {
-        "en": "Cerebellar mutism is caused by unilateral injury to the flocculus (lobule X)",
-        "uz": "Miyacha mutizmi flokkulusning (X bo'lakcha) bir tomonlama shikastlanishidan kelib chiqadi"
+        "en": "CCAS: bilateral middle cerebellar peduncle degeneration sparing deep nuclei; mutism: unilateral fastigial and juxtarestiform body transection",
+        "uz": "CCAS: chuqur yadrolar saqlangan holda ikki tomonlama MCP degeneratsiyasi; mutizm: cho'qqi yadrosi va yukstarestiform tananing bir tomonlama kesilishi"
       }
     ],
     "answer": 0,
@@ -1045,31 +1045,31 @@
     "topic": "cerebellum",
     "type": "mcq",
     "q": {
-      "en": "A 58-year-old patient presents with progressive gait and limb ataxia, orthostatic hypotension, and urinary retention. Axial T2 MRI of the pons shows a cruciform hyperintensity ('hot-cross-bun sign') along with atrophy and T2 change in the middle cerebellar peduncles. Degeneration of which white-matter tracts produces this MRI sign?",
-      "uz": "58 yoshli bemor kuchayib boruvchi yurish va qo'l-oyoq ataksiyasi, ortostatik gipotenziya hamda siydik tutilishi bilan murojaat qildi. Ko'prikning aksial T2 MRT tasvirida o'rta miyacha oyoqchalarining atrofiyasi va T2 o'zgarishi bilan birga xochsimon giperintensivlik ('hot-cross-bun' belgisi) ko'rinadi. Qaysi oq modda yo'llarining degeneratsiyasi ushbu MRT belgisini hosil qiladi?"
+      "en": "A 58-year-old patient presents with progressive gait and limb ataxia, orthostatic hypotension, and urinary retention. Axial T2 MRI of the pons shows a cruciform hyperintensity ('hot-cross-bun sign') with middle cerebellar peduncle atrophy. Degeneration of which tracts produces this MRI sign?",
+      "uz": "58 yoshli bemorda kuchayib boruvchi yurish va qo'l-oyoq ataksiyasi, ortostatik gipotenziya hamda siydik tutilishi bor. Ko'prikning aksial T2 MRT tasvirida o'rta miyacha oyoqchalari atrofiyasi bilan birga xochsimon giperintensivlik ('hot-cross-bun' belgisi) ko'rinadi. Qaysi yo'llarning degeneratsiyasi ushbu belgini hosil qiladi?"
     },
     "options": [
       {
-        "en": "Selective degeneration of the transverse pontocerebellar fibres and median pontine raphe crossing into the middle cerebellar peduncles, with relative sparing of the dorsolateral superior cerebellar peduncles and ventrolateral corticospinal bundles (characteristic of MSA-C)",
-        "uz": "O'rta miyacha oyoqchalariga o'tuvchi ko'ndalang pontoserebellyar tolalar va ko'prik o'rta chiziq choki (raphe) ning tanlab yemirilishi, bunda dorsolateral ustki miyacha oyoqchalari va ventrolateral kortikospinal tutamlar nisbatan saqlanib qoladi (MSA-C ga xos)"
+        "en": "Transverse pontocerebellar fibres and median pontine raphe, sparing corticospinal bundles (MSA-C)",
+        "uz": "Ko'ndalang pontoserebellyar tolalar va ko'prik o'rta choki (raphe), kortikospinal tutamlar saqlangan (MSA-C)"
       },
       {
-        "en": "Selective demyelination of the superior cerebellar peduncle decussation in the midbrain tegmentum",
-        "uz": "O'rta miya tegmentumidagi ustki miyacha oyoqchasi kesishmasining tanlab demiyelinizatsiyasi"
+        "en": "Superior cerebellar peduncle decussation and central tegmental tracts in the dorsal midbrain tegmentum",
+        "uz": "Dorsal o'rta miya tegmentumidagi ustki miyacha oyoqchasi kesishmasi va markaziy tegmental yo'llar"
       },
       {
-        "en": "Hypertrophy of the bilateral inferior olivary nuclei in the rostral medulla",
-        "uz": "Rostral uzunchoq miyadagi ikki tomonlama pastki oliva yadrolarining gipertrofiyasi"
+        "en": "Bilateral inferior olivary nuclei and olivocerebellar climbing fibres in the rostral ventral medulla",
+        "uz": "Rostral ventral uzunchoq miyadagi ikki tomonlama pastki oliva yadrolari va olivoserebellyar tolalar"
       },
       {
-        "en": "Calcification of the four deep cerebellar nuclei around the fourth ventricle",
-        "uz": "To'rtinchi qorincha atrofidagi to'rtta chuqur miyacha yadrosining kalsifikatsiyasi"
+        "en": "Descending corticospinal and corticobulbar tracts in the basis pontis, sparing transverse pontine fibres",
+        "uz": "Ko'ndalang ko'prik tolalari saqlangan holda ko'prik asosidagi tushuvchi kortikospinal va kortikobulbar yo'llar"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In multiple system atrophy, cerebellar type (MSA-C, olivopontocerebellar atrophy), loss of basilar pontine neurons and their myelinated transverse pontocerebellar fibres (entering the middle cerebellar peduncles, MCP) produces a horizontal + vertical T2-hyperintense cross in the basis pontis ('hot-cross-bun sign'), while the four quadrants containing the descending corticospinal tracts (and the dorsally placed SCPs) remain comparatively dark/preserved.",
-      "uz": "Multi-tizimli atrofiyaning miyacha shaklida (MSA-C, olivopontoserebellyar atrofiya) bazilyar ko'prik neyronlari va ularning o'rta miyacha oyoqchalariga (MCP) kiruvchi miyelinlashgan ko'ndalang pontoserebellyar tolalarining yo'qolishi ko'prik asosida gorizontal va vertikal T2-giperintensiv xoch ('hot-cross-bun' belgisi) hosil qiladi; tushuvchi kortikospinal yo'llarni (hamda dorsal joylashgan SCP larni) o'z ichiga olgan to'rtta kvadrant esa nisbatan to'q/saqlangan qoladi."
+      "en": "In multiple system atrophy, cerebellar type (MSA-C, olivopontocerebellar atrophy), loss of basilar pontine neurons and their myelinated transverse pontocerebellar fibres (entering the middle cerebellar peduncles, MCP) along with median pontine raphe fibres produces a horizontal + vertical T2-hyperintense cross in the basis pontis ('hot-cross-bun sign'), while the four quadrants containing the descending corticospinal tracts (and the dorsally placed SCPs) remain comparatively dark and preserved.",
+      "uz": "Multi-tizimli atrofiyaning miyacha shaklida (MSA-C, olivopontoserebellyar atrofiya) bazilyar ko'prik neyronlari va ularning o'rta miyacha oyoqchalariga (MCP) kiruvchi miyelinlashgan ko'ndalang pontoserebellyar tolalari hamda ko'prik o'rta choki (raphe) ning yo'qolishi ko'prik asosida gorizontal va vertikal T2-giperintensiv xoch ('hot-cross-bun' belgisi) hosil qiladi; tushuvchi kortikospinal yo'llarni (hamda dorsal joylashgan SCP larni) o'z ichiga olgan to'rtta kvadrant esa nisbatan to'q va saqlangan qoladi."
     },
     "refs": ["bs-middle-cerebellar-peduncle", "mcp", "pn", "tpf", "scp"],
     "plate": "pons-trigeminal",

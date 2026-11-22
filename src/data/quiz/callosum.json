@@ -51,16 +51,16 @@
     },
     "options": [
       {
-        "en": "Rostrum, genu, body (trunk), and splenium",
-        "uz": "Tumshuq (rostrum), tizza (genu), tana (truncus) va qalinlashma (splenium)"
+        "en": "Rostrum, genu, body, and splenium",
+        "uz": "Tumshuq, tizza, tana va splenium"
       },
       {
-        "en": "Head, neck, body, and tail",
-        "uz": "Bosh, bo'yin, tana va dum"
+        "en": "Head, neck, central body, and tail",
+        "uz": "Bosh, bo'yin, markaziy tana va dum"
       },
       {
         "en": "Fimbria, crus, body, and column",
-        "uz": "Fimbriya, oyoq (crus), tana va ustun (columna)"
+        "uz": "Fimbriya, oyoq, tana va ustun"
       },
       {
         "en": "Anterior limb, genu, posterior limb, and retrolenticular part",
@@ -92,16 +92,16 @@
     },
     "options": [
       {
-        "en": "Genu",
-        "uz": "Tizza (genu)"
+        "en": "Genu of the corpus callosum",
+        "uz": "Qadoqsimon tana tizzasi"
       },
       {
-        "en": "Splenium",
-        "uz": "Qalinlashma (splenium)"
+        "en": "Splenium of the corpus callosum",
+        "uz": "Qadoqsimon tana spleniumi"
       },
       {
-        "en": "Body (trunk)",
-        "uz": "Tana (truncus)"
+        "en": "Body of the corpus callosum",
+        "uz": "Qadoqsimon tana tanasi"
       },
       {
         "en": "Hippocampal commissure",
@@ -134,15 +134,15 @@
     "options": [
       {
         "en": "Splenium",
-        "uz": "Qalinlashma (splenium)"
+        "uz": "Splenium"
       },
       {
         "en": "Genu",
-        "uz": "Tizza (genu)"
+        "uz": "Tizza"
       },
       {
         "en": "Rostrum",
-        "uz": "Tumshuq (rostrum)"
+        "uz": "Tumshuq"
       },
       {
         "en": "Anterior commissure",
@@ -216,15 +216,15 @@
     "options": [
       {
         "en": "Anterior commissure",
-        "uz": "Oldingi komissura (commissura anterior)"
+        "uz": "Oldingi komissura"
       },
       {
         "en": "Posterior commissure",
-        "uz": "Orqa komissura (commissura posterior)"
+        "uz": "Orqa komissura"
       },
       {
-        "en": "Hippocampal commissure (commissure of the fornix)",
-        "uz": "Gippokamp komissurasi (fornix komissurasi)"
+        "en": "Hippocampal commissure",
+        "uz": "Gippokamp komissurasi"
       },
       {
         "en": "Habenular commissure",
@@ -256,8 +256,8 @@
     },
     "options": [
       {
-        "en": "Hippocampal commissure (commissure of the fornix / psalterium)",
-        "uz": "Gippokamp komissurasi (fornix komissurasi)"
+        "en": "Hippocampal commissure",
+        "uz": "Gippokamp komissurasi"
       },
       {
         "en": "Anterior commissure",
@@ -268,8 +268,8 @@
         "uz": "Orqa komissura"
       },
       {
-        "en": "Anterior white commissure",
-        "uz": "Old oq bitishma"
+        "en": "Spinal anterior white commissure",
+        "uz": "Orqa miyaning old oq bitishmasi"
       }
     ],
     "answer": 0,
@@ -296,15 +296,15 @@
     },
     "options": [
       {
-        "en": "Anterior commissure (and the AC–PC line to the posterior commissure)",
-        "uz": "Oldingi komissura (va orqa komissuragacha bo'lgan AC–PC chizig'i)"
+        "en": "Anterior commissure at the front of the third ventricle",
+        "uz": "Uchinchi qorincha oldidagi oldingi komissura"
       },
       {
         "en": "Pineal gland at the posterior wall of the third ventricle",
         "uz": "Uchinchi qorincha orqa devoridagi epifiz (pineal bez)"
       },
       {
-        "en": "Optic chiasm on the floor of the third ventricle",
+        "en": "Optic chiasm along the floor of the third ventricle",
         "uz": "Uchinchi qorincha tubidagi ko'rish kesishmasi"
       },
       {
@@ -337,20 +337,20 @@
     },
     "options": [
       {
-        "en": "Premotor, primary motor (precentral), primary somatosensory (postcentral), and parietal areas",
-        "uz": "Premotor, birlamchi harakat (oldingi markaziy), birlamchi sezgi (orqa markaziy) va tepa sohalarini"
+        "en": "Premotor, primary motor, somatosensory, and parietal cortices",
+        "uz": "Premotor, birlamchi harakat, sezgi va tepa po'stloq sohalarini"
       },
       {
-        "en": "Only the primary visual cortices (cuneus and lingual gyrus) of the occipital poles",
-        "uz": "Faqat ensa qutblarining birlamchi ko'rish po'stlog'ini (cuneus va tilsimon pushta)"
+        "en": "Primary visual cortices (cuneus and lingual gyrus) of the occipital poles",
+        "uz": "Ensa qutblarining birlamchi ko'rish po'stlog'ini (cuneus va tilsimon pushta)"
       },
       {
-        "en": "Only the olfactory bulbs and piriform cortices",
-        "uz": "Faqat hidlov piyozchalari va noksimon po'stloqni"
+        "en": "Olfactory bulbs, piriform cortices, and anterior temporal poles",
+        "uz": "Hidlov piyozchalari, noksimon po'stloq va oldingi chakka qutblarini"
       },
       {
-        "en": "The cerebellar hemispheres across the fourth ventricle",
-        "uz": "To'rtinchi qorincha ustidan miyacha yarim sharlarini"
+        "en": "Entorhinal cortices, subiculum, and anterior hippocampal formations",
+        "uz": "Entorinal po'stloq, subikulum va oldingi gippokamp tuzilmalarini"
       }
     ],
     "answer": 0,
@@ -377,15 +377,15 @@
     },
     "options": [
       {
-        "en": "To prevent epileptic discharges from spreading rapidly from one cerebral hemisphere to the other (especially in drop attacks)",
-        "uz": "Tutqanoq razryadlarining bir yarim shardan ikkinchisiga tez tarqalishini (ayniqsa to'satdan yiqilish xurujlarini) to'xtatish uchun"
+        "en": "To block rapid interhemispheric spread of epileptic discharges",
+        "uz": "Tutqanoq razryadlarining ikki yarim shar aro tarqalishini to'sish uchun"
       },
       {
-        "en": "To drain obstructed cerebrospinal fluid from the third ventricle into the longitudinal fissure",
-        "uz": "Uchinchi qorinchada to'planib qolgan likvorni bo'ylama yoriqqa oqizish uchun"
+        "en": "To drain obstructed CSF from the third ventricle into the fissure",
+        "uz": "Uchinchi qorinchada to'plangan likvorni bo'ylama yoriqqa oqizish uchun"
       },
       {
-        "en": "To interrupt the corticospinal tract before it reaches the internal capsule",
+        "en": "To interrupt the corticospinal tract before the internal capsule",
         "uz": "Kortikospinal traktni ichki kapsulaga yetmasdan uzib qo'yish uchun"
       },
       {
@@ -417,20 +417,20 @@
     },
     "options": [
       {
-        "en": "The genu has many thin, lightly myelinated prefrontal axons while the splenium carries thick, fast visual axons; myelination proceeds from back to front (splenium before genu)",
-        "uz": "Tizzada ingichka, kam miyelinli prefrontal aksonlar ko'p, spleniumda esa yo'g'on, tez o'tkazuvchi ko'rish aksonlari; miyelinlanish orqadan oldinga (splenium tizzadan oldin) boradi"
+        "en": "Genu has thin prefrontal axons and splenium has thick visual axons; myelination runs back to front",
+        "uz": "Tizzada ingichka prefrontal, spleniumda yo'g'on ko'rish aksonlari bor; miyelinlanish orqadan oldinga"
       },
       {
-        "en": "The genu carries only giant Betz motor axons while the splenium is unmyelinated; myelination proceeds from front to back",
-        "uz": "Tizzada faqat yirik Bets harakat aksonlari, splenium esa miyelinsiz; miyelinlanish oldindan orqaga boradi"
+        "en": "Genu carries giant Betz motor axons while splenium is unmyelinated; myelination runs front to back",
+        "uz": "Tizzada yirik Bets harakat aksonlari, splenium esa miyelinsiz; miyelinlanish oldindan orqaga boradi"
       },
       {
-        "en": "All callosal segments have identical axon diameters and myelinate simultaneously at birth",
-        "uz": "Barcha segmentlarda aksonlar diametri bir xil bo'lib, tug'ilish vaqtida bir paytda miyelinlanadi"
+        "en": "All callosal segments share uniform axon diameters and myelinate simultaneously before birth",
+        "uz": "Barcha callosum segmentlarida aksonlar diametri bir xil bo'lib, tug'ilishdan oldin baravar miyelinlanadi"
       },
       {
-        "en": "The body is thicker (12 mm) than the genu and splenium (6 mm) and myelinates last in adulthood",
-        "uz": "Tana qismi (12 mm) tizza va spleniumdan (6 mm) qalinroq bo'lib, eng oxirida voyaga yetganda miyelinlanadi"
+        "en": "The central body is thicker than the genu and splenium and is the last region to myelinate",
+        "uz": "Tana qismi tizza va spleniumdan qalinroq bo'lib, barcha qismlar ichida eng oxirida miyelinlanadi"
       }
     ],
     "answer": 0,
@@ -457,20 +457,20 @@
     },
     "options": [
       {
-        "en": "I: Prefrontal → II: Premotor and supplementary motor → III: Primary motor → IV: Primary sensory → V: Parietal, temporal, and occipital",
-        "uz": "I: Prefrontal → II: Premotor va SMA → III: Birlamchi harakat → IV: Birlamchi sezgi → V: Tepa, chakka va ensa"
+        "en": "I: Prefrontal → II: Premotor/SMA → III: Motor → IV: Sensory → V: Parietal–temporal–occipital",
+        "uz": "I: Prefrontal → II: Premotor/SMA → III: Harakat → IV: Sezgi → V: Tepa–chakka–ensa"
       },
       {
         "en": "I: Primary motor → II: Primary sensory → III: Prefrontal → IV: Temporal → V: Occipital",
         "uz": "I: Birlamchi harakat → II: Birlamchi sezgi → III: Prefrontal → IV: Chakka → V: Ensa"
       },
       {
-        "en": "I: Visual → II: Auditory → III: Somatosensory → IV: Motor → V: Prefrontal",
+        "en": "I: Occipital visual → II: Auditory → III: Somatosensory → IV: Motor → V: Prefrontal",
         "uz": "I: Ko'rish → II: Eshitish → III: Somatosensor → IV: Harakat → V: Prefrontal"
       },
       {
-        "en": "I: Limbic/cingulate → II: Basal ganglia → III: Thalamic → IV: Brainstem → V: Cerebellar",
-        "uz": "I: Limbik/belbog' → II: Bazal yadrolar → III: Talamus → IV: Miya ustuni → V: Miyacha"
+        "en": "I: Orbitofrontal → II: Anterior temporal → III: Insular → IV: Parietal → V: Premotor",
+        "uz": "I: Orbitofrontal → II: Oldingi chakka → III: Orolcha → IV: Tepa → V: Premotor"
       }
     ],
     "answer": 0,
@@ -497,20 +497,20 @@
     },
     "options": [
       {
-        "en": "The patient says they saw nothing (cannot name it), but their left hand accurately selects the key by touch",
-        "uz": "Bemor narsani nomini ayta olmaydi ('hech narsa ko'rmadim' deydi), lekin chap qo'li bilan paypaslab kalitni to'g'ri topib beradi"
+        "en": "Cannot name the key aloud, yet the left hand accurately selects it by touch",
+        "uz": "Kalit nomini ayta olmaydi, ammo chap qo'li bilan paypaslab to'g'ri tanlaydi"
       },
       {
-        "en": "The patient names the key aloud immediately, but neither hand can pick it up",
-        "uz": "Bemor kalit nomini darhol ovoz chiqarib aytadi, lekin hech bir qo'li bilan uni ushlay olmaydi"
+        "en": "Names the key aloud immediately, yet neither hand can identify it by touch",
+        "uz": "Kalit nomini darhol aytadi, lekin hech bir qo'li bilan uni ushlay olmaydi"
       },
       {
-        "en": "The patient's right hand selects the key while the left hand is paralysed",
-        "uz": "Bemorning o'ng qo'li kalitni tanlaydi, chap qo'li esa falaj bo'lib qoladi"
+        "en": "Right hand selects the key by touch while the left hand remains paralysed",
+        "uz": "O'ng qo'li kalitni paypaslab tanlaydi, chap qo'li esa falaj bo'lib qoladi"
       },
       {
-        "en": "The patient is completely blind in the left visual hemifield (left homonymous hemianopia)",
-        "uz": "Bemor chap ko'rish maydonida butunlay ko'rmaydi (chap gomonim gemianopiya)"
+        "en": "Experiences complete blindness across the left visual hemifield (hemianopia)",
+        "uz": "Chap ko'rish maydonida to'liq ko'rlik (chap gomonim gemianopiya) rivojlanadi"
       }
     ],
     "answer": 0,
@@ -537,20 +537,20 @@
     },
     "options": [
       {
-        "en": "Cavum septi pellucidi is commoner in boxers (chronic traumatic encephalopathy) and schizophrenia; de Morsier syndrome combines absent septum pellucidum, optic-nerve hypoplasia, and pituitary hormone deficiency",
-        "uz": "Cavum septi pellucidi bokschilarda (surunkali travmatik ensefalopatiya) va shizofreniyada ko'p; de Morsier sindromi esa septum yo'qligi + ko'rish nervi gipoplaziyasi + gipofiz yetishmovchiligi triadasidir"
+        "en": "Seen in boxers and schizophrenia; de Morsier combines absent septum, optic hypoplasia, and pituitary deficit",
+        "uz": "Bokschilar va shizofreniyada ko'p; de Morsier — septum yo'qligi, optik gipoplaziya va gipofiz yetishmovchiligi"
       },
       {
-        "en": "Cavum septi pellucidi causes acute obstructive hydrocephalus; de Morsier syndrome combines callosal lipoma, cerebellar vermian agenesis, and deafness",
-        "uz": "Cavum septi pellucidi o'tkir gidrotsefaliya beradi; de Morsier sindromi esa qadoqsimon tana lipomasi, chuvalchang agenezi va karlik triadasidir"
+        "en": "Causes acute obstructive hydrocephalus; de Morsier combines callosal lipoma, vermian agenesis, and deafness",
+        "uz": "O'tkir gidrotsefaliya beradi; de Morsier — qadoqsimon tana lipomasi, miyacha chuvalchangi agenezi va karlik"
       },
       {
-        "en": "Cavum septi pellucidi is diagnostic of multiple sclerosis; de Morsier syndrome combines bilateral caudate atrophy, chorea, and optic neuritis",
-        "uz": "Cavum septi pellucidi tarqoq skleroz belgisi; de Morsier sindromi esa kaudat atrofiyasi, xoreya va optik nevritdir"
+        "en": "Diagnostic of multiple sclerosis; de Morsier combines bilateral caudate atrophy, chorea, and optic neuritis",
+        "uz": "Tarqoq sklerozga xos belgi; de Morsier — ikki tomonlama kaudat atrofiyasi, xoreya va ko'rish nervi nevriti"
       },
       {
-        "en": "Cavum septi pellucidi is caused by thiamine deficiency; de Morsier syndrome combines mammillary atrophy, ophthalmoplegia, and ataxia",
-        "uz": "Cavum septi pellucidi tiamin tanqisligidan kelib chiqadi; de Morsier sindromi esa so'rg'ichsimon tana atrofiyasi, oftalmoplegiya va ataksiyadir"
+        "en": "Caused by thiamine deficiency; de Morsier combines mammillary atrophy, ophthalmoplegia, and truncal ataxia",
+        "uz": "Tiamin tanqisligidan kelib chiqadi; de Morsier — so'rg'ichsimon tana atrofiyasi, oftalmoplegiya va ataksiya"
       }
     ],
     "answer": 0,
@@ -578,15 +578,15 @@
     },
     "options": [
       {
-        "en": "Probst bundles (indenting the medial walls of parallel 'racing-car' lateral ventricles, often with an enlarged anterior commissure)",
-        "uz": "Probst tutamlari (parallel 'poyga mashinasi' ko'rinishidagi yon qorinchalarning medial devorini bo'rttiradi; ko'pincha oldingi komissura kattalashadi)"
+        "en": "Probst bundles (uncrossed callosal axons indenting medial ventricular walls)",
+        "uz": "Probst tutamlari (yon qorinchalar medial devorini bo'rttiruvchi aksonlar)"
       },
       {
-        "en": "Dawson fingers (perivenular demyelinating plaques perpendicular to the ventricles)",
-        "uz": "Dawson barmoqlari (qorinchalarga perpendikulyar joylashgan perivenulyar demiyelinizatsiya o'choqlari)"
+        "en": "Dawson fingers (perivenular demyelinating plaques perpendicular to ventricles)",
+        "uz": "Dawson barmoqlari (qorinchalarga perpendikulyar perivenulyar demiyelinizatsiya)"
       },
       {
-        "en": "Striatal cell bridges (pontes grisei caudatolenticulares crossing the internal capsule)",
+        "en": "Striatal cell bridges (grey-matter strands crossing the internal capsule)",
         "uz": "Striatal hujayra ko'prikchalari (ichki kapsulani kesib o'tuvchi kulrang tasmalar)"
       },
       {
@@ -619,12 +619,12 @@
     },
     "options": [
       {
-        "en": "Glioblastoma (IDH-wildtype) and primary CNS lymphoma (most commonly crossing through the genu or splenium)",
-        "uz": "Glioblastoma va markaziy nerv tizimining birlamchi limfomasi (ko'pincha tizza yoki splenium orqali o'tadi)"
+        "en": "Glioblastoma and primary CNS lymphoma",
+        "uz": "Glioblastoma va birlamchi MNT limfomasi"
       },
       {
-        "en": "Vestibular schwannoma and cerebellopontine angle meningioma",
-        "uz": "Vestibulyar shvannoma va ko'prik-miyacha burchagi meningiomasi"
+        "en": "Vestibular schwannoma and CPA meningioma",
+        "uz": "Vestibulyar shvannoma va burchak meningiomasi"
       },
       {
         "en": "Pituitary macroadenoma and craniopharyngioma",
@@ -632,7 +632,7 @@
       },
       {
         "en": "Colloid cyst and fourth-ventricular ependymoma",
-        "uz": "Kolloid kista va to'rtinchi qorincha ependimomasi"
+        "uz": "Kolloid kista va IV qorincha ependimomasi"
       }
     ],
     "answer": 0,
@@ -660,20 +660,20 @@
     },
     "options": [
       {
-        "en": "Ovoid perivenular demyelinating plaques of multiple sclerosis radiating perpendicularly from the callososeptal interface and lateral ventricular walls",
-        "uz": "Tarqoq sklerozda kallozoseptal chegara va yon qorinchalar devoridan perpendikulyar yo'nalgan ovalsimon perivenulyar demiyelinizatsiya pilakchalari"
+        "en": "Perivenular MS plaques radiating perpendicularly from the callososeptal interface",
+        "uz": "Tarqoq sklerozda kallozoseptal chegaradan perpendikulyar chiquvchi demiyelinizatsiya pilakchalari"
       },
       {
-        "en": "Digitations on the head of the hippocampus (pes hippocampi) lost in mesial temporal sclerosis",
-        "uz": "Gippokamp boshidagi 'barmoqchalar' (pes hippocampi) bo'lib, medial chakka sklerozida tekislanib ketadi"
+        "en": "Digitations on the hippocampal head (pes hippocampi) lost in mesial temporal sclerosis",
+        "uz": "Gippokamp boshidagi 'barmoqchalar' (pes hippocampi) — medial chakka sklerozida tekislanadi"
       },
       {
-        "en": "Grey-matter bridges connecting the caudate head and putamen across the anterior limb of the internal capsule",
-        "uz": "Ichki kapsulaning oldingi oyog'i orqali kaudat boshi va putamenni bog'lovchi kulrang modda ko'prikchalari"
+        "en": "Grey-matter bridges linking the caudate head and putamen across the internal capsule",
+        "uz": "Ichki kapsulaning oldingi oyog'i orqali kaudat boshi va putamenni bog'lovchi kulrang ko'prikchalar"
       },
       {
-        "en": "Branching white-matter folia ('arbor vitae') of the cerebellar vermis on sagittal section",
-        "uz": "Sagittal kesimda miyacha chuvalchangining shoxlangan oq moddasi ('hayot daraxti')"
+        "en": "Branching white-matter folia ('arbor vitae') of the cerebellar vermis on sagittal view",
+        "uz": "Sagittal kesimda miyacha chuvalchangining shoxlangan oq moddasi ('hayot daraxti' ko'rinishi)"
       }
     ],
     "answer": 0,
@@ -701,19 +701,19 @@
     },
     "options": [
       {
-        "en": "Cytotoxic lesion of the corpus callosum (CLOCC / mild encephalopathy with a reversible splenial lesion, MERS)",
-        "uz": "Qadoqsimon tana spleniumining sitotoksik o'chog'i (CLOCC / qaytuvchan splenium o'chog'i)"
+        "en": "Cytotoxic lesion of the corpus callosum (CLOCC)",
+        "uz": "Qadoqsimon tana spleniumining sitotoksik o'chog'i (CLOCC)"
       },
       {
-        "en": "Central pontine myelinolysis (osmotic demyelination syndrome)",
-        "uz": "Markaziy pontin miyelinoliz (osmotik demiyelinizatsiya sindromi)"
+        "en": "Central pontine myelinolysis (osmotic demyelination)",
+        "uz": "Markaziy pontin miyelinoliz (osmotik demiyelinizatsiya)"
       },
       {
-        "en": "Hypertrophic olivary degeneration of the Guillain–Mollaret triangle",
+        "en": "Hypertrophic olivary degeneration of the brainstem",
         "uz": "Guillain–Mollaret uchburchagining gipertrofik zaytun degeneratsiyasi"
       },
       {
-        "en": "Bilateral hypoxic pallidal necrosis from carbon monoxide poisoning",
+        "en": "Bilateral hypoxic pallidal necrosis from CO poisoning",
         "uz": "Is gazi bilan zaharlanishda ikki tomonlama gipoksik pallidar nekroz"
       }
     ],
@@ -782,20 +782,20 @@
     },
     "options": [
       {
-        "en": "Tapetum",
-        "uz": "Tapetum (qadoqsimon tana gilami)"
+        "en": "Callosal tapetum",
+        "uz": "Kallozal tapetum"
       },
       {
         "en": "Uncinate fasciculus",
-        "uz": "Ilgaksimon tutam (fasciculus uncinatus)"
+        "uz": "Ilgaksimon tutam"
       },
       {
-        "en": "Cingulum",
-        "uz": "Belbog' tutami (cingulum)"
+        "en": "Cingulum bundle",
+        "uz": "Belbog' tutami"
       },
       {
         "en": "External capsule",
-        "uz": "Tashqi kapsula (capsula externa)"
+        "uz": "Tashqi kapsula"
       }
     ],
     "answer": 0,
@@ -818,23 +818,23 @@
     "type": "mcq",
     "q": {
       "en": "A 66-year-old right-handed man suffers an ischaemic stroke. He can speak fluently, comprehend spoken language, and write a coherent paragraph on command; however, minutes later he cannot read aloud or understand the very sentences he just wrote, and he has a right homonymous hemianopia. Which dual lesion (Dejerine 1892) produces this disconnection syndrome?",
-      "uz": "66 yoshli o'ngاقay bemor ishemik insult o'tkazdi. U ravon gapiradi, og'zaki nutqni tushunadi va aytilgan gapni bexato yoza oladi; biroq bir necha daqiqadan so'ng o'zi yozgan matnni o'qiy olmaydi va o'ng tomonlama gomonim gemianopiyasi bor. Qaysi qo'shma zararlanish (Dejerine 1892) ushbu diskonneksiya sindromini keltirib chiqaradi?"
+      "uz": "66 yoshli o'naqay bemor ishemik insult o'tkazdi. U ravon gapiradi, og'zaki nutqni tushunadi va aytilgan gapni bexato yoza oladi; biroq bir necha daqiqadan so'ng o'zi yozgan matnni o'qiy olmaydi va o'ng tomonlama gomonim gemianopiyasi bor. Qaysi qo'shma zararlanish (Dejerine 1892) ushbu diskonneksiya sindromini keltirib chiqaradi?"
     },
     "options": [
       {
-        "en": "Left occipital visual cortex (V1) plus the splenium of the corpus callosum (left Posterior Cerebral Artery infarction — alexia without agraphia)",
-        "uz": "Chap ensa ko'rish po'stlog'i (V1) va qadoqsimon tana spleniumi (chap orqa miya arteriyasi infarkti — agrafiyasiz sof aleksiya)"
+        "en": "Left occipital cortex (V1) and callosal splenium (left PCA stroke — alexia without agraphia)",
+        "uz": "Chap ensa ko'rish po'stlog'i (V1) va splenium (chap PCA infarkti — agrafiyasiz sof aleksiya)"
       },
       {
-        "en": "Left angular gyrus (BA39) and supramarginal gyrus (BA40) in the middle cerebral artery territory (alexia with agraphia and Gerstmann syndrome)",
-        "uz": "Chap burchak (BA39) va chekka usti (BA40) pushtalari (o'rta miya arteriyasi infarkti — agrafiyali aleksiya va Gerstmann sindromi)"
+        "en": "Left angular and supramarginal gyri (left MCA territory — alexia with agraphia and Gerstmann)",
+        "uz": "Chap burchak (BA39) va chekka usti (BA40) pushtalari (MCA infarkti — agrafiyali aleksiya)"
       },
       {
-        "en": "Genu of the corpus callosum and right dorsolateral prefrontal cortex (anterior cerebral artery infarction)",
-        "uz": "Qadoqsimon tana tizzasi (genu) va o'ng dorsolateral prefrontal po'stloq (oldingi miya arteriyasi infarkti)"
+        "en": "Callosal genu and right dorsolateral prefrontal cortex (anterior cerebral artery infarction)",
+        "uz": "Qadoqsimon tana tizzasi (genu) va o'ng dorsolateral prefrontal po'stloq (ACA infarkti)"
       },
       {
-        "en": "Posterior limb of the left internal capsule and lateral geniculate nucleus (anterior choroidal artery infarction)",
+        "en": "Posterior limb of the left internal capsule and LGN (anterior choroidal artery infarction)",
         "uz": "Chap ichki kapsula orqa oyog'i va lateral tizzasimon tana (oldingi xorioidal arteriya infarkti)"
       }
     ],
@@ -859,24 +859,24 @@
     "type": "mcq",
     "q": {
       "en": "Following an anterior cerebral artery aneurysm rupture and infarction of the anterior body/genu of the corpus callosum and medial frontal cortex, a right-handed patient finds that her left hand involuntarily unbuttons her shirt while her right hand is buttoning it, and she cannot pantomime waving goodbye with her left hand to verbal command (though she can imitate it and does it normally with her right hand). Which callosal disconnection signs are these?",
-      "uz": "Oldingi miya arteriyasi anevrizmasi yorilishi va qadoqsimon tananing oldingi tanasi/tizzasi infarktidan so'ng o'ngاقay bemor o'ng qo'li bilan ko'ylagi tugmasini qadayotganda, chap qo'li uning ixtiyorisiz tugmalarni yechib yuborayotganini payqadi; shuningdek u og'zaki buyruq bo'yicha chap qo'li bilan 'xayrlashish' harakatini ko'rsata olmaydi (o'ng qo'li bilan esa bexato bajaradi). Bu qaysi kallozal diskonneksiya sindromlari?"
+      "uz": "Oldingi miya arteriyasi anevrizmasi yorilishi va qadoqsimon tananing oldingi tanasi/tizzasi infarktidan so'ng o'naqay bemor o'ng qo'li bilan ko'ylagi tugmasini qadayotganda, chap qo'li uning ixtiyorisiz tugmalarni yechib yuborayotganini payqadi; shuningdek u og'zaki buyruq bo'yicha chap qo'li bilan 'xayrlashish' harakatini ko'rsata olmaydi (o'ng qo'li bilan esa bexato bajaradi). Bu qaysi kallozal diskonneksiya sindromlari?"
     },
     "options": [
       {
-        "en": "Callosal alien-hand syndrome (intermanual conflict) and left-hand (callosal) ideomotor apraxia / tactile anomia",
-        "uz": "Kallozal 'begona qo'l' sindromi (qo'llararo ziddiyat) va chap qo'lning kallozal ideomotor apraksiyasi"
+        "en": "Callosal alien-hand sign and left-hand ideomotor apraxia",
+        "uz": "Kallozal 'begona qo'l' belgisi va chap qo'l ideomotor apraksiyasi"
       },
       {
         "en": "Contralateral hemiballismus from subthalamic nucleus infarction",
         "uz": "Subtalamik yadro infarktidan kelib chiqqan qarama-qarshi gemiballizm"
       },
       {
-        "en": "Cruciate hemiplegia at the pyramidal decussation",
-        "uz": "Piramidalar kesishmasidagi xochsimon gemiplegiya"
+        "en": "Cruciate hemiplegia from lesion at the pyramidal decussation",
+        "uz": "Piramidalar kesishmasi zararlanishidagi xochsimon gemiplegiya"
       },
       {
-        "en": "Optic ataxia and Bálint syndrome from bilateral superior parietal lobule infarction",
-        "uz": "Ikki tomonlama yuqori tepa bo'lakchasi infarktidagi optik ataksiya va Balint sindromi"
+        "en": "Optic ataxia and Bálint syndrome from bilateral parietal stroke",
+        "uz": "Ikki tomonlama tepa bo'lagi infarktidagi optik ataksiya va Balint sindromi"
       }
     ],
     "answer": 0,
@@ -903,20 +903,20 @@
     },
     "options": [
       {
-        "en": "Marchiafava–Bignami disease (primary toxic/nutritional demyelination and necrosis of the corpus callosum)",
-        "uz": "Marchiafava–Bignami kasalligi (qadoqsimon tananing birlamchi demiyelinizatsiyasi va nekrozi)"
+        "en": "Marchiafava–Bignami disease (toxic/nutritional callosal demyelination)",
+        "uz": "Marchiafava–Bignami kasalligi (qadoqsimon tana demiyelinizatsiyasi)"
       },
       {
-        "en": "Subacute combined degeneration of the dorsal and lateral columns (vitamin B12 deficiency)",
-        "uz": "Orqa va lateral ustunlarning subakut qo'shma degeneratsiyasi (B12 vitamini tanqisligi)"
+        "en": "Subacute combined degeneration of dorsal and lateral spinal columns",
+        "uz": "Orqa va lateral ustunlarning subakut qo'shma degeneratsiyasi"
       },
       {
-        "en": "Carbon monoxide delayed post-hypoxic globus pallidus necrosis",
-        "uz": "Is gazi bilan zaharlanishdan keyingi ikki tomonlama rangpar shar nekrozi"
+        "en": "Delayed post-hypoxic globus pallidus necrosis from carbon monoxide",
+        "uz": "Is gazi bilan zaharlanishdan keyingi rangpar shar nekrozi"
       },
       {
-        "en": "Progressive supranuclear palsy ('hummingbird sign' of midbrain tegmental atrophy)",
-        "uz": "Progressiv supranuklear falaj (o'rta miya atrofiyasining 'kolibri belgisi')"
+        "en": "Progressive supranuclear palsy with midbrain tegmental atrophy",
+        "uz": "Progressiv supranuklear falaj (o'rta miya tegmentumi atrofiyasi)"
       }
     ],
     "answer": 0,
@@ -944,20 +944,20 @@
     },
     "options": [
       {
-        "en": "A small anterior callosal incision crosses prefrontal/premotor fibres (regions I–II) and is clinically well tolerated when the fornices and pericallosal arteries are spared, whereas cutting the splenium (region V) risks permanent visual/reading disconnection (alexia)",
-        "uz": "Oldingi tana qismidagi kichik kesim prefrontal/premotor tolalarga (I–II sektorlar) to'g'ri keladi va fornix hamda perikallozal arteriyalar saqlansa og'ir nevrologik nuqson bermaydi; spleniumni (V sektor) kesish esa ko'rish va o'qish diskonneksiyasi (aleksiya) xavfini tug'diradi"
+        "en": "Anterior body carries prefrontal/premotor fibres (I–II) safely, whereas splenium transection risks visual alexia",
+        "uz": "Oldingi tana prefrontal/premotor tolalarni (I–II) o'tkazadi; splenium kesilishi esa ko'rish aleksiyasi xavfini beradi"
       },
       {
-        "en": "The anterior body of the corpus callosum contains no axons at all, whereas the splenium contains the corticospinal tract",
-        "uz": "Qadoqsimon tananing oldingi tana qismida umuman aksonlar bo'lmaydi, spleniumdan esa kortikospinal trakt o'tadi"
+        "en": "Anterior body carries only unmyelinated associative fibres, whereas the splenium carries descending corticospinal motor fibres",
+        "uz": "Oldingi tana faqat miyelinsiz assotsiativ tolalarni o'tkazadi; splenium esa pastga tushuvchi kortikospinal motor tolalarni tashiydi"
       },
       {
-        "en": "The splenium lies directly in front of the foramen of Monro, whereas the genu lies behind the pineal gland",
-        "uz": "Splenium Monro teshigining bevosita oldida, tizza esa epifizning orqasida joylashgan"
+        "en": "Anterior body lies directly over the third-ventricular floor, whereas the splenium is tightly fused to the anterior commissure",
+        "uz": "Oldingi tana bevosita uchinchi qorincha tubi ustida yotadi; splenium esa oldingi komissura bilan zich birikib ketgan bo'ladi"
       },
       {
-        "en": "Cutting the anterior body transects the optic chiasm, whereas cutting the splenium opens the fourth ventricle",
-        "uz": "Oldingi tanani kesish ko'rish kesishmasini uzadi, spleniumni kesish esa IV qorinchani ochadi"
+        "en": "Anterior body receives collateral blood supply from the MCA, whereas cutting the splenium necessarily tears the vein of Rosenthal",
+        "uz": "Oldingi tana o'rta miya arteriyasidan kollateral qon oladi; spleniumni kesish esa muqarrar ravishda Rozental venasini yirtadi"
       }
     ],
     "answer": 0,
@@ -985,19 +985,19 @@
     },
     "options": [
       {
-        "en": "Bed nucleus of the stria terminalis (BNST) capping it dorsally, ventral pallidum beneath it medially, and nucleus basalis of Meynert (Ch4) beneath it further laterally in the sublenticular substantia innominata",
-        "uz": "Ustida stria terminalis to'shak yadrosi (BNST), ostida medialroqda ventral pallidum va ostida lateralroqda (sublentikulyar substantia innominatada) Meynertning bazal yadrosi (Ch4)"
+        "en": "BNST dorsally, ventral pallidum ventromedially, and nucleus basalis of Meynert ventrolaterally",
+        "uz": "Ustida BNST, ostida medialroqda ventral pallidum va ostida lateralroqda Meynertning bazal yadrosi"
       },
       {
-        "en": "Subthalamic nucleus (STN) above it, red nucleus medially, and substantia nigra pars reticulata below it",
+        "en": "Subthalamic nucleus dorsally, red nucleus ventromedially, and substantia nigra pars reticulata below",
         "uz": "Ustida subtalamik yadro (STN), medialda qizil yadro va ostida qora moddaning to'rsimon qismi"
       },
       {
-        "en": "Habenula above it, pineal gland medially, and pretectal area below it",
-        "uz": "Ustida habenula, medialda epifiz va ostida pretektal soha"
+        "en": "Habenular complex dorsally, pineal gland ventromedially, and pretectal nuclear area ventrolaterally",
+        "uz": "Ustida habenula majmuasi, medialda epifiz bezi va ostida lateralroqda pretektal yadro sohasi"
       },
       {
-        "en": "Dentate nucleus laterally, emboliform/globose nuclei in the middle, and fastigial nucleus medially",
+        "en": "Dentate nucleus dorsolaterally, interposed nuclei medially, and fastigial nucleus along the midline",
         "uz": "Lateralda tishsimon yadro, o'rtada tiqinsimon/sharsimon yadrolar va medialda chodirsimon yadro"
       }
     ],

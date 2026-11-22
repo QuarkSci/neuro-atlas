@@ -10,26 +10,26 @@
     },
     "options": [
       {
-        "en": "On the floor of the temporal (inferior) horn of the lateral ventricle; its name means 'seahorse'",
-        "uz": "Yon qorincha chakka (pastki) shoxining tubida; nomi 'dengiz oti' degan ma'noni anglatadi"
+        "en": "Floor of the temporal horn of the lateral ventricle; 'seahorse'",
+        "uz": "Yon qorincha chakka shoxining tubida; 'dengiz oti'"
       },
       {
-        "en": "In the roof of the frontal (anterior) horn of the lateral ventricle; its name means 'almond'",
-        "uz": "Yon qorincha oldingi (frontal) shoxining tomida; nomi 'bodom' degan ma'noni anglatadi"
+        "en": "Roof of the frontal horn of the lateral ventricle; 'almond'",
+        "uz": "Yon qorincha frontal shoxining tomida; 'bodom'"
       },
       {
-        "en": "In the lateral wall of the third ventricle; its name means 'inner chamber'",
-        "uz": "Uchinchi qorinchaning yon devorida; nomi 'ichki xona' degan ma'noni anglatadi"
+        "en": "Lateral wall of the third ventricle; 'inner chamber'",
+        "uz": "Uchinchi qorinchaning yon devorida; 'ichki xona'"
       },
       {
-        "en": "In the floor of the fourth ventricle; its name means 'bridge'",
-        "uz": "To'rtinchi qorinchaning tubida; nomi 'ko'prik' degan ma'noni anglatadi"
+        "en": "Medial wall of the occipital horn of the lateral ventricle; 'arch'",
+        "uz": "Yon qorincha ensa shoxining medial devorida; 'ravoq'"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The hippocampus is a curved fold of three-layered archicortex inside the medial temporal lobe forming the floor of the temporal horn of the lateral ventricle; Arantius (1587) named it 'hippocampus' (Greek for seahorse) after its shape in section.",
-      "uz": "Gippokamp — chakka bo'lagi ichidagi egilgan 3 qavatli arxikorteks burmasi bo'lib, yon qorincha chakka shoxining tubini hosil qiladi; Arantius (1587) uni kesimdagi shakliga qarab yunoncha 'dengiz oti' deb atagan."
+      "en": "The hippocampus is a curved fold of three-layered archicortex inside the medial temporal lobe forming the floor of the temporal (inferior) horn of the lateral ventricle; Arantius (1587) named it 'hippocampus' (Greek for seahorse) after its shape in section.",
+      "uz": "Gippokamp — chakka bo'lagi ichidagi egilgan 3 qavatli arxikorteks burmasi bo'lib, yon qorincha chakka (pastki) shoxining tubini hosil qiladi; Arantius (1587) uni kesimdagi shakliga qarab yunoncha 'dengiz oti' deb atagan."
     },
     "refs": ["hippocampus-proper", "lateral-ventricle"],
     "sources": [
@@ -50,8 +50,8 @@
     },
     "options": [
       {
-        "en": "Head (with pes hippocampi digitations behind the amygdala), body, and tail (rising beneath the splenium)",
-        "uz": "Boshi (amigdala ortida, 'barmoqchalar' — pes hippocampi bilan), tanasi va dumi (splenium ostiga ko'tariladi)"
+        "en": "Head, body, and tail",
+        "uz": "Boshi, tanasi va dumi"
       },
       {
         "en": "Rostrum, genu, and splenium",
@@ -59,11 +59,11 @@
       },
       {
         "en": "Fimbria, crus, and column",
-        "uz": "Fimbriya, oyoq (crus) va ustun"
+        "uz": "Fimbriya, oyoq va ustun"
       },
       {
         "en": "Core, shell, and ventral pallidum",
-        "uz": "O'zak (core), qobiq (shell) va ventral pallidum"
+        "uz": "O'zak, qobiq va ventral pallidum"
       }
     ],
     "answer": 0,
@@ -90,20 +90,20 @@
     },
     "options": [
       {
-        "en": "Fornix (fimbria → crus → body → column)",
-        "uz": "Gumbaz — fornix (fimbriya → oyoq → tana → ustun)"
+        "en": "Fornix (bilateral arching hippocampal efferent tract)",
+        "uz": "Fornix (gippokampning juft ravoqsimon chiqish trakti)"
       },
       {
-        "en": "Stria medullaris thalami",
-        "uz": "Talamusning miya yo'li (stria medullaris thalami)"
+        "en": "Stria medullaris thalami (epithalamic afferent tract)",
+        "uz": "Stria medullaris thalami (epitalamik kirish trakti)"
       },
       {
-        "en": "Internal capsule",
-        "uz": "Ichki kapsula"
+        "en": "Stria terminalis (amygdaloid efferent arch)",
+        "uz": "Stria terminalis (amigdalaning ravoqsimon chiqish yo'li)"
       },
       {
-        "en": "Medial lemniscus",
-        "uz": "Medial lemnisk"
+        "en": "Cingulum bundle (medial hemispheric association tract)",
+        "uz": "Cingulum tutami (medial yarim shar assotsiativ trakti)"
       }
     ],
     "answer": 0,
@@ -132,7 +132,7 @@
     "options": [
       {
         "en": "Fimbria → crus → body → column",
-        "uz": "Fimbriya → oyoq (crus) → tana (corpus) → ustun (columna)"
+        "uz": "Fimbriya → oyoq → tana → ustun"
       },
       {
         "en": "Column → body → crus → fimbria",
@@ -143,8 +143,8 @@
         "uz": "Tumshuq → tizza → tana → splenium"
       },
       {
-        "en": "Head → neck → body → tail",
-        "uz": "Bosh → bo'yin → tana → dum"
+        "en": "Alveus → column → body → fimbria",
+        "uz": "Alveus → ustun → tana → fimbriya"
       }
     ],
     "answer": 0,
@@ -167,25 +167,25 @@
     "topic": "limbic",
     "type": "mcq",
     "q": {
-      "en": "What is the correct sequence of the seven stations in the classic Papez circuit (1937) for episodic memory?",
-      "uz": "Epizodik xotiraning klassik Papez halqasidagi (1937) yetti bekat qanday ketma-ketlikda joylashgan?"
+      "en": "What is the correct sequence of stations in the classic Papez circuit (1937) for episodic memory?",
+      "uz": "Epizodik xotiraning klassik Papez halqasidagi (1937) bekatlar qanday ketma-ketlikda joylashgan?"
     },
     "options": [
       {
-        "en": "Hippocampus → fornix → mammillary body → mammillothalamic tract → anterior thalamic nucleus → cingulate gyrus → parahippocampal/entorhinal cortex → hippocampus",
-        "uz": "Gippokamp → fornix → so'rg'ichsimon tana → mamillotalamik trakt → talamusning oldingi yadrosi → belbog' pushtasi → parahippokampal/entorinal po'stloq → gippokamp"
+        "en": "Hippocampus → fornix → mammillary body → mammillothalamic tract → anterior thalamus → cingulate gyrus → parahippocampal cortex",
+        "uz": "Gippokamp → fornix → so'rg'ichsimon tana → mamillotalamik trakt → oldingi talamus → belbog' pushtasi → parahippokampal po'stloq"
       },
       {
-        "en": "Amygdala → stria terminalis → caudate nucleus → putamen → globus pallidus → VPL thalamus → precentral gyrus",
-        "uz": "Amigdala → stria terminalis → dumli yadro → putamen → rangpar shar → VPL talamus → oldingi markaziy pushta"
+        "en": "Hippocampus → stria terminalis → mammillary body → stria medullaris → mediodorsal thalamus → insular cortex → entorhinal cortex",
+        "uz": "Gippokamp → stria terminalis → so'rg'ichsimon tana → stria medullaris → mediodorsal talamus → orolcha po'stlog'i → entorinal po'stloq"
       },
       {
-        "en": "Hippocampus → anterior commissure → mediodorsal thalamus → orbitofrontal cortex → nucleus accumbens → VTA → hippocampus",
-        "uz": "Gippokamp → oldingi komissura → mediodorsal talamus → orbitofrontal po'stloq → accumbens yadrosi → VTA → gippokamp"
+        "en": "Amygdala → fornix → septal nuclei → mammillothalamic tract → pulvinar thalamus → orbitofrontal cortex → parahippocampal cortex",
+        "uz": "Amigdala → fornix → septal yadrolar → mamillotalamik trakt → pulvinar talamus → orbitofrontal po'stloq → parahippokampal po'stloq"
       },
       {
-        "en": "Dentate nucleus → superior cerebellar peduncle → red nucleus → central tegmental tract → inferior olive → inferior cerebellar peduncle",
-        "uz": "Tishsimon yadro → yuqori miyacha oyoqchasi → qizil yadro → markaziy tegmental trakt → pastki zaytun → pastki miyacha oyoqchasi"
+        "en": "Hippocampus → anterior commissure → mediodorsal thalamus → uncinate fasciculus → orbitofrontal cortex → nucleus accumbens → amygdala",
+        "uz": "Gippokamp → oldingi komissura → mediodorsal talamus → ilmoqsimon tutam → orbitofrontal po'stloq → accumbens yadrosi → amigdala"
       }
     ],
     "answer": 0,
@@ -193,7 +193,17 @@
       "en": "James Papez (1937) traced a closed loop: hippocampal formation (subiculum) → fornix → mammillary body → mammillothalamic tract (of Vicq d'Azyr) → anterior nuclear group of the thalamus → cingulate gyrus (via the cingulum) → parahippocampal/entorhinal cortex → perforant path back to the hippocampus.",
       "uz": "1937 yilda James Papez yopiq halqani tasvirlagan: gippokamp → fornix → so'rg'ichsimon tana → mamillotalamik trakt → talamusning oldingi yadrosi → belbog' pushtasi (cingulum orqali) → parahippokampal/entorinal po'stloq → va yana gippokamp."
     },
-    "refs": ["hippocampus-proper", "fornix-of-forebrain", "mammillary-body", "mammillothalamic-tract-of-hypothalamus", "j-av", "cingulate-gyrus", "parahippocampal-gyrus", "th-an", "mtt"],
+    "refs": [
+      "hippocampus-proper",
+      "fornix-of-forebrain",
+      "mammillary-body",
+      "mammillothalamic-tract-of-hypothalamus",
+      "j-av",
+      "cingulate-gyrus",
+      "parahippocampal-gyrus",
+      "th-an",
+      "mtt"
+    ],
     "plate": "thalamus-nuclei-map",
     "sources": [
       {
@@ -213,26 +223,26 @@
     },
     "options": [
       {
-        "en": "Mammillothalamic tract (of Vicq d'Azyr)",
-        "uz": "Mamillotalamik trakt (Vicq d'Azyr tutami)"
+        "en": "Mammillothalamic tract",
+        "uz": "Mamillotalamik trakt"
       },
       {
         "en": "Stria medullaris thalami",
-        "uz": "Talamusning miya yo'li (stria medullaris)"
+        "uz": "Stria medullaris thalami"
       },
       {
-        "en": "Stria terminalis",
-        "uz": "Chegara yo'li (stria terminalis)"
+        "en": "Mammillotegmental tract",
+        "uz": "Mamillotegmental trakt"
       },
       {
-        "en": "Central tegmental tract",
-        "uz": "Markaziy tegmental trakt"
+        "en": "Ventral amygdalofugal tract",
+        "uz": "Ventral amigdalofugal trakt"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The mammillothalamic tract arises from the medial (and lateral) mammillary nuclei and ascends through the hypothalamus and internal medullary lamina to terminate in the anterior thalamic nuclei (AV, AM, AD).",
-      "uz": "Mamillotalamik trakt so'rg'ichsimon tanadan boshlanib, gipotalamus orqali yuqoriga — talamusning oldingi yadrolar guruhiga (AV, AM, AD) ko'tariladi va Papez halqasining 4-bekatini tashkil etadi."
+      "en": "The mammillothalamic tract (of Vicq d'Azyr) arises from the medial and lateral mammillary nuclei and ascends through the hypothalamus and internal medullary lamina to terminate in the anterior thalamic nuclei (AV, AM, AD).",
+      "uz": "Mamillotalamik trakt (Vicq d'Azyr tutami) so'rg'ichsimon tanadan boshlanib, gipotalamus orqali yuqoriga — talamusning oldingi yadrolar guruhiga (AV, AM, AD) ko'tariladi va Papez halqasining 4-bekatini tashkil etadi."
     },
     "refs": ["mammillothalamic-tract-of-hypothalamus", "mammillary-body", "j-av", "mtt", "mb", "th-an"],
     "plate": "hypothalamus-mammillary",
@@ -254,19 +264,19 @@
     },
     "options": [
       {
-        "en": "Amygdala",
-        "uz": "Bodomsimon tana (amigdala)"
+        "en": "Amygdaloid complex",
+        "uz": "Amigdala (bodomsimon tana)"
       },
       {
         "en": "Claustrum",
         "uz": "Klaustrum (to'siq)"
       },
       {
-        "en": "Pulvinar",
-        "uz": "Pulvinar (yostiqcha)"
+        "en": "Subiculum",
+        "uz": "Subikulum (poydevor)"
       },
       {
-        "en": "Habenula",
+        "en": "Habenular complex",
         "uz": "Habenula (yuganak)"
       }
     ],
@@ -290,31 +300,31 @@
     "topic": "limbic",
     "type": "mcq",
     "q": {
-      "en": "Which five structures all follow the same developmental C-shaped curve around the thalamus and insula?",
+      "en": "Which five structures follow the same developmental C-shaped curve around the thalamus and insula?",
       "uz": "Yarim sharning embrional rivojlanishi tufayli talamus va orolcha atrofida bir xil C-shaklli egrilikni takrorlovchi beshta tuzilma qaysilar?"
     },
     "options": [
       {
-        "en": "Lateral ventricle, caudate nucleus, fornix, stria terminalis, and hippocampus (plus corpus callosum/cingulate)",
-        "uz": "Yon qorincha, dumli yadro, fornix, stria terminalis va gippokamp (hamda qadoqsimon tana/belbog' pushtasi)"
+        "en": "Lateral ventricle, caudate nucleus, fornix, stria terminalis, and hippocampus",
+        "uz": "Yon qorincha, dumli yadro, fornix, stria terminalis va gippokamp"
       },
       {
         "en": "Third ventricle, putamen, globus pallidus, subthalamic nucleus, and red nucleus",
         "uz": "Uchinchi qorincha, putamen, rangpar shar, subtalamik yadro va qizil yadro"
       },
       {
-        "en": "Fourth ventricle, pons, medulla, inferior olive, and pyramid",
-        "uz": "To'rtinchi qorincha, ko'prik, uzunchoq miya, pastki zaytun va piramida"
+        "en": "Fourth ventricle, pontine nuclei, inferior olive, dentate nucleus, and pyramid",
+        "uz": "To'rtinchi qorincha, ko'prik yadrolari, pastki zaytun, tishsimon yadro va piramida"
       },
       {
-        "en": "Cerebral aqueduct, superior colliculus, inferior colliculus, pineal gland, and habenula",
-        "uz": "Silviy suv yo'li, yuqori do'nglik, pastki do'nglik, epifiz va habenula"
+        "en": "Cerebral aqueduct, superior colliculus, pulvinar, pineal gland, and habenula",
+        "uz": "Silviy suv yo'li, yuqori do'nglik, pulvinar, epifiz bezi va habenula"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As the telencephalic hemisphere expands forward, up, back, and then down and forward around the insula, the lateral ventricle, caudate nucleus, fornix–hippocampus, and stria terminalis (from the amygdala) are all swept into matching C-curves.",
-      "uz": "Rivojlanish davomida yarim shar orolcha atrofida oldinga, yuqoriga, orqaga va pastga-oldinga buralib o'sgani uchun yon qorincha, dumli yadro, fornix, stria terminalis va gippokamp bir xil C-egrilikni hosil qiladi."
+      "en": "As the telencephalic hemisphere expands forward, up, back, and then down and forward around the insula, the lateral ventricle, caudate nucleus, fornix–hippocampus, and stria terminalis (from the amygdala) are all swept into matching C-curves alongside the corpus callosum and cingulate gyrus.",
+      "uz": "Rivojlanish davomida yarim shar orolcha atrofida oldinga, yuqoriga, orqaga va pastga-oldinga buralib o'sgani uchun yon qorincha, dumli yadro, fornix, stria terminalis va gippokamp (hamda qadoqsimon tana va belbog' pushtasi) bir xil C-egrilikni hosil qiladi."
     },
     "refs": ["lateral-ventricle", "caudate-nucleus", "fornix-of-forebrain", "stria-terminalis", "hippocampus-proper"],
     "plate": "bg-pallidal",
@@ -336,20 +346,20 @@
     },
     "options": [
       {
-        "en": "Three layers (molecular, pyramidal/granule cell, and polymorphic layers)",
-        "uz": "Uch qavatdan (molekulyar, piramidal/donador va polimorf qavatlar)"
+        "en": "Three layers (molecular, pyramidal/granule, and polymorphic)",
+        "uz": "Uch qavat (molekulyar, piramidal/donador va polimorf)"
       },
       {
-        "en": "Six layers identical to the precentral gyrus",
-        "uz": "Oldingi markaziy pushta bilan bir xil olti qavatdan"
+        "en": "Six layers (matching the organization of the precentral gyrus)",
+        "uz": "Olti qavat (oldingi markaziy pushta neokorteksi bilan bir xil)"
       },
       {
-        "en": "Ten layers identical to the retina",
-        "uz": "To'r parda kabi o'n qavatdan"
+        "en": "Five layers (transitional mesocortex lacking an internal granular layer)",
+        "uz": "Besh qavat (ichki donador qavatsiz o'tuvchi mezokorteks)"
       },
       {
-        "en": "One single unlayered nuclear sheet",
-        "uz": "Qavatsiz bitta yadro qatlamidan"
+        "en": "Four layers (agranular paleocortex found in the piriform lobe)",
+        "uz": "To'rt qavat (noksimon bo'lakdagi agranulyar paleokorteks)"
       }
     ],
     "answer": 0,
@@ -376,20 +386,20 @@
     },
     "options": [
       {
-        "en": "Parahippocampal gyrus (with the uncus at its anterior hook)",
-        "uz": "Gippokamp yoni pushtasi — parahippokampal pushta (oldingi uchi ilmoq — uncus)"
+        "en": "Parahippocampal gyrus",
+        "uz": "Parahippokampal pushta"
       },
       {
-        "en": "Superior temporal gyrus (Heschl's and Wernicke's areas)",
-        "uz": "Yuqori chakka pushtasi (Geshl va Vernike sohalari)"
+        "en": "Fusiform gyrus",
+        "uz": "Urchuqsimon pushta"
       },
       {
-        "en": "Straight gyrus (gyrus rectus)",
-        "uz": "To'g'ri pushta (gyrus rectus)"
+        "en": "Inferior temporal gyrus",
+        "uz": "Pastki chakka pushtasi"
       },
       {
-        "en": "Angular gyrus",
-        "uz": "Burchak pushtasi"
+        "en": "Superior temporal gyrus",
+        "uz": "Yuqori chakka pushtasi"
       }
     ],
     "answer": 0,
@@ -416,20 +426,20 @@
     },
     "options": [
       {
-        "en": "Entorhinal cortex → (perforant path) → dentate gyrus → (mossy fibres) → CA3 → (Schaffer collaterals) → CA1 → subiculum → entorhinal cortex",
-        "uz": "Entorinal po'stloq → (perforant yo'l) → tishsimon pushta → (moxsimon tolalar) → CA3 → (Schaffer kollaterallari) → CA1 → subikulum → entorinal po'stloq"
+        "en": "Entorhinal cortex → perforant path → dentate gyrus → mossy fibres → CA3 → Schaffer collaterals → CA1 → subiculum",
+        "uz": "Entorinal po'stloq → perforant yo'l → tishsimon pushta → moxsimon tolalar → CA3 → Schaffer kollaterallari → CA1 → subikulum"
       },
       {
-        "en": "Subiculum → (Schaffer collaterals) → CA1 → (perforant path) → CA3 → (mossy fibres) → dentate gyrus → entorhinal cortex",
-        "uz": "Subikulum → (Schaffer kollaterallari) → CA1 → (perforant yo'l) → CA3 → (moxsimon tolalar) → tishsimon pushta → entorinal po'stloq"
+        "en": "Subiculum → Schaffer collaterals → CA1 → perforant path → CA3 → mossy fibres → dentate gyrus → entorhinal cortex",
+        "uz": "Subikulum → Schaffer kollaterallari → CA1 → perforant yo'l → CA3 → moxsimon tolalar → tishsimon pushta → entorinal po'stloq"
       },
       {
-        "en": "Dentate gyrus → (stria terminalis) → amygdala → (ansa lenticularis) → CA1 → (fornix) → entorhinal cortex",
-        "uz": "Tishsimon pushta → (stria terminalis) → amigdala → (ansa lenticularis) → CA1 → (fornix) → entorinal po'stloq"
+        "en": "Entorhinal cortex → mossy fibres → CA1 → perforant path → dentate gyrus → Schaffer collaterals → CA3 → subiculum",
+        "uz": "Entorinal po'stloq → moxsimon tolalar → CA1 → perforant yo'l → tishsimon pushta → Schaffer kollaterallari → CA3 → subikulum"
       },
       {
-        "en": "CA1 → CA2 → CA3 → dentate gyrus → mammillary body → subiculum",
-        "uz": "CA1 → CA2 → CA3 → tishsimon pushta → so'rg'ichsimon tana → subikulum"
+        "en": "Dentate gyrus → perforant path → entorhinal cortex → Schaffer collaterals → CA3 → mossy fibres → CA1 → subiculum",
+        "uz": "Tishsimon pushta → perforant yo'l → entorinal po'stloq → Schaffer kollaterallari → CA3 → moxsimon tolalar → CA1 → subikulum"
       }
     ],
     "answer": 0,
@@ -465,11 +475,11 @@
       },
       {
         "en": "Dentate gyrus granule cell layer",
-        "uz": "Tishsimon pushtaning donador hujayralar qavati"
+        "uz": "Tishsimon pushtaning donador qavati"
       },
       {
-        "en": "Fimbria of the fornix",
-        "uz": "Fornix fimbriyasi"
+        "en": "Subiculum pyramidal cell layer",
+        "uz": "Subikulumning piramidal qavati"
       }
     ],
     "answer": 0,
@@ -496,26 +506,26 @@
     },
     "options": [
       {
-        "en": "Transentorhinal and entorhinal cortex on the anterior parahippocampal gyrus",
-        "uz": "Oldingi parahippokampal pushtadagi transentorinal va entorinal po'stloqda"
+        "en": "Transentorhinal and entorhinal cortex (BA28)",
+        "uz": "Transentorinal va entorinal po'stloqda (BA28)"
       },
       {
-        "en": "Primary visual cortex (V1, hOc1) along the calcarine sulcus",
-        "uz": "Kalkarin egat bo'yidagi birlamchi ko'rish po'stlog'ida (V1)"
+        "en": "Posterior cingulate and retrosplenial cortex",
+        "uz": "Orqa belbog' va retrosplenial po'stloqda"
       },
       {
-        "en": "Primary motor cortex (BA4) on the precentral gyrus",
-        "uz": "Oldingi markaziy pushtadagi birlamchi harakat po'stlog'ida (BA4)"
+        "en": "Anterior orbitofrontal and insular cortex",
+        "uz": "Oldingi orbitofrontal va orolcha po'stlog'ida"
       },
       {
-        "en": "Cerebellar flocculonodular lobe (lobule X)",
-        "uz": "Miyachaning flokkulonodulyar bo'lagida (X bo'lakcha)"
+        "en": "Primary visual and calcarine cortex (V1)",
+        "uz": "Birlamchi ko'rish va kalkarin po'stlog'ida"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In Braak staging of Alzheimer disease, neurofibrillary tangles appear first in the transentorhinal and entorhinal cortex (stages I–II), then invade the subiculum and CA1 of the hippocampus (stages III–IV), and finally spread to the neocortex (stages V–VI).",
-      "uz": "Altsgeymer kasalligida tau patologiyasi eng avval (Braak I–II) transentorinal va entorinal po'stloqda boshlanadi, so'ngra subikulum va gippokampning CA1 sektoriga (III–IV) o'tadi. Gippokamp hajmi Altsgeymerda yiliga 3–5 % ga (normal qarishda ~1 %) kichrayadi."
+      "en": "In Braak staging of Alzheimer disease, neurofibrillary tangles appear first in the transentorhinal and entorhinal cortex on the anterior parahippocampal gyrus (stages I–II), then invade the subiculum and CA1 of the hippocampus (stages III–IV), and finally spread to the neocortex (stages V–VI).",
+      "uz": "Altsgeymer kasalligida tau patologiyasi eng avval (Braak I–II) oldingi parahippokampal pushtadagi transentorinal va entorinal po'stloqda boshlanadi, so'ngra subikulum va gippokampning CA1 sektoriga (III–IV) o'tadi. Gippokamp hajmi Altsgeymerda yiliga 3–5 % ga (normal qarishda ~1 %) kichrayadi."
     },
     "refs": ["j-area-ec", "j-hippocampal-region", "parahippocampal-gyrus", "hippocampus-proper"],
     "sources": [
@@ -536,20 +546,20 @@
     },
     "options": [
       {
-        "en": "Postcommissural fibres pass behind the anterior commissure to the mammillary bodies (and anterior thalamus); precommissural fibres pass in front of it to the septal nuclei and nucleus accumbens",
-        "uz": "Postkommissural tolalar oldingi komissura ortidan so'rg'ichsimon tanalarga boradi; prekommissural tolalar esa komissura oldidan septal yadrolar va accumbens yadrosiga yo'naladi"
+        "en": "Postcommissural passes behind to mammillary bodies; precommissural passes in front to septal nuclei and nucleus accumbens",
+        "uz": "Postkommissural qism ortidan so'rg'ichsimon tanalarga; prekommissural qism oldidan septal yadrolar va accumbensga boradi"
       },
       {
-        "en": "Postcommissural fibres end in the putamen; precommissural fibres end in the red nucleus",
-        "uz": "Postkommissural tolalar putamenda, prekommissural tolalar esa qizil yadroda tugaydi"
+        "en": "Postcommissural passes in front to septal nuclei; precommissural passes behind to mammillary bodies and anterior thalamus",
+        "uz": "Postkommissural qism oldidan septal yadrolarga; prekommissural qism ortidan so'rg'ichsimon tanalar va talamusga boradi"
       },
       {
-        "en": "Both precommissural and postcommissural fibres cross in the posterior commissure to reach the pineal gland",
-        "uz": "Ikkala tola tutami ham orqa komissurada kesishib epifizga boradi"
+        "en": "Postcommissural descends to the habenular nuclei; precommissural curves laterally into the basolateral amygdala and insula",
+        "uz": "Postkommissural qism habenular yadrolarga tushadi; prekommissural qism lateralga bazolateral amigdala va orolchaga boradi"
       },
       {
-        "en": "Postcommissural fibres enter the optic chiasm; precommissural fibres form the corticospinal tract",
-        "uz": "Postkommissural tolalar ko'rish kesishmasiga kiradi, prekommissural tolalar esa kortikospinal traktni hosil qiladi"
+        "en": "Both bundles pass behind the anterior commissure, then split to innervate the mediodorsal thalamus and hypothalamus",
+        "uz": "Ikkala tutam ham oldingi komissura ortidan o'tib, so'ngra mediodorsal talamus va gipotalamusga ajralib tugaydi"
       }
     ],
     "answer": 0,
@@ -572,25 +582,25 @@
     "topic": "limbic",
     "type": "mcq",
     "q": {
-      "en": "Why does a coronal brain section through the mid-thalamus or pallidum (e.g. plate B3 or B4) show the caudate nucleus cut in TWO separate places in each hemisphere?",
-      "uz": "Nima sababdan o'rta talamus yoki pallidum orqali o'tgan bitta koronal kesimda (masalan, B3 yoki B4 plastinkasida) dumli yadro (kaudat) har yarim sharda IKKI marta kesilgan holda ko'rinadi?"
+      "en": "Why does a coronal brain section through the mid-thalamus or pallidum (plate B3 or B4) show the caudate nucleus cut in TWO separate places in each hemisphere?",
+      "uz": "Nima sababdan o'rta talamus yoki pallidum orqali o'tgan bitta koronal kesimda (B3 yoki B4 plastinkasida) dumli yadro (kaudat) har yarim sharda IKKI marta kesilgan holda ko'rinadi?"
     },
     "options": [
       {
-        "en": "Because the C-shaped caudate is cut once dorsally through its body (beside the lateral ventricle body) and a second time ventrolaterally through its tail (in the roof of the temporal horn)",
-        "uz": "Chunki C-shaklli dumli yadro yuqorida (yon qorincha tanasi yonida) tanasi orqali bir marta va pastki-lateralda (chakka shoxi tomida) dumi orqali ikkinchi marta kesiladi"
+        "en": "The C-shaped caudate is cut dorsally through its body and ventrolaterally through its tail",
+        "uz": "C-shaklli kaudat yuqorida tanasi va pastki-lateralda dumi orqali ikki marta kesiladi"
       },
       {
-        "en": "Because every hemisphere normally contains two completely separate caudate nuclei (a medial and a lateral caudate)",
-        "uz": "Chunki har bir yarim sharda bir-biridan mustaqil ikkita (medial va lateral) dumli yadro mavjud"
+        "en": "The internal capsule splits a single straight caudate into separate medial and lateral halves",
+        "uz": "Ichki kapsula bitta to'g'ri kaudatni alohida medial va lateral bo'laklarga ajratib qo'yadi"
       },
       {
-        "en": "Because the internal capsule splits the caudate tail from the hippocampus in the frontal lobe",
-        "uz": "Chunki ichki kapsula peshona bo'lagida kaudat dumini gippokampdan ikkiga ajratadi"
+        "en": "The caudate branches anteriorly into a dorsal thalamic limb and a ventral amygdaloid limb",
+        "uz": "Kaudat oldinda dorsal talamik va ventral amigdaloid shoxlarga ayrilib davom etadi"
       },
       {
-        "en": "Because the caudate decussates across the third ventricle at the massa intermedia",
-        "uz": "Chunki dumli yadro uchinchi qorincha orqali qarama-qarshi tomonga kesishib o'tadi"
+        "en": "The striatal cell bridges detach the ventral caudate head from the dorsal caudate body",
+        "uz": "Striatal hujayra ko'prikchalari kaudat boshini yuqori kaudat tanasidan ajratib turadi"
       }
     ],
     "answer": 0,
@@ -618,20 +628,20 @@
     },
     "options": [
       {
-        "en": "LB receives sensory/prefrontal input to learn threat cues; CM is the main output driving autonomic/hypothalamic/brainstem fear responses; SF processes olfactory and social signals",
-        "uz": "LB sezgi va prefrontal signallarni olib xavfni o'rganadi; CM gipotalamus va miya ustuni orqali vegetativ qo'rquv javobini ishga tushiruvchi asosiy chiqish; SF esa hid va ijtimoiy signallarni qayta ishlaydi"
+        "en": "LB integrates sensory/prefrontal threat cues; CM drives hypothalamic/brainstem fear output; SF processes olfactory and social signals",
+        "uz": "LB sezgi va prefrontal xavfni o'rganadi; CM gipotalamus/ustun qo'rquv chiqishini beradi; SF hid va ijtimoiy signallarni ishlaydi"
       },
       {
-        "en": "LB is the sole output to the spinal cord; CM receives visual input from V1; SF controls fine finger movements",
-        "uz": "LB orqa miyaga yagona chiqish; CM V1 dan ko'rish signalini oladi; SF barmoqlarning nozik harakatini boshqaradi"
+        "en": "LB drives hypothalamic autonomic fear output; CM integrates multimodal cortical threat cues; SF relays episodic memory to the fornix",
+        "uz": "LB gipotalamus/ustun qo'rquv chiqishini beradi; CM sezgi va prefrontal xavfni o'rganadi; SF epizodik xotirani fornixga uzatadi"
       },
       {
-        "en": "LB secretes vasopressin; CM secretes melatonin; SF secretes cerebrospinal fluid",
-        "uz": "LB vazopressin, CM melatonin, SF esa orqa miya suyuqligini ishlab chiqaradi"
+        "en": "LB relays olfactory bulb input to entorhinal cortex; CM projects to visual cortex V1; SF drives hypothalamic sympathetic arousal",
+        "uz": "LB hidlov signalini entorinal po'stloqqa uzatadi; CM ko'rish po'stlog'iga chiqish beradi; SF gipotalamik simpatik javobni boshqaradi"
       },
       {
-        "en": "LB, CM, and SF are the three layers of the cerebellar cortex",
-        "uz": "LB, CM va SF miyacha po'stlog'ining uchta qavatidir"
+        "en": "LB mediates vestibular balance reflexes; CM relays auditory input from MGN; SF projects exclusively to the mammillary bodies via fornix",
+        "uz": "LB faqat vestibulyar signallarni qayta ishlaydi; CM MGN dan eshitish kirishini oladi; SF fornix orqali so'rg'ichsimon tanalarga boradi"
       }
     ],
     "answer": 0,
@@ -659,20 +669,20 @@
     },
     "options": [
       {
-        "en": "The BNST wraps the anterior commissure and fornix columns (plate B2), receives the stria terminalis from the amygdala, and mediates sustained anxiety and CRH stress output (rather than brief phasic fear)",
-        "uz": "BNST oldingi komissura va fornix ustunlarini o'rab yotadi (B2 plastinkasi), amigdaladan stria terminalisni qabul qiladi va amigdalaning qisqa qo'rquvidan farqli ravishda davomli xavotir hamda gipotalamik stress (KRG) chiqishini boshqaradi"
+        "en": "Wraps the anterior commissure and fornix columns (plate B2); mediates sustained anxiety and CRH stress output",
+        "uz": "Oldingi komissura va fornix ustunlarini o'raydi (B2 plastinkasi); davomli xavotir va KRG stress javobini boshqaradi"
       },
       {
-        "en": "The BNST sits in the floor of the fourth ventricle and generates horizontal saccades",
-        "uz": "BNST to'rtinchi qorincha tubida joylashgan bo'lib, gorizontal sakkadalarni hosil qiladi"
+        "en": "Lies behind the pulvinar along the pineal stalk; mediates acute startle reflexes and circadian melatonin release",
+        "uz": "Pulvinar ortida epifiz poyasi bo'ylab yotadi; o'tkir cho'chish refleksi va sirkadian melatonin ajralishini boshqaradi"
       },
       {
-        "en": "The BNST lies inside the internal medullary lamina of the thalamus and relays somatosensory touch from the face",
-        "uz": "BNST talamusning ichki medullyar plastinkasida yotadi va yuzdan teginish sezgisini uzatadi"
+        "en": "Sits along the lateral wall of the temporal horn; mediates episodic memory consolidation and spatial place coding",
+        "uz": "Chakka shoxining yon devori bo'ylab yotadi; epizodik xotirani mustahkamlash va fazoviy mo'ljal olishni ta'minlaydi"
       },
       {
-        "en": "The BNST sits in the caudal medulla and decussates to form the medial lemniscus",
-        "uz": "BNST kaudal uzunchoq miyada joylashib, kesishgach medial lemniskni hosil qiladi"
+        "en": "Lies within the internal medullary lamina of the thalamus; mediates somatosensory gating and pain localization",
+        "uz": "Talamusning ichki medullyar plastinkasida yotadi; somatosensor filtratsiya va og'riq lokalizatsiyasini boshqaradi"
       }
     ],
     "answer": 0,
@@ -700,26 +710,26 @@
     },
     "options": [
       {
-        "en": "Amygdala, orbitofrontal (and anterior temporal) cortex, and the mediodorsal (MD) nucleus of the thalamus (via the ventral amygdalofugal pathway and uncinate fasciculus)",
-        "uz": "Amigdala, orbitofrontal (va oldingi chakka) po'stloq hamda talamusning mediodorsal (MD) yadrosi"
+        "en": "Amygdala, orbitofrontal/anterior temporal cortex, and mediodorsal (MD) thalamus",
+        "uz": "Amigdala, orbitofrontal/oldingi chakka po'stloq va mediodorsal (MD) talamus"
       },
       {
-        "en": "Dentate gyrus, globus pallidus internus, and the ventral posterolateral (VPL) nucleus of the thalamus",
-        "uz": "Tishsimon pushta, rangpar sharning ichki segmenti (GPi) va talamusning VPL yadrosi"
+        "en": "Hippocampus, posterior cingulate cortex, and anterior nuclear group of the thalamus",
+        "uz": "Gippokamp, orqa belbog' po'stlog'i va talamusning oldingi yadrolar guruhi"
       },
       {
-        "en": "Caudate tail, lateral geniculate nucleus, and primary visual cortex (V1)",
-        "uz": "Dumli yadro dumi, lateral tizzasimon yadro (LGN) va birlamchi ko'rish po'stlog'i (V1)"
+        "en": "Dentate gyrus, globus pallidus internus, and ventral posterolateral (VPL) thalamus",
+        "uz": "Tishsimon pushta, ichki rangpar shar (GPi) va ventral posterolateral (VPL) talamus"
       },
       {
-        "en": "Red nucleus, inferior olive, and dentate nucleus of the cerebellum",
-        "uz": "Qizil yadro, pastki zaytun va miyachaning tishsimon yadrosi"
+        "en": "Septal nuclei, retrosplenial cortex, and pulvinar nuclear complex of the thalamus",
+        "uz": "Septal yadrolar, retrosplenial po'stloq va talamusning pulvinar yadrolar majmuasi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "While the Papez circuit (via the anterior thalamic nuclei) primarily serves episodic memory consolidation, emotional and reward valuation depend heavily on the parallel basolateral (Yakovlev) circuit linking the amygdala, mediodorsal (MD) thalamus, and orbitofrontal/anterior temporal cortex.",
-      "uz": "Papez halqasi (oldingi talamus yadrolari orqali) avvalo epizodik xotira uchun xizmat qilsa, hissiyot va mukofotni baholash uchun parallel bazolateral (Yakovlev) halqasi — amigdala, orbitofrontal po'stloq va talamusning mediodorsal (MD) yadrosi muhimroqdir."
+      "en": "While the Papez circuit (via the anterior thalamic nuclei) primarily serves episodic memory consolidation, emotional and reward valuation depend heavily on the parallel basolateral (Yakovlev) circuit linking the amygdala, mediodorsal (MD) thalamus, and orbitofrontal/anterior temporal cortex via the ventral amygdalofugal pathway and uncinate fasciculus.",
+      "uz": "Papez halqasi (oldingi talamus yadrolari orqali) avvalo epizodik xotira uchun xizmat qilsa, hissiyot va mukofotni baholash uchun parallel bazolateral (Yakovlev) halqasi — amigdala, orbitofrontal po'stloq va talamusning mediodorsal (MD) yadrosi (ventral amigdalofugal yo'l va ilmoqsimon tutam orqali) muhimroqdir."
     },
     "refs": ["amygdala", "th-md", "j-md", "anterior-orbital-gyrus", "wm-uncinate-fasciculus"],
     "plate": "thalamus-nuclei-map",
@@ -741,20 +751,20 @@
     },
     "options": [
       {
-        "en": "The anterior cingulate regulates emotion, motivation, autonomic tone, and the affective unpleasantness of pain (bilateral lesions → akinetic mutism; target of cingulotomy for pain/OCD); the posterior cingulate/retrosplenial cortex is a default-mode network hub for autobiographical memory retrieval",
-        "uz": "Oldingi belbog' po'stlog'i hissiyot, motivatsiya, vegetativ boshqaruv va og'riqning yoqimsizligini boshqaradi (ikki tomonlama zararlanishi → akinetik mutizm; og'riq va OKBda singulotomiya nishoni); orqa qismi esa xotirani chaqirish va default-mode tarmog'i markazidir"
+        "en": "Anterior regulates emotion, motivation, and affective pain (bilateral lesions cause akinetic mutism); posterior supports default-mode memory retrieval",
+        "uz": "Oldingi qismi hissiyot, motivatsiya va og'riqning affektiv tomonini (zararlanishi — akinetik mutizm); orqa qismi default-mode xotirani chaqirishni boshqaradi"
       },
       {
-        "en": "The anterior cingulate is the primary visual cortex; the posterior cingulate is the primary motor cortex for the hand",
-        "uz": "Oldingi qismi birlamchi ko'rish po'stlog'i, orqa qismi esa qo'l uchun birlamchi harakat po'stlog'idir"
+        "en": "Anterior supports spatial navigation and default-mode memory retrieval; posterior regulates autonomic tone, affective pain, and error monitoring",
+        "uz": "Oldingi qismi fazoviy mo'ljal va default-mode xotirani chaqirishni; orqa qismi vegetativ tonus, og'riqning affektiv tomoni va xato nazoratini boshqaradi"
       },
       {
-        "en": "The anterior cingulate processes sound tonotopically; the posterior cingulate innervates the muscles of mastication",
-        "uz": "Oldingi qismi tovushni tonotopik qayta ishlaydi, orqa qismi esa chaynov mushaklarini innervatsiya qiladi"
+        "en": "Anterior mediates conscious olfactory discrimination and gustation; posterior mediates visual object recognition and prosopagnosia prevention",
+        "uz": "Oldingi qismi ongli hid va ta'm ajratishni boshqaradi; orqa qismi esa vizual obyektlarni tanish va yuzlarni ajratish funksiyasini ta'minlaydi"
       },
       {
-        "en": "Both parts carry only descending corticospinal fibres to the lumbar spinal cord",
-        "uz": "Ikkala qism ham faqat orqa miyaning bel segmentlariga tushuvchi kortikospinal tolalarni o'tkazadi"
+        "en": "Anterior generates voluntary horizontal saccades and eye-head coordination; posterior processes primary somatosensory touch from the lower limb",
+        "uz": "Oldingi qismi ixtiyoriy gorizontal sakkadalar va ko'z-bosh koordinatsiyasini; orqa qismi oyoqning birlamchi somatosensor teginish sezgisini qayta ishlaydi"
       }
     ],
     "answer": 0,
@@ -781,26 +791,26 @@
     },
     "options": [
       {
-        "en": "Place cells in the hippocampus (CA1/CA3) and hexagonal grid cells in the entorhinal cortex (with head-direction cells in the anterior thalamus/postsubiculum)",
-        "uz": "Gippokampda (CA1/CA3) joy hujayralari (place cells) va entorinal po'stloqda olti burchakli to'r hujayralari (grid cells)"
+        "en": "Place cells in the hippocampus (CA1/CA3) and hexagonal grid cells in the medial entorhinal cortex",
+        "uz": "Gippokampda (CA1/CA3) joy hujayralari (place cells) va entorinal po'stloqda to'r hujayralari (grid cells)"
       },
       {
-        "en": "Giant Betz pyramidal cells in the hippocampus and Purkinje cells in the entorhinal cortex",
-        "uz": "Gippokampda gigant Bets hujayralari va entorinal po'stloqda Purkinje hujayralari"
+        "en": "Hexagonal grid cells in the hippocampus (CA1/CA3) and head-direction cells in the entorhinal cortex",
+        "uz": "Gippokampda (CA1/CA3) olti burchakli to'r hujayralari va entorinal po'stloqda bosh-yo'nalish hujayralari"
+      },
+      {
+        "en": "Mirror neurons in the hippocampal subiculum and spindle (von Economo) neurons in the entorhinal cortex",
+        "uz": "Gippokamp subikulumida oyna neyronlari va entorinal po'stloqda urchuqsimon (von Economo) neyronlari"
       },
       {
         "en": "Medium spiny D1/D2 neurons in the hippocampus and magnocellular oxytocin neurons in the entorhinal cortex",
         "uz": "Gippokampda D1/D2 o'rta tikanli neyronlar va entorinal po'stloqda magnotsellyulyar oksitotsin neyronlari"
-      },
-      {
-        "en": "Melanopsin ganglion cells in the hippocampus and Renshaw cells in the entorhinal cortex",
-        "uz": "Gippokampda melanopsinli ganglioz hujayralar va entorinal po'stloqda Renshou hujayralari"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Hippocampal pyramidal neurons (CA1/CA3) fire when an individual is at a specific location ('place cells', John O'Keefe), while neurons in the medial entorhinal cortex fire on a periodic triangular/hexagonal coordinate lattice across the environment ('grid cells', May-Britt and Edvard Moser), building the brain's cognitive spatial map.",
-      "uz": "Gippokampning (CA1/CA3) piramidal neyronlari muayyan joyda faollashuvchi 'joy hujayralari'ni (place cells — O'Keefe), entorinal po'stloq neyronlari esa fazoviy koordinata panjarasini tuzuvchi 'to'r hujayralari'ni (grid cells — Moserlar) hosil qiladi."
+      "en": "Hippocampal pyramidal neurons (CA1/CA3) fire when an individual is at a specific location ('place cells', John O'Keefe), while neurons in the medial entorhinal cortex fire on a periodic triangular/hexagonal coordinate lattice across the environment ('grid cells', May-Britt and Edvard Moser), complemented by head-direction cells in the anterior thalamus and postsubiculum.",
+      "uz": "Gippokampning (CA1/CA3) piramidal neyronlari muayyan joyda faollashuvchi 'joy hujayralari'ni (place cells — O'Keefe), entorinal po'stloq neyronlari esa fazoviy koordinata panjarasini tuzuvchi 'to'r hujayralari'ni (grid cells — Moserlar) hosil qiladi; ularni oldingi talamus va postsubikulumdagi bosh-yo'nalish hujayralari to'ldiradi."
     },
     "refs": ["hippocampus-proper", "j-ca1", "j-ca3", "j-area-ec", "j-hippocampal-region"],
     "sources": [
@@ -821,26 +831,26 @@
     },
     "options": [
       {
-        "en": "Profound anterograde amnesia for new declarative (episodic and semantic) memories with temporally graded retrograde amnesia, while procedural motor learning (mirror-drawing), digit-span working memory, and general intelligence remained intact",
-        "uz": "Yangi deklarativ (epizodik va faktik) xotiralar uchun og'ir anterograd amneziya; shu bilan birga protsedural harakat xotirasi (ko'zguda rasm chizishni o'rganish), qisqa muddatli ishchi xotira va umumiy intellekt saqlanib qolgan"
+        "en": "Profound anterograde amnesia for new declarative memories, with intact procedural motor learning and working memory",
+        "uz": "Yangi deklarativ xotiralar uchun og'ir anterograd amneziya, ammo protsedural harakat o'rganish va ishchi xotira saqlangan"
       },
       {
-        "en": "Complete loss of procedural motor skills and spoken language (global aphasia), with fully preserved ability to form new episodic memories",
-        "uz": "Protsedural harakat ko'nikmalari va nutqning butunlay yo'qolishi (global afaziya), ammo yangi voqealarni eslab qolish to'liq saqlangan"
+        "en": "Complete loss of procedural motor skills and spoken language, with fully preserved consolidation of new episodic memories",
+        "uz": "Protsedural harakat ko'nikmalari va nutqning butunlay yo'qolishi, ammo yangi epizodik xotiralarni saqlash to'liq saqlangan"
       },
       {
-        "en": "Isolated loss of childhood remote memories with normal recall of events occurring after surgery",
-        "uz": "Operatsiyadan keyingi voqealarni normal eslab qolgan holda faqat bolalik xotiralarining yo'qolishi"
+        "en": "Isolated loss of remote childhood autobiographical memories, with normal encoding and recall of events after surgery",
+        "uz": "Operatsiyadan keyingi voqealarni normal eslab qolgan holda faqat uzoq bolalik avtobiografik xotiralarining yo'qolishi"
       },
       {
-        "en": "Resting tremor, bradykinesia, and loss of striatal habit learning with normal episodic memory",
-        "uz": "Epizodik xotira normal qolib, tinch holat tremori, bradikineziya va odatlarni o'rganishning yo'qolishi"
+        "en": "Severe deficit in digit-span working memory and striatal habit learning, with intact delayed recall of new facts",
+        "uz": "Qisqa muddatli ishchi xotira va striatal odatlarni o'rganishning og'ir buzilishi, ammo yangi faktlarni eslab qolish normal"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Scoville & Milner (1957) showed in patient H.M. that bilateral medial temporal resection abolishes the ability to consolidate new declarative (episodic) memories into long-term cortical storage (profound anterograde amnesia), while remote consolidated memories (stored in neocortex), working memory (prefrontal cortex), and procedural motor learning (basal ganglia and cerebellum) do not depend on the hippocampus.",
-      "uz": "Scoville va Milner (1957) bemor H.M. misolida ikki tomonlama medial chakka (gippokamp) olib tashlanganda yangi deklarativ/epizodik xotiralarni uzoq muddatli xotiraga o'tkazish butunlay yo'qolishini (og'ir anterograd amneziya), ammo eski mustahkamlangan xotiralar (neokorteks), ishchi xotira (prefrontal) va protsedural harakat o'rganish (bazal yadrolar va miyacha) saqlanib qolishini isbotladilar."
+      "en": "Scoville & Milner (1957) showed in patient H.M. that bilateral medial temporal resection abolishes consolidation of new declarative (episodic and semantic) memories into long-term storage (profound anterograde amnesia with temporally graded retrograde amnesia), while remote neocortical memories, digit-span working memory, general intelligence, and procedural motor learning (mirror-drawing) remain intact.",
+      "uz": "Scoville va Milner (1957) bemor H.M. misolida ikki tomonlama medial chakka (gippokamp) olib tashlanganda yangi deklarativ/epizodik xotiralarni uzoq muddatli xotiraga o'tkazish butunlay yo'qolishini (og'ir anterograd amneziya), ammo eski mustahkamlangan xotiralar (neokorteks), ishchi xotira (prefrontal), umumiy intellekt va protsedural harakat o'rganish (ko'zguda rasm chizish — bazal yadrolar va miyacha) saqlanib qolishini isbotladilar."
     },
     "refs": ["hippocampus-proper", "amygdala", "parahippocampal-gyrus", "j-hippocampus"],
     "sources": [
@@ -861,20 +871,20 @@
     },
     "options": [
       {
-        "en": "Mammillary bodies, anterior and mediodorsal thalamic nuclei, and periaqueductal grey (Wernicke–Korsakoff syndrome from thiamine/vitamin B1 deficiency)",
-        "uz": "So'rg'ichsimon tanalar, talamusning oldingi va mediodorsal (MD) yadrolari hamda periakveduktal kulrang modda (tiamin/B1 tanqisligidan Wernicke–Korsakoff sindromi)"
+        "en": "Mammillary bodies, anterior/mediodorsal thalamus, and periaqueductal grey (Wernicke–Korsakoff syndrome)",
+        "uz": "So'rg'ichsimon tanalar, oldingi/mediodorsal talamus va periakveduktal kulrang modda (Wernicke–Korsakoff)"
       },
       {
-        "en": "Caudate head and putamen only (Huntington striatal degeneration)",
-        "uz": "Faqat dumli yadro boshi va putamen (Huntington kasalligi)"
+        "en": "Bilateral caudate heads, putamina, and external globus pallidus (Huntington striatal degeneration)",
+        "uz": "Ikki tomonlama dumli yadro boshi, putamen va tashqi rangpar shar (Huntington striatal degeneratsiyasi)"
       },
       {
-        "en": "Subthalamic nucleus and substantia nigra pars reticulata",
-        "uz": "Subtalamik yadro va qora moddaning to'rsimon qismi"
+        "en": "Bilateral subthalamic nuclei, substantia nigra pars reticulata, and red nuclei (subthalamic infarct)",
+        "uz": "Ikki tomonlama subtalamik yadrolar, qora modda to'rsimon qismi va qizil yadrolar (subtalamik infarkt)"
       },
       {
-        "en": "Lateral geniculate nucleus and optic tract",
-        "uz": "Lateral tizzasimon yadro va ko'rish trakti"
+        "en": "Bilateral dentate nuclei, superior cerebellar peduncles, and central pontine tegmentum (osmotic myelinolysis)",
+        "uz": "Ikki tomonlama tishsimon yadrolar, yuqori miyacha oyoqchalari va markaziy ko'prik (osmotik miyelinoliz)"
       }
     ],
     "answer": 0,
@@ -902,20 +912,20 @@
     },
     "options": [
       {
-        "en": "Klüver–Bucy syndrome (bilateral amygdala / anterior temporal pole destruction)",
-        "uz": "Klüver–Bucy sindromi (amigdala va oldingi chakka qutbining ikki tomonlama zararlanishi)"
+        "en": "Klüver–Bucy syndrome (bilateral amygdala and anterior temporal lesion)",
+        "uz": "Klüver–Bucy sindromi (amigdala va oldingi chakka zararlanishi)"
       },
       {
-        "en": "Gerstmann syndrome (left angular gyrus lesion)",
-        "uz": "Gerstmann sindromi (chap burchak pushtasi zararlanishi)"
+        "en": "Gerstmann syndrome (dominant left angular gyrus parietal lesion)",
+        "uz": "Gerstmann sindromi (dominant chap burchak pushtasi zararlanishi)"
       },
       {
         "en": "Dejerine–Roussy syndrome (posterolateral thalamic VPL/VPM infarction)",
         "uz": "Dejerine–Roussy sindromi (talamusning VPL/VPM yadrolari infarkti)"
       },
       {
-        "en": "Schmahmann syndrome (posterior cerebellar cognitive affective syndrome)",
-        "uz": "Schmahmann sindromi (orqa miyacha kognitiv-affektiv sindromi)"
+        "en": "Balint syndrome (bilateral parieto-occipital watershed infarction)",
+        "uz": "Balint sindromi (ikki tomonlama tepa-ensa chegara zonasi infarkti)"
       }
     ],
     "answer": 0,
@@ -943,26 +953,26 @@
     },
     "options": [
       {
-        "en": "CA1 (Sommer's sector) and CA4/hilus (with CA3/dentate involvement and relative sparing of CA2)",
-        "uz": "CA1 (Sommer sektori) va CA4/hilus (CA2 sektori nisbatan saqlanib qoladi)"
+        "en": "CA1 (Sommer's sector) and CA4/hilus, with relative sparing of CA2",
+        "uz": "CA1 (Sommer sektori) va CA4/hilus, CA2 nisbatan saqlangan holda"
       },
       {
-        "en": "Selective loss of the mammillary body and anterior thalamic nucleus with a completely normal hippocampus",
-        "uz": "Gippokamp butunlay normal qolib, faqat so'rg'ichsimon tana va oldingi talamus yadrosining yo'qolishi"
+        "en": "CA2 and subiculum exclusively, with complete sparing of CA1 and CA4",
+        "uz": "Faqat CA2 va subikulum, CA1 va CA4 butunlay saqlangan holda"
       },
       {
-        "en": "Exclusive loss of the caudate tail and stria terminalis in the roof of the temporal horn",
-        "uz": "Chakka shoxi tomidagi kaudat dumi va stria terminalisning tanlab yemirilishi"
+        "en": "Mammillary body and anterior thalamus, with a spared hippocampus",
+        "uz": "So'rg'ichsimon tana va oldingi talamus, gippokamp saqlangan holda"
       },
       {
-        "en": "Selective necrosis of the globus pallidus externus and subthalamic nucleus",
-        "uz": "Tashqi rangpar shar (GPe) va subtalamik yadroning tanlab nekrozi"
+        "en": "Caudate tail and stria terminalis in the roof of the temporal horn",
+        "uz": "Chakka shoxi tomidagi kaudat dumi va stria terminalis sohalari"
       }
     ],
     "answer": 0,
     "why": {
       "en": "Mesial temporal lobe epilepsy is classically driven by hippocampal sclerosis, which on MRI shows hippocampal atrophy, T2/FLAIR hyperintensity, and loss of the pes hippocampi digitations, and histologically features severe pyramidal cell loss in CA1 (Sommer's sector) and CA4/CA3 with classic relative sparing of CA2.",
-      "uz": "Mezial chakka epilepsiyasining klassik asosi — gippokampal sklerozda MRTda gippokamp kichrayishi, T2/FLAIR signal kuchayishi va boshidagi 'barmoqchalar' (pes hippocampi) yo'qolishi ko'rinadi; gistologik jihatdan esa CA1 (Sommer sektori) neyronlari eng ko'p nobud bo'ladi (CA2 nisbatan saqlanadi)."
+      "uz": "Mezial chakka epilepsiyasining klassik asosi — gippokampal sklerozda MRTda gippokamp kichrayishi, T2/FLAIR signal kuchayishi va boshidagi 'barmoqchalar' (pes hippocampi) yo'qolishi ko'rinadi; gistologik jihatdan esa CA1 (Sommer sektori) va CA4/CA3 neyronlari eng ko'p nobud bo'ladi (CA2 nisbatan saqlanadi)."
     },
     "refs": ["hippocampus-proper", "j-ca1", "j-ca2", "j-ca3", "j-dg", "j-hippocampus"],
     "sources": [
@@ -983,26 +993,26 @@
     },
     "options": [
       {
-        "en": "Columns of the fornix were transected bilaterally (disconnecting hippocampus → mammillary body); anterior thalamic nucleus DBS is used for refractory epilepsy (SANTE) and fornix DBS has been trialled in Alzheimer disease (ADvance)",
-        "uz": "Fornix ustunlari ikki tomonlama shikastlangan (gippokamp → so'rg'ichsimon tana aloqasi uzilgan); dori-chidamli epilepsiyada talamusning oldingi yadrosi DBS'i (SANTE), erta Altsgeymerda esa fornix DBS'i (ADvance) qo'llaniladi"
+        "en": "Columns of the fornix; anterior thalamic nucleus DBS for epilepsy (SANTE) and fornix DBS for Alzheimer disease (ADvance)",
+        "uz": "Fornix ustunlari; epilepsiyada talamus oldingi yadrosi DBS'i (SANTE) va Altsgeymerda fornix DBS'i (ADvance)"
       },
       {
-        "en": "Internal capsule genu was transected bilaterally; VPL thalamus DBS is used for epilepsy and STN DBS for Alzheimer disease",
-        "uz": "Ichki kapsula tizzasi ikki tomonlama kesilgan; epilepsiyada VPL talamus DBS'i, Altsgeymerda esa STN DBS'i qo'llaniladi"
+        "en": "Anterior commissure fibres; mediodorsal thalamus DBS for epilepsy (SANTE) and amygdala DBS for Alzheimer disease (ADvance)",
+        "uz": "Oldingi komissura tolalari; epilepsiyada mediodorsal talamus DBS'i (SANTE) va Altsgeymerda amigdala DBS'i (ADvance)"
       },
       {
-        "en": "Optic chiasm was transected; lateral geniculate DBS is used for epilepsy and red nucleus DBS for Alzheimer disease",
-        "uz": "Ko'rish kesishmasi kesilgan; epilepsiyada LGN DBS'i, Altsgeymerda qizil yadro DBS'i qo'llaniladi"
+        "en": "Internal capsule genu; ventral posterolateral thalamus DBS for epilepsy (SANTE) and STN DBS for Alzheimer disease (ADvance)",
+        "uz": "Ichki kapsula tizzasi; epilepsiyada VPL talamus DBS'i (SANTE) va Altsgeymerda subtalamik yadro DBS'i (ADvance)"
       },
       {
-        "en": "Stria medullaris was transected; habenula DBS is used for epilepsy and fastigial nucleus DBS for Alzheimer disease",
-        "uz": "Stria medullaris kesilgan; epilepsiyada habenula DBS'i, Altsgeymerda chodirsimon yadro DBS'i qo'llaniladi"
+        "en": "Stria medullaris thalami; habenular complex DBS for epilepsy (SANTE) and mammillary body DBS for Alzheimer disease (ADvance)",
+        "uz": "Stria medullaris thalami; epilepsiyada habenula majmuasi DBS'i (SANTE) va Altsgeymerda mamillyar DBS'i (ADvance)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The columns of the fornix form the anterior border of the foramina of Monro (plates B2/B5); bilateral surgical injury interrupts hippocampal outflow to the mammillary bodies and causes profound anterograde amnesia. Within the same Papez circuit, the anterior thalamic nuclear group (th-an / j-av) is the FDA-approved DBS target for refractory focal epilepsy (SANTE trial), while fornix DBS was tested in the ADvance trial for Alzheimer disease.",
-      "uz": "Fornix ustunlari Monro teshiklarining bevosita oldingi chegarasini hosil qiladi (B2/B5 plastinkalari); ularning ikki tomonlama shikastlanishi Papez halqasini uzib, og'ir anterograd amneziya beradi. Shu halqada talamusning oldingi yadrolar guruhi (`th-an` / `j-av`) dori-chidamli epilepsiyada (SANTE sinovi), fornix esa erta Altsgeymerda (ADvance sinovi) DBS nishoni hisoblanadi."
+      "en": "The columns of the fornix form the anterior border of the foramina of Monro (plates B2/B5); bilateral surgical injury interrupts hippocampal outflow to the mammillary bodies and causes profound anterograde amnesia. Within the same Papez circuit, the anterior thalamic nuclear group is the FDA-approved DBS target for refractory focal epilepsy (SANTE trial), while fornix DBS was tested in the ADvance trial for early Alzheimer disease.",
+      "uz": "Fornix ustunlari Monro teshiklarining bevosita oldingi chegarasini hosil qiladi (B2/B5 plastinkalari); ularning ikki tomonlama shikastlanishi Papez halqasini uzib, og'ir anterograd amneziya beradi. Shu halqada talamusning oldingi yadrolar guruhi dori-chidamli epilepsiyada (SANTE sinovi), fornix esa erta Altsgeymerda (ADvance sinovi) DBS nishoni hisoblanadi."
     },
     "refs": ["fornix-of-forebrain", "interventricular-foramen", "th-an", "j-av", "mammillary-body", "fx"],
     "plate": "bg-capsule-axial",
