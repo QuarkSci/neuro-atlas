@@ -358,3 +358,30 @@ Spetsifikatsiyadan o'zgarishlar (`docs/APPLE.md` 1.3): `TOGGLE_LAYER` → `SET_S
 `SET_DEPTH` → `SET_PEEL`; PNG eksport hodisa emas, Promise qaytaruvchi buyruq; `PENCIL_ACTION` olib tashlandi (bosim, og'ish,
 hover WebKit Pointer Events'da bor); ovoz → AI panel. Xavflar: NC/HCP litsenziyalari, Guideline 4.2, 5.1.2 (AI'ga ma'lumot
 yuborish roziligi), iPad xotirasi (≤1.2 GB).
+
+### 5.8 Neyroxirurgik simulyator — qo'l bilan boshqarish (2026-11-22, foydalanuvchi bilan muhokama)
+
+Maqsad: operatsiyalarni 3D da ko'rsatish emas, **qo'l bilan bajarish** — inson omili natijani belgilaydi (NeuroVR/NeuroTouch
+tamoyili). Uskuna: hozircha faqat Mac kamerasi → VR'ga o'xshash, lekin ekranda: foydalanuvchining qo'llari sahna oldida
+3D shisha qo'l bo'lib ko'rinadi va asbob/modelni boshqaradi. Kiritish qatlami alohida (kamera → keyin Apple Pencil, WebXR,
+haptik), simulyator dvigateli har biri bilan bir xil ishlaydi.
+
+Mavjud ma'lumot (`parts.json`): bosh suyagi 22 suyak, qattiq parda/o'roq/chodir, venoz sinuslar (sigmasimon, g'orsimon, to'g'ri,
+quyilish), 175 arteriya (ICA, MCA segmentlari, AComA, bazilyar), 29 kalla nervi, gipofiz, qorinchalar + Monro teshigi, STN, JHU.
+Yo'q: teri, chakka mushagi, suyak choklari (Kocher nuqtasi va pterion suyak chegaralaridan hisoblanadi).
+
+| Bosqich | Qamrov | Holat |
+|---|---|---|
+| HT-1 | Qo'l kuzatuvi (MediaPipe, mahalliy), 3D shisha qo'llar, imo-ishoralar: ko'rsatish = nom, chimdish+surish = burash, tez chimdish = tanlash, ikki qo'l = zoom; HUD + kamera tasviri | ✅ 2026-11-22 (branch `hands/HT-1`) |
+| HT-2 | Asbob qo'lda: kursor o'rniga zond/kateter; barmoqlar orasidagi chuqurlik → asbob chuqurligi; to'qnashuv va masofa (mm) | ⏳ |
+| OP-1 | Simulyator dvigateli + EVD: Kocher nuqtasi, kateterni qo'l bilan kiritish (burchak, chuqurlik), Monro teshigiga tegish, yo'ldagi tuzilmalar; mahorat hisoboti (vaqt, titrash, yo'l samaradorligi, xavfli tegishlar) | ⏳ |
+| OP-2 | DBS (STN/GPi/Vim): traektoriya tanlash, elektrodni sekin kiritish, MER "signal" ketma-ketligi, AC–PC koordinatalari | ⏳ |
+| OP-3 | Trepanatsiya (CSG suyak qopqog'i, burg'u chuqurligi) + pterional → Silviy yorig'i → anevrizma klipsi (noto'g'ri klips → insult hududi, shikastlanish simulyatori bilan) | ⏳ |
+| OP-4 | Mikroskop ko'rinishi, retraksiya (soddalashtirilgan PBD), retrosigmoid, endonazal | ⏳ |
+| OP-5 | Erkin rejalashtiruvchi (kirish+nishon → xavf hisoboti), o'rganish egri chizig'i, CSV eksport (PhD) | ⏳ |
+
+Qoidalar: kamera tasviri qurilmadan chiqmaydi (model va WASM o'z originimizdan); kamera faqat foydalanuvchi yoqqanda
+ishlaydi va tab yashirilganda to'xtaydi; "ta'lim simulyatori, real bemor uchun reja emas" ogohlantirishi (OP-1 dan);
+Rhoton/operatsiya video-rasmlari ishlatilmaydi — vizual o'zimizniki, faktlar DOI bilan.
+Xavflar: veb-kamera chuqurligi zaif (zoom va burash nisbiy harakatdan, mutlaq chuqurlik emas); headless sinovda kamera yo'q →
+`src/hands/synth.ts` sintetik qo'llari; to'qima deformatsiyasi — eng qiyin qism.

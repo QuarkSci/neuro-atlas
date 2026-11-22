@@ -14,6 +14,7 @@ import { Inspector } from '@/ui/Inspector'
 import { About } from '@/ui/About'
 import { Credit, Footer, HoverLabel, Loading } from '@/ui/Overlays'
 import { AIPanel } from '@/ui/AIPanel'
+import { HandsLayer } from '@/hands/HandsLayer'
 import { completeOpenRouterLogin, useAI } from '@/ai/useAI'
 
 export default function App() {
@@ -69,6 +70,7 @@ export default function App() {
       <SectionViewer />
       <LessonPanel />
       <AIPanel />
+      <HandsLayer />
     </main>
   )
 }

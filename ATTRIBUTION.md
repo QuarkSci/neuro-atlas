@@ -109,5 +109,7 @@ Ushbu qatlam ikki ochiq manbani birlashtiradi:
 
 - **Three.js & Draco 3D Data Compression (`public/draco/*`):**
   Google Draco WebAssembly/JS dekoderi ([Apache License 2.0](https://github.com/google/draco/blob/master/LICENSE)) va Three.js ([MIT License](https://github.com/mrdoob/three.js/blob/dev/LICENSE)).
+- **MediaPipe Hand Landmarker (`public/models/hand_landmarker.task`, `@mediapipe/tasks-vision`):**
+  Google MediaPipe qo'l kuzatuvi modeli va WASM ishga tushiruvchisi ([Apache License 2.0](https://github.com/google-ai-edge/mediapipe/blob/master/LICENSE)). Qo'l bilan boshqarishda kamera tasviri faqat brauzer ichida qayta ishlanadi.
 - **Anatomical & Clinical References (`src/data/content/*.json`):**
   Har bir anatomik tuzilma kartasida (`Inspector`) ko'rsatilgan ilmiy maqolalar (DOI) va NCBI Bookshelf (StatPearls) manbalari Crossref hamda NCBI E-utilities orqali tasdiqlangan va bevosita havola bilan berilgan.

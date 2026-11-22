@@ -1319,3 +1319,28 @@ Namuna video Desktop'da topilmadi, shuning uchun kadrma-kadr solishtirish o'rnig
 sudralganda tezlikka qarab cho'zilish. Menyu, dars kartasi, AI panel, plastinka/viktorina kartasi — prujina + xiralikdan paydo bo'lish
 (katta kartalarda blur yo'q: SVG qimmat). Tekshiruv: WAAPI `currentTime` bilan deterministik namuna (headless'da real vaqtli rAF kadr tashlaydi):
 71 px siljish, overshoot 2.0 %, cho'zilish 1.24× @100 ms, 430 ms da tinadi. QOLDI: haqiqiy qurilmada his qilish, video bilan solishtirish.
+## HT-1 — qo'l bilan boshqarish, Mac kamerasi (2026-11-22)
+
+Foydalanuvchi: operatsiyalarni vizual ko'rish g'oyasi → "qo'lga nimadir kiyib, interaktiv, inson omili" → uskuna faqat Mac
+kamerasi → "VR'dek, lekin ekranda, qo'l ekranda chiroyli ko'rinib tursin". Reja PLAN 5.8 (HT-1…OP-5). Ish boshqa sessiya
+(R2, `BrainScene.ts`) bilan to'qnashmasligi uchun alohida worktree'da (`../neuro-atlas-hands`, branch `hands/HT-1`, port 3021).
+
+- `@mediapipe/tasks-vision@1.2.3` (Apache-2.0) — `HandLandmarker`, VIDEO rejimi, 2 qo'l, GPU (xato bo'lsa CPU). WASM
+  `?url` importi bilan bundle'dan, model `public/models/hand_landmarker.task` (7.8 MB, float16, Apache-2.0) — hech narsa
+  uchinchi tomondan yuklanmaydi, kadrlar brauzerdan chiqmaydi. Kamera so'rovi modeldan OLDIN (rad etilsa hech narsa yuklanmaydi).
+- `src/hands/`: `tracker.ts` (kamera), `oneEuro.ts` (One Euro filtri, Casiez 2012: tasvir 1.4/0.04, world 1.0/0.6),
+  `mapping.ts` (ko'zgu + "cover" + `REACH_GAIN` 1.3 — kadr chetiga qo'l yetmaydi), `rig.ts` (alohida shaffof canvas va kamera:
+  world landmark → shakl, tasvir → joy, kaft o'lchami → chuqurlik; kapsula+shar+kaft yelpig'i; shisha shaderi: fresnel chet,
+  chimdishda tillarang, bilakka qarab so'nish; avval faqat depth, keyin rang — ustma-ust tushgan naychalar chok bermaydi;
+  `HAND_SCALE` 0.85), `engine.ts` (imo-ishoralar), `useHands.ts` (store, dev'da `__hands`), `HandsLayer.tsx` (canvas, kursor
+  halqasi + nom, to'lqin, HUD), `strings.ts` (uz/en, umumiy jadvalga tegmaslik uchun alohida), `synth.ts` (sintetik qo'l).
+- Imo-ishoralar: chimdish = bosh va ko'rsatkich uchlari masofasi / kaft uzunligi (world, masshtabsiz), gisterezis 0.30/0.46;
+  ochiq qo'l → ko'rsatkich uchi ostidagi tuzilma hover; chimdish+surish → `orbitBy` (sichqoncha bilan bir xil sezgirlik,
+  16 px dan keyin boshlanadi, qo'yib yuborilgach inersiya); tez chimdish (< 380 ms, < 16 px) → `externalTap` (dars rejimida
+  ham to'g'ri ishlaydi — `onSelect` orqali); ikki qo'l chimdishi → `dollyBy` (kadrga 0.88–1.14 bilan cheklangan).
+- `BrainScene`: yangi ochiq API (`externalHover`, `externalTap`, `orbitBy`, `dollyBy`, `hostElement`), `src/scene/sceneRef.ts`
+  (SceneView o'rnatadi). Menyu: "boshqa" → "Qo'l bilan boshqarish (kamera)". Kamera tab yashirilganda to'xtaydi.
+- Tekshiruv: `node scripts/shot-hands.mjs <papka>` (sintetik: 8 tekshiruv — ko'rsatish/hover, burash, tanlash, zoom,
+  chiqib ketish) va `--camera` (Chrome soxta kamerasi: WASM + model + GPU delegati ishga tushadi). Headless WebGL ≈ 1.5 kadr/s —
+  skript vaqtni emas, `engine.ticks` ni kutadi; tez chimdish oynasi testda `engine.tapMs` bilan kengaytiriladi.
+  Qora va yorug' rejim, uz/en screenshot. Tekshirilmadi: haqiqiy qo'l bilan (foydalanuvchi kamerasi), telefon kengligi.

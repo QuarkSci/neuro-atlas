@@ -139,6 +139,11 @@ Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; BigBrain 20 m
 5.4 UI qoldiqlari (dars kartasi va kesim ko'ruvchisi yorug' rejimda "qora orol"); erkin o'choqning PhD davomi
 (sxema↔atlas farqi ogohlantirishi, JHU tolalaridan yo'llar, PPMS yo'li, T2/FLAIR ko'rinishi, 3D da o'choqni sudrash). Tezlik: real kesimni foydalanuvchi o'z brauzerida hali tasdiqlamagan — so'rang.
 
+**Qo'l bilan boshqarish HT-1 👀 (2026-11-22, branch `hands/HT-1`)** — reja PLAN 5.8 (neyroxirurgik simulyator: HT-2 asbob qo'lda,
+OP-1 EVD, OP-2 DBS, OP-3 trepanatsiya + pterional, ...), tafsilot `docs/HISTORY.md` "HT-1". `src/hands/` (MediaPipe, mahalliy model
+`public/models/`), "boshqa" menyusi → "Qo'l bilan boshqarish". Sinov: `node scripts/shot-hands.mjs <papka> [--camera]`;
+headless'da `__hands.getState().start('synthetic')` + `__handsDev.engine.feed(...)`.
+
 Ish uslubi bo'yicha eslatmalar (2026-11-17):
 - TS mantiqni tekshirish: `npx -y tsx` ruxsat bermadi → vaqtinchalik `scripts/_x_tmp.mjs` (puppeteer) da dev serverdan
   `await import('/src/...ts')` qilib, keyin faylni o'chiring.

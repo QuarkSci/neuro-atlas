@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, Check, Ellipsis, Info, Languages, Palette, SunMoon, Sun, PanelLeft, RotateCw, Search, Slice, Sparkles } from 'lucide-react'
+import { Box, Check, Ellipsis, Hand, Info, Languages, Palette, SunMoon, Sun, PanelLeft, RotateCw, Search, Slice, Sparkles } from 'lucide-react'
 import { LEAF_PARTS } from '@/data'
 import { useT } from '@/i18n'
 import { useAtlas, type View } from '@/store/useAtlas'
 import { useLens } from './useLens'
 import { useAI } from '@/ai/useAI'
+import { useHands } from '@/hands/useHands'
+import { HAND_STRINGS } from '@/hands/strings'
 
 const VIEWS: View[] = ['three-quarter', 'lateral', 'front', 'top']
 
@@ -183,6 +185,7 @@ export function ViewGroup() {
             {t.autoRotate}
             <RotateCw size={16} className="menu-trail" />
           </button>
+          <HandsMenuItem onDone={() => setOpen(null)} />
           <div className="menu-sep" />
           <div className="menu-row">
             <span className="menu-label">
@@ -252,5 +255,27 @@ export function ViewGroup() {
         </div>
       )}
     </div>
+  )
+}
+
+/** "More" menu: switch hand control (webcam) on or off. */
+function HandsMenuItem({ onDone }: { onDone: () => void }) {
+  const lang = useAtlas((s) => s.lang)
+  const status = useHands((s) => s.status)
+  const on = status === 'starting' || status === 'on'
+  return (
+    <button
+      role="menuitemcheckbox"
+      aria-checked={on}
+      className="menu-item"
+      onClick={() => {
+        useHands.getState().toggle()
+        onDone()
+      }}
+    >
+      <span className="menu-check">{on && <Check size={15} />}</span>
+      {HAND_STRINGS[lang].menu}
+      <Hand size={16} className="menu-trail" />
+    </button>
   )
 }

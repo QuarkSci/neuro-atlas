@@ -960,6 +960,53 @@ export class BrainScene {
     this.dirty = true
   }
 
+  // ── External pointers (hand tracking, src/hands) ─────────────────────
+  // Points are in pixels relative to the scene host, like a pointer event's.
+
+  /** Hover whatever lies under (x, y); null clears it. Raycast once per frame. */
+  externalHover(x: number | null, y = 0) {
+    if (x === null) {
+      this.pendingHover = null
+      this.setHovered(null)
+    } else this.pendingHover = { x, y }
+    this.dirty = true
+  }
+
+  /** A tap at (x, y): selects exactly as a click there would. */
+  externalTap(x: number, y: number) {
+    this.cb.onSelect(this.pick(x, y))
+  }
+
+  /** Orbit around the target by (yaw, pitch) radians, the way a mouse drag turns the model. */
+  orbitBy(yaw: number, pitch: number) {
+    const c = this.controls
+    if (!c.enableRotate) return
+    const offset = this.camera.position.clone().sub(c.target)
+    const sph = new T.Spherical().setFromVector3(offset)
+    sph.theta -= yaw
+    sph.phi = T.MathUtils.clamp(sph.phi - pitch, Math.max(0.05, c.minPolarAngle), Math.min(Math.PI - 0.05, c.maxPolarAngle))
+    offset.setFromSpherical(sph)
+    this.camera.position.copy(c.target).add(offset)
+    this.camera.lookAt(c.target)
+    this.fly = null
+    this.dirty = true
+  }
+
+  /** Move the camera towards (factor < 1) or away from (> 1) the target. */
+  dollyBy(factor: number) {
+    const c = this.controls
+    const offset = this.camera.position.clone().sub(c.target)
+    const d = T.MathUtils.clamp(offset.length() * factor, c.minDistance, c.maxDistance)
+    this.camera.position.copy(c.target).add(offset.setLength(d))
+    this.fly = null
+    this.dirty = true
+  }
+
+  /** Scene host, for converting screen coordinates. */
+  get hostElement() {
+    return this.host
+  }
+
   private pick(x: number, y: number): string | null {
     const w = this.host.clientWidth,
       h = this.host.clientHeight
