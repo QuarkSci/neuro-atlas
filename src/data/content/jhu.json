@@ -1,0 +1,704 @@
+{
+  "wm-middle-cerebellar-peduncle": {
+    "la": "Pedunculus cerebellaris medius (brachium pontis)",
+    "uz": "O'rta miyacha oyoqchasi (JHU)",
+    "description": {
+      "en": "Massive transverse white-matter bundle connecting the basal pons with the contralateral cerebellar hemisphere — the largest of the three cerebellar peduncles.",
+      "uz": "Ko'prik asosini qarama-qarshi miyacha yarim shari bilan bog'lovchi yirik ko'ndalang oq modda tutami — uchta miyacha oyoqchasining eng kattasi."
+    },
+    "role": {
+      "en": "Carries pontocerebellar fibres (the second limb of the corticopontocerebellar pathway) informing the cerebellum of planned cortical movements.",
+      "uz": "Rejalashtirilgan po'stloq harakatlari haqida miyachaga xabar beruvchi pontotserebellyar tolalarni (kortikopontotserebellyar yo'lning ikkinchi bo'g'inini) o'tkazadi."
+    },
+    "clinical": {
+      "en": "Lesions (AICA stroke, demyelination) cause ipsilateral limb ataxia; bilateral T2 hyperintensity ('MCP sign') is characteristic of multiple system atrophy (MSA-C) and FXTAS.",
+      "uz": "Zararlanishi (AICA insulti, demielinizatsiya) o'z tomonida oyoq-qo'l ataksiyasini beradi; ikki tomonlama T2 giperintensivligi ('MCP belgisi') MSA-C va FXTASga xos."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-pontine-crossing-tract": {
+    "la": "Fibrae pontis transversae (decussatio pontocerebellaris)",
+    "uz": "Ko'prik kesishuvchi trakti",
+    "description": {
+      "en": "Transverse pontocerebellar fibres crossing the midline within the basis pontis between the descending corticospinal bundles before entering the middle cerebellar peduncle.",
+      "uz": "Ko'prik asosida tushuvchi kortikospinal tutamlar orasidan o'rta chiziqni kesib o'tib, o'rta miyacha oyoqchasiga kiruvchi ko'ndalang pontotserebellyar tolalar."
+    },
+    "role": {
+      "en": "Decussation of the corticopontocerebellar pathway, ensuring that each cerebral hemisphere communicates with the opposite cerebellar hemisphere.",
+      "uz": "Kortikopontotserebellyar yo'lning kesishmasi — har bir katta miya yarim sharining qarama-qarshi miyacha yarim shari bilan bog'lanishini ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Selectively degenerates in multiple system atrophy (forming the 'hot cross bun' sign in the pons on T2 MRI) and is damaged in central pontine myelinolysis.",
+      "uz": "Ko'p tizimli atrofiyada tanlab degeneratsiyalanadi (T2 MRTda ko'prikda 'xochli kulcha' belgisini hosil qiladi) va markaziy pontin mielinolizda zararlanadi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-corpus-callosum-genu": {
+    "la": "Genu corporis callosi",
+    "uz": "Qadoqsimon tana tizzasi (genu)",
+    "description": {
+      "en": "Curved anterior bend of the corpus callosum in front of the septum pellucidum, radiating forward into the frontal lobes as the forceps minor.",
+      "uz": "Septum pellucidum oldidagi qadoqsimon tananing oldingi egilgan qismi (tizzasi); peshona bo'laklariga kichik qisqich (forceps minor) bo'lib tarqaladi."
+    },
+    "role": {
+      "en": "Interconnects the prefrontal, orbitofrontal and anterior cingulate cortices of the two hemispheres for coordinated executive control.",
+      "uz": "Muvofiqlashgan ijrochi nazorat uchun ikki yarim sharning prefrontal, orbitofrontal va oldingi belbog' po'stloqlarini o'zaro bog'laydi."
+    },
+    "clinical": {
+      "en": "Anterior callosal lesions or ACA infarcts disrupt interhemispheric prefrontal transfer and can cause left-hand ideomotor apraxia or frontal disconnection.",
+      "uz": "Oldingi kallozal zararlanish yoki ACA infarkti yarim sharlararo prefrontal aloqani uzadi va chap qo'l ideomotor apraksiyasini berishi mumkin."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-body-of-corpus-callosum": {
+    "la": "Truncus corporis callosi",
+    "uz": "Qadoqsimon tana tanasi",
+    "description": {
+      "en": "Arching middle trunk of the corpus callosum between the genu and splenium, forming the roof of the lateral ventricles.",
+      "uz": "Qadoqsimon tananing tizzasi bilan spleniumi orasidagi gumbazsimon o'rta qismi; yon qorinchalar tomini hosil qiladi."
+    },
+    "role": {
+      "en": "Links premotor, primary motor, primary somatosensory and posterior parietal cortices across the midline for bimanual coordination and tactile transfer.",
+      "uz": "Ikki qo'l muvofiqligi va taktil ma'lumot almashinuvi uchun premotor, birlamchi harakat, somatosensor va orqa tepa po'stloqlarini o'rta chiziq orqali bog'laydi."
+    },
+    "clinical": {
+      "en": "Lesions cause intermanual conflict ('alien hand' syndrome), left-hand apraxia and tactile anomia in the left hand; classic site of multiple sclerosis 'Dawson's fingers'.",
+      "uz": "Zararlanishi qo'llararo ziddiyat ('begona qo'l' sindromi), chap qo'l apraksiyasi va taktil anomiyani beradi; tarqoq sklerozdagi 'Douson barmoqlari'ning xos joyi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-corpus-callosum-splenium": {
+    "la": "Splenium corporis callosi",
+    "uz": "Qadoqsimon tana yostiqchasi (splenium)",
+    "description": {
+      "en": "Thick rounded posterior end of the corpus callosum overhanging the pineal region and third ventricle, radiating backward as the forceps major.",
+      "uz": "Epifiz sohasi va uchinchi qorincha ustida joylashgan qadoqsimon tananing qalinlashgan orqa uchi; orqaga katta qisqich (forceps major) bo'lib tarqaladi."
+    },
+    "role": {
+      "en": "Connects the occipital, posterior temporal and posterior parietal visual cortices of the two hemispheres.",
+      "uz": "Ikki yarim sharning ensa, orqa chakka va orqa tepa ko'ruv po'stloqlarini o'zaro bog'laydi."
+    },
+    "clinical": {
+      "en": "Left PCA infarct involving left visual cortex plus the splenium causes alexia without agraphia (Dejerine syndrome: right visual field information cannot reach the left language cortex).",
+      "uz": "Chap ko'ruv po'stlog'i va spleniumni qamragan chap PCA infarkti agrafiyasiz aleksiya (Dejerin sindromi) beradi: o'ng yarim shardagi ko'ruv axboroti chap til po'stlog'iga o'ta olmaydi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-fornix-column-body": {
+    "la": "Columna et corpus fornicis",
+    "uz": "Gumbaz ustuni va tanasi (fornix)",
+    "description": {
+      "en": "Midline arching bundle of the fornix suspended beneath the corpus callosum and septum pellucidum, curving downward in front of the interventricular foramen toward the mammillary bodies.",
+      "uz": "Qadoqsimon tana va septum pellucidum ostida osilib turuvchi gumbazning (fornix) o'rta chiziqdagi yoysimon tanasi va qorinchalararo teshik oldidan so'rg'ichsimon tanalarga tushuvchi ustunlari."
+    },
+    "role": {
+      "en": "Major efferent tract of the hippocampus in the Papez circuit, linking the subiculum and hippocampus with the mammillary bodies, anterior thalamus and septal nuclei.",
+      "uz": "Papez xotira zanjirida gippokampning asosiy chiqish yo'li — subikulum va gippokampni so'rg'ichsimon tanalar, oldingi talamus va septal yadrolar bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Transection or infarction (during third-ventricle colloid cyst removal or subcallosal artery injury) produces severe anterograde episodic amnesia.",
+      "uz": "Kesilishi yoki infarkti (uchinchi qorincha kolloid kistasi jarrohligida yoki subkallozal arteriya jarohatida) og'ir anterograd epizodik amneziya beradi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-corticospinal-tract": {
+    "la": "Tractus corticospinalis",
+    "uz": "Kortikospinal trakt (piramidal yo'l)",
+    "description": {
+      "en": "Brainstem segment of the descending motor tract tracked in the JHU DTI atlas through the basis pontis and medullary pyramid down to the pyramidal decussation.",
+      "uz": "JHU DTI atlasida ko'prik asosi va uzunchoq miya piramidasi orqali piramidal kesishmagacha kuzatilgan tushuvchi harakat traktining miya ustuni qismi."
+    },
+    "role": {
+      "en": "Conveys voluntary motor commands from primary motor and premotor cortices to spinal lower motor neurons (crossing at the caudal medulla to control the opposite body).",
+      "uz": "Birlamchi harakat va premotor po'stloqdan orqa miya motoneyronlariga ixtiyoriy harakat buyruqlarini yetkazadi (kaudal uzunchoq miyada kesishib, tananing qarama-qarshi tomonini boshqaradi)."
+    },
+    "clinical": {
+      "en": "Unilateral lesion above the pyramidal decussation causes contralateral spastic hemiparesis, hyperreflexia and a Babinski sign; degenerates in amyotrophic lateral sclerosis (ALS).",
+      "uz": "Piramidal kesishmadan yuqoridagi bir tomonlama zararlanish qarama-qarshi spastik gemiparez, giperrefleksiya va Babinskiy belgisini beradi; amiotrofik lateral sklerozda (ALS) degeneratsiyalanadi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Hua et al. 2008, NeuroImage — Tract probability maps in stereotaxic spaces: Analyses of white matter anatomy and tract-specific quantification",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.07.053"
+      }
+    ]
+  },
+  "wm-medial-lemniscus": {
+    "la": "Lemniscus medialis",
+    "uz": "Medial qovuzloq (medial lemniskus)",
+    "description": {
+      "en": "Ascending brainstem tract formed by internal arcuate fibres from the gracile and cuneate nuclei, running through the medullary, pontine and midbrain tegmentum to VPL of the thalamus.",
+      "uz": "Nozik va ponasimon yadrolarning ichki yoysimon tolalaridan hosil bo'lib, uzunchoq miya, ko'prik va o'rta miya tegmentumi orqali talamusning VPL yadrosigacha ko'tariluvchi trakt."
+    },
+    "role": {
+      "en": "Second-order segment of the dorsal column–medial lemniscus (DCML) pathway carrying contralateral discriminative touch, vibration and conscious proprioception.",
+      "uz": "Orqa ustun–medial lemniskus (DCML) yo'lining ikkinchi neyron bo'g'ini — qarama-qarshi tomondan nozik farqlovchi sezgi, tebranish va ongli proprioseptsiyani o'tkazadi."
+    },
+    "clinical": {
+      "en": "Medial medullary (Dejerine) or pontine tegmental infarct produces contralateral loss of vibration and joint position sense while sparing pain and temperature.",
+      "uz": "Medial medullyar (Dejerin) yoki ko'prik tegmentumi infarkti og'riq va harorat sezgisini saqlagan holda qarama-qarshi tomonda tebranish va bo'g'im holati sezgisini yo'qotadi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-inferior-cerebellar-peduncle": {
+    "la": "Pedunculus cerebellaris inferior (corpus restiforme)",
+    "uz": "Pastki miyacha oyoqchasi (JHU)",
+    "description": {
+      "en": "Dorsolateral medullary white-matter tract curving upward beside the fourth ventricle into the cerebellum, comprising the restiform and juxtarestiform bodies.",
+      "uz": "Uzunchoq miyaning dorsolateral qismidan to'rtinchi qorincha yonida yuqoriga miyachaga kiruvchi oq modda trakti (arqonsimon va jukstarestiform tanalar)."
+    },
+    "role": {
+      "en": "Conveys dorsal spinocerebellar, cuneocerebellar, olivocerebellar (climbing fibres) and vestibulocerebellar afferents into the ipsilateral cerebellum.",
+      "uz": "Orqa spinotserebellyar, kuneotserebellyar, olivotserebellyar (chirmashuvchi tolalar) va vestibulotserebellyar kirishlarni o'z tomonidagi miyachaga olib kiradi."
+    },
+    "clinical": {
+      "en": "Damaged in lateral medullary (Wallenberg) syndrome (PICA territory), causing marked ipsilateral limb and gait ataxia with falling toward the lesion side.",
+      "uz": "Lateral medullyar (Vallenberg) sindromida (PICA hovuzi) zararlanib, o'z tomonida oyoq-qo'l va yurish ataksiyasi hamda o'choq tomonga og'ishni keltirib chiqaradi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-superior-cerebellar-peduncle": {
+    "la": "Pedunculus cerebellaris superior (brachium conjunctivum)",
+    "uz": "Yuqori miyacha oyoqchasi (JHU)",
+    "description": {
+      "en": "Efferent tract emerging from the dentate and interposed cerebellar nuclei in the upper wall of the fourth ventricle and decussating in the caudal midbrain tegmentum.",
+      "uz": "Miyachaning tishsimon va oraliq yadrolaridan to'rtinchi qorincha yuqori devori bo'ylab chiqib, kaudal o'rta miya tegmentumida kesishuvchi chiqish trakti."
+    },
+    "role": {
+      "en": "Main cerebellar output (dentato-rubro-thalamic tract) projecting to the contralateral red nucleus and ventral lateral thalamus (VIM/VLP) to coordinate motor cortex.",
+      "uz": "Miyachaning asosiy chiqish yo'li (dentato-rubro-talamik trakt) — harakat po'stlog'ini muvofiqlashtirish uchun qarama-qarshi qizil yadro va talamusga (VIM/VLP) yo'naladi."
+    },
+    "clinical": {
+      "en": "Lesions before the midbrain decussation cause ipsilateral intention tremor and dysmetria; lesions above the decussation cause contralateral cerebellar ataxia and rubral (Holmes) tremor.",
+      "uz": "O'rta miyadagi kesishmadan oldingi zararlanish o'z tomonida intension tremor va dismetriya, kesishmadan yuqoridagisi esa qarama-qarshi ataksiya va Xolms tremorini beradi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-cerebral-peduncle": {
+    "la": "Crus cerebri (pedunculus cerebri)",
+    "uz": "Miya oyoqchasi (JHU)",
+    "description": {
+      "en": "Massive ventral white-matter column of the midbrain (crus cerebri) located ventral to the substantia nigra, continuing the posterior limb of the internal capsule into the pons.",
+      "uz": "O'rta miyaning qora moddadan ventralda joylashgan yirik oq modda ustuni (crus cerebri); ichki kapsula orqa oyoqchasini ko'prikka davom ettiradi."
+    },
+    "role": {
+      "en": "Carries frontopontine fibres medially, corticobulbar and corticospinal tracts in its middle three-fifths (face medial, leg lateral), and temporo-/parieto-/occipitopontine fibres laterally.",
+      "uz": "Medial qismida frontopontin, o'rta uchdan besh qismida kortikobulbar va kortikospinal (yuz medial, oyoq lateral), lateral qismida chakka-tepa-ensapontin tolalarni o'tkazadi."
+    },
+    "clinical": {
+      "en": "Ventral midbrain infarction causes Weber syndrome (ipsilateral CN III palsy + contralateral hemiparesis); compression against the opposite tentorial edge in uncal herniation (Kernohan's notch) causes false-localising ipsilateral hemiparesis.",
+      "uz": "Ventral o'rta miya infarkti Veber sindromini (o'z tomonida III nerv falaji + qarama-qarshi gemiparez) beradi; unkal churrada qarama-qarshi miyacha chodiriga bosilishi (Kernoxan o'ymasi) o'z tomonida gemiparez chaqiradi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-internal-capsule-anterior-limb": {
+    "la": "Crus anterius capsulae internae",
+    "uz": "Ichki kapsulaning oldingi oyoqchasi",
+    "description": {
+      "en": "V-shaped anterior limb of the internal capsule wedged between the head of the caudate nucleus medially and the lentiform nucleus (putamen/globus pallidus) laterally.",
+      "uz": "Medialda dumli yadro boshi bilan lateralda yasmiqsimon yadro (putamen/rangpar shar) orasida joylashgan ichki kapsulaning oldingi oyoqchasi."
+    },
+    "role": {
+      "en": "Contains anterior thalamic radiations (linking mediodorsal and anterior thalamic nuclei with prefrontal and anterior cingulate cortex) and frontopontine fibres.",
+      "uz": "Oldingi talamik nurlanish (mediodorsal va oldingi talamus yadrolarini prefrontal hamda oldingi belbog' po'stlog'i bilan bog'lovchi) va frontopontin tolalarni o'tkazadi."
+    },
+    "clinical": {
+      "en": "Target of stereotactic anterior capsulotomy and deep brain stimulation for refractory obsessive-compulsive disorder (OCD); infarcts cause frontal apathy and abulia.",
+      "uz": "Rezistent obssessiv-kompulsiv buzilishda (OKB) stereotaktik oldingi kapsulotomiya va DBS nishoni; infarkti frontal apatiya va abuliya beradi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-internal-capsule-posterior-limb": {
+    "la": "Crus posterius capsulae internae",
+    "uz": "Ichki kapsulaning orqa oyoqchasi",
+    "description": {
+      "en": "Posterior limb of the internal capsule lying between the thalamus medially and the lentiform nucleus laterally, behind the genu.",
+      "uz": "Ichki kapsula tizzasidan orqada, medialda talamus bilan lateralda yasmiqsimon yadro orasida joylashgan orqa oyoqcha."
+    },
+    "role": {
+      "en": "High-density bottleneck containing the corticospinal and corticobulbar tracts from motor cortex and the superior thalamic radiation (somatosensory fibres from VPL/VPM to S1).",
+      "uz": "Harakat po'stlog'idan tushuvchi kortikospinal va kortikobulbar traktlar hamda yuqori talamik nurlanishni (VPL/VPM dan S1 ga somatosensor tolalar) zich jamlagan bo'g'iz."
+    },
+    "clinical": {
+      "en": "A small lenticulostriate or anterior choroidal lacunar infarct here causes dense contralateral pure motor hemiplegia (face, arm and leg equally) or sensorimotor stroke.",
+      "uz": "Bu yerdagi kichik lentikulostriar yoki oldingi xoroidal lakunar infarkt qarama-qarshi tomonda yuz, qo'l va oyoqning bir tekis sof harakat gemiplegiyasini yoki sensomotor insultni beradi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-internal-capsule-retrolenticular-part": {
+    "la": "Pars retrolentiformis capsulae internae",
+    "uz": "Ichki kapsulaning yasmiq orti (retrolentikulyar) qismi",
+    "description": {
+      "en": "Posterior continuation of the internal capsule curving behind the posterior border of the lentiform nucleus lateral to the pulvinar of the thalamus.",
+      "uz": "Yasmiqsimon yadroning orqa chegarasi ortida, talamus pulvinaridan lateralda davom etuvchi ichki kapsulaning orqa qismi."
+    },
+    "role": {
+      "en": "Carries the posterior thalamic radiation (including the optic radiation from the lateral geniculate body to V1) and parieto-/occipitopontine fibres.",
+      "uz": "Orqa talamik nurlanishni (jumladan lateral tizzasimon tanadan V1 ga boruvchi ko'ruv nurlanishini) hamda tepa- va ensa-ko'prik tolalarini o'tkazadi."
+    },
+    "clinical": {
+      "en": "Lesions (e.g. anterior choroidal artery infarct or deep intracerebral haemorrhage) produce contralateral homonymous hemianopia, often combined with hemisensory loss.",
+      "uz": "Zararlanishi (masalan, oldingi xoroidal arteriya infarkti yoki chuqur qon quyilishi) ko'pincha gemisensor yo'qotish bilan qo'shilgan qarama-qarshi gomonim gemianopsiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-anterior-corona-radiata": {
+    "la": "Corona radiata anterior",
+    "uz": "Oldingi nursimon toj (corona radiata)",
+    "description": {
+      "en": "Fan-shaped frontal projection sheet extending upward and forward from the anterior limb and genu of the internal capsule lateral to the frontal horn of the lateral ventricle.",
+      "uz": "Ichki kapsulaning oldingi oyoqchasi va tizzasidan yon qorincha oldingi shoxi yonida yuqori va oldinga yelpig'ichsimon tarqaluvchi peshona proyeksion qatlami."
+    },
+    "role": {
+      "en": "Bidirectional projection fibres connecting the prefrontal and anterior cingulate cortices with the thalamus, striatum and brainstem.",
+      "uz": "Prefrontal va oldingi belbog' po'stloqlarini talamus, striatum va miya ustuni bilan ikki tomonlama bog'lovchi proyeksion tolalar."
+    },
+    "clinical": {
+      "en": "Small-vessel ischemic lesions here impair executive attention, processing speed and mood regulation (vascular cognitive impairment).",
+      "uz": "Bu yerdagi mayda tomir ishemik o'choqlari ijrochi diqqat, axborotni qayta ishlash tezligi va kayfiyat boshqaruvini buzadi (qon-tomir kognitiv buzilishi)."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-superior-corona-radiata": {
+    "la": "Corona radiata superior",
+    "uz": "Yuqori nursimon toj (corona radiata)",
+    "description": {
+      "en": "Dorsal fan of projection fibres ascending vertically from the posterior limb of the internal capsule to the precentral and postcentral gyri lateral to the body of the lateral ventricle.",
+      "uz": "Ichki kapsulaning orqa oyoqchasidan yon qorincha tanasi yonida oldingi va orqa markaziy pushtalarga vertikal ko'tariluvchi proyeksion tolalar yelpig'ichi."
+    },
+    "role": {
+      "en": "Contains the descending corticospinal and corticobulbar motor axons and the ascending thalamocortical somatosensory radiations.",
+      "uz": "Tushuvchi kortikospinal va kortikobulbar harakat aksonlarini hamda ko'tariluvchi talamokortikal somatosensor nurlanishni o'z ichiga oladi."
+    },
+    "clinical": {
+      "en": "Subcortical infarcts here cause contralateral motor weakness or sensorimotor deficit (often more fractional than internal capsule lesions because fibres are fanned out).",
+      "uz": "Bu yerdagi po'stloq osti infarkti qarama-qarshi harakat kuchsizligi yoki sensomotor nuqson beradi (tolalar yoyilgani sababli ichki kapsulaga qaraganda tanlabroq kechishi mumkin)."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-posterior-corona-radiata": {
+    "la": "Corona radiata posterior",
+    "uz": "Orqa nursimon toj (corona radiata)",
+    "description": {
+      "en": "Posterior projection sheet fanning upward and backward from the retrolenticular internal capsule toward the superior and inferior parietal lobules lateral to the ventricular atrium.",
+      "uz": "Ichki kapsulaning retrolentikulyar qismidan qorincha atriumi yonida yuqori va pastki tepa bo'lakchalariga yoyiluvchi orqa proyeksion qatlam."
+    },
+    "role": {
+      "en": "Connects posterior thalamic nuclei (pulvinar, LP, VP) with parietal association cortex and carries parietopontine fibres.",
+      "uz": "Orqa talamus yadrolarini (pulvinar, LP, VP) tepa assotsiativ po'stlog'i bilan bog'laydi va parietopontin tolalarni o'tkazadi."
+    },
+    "clinical": {
+      "en": "Lesions impair visuospatial integration and contralateral somatosensory awareness, and periventricular leukomalacia in preterm infants here affects visuomotor development.",
+      "uz": "Zararlanishi ko'ruv-fazoviy integratsiya va qarama-qarshi somatosensor idrokni buzadi; chala tug'ilgan chaqaloqlarda periventrikulyar leykomalyatsiya shu sohani ko'p shikastlaydi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-posterior-thalamic-optic-radiation": {
+    "la": "Radiatio thalamica posterior et radiatio optica (Gratiolet)",
+    "uz": "Orqa talamik va ko'ruv nurlanishi (Grasiole tutami)",
+    "description": {
+      "en": "Anteroposterior fibre sheet sweeping back from the lateral geniculate body and pulvinar along the lateral wall of the atrium and occipital horn of the lateral ventricle to the calcarine cortex.",
+      "uz": "Lateral tizzasimon tana va pulvinardan yon qorincha atriumi va ensa shoxi lateral devori bo'ylab kalkarin po'stloqqa yo'naluvchi oldingi-orqa tola qatlami."
+    },
+    "role": {
+      "en": "Relays retinal visual information from the lateral geniculate nucleus to primary visual cortex (V1): upper division via parietal lobe (lower visual field), lower division (Meyer's loop) via temporal lobe (upper visual field).",
+      "uz": "Ko'ruv axborotini lateral tizzasimon yadrodan birlamchi ko'ruv po'stlog'iga (V1) yetkazadi: tepa bo'lagi orqali yuqori tutam (pastki ko'rish maydoni), chakka bo'lagi orqali Meyer qovuzlog'i (yuqori ko'rish maydoni)."
+    },
+    "clinical": {
+      "en": "Temporal lesions of Meyer's loop cause contralateral superior quadrantanopia ('pie in the sky'); parietal lesions cause inferior quadrantanopia; full interruption causes homonymous hemianopia.",
+      "uz": "Meyer qovuzlog'i zararlanishi qarama-qarshi yuqori kvadrantanopsiya, tepa qismi zararlanishi pastki kvadrantanopsiya, to'liq uzilishi gomonim gemianopsiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-sagittal-stratum": {
+    "la": "Stratum sagittale (fasciculi longitudinalis inferior et fronto-occipitalis inferior)",
+    "uz": "Sagittal qatlam (pastki bo'ylama va pastki peshona-ensa tutamlari)",
+    "description": {
+      "en": "Parasagittal white-matter sheet in the deep temporal and occipital lobes lateral to the temporal horn, containing the inferior longitudinal fasciculus (ILF) and inferior fronto-occipital fasciculus (IFOF).",
+      "uz": "Chakka va ensa bo'laklarining chuqur qismida, yon qorincha chakka shoxidan lateralda joylashgan parasagittal oq modda qatlami; pastki bo'ylama (ILF) va pastki peshona-ensa (IFOF) tutamlarini o'z ichiga oladi."
+    },
+    "role": {
+      "en": "Ventral visual and semantic highway: connects occipital visual areas with the anterior temporal lobe, amygdala and inferior frontal cortex for reading, face/object recognition and semantic language.",
+      "uz": "Ventral ko'ruv va semantik magistral: o'qish, yuz/narsalarni tanish va semantik til uchun ensa ko'ruv sohalarini oldingi chakka, amigdala va pastki peshona po'stlog'i bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Awake subcortical stimulation of the left IFOF inside the sagittal stratum reproducibly induces semantic paraphasias; lesions cause visual agnosia, alexia or semantic deficits.",
+      "uz": "Uyg'oq jarrohlikda chap sagittal qatlamdagi IFOF stimulyatsiyasi semantik parafaziya chaqiradi; zararlanishi ko'ruv agnoziyasi, aleksiya yoki semantik yetishmovchilik beradi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Hua et al. 2008, NeuroImage — Tract probability maps in stereotaxic spaces: Analyses of white matter anatomy and tract-specific quantification",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.07.053"
+      }
+    ]
+  },
+  "wm-external-capsule": {
+    "la": "Capsula externa",
+    "uz": "Tashqi kapsula",
+    "description": {
+      "en": "Thin vertical sheet of white matter situated between the lateral surface of the putamen and the claustrum, deep to the insula.",
+      "uz": "Orolcha ostida, putamenning lateral yuzasi bilan klaustrum (to'siq) orasida joylashgan yupqa vertikal oq modda qatlami."
+    },
+    "role": {
+      "en": "Carries cholinergic fibres from the basal forebrain to the cerebral cortex and ventral association pathways (uncinate fasciculus and inferior fronto-occipital fasciculus) passing under the insula.",
+      "uz": "Bazal oldingi miyadan po'stloqqa boruvchi xolinergik tolalarni hamda orolcha ostidan o'tuvchi ventral assotsiativ yo'llarni (ilmoqsimon va pastki peshona-ensa tutamlari) o'tkazadi."
+    },
+    "clinical": {
+      "en": "Classic site of symmetrical T2/FLAIR white-matter hyperintensities in CADASIL; also disrupted by lateral striatal (putaminal) haemorrhages.",
+      "uz": "CADASIL kasalligida T2/FLAIR MRTdagi simmetrik oq modda giperintensivliklarining xos joyi; shuningdek putaminal qon quyilishlarda zararlanadi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-cingulum-cingulate-gyrus": {
+    "la": "Cingulum (pars gyri cinguli)",
+    "uz": "Belbog' tutami (belbog' pushtasi qismi)",
+    "description": {
+      "en": "Dorsal C-shaped limb of the cingulum bundle running longitudinally inside the cingulate gyrus above the corpus callosum from the subcallosal area to the splenium.",
+      "uz": "Qadoqsimon tana ustidagi belbog' pushtasi ichida kalloz osti sohasidan spleniumgacha bo'ylama yo'nalgan belbog' tutamining (cingulum) dorsal C-simon qismi."
+    },
+    "role": {
+      "en": "Links anterior and posterior cingulate cortices with prefrontal and parietal association areas — the structural backbone of the default-mode and cognitive-control networks.",
+      "uz": "Oldingi va orqa belbog' po'stlog'ini prefrontal va tepa assotsiativ sohalari bilan bog'laydi — default-mode va kognitiv nazorat tarmoqlarining tuzilmaviy o'zagi."
+    },
+    "clinical": {
+      "en": "Surgical target of stereotactic anterior cingulotomy for refractory cancer/neuropathic pain, OCD and major depression; early diffusivity loss in Alzheimer disease.",
+      "uz": "Rezistent og'riq, OKB va og'ir depressiyada stereotaktik oldingi singulotomiya nishoni; Alzheimer kasalligida erta zararlanadi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Hua et al. 2008, NeuroImage — Tract probability maps in stereotaxic spaces: Analyses of white matter anatomy and tract-specific quantification",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.07.053"
+      }
+    ]
+  },
+  "wm-cingulum-hippocampus": {
+    "la": "Cingulum (pars parahippocampalis)",
+    "uz": "Belbog' tutami (gippokamp qismi)",
+    "description": {
+      "en": "Ventral temporal continuation of the cingulum bundle curving around the splenium into the parahippocampal gyrus toward the entorhinal cortex and subiculum.",
+      "uz": "Belbog' tutamining splenium ortidan aylanib, parahippokampal pushta ichida entorinal po'stloq va subikulum tomon yo'naluvchi ventral chakka qismi."
+    },
+    "role": {
+      "en": "Completes the cortical loop of the Papez circuit by delivering posterior cingulate, retrosplenial and parietal inputs to the parahippocampal and hippocampal memory system.",
+      "uz": "Orqa belbog', retrosplenial va tepa kirishlarini parahippokampal hamda gippokampal xotira tizimiga yetkazib, Papez zanjirining po'stloq halqasini tutashtiradi."
+    },
+    "clinical": {
+      "en": "One of the earliest white-matter tracts to show fractional anisotropy reduction on DTI in amnestic mild cognitive impairment and Alzheimer disease.",
+      "uz": "Amnestik yengil kognitiv buzilish va Alzheimer kasalligida DTI tekshiruvida fraksion anizotropiyasi eng erta pasayadigan oq modda traktlaridan biri."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Hua et al. 2008, NeuroImage — Tract probability maps in stereotaxic spaces: Analyses of white matter anatomy and tract-specific quantification",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.07.053"
+      }
+    ]
+  },
+  "wm-fornix-cres-stria-terminalis": {
+    "la": "Crus fornicis et stria terminalis",
+    "uz": "Gumbaz oyoqchasi va oxirgi yo'l (stria terminalis)",
+    "description": {
+      "en": "C-shaped limbic bundle arching along the medial wall of the temporal horn and around the pulvinar of the thalamus, combining the crus of the fornix (from the hippocampus) and the stria terminalis (from the amygdala).",
+      "uz": "Chakka shoxi medial devori bo'ylab va talamus pulvinari atrofidan yoysimon aylanib o'tuvchi limbik tutam; gumbaz oyoqchasi (gippokampdan) va stria terminalisni (amigdaladan) birlashtiradi."
+    },
+    "role": {
+      "en": "Fornix crus carries hippocampal episodic memory output toward the mammillary bodies; stria terminalis links the amygdala with the bed nucleus of the stria terminalis (BNST) and hypothalamus for stress and anxiety responses.",
+      "uz": "Gumbaz oyoqchasi gippokampning epizodik xotira chiqishini so'rg'ichsimon tanalarga eltadi; stria terminalis esa stress va xavotir javoblari uchun amigdalani BNST va gipotalamus bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Damage in medial temporal lobectomy, herpes encephalitis or temporal tumours disrupts episodic memory consolidation and emotional autonomic regulation.",
+      "uz": "Medial chakka lobektomiyasi, gerpetik ensefalit yoki chakka o'smalarida zararlanishi epizodik xotirani mustahkamlash va emotsional vegetativ boshqaruvni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-superior-longitudinal-fasciculus": {
+    "la": "Fasciculus longitudinalis superior (et fasciculus arcuatus)",
+    "uz": "Yuqori bo'ylama tutam (va yoysimon tutam)",
+    "description": {
+      "en": "Large dorsal association bundle arching above the insula to connect the parietal and posterior temporal lobes with the frontal lobe, including the arcuate fasciculus.",
+      "uz": "Orolcha ustidan yoysimon o'tib, tepa va orqa chakka bo'laklarini peshona bo'lagi bilan bog'lovchi yirik dorsal assotsiativ tutam (yoysimon tutam — fasciculus arcuatus bilan birga)."
+    },
+    "role": {
+      "en": "Dorsal language stream on the left (linking Wernicke's and Broca's areas for phonological repetition and syntax) and frontoparietal visuospatial attention network on the right.",
+      "uz": "Chapda dorsal til oqimi (fonologik takrorlash va sintaksis uchun Vernike va Broka sohalarini bog'laydi), o'ngda esa peshona-tepa ko'ruv-fazoviy diqqat tarmog'i."
+    },
+    "clinical": {
+      "en": "Left arcuate/SLF lesions cause conduction aphasia (fluent speech and good comprehension with severely impaired repetition); right SLF lesions cause persistent hemispatial neglect.",
+      "uz": "Chap SLF/yoysimon tutam zararlanishi o'tkazuvchi afaziya (ravon nutq va yaxshi tushunish, lekin takrorlashning keskin buzilishi), o'ng SLF zararlanishi esa turg'un gemispatial e'tiborsizlik beradi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Hua et al. 2008, NeuroImage — Tract probability maps in stereotaxic spaces: Analyses of white matter anatomy and tract-specific quantification",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.07.053"
+      }
+    ]
+  },
+  "wm-superior-fronto-occipital-fasciculus": {
+    "la": "Fasciculus subcallosus (fronto-occipitalis superior)",
+    "uz": "Yuqori peshona-ensa tutami (subkallozal tutam)",
+    "description": {
+      "en": "Compact longitudinal bundle running along the superolateral angle of the caudate nucleus just beneath the corpus callosum and medial to the corona radiata.",
+      "uz": "Qadoqsimon tana ostida va nursimon tojdan medialda, dumli yadroning yuqori-lateral burchagi bo'ylab yo'nalgan ixcham bo'ylama tutam."
+    },
+    "role": {
+      "en": "In human microdissection and tractography this JHU region corresponds largely to the subcallosal fasciculus (Muratoff bundle) linking dorsal frontal and parietal/caudate regions.",
+      "uz": "Odam miyasi mikrodisseksiyasi va traktografiyasida bu JHU sohasi asosan dorsal peshona va tepa po'stlog'ini dumli yadro bilan bog'lovchi subkallozal tutamga (Muratov tutamiga) mos keladi."
+    },
+    "clinical": {
+      "en": "Lesions adjacent to the frontal horn and caudate head contribute to transcortical motor aphasia (speech initiation deficit) and executive slowing.",
+      "uz": "Yon qorincha oldingi shoxi va dumli yadro boshi yonidagi zararlanishi transkortikal motor afaziya (nutqni boshlash qiyinligi) va ijrochi sekinlashuvga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  },
+  "wm-uncinate-fasciculus": {
+    "la": "Fasciculus uncinatus",
+    "uz": "Ilmoqsimon tutam (fasciculus uncinatus)",
+    "description": {
+      "en": "Hook-shaped ventral association tract curving around the stem of the lateral fissure through the limen insulae to join the anterior temporal lobe with the orbitofrontal cortex.",
+      "uz": "Lateral egat poyasi atrofidan (limen insulae orqali) ilmoq shaklida egilib, oldingi chakka bo'lagini orbitofrontal po'stloq bilan bog'lovchi ventral assotsiativ trakt."
+    },
+    "role": {
+      "en": "Connects the temporal pole, amygdala and parahippocampal cortex with orbitofrontal and ventrolateral prefrontal cortex for proper-name retrieval, social-emotional valuation and episodic memory.",
+      "uz": "Atoqli otlarni eslash, ijtimoiy-emotsional baholash va epizodik xotira uchun chakka qutbi, amigdala va parahippokampal po'stloqni orbitofrontal po'stloq bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Degenerates early in semantic dementia (svPPA) and behavioural-variant frontotemporal dementia; disrupted in temporal lobe epilepsy and frontotemporal contusions.",
+      "uz": "Semantik demensiya (svPPA) va xulqiy peshona-chakka demensiyasida erta degeneratsiyalanadi; chakka epilepsiyasi va peshona-chakka kontuziyalarida shikastlanadi."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Hua et al. 2008, NeuroImage — Tract probability maps in stereotaxic spaces: Analyses of white matter anatomy and tract-specific quantification",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.07.053"
+      }
+    ]
+  },
+  "wm-tapetum": {
+    "la": "Tapetum corporis callosi",
+    "uz": "Tapetum (qadoqsimon tana gilami)",
+    "description": {
+      "en": "Thin sheet of callosal fibres sweeping laterally and downward from the posterior body and splenium of the corpus callosum along the lateral wall of the atrium and temporal/occipital horns.",
+      "uz": "Qadoqsimon tananing orqa tanasi va spleniumidan yon qorincha atriumi hamda chakka/ensa shoxlarining lateral devori bo'ylab pastga va lateralga yoyiluvchi yupqa kallozal tola qatlami."
+    },
+    "role": {
+      "en": "Provides interhemispheric commissural connection between the temporal and lateral occipital cortices of the two hemispheres, separating the ventricle from the optic radiation.",
+      "uz": "Qorinchani ko'ruv nurlanishidan ajratib turadi hamda ikki yarim sharning chakka va lateral ensa po'stloqlari orasida yarim sharlararo komissural aloqani ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Surgical landmark protecting the optic radiation during transventricular approaches to the temporal horn and atrium.",
+      "uz": "Yon qorincha chakka shoxi va atriumiga transventrikulyar neyroxirurgik kirishda ko'ruv nurlanishini himoya qiluvchi anatomik mo'ljal."
+    },
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      },
+      {
+        "title": "Wakana et al. 2004, Radiology — Fiber Tract–based Atlas of Human White Matter Anatomy",
+        "url": "https://doi.org/10.1148/radiol.2301021640"
+      }
+    ]
+  }
+}
