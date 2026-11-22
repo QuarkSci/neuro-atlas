@@ -1287,3 +1287,17 @@ ko'priklari. Tekshirildi: audit (`--min 0.15`, `--coverage`), audit-lesions 0, a
 `ag/AG-5` (200 ikki tilli viktorina savoli, `src/data/quiz/*.json`) tekshirildi va birlashtirildi. Tasdiqlandi: sxema/ref/plate 0 xato, 47 manba
 Crossref + eutils bilan mos. Tuzatildi: ikki noto'g'ri Purves NBK ID (savollarda va eski `gross-brain.json` da). Qoldi (AG-5b): to'g'ri javob 83%
 savolda eng uzun, ishonarsiz distraktorlar, 57 savolda kod identifikatorlari. Ma'lumot CL-4 UI ulanmaguncha faol emas.
+
+## CL-4 — mavzu viktorinasi + Anki (2026-11-22)
+
+- `src/quiz/engine.ts`: `loadBank` (`import.meta.glob`, mavzu bo'yicha bo'lak), `rng` (mulberry32, urug'li), `toCard` (variantlar aralashadi, to'g'ri indeks
+  qayta hisoblanadi), Leitner qutilari 0–3 (dam olish 0/1/3/7 kun; xato → 0, to'g'ri → +1), `pickDeck` (`mixed`: yangi → muddati kelgan → qolgani;
+  `weak`: xato qilingan va qutisi <2, eng ko'p xato birinchi), `summarise` (daraja bo'yicha, kalibratsiya: ishonchli/ishonchsiz aniqlik, zaif `refs`),
+  holat `localStorage` `na:quiz`.
+- `src/ui/QuizPanel.tsx`: sozlash (daraja, soni, rejim) → savol (1–4 tugma, Enter, Esc; "Ishonchim komil"; izoh + manbalar; "3D da ko'rsat" — oyna yashirinadi,
+  "Viktorinaga qaytish" tugmasi; "Plastinkada ko'rsat" — ustida ochiladi, Esc avval plastinkani yopadi) → natija (ball, daraja, kalibratsiya, zaif tuzilmalar,
+  "Xatolarni qayta", Anki: xatolar/hammasi). Kirish: O'rganish tabi, har mavzu ostida "Viktorina" kartasi (`topic-quiz`).
+- `src/quiz/anki.ts`: `ankiText`/`downloadAnki` (`#tags column:3`); AIPanel kartalari ham shuni ishlatadi.
+- PhD/neyroxirurg qatlami: ekspert daraja klinik lokalizatsiya keyslari, kalibratsiya (xavfli "ishonchli xato"), takrorlash oraliqlari.
+- Tekshirildi: engine skripti (bir urug' = bir deck, weak/Leitner, variant o'rni taqsimoti, Anki matni), UI (qora va yorug' rejim, 3D/plastinka), tsc, build,
+  audit-lesions 0, audit-pick 0. Tekshirilmadi: telefon kengligi, foydalanuvchi o'z brauzerida. Savollar sifati — AG-5b.

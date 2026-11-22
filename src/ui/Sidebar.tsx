@@ -1,10 +1,11 @@
 import { useCallback, useMemo, useRef, useState } from 'react'
-import { ChevronRight, Eye, EyeOff, GraduationCap, ScanLine, X } from 'lucide-react'
+import { ChevronRight, Eye, EyeOff, GraduationCap, ListChecks, ScanLine, X } from 'lucide-react'
 import { Switch } from '@/components/ui/switch'
 import { ACTIVE_SYSTEMS, ALL_SYSTEM_IDS, LAYERS, LEAF_PARTS } from '@/data'
 import { LESSON_BY_ID } from '@/data/lessons'
 import { SECTION_BY_ID } from '@/data/sections'
 import { TOPICS } from '@/data/topics'
+import { BANK_TOPICS } from '@/quiz/engine'
 import type { LayerId, SystemId } from '@/data/types'
 import { useL, useT } from '@/i18n'
 import { LAYER_COLORS } from '@/scene/materials'
@@ -132,7 +133,7 @@ function AtlasList() {
 function TopicList() {
   const t = useT()
   const l = useL()
-  const { topic, lesson, sectionCut, setTopic, setLesson, openSection } = useAtlas()
+  const { topic, lesson, sectionCut, setTopic, setLesson, openSection, openQuiz } = useAtlas()
   return (
     <div className="side-scroll">
       <h3 className="side-title">{t.lnTopics}</h3>
@@ -165,6 +166,15 @@ function TopicList() {
                       </button>
                     ) : null
                   })}
+                  {BANK_TOPICS.has(tp.id) && (
+                    <button className="topic-lesson topic-quiz" onClick={() => openQuiz(tp.id)}>
+                      <ListChecks size={16} />
+                      <span>
+                        <strong>{l({ en: 'Quiz', uz: 'Viktorina' })}</strong>
+                        <small>{l({ en: '3 levels · review · Anki', uz: '3 daraja · takrorlash · Anki' })}</small>
+                      </span>
+                    </button>
+                  )}
                   {tp.sections.length > 0 && (
                     <>
                       <div className="topic-sub">

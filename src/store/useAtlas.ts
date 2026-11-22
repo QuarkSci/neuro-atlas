@@ -107,6 +107,9 @@ export interface AtlasState {
   openSection: (id: string | null) => void
   /** Traces a long tract on the plates (null: off). */
   setPathway: (id: string | null) => void
+  /** Topic whose quiz is open (null: closed). */
+  quizTopic: string | null
+  openQuiz: (topic: string | null) => void
   /** Opens a topic in the learn tab (null: back to the topic cards). */
   setTopic: (id: string | null) => void
   /** Starts a lesson at its first step, or (null) returns to the lesson list. */
@@ -292,6 +295,8 @@ export const useAtlas = create<AtlasState>((set) => ({
     }),
   openSection: (sectionId) => set((s) => ({ sectionId, panel: null, sidebar: sectionId && isPhone() ? false : s.sidebar })),
   setPathway: (pathway) => set({ pathway }),
+  quizTopic: null,
+  openQuiz: (quizTopic) => set((s) => ({ quizTopic, ...(quizTopic ? { sectionId: null, panel: null } : {}), sidebar: quizTopic && isPhone() ? false : s.sidebar })),
   setTopic: (topic) =>
     set((s) => ({
       ...enterLearn(s),

@@ -7,6 +7,7 @@ import { Sidebar } from '@/ui/Sidebar'
 import { SearchPanel } from '@/ui/SearchPanel'
 import { PlanesPanel } from '@/ui/ViewControls'
 import { SectionViewer } from '@/ui/SectionViewer'
+import { QuizPanel } from '@/ui/QuizPanel'
 import { LessonPanel } from '@/ui/LessonPanel'
 import { BottomBar } from '@/ui/BottomBar'
 import { Inspector } from '@/ui/Inspector'
@@ -64,6 +65,7 @@ export default function App() {
       <Loading />
       <Inspector />
       <About />
+      <QuizPanel />
       <SectionViewer />
       <LessonPanel />
       <AIPanel />

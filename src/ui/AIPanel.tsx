@@ -21,6 +21,7 @@ import {
 } from 'lucide-react'
 import type { L10n } from '@/data/types'
 import { useL } from '@/i18n'
+import { downloadAnki } from '@/quiz/anki'
 import { PROVIDER_META, PROVIDER_ORDER, pickModel } from '@/ai/providers'
 import { DEFAULT_LOCAL_URL } from '@/ai/providers/compat'
 import { connected, useAI, type ChatMessage, type TutorMode } from '@/ai/useAI'
@@ -718,17 +719,7 @@ function ModeBar() {
 /** Cards from make_flashcards: a preview and a tab-separated file Anki imports. */
 function Flashcards({ deck, cards }: { deck: string; cards: { front: string; back: string }[] }) {
   const l = useL()
-  const download = () => {
-    // Tabs and newlines inside a field would break the columns.
-    const clean = (x: string) => x.replace(/[\t\r\n]+/g, ' ').trim()
-    const text = ['#separator:tab', '#html:false', `#deck:${clean(deck)}`, ...cards.map((c) => `${clean(c.front)}\t${clean(c.back)}`)].join('\n')
-    const url = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }))
-    const a = document.createElement('a')
-    a.href = url
-    a.download = `${clean(deck).replace(/[^\w-]+/g, '_') || 'neuro-atlas'}.txt`
-    a.click()
-    setTimeout(() => URL.revokeObjectURL(url), 1000)
-  }
+  const download = () => downloadAnki(deck, cards)
   return (
     <div className="ai-cards">
       <b>
