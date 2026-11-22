@@ -57,7 +57,7 @@ Tamoyil: **"perfektlik vaqtdan ustun"** — screenshot yoki sonli audit bilan te
   kontekst (ekrandagi holat), 15 tool (AI ilovani boshqaradi), rasm yuborish, 4 rejim (repetitor, Sokratik, klinik keys,
   tadqiqot — PubMed/Crossref, uydirma havola ogohlantirishi, Anki eksport).
 
-**Ochiq muammo:** AI panel foydalanuvchining **haqiqiy Gemini kaliti bilan ishlamayapti** (CL-1, 6.3 da).
+**Ochiq muammo:** yo'q. (Gemini: sabab Google tomonidagi 503 "high demand" — bepul tarif; panel endi xatoni to'liq ko'rsatadi va band modeldan boshqasiga o'tadi.)
 
 **Hozirgi yo'nalishlar:** realizm (R2–R4), Liquid Glass (LG-3), kontent to'ldirish, deploy, plastinka chegaralari (5.1).
 
@@ -378,11 +378,11 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 
 | ID | Vazifa | Kim | Holat | Branch / handoff |
 |---|---|---|---|---|
-| AG-1 | Kontent: Desikan, JHU, Destrieux, Glasser ta'riflari | Antigravity | ⏳ | ag/AG-1 · docs/handoff/AG-1.md |
+| AG-1 | Kontent: Desikan, JHU, Destrieux, Glasser ta'riflari | Antigravity | ✅ 2026-11-22 | birlashtirildi (`616d941`) · docs/handoff/AG-1.md |
 | AG-2 | Yorug' rejim: dars kartasi va kesim ko'ruvchisi | Antigravity | ⏳ | ag/AG-2 |
 | AG-3 | Deploy: meshlar Release + Draco, README, ATTRIBUTION | Antigravity | ⏳ | ag/AG-3 |
 | AG-4 | Tadqiqot: U1 gistologiya; BigBrain 20 mkm | Antigravity | ⏳ | ag/AG-4 |
-| CL-1 | AI panel: haqiqiy Gemini kaliti bilan ishlamayapti | Claude | ⏳ birinchi | master |
+| CL-1 | AI panel: haqiqiy Gemini kaliti bilan ishlamayapti | Claude | ✅ tashxis: Google 503 (bepul tarif, band model); xato tafsiloti + avtomatik model almashtirish (`cd06af4`, `8b8ef1b`) | master |
 | CL-2 | AI-6 (ChatGPT/Google kirish), panel joylashuvi, look_at_screen | Claude | ⏳ | master |
 | CL-3 | 5.1: 21 plastinkada chegaralar 100% | Claude | ⏳ | master |
 | CL-4 | Mavzu viktorinasi + Anki | Claude | ⏳ | master |
@@ -392,3 +392,5 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-21 · Claude · AI panel AI-1…AI-5 tayyor; Gemini tuzatishlari (`827e81d`, `9b18a8f`); haqiqiy kalit bilan muammo ochiq.
 - 2026-11-21 · Claude · Ish taqsimoti: `AGENTS.md`, `docs/TASKS.md` (`6813487`).
 - 2026-11-22 · Claude · Yagona `AI.md`; skriptlar `NA_URL` ni o'qiydi (Antigravity 3020 portda ishlaydi); TASKS/AGENTS → AI.md.
+- 2026-11-22 · Claude · CL-1: Gemini 503 tashxisi, xato tafsiloti va avtomatik model almashtirish (`cd06af4`, `8b8ef1b`).
+- 2026-11-22 · Claude · AG-1 tekshirildi va birlashtirildi (`616d941`); kichik tuzatish: buzuq Wikipedia havolasi `Lateral_occipital_gyrus` → `Occipital_lobe` (desikan.json, gross-brain.json).

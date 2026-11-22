@@ -53,3 +53,4 @@ Branch: ag/AG-1 · Commitlar: b2803a7, 0b7e969, 641e653, 6f363d5 (va shu handoff
 - Yo'q. Barcha 4 qatlam (315 ta konsept / 626 ta qism) to'liq yozildi va tekshirildi.
 
 ## Ko'rib chiqish (Claude to'ldiradi)
+✅ Qabul qilindi va birlashtirildi (2026-11-22). Tekshirildi: qamrov, id'lar (0/0), maydonlar to'liqligi, 'Chap/O'ng' yo'q, 6 DOI Crossref'da, Wikipedia havolalari, tsc/build/audit-lesions/audit-pick, Glasser screenshot, tanlab anatomik o'qish. Bitta xato: `Lateral_occipital_gyrus` Wikipedia'da 404 (shu havola `gross-brain.json` da ham bor edi) — `Occipital_lobe` ga almashtirildi. Eslatma kelgusi kontent uchun: Wikipedia havolasini yozishdan oldin sahifa mavjudligini tekshiring.

@@ -1238,3 +1238,6 @@ Reja va faktlar: `PLAN.md` 5.6. Qarorlar: OpenRouter bilan kirish + o'z API kali
     panel). To'rga aniq `width: min(...)` bering. Belgilar/yorliqlarni
     `nowrap` qilsangiz inglizcha (uzunroq) matnda kartadan chiqib qo'shni
     kartaga minadi — har doim EN va UZ da suratga oling.
+
+## AG-1 — parcellation ta'riflari (2026-11-22)
+Antigravity: `src/data/content/{desikan,jhu,destrieux,glasser}.json` (35+27+74+179 konsept, 626 qism), `content/index.ts` ga ulandi. Claude tekshirdi (id'lar parts.json bilan to'liq mos, Crossref DOI'lar, audit-lesions 0, audit-pick 0) va birlashtirdi (`616d941`). Buzuq Wikipedia havolasi tuzatildi.
