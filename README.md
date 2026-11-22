@@ -98,7 +98,7 @@ gh release create meshes-v1 /tmp/meshes-draco.tar.gz \
 
 ### Licence & Attribution
 
-- **Source code:** MIT License.
+- **Source code:** MIT License — see [LICENSE](LICENSE).
 - **Anatomical meshes, parcellations & histological slices:** Each dataset retains its respective open licence (CC BY-SA 2.1 JP, CC BY-NC-SA 4.0, CC BY 4.0, CC0, CC BY-NC 3.0, FreeSurfer, FSL, WU-Minn HCP Terms). Non-commercial educational use only. See **[ATTRIBUTION.md](ATTRIBUTION.md)** for full citations and licence terms.
 
 *by MuhammadYusuf · with Claude*
