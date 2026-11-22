@@ -13,7 +13,7 @@ import puppeteer from 'puppeteer-core'
 const showHits = process.argv.includes('--hits')
 const b = await puppeteer.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true, args: ['--no-sandbox'] })
 const p = await b.newPage()
-await p.goto('http://localhost:3019/', { waitUntil: 'domcontentloaded' })
+await p.goto(process.env.NA_URL ?? 'http://localhost:3019/', { waitUntil: 'domcontentloaded' })
 const res = await p.evaluate(async () => {
   const { SECTIONS } = await import('/src/data/sections/index.ts')
   const { LEVELS } = await import('/src/data/lesions.ts')

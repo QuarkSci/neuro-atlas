@@ -20,7 +20,7 @@ const width = +opt('w', 1280),
   height = +opt('h', 800)
 const setup = opt('setup', '')
 const wait = +opt('wait', 1500)
-const url = opt('url', 'http://localhost:3019/')
+const url = opt('url', process.env.NA_URL ?? 'http://localhost:3019/')
 const theme = opt('theme', '')
 const lang = opt('lang', '')
 

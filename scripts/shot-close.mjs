@@ -15,7 +15,7 @@ await page.evaluateOnNewDocument((theme) => {
   localStorage.setItem('na:sidebar', '0')
   if (theme) localStorage.setItem('na:theme', theme)
 }, theme)
-await page.goto('http://localhost:3019/', { waitUntil: 'networkidle0' })
+await page.goto(process.env.NA_URL ?? 'http://localhost:3019/', { waitUntil: 'networkidle0' })
 await page.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })
 await page.evaluate(() => window.__atlas.getState().setView('lateral'))
 await new Promise((r) => setTimeout(r, 7000))

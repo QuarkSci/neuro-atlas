@@ -14,7 +14,7 @@ const b = await puppeteer.launch({ executablePath: '/Applications/Google Chrome.
 const p = await b.newPage()
 await p.setViewport({ width: 1280, height: 800 })
 await p.evaluateOnNewDocument(() => localStorage.setItem('na:lang', 'uz'))
-await p.goto('http://localhost:3019/', { waitUntil: 'domcontentloaded' })
+await p.goto(process.env.NA_URL ?? 'http://localhost:3019/', { waitUntil: 'domcontentloaded' })
 await p.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })
 await p.evaluate((id) => window.__atlas.getState().openSection(id), plate)
 await new Promise((r) => setTimeout(r, 800))

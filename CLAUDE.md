@@ -62,16 +62,13 @@ GitHub: QuarkSci/neuro-atlas (akkaunt **QuarkSci**, git user `MuhammadYusuf-scie
 - Rejimlar: `explode | peel | learn`. Yangi dars/kesim → tegishli mavzuga (`topics.ts`) yozilsin; yangi tab ochilmaydi.
 - Pipeline vositalari: `pipeline/tools/slice_svg.py`, `landmarks.py` (`pipeline/.venv/bin/python`, repo ildizidan).
 
-## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-21, ish Antigravity bilan taqsimlandi)
+## KEYINGI SESSIYA — shu yerdan boshlang (2026-11-22, ikki agent: Claude + Antigravity)
 
-**Ikki agent:** vazifalar taqsimoti `docs/TASKS.md` (AG-* — Antigravity, CL-* — Claude); umumiy qoidalar `AGENTS.md`
-(Antigravity o'qiydi; mazmuni shu fayl bilan bir xil). Antigravity `ag/<id>` branchlarida ishlaydi. **Sessiya boshida:**
-`git fetch && git branch -r | grep ag/` — tayyor branchlarni ko'rib chiqing (diff, tsc, build, screenshot), foydalanuvchi
-rozi bo'lsa birlashtiring va `docs/TASKS.md` da ✅ qo'ying. CL-* vazifalarda AG fayllariga tegmang.
-
-**Birinchi vazifa — CL-1:** AI panel foydalanuvchining haqiqiy Gemini kaliti bilan "ishlamayapti" (2 tuzatishdan keyin ham;
-sababi aniqlanmagan) — `docs/TASKS.md` CL-1 da tekshirish rejasi. Foydalanuvchi bilan birga, DevTools Network orqali.
-
+**Avval `AI.md` ni o'qing** (0–4, 6–9-bo'limlar) — yagona ish hujjati: holat, rollar, tasdiqlash protokoli, vazifalar
+taxtasi. Claude — tekshiruvchi va integrator: sessiya boshida `ag/*` branchlar va `docs/handoff/` ni ko'ring (AI.md 6.1–6.2),
+foydalanuvchi rozi bo'lsa `master`ga birlashtiring — Antigravity kodi shundan keyingina faol. Holat taxtasini (AI.md 9)
+faqat Claude yangilaydi. Birinchi CL vazifa — **CL-1** (AI panel haqiqiy Gemini kaliti bilan ishlamayapti).
+Antigravity alohida worktree'da (`../neuro-atlas-ag`, port 3020); skriptlar `NA_URL` ni o'qiydi (standart 3019).
 
 Oxirgi sessiya (2026-11-21): erkin o'choqqa vaqt o'qi + McDonald 2017/2024 (`docs/HISTORY.md` "5.3-3e"),
 so'ng erkin o'choqlar 3D da ("5.3-3f": `focalMni` + `pipeline/plate_affine.json`, `src/ui/focalLesson.ts`).

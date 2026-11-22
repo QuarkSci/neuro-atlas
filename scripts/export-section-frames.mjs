@@ -22,7 +22,7 @@ const browser = await puppeteer.launch({
 try {
   const page = await browser.newPage()
   page.on('pageerror', (e) => console.error('[page error]', e.message))
-  await page.goto('http://localhost:3019/', { waitUntil: 'networkidle0' })
+  await page.goto(process.env.NA_URL ?? 'http://localhost:3019/', { waitUntil: 'networkidle0' })
   await page.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })
   const frames = await page.evaluate(async () => {
     const { SECTIONS } = await import('/src/data/sections/index.ts')

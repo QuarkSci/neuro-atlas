@@ -41,7 +41,7 @@ const browser = await puppeteer.launch({
 try {
   const page = await browser.newPage()
   await page.setViewport({ width: 1400, height: 860 })
-  await page.goto('http://localhost:3019/', { waitUntil: 'networkidle0' })
+  await page.goto(process.env.NA_URL ?? 'http://localhost:3019/', { waitUntil: 'networkidle0' })
   await page.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })
   await page.evaluate(() => window.__atlas.getState().setMode('learn'))
   for (const id of ids) {

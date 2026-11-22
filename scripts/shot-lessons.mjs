@@ -31,7 +31,7 @@ try {
   await page.setViewport({ width, height, deviceScaleFactor: 1 })
   page.on('pageerror', (e) => console.error('[page error]', e.message))
   await page.evaluateOnNewDocument((lang) => localStorage.setItem('na:lang', lang), lang)
-  await page.goto('http://localhost:3019/', { waitUntil: 'networkidle0' })
+  await page.goto(process.env.NA_URL ?? 'http://localhost:3019/', { waitUntil: 'networkidle0' })
   await page.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })
   const plan = only
     ? only.split(',').map((x) => x.split(':')).map(([id, step]) => ({ id, step: +step }))

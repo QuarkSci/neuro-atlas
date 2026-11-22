@@ -10,7 +10,7 @@
 import puppeteer from 'puppeteer-core'
 const b = await puppeteer.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true, args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--no-sandbox'] })
 const p = await b.newPage(); await p.setViewport({ width: 1400, height: 860 })
-await p.goto('http://localhost:3019/', { waitUntil: 'networkidle0' })
+await p.goto(process.env.NA_URL ?? 'http://localhost:3019/', { waitUntil: 'networkidle0' })
 await p.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })
 await p.evaluate(() => { const a = __atlas.getState(); a.setCutaway(true); a.setView('lateral') })
 await new Promise((r) => setTimeout(r, 6000))

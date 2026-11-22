@@ -35,7 +35,7 @@ try {
   page.on('pageerror', (e) => console.error('[page error]', e.message))
   page.on('console', (m) => m.type() === 'error' && console.error('[console]', m.text()))
   await page.evaluateOnNewDocument(() => localStorage.setItem('na:lang', 'uz'))
-  await page.goto(opt('url', 'http://localhost:3019/'), { waitUntil: 'networkidle0' })
+  await page.goto(opt('url', process.env.NA_URL ?? 'http://localhost:3019/'), { waitUntil: 'networkidle0' })
   await page.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })
   // Spread the model so there is something behind every bar to refract.
   await page.evaluate(() => {
