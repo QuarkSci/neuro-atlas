@@ -471,3 +471,5 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-22 · Claude · Apple ilovalari rejasi: foydalanuvchi spetsifikatsiyasi loyihaga moslashtirildi (`docs/APPLE.md`, PLAN 5.7); yangi vazifalar CL-7, AG-6, AG-7.
 - 2026-11-22 · Claude · AG-3 tekshirildi va birlashtirildi (`6d6156f`): dekoder three.js gltf nusxasi bilan bir xil; Draco meshlar bilan audit-pick 0, audit-lesions 0; build+preview xatosiz. Ochiq: `meshes-v1` Release (foydalanuvchi), LICENSE fayli yo'q (README MIT deydi).
 - 2026-11-22 · Claude · Kod litsenziyasi: MIT (foydalanuvchi qarori) — `LICENSE`, `package.json`; ma'lumotlar o'z litsenziyalarida (ATTRIBUTION.md).
+- 2026-11-22 · Claude · AI panel Gemini: haqiqiy kalit bilan o'lchandi — 3.8/3.5/flash-latest 503 (band), 3.7-flash 70 s jim (0 bayt), Pro 429 (kvota yo'q), 3.5-flash-lite/3.1-flash-lite/3-flash-preview 1–8 s'da javob beradi. Tuzatish: qorovul 30 s (jim model → keyingisiga), zaxira tartibi `FALLBACK` (flash-lite → flash-preview, Pro hech qachon), "O'ylayapti… N s". E2E: 3.8-flash band → 21 s'da 3.5-flash-lite javob berdi.
+

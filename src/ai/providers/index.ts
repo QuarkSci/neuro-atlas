@@ -30,10 +30,23 @@ const PREFER: Partial<Record<ProviderId, RegExp[]>> = {
   google: [/^gemini-[\d.]+-pro$/, /^gemini-[\d.]+-flash$/, /^gemini-[\d.]+-pro(-latest)?$/, /^gemini-[\d.]+-flash(-latest)?$/, /^gemini-[\d.]+-pro/, /^gemini-[\d.]+-flash/],
 }
 
-export function pickModel(p: ProviderId, models: ModelInfo[]): string | null {
+/**
+ * When the chosen model is busy or silent, the next one tried. Measured on a free Google key (2026-11-22): the newest
+ * flash models answer 503 or send nothing for a minute, Pro models 429 (no quota), while the -lite and preview
+ * flash models answered in 1–8 s — so those come first, Pro never.
+ */
+const FALLBACK: Partial<Record<ProviderId, RegExp[]>> = {
+  google: [/^gemini-[\d.]+-flash-lite$/, /^gemini-[\d.]+-flash-preview$/, /^gemini-[\d.]+-flash-lite/],
+}
+
+export function pickModel(p: ProviderId, models: ModelInfo[], fallback = false): string | null {
   if (!models.length) return null
   // Newest first: ids sort with their version numbers.
   const sorted = [...models].sort((a, b) => b.id.localeCompare(a.id, undefined, { numeric: true }))
+  for (const re of fallback ? (FALLBACK[p] ?? []) : []) {
+    const hit = sorted.find((m) => re.test(m.id))
+    if (hit) return hit.id
+  }
   for (const re of PREFER[p] ?? []) {
     const hit = sorted.find((m) => re.test(m.id))
     if (hit) return hit.id

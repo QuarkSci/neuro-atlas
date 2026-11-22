@@ -338,6 +338,7 @@ export const useAI = create<AIState>((set, get) => ({
             const alt = pickModel(
               provider,
               (get().models[provider] ?? []).filter((x) => !tried.has(x.id)),
+              true,
             )
             if (alt) {
               tried.add(alt)
