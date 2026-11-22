@@ -24,9 +24,25 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Fetch Draco meshes from GitHub Release (if available)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MESH_RELEASE_TAG: ${{ vars.MESH_RELEASE_TAG || 'meshes-v1' }}
+        run: |
+          if [ -z "${{ vars.VITE_MESH_BASE }}" ]; then
+            if gh release view "$MESH_RELEASE_TAG" --repo "${{ github.repository }}" >/dev/null 2>&1; then
+              echo "Downloading meshes-draco.tar.gz from release $MESH_RELEASE_TAG..."
+              gh release download "$MESH_RELEASE_TAG" --repo "${{ github.repository }}" -p "meshes-draco.tar.gz" -D /tmp
+              mkdir -p public/meshes
+              tar -xzf /tmp/meshes-draco.tar.gz -C public/meshes
+            else
+              echo "::warning::Release '$MESH_RELEASE_TAG' topilmadi va VITE_MESH_BASE belgilanmagan. 3D modellar yuklanishi uchun 'meshes-draco.tar.gz' assetini '$MESH_RELEASE_TAG' reliziga joylang yoki VITE_MESH_BASE o'zgaruvchisini sozlang."
+            fi
+          fi
       - run: npm run build
         env:
           VITE_BASE: /${{ github.event.repository.name }}/
+          VITE_MESH_BASE: ${{ vars.VITE_MESH_BASE }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

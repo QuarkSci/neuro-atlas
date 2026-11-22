@@ -1,4 +1,5 @@
 import * as T from 'three'
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import type { Part } from '@/data/types'
 
@@ -12,7 +13,18 @@ import type { Part } from '@/data/types'
  */
 export const MNI_TO_SCENE = new T.Matrix4().set(-1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1)
 
-const MESHES_URL = `${import.meta.env.BASE_URL}meshes/`
+const rawMeshBase = (import.meta.env.VITE_MESH_BASE as string | undefined)?.trim()
+const MESHES_URL = rawMeshBase ? (rawMeshBase.endsWith('/') ? rawMeshBase : `${rawMeshBase}/`) : `${import.meta.env.BASE_URL}meshes/`
+
+let sharedDracoLoader: DRACOLoader | null = null
+
+function getDracoLoader(): DRACOLoader {
+  if (!sharedDracoLoader) {
+    sharedDracoLoader = new DRACOLoader()
+    sharedDracoLoader.setDecoderPath(`${import.meta.env.BASE_URL}draco/`)
+  }
+  return sharedDracoLoader
+}
 
 export interface LoadedGeometry {
   part: Part
@@ -26,6 +38,7 @@ export interface LoadedGeometry {
  */
 export async function loadGeometries(parts: Part[], onProgress: (done: number, total: number) => void, concurrency = 12): Promise<LoadedGeometry[]> {
   const loader = new GLTFLoader()
+  loader.setDRACOLoader(getDracoLoader())
   const out: LoadedGeometry[] = []
   let next = 0
   let done = 0
