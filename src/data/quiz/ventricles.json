@@ -1,0 +1,1021 @@
+[
+  {
+    "id": "q-ventricles-001",
+    "level": "student",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "How many interconnected ventricular cavities lie inside the human brain?",
+      "uz": "Inson miyasi ichida o'zaro bog'langan nechta qorincha bo'shlig'i joylashgan?"
+    },
+    "options": [
+      {
+        "en": "Four (two lateral ventricles, the third ventricle, and the fourth ventricle)",
+        "uz": "To'rtta (ikkita yon qorincha, uchinchi qorincha va to'rtinchi qorincha)"
+      },
+      {
+        "en": "Three (one midline lateral ventricle, the third ventricle, and the fourth ventricle)",
+        "uz": "Uchta (bitta o'rta chiziqdagi yon qorincha, uchinchi qorincha va to'rtinchi qorincha)"
+      },
+      {
+        "en": "Two (a supratentorial cavity and an infratentorial cavity)",
+        "uz": "Ikkita (chodir usti bo'shlig'i va chodir osti bo'shlig'i)"
+      },
+      {
+        "en": "Five (two lateral ventricles, a paired third ventricle, and the fourth ventricle)",
+        "uz": "Beshta (ikkita yon qorincha, juft uchinchi qorincha va to'rtinchi qorincha)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The ventricular system consists of four cavities: two C-shaped lateral ventricles (one in each cerebral hemisphere), the midline slit-like third ventricle between the thalami, and the tent-shaped fourth ventricle between the brainstem and cerebellum.",
+      "uz": "Qorinchalar tizimi to'rtta bo'shliqdan iborat: ikkita C-shaklli yon qorincha (har bir yarim sharda bittadan), ikki talamus orasidagi yoriqsimon uchinchi qorincha va miya ustuni bilan miyacha orasidagi chodirsimon to'rtinchi qorincha."
+    },
+    "refs": ["lateral-ventricle", "third-ventricle", "fourth-ventricle"],
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-002",
+    "level": "student",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Through which opening does each lateral ventricle drain cerebrospinal fluid into the third ventricle?",
+      "uz": "Har bir yon qorincha orqa miya suyuqligini (likvorni) qaysi teshik orqali uchinchi qorinchaga o'tkazadi?"
+    },
+    "options": [
+      {
+        "en": "Interventricular foramen (of Monro)",
+        "uz": "Qorinchalararo teshik (Monro teshigi)"
+      },
+      {
+        "en": "Cerebral aqueduct (of Sylvius)",
+        "uz": "Miya suv yo'li (Silviy suv yo'li)"
+      },
+      {
+        "en": "Median aperture (of Magendie)",
+        "uz": "O'rta teshik (Magendie teshigi)"
+      },
+      {
+        "en": "Lateral aperture (of Luschka)",
+        "uz": "Yon teshik (Luschka teshigi)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Each lateral ventricle communicates with the third ventricle via the interventricular foramen of Monro, situated between the column of the fornix anteriorly and the anterior pole of the thalamus posteriorly.",
+      "uz": "Har bir yon qorincha oldinda fornix ustuni va orqada talamusning oldingi uchi orasida joylashgan qorinchalararo Monro teshigi orqali uchinchi qorinchaga ochiladi."
+    },
+    "refs": ["interventricular-foramen", "lateral-ventricle", "third-ventricle"],
+    "plate": "bg-commissural",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-003",
+    "level": "student",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Which narrow channel runs through the midbrain to connect the third ventricle to the fourth ventricle?",
+      "uz": "Uchinchi qorinchani to'rtinchi qorincha bilan bog'lash uchun o'rta miya ichidan o'tuvchi tor kanal qaysi?"
+    },
+    "options": [
+      {
+        "en": "Cerebral aqueduct (of Sylvius)",
+        "uz": "Miya suv yo'li (Silviy suv yo'li)"
+      },
+      {
+        "en": "Interventricular foramen (of Monro)",
+        "uz": "Qorinchalararo teshik (Monro teshigi)"
+      },
+      {
+        "en": "Central canal of the caudal medulla",
+        "uz": "Kaudal uzunchoq miyaning markaziy kanali"
+      },
+      {
+        "en": "Lateral recess of the fourth ventricle",
+        "uz": "To'rtinchi qorinchaning yon cho'ntagi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The cerebral aqueduct of Sylvius (~15 mm long and only 1–2 mm wide) courses through the midbrain, surrounded by the periaqueductal grey, joining the third ventricle above to the fourth ventricle below.",
+      "uz": "Silviy suv yo'li (uzunligi ~15 mm, kengligi atigi 1–2 mm) o'rta miya ichidan — periakveduktal kulrang modda qurshovida o'tib, yuqoridagi III qorinchani pastdagi IV qorincha bilan bog'laydi."
+    },
+    "refs": ["cerebral-aqueduct", "aq"],
+    "plate": "midbrain-superior-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-004",
+    "level": "student",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Which five subdivisions make up each C-shaped lateral ventricle?",
+      "uz": "Har bir C-shaklli yon qorincha qaysi besh qismdan tashkil topgan?"
+    },
+    "options": [
+      {
+        "en": "Frontal (anterior) horn, body, atrium (trigone), occipital (posterior) horn, and temporal (inferior) horn",
+        "uz": "Oldingi (frontal) shox, tana, bo'lma (atrium), orqa (ensa) shox va pastki (chakka) shox"
+      },
+      {
+        "en": "Rostrum, genu, body, splenium, and atrium",
+        "uz": "Tumshuq, tizza, tana, qalinlashma (splenium) va bo'lma"
+      },
+      {
+        "en": "Head, body, tail, atrium, and infundibular recess",
+        "uz": "Bosh, tana, dum, bo'lma va infundibulyar cho'ntak"
+      },
+      {
+        "en": "Frontal horn, parietal horn, insular horn, occipital horn, and cerebellar horn",
+        "uz": "Frontal shox, tepa shoxi, orolcha shoxi, ensa shoxi va miyacha shoxi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Each lateral ventricle is shaped like a ram's horn and comprises the frontal (anterior) horn, the central body under the parietal lobe, the atrium (trigone) where three horns meet, the occipital (posterior) horn, and the temporal (inferior) horn.",
+      "uz": "Har bir yon qorincha qo'chqor shoxi shaklida bo'lib, besh qismdan iborat: peshona bo'lagidagi oldingi (frontal) shox, tepa bo'lagi ostidagi tana, uchta shox tutashgan bo'lma (atrium), orqa (ensa) shox va pastki (chakka) shox."
+    },
+    "refs": ["lateral-ventricle", "lv"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-005",
+    "level": "student",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Which structure produces 70–80 % of the cerebrospinal fluid inside the ventricles?",
+      "uz": "Qorinchalar ichidagi orqa miya suyuqligining (likvorning) 70–80 % qismini qaysi tuzilma ishlab chiqaradi?"
+    },
+    "options": [
+      {
+        "en": "Choroid plexus",
+        "uz": "Tomirli chigal (plexus choroideus)"
+      },
+      {
+        "en": "Arachnoid granulations (Pacchionian bodies)",
+        "uz": "Araxnoidal donachalar (Pachioni tanachalari)"
+      },
+      {
+        "en": "Septum pellucidum",
+        "uz": "Shaffof to'siq (septum pellucidum)"
+      },
+      {
+        "en": "Superior medullary velum",
+        "uz": "Yuqori miya pardasi (velum medullare superius)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "About 70–80 % of CSF is secreted by the choroid plexus — vascular tufts covered by specialized ependymal epithelium inside the lateral, third, and fourth ventricles. Arachnoid granulations absorb CSF into venous blood.",
+      "uz": "Likvorning ~70–80 % ini qorinchalar ichida osilib turgan, epiteliy bilan qoplangan kapillyar to'plamlari — tomirli chigal ishlab chiqaradi. Araxnoidal donachalar esa likvorni venoz qonga so'radi."
+    },
+    "refs": ["choroid-plexus-of-cerebral-hemisphere"],
+    "sources": [
+      {
+        "title": "StatPearls — Physiology, Cerebral Spinal Fluid",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK519007/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-006",
+    "level": "student",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Which parts of the lateral ventricle contain NO choroid plexus?",
+      "uz": "Yon qorinchaning qaysi qismlarida tomirli chigal YO'Q?"
+    },
+    "options": [
+      {
+        "en": "Frontal (anterior) horn and occipital (posterior) horn",
+        "uz": "Oldingi (frontal) shox va orqa (ensa) shox"
+      },
+      {
+        "en": "Body and atrium (trigone)",
+        "uz": "Tana va bo'lma (atrium)"
+      },
+      {
+        "en": "Temporal (inferior) horn and atrium",
+        "uz": "Pastki (chakka) shox va bo'lma"
+      },
+      {
+        "en": "Body and temporal (inferior) horn",
+        "uz": "Tana va pastki (chakka) shox"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The choroid plexus runs continuously from the interventricular foramen through the body, atrium (glomus), and temporal horn, but stops before the tips: both the frontal horn and the occipital horn lack choroid plexus.",
+      "uz": "Tomirli chigal yon qorinchaning tanasi, bo'lmasi (glomus) va chakka shoxida joylashgan, biroq shoxlarning uchlarida — oldingi (frontal) va orqa (ensa) shoxlarda chigal bo'lmaydi."
+    },
+    "refs": ["choroid-plexus-of-cerebral-hemisphere", "lateral-ventricle"],
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-007",
+    "level": "student",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Through which openings does cerebrospinal fluid leave the fourth ventricle to enter the subarachnoid space?",
+      "uz": "Orqa miya suyuqligi to'rtinchi qorinchadan subaraxnoidal bo'shliqqa qaysi teshiklar orqali chiqadi?"
+    },
+    "options": [
+      {
+        "en": "One median aperture (of Magendie) and two lateral apertures (of Luschka)",
+        "uz": "Bitta o'rta teshik (Magendie) va ikkita yon teshik (Luschka)"
+      },
+      {
+        "en": "Two interventricular foramina (of Monro) and the cerebral aqueduct",
+        "uz": "Ikkita qorinchalararo teshik (Monro) va miya suv yo'li"
+      },
+      {
+        "en": "Two median apertures (of Luschka) and one lateral aperture (of Magendie)",
+        "uz": "Ikkita o'rta teshik (Luschka) va bitta yon teshik (Magendie)"
+      },
+      {
+        "en": "The obex and the infundibular recess",
+        "uz": "Obex va infundibulyar cho'ntak"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Three apertures open from the fourth ventricle into the subarachnoid cisterns: the single midline median aperture of Magendie and the paired lateral apertures of Luschka at the ends of the lateral recesses (Magendie = Median, Luschka = Lateral).",
+      "uz": "To'rtinchi qorinchadan subaraxnoidal bo'shliqqa uchta teshik ochiladi: o'rta chiziqdagi Magendie teshigi va yon cho'ntaklar uchidagi ikkita Luschka teshigi (Magendie — Medial, Luschka — Lateral)."
+    },
+    "refs": ["fourth-ventricle", "v4"],
+    "plate": "medulla-rostral",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-008",
+    "level": "student",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Which paired diencephalic structures form the lateral walls of the slit-like third ventricle?",
+      "uz": "Yoriqsimon uchinchi qorinchaning yon devorlarini qaysi juft oraliq miya tuzilmalari hosil qiladi?"
+    },
+    "options": [
+      {
+        "en": "Thalamus and hypothalamus",
+        "uz": "Talamus va gipotalamus"
+      },
+      {
+        "en": "Caudate nucleus and putamen",
+        "uz": "Dumli yadro va qobiq (putamen)"
+      },
+      {
+        "en": "Hippocampus and amygdala",
+        "uz": "Gippokamp va bodomsimon tana (amigdala)"
+      },
+      {
+        "en": "Globus pallidus and claustrum",
+        "uz": "Rangpar shar va klaustrum"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The third ventricle is a narrow midline cleft (~5 mm wide) bounded laterally by the two thalami dorsally and the hypothalamus ventrally (separated by the hypothalamic sulcus).",
+      "uz": "Uchinchi qorincha — o'rta chiziqdagi tor tik yoriq (~5 mm) bo'lib, uning yon devorlarini dorsalda ikki talamus, ventralda va tubida esa gipotalamus hosil qiladi."
+    },
+    "refs": ["third-ventricle", "thalamus", "hypothalamus", "v3"],
+    "plate": "thalamus-coronal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-009",
+    "level": "student",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Where is cerebrospinal fluid primarily reabsorbed into the venous bloodstream?",
+      "uz": "Orqa miya suyuqligi (likvor) asosan qayerda venoz qon oqimiga qayta so'riladi?"
+    },
+    "options": [
+      {
+        "en": "Arachnoid granulations projecting into the superior sagittal sinus",
+        "uz": "Yuqori sagittal sinusga chiqib turgan araxnoidal donachalarda (Pachioni)"
+      },
+      {
+        "en": "Choroid plexus glomus in the atrium of the lateral ventricle",
+        "uz": "Yon qorincha bo'lmasidagi tomirli chigal glomusida"
+      },
+      {
+        "en": "Area postrema at the caudal tip of the fourth ventricle",
+        "uz": "To'rtinchi qorinchaning pastki uchidagi area postremada"
+      },
+      {
+        "en": "Median eminence of the hypothalamic floor",
+        "uz": "Gipotalamus tubidagi median bo'rtmada"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "After exiting the fourth ventricle into the subarachnoid space and cisterns, CSF flows over the cerebral convexity to the arachnoid granulations (villi), where it drains into the venous blood of the superior sagittal sinus.",
+      "uz": "IV qorinchadan subaraxnoidal bo'shliq va sisternalarga chiqqan likvor miya qabarig'i ustidan araxnoidal donachalarga (Pachioni) ko'tariladi va u yerda yuqori sagittal sinusning venoz qoniga so'riladi."
+    },
+    "refs": ["superior-sagittal-sinus", "fourth-ventricle"],
+    "sources": [
+      {
+        "title": "StatPearls — Physiology, Cerebral Spinal Fluid",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK519007/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-010",
+    "level": "student",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Which structure forms the roof of the lateral ventricles?",
+      "uz": "Yon qorinchalarning tomini (shiftini) qaysi tuzilma hosil qiladi?"
+    },
+    "options": [
+      {
+        "en": "Corpus callosum",
+        "uz": "Qadoqsimon tana (corpus callosum)"
+      },
+      {
+        "en": "Fornix",
+        "uz": "Gumbaz (fornix)"
+      },
+      {
+        "en": "Hippocampus",
+        "uz": "Gippokamp"
+      },
+      {
+        "en": "Internal capsule",
+        "uz": "Ichki kapsula"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The corpus callosum arches over both lateral ventricles to form their roof, whereas the caudate nucleus forms the lateral wall, the thalamus forms the floor of the body, and the septum pellucidum and fornix form the medial wall.",
+      "uz": "Qadoqsimon tana ikkala yon qorinchaning tomini (shiftini) hosil qiladi; dumli yadro — lateral devorini, talamus — tana qismining tubini, shaffof to'siq va fornix esa medial devorini tashkil etadi."
+    },
+    "refs": ["corpus-callosum", "lateral-ventricle", "cca", "lv"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-011",
+    "level": "resident",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Which structure forms the floor of the temporal (inferior) horn of the lateral ventricle, while the tail of the caudate nucleus runs along its roof?",
+      "uz": "Dumli yadro dumi yon qorincha chakka (pastki) shoxining tomi bo'ylab o'tganda, chakka shoxining tubini (polini) qaysi tuzilma hosil qiladi?"
+    },
+    "options": [
+      {
+        "en": "Hippocampus",
+        "uz": "Gippokamp"
+      },
+      {
+        "en": "Thalamus",
+        "uz": "Talamus"
+      },
+      {
+        "en": "Putamen",
+        "uz": "Qobiq (putamen)"
+      },
+      {
+        "en": "Septum pellucidum",
+        "uz": "Shaffof to'siq (septum pellucidum)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "In the temporal horn of the lateral ventricle, the hippocampus forms the floor, whereas the tail of the caudate nucleus (and stria terminalis) curves into the roof, ending near the amygdala anteriorly.",
+      "uz": "Yon qorinchaning chakka (pastki) shoxida gippokamp tubida (polida) yotadi, dumli yadroning dumi (va stria terminalis) esa uning tomida joylashib, oldinda amigdala yaqinida tugaydi."
+    },
+    "refs": ["hippocampus-proper", "caudate-nucleus", "lateral-ventricle", "cau-tail"],
+    "plate": "bg-pallidal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-012",
+    "level": "resident",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "What are the immediate anterior and posterior boundaries of the interventricular foramen of Monro?",
+      "uz": "Qorinchalararo Monro teshigining bevosita oldingi va orqa chegaralarini qaysi tuzilmalar hosil qiladi?"
+    },
+    "options": [
+      {
+        "en": "Column of the fornix anteriorly and anterior pole of the thalamus posteriorly",
+        "uz": "Oldinda fornix ustuni va orqada talamusning oldingi qutbi"
+      },
+      {
+        "en": "Genu of the corpus callosum anteriorly and head of the caudate posteriorly",
+        "uz": "Oldinda qadoqsimon tana tizzasi va orqada dumli yadro boshi"
+      },
+      {
+        "en": "Anterior commissure anteriorly and lamina terminalis posteriorly",
+        "uz": "Oldinda oldingi komissura va orqada oxirgi plastinka (lamina terminalis)"
+      },
+      {
+        "en": "Septum pellucidum anteriorly and splenium posteriorly",
+        "uz": "Oldinda shaffof to'siq va orqada qadoqsimon tana spleniumi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The foramen of Monro is bounded in front by the column of the fornix and behind by the anterior pole of the thalamus. At its posterior margin the thalamostriate vein joins the septal vein to form the venous angle.",
+      "uz": "Monro teshigi oldinda fornix ustuni va orqada talamusning oldingi uchi orasida joylashgan; uning orqa chetida talamostriar vena septal vena bilan qo'shilib 'venoz burchak'ni hosil qiladi."
+    },
+    "refs": ["interventricular-foramen", "fornix-of-forebrain", "thalamus", "fx"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-013",
+    "level": "resident",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "What are the approximate normal ventricular CSF volume, total CSF volume, and daily CSF production rate in an adult?",
+      "uz": "Katta yoshli odamda qorinchalar ichidagi likvor hajmi, umumiy likvor hajmi va sutkalik ishlab chiqarilish miqdori taxminan qancha?"
+    },
+    "options": [
+      {
+        "en": "Ventricles ≈ 25 mL, total CSF ≈ 150 mL, daily production ≈ 500 mL/day",
+        "uz": "Qorinchalar ≈ 25 mL, umumiy likvor ≈ 150 mL, sutkasiga ≈ 500 mL/kun"
+      },
+      {
+        "en": "Ventricles ≈ 150 mL, total CSF ≈ 500 mL, daily production ≈ 1500 mL/day",
+        "uz": "Qorinchalar ≈ 150 mL, umumiy likvor ≈ 500 mL, sutkasiga ≈ 1500 mL/kun"
+      },
+      {
+        "en": "Ventricles ≈ 5 mL, total CSF ≈ 50 mL, daily production ≈ 100 mL/day",
+        "uz": "Qorinchalar ≈ 5 mL, umumiy likvor ≈ 50 mL, sutkasiga ≈ 100 mL/kun"
+      },
+      {
+        "en": "Ventricles ≈ 75 mL, total CSF ≈ 75 mL, daily production ≈ 150 mL/day",
+        "uz": "Qorinchalar ≈ 75 mL, umumiy likvor ≈ 75 mL, sutkasiga ≈ 150 mL/kun"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The ventricles hold ~25 mL out of ~150 mL total CSF (the rest is in the subarachnoid cisterns and spinal canal). Because ~500 mL is secreted every day, the entire CSF volume turns over 3–4 times daily.",
+      "uz": "Qorinchalar hajmi ≈ 25 mL, umumiy likvor ≈ 150 mL (qolgani subaraxnoidal bo'shliq va orqa miya kanalida). Sutkasiga ≈ 500 mL ishlab chiqarilgani sababli likvor kuniga 3–4 marta to'liq yangilanadi."
+    },
+    "refs": ["lateral-ventricle", "third-ventricle", "fourth-ventricle"],
+    "sources": [
+      {
+        "title": "StatPearls — Physiology, Cerebral Spinal Fluid",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK519007/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-014",
+    "level": "resident",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "In congenital or acquired stenosis of the cerebral aqueduct (of Sylvius), which pattern of ventricular enlargement is seen on brain MRI?",
+      "uz": "Silviy suv yo'lining tug'ma yoki orttirilgan stenozida bosh miya MRTsida qorinchalar kengayishining qanday manzarasi ko'rinadi?"
+    },
+    "options": [
+      {
+        "en": "Dilated lateral and third ventricles with a normal-sized fourth ventricle (triventricular hydrocephalus)",
+        "uz": "Yon va uchinchi qorinchalar kengaygan, to'rtinchi qorincha esa normal o'lchamda (uch qorinchali gidrotsefaliya)"
+      },
+      {
+        "en": "Dilated lateral, third, and fourth ventricles equally (panventricular dilatation)",
+        "uz": "Yon, uchinchi va to'rtinchi qorinchalar bir xilda kengaygan"
+      },
+      {
+        "en": "Isolated dilatation of the fourth ventricle with small lateral ventricles",
+        "uz": "Yon qorinchalar kichik bo'lib, faqat to'rtinchi qorincha alohida kengaygan"
+      },
+      {
+        "en": "Dilatation of one lateral ventricle only, with normal third and fourth ventricles",
+        "uz": "Uchinchi va to'rtinchi qorinchalar normal qolib, faqat bitta yon qorincha kengaygan"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Because the block sits in the aqueduct between the third and fourth ventricles, CSF accumulates upstream in both lateral ventricles and the third ventricle, while the fourth ventricle downstream remains normal in size.",
+      "uz": "To'siq III va IV qorinchalar orasidagi Silviy suv yo'lida bo'lgani uchun likvor yuqoridagi ikkala yon va III qorinchada to'planib ularni kengaytiradi, pastdagi IV qorincha esa normal qoladi."
+    },
+    "refs": ["cerebral-aqueduct", "fourth-ventricle", "third-ventricle", "aq", "v4"],
+    "plate": "midbrain-superior-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-015",
+    "level": "resident",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Which ion transport enzymes in the choroid plexus epithelium drive CSF secretion, making carbonic anhydrase the target of acetazolamide?",
+      "uz": "Tomirli chigal epiteliysida qaysi fermentlar likvor ajralishini harakatga keltiradi (va atsetazolamid nishoni hisoblanadi)?"
+    },
+    "options": [
+      {
+        "en": "Na⁺/K⁺-ATPase and carbonic anhydrase",
+        "uz": "Na⁺/K⁺-ATPaza va karboanhidraza"
+      },
+      {
+        "en": "H⁺/K⁺-ATPase and monoamine oxidase",
+        "uz": "H⁺/K⁺-ATPaza va monoaminooksidaza"
+      },
+      {
+        "en": "Ca²⁺-ATPase and acetylcholinesterase",
+        "uz": "Ca²⁺-ATPaza va atsetilxolinesteraza"
+      },
+      {
+        "en": "Na⁺/Ca²⁺ exchanger and glutamic acid decarboxylase",
+        "uz": "Na⁺/Ca²⁺ almashinuvchi va glutamat dekarboksilaza"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Choroid plexus epithelial cells actively pump Na⁺ into the ventricular lumen via apical Na⁺/K⁺-ATPase, supported by intracellular HCO₃⁻ generation through carbonic anhydrase (inhibited by acetazolamide to reduce CSF production).",
+      "uz": "Tomirli chigal epiteliy hujayralari suyuqlikni Na⁺/K⁺-ATPaza va karboanhidraza orqali chiqaradi; atsetazolamid karboanhidrazani tormozlab, likvor ishlab chiqarilishini kamaytiradi."
+    },
+    "refs": ["choroid-plexus-of-cerebral-hemisphere"],
+    "sources": [
+      {
+        "title": "StatPearls — Physiology, Cerebral Spinal Fluid",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK519007/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-016",
+    "level": "resident",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Where is a physiological, age-related calcification of the choroid plexus most commonly seen as a bright focus on non-contrast head CT?",
+      "uz": "Kontrastsiz bosh KTda yorqin nuqta bo'lib ko'rinadigan tomirli chigalning fiziologik kalsinati eng ko'p qayerda joylashadi?"
+    },
+    "options": [
+      {
+        "en": "Glomus of the choroid plexus in the atrium (trigone) of the lateral ventricle",
+        "uz": "Yon qorincha bo'lmasidagi (atriumdagi) tomirli chigal glomusida"
+      },
+      {
+        "en": "Tip of the frontal horn of the lateral ventricle",
+        "uz": "Yon qorinchaning oldingi (frontal) shoxi uchida"
+      },
+      {
+        "en": "Cerebral aqueduct of Sylvius",
+        "uz": "Silviy suv yo'lida"
+      },
+      {
+        "en": "Optic recess of the third ventricle",
+        "uz": "Uchinchi qorinchaning ko'rish cho'ntagida"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The glomus is the prominent tuft of choroid plexus in the atrium (trigone) of each lateral ventricle; it frequently calcifies in adults and appears as bilateral symmetric high-attenuation foci on head CT.",
+      "uz": "Yon qorincha bo'lmasidagi (atriumdagi) tomirli chigal kengaymasi — glomus kattalarda ko'pincha fiziologik kalsinatlanadi va KTda ikki tomonlama yorqin nuqta bo'lib ko'rinadi."
+    },
+    "refs": ["choroid-plexus-of-cerebral-hemisphere", "lateral-ventricle", "lv"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-017",
+    "level": "resident",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Which structures run in the caudothalamic groove on the floor of the lateral ventricle and serve as key venous landmarks at the foramen of Monro?",
+      "uz": "Yon qorincha tubidagi kaudotalamik egatda qaysi tuzilmalar yotadi va Monro teshigini topishda muhim venoz mo'ljal bo'lib xizmat qiladi?"
+    },
+    "options": [
+      {
+        "en": "Stria terminalis and thalamostriate vein (joining the septal vein at the venous angle)",
+        "uz": "Stria terminalis va talamostriar vena (venoz burchakda septal vena bilan qo'shiladi)"
+      },
+      {
+        "en": "Stria medullaris thalami and great cerebral vein of Galen",
+        "uz": "Talamusning miya yo'li (stria medullaris) va Galenning katta miya venasi"
+      },
+      {
+        "en": "Mammillothalamic tract and basal vein of Rosenthal",
+        "uz": "Mamillotalamik trakt va Rozentalning bazal venasi"
+      },
+      {
+        "en": "Ansa lenticularis and superior sagittal sinus",
+        "uz": "Yasmiqsimon halqa (ansa lenticularis) va yuqori sagittal sinus"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "In the groove between the caudate nucleus and thalamus run the stria terminalis and the superior thalamostriate vein. At the posterior margin of the foramen of Monro, the thalamostriate vein meets the anterior septal vein to form the 'venous angle' into the internal cerebral vein.",
+      "uz": "Kaudat va talamus orasidagi kaudotalamik egatda stria terminalis va talamostriar vena yotadi; talamostriar vena Monro teshigining orqa chetida septal vena bilan qo'shilib 'venoz burchak'ni (ichki miya venasi boshlanishini) hosil qiladi."
+    },
+    "refs": ["stria-terminalis", "superior-thalamostriate-vein", "internal-cerebral-vein", "stt"],
+    "plate": "bg-pallidal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-018",
+    "level": "resident",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "What is colpocephaly, and which congenital malformation does it classically accompany?",
+      "uz": "Kolpotsefaliya nima va u klassik ravishda qaysi tug'ma nuqson bilan birga uchraydi?"
+    },
+    "options": [
+      {
+        "en": "Disproportionate enlargement of the occipital horns of the lateral ventricles, accompanying agenesis of the corpus callosum",
+        "uz": "Yon qorinchalar orqa (ensa) shoxlarining nomutanosib kattalashishi bo'lib, qadoqsimon tana agenezida uchraydi"
+      },
+      {
+        "en": "Cystic dilatation of the fourth ventricle with vermian hypoplasia in Dandy–Walker malformation",
+        "uz": "Dandy–Walker nuqsonida chuvalchang gipoplaziyasi bilan IV qorinchaning kistasimon kengayishi"
+      },
+      {
+        "en": "Flattening of the lateral wall of the frontal horns ('boxcar' ventricles) in Huntington disease",
+        "uz": "Huntington kasalligida frontal shoxlar yon devorining yassilanishi ('quti' qorinchalar)"
+      },
+      {
+        "en": "Herniation of the fourth ventricle and cerebellar tonsils below the foramen magnum",
+        "uz": "To'rtinchi qorincha va miyacha bodomchalarining katta teshikdan pastga tushishi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Colpocephaly is the selective, disproportionate enlargement of the occipital (posterior) horns of the lateral ventricles due to underdevelopment of the posterior white matter, classically seen with corpus callosum agenesis (alongside parallel 'racing-car' lateral ventricles).",
+      "uz": "Kolpotsefaliya — orqa oq modda rivojlanmagani sababli yon qorinchalar orqa (ensa) shoxlarining nomutanosib kengayishi bo'lib, qadoqsimon tana agenezida (parallel 'poyga mashinasi' qorinchalar bilan birga) kuzatiladi."
+    },
+    "refs": ["lateral-ventricle", "corpus-callosum", "lv", "cca"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-019",
+    "level": "resident",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "At which brainstem level does the central canal of the closed medulla open dorsally into the floor of the fourth ventricle?",
+      "uz": "Yopiq uzunchoq miyaning markaziy kanali qaysi nuqtada dorsal tomondan to'rtinchi qorincha tubiga ochiladi?"
+    },
+    "options": [
+      {
+        "en": "At the obex (transition from closed caudal medulla to open mid-olivary medulla, U3)",
+        "uz": "Obex darajasida (yopiq kaudal uzunchoq miyadan ochiq o'rta zaytun darajasiga o'tish joyi, U3)"
+      },
+      {
+        "en": "At the pyramidal decussation (medulla–cord junction, U1)",
+        "uz": "Piramidalar kesishmasida (uzunchoq miya – orqa miya chegarasi, U1)"
+      },
+      {
+        "en": "At the pontine isthmus beneath the superior medullary velum (K3)",
+        "uz": "Yuqori miya pardasi ostidagi ko'prik bo'ynida (isthmus, K3)"
+      },
+      {
+        "en": "At the posterior commissure (midbrain–diencephalon junction, O3)",
+        "uz": "Orqa komissura darajasida (o'rta miya – oraliq miya chegarasi, O3)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "In the caudal medulla (U1–U2) the central canal is still closed. At the obex (just caudal to the mid-olivary level U3, where the area postrema sits), the central canal opens into the rhomboid fossa — the floor of the fourth ventricle.",
+      "uz": "Kaudal uzunchoq miyada (U1–U2) markaziy kanal yopiq bo'ladi; obex darajasida (U3 o'rta zaytun kesimidan sal pastda, area postrema joylashgan yerda) u IV qorincha tubiga (rombsimon chuqurchaga) ochiladi."
+    },
+    "refs": ["cc", "v4", "ap", "fourth-ventricle"],
+    "plate": "medulla-olive",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Medulla Oblongata",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551589/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-020",
+    "level": "resident",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "Which midline circumventricular organ lacking a blood–brain barrier sits at the caudal tip of the fourth ventricle (obex) and triggers vomiting?",
+      "uz": "To'rtinchi qorinchaning pastki uchida (obexda) joylashgan, gematoensefalik to'siqqa ega bo'lmagan va qusish refleksini qo'zg'atuvchi sirkumventrikulyar a'zo qaysi?"
+    },
+    "options": [
+      {
+        "en": "Area postrema",
+        "uz": "Area postrema"
+      },
+      {
+        "en": "Pineal gland",
+        "uz": "Epifiz (pineal bez)"
+      },
+      {
+        "en": "Facial colliculus",
+        "uz": "Yuz do'ngligi (colliculus facialis)"
+      },
+      {
+        "en": "Habenula",
+        "uz": "Habenula (yuganak)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The area postrema lies on the dorsal surface of the medulla at the obex (caudal floor of the 4th ventricle). It lacks a blood–brain barrier, acts as the chemoreceptor trigger zone for emesis, and is the target of AQP4-IgG in NMOSD (area-postrema syndrome: intractable hiccups, nausea, vomiting).",
+      "uz": "Area postrema obex darajasida (IV qorincha tubining pastki burchagida) joylashgan gematoensefalik to'siqsiz sirkumventrikulyar organdir. U qusishning xemoretseptor trigger zonasi hisoblanadi va NMOSD (AQP4-IgG) da to'xtamas hiqichoq hamda qayt qilish beradi."
+    },
+    "refs": ["ap", "v4", "fourth-ventricle"],
+    "plate": "medulla-olive",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Medulla Oblongata",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551589/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-021",
+    "level": "expert",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "A 32-year-old patient presents with paroxysmal headaches that worsen abruptly when bending forward, brief episodes of drop attacks, and papilloedema. CT shows a well-circumscribed hyperdense round mass at the anterior roof of the third ventricle with symmetric dilatation of both lateral ventricles and a normal-sized third and fourth ventricle. Where is the lesion located?",
+      "uz": "32 yoshli bemor oldinga egilganda to'satdan kuchayadigan xurujsimon bosh og'rig'i, qisqa muddatli yiqilish xurujlari va ko'z tubida dimlanish bilan murojaat qildi. KTda uchinchi qorincha oldingi tomida aniq chegarali dumaloq giperdens hosila, ikkala yon qorinchaning simmetrik kengayishi hamda normal o'lchamdagi III va IV qorinchalar aniqlandi. O'choq qayerda joylashgan?"
+    },
+    "options": [
+      {
+        "en": "At the interventricular foramina of Monro (colloid cyst blocking both lateral ventricular outlets)",
+        "uz": "Qorinchalararo Monro teshiklarida (ikkala yon qorincha chiqishini to'sib qo'ygan kolloid kista)"
+      },
+      {
+        "en": "In the cerebral aqueduct of Sylvius (pineal germinoma compressing the midbrain tectum)",
+        "uz": "Silviy suv yo'lida (o'rta miya tektumini bosuvchi pineal germinoma)"
+      },
+      {
+        "en": "At the median and lateral apertures of the fourth ventricle (Dandy–Walker outlet atresia)",
+        "uz": "To'rtinchi qorinchaning o'rta va yon teshiklarida (Dandy–Walker chiqish atreziyasi)"
+      },
+      {
+        "en": "In the arachnoid granulations of the superior sagittal sinus (communicating hydrocephalus)",
+        "uz": "Yuqori sagittal sinusning araxnoidal donachalarida (kommunikatsiyalanuvchi gidrotsefaliya)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "A colloid cyst classically arises at the anterior roof of the third ventricle right at the foramina of Monro. Acting as a ball-valve, it can acutely obstruct both foramina simultaneously — dilating both lateral ventricles while leaving the third and fourth ventricles normal — and cause positional headache or sudden death.",
+      "uz": "Kolloid kista aynan Monro teshiklari sohasida (III qorinchaning oldingi tomida) o'sadi va klapan kabi ikkala teshikni birdan berkitib qo'yishi mumkin. Natijada faqat ikkala yon qorincha kengayib, III va IV qorinchalar normal qoladi va holatga bog'liq o'tkir bosh og'rig'i yuzaga keladi."
+    },
+    "refs": ["interventricular-foramen", "lateral-ventricle", "third-ventricle", "lv", "v3"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-022",
+    "level": "expert",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "During an endoscopic third ventriculostomy (ETV) for aqueductal stenosis, the neurosurgeon advances the endoscope through the right foramen of Monro into the third ventricle. Which structure in the floor of the third ventricle is perforated to create a CSF bypass into the interpeduncular cistern?",
+      "uz": "Suv yo'li stenozi tufayli bajarilayotgan endoskopik uchinchi ventrikulostomiya (ETV) paytida neyroxirurg endoskopni o'ng Monro teshigi orqali uchinchi qorinchaga kiritdi. Likvorni oyoqchalararo sisternaga to'g'ridan-to'g'ri o'tkazish uchun uchinchi qorincha tubining qaysi qismi teshiladi?"
+    },
+    "options": [
+      {
+        "en": "Tuber cinereum, in the midline triangle between the mammillary bodies posteriorly and the infundibular recess anteriorly",
+        "uz": "Kulrang do'mboq (tuber cinereum) — orqada so'rg'ichsimon tanalar va oldinda infundibulyar cho'ntak orasidagi o'rta chiziq sohasi"
+      },
+      {
+        "en": "Lamina terminalis, directly superior to the anterior commissure and columns of the fornix",
+        "uz": "Oxirgi plastinka (lamina terminalis) — bevosita oldingi komissura va fornix ustunlari ustida"
+      },
+      {
+        "en": "Habenular commissure, immediately rostral to the pineal recess",
+        "uz": "Habenulyar komissura — epifiz cho'ntagidan bevosita oldinda"
+      },
+      {
+        "en": "Superior medullary velum, between the two superior cerebellar peduncles",
+        "uz": "Yuqori miya pardasi — ikki yuqori miyacha oyoqchasi orasida"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "In ETV, the endoscope enters the lateral ventricle, passes through the foramen of Monro, and fenestrates the translucent floor of the third ventricle at the tuber cinereum — between the mammillary bodies behind and the infundibulum/optic chiasm in front — allowing CSF to flow into the interpeduncular cistern ahead of the basilar apex.",
+      "uz": "ETV amaliyotida endoskop Monro teshigidan III qorinchaga o'tib, uning yupqa tubini — orqada so'rg'ichsimon tanalar va oldinda voronka (infundibulum) orasidagi kulrang do'mboqni (tuber cinereum) teshadi; shunda likvor to'silgan Silviy suv yo'lini chetlab, oyoqchalararo sisternaga chiqadi."
+    },
+    "refs": ["tuber-cinereum", "mammillary-body", "third-ventricle", "interventricular-foramen", "me", "mb", "v3"],
+    "plate": "hypothalamus-tuberal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-023",
+    "level": "expert",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "A 72-year-old man presents with a magnetic, shuffling gait, progressive executive cognitive decline, and urinary urgency/incontinence. Brain MRI shows symmetrically enlarged lateral, third, and fourth ventricles with an Evans index of 0.36, disproportionately tight high-convexity sulci, and a normal lumbar CSF opening pressure of 14 cm H₂O. Which mechanism explains this condition?",
+      "uz": "72 yoshli bemorda magnitli ('polga yopishgan') yurish, zo'rayib boruvchi kognitiv pasayish va siydik tutolmaslik triadasiga xos belgilar paydo bo'ldi. MRTda barcha qorinchalar kengaygan (Evans indeksi 0.36), gumbaz yuqorisidagi egatlar toraygan, lumbal punksiyada likvor bosimi 14 sm suv ustuni (normal). Bu holatning mexanizmi va tashxisi qanday?"
+    },
+    "options": [
+      {
+        "en": "Normal-pressure (communicating) hydrocephalus (Hakim–Adams triad), treated after a high-volume lumbar tap test by a ventriculoperitoneal shunt",
+        "uz": "Normal bosimli (kommunikatsiyalanuvchi) gidrotsefaliya (Hakim–Adams triadasi); lumbal tap-testdan so'ng ventrikuloperitoneal shunt qo'yiladi"
+      },
+      {
+        "en": "Aqueductal stenosis causing acute non-communicating triventricular hydrocephalus",
+        "uz": "Silviy suv yo'li stenozi chaqirgan o'tkir nokommunikatsion uch qorinchali gidrotsefaliya"
+      },
+      {
+        "en": "Ex-vacuo ventriculomegaly solely from Huntington caudate head degeneration",
+        "uz": "Huntington kasalligida faqat kaudat boshi atrofiyasi hisobiga yuzaga kelgan ex-vacuo ventrikulomegaliya"
+      },
+      {
+        "en": "Choroid plexus papilloma of the fourth ventricle causing hypersecretory intracranial hypertension",
+        "uz": "To'rtinchi qorincha tomirli chigal papillomasi chaqirgan gipersekretor kalla ichi gipertenziyasi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Gait apraxia, dementia, and urinary incontinence ('wet, wobbly, wacky') with ventriculomegaly (Evans index > 0.3) and normal opening pressure (6–20 cm H₂O) define normal-pressure hydrocephalus (NPH), a communicating hydrocephalus responsive to CSF shunting.",
+      "uz": "Yurish apraksiyasi, demensiya va siydik tutolmaslik ('ho'l, chayqaluvchi, g'alati' — Hakim–Adams triadasi), Evans indeksi > 0.3 va normal lumbal bosim (6–20 sm suv ustuni) normal bosimli kommunikatsiyalanuvchi gidrotsefaliyani bildiradi; lumbal sinovdan so'ng ventrikuloperitoneal shunt bilan davolanadi."
+    },
+    "refs": ["lateral-ventricle", "third-ventricle", "fourth-ventricle", "lv", "v3"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Physiology, Cerebral Spinal Fluid",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK519007/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-024",
+    "level": "expert",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "A 14-year-old boy presents with vertical diplopia, inability to look upward, eyelids that appear retracted (Collier sign), and pupils that constrict poorly to light but normally to a near target. MRI reveals a pineal region mass compressing the dorsal midbrain and causing dilation of the lateral and third ventricles. Which two adjacent structures are compressed to produce the gaze syndrome and the hydrocephalus?",
+      "uz": "14 yoshli o'smirda vertikal diplopiya, yuqoriga qaray olmaslik, qovoqlarning tortilishi (Collier belgisi) hamda qorachiqlarning yorug'likka sust, ammo yaqinga normal torayishi aniqlandi. MRTda dorsal o'rta miyani bosib, yon va uchinchi qorinchalarni kengaytirgan hosila ko'rindi. Qaysi ikki qo'shni tuzilma bosilishi qarash sindromi va gidrotsefaliyani keltirib chiqargan?"
+    },
+    "options": [
+      {
+        "en": "Posterior commissure / pretectal area (Parinaud syndrome) and the underlying cerebral aqueduct of Sylvius",
+        "uz": "Orqa komissura / pretektal soha (Parinaud sindromi) va ularning ostidagi Silviy suv yo'li"
+      },
+      {
+        "en": "Abducens nucleus / facial genu (Foville syndrome) and the lateral aperture of Luschka",
+        "uz": "Uzoqlashtiruvchi yadro / yuz nervi tizzasi (Foville sindromi) va Luschka yon teshigi"
+      },
+      {
+        "en": "Optic chiasm / suprachiasmatic nucleus and the interventricular foramen of Monro",
+        "uz": "Ko'rish kesishmasi / suprachiazmatik yadro va Monro qorinchalararo teshigi"
+      },
+      {
+        "en": "Red nucleus / crus cerebri (Weber syndrome) and the central canal of the medulla",
+        "uz": "Qizil yadro / miya oyoqchasi (Weber sindromi) va uzunchoq miya markaziy kanali"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The pineal gland sits directly above the posterior commissure and pretectal area, which roof the rostral cerebral aqueduct (plate O3). A pineal tumour compresses the pretectum/posterior commissure (producing Parinaud dorsal midbrain syndrome) and pinches the aqueduct below (causing triventricular obstructive hydrocephalus).",
+      "uz": "Epifiz (pineal bez) bevosita orqa komissura va pretektal soha ustida, Silviy suv yo'lining III qorinchaga o'tish joyi tepasida joylashgan (O3 plastinkasi). Pineal o'sma pretektum va orqa komissurani bosib Parinaud sindromini, ostidagi Silviy suv yo'lini qisib esa obstruktiv gidrotsefaliyani keltirib chiqaradi."
+    },
+    "refs": ["pineal-body", "posterior-commissure", "bs-pretectal-region", "cerebral-aqueduct", "pin", "pc", "pretect", "aq"],
+    "plate": "midbrain-pretectal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Mesencephalon (Midbrain)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551509/"
+      }
+    ]
+  },
+  {
+    "id": "q-ventricles-025",
+    "level": "expert",
+    "topic": "ventricles",
+    "type": "mcq",
+    "q": {
+      "en": "A 2-year-old child is evaluated for macrocephaly and delayed motor milestones. MRI shows a large posterior fossa cyst continuous with the fourth ventricle, hypoplasia/agenesis of the cerebellar vermis, and elevation of the tentorium and torcula, associated with atresia of the foramina of Magendie and Luschka. Which malformation is this, and how does it contrast with a choroid plexus papilloma of the lateral ventricular atrium?",
+      "uz": "2 yoshli bolada makrotsefaliya va harakat rivojlanishidan orqada qolish tekshirildi. MRTda IV qorincha bilan tutashgan katta orqa chuqurcha kistasi, miyacha chuvalchangi gipoplaziyasi hamda Magendie va Luschka teshiklari atreziyasi aniqlandi. Bu qaysi tug'ma nuqson va u yon qorincha bo'lmasidagi tomirli chigal papillomasidan mexanizmi bo'yicha qanday farq qiladi?"
+    },
+    "options": [
+      {
+        "en": "Dandy–Walker malformation (fourth-ventricular outlet obstruction), whereas a choroid plexus papilloma causes rare hypersecretory (over-production) hydrocephalus",
+        "uz": "Dandy–Walker malformatsiyasi (IV qorincha chiqish teshiklari berkilishi); tomirli chigal papillomasi esa likvorni ortiqcha ishlab chiqarish (sekretor) hisobiga gidrotsefaliya beradi"
+      },
+      {
+        "en": "Chiari II malformation (downward traction of a small fourth ventricle), whereas a papilloma blocks the foramen of Monro",
+        "uz": "Chiari II malformatsiyasi (kichik IV qorinchaning pastga tortilishi); papilloma esa faqat Monro teshigini yopadi"
+      },
+      {
+        "en": "Colpocephaly from callosal agenesis, whereas a papilloma destroys the arachnoid granulations",
+        "uz": "Qadoqsimon tana agenezidan kolpotsefaliya; papilloma esa araxnoidal donachalarni yemiradi"
+      },
+      {
+        "en": "Septo-optic dysplasia (de Morsier syndrome), whereas a papilloma causes ex-vacuo atrophy",
+        "uz": "Septo-optik displaziya (de Morsier sindromi); papilloma esa ex-vacuo atrofiya chaqiradi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Atresia of the median (Magendie) and lateral (Luschka) apertures with cystic dilation of the fourth ventricle and vermian hypoplasia defines the Dandy–Walker malformation (obstructive). In contrast, a choroid plexus papilloma (most common in the lateral ventricular atrium in children) is the classic cause of secretory hydrocephalus from CSF over-production.",
+      "uz": "Magendie va Luschka chiqish teshiklari atreziyasi, kistasimon kengaygan IV qorincha va chuvalchang gipoplaziyasi Dandy–Walker nuqsoniga xos (chiqish obstrusiyasi). Bolalarda yon qorincha bo'lmasida (atriumda) uchraydigan tomirli chigal papillomasi esa likvorni ortiqcha ishlab chiqarish ('sekretor' mexanizm) orqali gidrotsefaliya chaqiradi."
+    },
+    "refs": ["fourth-ventricle", "choroid-plexus-of-cerebral-hemisphere", "v4", "vermis"],
+    "plate": "cerebellum-deep-nuclei",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Ventricular System",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532932/"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1018 @@
+[
+  {
+    "id": "q-callosum-001",
+    "level": "student",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Approximately how many axons cross the midline in the human corpus callosum to connect the two cerebral hemispheres?",
+      "uz": "Insonning qadoqsimon tanasida (corpus callosum) ikki yarim sharni bog'lash uchun taxminan qancha akson o'rta chiziqni kesib o'tadi?"
+    },
+    "options": [
+      {
+        "en": "About 200 million axons (roughly 10 cm in length)",
+        "uz": "Taxminan 200 million akson (uzunligi ~10 sm)"
+      },
+      {
+        "en": "About 1 million axons (roughly 2 cm in length)",
+        "uz": "Taxminan 1 million akson (uzunligi ~2 sm)"
+      },
+      {
+        "en": "About 50 thousand axons (roughly 3 cm in length)",
+        "uz": "Taxminan 50 ming akson (uzunligi ~3 sm)"
+      },
+      {
+        "en": "About 10 billion axons (roughly 25 cm in length)",
+        "uz": "Taxminan 10 milliard akson (uzunligi ~25 sm)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The corpus callosum is the largest white-matter commissure in the brain, carrying approximately 200 million axons across the longitudinal fissure (~10 cm long). For comparison, each medullary pyramid carries ~1 million axons and each fornix ~1.2 million.",
+      "uz": "Qadoqsimon tana — ikki yarim sharni bog'lovchi eng yirik oq modda ko'prigi bo'lib, ~200 million aksondan iborat (uzunligi ~10 sm). Solishtirish uchun: har bir piramidada ~1 million, fornixda ~1.2 million akson bor."
+    },
+    "refs": ["corpus-callosum", "cca"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-002",
+    "level": "student",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "What are the four main anatomical parts of the corpus callosum from anterior to posterior?",
+      "uz": "Qadoqsimon tananing oldindan orqaga joylashgan to'rtta asosiy anatomik qismi qaysilar?"
+    },
+    "options": [
+      {
+        "en": "Rostrum, genu, body (trunk), and splenium",
+        "uz": "Tumshuq (rostrum), tizza (genu), tana (truncus) va qalinlashma (splenium)"
+      },
+      {
+        "en": "Head, neck, body, and tail",
+        "uz": "Bosh, bo'yin, tana va dum"
+      },
+      {
+        "en": "Fimbria, crus, body, and column",
+        "uz": "Fimbriya, oyoq (crus), tana va ustun (columna)"
+      },
+      {
+        "en": "Anterior limb, genu, posterior limb, and retrolenticular part",
+        "uz": "Oldingi oyoq, tizza, orqa oyoq va retrolentikulyar qism"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "From front to back, the corpus callosum is divided into the thin ventral rostrum, the anterior bend or genu, the long central body (trunk), and the thick rounded posterior splenium.",
+      "uz": "Qadoqsimon tana oldindan orqaga to'rt qismdan iborat: pastga va orqaga qayrilgan ingichka tumshuq (rostrum), oldingi bukilish — tizza (genu), o'rta uzun tana (truncus) va orqadagi yo'g'on qalinlashma (splenium)."
+    },
+    "refs": ["corpus-callosum", "wm-corpus-callosum-genu", "wm-body-of-corpus-callosum", "wm-corpus-callosum-splenium"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-003",
+    "level": "student",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Which part of the corpus callosum forms the U-shaped 'forceps minor' connecting the two prefrontal (frontal) lobes?",
+      "uz": "Qadoqsimon tananing qaysi qismi ikki peshona (prefrontal) bo'lagini bog'lovchi U-shaklli 'kichik qisqich'ni (forceps minor) hosil qiladi?"
+    },
+    "options": [
+      {
+        "en": "Genu",
+        "uz": "Tizza (genu)"
+      },
+      {
+        "en": "Splenium",
+        "uz": "Qalinlashma (splenium)"
+      },
+      {
+        "en": "Body (trunk)",
+        "uz": "Tana (truncus)"
+      },
+      {
+        "en": "Hippocampal commissure",
+        "uz": "Gippokamp komissurasi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Fibres sweeping forward from the genu of the corpus callosum into both frontal lobes form the U-shaped forceps minor, whereas fibres sweeping backward from the splenium into the occipital lobes form the forceps major.",
+      "uz": "Qadoqsimon tana tizzasidan (genu) ikkala peshona bo'lagiga oldinga yoyilgan tolalar U-shaklli 'kichik qisqich'ni (forceps minor), spleniumdan ensa bo'laklariga ketgan tolalar esa 'katta qisqich'ni (forceps major) hosil qiladi."
+    },
+    "refs": ["corpus-callosum", "wm-corpus-callosum-genu", "superior-frontal-gyrus", "cca"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-004",
+    "level": "student",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Which part of the corpus callosum forms the 'forceps major' linking the occipital (visual) cortices of the two hemispheres?",
+      "uz": "Qadoqsimon tananing qaysi qismi ikki yarim sharning ensa (ko'rish) po'stlog'ini bog'lovchi 'katta qisqich'ni (forceps major) hosil qiladi?"
+    },
+    "options": [
+      {
+        "en": "Splenium",
+        "uz": "Qalinlashma (splenium)"
+      },
+      {
+        "en": "Genu",
+        "uz": "Tizza (genu)"
+      },
+      {
+        "en": "Rostrum",
+        "uz": "Tumshuq (rostrum)"
+      },
+      {
+        "en": "Anterior commissure",
+        "uz": "Oldingi komissura"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The splenium — the thick posterior end of the corpus callosum — carries thick, fast-conducting visual fibres (forceps major) connecting the occipital (cuneus, lingual gyrus) and posterior temporal lobes.",
+      "uz": "Qadoqsimon tananing orqa qalinlashmasi — splenium ensa (cuneus, tilsimon pushta) va orqa chakka sohalarini bog'lovchi yo'g'on, tez o'tkazuvchi ko'rish tolalarini ('katta qisqich' — forceps major) o'tkazadi."
+    },
+    "refs": ["corpus-callosum", "wm-corpus-callosum-splenium", "cuneus", "lingual-gyrus"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-005",
+    "level": "student",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Which thin double membrane hangs vertically from the underside of the corpus callosum to the fornix, separating the two frontal horns of the lateral ventricles?",
+      "uz": "Qadoqsimon tananing ostidan pastdagi fornixgacha osilib turib, ikki frontal shoxni bir-biridan ajratuvchi yupqa qo'sh parda qaysi?"
+    },
+    "options": [
+      {
+        "en": "Septum pellucidum",
+        "uz": "Shaffof to'siq (septum pellucidum)"
+      },
+      {
+        "en": "Lamina terminalis",
+        "uz": "Oxirgi plastinka (lamina terminalis)"
+      },
+      {
+        "en": "Falx cerebri",
+        "uz": "Miya o'rog'i (falx cerebri)"
+      },
+      {
+        "en": "Tentorium cerebelli",
+        "uz": "Miyacha chodiri (tentorium cerebelli)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The septum pellucidum is a thin midline double sheet stretched between the corpus callosum above and the fornix below, forming the medial wall between the two frontal horns of the lateral ventricles.",
+      "uz": "Shaffof to'siq (septum pellucidum) — yuqorida qadoqsimon tana va pastda fornix orasiga tortilgan yupqa qo'sh varaq bo'lib, ikki frontal shoxni o'rta chiziqda ajratib turadi."
+    },
+    "refs": ["septum-of-telencephalon", "corpus-callosum", "fornix-of-forebrain", "sp"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-006",
+    "level": "student",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Which interhemispheric commissure crosses the midline immediately in front of the columns of the fornix and links the anterior temporal lobes and olfactory structures?",
+      "uz": "Fornix ustunlarining bevosita oldidan o'rta chiziqni kesib o'tib, chakka bo'laklari va hid tizimini bog'lovchi komissura qaysi?"
+    },
+    "options": [
+      {
+        "en": "Anterior commissure",
+        "uz": "Oldingi komissura (commissura anterior)"
+      },
+      {
+        "en": "Posterior commissure",
+        "uz": "Orqa komissura (commissura posterior)"
+      },
+      {
+        "en": "Hippocampal commissure (commissure of the fornix)",
+        "uz": "Gippokamp komissurasi (fornix komissurasi)"
+      },
+      {
+        "en": "Habenular commissure",
+        "uz": "Habenula komissurasi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The anterior commissure crosses in front of the columns of the fornix (plate B2), connecting the olfactory structures (anterior part) and the middle/inferior temporal lobes and amygdalae (posterior part).",
+      "uz": "Oldingi komissura fornix ustunlarining oldidan o'rta chiziqni kesib o'tadi (B2 plastinkasi) hamda hid tizimi (oldingi qismi) va chakka bo'laklarini (orqa qismi) o'zaro bog'laydi."
+    },
+    "refs": ["anterior-commissure", "fornix-of-forebrain", "ac", "fx"],
+    "plate": "bg-commissural",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-007",
+    "level": "student",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Which commissure lies directly beneath the splenium of the corpus callosum and connects the two crura of the fornix (and the two hippocampi)?",
+      "uz": "Qadoqsimon tana spleniumi ostida yotib, fornixning ikki oyog'ini (va ikki gippokampni) o'zaro bog'lovchi komissura qaysi?"
+    },
+    "options": [
+      {
+        "en": "Hippocampal commissure (commissure of the fornix / psalterium)",
+        "uz": "Gippokamp komissurasi (fornix komissurasi)"
+      },
+      {
+        "en": "Anterior commissure",
+        "uz": "Oldingi komissura"
+      },
+      {
+        "en": "Posterior commissure",
+        "uz": "Orqa komissura"
+      },
+      {
+        "en": "Anterior white commissure",
+        "uz": "Old oq bitishma"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Under the splenium, where the two crura of the fornix converge toward the midline, transverse fibres cross between them as the hippocampal commissure (commissure of the fornix), linking the two hippocampi.",
+      "uz": "Splenium ostida fornixning ikki oyog'i o'rta chiziqqa yaqinlashgan joyda ko'ndalang tolalar — gippokamp komissurasi (fornix komissurasi) ikki gippokampni o'zaro bog'laydi."
+    },
+    "refs": ["commissure-of-fornix-of-forebrain", "fornix-of-forebrain", "corpus-callosum"],
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-008",
+    "level": "student",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Which anatomical landmark serves as the origin ('zero point', 0, 0, 0) of Talairach and MNI stereotactic brain coordinate systems?",
+      "uz": "Talairach va MNI stereotaktik miya koordinata tizimlarida qaysi anatomik tuzilma 'nol nuqta' (0, 0, 0) sifatida olinadi?"
+    },
+    "options": [
+      {
+        "en": "Anterior commissure (and the AC–PC line to the posterior commissure)",
+        "uz": "Oldingi komissura (va orqa komissuragacha bo'lgan AC–PC chizig'i)"
+      },
+      {
+        "en": "Pineal gland at the posterior wall of the third ventricle",
+        "uz": "Uchinchi qorincha orqa devoridagi epifiz (pineal bez)"
+      },
+      {
+        "en": "Optic chiasm on the floor of the third ventricle",
+        "uz": "Uchinchi qorincha tubidagi ko'rish kesishmasi"
+      },
+      {
+        "en": "Obex at the caudal tip of the fourth ventricle",
+        "uz": "To'rtinchi qorinchaning pastki uchidagi obex"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The anterior commissure is the origin of Talairach and MNI stereotactic spaces, and the AC–PC line (connecting the anterior and posterior commissures) forms the horizontal reference axis from which DBS targets are measured.",
+      "uz": "Oldingi komissura Talairach va MNI fazosining 'nol nuqtasi' hisoblanadi; oldingi va orqa komissuralarni tutashtiruvchi AC–PC chizig'i esa stereotaktik jarrohlik va DBS nishonlari o'lchanadigan asosiy o'qdir."
+    },
+    "refs": ["anterior-commissure", "posterior-commissure", "ac", "pc"],
+    "plate": "bg-commissural",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-009",
+    "level": "student",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Which cortical regions are connected by the body (trunk) of the corpus callosum?",
+      "uz": "Qadoqsimon tananing tana qismi (truncus) ikki yarim sharning qaysi po'stloq sohalarini o'zaro bog'laydi?"
+    },
+    "options": [
+      {
+        "en": "Premotor, primary motor (precentral), primary somatosensory (postcentral), and parietal areas",
+        "uz": "Premotor, birlamchi harakat (oldingi markaziy), birlamchi sezgi (orqa markaziy) va tepa sohalarini"
+      },
+      {
+        "en": "Only the primary visual cortices (cuneus and lingual gyrus) of the occipital poles",
+        "uz": "Faqat ensa qutblarining birlamchi ko'rish po'stlog'ini (cuneus va tilsimon pushta)"
+      },
+      {
+        "en": "Only the olfactory bulbs and piriform cortices",
+        "uz": "Faqat hidlov piyozchalari va noksimon po'stloqni"
+      },
+      {
+        "en": "The cerebellar hemispheres across the fourth ventricle",
+        "uz": "To'rtinchi qorincha ustidan miyacha yarim sharlarini"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The callosal fibres are topographically ordered: the genu connects prefrontal cortex, the body (trunk) connects premotor, motor (precentral), somatosensory (postcentral) and parietal areas, and the splenium connects occipital and posterior temporal visual areas.",
+      "uz": "Qadoqsimon tana tolalari topografik joylashgan: tizza prefrontal sohalarni, tana (truncus) harakat (oldingi markaziy), sezgi (orqa markaziy) va tepa sohalarini, splenium esa ensa (ko'rish) va chakka sohalarini bog'laydi."
+    },
+    "refs": ["corpus-callosum", "wm-body-of-corpus-callosum", "precentral-gyrus", "postcentral-gyrus"],
+    "sources": [
+      {
+        "title": "Hofer & Frahm 2006, NeuroImage — Topography of the human corpus callosum revisited — Comprehensive fiber tractography using diffusion tensor magnetic resonance imaging",
+        "url": "https://doi.org/10.1016/j.neuroimage.2006.05.044"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-010",
+    "level": "student",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Why is surgical sectioning of the corpus callosum (corpus callosotomy) performed in patients with severe refractory epilepsy?",
+      "uz": "Og'ir, dori-darmonga chidamli epilepsiyada qadoqsimon tanani jarrohlik yo'li bilan kesish (kallozotomiya) nima maqsadda bajariladi?"
+    },
+    "options": [
+      {
+        "en": "To prevent epileptic discharges from spreading rapidly from one cerebral hemisphere to the other (especially in drop attacks)",
+        "uz": "Tutqanoq razryadlarining bir yarim shardan ikkinchisiga tez tarqalishini (ayniqsa to'satdan yiqilish xurujlarini) to'xtatish uchun"
+      },
+      {
+        "en": "To drain obstructed cerebrospinal fluid from the third ventricle into the longitudinal fissure",
+        "uz": "Uchinchi qorinchada to'planib qolgan likvorni bo'ylama yoriqqa oqizish uchun"
+      },
+      {
+        "en": "To interrupt the corticospinal tract before it reaches the internal capsule",
+        "uz": "Kortikospinal traktni ichki kapsulaga yetmasdan uzib qo'yish uchun"
+      },
+      {
+        "en": "To disconnect the mammillary bodies from the anterior thalamic nuclei",
+        "uz": "So'rg'ichsimon tanalarni talamusning oldingi yadrolaridan ajratish uchun"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Because the corpus callosum is the main interhemispheric conduit, callosotomy blocks bilateral synchronization of generalized/atonic seizures (drop attacks), preventing a unilateral seizure focus from recruiting both hemispheres.",
+      "uz": "Qadoqsimon tana ikki yarim sharni bog'lovchi asosiy ko'prik bo'lgani uchun kallozotomiya tutqanoq faolligining bir yarim shardan ikkinchisiga o'tib umumlashishini (ayniqsa atonik yiqilish xurujlarini) to'xtatadi."
+    },
+    "refs": ["corpus-callosum"],
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-011",
+    "level": "resident",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "How do the axon diameter spectrum and developmental myelination sequence differ across the genu, body, and splenium of the corpus callosum?",
+      "uz": "Qadoqsimon tananing tizzasi (genu), tanasi va spleniumida aksonlar qalinligi hamda miyelinlanish ketma-ketligi qanday farq qiladi?"
+    },
+    "options": [
+      {
+        "en": "The genu has many thin, lightly myelinated prefrontal axons while the splenium carries thick, fast visual axons; myelination proceeds from back to front (splenium before genu)",
+        "uz": "Tizzada ingichka, kam miyelinli prefrontal aksonlar ko'p, spleniumda esa yo'g'on, tez o'tkazuvchi ko'rish aksonlari; miyelinlanish orqadan oldinga (splenium tizzadan oldin) boradi"
+      },
+      {
+        "en": "The genu carries only giant Betz motor axons while the splenium is unmyelinated; myelination proceeds from front to back",
+        "uz": "Tizzada faqat yirik Bets harakat aksonlari, splenium esa miyelinsiz; miyelinlanish oldindan orqaga boradi"
+      },
+      {
+        "en": "All callosal segments have identical axon diameters and myelinate simultaneously at birth",
+        "uz": "Barcha segmentlarda aksonlar diametri bir xil bo'lib, tug'ilish vaqtida bir paytda miyelinlanadi"
+      },
+      {
+        "en": "The body is thicker (12 mm) than the genu and splenium (6 mm) and myelinates last in adulthood",
+        "uz": "Tana qismi (12 mm) tizza va spleniumdan (6 mm) qalinroq bo'lib, eng oxirida voyaga yetganda miyelinlanadi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The genu is rich in thin, slower prefrontal fibres, whereas the splenium and motor body contain thick, fast-conducting fibres. Adult thickness is ~10–12 mm at the genu/splenium and ~6 mm in the body; myelination progresses caudorostrally (splenium before genu) and appears mature on T1 MRI by ~8 months.",
+      "uz": "Tizzada ingichka, kam miyelinli prefrontal aksonlar ko'p, spleniumda esa yo'g'on, tez o'tkazuvchi ko'rish aksonlari joylashgan. Kattalarda tizza va splenium qalinligi ≈10–12 mm, tana ≈6 mm; miyelinlanish orqadan oldinga (splenium tizzadan oldin) boradi va T1 MRTda ~8 oylikda yetuk ko'rinadi."
+    },
+    "refs": ["corpus-callosum", "wm-corpus-callosum-genu", "wm-corpus-callosum-splenium"],
+    "sources": [
+      {
+        "title": "Hofer & Frahm 2006, NeuroImage — Topography of the human corpus callosum revisited",
+        "url": "https://doi.org/10.1016/j.neuroimage.2006.05.044"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-012",
+    "level": "resident",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "In Hofer and Frahm's (2006) diffusion tensor tractography parcellation of the human corpus callosum into five vertical regions (I–V) from anterior to posterior, what is the correct functional order?",
+      "uz": "Hofer va Frahm (2006) diffuziya traktografiyasi bo'yicha qadoqsimon tananing oldindan orqaga beshta sektori (I–V) qanday funksional tartibda joylashgan?"
+    },
+    "options": [
+      {
+        "en": "I: Prefrontal → II: Premotor and supplementary motor → III: Primary motor → IV: Primary sensory → V: Parietal, temporal, and occipital",
+        "uz": "I: Prefrontal → II: Premotor va SMA → III: Birlamchi harakat → IV: Birlamchi sezgi → V: Tepa, chakka va ensa"
+      },
+      {
+        "en": "I: Primary motor → II: Primary sensory → III: Prefrontal → IV: Temporal → V: Occipital",
+        "uz": "I: Birlamchi harakat → II: Birlamchi sezgi → III: Prefrontal → IV: Chakka → V: Ensa"
+      },
+      {
+        "en": "I: Visual → II: Auditory → III: Somatosensory → IV: Motor → V: Prefrontal",
+        "uz": "I: Ko'rish → II: Eshitish → III: Somatosensor → IV: Harakat → V: Prefrontal"
+      },
+      {
+        "en": "I: Limbic/cingulate → II: Basal ganglia → III: Thalamic → IV: Brainstem → V: Cerebellar",
+        "uz": "I: Limbik/belbog' → II: Bazal yadrolar → III: Talamus → IV: Miya ustuni → V: Miyacha"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "DTI tractography (Hofer & Frahm 2006) revises Witelson's scheme by placing primary motor fibres further posterior (region III, posterior midbody): I = prefrontal, II = premotor/SMA, III = primary motor, IV = primary sensory, V = parietal–temporal–occipital.",
+      "uz": "Diffuziya traktografiyasi (Hofer va Frahm 2006) qadoqsimon tanani oldindan orqaga besh sektorga ajratadi: I prefrontal, II premotor/SMA, III birlamchi harakat, IV birlamchi sezgi, V tepa–chakka–ensa."
+    },
+    "refs": ["corpus-callosum", "precentral-gyrus", "postcentral-gyrus", "superior-frontal-gyrus"],
+    "sources": [
+      {
+        "title": "Hofer & Frahm 2006, NeuroImage — Topography of the human corpus callosum revisited",
+        "url": "https://doi.org/10.1016/j.neuroimage.2006.05.044"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-013",
+    "level": "resident",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "In Sperry and Gazzaniga's classic split-brain experiments on patients after complete corpus callosotomy, what happens when a picture of a key is flashed briefly to the LEFT visual hemifield?",
+      "uz": "Sperry va Gazzaniga'ning to'liq kallozotomiya o'tkazgan ('bo'lingan miya') bemorlardagi tajribasida CHAP ko'rish maydoniga qisqa muddat kalit rasmi ko'rsatilsa nima sodir bo'ladi?"
+    },
+    "options": [
+      {
+        "en": "The patient says they saw nothing (cannot name it), but their left hand accurately selects the key by touch",
+        "uz": "Bemor narsani nomini ayta olmaydi ('hech narsa ko'rmadim' deydi), lekin chap qo'li bilan paypaslab kalitni to'g'ri topib beradi"
+      },
+      {
+        "en": "The patient names the key aloud immediately, but neither hand can pick it up",
+        "uz": "Bemor kalit nomini darhol ovoz chiqarib aytadi, lekin hech bir qo'li bilan uni ushlay olmaydi"
+      },
+      {
+        "en": "The patient's right hand selects the key while the left hand is paralysed",
+        "uz": "Bemorning o'ng qo'li kalitni tanlaydi, chap qo'li esa falaj bo'lib qoladi"
+      },
+      {
+        "en": "The patient is completely blind in the left visual hemifield (left homonymous hemianopia)",
+        "uz": "Bemor chap ko'rish maydonida butunlay ko'rmaydi (chap gomonim gemianopiya)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "A stimulus in the left visual field projects to the right visual cortex. With the corpus callosum severed, visual information cannot cross to the language-dominant left hemisphere (so the patient cannot name it), but the right hemisphere still controls the left hand, which identifies the object by touch.",
+      "uz": "Chap ko'rish maydoniga ko'rsatilgan tasvir o'ng yarim sharga boradi. Qadoqsimon tana kesilgani uchun axborot nutq markazi joylashgan chap yarim sharga o'ta olmaydi (bemor nomini ayta olmaydi), ammo o'ng yarim shar boshqaradigan chap qo'l narsani bexato tanlab oladi."
+    },
+    "refs": ["corpus-callosum", "cuneus", "lingual-gyrus"],
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-014",
+    "level": "resident",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "What is a persistent cavum septi pellucidi in adults most classically associated with, and what triad defines congenital absence of the septum pellucidum (septo-optic dysplasia, de Morsier syndrome)?",
+      "uz": "Kattalarda saqlanib qolgan cavum septi pellucidi ko'pincha kimlarda uchraydi va shaffof to'siqning tug'ma bo'lmasligi (septo-optik displaziya — de Morsier sindromi) qaysi triada bilan namoyon bo'ladi?"
+    },
+    "options": [
+      {
+        "en": "Cavum septi pellucidi is commoner in boxers (chronic traumatic encephalopathy) and schizophrenia; de Morsier syndrome combines absent septum pellucidum, optic-nerve hypoplasia, and pituitary hormone deficiency",
+        "uz": "Cavum septi pellucidi bokschilarda (surunkali travmatik ensefalopatiya) va shizofreniyada ko'p; de Morsier sindromi esa septum yo'qligi + ko'rish nervi gipoplaziyasi + gipofiz yetishmovchiligi triadasidir"
+      },
+      {
+        "en": "Cavum septi pellucidi causes acute obstructive hydrocephalus; de Morsier syndrome combines callosal lipoma, cerebellar vermian agenesis, and deafness",
+        "uz": "Cavum septi pellucidi o'tkir gidrotsefaliya beradi; de Morsier sindromi esa qadoqsimon tana lipomasi, chuvalchang agenezi va karlik triadasidir"
+      },
+      {
+        "en": "Cavum septi pellucidi is diagnostic of multiple sclerosis; de Morsier syndrome combines bilateral caudate atrophy, chorea, and optic neuritis",
+        "uz": "Cavum septi pellucidi tarqoq skleroz belgisi; de Morsier sindromi esa kaudat atrofiyasi, xoreya va optik nevritdir"
+      },
+      {
+        "en": "Cavum septi pellucidi is caused by thiamine deficiency; de Morsier syndrome combines mammillary atrophy, ophthalmoplegia, and ataxia",
+        "uz": "Cavum septi pellucidi tiamin tanqisligidan kelib chiqadi; de Morsier sindromi esa so'rg'ichsimon tana atrofiyasi, oftalmoplegiya va ataksiyadir"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "A cleft between the two leaflets of the septum pellucidum (cavum septi pellucidi) is normal in fetuses/newborns; when enlarged/fenestrated in adults it is associated with repetitive head trauma (boxers, CTE). Congenital absence of the septum with optic nerve hypoplasia and hypothalamic-pituitary dysfunction is septo-optic dysplasia (de Morsier syndrome).",
+      "uz": "Ikki varaq orasidagi bo'shliq (cavum septi pellucidi) chaqaloqlarda normal; kattalarda bokschilarda (surunkali travmatik ensefalopatiya) va shizofreniyada ko'p uchraydi. Septo-optik displaziya (de Morsier) esa shaffof to'siq yo'qligi, ko'rish nervi gipoplaziyasi va gipofiz yetishmovchiligi triadasidir."
+    },
+    "refs": ["septum-of-telencephalon", "optic-nerve", "pituitary-gland", "sp"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-015",
+    "level": "resident",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "In congenital agenesis of the corpus callosum, what are the longitudinal white-matter bundles of uncrossed callosal axons that run anteroposteriorly along the medial walls of the lateral ventricles?",
+      "uz": "Qadoqsimon tananing tug'ma agenezida qarama-qarshi tomonga o'ta olmay, yon qorinchalarning medial devori bo'ylab oldindan orqaga yo'nalgan bo'ylama oq modda tutamlari nima deb ataladi?"
+    },
+    "options": [
+      {
+        "en": "Probst bundles (indenting the medial walls of parallel 'racing-car' lateral ventricles, often with an enlarged anterior commissure)",
+        "uz": "Probst tutamlari (parallel 'poyga mashinasi' ko'rinishidagi yon qorinchalarning medial devorini bo'rttiradi; ko'pincha oldingi komissura kattalashadi)"
+      },
+      {
+        "en": "Dawson fingers (perivenular demyelinating plaques perpendicular to the ventricles)",
+        "uz": "Dawson barmoqlari (qorinchalarga perpendikulyar joylashgan perivenulyar demiyelinizatsiya o'choqlari)"
+      },
+      {
+        "en": "Striatal cell bridges (pontes grisei caudatolenticulares crossing the internal capsule)",
+        "uz": "Striatal hujayra ko'prikchalari (ichki kapsulani kesib o'tuvchi kulrang tasmalar)"
+      },
+      {
+        "en": "Internal arcuate fibres (decussating axons of the gracile and cuneate nuclei)",
+        "uz": "Ichki yoysimon tolalar (nozik va ponasimon yadrolarning kesishuvchi aksonlari)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "When the corpus callosum fails to develop, callosal axons instead course longitudinally on their own side as Probst bundles, pushing the lateral ventricles apart into a parallel ('racing-car') configuration on axial MRI, often accompanied by colpocephaly and compensatory enlargement of the anterior commissure.",
+      "uz": "Qadoqsimon tana agenezida kesishmagan aksonlar o'z yarim sharida oldindan orqaga yo'nalgan Probst tutamlarini hosil qiladi; natijada aksial MRTda yon qorinchalar bir-biriga parallel ('poyga mashinasi' shaklida) joylashadi, oldingi komissura esa ko'pincha kompensator kattalashadi."
+    },
+    "refs": ["corpus-callosum", "lateral-ventricle", "anterior-commissure", "cca", "lv", "ac"],
+    "plate": "bg-commissural",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-016",
+    "level": "resident",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Which two aggressive brain tumours classically grow across the corpus callosum from one hemisphere into the other, producing a symmetric 'butterfly' lesion on contrast MRI?",
+      "uz": "Qaysi xavfli miya o'smalari qadoqsimon tana tolalari bo'ylab bir yarim shardan ikkinchisiga o'sib o'tib, kontrastli MRTda 'kapalak' shaklidagi manzarani beradi?"
+    },
+    "options": [
+      {
+        "en": "Glioblastoma (IDH-wildtype) and primary CNS lymphoma (most commonly crossing through the genu or splenium)",
+        "uz": "Glioblastoma va markaziy nerv tizimining birlamchi limfomasi (ko'pincha tizza yoki splenium orqali o'tadi)"
+      },
+      {
+        "en": "Vestibular schwannoma and cerebellopontine angle meningioma",
+        "uz": "Vestibulyar shvannoma va ko'prik-miyacha burchagi meningiomasi"
+      },
+      {
+        "en": "Pituitary macroadenoma and craniopharyngioma",
+        "uz": "Gipofiz makroadenomasi va kraniofaringioma"
+      },
+      {
+        "en": "Colloid cyst and fourth-ventricular ependymoma",
+        "uz": "Kolloid kista va to'rtinchi qorincha ependimomasi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "High-grade astrocytomas (glioblastoma) and primary CNS lymphoma infiltrate along dense white-matter tracts of the genu or splenium of the corpus callosum into both hemispheres, creating the classic 'butterfly glioma' appearance.",
+      "uz": "Glioblastoma (va birlamchi MNT limfomasi) qadoqsimon tananing zich komissural tolalari (tizza yoki splenium) bo'ylab ikkala yarim sharga tarqalib, MRTda klassik 'kapalak' shaklidagi o'smani hosil qiladi."
+    },
+    "refs": ["corpus-callosum", "wm-corpus-callosum-genu", "wm-corpus-callosum-splenium"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-017",
+    "level": "resident",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "What are 'Dawson fingers' on sagittal FLAIR MRI, and which anatomical interface do they involve?",
+      "uz": "Sagittal FLAIR MRTda 'Dawson barmoqlari' nima va ular qaysi anatomik chegarada joylashadi?"
+    },
+    "options": [
+      {
+        "en": "Ovoid perivenular demyelinating plaques of multiple sclerosis radiating perpendicularly from the callososeptal interface and lateral ventricular walls",
+        "uz": "Tarqoq sklerozda kallozoseptal chegara va yon qorinchalar devoridan perpendikulyar yo'nalgan ovalsimon perivenulyar demiyelinizatsiya pilakchalari"
+      },
+      {
+        "en": "Digitations on the head of the hippocampus (pes hippocampi) lost in mesial temporal sclerosis",
+        "uz": "Gippokamp boshidagi 'barmoqchalar' (pes hippocampi) bo'lib, medial chakka sklerozida tekislanib ketadi"
+      },
+      {
+        "en": "Grey-matter bridges connecting the caudate head and putamen across the anterior limb of the internal capsule",
+        "uz": "Ichki kapsulaning oldingi oyog'i orqali kaudat boshi va putamenni bog'lovchi kulrang modda ko'prikchalari"
+      },
+      {
+        "en": "Branching white-matter folia ('arbor vitae') of the cerebellar vermis on sagittal section",
+        "uz": "Sagittal kesimda miyacha chuvalchangining shoxlangan oq moddasi ('hayot daraxti')"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "In multiple sclerosis, demyelinating plaques form around the deep medullary veins at the callososeptal interface (underside of the corpus callosum) and periventricular white matter, appearing on sagittal FLAIR as flame-like 'Dawson fingers' perpendicular to the ventricles.",
+      "uz": "Tarqoq sklerozda demiyelinizatsiya o'choqlari qadoqsimon tana ostidagi kallozoseptal chegarada va periventrikulyar oq moddada chuqur medullyar venalar bo'ylab shakllanib, sagittal MRTda qorinchalarga perpendikulyar 'Dawson barmoqlari' ko'rinishini beradi."
+    },
+    "refs": ["corpus-callosum", "septum-of-telencephalon", "lateral-ventricle", "hemi-wm"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-018",
+    "level": "resident",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Which reversible lesion appears on MRI as a well-defined oval focus of restricted diffusion (bright on DWI) isolated to the midline of the splenium of the corpus callosum following viral infections, seizures, or antiepileptic drug withdrawal?",
+      "uz": "Virusli infeksiyalar, tutqanoqlar yoki epilepsiyaga qarshi dorilarni to'xtatgandan so'ng MRT (DWI) da qadoqsimon tana spleniumining qoq o'rtasida diffuziyasi cheklangan ovalsimon o'choq sifatida ko'rinadigan qaytuvchan holat qaysi?"
+    },
+    "options": [
+      {
+        "en": "Cytotoxic lesion of the corpus callosum (CLOCC / mild encephalopathy with a reversible splenial lesion, MERS)",
+        "uz": "Qadoqsimon tana spleniumining sitotoksik o'chog'i (CLOCC / qaytuvchan splenium o'chog'i)"
+      },
+      {
+        "en": "Central pontine myelinolysis (osmotic demyelination syndrome)",
+        "uz": "Markaziy pontin miyelinoliz (osmotik demiyelinizatsiya sindromi)"
+      },
+      {
+        "en": "Hypertrophic olivary degeneration of the Guillain–Mollaret triangle",
+        "uz": "Guillain–Mollaret uchburchagining gipertrofik zaytun degeneratsiyasi"
+      },
+      {
+        "en": "Bilateral hypoxic pallidal necrosis from carbon monoxide poisoning",
+        "uz": "Is gazi bilan zaharlanishda ikki tomonlama gipoksik pallidar nekroz"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Cytotoxic lesions of the corpus callosum (CLOCCs) preferentially affect the midline splenium (which has high glutamate-receptor and aquaporin density) in infections, antiepileptic drug changes, or metabolic stress, and typically resolve completely within weeks.",
+      "uz": "Spleniumning sitotoksik o'choqlari (CLOCC) epilepsiyaga qarshi dorilar o'zgarishi, virusli infeksiyalar yoki metabolik buzilishlarda splenium markazida DWI giperintensiv o'choq bo'lib ko'rinadi va odatda bir necha haftada izsiz yo'qoladi."
+    },
+    "refs": ["corpus-callosum", "wm-corpus-callosum-splenium", "cca"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-019",
+    "level": "resident",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Which major cerebral artery supplies the anterior four-fifths of the corpus callosum (rostrum, genu, and body) via the pericallosal artery, while the posterior cerebral artery supplies the splenium?",
+      "uz": "Qadoqsimon tananing oldingi beshdan to'rt qismini (tumshuq, tizza va tanasini) perikallozal arteriya orqali qaysi yirik arteriya qon bilan ta'minlaydi (spleniumni esa orqa miya arteriyasi)?"
+    },
+    "options": [
+      {
+        "en": "Anterior cerebral artery (ACA)",
+        "uz": "Oldingi miya arteriyasi (ACA)"
+      },
+      {
+        "en": "Middle cerebral artery (MCA)",
+        "uz": "O'rta miya arteriyasi (MCA)"
+      },
+      {
+        "en": "Anterior choroidal artery (AChA)",
+        "uz": "Oldingi xorioidal arteriya"
+      },
+      {
+        "en": "Superior cerebellar artery (SCA)",
+        "uz": "Yuqori miyacha arteriyasi (SCA)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The pericallosal branch of the anterior cerebral artery runs in the callosal sulcus on the dorsal surface of the corpus callosum, supplying the rostrum, genu, and body, whereas the splenial (posterior pericallosal) branches of the posterior cerebral artery supply the splenium.",
+      "uz": "Oldingi miya arteriyasining (ACA) davomi bo'lgan perikallozal arteriya qadoqsimon tana ustidagi egatda yotib, uning tumshuq, tizza va tana qismini qon bilan ta'minlaydi; splenium esa orqa miya arteriyasining (PCA) splenial shoxlaridan qon oladi."
+    },
+    "refs": ["anterior-cerebral-artery", "pericallosal-artery", "splenial-artery", "corpus-callosum"],
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-020",
+    "level": "resident",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "In the JHU white-matter tract atlas, what is the name of the thin sheet of callosal (splenial and body) fibres sweeping laterally over the roof and lateral wall of the atrium and temporal/occipital horns of the lateral ventricle?",
+      "uz": "JHU oq modda traktlari atlasida qadoqsimon tananing tana va splenium qismidan chiqib, yon qorincha bo'lmasi hamda ensa/chakka shoxlarining lateral devorini qoplab tushuvchi yupqa tola qatlami nima deb ataladi?"
+    },
+    "options": [
+      {
+        "en": "Tapetum",
+        "uz": "Tapetum (qadoqsimon tana gilami)"
+      },
+      {
+        "en": "Uncinate fasciculus",
+        "uz": "Ilgaksimon tutam (fasciculus uncinatus)"
+      },
+      {
+        "en": "Cingulum",
+        "uz": "Belbog' tutami (cingulum)"
+      },
+      {
+        "en": "External capsule",
+        "uz": "Tashqi kapsula (capsula externa)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The tapetum is a thin layer of corpus callosum fibres (from the posterior body and splenium) that sweeps inferolaterally along the lateral wall of the atrium, occipital horn, and temporal horn, separating the ventricle from the optic radiation.",
+      "uz": "Tapetum — qadoqsimon tana va spleniumdan chiquvchi tolalarning yupqa qatlami bo'lib, yon qorincha bo'lmasi, orqa va chakka shoxlarining lateral devorini qoplaydi hamda qorinchani ko'rish radiatsiyasidan ajratib turadi."
+    },
+    "refs": ["wm-tapetum", "corpus-callosum", "lateral-ventricle"],
+    "sources": [
+      {
+        "title": "Mori et al. 2008, NeuroImage — Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+        "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-021",
+    "level": "expert",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "A 66-year-old right-handed man suffers an ischaemic stroke. He can speak fluently, comprehend spoken language, and write a coherent paragraph on command; however, minutes later he cannot read aloud or understand the very sentences he just wrote, and he has a right homonymous hemianopia. Which dual lesion (Dejerine 1892) produces this disconnection syndrome?",
+      "uz": "66 yoshli o'ngاقay bemor ishemik insult o'tkazdi. U ravon gapiradi, og'zaki nutqni tushunadi va aytilgan gapni bexato yoza oladi; biroq bir necha daqiqadan so'ng o'zi yozgan matnni o'qiy olmaydi va o'ng tomonlama gomonim gemianopiyasi bor. Qaysi qo'shma zararlanish (Dejerine 1892) ushbu diskonneksiya sindromini keltirib chiqaradi?"
+    },
+    "options": [
+      {
+        "en": "Left occipital visual cortex (V1) plus the splenium of the corpus callosum (left Posterior Cerebral Artery infarction — alexia without agraphia)",
+        "uz": "Chap ensa ko'rish po'stlog'i (V1) va qadoqsimon tana spleniumi (chap orqa miya arteriyasi infarkti — agrafiyasiz sof aleksiya)"
+      },
+      {
+        "en": "Left angular gyrus (BA39) and supramarginal gyrus (BA40) in the middle cerebral artery territory (alexia with agraphia and Gerstmann syndrome)",
+        "uz": "Chap burchak (BA39) va chekka usti (BA40) pushtalari (o'rta miya arteriyasi infarkti — agrafiyali aleksiya va Gerstmann sindromi)"
+      },
+      {
+        "en": "Genu of the corpus callosum and right dorsolateral prefrontal cortex (anterior cerebral artery infarction)",
+        "uz": "Qadoqsimon tana tizzasi (genu) va o'ng dorsolateral prefrontal po'stloq (oldingi miya arteriyasi infarkti)"
+      },
+      {
+        "en": "Posterior limb of the left internal capsule and lateral geniculate nucleus (anterior choroidal artery infarction)",
+        "uz": "Chap ichki kapsula orqa oyog'i va lateral tizzasimon tana (oldingi xorioidal arteriya infarkti)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "In a left PCA stroke affecting both the left primary visual cortex (causing right homonymous hemianopia) and the splenium of the corpus callosum, visual input received by the intact right visual cortex cannot cross the splenium to reach the left angular gyrus/visual word form area. Because the left angular gyrus itself is intact, the patient can write normally but cannot read (pure alexia without agraphia).",
+      "uz": "Chap orqa miya arteriyasi (PCA) infarktida chap ko'rish po'stlog'i (o'ng gemianopiya beradi) va qadoqsimon tana spleniumi birga zararlanadi. Sog'lom o'ng ko'rish po'stlog'i ko'rgan harflar splenium uzilgani sababli chap yarim shardagi nutq/o'qish markazlariga o'ta olmaydi; chap burchak pushtasi butun bo'lgani uchun bemor yoza oladi, lekin yozganini o'qiy olmaydi (agrafiyasiz sof aleksiya)."
+    },
+    "refs": ["corpus-callosum", "wm-corpus-callosum-splenium", "cuneus", "lingual-gyrus", "angular-gyrus"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-022",
+    "level": "expert",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "Following an anterior cerebral artery aneurysm rupture and infarction of the anterior body/genu of the corpus callosum and medial frontal cortex, a right-handed patient finds that her left hand involuntarily unbuttons her shirt while her right hand is buttoning it, and she cannot pantomime waving goodbye with her left hand to verbal command (though she can imitate it and does it normally with her right hand). Which callosal disconnection signs are these?",
+      "uz": "Oldingi miya arteriyasi anevrizmasi yorilishi va qadoqsimon tananing oldingi tanasi/tizzasi infarktidan so'ng o'ngاقay bemor o'ng qo'li bilan ko'ylagi tugmasini qadayotganda, chap qo'li uning ixtiyorisiz tugmalarni yechib yuborayotganini payqadi; shuningdek u og'zaki buyruq bo'yicha chap qo'li bilan 'xayrlashish' harakatini ko'rsata olmaydi (o'ng qo'li bilan esa bexato bajaradi). Bu qaysi kallozal diskonneksiya sindromlari?"
+    },
+    "options": [
+      {
+        "en": "Callosal alien-hand syndrome (intermanual conflict) and left-hand (callosal) ideomotor apraxia / tactile anomia",
+        "uz": "Kallozal 'begona qo'l' sindromi (qo'llararo ziddiyat) va chap qo'lning kallozal ideomotor apraksiyasi"
+      },
+      {
+        "en": "Contralateral hemiballismus from subthalamic nucleus infarction",
+        "uz": "Subtalamik yadro infarktidan kelib chiqqan qarama-qarshi gemiballizm"
+      },
+      {
+        "en": "Cruciate hemiplegia at the pyramidal decussation",
+        "uz": "Piramidalar kesishmasidagi xochsimon gemiplegiya"
+      },
+      {
+        "en": "Optic ataxia and Bálint syndrome from bilateral superior parietal lobule infarction",
+        "uz": "Ikki tomonlama yuqori tepa bo'lakchasi infarktidagi optik ataksiya va Balint sindromi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Damage to the anterior/midbody of the corpus callosum (often with the adjacent medial frontal SMA) disconnects the right motor cortex from the left hemisphere's verbal and praxis networks: verbal commands processed in the left hemisphere cannot reach the right premotor cortex (left-hand ideomotor apraxia), and the two hands act at cross-purposes (callosal alien-hand sign / intermanual conflict).",
+      "uz": "Qadoqsimon tananing oldingi va o'rta tana qismi (ko'pincha qo'shni SMA bilan birga) zararlansa, chap yarim shardagi nutq va praksis markazlarining o'ng motor po'stloq bilan aloqasi uziladi: og'zaki buyruq o'ng yarim sharga o'tmaydi (chap qo'l apraksiyasi va taktil anomiya) hamda chap qo'l o'ng qo'lga qarshi ixtiyorsiz harakatlar qiladi ('begona qo'l' sindromi)."
+    },
+    "refs": ["corpus-callosum", "wm-body-of-corpus-callosum", "superior-frontal-gyrus", "anterior-cerebral-artery"],
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-023",
+    "level": "expert",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "A 54-year-old man with severe chronic alcoholism and malnutrition develops acute confusion, dysarthria, impaired gait, and signs of interhemispheric disconnection. Brain MRI reveals symmetric T2/FLAIR hyperintensity and cystic necrosis of the central layers of the corpus callosum (genu, body, and splenium) while sparing the dorsal and ventral outer rims ('sandwich sign'). What is the diagnosis?",
+      "uz": "Surunkali alkogolizm va ovqatlanish yetishmovchiligi bo'lgan 54 yoshli bemorda o'tkir ong chalkashishi, dizartriya, yurish buzilishi va yarim sharlararo diskonneksiya belgilari rivojlandi. MRTda qadoqsimon tananing o'rta qavatida (tizza, tana va spleniumda) yuqori va pastki yupqa chetlari saqlangan holda ('sendvich belgisi') simmetrik nekroz va demiyelinizatsiya aniqlandi. Tashxis nima?"
+    },
+    "options": [
+      {
+        "en": "Marchiafava–Bignami disease (primary toxic/nutritional demyelination and necrosis of the corpus callosum)",
+        "uz": "Marchiafava–Bignami kasalligi (qadoqsimon tananing birlamchi demiyelinizatsiyasi va nekrozi)"
+      },
+      {
+        "en": "Subacute combined degeneration of the dorsal and lateral columns (vitamin B12 deficiency)",
+        "uz": "Orqa va lateral ustunlarning subakut qo'shma degeneratsiyasi (B12 vitamini tanqisligi)"
+      },
+      {
+        "en": "Carbon monoxide delayed post-hypoxic globus pallidus necrosis",
+        "uz": "Is gazi bilan zaharlanishdan keyingi ikki tomonlama rangpar shar nekrozi"
+      },
+      {
+        "en": "Progressive supranuclear palsy ('hummingbird sign' of midbrain tegmental atrophy)",
+        "uz": "Progressiv supranuklear falaj (o'rta miya atrofiyasining 'kolibri belgisi')"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Marchiafava–Bignami disease is a classic complication of chronic alcoholism/vitamin B-complex deficiency characterized by selective demyelination and central necrosis of the corpus callosum ('sandwich sign' on sagittal MRI), producing dementia, spasticity, dysarthria, and split-brain disconnection syndromes.",
+      "uz": "Marchiafava–Bignami kasalligi surunkali alkogolizmda va B guruhi vitaminlari tanqisligida qadoqsimon tananing markaziy qavatlari tanlab yemirilishi va nekrozi ('sendvich belgisi') bilan kechadi hamda diskonneksiya sindromlari, demensiya va dizartriya beradi."
+    },
+    "refs": ["corpus-callosum", "wm-body-of-corpus-callosum", "cca"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Corpus Callosum",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448209/"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-024",
+    "level": "expert",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "During an anterior interhemispheric transcallosal approach to remove a colloid cyst of the third ventricle at the foramen of Monro, the neurosurgeon makes a 1.5 cm longitudinal callosotomy in the anterior body of the corpus callosum. According to Hofer & Frahm's DTI map, why is a small (< 2 cm) anterior midbody callosotomy preferred over transecting the splenium?",
+      "uz": "Monro teshigidagi uchinchi qorincha kolloid kistasini olib tashlash uchun oldingi yarim sharlararo transkallozal yondashuvda neyroxirurg qadoqsimon tananing oldingi tana qismida 1.5 sm bo'ylama kesim qiladi. Hofer va Frahm DTI xaritasiga ko'ra, nima sababdan spleniumni kesishdan ko'ra oldingi tana qismidagi kichik (< 2 sm) kesim xavfsizroq?"
+    },
+    "options": [
+      {
+        "en": "A small anterior callosal incision crosses prefrontal/premotor fibres (regions I–II) and is clinically well tolerated when the fornices and pericallosal arteries are spared, whereas cutting the splenium (region V) risks permanent visual/reading disconnection (alexia)",
+        "uz": "Oldingi tana qismidagi kichik kesim prefrontal/premotor tolalarga (I–II sektorlar) to'g'ri keladi va fornix hamda perikallozal arteriyalar saqlansa og'ir nevrologik nuqson bermaydi; spleniumni (V sektor) kesish esa ko'rish va o'qish diskonneksiyasi (aleksiya) xavfini tug'diradi"
+      },
+      {
+        "en": "The anterior body of the corpus callosum contains no axons at all, whereas the splenium contains the corticospinal tract",
+        "uz": "Qadoqsimon tananing oldingi tana qismida umuman aksonlar bo'lmaydi, spleniumdan esa kortikospinal trakt o'tadi"
+      },
+      {
+        "en": "The splenium lies directly in front of the foramen of Monro, whereas the genu lies behind the pineal gland",
+        "uz": "Splenium Monro teshigining bevosita oldida, tizza esa epifizning orqasida joylashgan"
+      },
+      {
+        "en": "Cutting the anterior body transects the optic chiasm, whereas cutting the splenium opens the fourth ventricle",
+        "uz": "Oldingi tanani kesish ko'rish kesishmasini uzadi, spleniumni kesish esa IV qorinchani ochadi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "In the transcallosal route to the frontal horn and foramen of Monro (plates B1–B2), a < 2 cm callosotomy in the anterior body (Hofer & Frahm regions I–II) gives direct access to the septum pellucidum, Monro, and fornix columns without causing permanent disconnection syndromes, whereas posterior/splenial transection disconnects visual and language areas.",
+      "uz": "Oldingi transkallozal yondashuvda qadoqsimon tananing oldingi tana qismidagi (I–II sektorlar) < 2 sm kesim orqali frontal shox va Monro teshigiga kiriladi; fornix ustunlari va perikallozal arteriyalar asralsa, bu kesim doimiy diskonneksiya sindromi qoldirmaydi, splenium (V sektor) kesilishi esa ko'rish-til aloqasini uzadi."
+    },
+    "refs": ["corpus-callosum", "interventricular-foramen", "fornix-of-forebrain", "septum-of-telencephalon", "pericallosal-artery"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "Hofer & Frahm 2006, NeuroImage — Topography of the human corpus callosum revisited",
+        "url": "https://doi.org/10.1016/j.neuroimage.2006.05.044"
+      }
+    ]
+  },
+  {
+    "id": "q-callosum-025",
+    "level": "expert",
+    "topic": "callosum",
+    "type": "mcq",
+    "q": {
+      "en": "On the coronal basal ganglia plate at the commissural level (B2, MNI y = +1 mm), the anterior commissure crosses the midline just behind the columns of the fornix. Which three key basal-forebrain/limbic structures sit immediately adjacent to the anterior commissure at this exact plane (capping it dorsomedially, and lying directly beneath it ventromedially and ventrolaterally)?",
+      "uz": "Komissura darajasidagi koronal kesimda (B2 plastinkasi, MNI y = +1 mm) oldingi komissura fornix ustunlarining ortida o'rta chiziqni kesib o'tadi. Shu kesimda qaysi uchta muhim tuzilma oldingi komissuraga bevosita yondosh joylashgan (uning ustida, ostida medialda va ostida lateralroqda)?"
+    },
+    "options": [
+      {
+        "en": "Bed nucleus of the stria terminalis (BNST) capping it dorsally, ventral pallidum beneath it medially, and nucleus basalis of Meynert (Ch4) beneath it further laterally in the sublenticular substantia innominata",
+        "uz": "Ustida stria terminalis to'shak yadrosi (BNST), ostida medialroqda ventral pallidum va ostida lateralroqda (sublentikulyar substantia innominatada) Meynertning bazal yadrosi (Ch4)"
+      },
+      {
+        "en": "Subthalamic nucleus (STN) above it, red nucleus medially, and substantia nigra pars reticulata below it",
+        "uz": "Ustida subtalamik yadro (STN), medialda qizil yadro va ostida qora moddaning to'rsimon qismi"
+      },
+      {
+        "en": "Habenula above it, pineal gland medially, and pretectal area below it",
+        "uz": "Ustida habenula, medialda epifiz va ostida pretektal soha"
+      },
+      {
+        "en": "Dentate nucleus laterally, emboliform/globose nuclei in the middle, and fastigial nucleus medially",
+        "uz": "Lateralda tishsimon yadro, o'rtada tiqinsimon/sharsimon yadrolar va medialda chodirsimon yadro"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "At the commissural coronal level (plate B2), the anterior commissure is capped dorsomedially by the bed nucleus of the stria terminalis (BNST), while directly beneath it lie the ventral pallidum (limbic loop output) and, more laterally in the sublenticular substantia innominata beneath GPe, the cholinergic nucleus basalis of Meynert (Ch4).",
+      "uz": "B2 (komissura) koronal plastinkasida oldingi komissuraning ustida stria terminalis to'shak yadrosi (BNST), bevosita ostida esa ventral pallidum va undan lateralroqda — rangpar shar ostidagi sublentikulyar substantia innominatada xolinergik Meynert bazal yadrosi (Ch4) joylashgan."
+    },
+    "refs": ["anterior-commissure", "ac", "bnst", "vp", "nbm", "j-bst", "j-vp", "j-ch-4"],
+    "plate": "bg-commissural",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  }
+]

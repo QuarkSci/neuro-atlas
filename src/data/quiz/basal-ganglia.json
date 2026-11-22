@@ -1,0 +1,1027 @@
+[
+  {
+    "id": "q-basal-ganglia-001",
+    "level": "student",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Which nuclei together constitute the striatum (the main input stage of the basal ganglia)?",
+      "uz": "Qaysi yadrolar birgalikda striatumni (bazal yadrolarning asosiy kirish qismini) tashkil etadi?"
+    },
+    "options": [
+      {
+        "en": "Caudate nucleus, putamen, and nucleus accumbens (ventral striatum)",
+        "uz": "Dumli yadro (kaudat), qobiq (putamen) va accumbens yadrosi (ventral striatum)"
+      },
+      {
+        "en": "Globus pallidus externus (GPe), globus pallidus internus (GPi), and subthalamic nucleus (STN)",
+        "uz": "Tashqi rangpar shar (GPe), ichki rangpar shar (GPi) va subtalamik yadro (STN)"
+      },
+      {
+        "en": "Thalamus, hypothalamus, and epithalamus",
+        "uz": "Talamus, gipotalamus va epitalamus"
+      },
+      {
+        "en": "Red nucleus, substantia nigra, and periaqueductal grey",
+        "uz": "Qizil yadro, qora modda va periakveduktal kulrang modda"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The striatum consists of the dorsal striatum (caudate nucleus and putamen, connected across the anterior limb of the internal capsule by grey striatal cell bridges) and the ventral striatum (nucleus accumbens core and shell).",
+      "uz": "Striatum dorsal striatum (dumli yadro va qobiq — putamen; ularni ichki kapsula oldingi oyog'i orqali striatal hujayra ko'prikchalari bog'laydi) hamda ventral striatumdan (accumbens yadrosi o'zagi va qobig'i) iborat."
+    },
+    "refs": ["caudate-nucleus", "putamen", "cau-head", "put", "acb-core", "acb-shell", "str-br"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-002",
+    "level": "student",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Which two structures together form the lens-shaped lentiform (lenticular) nucleus?",
+      "uz": "Qaysi ikki tuzilma birgalikda yasmiqsimon yadroni (nucleus lentiformis) hosil qiladi?"
+    },
+    "options": [
+      {
+        "en": "Putamen (laterally) and globus pallidus — GPe and GPi (medially)",
+        "uz": "Qobiq — putamen (lateralda) va rangpar shar — GPe hamda GPi (medialda)"
+      },
+      {
+        "en": "Caudate nucleus (medially) and thalamus (laterally)",
+        "uz": "Dumli yadro (medialda) va talamus (lateralda)"
+      },
+      {
+        "en": "Claustrum (medially) and insular cortex (laterally)",
+        "uz": "Klaustrum (medialda) va orolcha po'stlog'i (lateralda)"
+      },
+      {
+        "en": "Subthalamic nucleus and substantia nigra",
+        "uz": "Subtalamik yadro va qora modda"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The lentiform nucleus is a wedge- or lens-shaped grey mass lateral to the internal capsule, composed of the putamen laterally and the globus pallidus (GPe and GPi) medially, separated by the lateral medullary lamina.",
+      "uz": "Yasmiqsimon yadro ichki kapsuladan lateralda joylashgan pona ko'rinishidagi kulrang massa bo'lib, lateralda putamen va medialda rangpar shardan (GPe va GPi) iborat; ularni lateral medullyar plastinka ajratib turadi."
+    },
+    "refs": ["putamen", "globus-pallidus", "put", "gpe", "gpi", "lml"],
+    "plate": "bg-pallidal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-003",
+    "level": "student",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Which white-matter sheet separates the caudate head and thalamus medially from the lentiform nucleus (putamen and globus pallidus) laterally?",
+      "uz": "Medial tomondagi kaudat boshi va talamusni lateral tomondagi yasmiqsimon yadrodan (putamen va rangpar shardan) ajratib turuvchi oq modda qatlami qaysi?"
+    },
+    "options": [
+      {
+        "en": "Internal capsule (anterior limb, genu, and posterior limb)",
+        "uz": "Ichki kapsula (oldingi oyog'i, tizzasi va orqa oyog'i)"
+      },
+      {
+        "en": "External capsule",
+        "uz": "Tashqi kapsula"
+      },
+      {
+        "en": "Extreme capsule",
+        "uz": "Eng tashqi kapsula"
+      },
+      {
+        "en": "Corpus callosum",
+        "uz": "Qadoqsimon tana"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On axial section (plate B5), the internal capsule forms a V-shaped boomerang ('>') opening laterally around the lentiform nucleus: its anterior limb separates the caudate head from the lentiform nucleus, and its posterior limb separates the thalamus from the lentiform nucleus.",
+      "uz": "Aksial kesimda (B5 plastinkasi) ichki kapsula lateralga ochilgan bumerang ('>') shaklida ko'rinadi: uning oldingi oyog'i kaudat boshini yasmiqsimon yadrodan, orqa oyog'i esa talamusni yasmiqsimon yadrodan ajratadi."
+    },
+    "refs": ["internal-capsule", "ic-al", "ic-g", "ic-pl", "caudate-nucleus", "thalamus", "putamen"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Internal Capsule",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK542181/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-004",
+    "level": "student",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Which neuron type accounts for approximately 95 % of all neurons in the striatum (caudate, putamen, and nucleus accumbens), and what is its neurotransmitter?",
+      "uz": "Striatumdagi (kaudat, putamen va accumbens) barcha neyronlarning ~95 % ini qaysi hujayralar tashkil qiladi va ularning neyromediatori nima?"
+    },
+    "options": [
+      {
+        "en": "GABAergic medium spiny neurons (MSNs)",
+        "uz": "GABAergik o'rta tikanli neyronlar (MSN)"
+      },
+      {
+        "en": "Glutamatergic giant pyramidal (Betz) neurons",
+        "uz": "Glutamatergik gigant piramidal (Bets) neyronlar"
+      },
+      {
+        "en": "Dopaminergic neuromelanin-containing neurons",
+        "uz": "Dofaminergik neyromelanin saqlovchi neyronlar"
+      },
+      {
+        "en": "Noradrenergic pigmented neurons",
+        "uz": "Noradrenergik pigmentli neyronlar"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "About 95 % of striatal neurons are inhibitory GABAergic medium spiny projection neurons (MSNs): D1/substance P/dynorphin MSNs initiate the direct pathway (→ GPi/SNr), while D2/enkephalin MSNs initiate the indirect pathway (→ GPe). The remaining ~5 % are cholinergic TANs and GABAergic interneurons.",
+      "uz": "Striatum neyronlarining ~95 % ini tormozlovchi GABAergik o'rta tikanli neyronlar (MSN) tashkil etadi: D1/P modda/dinorfin hujayralari to'g'ri yo'lni (→ GPi/SNr), D2/enkefalin hujayralari esa bilvosita yo'lni (→ GPe) boshlaydi."
+    },
+    "refs": ["putamen", "caudate-nucleus", "put", "cau-head"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "Purves, Neuroscience 2nd ed. — Modulation of movement by the basal ganglia (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10868/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-005",
+    "level": "student",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Which two nuclei form the principal inhibitory (GABAergic) output stage of the basal ganglia, holding the motor thalamus (VA/VL) under tonic inhibition?",
+      "uz": "Bazal yadrolarning asosiy tormozlovchi (GABAergik) chiqish bo'g'inini hosil qilib, harakat talamusini (VA/VL) doimiy tormozda ushlab turuvchi ikki yadro qaysi?"
+    },
+    "options": [
+      {
+        "en": "Globus pallidus internal segment (GPi) and substantia nigra pars reticulata (SNr)",
+        "uz": "Rangpar sharning ichki segmenti (GPi) va qora moddaning to'rsimon qismi (SNr)"
+      },
+      {
+        "en": "Globus pallidus external segment (GPe) and subthalamic nucleus (STN)",
+        "uz": "Rangpar sharning tashqi segmenti (GPe) va subtalamik yadro (STN)"
+      },
+      {
+        "en": "Caudate nucleus and putamen",
+        "uz": "Dumli yadro (kaudat) va qobiq (putamen)"
+      },
+      {
+        "en": "Substantia nigra pars compacta (SNc) and ventral tegmental area (VTA)",
+        "uz": "Qora moddaning zich qismi (SNc) va ventral tegmental soha (VTA)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "GPi and SNr are the main output nuclei of the basal ganglia. Their GABAergic neurons fire tonically at ~60–100 Hz to inhibit VA/VL thalamus (and superior colliculus/PPN); a movement is released when direct-pathway striatal input briefly pauses GPi/SNr firing.",
+      "uz": "GPi (ichki rangpar shar) va SNr (qora moddaning to'rsimon qismi) bazal yadrolarning asosiy chiqish yadrolari bo'lib, ~60–100 Gs chastotada doimiy GABAergik razryad berib VA/VL talamusni tormozlab turadi; to'g'ri yo'l ularni qisqa muddat to'xtatganda harakatga ruxsat beriladi."
+    },
+    "refs": ["globus-pallidus", "gpi", "snr", "j-snr", "th-va", "th-vl"],
+    "plate": "bg-subthalamic",
+    "sources": [
+      {
+        "title": "Purves, Neuroscience 2nd ed. — Modulation of movement by the basal ganglia (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10868/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-006",
+    "level": "student",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Which nucleus is the ONLY excitatory (glutamatergic) nucleus intrinsic to the basal ganglia core circuit?",
+      "uz": "Bazal yadrolar ichki zanjiridagi YAGONA qo'zg'atuvchi (glutamatergik) yadro qaysi?"
+    },
+    "options": [
+      {
+        "en": "Subthalamic nucleus (STN)",
+        "uz": "Subtalamik yadro (STN)"
+      },
+      {
+        "en": "Globus pallidus external segment (GPe)",
+        "uz": "Rangpar sharning tashqi segmenti (GPe)"
+      },
+      {
+        "en": "Globus pallidus internal segment (GPi)",
+        "uz": "Rangpar sharning ichki segmenti (GPi)"
+      },
+      {
+        "en": "Putamen",
+        "uz": "Qobiq (putamen)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Whereas the striatum, GPe, GPi, and SNr are all GABAergic (inhibitory), the lens-shaped subthalamic nucleus (STN) is glutamatergic and powerfully excites GPi/SNr (and GPe) to brake movement.",
+      "uz": "Striatum, GPe, GPi va SNr barchasi GABAergik (tormozlovchi) bo'lsa, yasmiqsimon subtalamik yadro (STN) bazal yadrolar o'zagidagi yagona glutamatergik (qo'zg'atuvchi) yadro bo'lib, GPi/SNr va GPe ni qo'zg'atadi."
+    },
+    "refs": ["subthalamic-nucleus", "j-stn", "stn"],
+    "plate": "bg-subthalamic",
+    "sources": [
+      {
+        "title": "Purves, Neuroscience 2nd ed. — Modulation of movement by the basal ganglia (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10868/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-007",
+    "level": "student",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Which midbrain nucleus supplies dopamine to the dorsal striatum (caudate and putamen) via the nigrostriatal pathway, and degenerates in Parkinson disease?",
+      "uz": "Nigrostriatal yo'l orqali dorsal striatumni (kaudat va putamenni) dofamin bilan ta'minlovchi va Parkinson kasalligida yemiriladigan o'rta miya yadrosi qaysi?"
+    },
+    "options": [
+      {
+        "en": "Substantia nigra pars compacta (SNc)",
+        "uz": "Qora moddaning zich qismi (substantia nigra pars compacta, SNc)"
+      },
+      {
+        "en": "Substantia nigra pars reticulata (SNr)",
+        "uz": "Qora moddaning to'rsimon qismi (substantia nigra pars reticulata, SNr)"
+      },
+      {
+        "en": "Red nucleus",
+        "uz": "Qizil yadro (nucleus ruber)"
+      },
+      {
+        "en": "Inferior olivary nucleus",
+        "uz": "Pastki zaytun yadrosi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Dopaminergic (neuromelanin-containing) neurons of the substantia nigra pars compacta (SNc) project to the caudate and putamen, exciting D1 direct-pathway MSNs and inhibiting D2 indirect-pathway MSNs. Loss of >60–80 % of SNc neurons produces Parkinson disease.",
+      "uz": "Qora moddaning zich qismi (SNc) dofaminergik (neyromelaninli) neyronlardan iborat bo'lib, kaudat va putamenga nigrostriatal yo'lni beradi (D1 to'g'ri yo'lni qo'zg'atadi, D2 bilvosita yo'lni tormozlaydi). Neyronlarining >60–80 % yo'qolishi Parkinson kasalligini chaqiradi."
+    },
+    "refs": ["substantia-nigra", "j-snc", "snc", "put"],
+    "plate": "bg-subthalamic",
+    "sources": [
+      {
+        "title": "Purves, Neuroscience 2nd ed. — Modulation of movement by the basal ganglia (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10868/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-008",
+    "level": "student",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Starting from the lateral edge of the putamen and moving laterally toward the lateral sulcus, what is the correct four-layer sequence ('layer cake') on coronal and axial sections?",
+      "uz": "Koronal va aksial kesimlarda putamenning lateral chetidan tashqariga — lateral egat tomonga qarab ketma-ket joylashgan to'rt qatlam ('qatlamli pirog') tartibi qanday?"
+    },
+    "options": [
+      {
+        "en": "External capsule → claustrum → extreme capsule → insular cortex",
+        "uz": "Tashqi kapsula → klaustrum → eng tashqi kapsula → orolcha po'stlog'i (insula)"
+      },
+      {
+        "en": "Internal capsule → claustrum → external capsule → insular cortex",
+        "uz": "Ichki kapsula → klaustrum → tashqi kapsula → orolcha po'stlog'i"
+      },
+      {
+        "en": "Lateral medullary lamina → GPe → medial medullary lamina → GPi",
+        "uz": "Lateral medullyar plastinka → GPe → medial medullyar plastinka → GPi"
+      },
+      {
+        "en": "Tapetum → optic radiation → internal capsule → thalamus",
+        "uz": "Tapetum → ko'rish radiatsiyasi → ichki kapsula → talamus"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Lateral to the putamen sit four thin concentric layers in strict order: the white external capsule, the grey sheet of the claustrum, the white extreme capsule, and the cortex of the insula buried in the lateral fissure (plates B1–B5).",
+      "uz": "Putamendan lateral tomonda to'rtta qatlam qat'iy tartibda yotadi: oq tashqi kapsula (capsula externa), yupqa kulrang klaustrum, oq eng tashqi kapsula (capsula extrema) va lateral egat tubidagi orolcha po'stlog'i (insula)."
+    },
+    "refs": ["ec", "cl", "xc", "ins", "insula", "wm-external-capsule"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-009",
+    "level": "student",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "What is the main functional contrast between the 'direct' and 'indirect' pathways of the basal ganglia?",
+      "uz": "Bazal yadrolarning 'to'g'ri' (direct) va 'bilvosita' (indirect) yo'llari orasidagi asosiy funksional farq nimada?"
+    },
+    "options": [
+      {
+        "en": "The direct pathway (D1 → inhibits GPi/SNr) disinhibits the thalamus to initiate/release movement; the indirect pathway (D2 → inhibits GPe → disinhibits STN → excites GPi/SNr) suppresses unwanted movement",
+        "uz": "To'g'ri yo'l (D1 → GPi/SNr ni tormozlaydi) talamusni tormozdan chiqarib harakatni boshlaydi; bilvosita yo'l (D2 → GPe ni tormozlaydi → STN qo'zg'aladi → GPi/SNr kuchayadi) keraksiz harakatni to'xtatadi"
+      },
+      {
+        "en": "The direct pathway descends directly to spinal α-motor neurons; the indirect pathway projects to the cerebellum",
+        "uz": "To'g'ri yo'l bevosita orqa miya motoneyronlariga tushadi; bilvosita yo'l esa miyachaga boradi"
+      },
+      {
+        "en": "The direct pathway uses glutamate in the striatum; the indirect pathway uses acetylcholine in the STN",
+        "uz": "To'g'ri yo'l striatumda glutamat ishlatadi; bilvosita yo'l esa STNda atsetilxolin ishlatadi"
+      },
+      {
+        "en": "Both pathways excite the GPi to block all cortical activity during sleep",
+        "uz": "Ikkala yo'l ham uyqu vaqtida GPi ni qo'zg'atib, po'stloq faolligini to'liq bloklaydi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Direct-pathway MSNs (D1 receptors) directly inhibit GPi/SNr, pausing their tonic inhibition of VA/VL thalamus ('Go'). Indirect-pathway MSNs (D2 receptors) inhibit GPe, which disinhibits the excitatory STN, driving GPi/SNr to inhibit the thalamus ('No-Go').",
+      "uz": "To'g'ri yo'l (D1 retseptorli MSN'lar) GPi/SNr ni bevosita tormozlab, talamusni tormozdan ozod qiladi va tanlangan harakatga yo'l ochadi. Bilvosita yo'l (D2 retseptorli MSN'lar) GPe ni tormozlaydi, natijada STN tormozdan chiqib GPi/SNr ni qo'zg'atadi va istalmagan harakatni bostiradi."
+    },
+    "refs": ["put", "gpe", "gpi", "stn", "snr", "th-va", "th-vl"],
+    "plate": "bg-subthalamic",
+    "sources": [
+      {
+        "title": "Purves, Neuroscience 2nd ed. — Modulation of movement by the basal ganglia (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10868/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-010",
+    "level": "student",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Which dramatic movement disorder is classically caused by a small lacunar stroke of the subthalamic nucleus (STN)?",
+      "uz": "Subtalamik yadroning (STN) kichik lakunar infarkti klassik ravishda qaysi harakat buzilishini keltirib chiqaradi?"
+    },
+    "options": [
+      {
+        "en": "Contralateral hemiballismus (violent flinging movements of the opposite limbs)",
+        "uz": "Qarama-qarshi gemiballizm (qarama-qarshi qo'l va oyoqning keskin otilib ketuvchi harakatlari)"
+      },
+      {
+        "en": "Ipsilateral resting pill-rolling tremor and bradykinesia",
+        "uz": "O'sha tomonda tinch holat tremori va bradikineziya"
+      },
+      {
+        "en": "Bilateral spastic paraplegia with extensor plantar responses",
+        "uz": "Babinski belgisi bilan ikki tomonlama spastik paraplegiya"
+      },
+      {
+        "en": "Ipsilateral scanning dysarthria and truncal titubation",
+        "uz": "O'sha tomonda skandirlangan nutq va gavda tebranishi (titubatsiya)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Loss of the excitatory glutamatergic drive from the STN to the ipsilateral GPi drops GPi inhibitory output, releasing the motor thalamus (VA/VL) and producing violent, involuntary flinging movements of the contralateral limbs (hemiballismus).",
+      "uz": "STN zararlanganda uning GPi ga beradigan qo'zg'atuvchi (glutamatergik) ta'siri yo'qoladi; natijada GPi tormozi susayib, harakat talamusi haddan tashqari faollashadi va qarama-qarshi oyoq-qo'llarda keskin otilib ketuvchi harakatlar — gemiballizm paydo bo'ladi."
+    },
+    "refs": ["subthalamic-nucleus", "j-stn", "stn", "gpi"],
+    "plate": "bg-subthalamic",
+    "sources": [
+      {
+        "title": "Purves, Neuroscience 2nd ed. — Modulation of movement by the basal ganglia (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10868/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-011",
+    "level": "resident",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "By which two white-matter tracts do pallidothalamic fibres leave the internal segment of the globus pallidus (GPi) to converge in Forel field H (prerubral field) and ascend as the thalamic fasciculus (H1) to VA/VLa thalamus?",
+      "uz": "Ichki rangpar shardan (GPi) chiquvchi pallidotalamik tolalar qaysi ikki yo'l orqali Forel H maydonida birlashib, talamik tutam (H1) sifatida VA/VLa talamusga ko'tariladi?"
+    },
+    "options": [
+      {
+        "en": "Ansa lenticularis (looping ventrally around the internal capsule) and lenticular fasciculus / Forel field H2 (piercing the capsule straight medially between zona incerta and STN)",
+        "uz": "Ansa lenticularis (ichki kapsulaning pastki chetini aylanib o'tadi) va yasmiqsimon tutam / Forel H2 maydoni (kapsulani teshib o'tib, zona incerta bilan STN orasidan boradi)"
+      },
+      {
+        "en": "Stria terminalis (curving along the caudothalamic groove) and stria medullaris thalami (to the habenula)",
+        "uz": "Stria terminalis (kaudotalamik egat bo'ylab) va stria medullaris thalami (habenulaga)"
+      },
+      {
+        "en": "Mammillothalamic tract and central tegmental tract",
+        "uz": "Mamillotalamik trakt va markaziy tegmental trakt"
+      },
+      {
+        "en": "Superior cerebellar peduncle and medial longitudinal fasciculus",
+        "uz": "Yuqori miyacha oyoqchasi va medial bo'ylama tutam"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plates B3 and B4, GPi outflow takes two paths: ventral/lateral fibres loop under the internal capsule as the ansa lenticularis, while dorsal fibres pierce the capsule as the lenticular fasciculus (Forel field H2, between zona incerta above and STN below). Both meet in the prerubral field (H) and turn dorsolaterally as the thalamic fasciculus (H1, joined by dentatothalamic fibres) into VA/VL thalamus.",
+      "uz": "B3 va B4 plastinkalarida GPi chiqishi ikki yo'l bilan ketadi: ventral qismdan ansa lenticularis ichki kapsula ostidan aylanib o'tadi, dorsal qismdan esa yasmiqsimon tutam (Forel H2 maydoni) kapsulani teshib, zona incerta va STN orasidan o'tadi. Ikkalasi Forel H maydonida uchrashib, talamik tutam (H1) bo'lib VA/VL talamusga ko'tariladi."
+    },
+    "refs": ["ansa", "lf", "tf", "forel-h", "zi", "stn", "gpi"],
+    "plate": "bg-subthalamic",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-012",
+    "level": "resident",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "On the coronal subthalamic plate (B4, MNI y = −13 mm, 'the DBS level'), how are the four layers of the subthalamus stacked from dorsal (just beneath the thalamus) to ventral (above the substantia nigra and cerebral peduncle)?",
+      "uz": "Subtalamik koronal kesimda (B4 plastinkasi, MNI y = −13 mm — 'DBS darajasi') talamus ostidan pastga — miya oyoqchasi va qora moddagacha to'rtta qavat qanday 'sendvich' tartibida taxlangan?"
+    },
+    "options": [
+      {
+        "en": "Thalamic fasciculus (H1) → zona incerta → lenticular fasciculus (H2) → subthalamic nucleus (STN) (with SNc/SNr and crus cerebri beneath STN)",
+        "uz": "Talamik tutam (H1) → zona incerta → yasmiqsimon tutam (H2) → subtalamik yadro (STN) (uning ostida esa SNc/SNr va miya oyoqchasi)"
+      },
+      {
+        "en": "Subthalamic nucleus (STN) → thalamic fasciculus (H1) → substantia nigra → zona incerta",
+        "uz": "Subtalamik yadro (STN) → talamik tutam (H1) → qora modda → zona incerta"
+      },
+      {
+        "en": "External capsule → claustrum → extreme capsule → insula",
+        "uz": "Tashqi kapsula → klaustrum → eng tashqi kapsula → orolcha"
+      },
+      {
+        "en": "Corpus callosum → lateral ventricle → fornix → third ventricle",
+        "uz": "Qadoqsimon tana → yon qorincha → fornix → uchinchi qorincha"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "At the subthalamic level (plate B4), directly beneath the motor thalamus (VL) from dorsal to ventral lie: (1) thalamic fasciculus (Forel H1), (2) zona incerta, (3) lenticular fasciculus (Forel H2), and (4) the lens-shaped subthalamic nucleus (STN) resting on the dorsomedial crus cerebri above the substantia nigra (SNc over SNr).",
+      "uz": "B4 plastinkasida harakat talamusi (VL) ostida yuqoridan pastga 'sendvich' kabi joylashgan: (1) talamik tutam (H1), (2) zona incerta, (3) yasmiqsimon tutam (H2) va (4) miya oyoqchasi ustidagi subtalamik yadro (STN); STN ostida esa qora modda (SNc va SNr) yotadi."
+    },
+    "refs": ["tf", "zi", "lf", "stn", "snc", "snr", "crus", "th-vl"],
+    "plate": "bg-subthalamic",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-013",
+    "level": "resident",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "What is the 'hyperdirect pathway' of the basal ganglia (Nambu et al. 2002), and what is its physiological role?",
+      "uz": "Bazal yadrolarning 'giperto'g'ri yo'li' (hyperdirect pathway — Nambu va b., 2002) qayerdan qayerga boradi va qanday vazifani bajaradi?"
+    },
+    "options": [
+      {
+        "en": "Direct monosynaptic glutamatergic projection from motor/prefrontal cortex (M1, SMA, IFG) to the subthalamic nucleus (STN), which rapidly excites GPi/SNr as a fast global 'brake' to stop or cancel action",
+        "uz": "Harakat va prefrontal po'stloqdan (M1, SMA, IFG) striatumni chetlab to'g'ridan-to'g'ri subtalamik yadroga (STN) boruvchi glutamatergik yo'l bo'lib, GPi/SNr ni tez qo'zg'atadi va harakatni to'xtatish uchun tezkor 'tormoz' vazifasini o'taydi"
+      },
+      {
+        "en": "Direct dopaminergic projection from the VTA to the primary visual cortex",
+        "uz": "VTAdan birlamchi ko'rish po'stlog'iga boruvchi to'g'ridan-to'g'ri dofaminergik yo'l"
+      },
+      {
+        "en": "Direct GABAergic projection from the caudate tail to the spinal ventral horn",
+        "uz": "Kaudat dumidan orqa miya oldingi shoxiga boruvchi to'g'ridan-to'g'ri GABAergik yo'l"
+      },
+      {
+        "en": "Direct cholinergic projection from the putamen to the cerebellar Purkinje cells",
+        "uz": "Putamendan miyacha Purkinje hujayralariga boruvchi xolinergik yo'l"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Nambu et al. (2002) demonstrated that corticosubthalamic axons (from M1, SMA, pre-SMA, and right IFG) bypass the striatum to excite the STN directly; because conduction is faster than through the striatum, this hyperdirect pathway briefly suppresses competing motor programs or halts an action globally.",
+      "uz": "Nambu va hammualliflar (2002) ko'rsatganidek, M1, SMA va IFG po'stlog'idan chiquvchi tolalar striatumni chetlab o'tib, to'g'ridan-to'g'ri STN ni qo'zg'atadi; bu 'giperto'g'ri yo'l' GPi/SNr orqali talamusni eng tez tormozlaydi va harakatni darhol to'xtatuvchi 'tormoz' bo'lib xizmat qiladi."
+    },
+    "refs": ["stn", "j-stn", "gpi", "precentral-gyrus", "inferior-frontal-gyrus"],
+    "plate": "bg-subthalamic",
+    "sources": [
+      {
+        "title": "Nambu, Tokuno & Takada 2002, Neurosci Res — Functional significance of the cortico-subthalamo-pallidal 'hyperdirect' pathway",
+        "url": "https://doi.org/10.1016/S0168-0102(02)00027-5"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-014",
+    "level": "resident",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "How do the nucleus accumbens core (AcbL) and shell (AcbM) differ in their anatomical connections and roles in reward and addiction (plate B1)?",
+      "uz": "Accumbens yadrosining o'zagi (core, AcbL) va qobig'i (shell, AcbM) anatomik bog'lanishlari hamda mukofot va giyohvandlikdagi roli bo'yicha qanday farq qiladi (B1 plastinkasi)?"
+    },
+    "options": [
+      {
+        "en": "The lateral core connects with orbitofrontal/cingulate cortex and ventral pallidum → MD thalamus to drive cue-triggered goal-directed approach; the medial/ventral shell resembles extended amygdala (projecting to LHA, VTA, VP), holds hedonic 'liking' hotspots, and shows the largest dopamine surge to addictive drugs",
+        "uz": "Lateral o'zak (core) orbitofrontal/belbog' po'stlog'i va ventral pallidum → MD talamus bilan bog'lanib maqsadli harakatni quvvatlaydi; medial/ventral qobiq (shell) esa LHA, VTA va VP ga chiqish berib, hedonik 'yoqtirish' nuqtalarini saqlaydi va giyohvand moddalarga eng kuchli dofamin otilishini ko'rsatadi"
+      },
+      {
+        "en": "The core is purely motor cortex; the shell is purely primary auditory cortex",
+        "uz": "O'zak faqat harakat po'stlog'i, qobiq esa faqat birlamchi eshitish po'stlog'idir"
+      },
+      {
+        "en": "The core projects down the spinal cord; the shell projects through the optic chiasm",
+        "uz": "O'zak orqa miyaga tushadi, qobiq esa ko'rish kesishmasidan o'tadi"
+      },
+      {
+        "en": "The core uses serotonin only; the shell uses noradrenaline from the locus coeruleus only",
+        "uz": "O'zak faqat serotonin, qobiq esa faqat ko'k dog'dan noradrenalin oladi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plate B1, the nucleus accumbens has a lateral core (AcbL, continuous with caudate/putamen, projecting via VP to MD thalamus for Pavlovian cue-driven action) and a medial/ventral crescentic shell (AcbM, projecting to LHA, VTA, and VP, containing opioid/endocannabinoid hedonic hotspots and exhibiting the largest dopamine surge to drugs of abuse).",
+      "uz": "B1 plastinkasida accumbens yadrosi lateral o'zak (core — AcbL: VP → MD talamus orqali signalga javoban maqsadli harakatni boshqaradi) hamda medial/ventral o'roqsimon qobiqqa (shell — AcbM: LHA, VTA va VP bilan bog'langan, hedonik 'yoqtirish' nuqtalari va giyohvand moddalarga eng kuchli dofamin otilishi joyi) bo'linadi."
+    },
+    "refs": ["acb-core", "acb-shell", "j-acbl", "j-acbm", "vp", "j-vp"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "Haber & Knutson 2010, Neuropsychopharmacology — The reward circuit: linking primate anatomy and human imaging",
+        "url": "https://doi.org/10.1038/npp.2009.129"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-015",
+    "level": "resident",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "On the axial plate of the internal capsule (B5, MNI z = +4 mm), what passes through each of its four parts from anterior to posterior (anterior limb, genu, posterior limb, and retrolenticular part)?",
+      "uz": "Ichki kapsulaning aksial kesimida (B5 plastinkasi, MNI z = +4 mm) oldindan orqaga uning to'rt qismidan (oldingi oyoq, tizza, orqa oyoq va retrolentikulyar qism) qaysi tolalar o'tadi?"
+    },
+    "options": [
+      {
+        "en": "Anterior limb: frontopontine & anterior thalamic (MD/anterior → prefrontal) radiation; Genu: corticobulbar (face/head); Posterior limb: corticospinal (arm anterior → leg posterior) & superior thalamic radiation (VPL/VPM → S1); Retrolenticular: optic radiation (LGN → V1)",
+        "uz": "Oldingi oyoq: frontopontin va oldingi talamik radiatsiya; Tizza: kortikobulbar (yuz/bosh); Orqa oyoq: kortikospinal (qo'l oldinda → oyoq orqada) va yuqori talamik sezgi radiatsiyasi (VPL/VPM → S1); Retrolentikulyar: ko'rish radiatsiyasi (LGN → V1)"
+      },
+      {
+        "en": "Anterior limb: optic radiation; Genu: auditory radiation; Posterior limb: olfactory tract; Retrolenticular: corticospinal tract",
+        "uz": "Oldingi oyoq: ko'rish radiatsiyasi; Tizza: eshitish radiatsiyasi; Orqa oyoq: hidlov trakti; Retrolentikulyar: kortikospinal trakt"
+      },
+      {
+        "en": "Anterior limb: corticospinal leg fibres; Genu: spinothalamic tract; Posterior limb: frontopontine fibres; Retrolenticular: fornix",
+        "uz": "Oldingi oyoq: oyoq harakat tolalari; Tizza: spinotalamik trakt; Orqa oyoq: frontopontin tolalar; Retrolentikulyar: fornix"
+      },
+      {
+        "en": "All four parts carry only commissural fibres between the two putamina",
+        "uz": "To'rtala qism ham faqat ikki putamen orasidagi komissural tolalarni o'tkazadi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "From front to back in the internal capsule (plate B5): the anterior limb (between caudate head and lentiform) carries frontopontine and thalamo-prefrontal fibres; the genu (at the foramen of Monro) carries corticobulbar fibres; the posterior limb (between thalamus and lentiform) carries corticospinal (arm → trunk → leg) and thalamocortical somatosensory fibres; the retrolenticular (and sublenticular) parts carry the optic (and auditory) radiations.",
+      "uz": "B5 aksial plastinkasida ichki kapsula qismlari: oldingi oyoq — frontopontin va oldingi talamik (MD → prefrontal) radiatsiya; tizza — kortikobulbar tolalar (yuz, til, halqum); orqa oyoq — kortikospinal (qo'l oldinda → oyoq orqada) va yuqori talamik sezgi radiatsiyasi (VPL/VPM → S1); retrolentikulyar qism — ko'rish radiatsiyasi (LGN → V1)."
+    },
+    "refs": ["ic-al", "ic-g", "ic-pl", "cst-ic", "tcr", "ic-rl", "internal-capsule"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Internal Capsule",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK542181/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-016",
+    "level": "resident",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Which subregion of the striatum loses dopaminergic innervation earliest in Parkinson disease (producing the 'comma → full stop' transition on DaT-SPECT imaging), and why?",
+      "uz": "Parkinson kasalligida striatumning qaysi qismida dofamin eng birinchi yo'qoladi (DaT-SPECT tasvirida 'vergul → nuqta' o'zgarishini beradi)?"
+    },
+    "options": [
+      {
+        "en": "The dorsolateral (postcommissural) putamen — the sensorimotor striatum receiving M1/S1/SMA input",
+        "uz": "Dorsolateral (komissuradan keyingi) putamen — M1, S1 va SMA po'stlog'idan kirish oluvchi sensomotor striatum"
+      },
+      {
+        "en": "The medial shell of the nucleus accumbens — the limbic striatum receiving VTA input",
+        "uz": "Accumbens yadrosining medial qobig'i — VTAdan kirish oluvchi limbik striatum"
+      },
+      {
+        "en": "The tip of the caudate tail in the roof of the temporal horn — the visual striatum",
+        "uz": "Chakka shoxi tomidagi kaudat dumi — ko'rish striatumi"
+      },
+      {
+        "en": "The bed nucleus of the stria terminalis (BNST)",
+        "uz": "Stria terminalisning to'shak yadrosi (BNST)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "In Parkinson disease, ventrolateral SNc neurons projecting to the dorsolateral (postcommissural, sensorimotor) putamen degenerate first. On DaT-SPECT, normal comma-shaped striatal uptake loses its posterior tail (putamen), leaving a round 'full stop' over the relatively preserved caudate head.",
+      "uz": "Parkinson kasalligida SNc ning ventrolateral qismi eng avval yemirilib, dofamin birinchi bo'lib sensomotor striatumda — dorsolateral (komissuradan keyingi) putamenda yo'qoladi; shu sababli DaT-SPECTda normal 'vergul' shakli kaudat boshidagi 'nuqta'ga aylanib qoladi."
+    },
+    "refs": ["putamen", "put", "snc", "j-snc", "cau-head"],
+    "plate": "bg-pallidal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-017",
+    "level": "resident",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "In Huntington disease, which striatal neuron population degenerates earliest to produce the initial hyperkinetic chorea, and what characteristic ventricular shape appears on coronal/axial MRI (plate B1)?",
+      "uz": "Huntington kasalligida dastlabki giperkinetik xoreyani keltirib chiqaruvchi qaysi striatal neyronlar eng avval nobud bo'ladi va MRTda (B1 plastinkasi) frontal shoxlar qanday shakl oladi?"
+    },
+    "options": [
+      {
+        "en": "Indirect-pathway D2/enkephalin MSNs of the caudate head die first (disinhibiting GPe → suppressing STN/GPi → chorea), flattening the lateral ventricular wall into 'boxcar' frontal horns",
+        "uz": "Kaudat boshidagi bilvosita yo'lning D2/enkefalin MSN'lari birinchi nobud bo'ladi (GPe ortiqcha tormozlanib, STN va GPi susayadi → xoreya); kaudat boshi yassilanib frontal shoxlar 'quti' (boxcar) shaklini oladi"
+      },
+      {
+        "en": "Direct-pathway D1/substance P neurons of the STN die first, causing aqueductal stenosis",
+        "uz": "STNdagi to'g'ri yo'l D1/P modda neyronlari birinchi nobud bo'lib, suv yo'li stenozini beradi"
+      },
+      {
+        "en": "Cholinergic neurons of the red nucleus die first, causing colpocephaly of the occipital horns",
+        "uz": "Qizil yadroning xolinergik neyronlari birinchi nobud bo'lib, orqa shoxlar kolpotsefaliyasini beradi"
+      },
+      {
+        "en": "Purkinje cells of the cerebellar vermis die first, causing fourth-ventricular cyst formation",
+        "uz": "Miyacha chuvalchangining Purkinje hujayralari birinchi nobud bo'lib, IV qorincha kistasini beradi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "In Huntington disease (HTT CAG repeat expansion), indirect-pathway (D2/enkephalin) MSNs of the caudate head die earliest: GPe is over-inhibited, STN is under-driven, and GPi inhibitory output falls, producing chorea (later D1 MSN loss leads to rigidity/akinesia). Atrophy of the caudate head abolishes its convex bulge into the frontal horn, creating 'boxcar' ventricles with an increased bicaudate ratio (plate B1).",
+      "uz": "Huntington kasalligida kaudat boshidagi bilvosita yo'l (D2/enkefalin) MSN'lari eng avval nobud bo'ladi → GPe ortiqcha tormozlanadi → STN kam qo'zg'aladi → GPi chiqishi pasayib xoreya yuzaga keladi. Kaudat boshi atrofiyasi tufayli MRTda (B1 plastinkasi) frontal shoxlar 'quti' (boxcar) shaklini oladi."
+    },
+    "refs": ["caudate-nucleus", "cau-head", "lv", "gpe", "stn", "gpi"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "Purves, Neuroscience 2nd ed. — Modulation of movement by the basal ganglia (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10868/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-018",
+    "level": "resident",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "How are the striosome (patch) and matrix compartments of the striatum organized, and what are the two functional cell classes of the external globus pallidus (GPe)?",
+      "uz": "Striatumning striosoma (yamoq) va matriks bo'lmalari qanday tuzilgan hamda tashqi rangpar sharning (GPe) ikki xil hujayra sinfi qaysilar?"
+    },
+    "options": [
+      {
+        "en": "Striosomes receive limbic cortical input and project directly to SNc dopamine neurons, while the surrounding matrix receives sensorimotor/associative input and projects to GPe/GPi/SNr; GPe contains prototypic (parvalbumin+, → STN/GPi) and arkypallidal (FoxP2+, → back to striatum as a 'stop' signal) GABAergic neurons",
+        "uz": "Striosomalar limbik kirish olib SNc ga proyeksiya beradi, matriks esa sensomotor/assotsiativ kirish olib GPe/GPi/SNr ga boradi; GPe da prototipik (parvalbumin+, → STN/GPi) va arkipallidal (FoxP2+, faqat striatumga qaytuvchi 'to'xta' signali) hujayralar bor"
+      },
+      {
+        "en": "Striosomes are pure white-matter tracts and matrix is cerebrospinal fluid; GPe contains only glutamatergic granule cells",
+        "uz": "Striosomalar oq modda traktlari, matriks esa likvor; GPe da faqat glutamatergik donador hujayralar bor"
+      },
+      {
+        "en": "Striosomes project to the spinal cord and matrix projects to the retina; GPe contains Betz and Purkinje cells",
+        "uz": "Striosomalar orqa miyaga, matriks to'r pardaga boradi; GPe da Bets va Purkinje hujayralari bor"
+      },
+      {
+        "en": "Striosomes and matrix are layers of the cerebellar cortex; GPe cells secrete melatonin and vasopressin",
+        "uz": "Striosoma va matriks miyacha po'stlog'i qavatlari; GPe hujayralari melatonin va vazopressin ajratadi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "As detailed in BASAL_STRUCTURES (cau-head and gpe), striatal MSNs are organized into limbic-recipient striosomes (projecting to SNc) embedded in a sensorimotor/associative matrix (projecting to GPe/GPi/SNr). In GPe, ~2/3 of neurons are parvalbumin+ prototypic cells projecting to STN and GPi/SNr, whereas FoxP2+ arkypallidal cells project exclusively back to the striatum to cancel evolving actions (Mallet 2012/2016).",
+      "uz": "Striatum MSN'lari matriks ichidagi striosomalardan (limbik kirish olib SNc ga boradi; matriks esa sensomotor/assotsiativ kirish olib GPe/GPi/SNr ga boradi) iborat. GPe ichida esa ikki xil GABAergik hujayra bor: prototipik (≈2/3, parvalbumin+, STN va chiqish yadrolariga boradi) hamda arkipallidal (FoxP2+, faqat striatumga qaytib 'to'xta' signalini beradi)."
+    },
+    "refs": ["cau-head", "gpe", "put", "snc", "stn"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-019",
+    "level": "resident",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Which perforating arteries supply (1) the anteromedial caudate head, anterior limb of the internal capsule, and nucleus accumbens versus (2) the putamen and lateral globus pallidus (the commonest site of hypertensive intracerebral haemorrhage)?",
+      "uz": "Qaysi perforant arteriyalar (1) kaudat boshining anteromedial qismi, ichki kapsula oldingi oyog'i va accumbens yadrosini, (2) putamen va tashqi rangpar sharni (gipertonik qon quyilishining eng ko'p joyini) qon bilan ta'minlaydi?"
+    },
+    "options": [
+      {
+        "en": "(1) Recurrent artery of Heubner (and medial lenticulostriate branches of ACA A1/A2); (2) Lateral lenticulostriate arteries from the M1 segment of the middle cerebral artery",
+        "uz": "(1) Heubner qaytuvchi arteriyasi (va ACA A1/A2 medial lentikulostriar shoxlari); (2) O'rta miya arteriyasi M1 segmentidan chiquvchi lateral lentikulostriar arteriyalar"
+      },
+      {
+        "en": "(1) Posterior inferior cerebellar artery (PICA); (2) Anterior spinal artery",
+        "uz": "(1) Orqa pastki miyacha arteriyasi (PICA); (2) Oldingi orqa miya arteriyasi"
+      },
+      {
+        "en": "(1) Superior cerebellar artery (SCA); (2) Labyrinthine artery",
+        "uz": "(1) Yuqori miyacha arteriyasi (SCA); (2) Labirint arteriyasi"
+      },
+      {
+        "en": "(1) Ophthalmic artery; (2) Middle meningeal artery",
+        "uz": "(1) Ko'z arteriyasi; (2) O'rta parda arteriyasi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plates B1–B2, the recurrent artery of Heubner (from A1/A2 ACA) supplies the anteromedial caudate head, anterior limb, and nucleus accumbens (infarction causes abulia/apathy rather than weakness). The lateral lenticulostriate perforators (from M1 MCA) supply the putamen, GPe, and dorsal internal capsule, and are the site of ~35 % of hypertensive intracerebral haemorrhages.",
+      "uz": "Heubner qaytuvchi arteriyasi (ACA A1/A2 tutashuvidan) kaudat boshining anteromedial qismi, oldingi oyoq va accumbensni ta'minlaydi (infarkti kuchsizlik emas, abuliya va apatiya beradi). O'rta miya arteriyasi (M1) dan chiquvchi lateral lentikulostriar arteriyalar esa putamen, GPe va kapsulaning dorsal qismini ta'minlaydi hamda gipertonik miya ichi qon quyilishining (~35 %) eng ko'p uchraydigan joyidir."
+    },
+    "refs": ["cau-head", "ic-al", "acb-core", "put", "gpe", "anterior-cerebral-artery", "trunk-of-right-middle-cerebral-artery"],
+    "plate": "bg-accumbens",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-020",
+    "level": "resident",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "Why is the globus pallidus selectively damaged in carbon monoxide (CO) poisoning or global hypoxia, and which metabolic/toxic disorders produce symmetric basal ganglia lesions in the putamen or globus pallidus?",
+      "uz": "Nima uchun is gazi (CO) bilan zaharlanishda yoki gipoksiyada rangpar shar (globus pallidus) tanlab nekrozga uchraydi, shuningdek putamen va pallidum yana qaysi metabolik/toksik kasalliklarda simmetrik zararlanadi?"
+    },
+    "options": [
+      {
+        "en": "The globus pallidus has high iron content and a vascular border-zone supply (causing bilateral pallidal necrosis and delayed parkinsonism after CO poisoning, and T1 hyperintensity in manganese toxicity / kernicterus); the putamen is targeted by Wilson disease (copper) and methanol toxicity",
+        "uz": "Rangpar sharda temir ko'p va qon ta'minoti chegara zonasida joylashgan (CO zaharlanishida ikki tomonlama pallidar nekroz, marganets zaharlanishi va yadro sariqligida zararlanish beradi); putamen esa Vilson kasalligi (mis) va metanol zaharlanishida nishonga olinadi"
+      },
+      {
+        "en": "The globus pallidus lacks capillaries entirely and is the sole site of vitamin B12 subacute combined degeneration",
+        "uz": "Rangpar sharda kapillyarlar umuman yo'q va u B12 tanqisligidagi subakut qo'shma degeneratsiyaning yagona joyidir"
+      },
+      {
+        "en": "CO poisoning selectively calcifies the claustrum while methanol only affects the pineal gland",
+        "uz": "CO zaharlanishi faqat klaustrumni kalsinatlaydi, metanol esa faqat epifizni zararlaydi"
+      },
+      {
+        "en": "Wilson disease and CO poisoning affect only the primary visual cortex (V1)",
+        "uz": "Vilson kasalligi va is gazi faqat birlamchi ko'rish po'stlog'ini (V1) zararlaydi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "As noted in plates B2 and B3, the globus pallidus is iron-rich and sits at an arterial border zone (lenticulostriate vs anterior choroidal): CO poisoning/hypoxia causes bilateral pallidal T2 hyperintensity and necrosis; unconjugated bilirubin (kernicterus) and manganese (liver failure/TPN) also target GP. The putamen is classically damaged in Wilson disease (copper), methanol poisoning (formic acid), and mitochondrial Leigh disease.",
+      "uz": "B2 va B3 plastinkalarida ko'rsatilganidek, rangpar shar temirga boy va arterial chegara zonasida yotadi: is gazi (CO) va gipoksiya ikki tomonlama pallidar nekroz va kechikkan parkinsonizm beradi; yadro sariqligi (bilirubin) va marganets ham GP ni zararlaydi. Putamen esa Vilson kasalligi (mis), metanol va gipoksiyada tanlab shikastlanadi."
+    },
+    "refs": ["globus-pallidus", "putamen", "gpe", "gpi", "put"],
+    "plate": "bg-commissural",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-021",
+    "level": "expert",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "During stereotactic deep-brain stimulation (DBS) implantation into the left subthalamic nucleus (STN) at coronal level B4 (MNI y = −13 mm, ~12 mm lateral, 2–3 mm posterior, 4–5 mm inferior to the mid-commissural point), the microelectrode descends through a quiet zone into a 4–5 mm band of dense 20–50 Hz irregular firing with prominent beta-band (13–30 Hz) local field potentials, and then enters regular ~70 Hz tonic firing below. Test stimulation at the target causes: (a) right facial/arm tonic contractions if the lead is too lateral, (b) ipsilateral eye adduction weakness/diplopia if too medial, (c) right-sided tingling paraesthesias if too posterior, or (d) acute euphoria/hypomania if placed in the ventromedial tip. Map the microelectrode track and the four boundary structures:",
+      "uz": "Koronal B4 darajasida (MNI y = −13 mm) chap subtalamik yadroga (STN) DBS elektrodi kiritilmoqda. Mikroelektrod yuqoridan tushishda avval sokin qatlamdan o'tib, 20–50 Gs noto'g'ri razryadli va kuchli beta-to'lqinli (13–30 Gs) LFP beruvchi yadroga, undan pastda esa muntazam ~70 Gs tonik razryad beruvchi yadroga kirdi. Sinov stimulyatsiyasida elektrod: (a) juda lateral bo'lsa o'ng yuz/qo'l tortishishi, (b) juda medial bo'lsa ko'z og'ishi va diplopiya, (c) juda orqada bo'lsa o'ng tomonda uvishish (paresteziya), (d) medial uchida bo'lsa gipomaniya/impulsivlik berdi. Mikroelektrod yo'li va to'rtta chegara tuzilmasini aniqlang:"
+    },
+    "options": [
+      {
+        "en": "Track: quiet zona incerta (dorsal) → sensorimotor dorsolateral STN (beta LFPs) → SNr (regular ~70 Hz ventral); Neighbours: (a) internal capsule posterior limb laterally, (b) CN III oculomotor fascicles medially, (c) medial lemniscus posteriorly, (d) limbic medial tip of the tripartite STN",
+        "uz": "Yo'l: sokin zona incerta (yuqorida) → dorsolateral sensomotor STN (beta LFP) → SNr (pastda muntazam ~70 Gs); Qo'shnilar: (a) lateralda ichki kapsula orqa oyog'i, (b) medialda III nerv tolalari, (c) orqada medial lemnisk, (d) STNning limbik medial uchi"
+      },
+      {
+        "en": "Track: caudate head → putamen → claustrum; Neighbours: (a) optic chiasm, (b) fourth ventricle, (c) facial nerve genu, (d) dentate nucleus",
+        "uz": "Yo'l: kaudat boshi → putamen → klaustrum; Qo'shnilar: (a) ko'rish kesishmasi, (b) IV qorincha, (c) yuz nervi tizzasi, (d) tishsimon yadro"
+      },
+      {
+        "en": "Track: corpus callosum → septum pellucidum → fornix; Neighbours: (a) external capsule, (b) pineal gland, (c) fasciculus gracilis, (d) area postrema",
+        "uz": "Yo'l: qadoqsimon tana → shaffof to'siq → fornix; Qo'shnilar: (a) tashqi kapsula, (b) epifiz, (c) nozik tutam, (d) area postrema"
+      },
+      {
+        "en": "Track: VPL thalamus → mammillary body → optic tract; Neighbours: (a) superior colliculus, (b) hypoglossal nucleus, (c) inferior olive, (d) vermis",
+        "uz": "Yo'l: VPL talamus → so'rg'ichsimon tana → ko'rish trakti; Qo'shnilar: (a) yuqori do'nglik, (b) til osti nervi yadrosi, (c) pastki zaytun, (d) chuvalchang"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "As detailed on plate B4, a dorsal-to-ventral STN DBS trajectory passes through the quiet zona incerta (and H2) into the dorsolateral sensorimotor STN (20–50 Hz bursty firing + pathological beta LFPs used for adaptive DBS), and below into the GABAergic SNr (~70 Hz regular firing). Current spread maps directly onto the anatomy: lateral = internal capsule (corticospinal contractions), medial = oculomotor (CN III) fibres/red nucleus, posterior = medial lemniscus (paraesthesias), and the medial tip of the tripartite STN = limbic territory (hypomania/impulsivity).",
+      "uz": "B4 plastinkasida STN DBS yo'li yuqoridan pastga sokin zona incertadan o'tib, dorsolateral sensomotor STNga (20–50 Gs razryad va adaptiv DBS uchun ishlatiladigan beta LFP) va uning ostidagi SNr ga (~70 Gs muntazam razryad) tushadi. Nojo'ya ta'sirlar qo'shnilarga aniq mos keladi: lateralda — ichki kapsula (mushak qisqarishi), medialda — III nerv tolalari (diplopiya), orqada — medial lemnisk (paresteziya) va uch qismli STNning medial uchida — limbik zona (gipomaniya)."
+    },
+    "refs": ["stn", "j-stn", "zi", "snr", "ic-pl", "n3-root", "ml"],
+    "plate": "bg-subthalamic",
+    "sources": [
+      {
+        "title": "Alexander, DeLong & Strick 1986, Annu Rev Neurosci — Parallel organization of functionally segregated circuits linking basal ganglia and cortex",
+        "url": "https://doi.org/10.1146/annurev.ne.09.030186.002041"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-022",
+    "level": "expert",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "During posteroventral globus pallidus internus (GPi) DBS surgery for generalized dystonia or levodopa-induced dyskinesia (coronal plate B3, MNI y = −6 mm), the microelectrode passes from a region of ~60–80 Hz tonic firing with characteristic pauses, across a thin white lamina with border cells, into tonic high-frequency (60–100 Hz) firing. When the surgeon tests stimulation at the deepest contact, the patient reports seeing flashes of light (phosphenes) in the contralateral visual field; when stimulation is shifted too far medially, contralateral limb contractions occur. Which structures explain the recording transition, the phosphenes, and the motor contractions?",
+      "uz": "Generalizatsiyalangan distoniya yoki diskineziya uchun posteroventral GPi DBS operatsiyasida (B3 plastinkasi, MNI y = −6 mm) mikroelektrod pauzali ~60–80 Gs razryad beruvchi yadrodan yupqa oq plastinka orqali 60–100 Gs tonik razryad beruvchi yadroga o'tdi. Eng pastki kontaktda sinov stimulyatsiyasi berilganda bemor qarama-qarshi ko'rish maydonida yorug'lik chaqnashlarini (fosfenlarni) ko'rdi; tok medialga siljitilganda esa qarama-qarshi oyoq-qo'l qisqarishi yuz berdi. Bu belgilarni qaysi tuzilmalar izohlaydi?"
+    },
+    "options": [
+      {
+        "en": "Transition: GPe (pausing) → medial medullary lamina → GPi (tonic 60–100 Hz); Phosphenes (too deep/ventral): optic tract directly beneath posteroventral GPi; Contractions (too medial/posterior): posterior limb of the internal capsule",
+        "uz": "O'tish: GPe (pauzali) → medial medullyar plastinka → GPi (tonik 60–100 Gs); Fosfenlar (juda chuqur/ventral): posteroventral GPi ostida yotgan ko'rish trakti; Mushak qisqarishi (juda medial): ichki kapsulaning orqa oyog'i"
+      },
+      {
+        "en": "Transition: putamen → external capsule → claustrum; Phosphenes: superior colliculus; Contractions: facial motor nucleus",
+        "uz": "O'tish: putamen → tashqi kapsula → klaustrum; Fosfenlar: yuqori do'nglik; Mushak qisqarishi: yuz nervi harakat yadrosi"
+      },
+      {
+        "en": "Transition: caudate head → septum pellucidum → fornix; Phosphenes: pineal gland; Contractions: pyramid",
+        "uz": "O'tish: kaudat boshi → shaffof to'siq → fornix; Fosfenlar: epifiz; Mushak qisqarishi: piramida"
+      },
+      {
+        "en": "Transition: VPL → internal medullary lamina → MD thalamus; Phosphenes: area postrema; Contractions: red nucleus",
+        "uz": "O'tish: VPL → ichki medullyar plastinka → MD talamus; Fosfenlar: area postrema; Mushak qisqarishi: qizil yadro"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plate B3, the electrode trajectory into posteroventral GPi crosses from GPe (tonic ~60–80 Hz with pauses) through the medial medullary lamina (border cells) into GPi (tonic 60–100 Hz). Posteroventral GPi sits directly above the optic tract (so too-deep stimulation evokes visual phosphenes) and ~3–4 mm lateral to the posterior limb of the internal capsule (so too-medial stimulation drives corticospinal contractions).",
+      "uz": "B3 plastinkasida ko'rinib turganidek, mikroelektrod GPe dan (pauzali ~60–80 Gs) medial medullyar plastinka orqali GPi ga (tonik 60–100 Gs) o'tadi. Posteroventral GPi bevosita ko'rish trakti (tractus opticus) ustida yotadi — elektrod juda chuqur ketsa fosfenlar paydo bo'ladi; medialda esa ichki kapsulaning orqa oyog'i joylashgan (kapsula qisqarishi = juda medial)."
+    },
+    "refs": ["gpe", "mml", "gpi", "ot", "ic-pl", "globus-pallidus", "optic-tract"],
+    "plate": "bg-pallidal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Basal Ganglia",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537141/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-023",
+    "level": "expert",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "A 61-year-old woman with hypertension presents with sudden-onset dense right-sided weakness affecting the face (lower half), arm, and leg equally, with completely normal touch, vibration, pain, and temperature sensation, normal visual fields, and normal speech/language comprehension. MRI shows a 9 mm acute infarct on axial plate B5. Where is the lesion located, and which arteries supply this territory?",
+      "uz": "Gipertoniyasi bo'lgan 61 yoshli ayolda to'satdan o'ng tomonda yuzning pastki yarmi, qo'l va oyoqning bir xil darajadagi falaji rivojlandi; ammo teginish, tebranish, og'riq va harorat sezgisi, ko'rish maydoni hamda nutq tushunishi mutlaqo normal. Aksial B5 kesimidagi MRTda 9 mm o'tkir infarkt o'chog'i aniqlandi. O'choq qayerda joylashgan va bu sohani qaysi arteriyalar ta'minlaydi?"
+    },
+    "options": [
+      {
+        "en": "Left internal capsule posterior limb (corticospinal/corticobulbar fibres anterior to the thalamocortical sensory radiation) — pure motor lacunar stroke supplied by lateral lenticulostriate (MCA) or anterior choroidal arteries",
+        "uz": "Chap ichki kapsulaning orqa oyog'i (sezgi radiatsiyasidan oldinda yotgan kortikospinal/kortikobulbar tolalar) — lateral lentikulostriar yoki oldingi xorioidal arteriya havzasidagi 'sof harakat lakunar insulti'"
+      },
+      {
+        "en": "Left VPL and VPM nuclei of the thalamus — thalamogeniculate (PCA) territory",
+        "uz": "Chap talamusning VPL va VPM yadrolari — talamogenikulyar (PCA) arteriya havzasi"
+      },
+      {
+        "en": "Left caudate head and nucleus accumbens — recurrent artery of Heubner (ACA) territory",
+        "uz": "Chap dumli yadro boshi va accumbens yadrosi — Heubner qaytuvchi arteriyasi (ACA) havzasi"
+      },
+      {
+        "en": "Left lateral medulla — PICA territory (Wallenberg syndrome)",
+        "uz": "Chap uzunchoq miyaning lateral qismi — PICA havzasi (Wallenberg sindromi)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "In the lesion simulator (`level: 'capsule', side: 'L', zone: 'motor'`, plate B5), a small lacunar infarct in the corticospinal/corticobulbar portion of the left posterior limb of the internal capsule (lenticulostriate or anterior choroidal artery) produces equal contralateral (right) face, arm, and leg weakness without sensory, visual, or cortical deficits — Fisher's 'pure motor hemiparesis', the commonest lacunar syndrome.",
+      "uz": "Shikastlanish simulyatorida (`level: 'capsule', side: 'L', zone: 'motor'`, B5 plastinkasi) chap ichki kapsula orqa oyog'ining harakat qismidagi kichik lakunar infarkt (lentikulostriar yoki oldingi xorioidal arteriya) sezgi, ko'rish va kognitiv belgilarsiz o'ng yuz, qo'l va oyoqning teng gemiparezini — eng ko'p uchraydigan 'sof harakat lakunasi'ni beradi."
+    },
+    "refs": ["ic-pl", "cst-ic", "internal-capsule", "wm-internal-capsule-posterior-limb"],
+    "plate": "bg-capsule-axial",
+    "sources": [
+      {
+        "title": "StatPearls — Lacunar Stroke",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK563216/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-024",
+    "level": "expert",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "A 68-year-old man presents with the acute triad of right hemiparesis, right hemisensory loss, and a right homonymous hemianopia, but without aphasia, neglect, or gaze deviation. Coronal and axial MRI (plates B3 and B5) reveal an ischaemic infarct encompassing the medial/posteroventral globus pallidus internus (GPi), the ventral/retrolenticular posterior limb of the left internal capsule, and the left optic tract / lateral geniculate body. Which single artery was occluded?",
+      "uz": "68 yoshli bemorda afaziya va e'tiborsizlik (neglekt) bo'lmagan holda o'tkir triada: o'ng tomonlama gemiparez, o'ng tomonlama gemigipesteziya va o'ng gomonim gemianopiya rivojlandi. MRTda (B3 va B5 plastinkalari) chap ichki rangpar shar (GPi), chap ichki kapsula orqa oyog'ining pastki/retrolentikulyar qismi hamda chap ko'rish trakti / LGN sohasida ishemik infarkt aniqlandi. Qaysi bitta arteriya tiqilib qolgan?"
+    },
+    "options": [
+      {
+        "en": "Left anterior choroidal artery (branch of the supraclinoid internal carotid artery)",
+        "uz": "Chap oldingi xorioidal arteriya (ichki uyqu arteriyasining shoxi)"
+      },
+      {
+        "en": "Left recurrent artery of Heubner (branch of the anterior cerebral artery)",
+        "uz": "Chap Heubner qaytuvchi arteriyasi (oldingi miya arteriyasining shoxi)"
+      },
+      {
+        "en": "Artery of Percheron (paramedian branch of P1 posterior cerebral artery)",
+        "uz": "Percheron arteriyasi (orqa miya arteriyasi P1 segmentining paramedian shoxi)"
+      },
+      {
+        "en": "Left anterior inferior cerebellar artery (AICA)",
+        "uz": "Chap oldingi pastki miyacha arteriyasi (AICA)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "As described on plates B3 and B5 (`ic-rl`), the anterior choroidal artery (from the internal carotid) supplies the globus pallidus internus (GPi), the ventral/retrolenticular posterior limb of the internal capsule, the optic tract and LGN, the uncus/amygdala, and the temporal horn choroid plexus. Its occlusion produces the classic Monakow triad of contralateral hemiplegia, hemianaesthesia, and homonymous hemianopia with spared cortical language function.",
+      "uz": "B3 va B5 plastinkalarida (`ic-rl`) ko'rsatilganidek, oldingi xorioidal arteriya ichki rangpar sharni (GPi), ichki kapsula orqa oyog'ining pastki va retrolentikulyar qismini hamda ko'rish trakti / LGN ni ta'minlaydi. Uning tiqilishi po'stloq belgilari (afaziya) bo'lmagan holda klassik triadani: qarama-qarshi gemiparez, gemigipesteziya va gomonim gemianopiyani beradi."
+    },
+    "refs": ["anterior-choroidal-artery", "gpi", "ic-pl", "ic-rl", "ot", "lgn"],
+    "plate": "bg-pallidal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Internal Capsule",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK542181/"
+      }
+    ]
+  },
+  {
+    "id": "q-basal-ganglia-025",
+    "level": "expert",
+    "topic": "basal-ganglia",
+    "type": "mcq",
+    "q": {
+      "en": "In Alexander, DeLong, and Strick's (1986) model of parallel, functionally segregated cortico–basal ganglia–thalamo–cortical loops, how do the (1) sensorimotor, (2) associative/cognitive, and (3) limbic/motivational loops segregate across the striatum, pallidum/SNr, STN, and thalamic relay nuclei (plates B1–B5)?",
+      "uz": "Alexander, DeLong va Strick (1986) modeliga ko'ra, parallel (1) sensomotor, (2) assotsiativ/kognitiv va (3) limbik/motivatsion halqalar striatum, pallidum/SNr, STN va talamus yadrolari bo'ylab qanday taqsimlangan (B1–B5 plastinkalari)?"
+    },
+    "options": [
+      {
+        "en": "(1) Sensorimotor: M1/S1/SMA → dorsolateral putamen → posteroventral GPi & dorsolateral STN → VLa thalamus; (2) Associative: DLPFC → caudate head/body → dorsomedial GPi/SNr & ventromedial STN → VA/MD thalamus; (3) Limbic: OFC/ACC/amygdala/hippocampus → nucleus accumbens → ventral pallidum & medial-tip STN → MD thalamus",
+        "uz": "(1) Sensomotor: M1/S1/SMA → dorsolateral putamen → posteroventral GPi va dorsolateral STN → VLa talamus; (2) Assotsiativ: DLPFC → kaudat boshi/tanasi → dorsomedial GPi/SNr va ventromedial STN → VA/MD talamus; (3) Limbik: OFC/ACC/amigdala/gippokamp → accumbens → ventral pallidum va STN medial uchi → MD talamus"
+      },
+      {
+        "en": "(1) Sensorimotor: V1 → accumbens → LGN; (2) Associative: A1 → putamen → MGN; (3) Limbic: M1 → caudate tail → VPL",
+        "uz": "(1) Sensomotor: V1 → accumbens → LGN; (2) Assotsiativ: A1 → putamen → MGN; (3) Limbik: M1 → kaudat dumi → VPL"
+      },
+      {
+        "en": "All three cortical loops converge indiscriminately onto a single homogeneous neuron population in the claustrum before projecting to the cerebellum",
+        "uz": "Uchala halqa ham klaustrumda bitta nuqtaga qo'shilib ketadi va u yerdan miyachaga yo'naladi"
+      },
+      {
+        "en": "(1) Sensorimotor runs through the anterior commissure; (2) Associative runs through the optic chiasm; (3) Limbic runs through the pyramidal decussation",
+        "uz": "(1) Sensomotor oldingi komissuradan, (2) Assotsiativ ko'rish kesishmasidan, (3) Limbik esa piramidalar kesishmasidan o'tadi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Alexander, DeLong & Strick (1986) established that parallel functional channels stay segregated through every stage of the basal ganglia: the sensorimotor loop passes through the dorsolateral putamen, dorsolateral STN, posteroventral GPi, and VLa thalamus; the associative loop through the caudate head, ventromedial STN, and VA/MD thalamus; and the limbic loop (Haber & Knutson 2010) through the nucleus accumbens (core/shell), medial-tip STN, ventral pallidum, and MD thalamus (targeted via the ventral anterior limb of the internal capsule in OCD).",
+      "uz": "Alexander, DeLong va Strick (1986) bazal yadrolarda parallel halqalar har bir bosqichda alohida saqlanishini ko'rsatdi: sensomotor halqa — dorsolateral putamen, dorsolateral STN, posteroventral GPi va VLa talamus orqali; assotsiativ halqa — kaudat boshi, ventromedial STN va VA/MD talamus orqali; limbik halqa esa — accumbens yadrosi, STNning medial uchi, ventral pallidum va MD talamus (OKBda ichki kapsula ventral oldingi oyog'i VC/VS DBS nishoni) orqali o'tadi."
+    },
+    "refs": ["put", "cau-head", "acb-core", "acb-shell", "gpi", "vp", "stn", "th-va", "th-vl", "th-md"],
+    "plate": "bg-subthalamic",
+    "sources": [
+      {
+        "title": "Alexander, DeLong & Strick 1986, Annu Rev Neurosci — Parallel organization of functionally segregated circuits linking basal ganglia and cortex",
+        "url": "https://doi.org/10.1146/annurev.ne.09.030186.002041"
+      }
+    ]
+  }
+]

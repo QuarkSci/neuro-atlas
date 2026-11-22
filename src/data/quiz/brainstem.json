@@ -1,0 +1,1030 @@
+[
+  {
+    "id": "q-brainstem-001",
+    "level": "student",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "What are the three main rostro-caudal divisions of the brainstem from superior to inferior?",
+      "uz": "Miya ustunining yuqoridan pastga joylashgan uchta asosiy anatomik bo'limi qaysilar?"
+    },
+    "options": [
+      {
+        "en": "Midbrain (mesencephalon) → Pons → Medulla oblongata",
+        "uz": "O'rta miya (mesencephalon) → Ko'prik (pons) → Uzunchoq miya (medulla oblongata)"
+      },
+      {
+        "en": "Thalamus → Hypothalamus → Subthalamus",
+        "uz": "Talamus → Gipotalamus → Subtalamus"
+      },
+      {
+        "en": "Tectum → Tegmentum → Basis",
+        "uz": "Tektum → Tegmentum → Asos (basis)"
+      },
+      {
+        "en": "Telencephalon → Diencephalon → Cerebellum",
+        "uz": "Oxirgi miya → Oraliq miya → Miyacha"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "From top to bottom (between the diencephalon above and the spinal cord at the foramen magnum below), the brainstem consists of the midbrain (~2 cm), the pons (~2.5 cm), and the medulla oblongata (~3 cm).",
+      "uz": "Miya ustuni yuqorida oraliq miyadan pastda katta teshik (orqa miya) chegarasigacha uch bo'limdan iborat: o'rta miya (~2 sm), ko'prik (~2,5 sm) va uzunchoq miya (~3 sm)."
+    },
+    "refs": ["bs-midbrain", "bs-pons", "bs-medulla", "pons", "medulla-oblongata"],
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Brainstem",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK544297/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-002",
+    "level": "student",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "On a transverse cross-section of the midbrain (plates O1–O2), what are the three dorsoventral zones from dorsal (back) to ventral (front)?",
+      "uz": "O'rta miyaning ko'ndalang kesimida (O1–O2 plastinkalari) orqadan (dorsaldan) oldinga (ventralga) joylashgan uchta qavat qaysilar?"
+    },
+    "options": [
+      {
+        "en": "Tectum (superior and inferior colliculi, dorsal to the aqueduct) → Tegmentum (red nucleus, CN III/IV, lemnisci, RF) → Crus cerebri (separated from tegmentum by the substantia nigra)",
+        "uz": "Tektum (suv yo'lidan orqadagi yuqori va pastki do'ngliklar) → Tegmentum (qizil yadro, III/IV yadrolari, lemniskalar, RF) → Miya oyoqchasi — crus cerebri (tegmentumdan qora modda bilan ajralgan)"
+      },
+      {
+        "en": "Fourth ventricle → Basis pontis → Medullary pyramid",
+        "uz": "To'rtinchi qorincha → Ko'prik asosi → Uzunchoq miya piramidasi"
+      },
+      {
+        "en": "Corpus callosum → Internal capsule → Optic chiasm",
+        "uz": "Qadoqsimon tana → Ichki kapsula → Ko'rish kesishmasi"
+      },
+      {
+        "en": "Gracile tubercle → Inferior olive → Trapezoid body",
+        "uz": "Nozik do'mboqcha → Pastki zaytun → Trapetsiyasimon tana"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "From dorsal to ventral, the midbrain comprises the tectum ('roof': the four colliculi behind the cerebral aqueduct), the tegmentum (surrounding the PAG and housing CN III/IV nuclei, red nucleus, VTA, and lemnisci), and the paired crura cerebri (separated from the tegmentum by the substantia nigra).",
+      "uz": "O'rta miya orqadan oldinga uch qismga bo'linadi: Silviy suv yo'li ortidagi tektum (yuqori va pastki do'ngliklar), o'rtadagi tegmentum (PAG, III va IV nerv yadrolari, qizil yadro, lemniskalar) hamda qora modda bilan ajralgan ventral miya oyoqchalari (crura cerebri)."
+    },
+    "refs": ["bs-midbrain", "bs-midbrain-tegmentum", "bs-cerebral-peduncle-crus-cerebri", "sc", "ic", "rn", "snc", "crus"],
+    "plate": "midbrain-superior-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Mesencephalon (Midbrain)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551509/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-003",
+    "level": "student",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "Which midbrain tectal structures process visual reflexes/saccades (at level O2) versus auditory relay (at level O1), and which thalamic geniculate bodies do their brachia connect to?",
+      "uz": "O'rta miya tektumidagi qaysi tuzilmalar ko'rish reflekslari/sakkadalarga (O2 darajasi) va qaysisi eshitish bo'g'iniga (O1 darajasi) javobgar hamda ularning dastalari talamusning qaysi tizzasimon tanalariga boradi?"
+    },
+    "options": [
+      {
+        "en": "Superior colliculus (`sc`, O2) handles visuomotor reflexes/saccades (linked to LGN/retina via its brachium `bsc`); Inferior colliculus (`ic`, O1) is the obligatory midbrain auditory relay (receiving the lateral lemniscus `ll` and projecting via its brachium `bic` to the medial geniculate body `mgb`)",
+        "uz": "Yuqori do'nglik (`sc`, O2) ko'rish-harakat reflekslari va sakkadalarni boshqaradi (dastasi `bsc` LGN bilan bog'liq); Pastki do'nglik (`ic`, O1) esa lateral lemniskni (`ll`) qabul qiluvchi majburiy eshitish bo'g'ini bo'lib, dastasi (`bic`) orqali medial tizzasimon tanaga (`mgb`) uzatadi"
+      },
+      {
+        "en": "Superior colliculus relays hearing to the MGN; Inferior colliculus relays vision to the LGN",
+        "uz": "Yuqori do'nglik eshitishni MGN ga, pastki do'nglik esa ko'rishni LGN ga uzatadi"
+      },
+      {
+        "en": "Both colliculi relay taste from the solitary nucleus to the VPM thalamus",
+        "uz": "Ikkala do'nglik ham yolg'iz yo'l yadrosidan ta'mni VPM talamusga uzatadi"
+      },
+      {
+        "en": "Both colliculi are motor nuclei for the muscles of facial expression",
+        "uz": "Ikkala do'nglik ham yuz mimika mushaklarining harakat yadrolaridir"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plate O2, the superior colliculus (`sc`) maps the contralateral visual field and drives orienting saccades and the tectospinal tract. On plate O1, the inferior colliculus (`ic`) receives the ascending auditory lateral lemniscus (`ll`) and projects via the brachium of the inferior colliculus (`bic`) to the medial geniculate body (`mgb`).",
+      "uz": "O2 plastinkasida yuqori do'nglik (`sc`) ko'rish-harakat va yo'naltirish sakkadalarini boshqaradi; O1 plastinkasida pastki do'nglik (`ic`) esa lateral lemniskdan (`ll`) eshitish signalini olib, o'z dastasi (`bic`) orqali talamusning medial tizzasimon tanasiga (`mgb`) uzatadi."
+    },
+    "refs": ["superior-colliculus", "inferior-colliculus", "medial-geniculate-body", "sc", "bsc", "ic", "bic", "mgb", "ll"],
+    "plate": "midbrain-inferior-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Mesencephalon (Midbrain)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551509/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-004",
+    "level": "student",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "Which cranial nerve is the ONLY one to exit from the DORSAL (posterior) surface of the brainstem and the ONLY one whose axons completely decussate before emerging?",
+      "uz": "Miya ustunining ORQA (dorsal) yuzasidan chiqadigan va chiqishidan oldin tolalari to'liq qarama-qarshi tomonga kesishadigan YAGONA bosh miya nervi qaysi?"
+    },
+    "options": [
+      {
+        "en": "Trochlear nerve (CN IV, crossing in the superior medullary velum at the pontine isthmus K3, below the inferior colliculi O1)",
+        "uz": "G'altak nervi (IV juft — yuqori miya pardasida K3 darajasida, pastki do'ngliklar O1 ostida kesishadi)"
+      },
+      {
+        "en": "Oculomotor nerve (CN III, exiting into the interpeduncular fossa at O2)",
+        "uz": "Ko'zni harakatlantiruvchi nerv (III juft — O2 darajasida oyoqchalararo chuqurchaga chiqadi)"
+      },
+      {
+        "en": "Abducens nerve (CN VI, exiting at the pontomedullary junction)",
+        "uz": "Uzoqlashtiruvchi nerv (VI juft — ko'prik va uzunchoq miya chegarasidan chiqadi)"
+      },
+      {
+        "en": "Hypoglossal nerve (CN XII, exiting in the preolivary sulcus at U3)",
+        "uz": "Til osti nervi (XII juft — U3 darajasida zaytun oldi egatidan chiqadi)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The trochlear nucleus (`n4`, plate O1) sits in the ventral PAG at the inferior colliculus level, indenting the MLF. Its axons arch dorsally around the PAG, decussate completely in the superior medullary velum (`n4-dec`, `smv`, plate K3), and emerge from the dorsal brainstem to innervate the contralateral superior oblique muscle.",
+      "uz": "G'altak nervi yadrosi (`n4`, O1 plastinkasi) pastki do'nglik darajasida ventral PAG ichida yotadi; uning aksonlari orqaga yo'nalib, yuqori miya pardasida (`n4-dec`, `smv`, K3 plastinkasi) kesishadi va miya ustunining ORQA yuzasidan chiqib qarama-qarshi ko'zning yuqori qiyshiq mushagini innervatsiya qiladi."
+    },
+    "refs": ["trochlear-nerve", "n4", "n4-dec", "smv"],
+    "plate": "pons-isthmus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Mesencephalon (Midbrain)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551509/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-005",
+    "level": "student",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "In the caudal pons (plate K1), which two structures form the 'facial colliculus' bulging into the floor of the fourth ventricle?",
+      "uz": "Kaudal ko'prikda (K1 plastinkasi) to'rtinchi qorincha tubiga bo'rtib chiqqan 'yuz do'ngligi'ni (colliculus facialis) qaysi ikki tuzilma hosil qiladi?"
+    },
+    "options": [
+      {
+        "en": "The abducens nucleus (CN VI, `n6`) wrapped dorsally by the internal genu of the facial nerve (CN VII motor axons, `n7-genu`)",
+        "uz": "Uzoqlashtiruvchi nerv yadrosi (VI juft, `n6`) va uning ustidan dorsal halqa yasab aylanib o'tuvchi yuz nervining ichki tizzasi (VII juft aksonlari, `n7-genu`)"
+      },
+      {
+        "en": "The facial motor nucleus (`n7`) and the trigeminal motor nucleus (`mo5`)",
+        "uz": "Yuz nervi harakat yadrosi (`n7`) va uch shoxli nerv harakat yadrosi (`mo5`)"
+      },
+      {
+        "en": "The hypoglossal nucleus (`n12`) and the dorsal motor nucleus of the vagus (`dmx`)",
+        "uz": "Til osti nervi yadrosi (`n12`) va adashgan nervning dorsal harakat yadrosi (`dmx`)"
+      },
+      {
+        "en": "The locus coeruleus (`lc`) and the superior olivary complex (`so`)",
+        "uz": "Ko'k dog' (`lc`) va yuqori zaytun kompleksi (`so`)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plate K1 (`pons-facial-colliculus`), the facial motor nucleus (`n7`) lies deep in the ventrolateral pontine tegmentum, but its axons loop dorsomedially over the abducens nucleus (`n6`) as the internal genu (`n7-genu`) before exiting ventrolaterally — raising the facial colliculus in the floor of the 4th ventricle.",
+      "uz": "K1 plastinkasida yuz nervi harakat yadrosi (`n7`) ventrolateral tegmentumda chuqurda yotadi, biroq uning aksonlari chiqishdan oldin IV qorincha tubidagi uzoqlashtiruvchi nerv yadrosi (`n6`) ustidan halqa yasab (`n7-genu` — ichki tizza) aylanib o'tadi va 'yuz do'ngligi'ni hosil qiladi."
+    },
+    "refs": ["n6", "n7-genu", "n7", "bs-pontine-tegmentum"],
+    "plate": "pons-facial-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Pons",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK560589/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-006",
+    "level": "student",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "At which level of the brainstem does the trigeminal nerve (CN V) enter and exit, and which two trigeminal nuclei lie immediately medial to its root entry zone at that level?",
+      "uz": "Uch shoxli nerv (V juft) miya ustunining qaysi darajasidan chiqadi va aynan shu kesimda uning ildizi yonida qaysi ikki yadrosi joylashgan?"
+    },
+    "options": [
+      {
+        "en": "Mid-pons (plate K2, through the middle cerebellar peduncle), with the principal sensory nucleus (`pr5`, lateral) and motor nucleus (`mo5`, medial) of V",
+        "uz": "O'rta ko'prikda (K2 plastinkasi, o'rta miyacha oyoqchasi orqali); uning yonida V nervning asosiy sezuvchi yadrosi (`pr5`, lateralda) va harakat yadrosi (`mo5`, medialda) yotadi"
+      },
+      {
+        "en": "Rostral midbrain (plate O2, interpeduncular fossa), with the oculomotor and Edinger–Westphal nuclei",
+        "uz": "Rostral o'rta miyada (O2 plastinkasi, oyoqchalararo chuqurchadan)"
+      },
+      {
+        "en": "Open medulla (plate U3, preolivary sulcus), with the hypoglossal and ambiguus nuclei",
+        "uz": "Ochiq uzunchoq miyada (U3 plastinkasi, zaytun oldi egatidan)"
+      },
+      {
+        "en": "Caudal medulla (plate U1), with the gracile and cuneate nuclei",
+        "uz": "Kaudal uzunchoq miyada (U1 plastinkasi), nozik va ponasimon yadrolar yonida"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plate K2 (`pons-trigeminal`), the trigeminal nerve root (`n5-root`) traverses the middle cerebellar peduncle (`mcp`) at the mid-pons. Immediately medial to its entry sit the principal sensory nucleus (`pr5`, discriminative facial touch) laterally and the motor nucleus (`mo5`, muscles of mastication) medially.",
+      "uz": "K2 plastinkasida (`pons-trigeminal`) uch shoxli nerv ildizi (`n5-root`) o'rta ko'prikning yon qismidan o'rta miyacha oyoqchasi (`mcp`) orqali chiqadi; uning kirish joyidan medialda V nervning asosiy sezuvchi yadrosi (`pr5`, lateralda — yuz teginish sezgisi) va harakat yadrosi (`mo5`, medialda — chaynov mushaklari) yotadi."
+    },
+    "refs": ["n5-root", "pr5", "mo5", "mcp", "trunk-of-left-trigeminal-nerve"],
+    "plate": "pons-trigeminal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Pons",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK560589/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-007",
+    "level": "student",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "On the floor of the fourth ventricle in the open mid-olivary medulla (plate U3), what is the medial-to-lateral order of the four cranial-nerve nuclear columns?",
+      "uz": "Ochiq uzunchoq miyaning o'rta zaytun darajasida (U3 plastinkasi) to'rtinchi qorincha tubida medialdan lateralga ketma-ket joylashgan to'rtta kalla nervi yadrosi qaysilar?"
+    },
+    "options": [
+      {
+        "en": "Hypoglossal nucleus (CN XII, `n12`) → Dorsal motor nucleus of the vagus (CN X, `dmx`) → Solitary nucleus (`sol`) → Vestibular nuclei (CN VIII, `vn`)",
+        "uz": "Til osti nervi yadrosi (XII, `n12`) → Adashgan nervning dorsal harakat yadrosi (X, `dmx`) → Yolg'iz yo'l yadrosi (`sol`) → Vestibulyar yadrolar (VIII, `vn`)"
+      },
+      {
+        "en": "Oculomotor nucleus → Trochlear nucleus → Abducens nucleus → Facial nucleus",
+        "uz": "Ko'zni harakatlantiruvchi yadro → G'altak yadrosi → Uzoqlashtiruvchi yadro → Yuz yadrosi"
+      },
+      {
+        "en": "Vestibular nuclei → Solitary nucleus → Hypoglossal nucleus → Pyramidal tract",
+        "uz": "Vestibulyar yadrolar → Yolg'iz yo'l yadrosi → Til osti yadrosi → Piramida yo'li"
+      },
+      {
+        "en": "Nucleus ambiguus → Inferior olive → Medial lemniscus → Raphe nucleus",
+        "uz": "Ikki ma'noli yadro → Pastki zaytun → Medial lemnisk → Raphe yadrosi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Across the floor of the 4th ventricle at U3 (`medulla-olive`), motor columns sit medial to the sulcus limitans and sensory columns lateral: (1) hypoglossal nucleus (`n12`, GSE) most medial, (2) dorsal motor nucleus of vagus (`dmx`, GVE), then across the sulcus limitans (3) nucleus of the solitary tract (`sol`, visceral/taste afferent) and (4) medial/inferior vestibular nuclei (`vn`, SSA).",
+      "uz": "U3 plastinkasida IV qorincha tubida medialdan lateralga (sulcus limitans harakat va sezgi ustunlarini ajratadi): (1) til osti nervi yadrosi (`n12`), (2) adashgan nervning dorsal harakat yadrosi (`dmx`), (3) yolg'iz yo'l yadrosi (`sol`) va (4) vestibulyar yadrolar (`vn`) ketma-ket joylashgan."
+    },
+    "refs": ["n12", "dmx", "sol", "vn", "v4"],
+    "plate": "medulla-olive",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Medulla Oblongata",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551589/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-008",
+    "level": "student",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "Which pigmented noradrenergic nucleus sits at the lateral edge of the fourth-ventricle floor in the rostral pons (isthmus, plate K3) and serves as the brain's primary source of noradrenaline for arousal, attention, and stress?",
+      "uz": "Rostral ko'prikda (isthmus — K3 plastinkasi) to'rtinchi qorincha tubining yon chetida joylashgan va uyg'oqlik, diqqat hamda stress uchun miyaning asosiy noradrenalin manbai bo'lgan pigmentli yadro qaysi?"
+    },
+    "options": [
+      {
+        "en": "Locus coeruleus (`lc`, `bs-locus-coeruleus-lc`)",
+        "uz": "Ko'k dog' (locus coeruleus, `lc`, `bs-locus-coeruleus-lc`)"
+      },
+      {
+        "en": "Dorsal raphe nucleus (`dr`, `bs-dorsal-raphe-nucleus-dr`)",
+        "uz": "Dorsal raphe yadrosi (`dr` — serotonergik)"
+      },
+      {
+        "en": "Ventral tegmental area (`vta`, `bs-ventral-tegmental-area-vta`)",
+        "uz": "Ventral tegmental soha (`vta` — dofaminergik)"
+      },
+      {
+        "en": "Pedunculopontine nucleus (`ppn`, `bs-pedunculotegmental-pedunculopontine-nucleus-ptg`)",
+        "uz": "Pedunkulopontin yadro (`ppn` — xolinergik/glutamatergik)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The locus coeruleus ('blue spot', ~30 000 neuromelanin-pigmented neurons per side) sits at the lateral floor of the rostral 4th ventricle beneath the superior cerebellar peduncle (plate K3). It provides noradrenaline across the entire neuraxis and degenerates early in Alzheimer and Parkinson diseases.",
+      "uz": "Ko'k dog' (locus coeruleus — `lc`, K3 plastinkasi) rostral ko'prik tegmentumida, IV qorincha tubining yon chetida joylashgan pigmentli (neyromelaninli) yadro bo'lib, butun miyaga noradrenalin yetkazib beradi (Altsgeymer va Parkinson kasalliklarida erta zararlanadi)."
+    },
+    "refs": ["bs-locus-coeruleus-lc", "lc"],
+    "plate": "pons-isthmus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Pons",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK560589/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-009",
+    "level": "student",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "Which sleeve of grey matter surrounds the cerebral aqueduct in the midbrain (plates K3, O1–O3) and serves as the central hub for descending pain inhibition (via the rostral ventromedial medulla to the dorsal horn)?",
+      "uz": "O'rta miyada Silviy suv yo'lini o'rab turgan (K3, O1–O3 plastinkalari) hamda og'riqni pastga tushuvchi tormozlash tizimining markazi bo'lgan kulrang modda qaysi?"
+    },
+    "options": [
+      {
+        "en": "Periaqueductal grey (PAG, `pag`, `bs-periaqueductal-grey-pag`)",
+        "uz": "Periakveduktal kulrang modda (PAG, `pag`, `bs-periaqueductal-grey-pag`)"
+      },
+      {
+        "en": "Red nucleus (`rn`, `red-nucleus`)",
+        "uz": "Qizil yadro (`rn`)"
+      },
+      {
+        "en": "Substantia nigra (`snc`, `snr`)",
+        "uz": "Qora modda (`snc`, `snr`)"
+      },
+      {
+        "en": "Interpeduncular nucleus (`ipn`)",
+        "uz": "Oyoqchalararo yadro (`ipn`)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The periaqueductal grey (PAG) forms a sleeve of opioid-receptor-rich grey matter around the cerebral aqueduct throughout the midbrain (plates K3, O1–O3). It drives descending pain modulation via the raphe magnus / rostral ventromedial medulla to the spinal dorsal horn, as well as defensive freezing/flight, vocalization, and micturition.",
+      "uz": "Periakveduktal kulrang modda (PAG) o'rta miyada Silviy suv yo'lini o'rab turadi, opioid retseptorlariga boy bo'lib, raphe yadrolari orqali orqa miya orqa shoxiga tushuvchi og'riqni tormozlash yo'lini hamda himoya reaksiyalarini boshqaradi."
+    },
+    "refs": ["bs-periaqueductal-grey-pag", "pag", "aq"],
+    "plate": "midbrain-superior-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Mesencephalon (Midbrain)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551509/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-010",
+    "level": "student",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "In the open medulla (plate U3), where do the rootlets of the hypoglossal nerve (CN XII, `n12-root`) exit the ventral surface, compared with the rootlets of the glossopharyngeal (CN IX) and vagus (CN X) nerves?",
+      "uz": "Ochiq uzunchoq miyada (U3 plastinkasi) til osti nervi (XII juft, `n12-root`) ildizchalari til-halqum (IX) va adashgan (X) nerv ildizchalariga nisbatan qaysi egatdan chiqadi?"
+    },
+    "options": [
+      {
+        "en": "CN XII exits in the preolivary sulcus (between the pyramid and the inferior olive), whereas CN IX and X exit in the postolivary (retroolivary) sulcus dorsolateral to the olive",
+        "uz": "XII nerv piramida va pastki zaytun orasidagi zaytun oldi (preolivar) egatidan, IX va X nervlar esa zaytundan orqaroqdagi zaytun orti (postolivar) egatidan chiqadi"
+      },
+      {
+        "en": "CN XII exits from the dorsal roof of the fourth ventricle, whereas CN IX and X exit from the interpeduncular fossa",
+        "uz": "XII nerv IV qorincha tomidan, IX va X nervlar esa oyoqchalararo chuqurchadan chiqadi"
+      },
+      {
+        "en": "Both CN XII and CN X exit through the middle cerebellar peduncle in the mid-pons",
+        "uz": "Ikkala nerv ham o'rta ko'prikda o'rta miyacha oyoqchasi orqali chiqadi"
+      },
+      {
+        "en": "CN XII exits postolivary, whereas CN IX and X exit preolivary",
+        "uz": "XII nerv zaytun orti egatidan, IX va X nervlar esa zaytun oldi egatidan chiqadi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plate U3 (`medulla-olive`), hypoglossal fibres (`n12-root`) stream ventrally beside the medial lemniscus and emerge in the preolivary sulcus between the pyramid and the olive (which is why paramedian anterior spinal infarcts catch pyramid + ML + XII). Vagus (`n10-root`) and glossopharyngeal (`n9-root`, plate U4) fibres pass spinal V and emerge in the postolivary sulcus.",
+      "uz": "U3 plastinkasida til osti nervi tolalari (`n12-root`) medial lemnisk yonidan oldinga tushib, piramida bilan pastki zaytun orasidagi zaytun oldi (preolivar) egatidan chiqadi; adashgan (`n10-root`) va til-halqum (`n9-root`) nervlari esa spinal V trakt yonidan o'tib, zaytun orti (postolivar) egatidan chiqadi."
+    },
+    "refs": ["n12", "n12-root", "n10-root", "n9-root", "pyramid", "ion"],
+    "plate": "medulla-olive",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Medulla Oblongata",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551589/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-011",
+    "level": "resident",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "Why does a lesion of the right abducens NUCLEUS (`n6`, or right PPRF, plate K1) cause a complete right horizontal GAZE palsy (neither eye can look to the right), whereas a lesion of the right abducens FASCICLE/NERVE (`n6-root`) causes only an isolated right lateral rectus palsy?",
+      "uz": "Nima sababdan o'ng uzoqlashtiruvchi nerv YADROSI (`n6` yoki PPRF, K1 plastinkasi) zararlansa o'ng tomonga GORIZONTAL QARASH falaji (ikkala ko'z ham o'ngga qaray olmaydi) yuzaga keladi, o'ng VI nerv TOLASI (`n6-root`) zararlansa esa faqat o'ng ko'z tashqariga burilmaydi?"
+    },
+    "options": [
+      {
+        "en": "Because the abducens nucleus contains two neuron populations: motor neurons to the ipsilateral lateral rectus AND internuclear neurons whose axons cross at once and ascend in the contralateral MLF to the medial rectus subnucleus of CN III",
+        "uz": "Chunki VI nerv yadrosida ikki xil neyron bor: o'sha tomon lateral to'g'ri mushagiga boruvchi motoneyronlar VA aksonlari kesishib qarama-qarshi MLF orqali III nervning medial to'g'ri mushak subyadrosiga ko'tariluvchi internuklear neyronlar"
+      },
+      {
+        "en": "Because the abducens nucleus directly innervates both lateral rectus muscles bilaterally",
+        "uz": "Chunki VI nerv yadrosi ikkala ko'zning lateral to'g'ri mushagini bir vaqtda innervatsiya qiladi"
+      },
+      {
+        "en": "Because the abducens nucleus controls vertical saccades via the posterior commissure",
+        "uz": "Chunki VI nerv yadrosi orqa komissura orqali vertikal qarashni boshqaradi"
+      },
+      {
+        "en": "Because the abducens fascicle decussates in the superior medullary velum",
+        "uz": "Chunki VI nerv tolalari yuqori miya pardasida qarama-qarshi tomonga kesishadi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "As detailed in `BRAINSTEM_STRUCTURES` (`n6`, `mlf`, `pprf`) and `CRANIAL_SIGNS` (`gaze` vs `cn6`), the abducens nucleus is the horizontal gaze centre: driven by the ipsilateral PPRF, it sends GSE motor axons (`n6-root`) to the ipsilateral lateral rectus and internuclear axons across the midline up the contralateral MLF to the CN III medial rectus motor neurons. Thus a nuclear lesion paralyses conjugate ipsilateral gaze, while a fascicular lesion weakens only ipsilateral abduction.",
+      "uz": "K1 plastinkasidagi VI nerv yadrosi (`n6`) gorizontal qarash markazidir: unda o'sha tomon lateral to'g'ri mushagiga chiquvchi motoneyronlar (`n6-root`) bilan birga, aksonlari kesishib qarama-qarshi MLF orqali III nerv yadrosiga (medial to'g'ri mushakka) boruvchi internuklear neyronlar yotadi. Shuning uchun yadro o'chog'i ikkala ko'zning o'sha tomonga qarashini falajlaydi, tola (`n6-root`) o'chog'i esa faqat bitta ko'z abduksiyasini buzadi."
+    },
+    "refs": ["n6", "n6-root", "pprf", "mlf", "n3"],
+    "plate": "pons-facial-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Pons",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK560589/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-012",
+    "level": "resident",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "What are the ocular findings in a lesion of the LEFT medial longitudinal fasciculus (`mlf`) in the pons or midbrain (left internuclear ophthalmoplegia, INO), and what happens when a lesion in the dorsal caudal pons (plate K1) destroys BOTH the left abducens nucleus/PPRF AND the adjacent left MLF?",
+      "uz": "Ko'prik yoki o'rta miyada CHAP medial bo'ylama tutam (`mlf`) zararlanganda (chap internuklear oftalmoplegiya — INO) ko'z harakatlarida nima kuzatiladi va kaudal ko'prikda (K1 plastinkasi) chap VI yadro/PPRF bilan chap MLF BIRGALIKDA zararlansa qaysi sindrom yuzaga keladi?"
+    },
+    "options": [
+      {
+        "en": "Left INO: on rightward gaze the left eye fails to adduct and the abducting right eye shows nystagmus (with convergence spared); Left VI nucleus/PPRF + left MLF = 'one-and-a-half syndrome' (the left eye has no horizontal movement at all, and the right eye can only abduct)",
+        "uz": "Chap INO: o'ngga qaraganda chap ko'z ichkariga (burunga) kelmaydi, tashqariga ketgan o'ng ko'zda esa nistagm bo'ladi (konvergensiya saqlanadi); Chap VI yadro/PPRF + chap MLF = 'bir yarim' sindromi (chap ko'z gorizontal umuman qimirlamaydi, o'ng ko'z esa faqat tashqariga boradi)"
+      },
+      {
+        "en": "Left INO: the left eye cannot abduct on leftward gaze; Left VI + MLF = Parinaud up-gaze palsy",
+        "uz": "Chap INO: chapga qaraganda chap ko'z tashqariga bormaydi; Chap VI + MLF = Parinaud sindromi"
+      },
+      {
+        "en": "Left INO: bilateral ptosis and dilated pupils; Left VI + MLF = Horner syndrome",
+        "uz": "Chap INO: ikki tomonlama ptoz va kengaygan qorachiqlar; Chap VI + MLF = Horner sindromi"
+      },
+      {
+        "en": "Left INO: loss of the pupillary light reflex with preserved accommodation (Argyll Robertson pupil)",
+        "uz": "Chap INO: akkomodatsiya saqlanib, qorachiqning yorug'lik refleksi yo'qolishi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The left MLF carries crossed internuclear axons from the right abducens nucleus to the left CN III medial rectus subnucleus. A left MLF lesion (MS plaque in young adults, paramedian stroke in elderly) prevents left-eye adduction on rightward gaze with abducting nystagmus of the right eye (convergence via midbrain vergence neurons is spared). Adding the left VI nucleus/PPRF abolishes leftward gaze of both eyes as well, leaving only right-eye abduction ('one-and-a-half syndrome', plate K1).",
+      "uz": "Chap MLF o'ng VI yadrodan chap III yadroga (chap medial to'g'ri mushakka) kelayotgan kesishgan tolalarni olib chiqadi; u zararlansa (chap INO) o'ngga qaraganda chap ko'z ichkariga kelmaydi, uzoqlashayotgan o'ng ko'zda nistagm bo'ladi (konvergensiya saqlanadi). Agar K1 darajasida chap VI yadro/PPRF va chap MLF birga zararlansa, chapga qarash (1) va o'ngga qaraganda chap ko'z kelishi (0,5) yo'qolib, 'bir yarim' sindromi yuzaga keladi."
+    },
+    "refs": ["mlf", "n6", "pprf", "n3"],
+    "plate": "pons-facial-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Pons",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK560589/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-013",
+    "level": "resident",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "How is the nucleus of the solitary tract (`sol`, plates U2–U4) functionally divided along its rostro-caudal axis, and what happens if caudal solitary tract nuclei are damaged bilaterally?",
+      "uz": "Yolg'iz yo'l yadrosi (`sol`, U2–U4 plastinkalari) yuqoridan pastga (rostral va kaudal qismlarga) vazifasi bo'yicha qanday bo'linadi va uning kaudal qismi ikki tomonlama zararlansa nima yuz beradi?"
+    },
+    "options": [
+      {
+        "en": "The rostral (gustatory) part (plate U4) receives taste from CN VII, IX, and X and relays to VPMpc thalamus; the caudal (cardiorespiratory/visceral) part (plates U2–U3) receives baroreceptor, chemoreceptor, and gut afferents from CN IX and X (bilateral lesion abolishes the baroreflex → severe labile hypertension)",
+        "uz": "Rostral (yuqori — ta'm) qismi (U4) VII, IX, X nervlardan ta'm sezgisini olib VPMpc talamusga uzatadi; kaudal (pastki — visseral) qismi (U2–U3) IX va X nervlardan baro-, xemo-, yurak va ichak signallarini oladi (ikki tomonlama zararlansa barorefleks yo'qolib, beqaror gipertenziya kelib chiqadi)"
+      },
+      {
+        "en": "The rostral part controls tongue protrusion; the caudal part controls shoulder elevation",
+        "uz": "Rostral qismi til chiqarishni, kaudal qismi esa yelka ko'tarishni boshqaradi"
+      },
+      {
+        "en": "The solitary nucleus is a pure motor column innervating the pharynx and larynx",
+        "uz": "Yolg'iz yo'l yadrosi halqum va hiqildoqni innervatsiya qiluvchi harakat ustunidir"
+      },
+      {
+        "en": "The solitary nucleus relays hearing from the cochlea to the inferior colliculus",
+        "uz": "Yolg'iz yo'l yadrosi chig'anoqdan pastki do'nglikka eshitishni uzatadi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "As described in `BRAINSTEM_STRUCTURES` (`sol`) and plates U2–U4, the rostral solitary nucleus (`sol` at U4) is the gustatory nucleus (taste from VII, IX, X → parabrachial / VPMpc thalamus → anterior insula), while the caudal/commissural solitary nucleus (U2–U3) integrates carotid-sinus baroreceptor (IX), aortic-arch/cardiopulmonary/GI (X) visceral afferents. Bilateral NTS destruction abolishes baroreflex buffering, causing neurogenic labile hypertension.",
+      "uz": "U2–U4 plastinkalarida ko'rsatilganidek, yolg'iz yo'l yadrosining (`sol`) rostral qismi (U4) VII, IX va X nervlardan ta'm sezgisini qabul qilib VPMpc talamusga uzatadi; kaudal qismi (U2–U3) esa IX va X nervlardan baro-, xemo-, o'pka va ichak visseral signallarini oladi (ikki tomonlama zararlansa barorefleks yo'qolib, beqaror arterial gipertenziya yuzaga keladi)."
+    },
+    "refs": ["sol", "pbc", "th-vpm", "n9-root", "n10-root"],
+    "plate": "medulla-rostral",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Medulla Oblongata",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551589/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-014",
+    "level": "resident",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "What is unique about the neurons of the mesencephalic trigeminal nucleus (`mes5`, plates K2, K3, O1) compared with all other primary somatosensory neurons in the human body?",
+      "uz": "Uch shoxli nervning mezensefal yadrosi (`mes5`, K2, K3, O1 plastinkalari) neyronlari inson tanasidagi boshqa barcha birlamchi sezuvchi neyronlardan qaysi noyob xususiyati bilan ajralib turadi?"
+    },
+    "options": [
+      {
+        "en": "They are the ONLY primary sensory (pseudounipolar) neurons whose cell bodies reside INSIDE the central nervous system (rather than in a peripheral ganglion), mediating jaw-muscle spindle proprioception and the afferent limb of the jaw-jerk reflex",
+        "uz": "Ular hujayra tanasi periferik tugunda emas, balki markaziy nerv tizimi (MNT) ICHIDA joylashgan YAGONA birlamchi sezuvchi (psevdounipolyar) neyronlar bo'lib, chaynov mushaklari proprioretsepsiyasi va jag' refleksining afferent qismini ta'minlaydi"
+      },
+      {
+        "en": "They are the only motor neurons that cross in the superior medullary velum",
+        "uz": "Ular yuqori miya pardasida kesishadigan yagona harakat neyronlaridir"
+      },
+      {
+        "en": "They secrete cerebrospinal fluid into the cerebral aqueduct",
+        "uz": "Ular Silviy suv yo'liga orqa miya suyuqligini ishlab chiqaradi"
+      },
+      {
+        "en": "They carry pain and temperature from the contralateral lower limb",
+        "uz": "Ular qarama-qarshi oyoqdan og'riq va harorat sezgisini tashiydi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "As noted in `BRAINSTEM_STRUCTURES` (`mes5`), the mesencephalic nucleus of V (running alongside the PAG and 4th ventricle in plates O1, K3, K2) consists of displaced neural-crest pseudounipolar primary afferent cell bodies inside the CNS. They innervate jaw-closer muscle spindles and periodontal ligaments, synapsing monosynaptically on the trigeminal motor nucleus (`mo5`) for the jaw-jerk reflex.",
+      "uz": "`mes5` tavsifida ko'rsatilganidek, uch shoxli nervning mezensefal yadrosi (K2, K3, O1 plastinkalari) MNT ichida joylashgan yagona birlamchi sezuvchi (psevdounipolyar) neyronlardir (xuddi MNT ichiga ko'chib kirgan gangliy kabi); ular chaynov mushaklari urchuqlari va tish boylamlaridan proprioretsepsiyani olib, jag' refleksining afferent qismini hosil qiladi."
+    },
+    "refs": ["mes5", "mo5", "n5-root"],
+    "plate": "pons-trigeminal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Cranial Nerve 5 (Trigeminal)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK482283/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-015",
+    "level": "resident",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "Why does a unilateral lesion of the brainstem auditory pathway ABOVE the cochlear nuclei (e.g. superior olive `so`, lateral lemniscus `ll`, or inferior colliculus `ic`) NOT cause unilateral deafness in one ear, and which brainstem site IS the only one that causes unilateral sensorineural deafness?",
+      "uz": "Nima sababdan eshitish yadrolaridan YUQORIDAGI (masalan, yuqori zaytun `so`, lateral lemnisk `ll` yoki pastki do'nglik `ic`) bir tomonlama ustun zararlanishi bitta quloqda karlik keltirib chiqarmaydi va miya ustunining qaysi joyi zararlansa bir tomonlama karlik yuz beradi?"
+    },
+    "options": [
+      {
+        "en": "Only a lesion at the CN VIII root (`n8-root`) or dorsal/ventral cochlear nuclei (`cochn`, plate U4, e.g. AICA stroke or CPA schwannoma) causes unilateral deafness; above the cochlear nuclei, fibres cross in the trapezoid body (`tb`) to BOTH superior olives and lateral lemnisci, so central lesions only impair binaural sound localization",
+        "uz": "Faqat VIII nerv ildizi (`n8-root`) yoki eshitish yadrolari (`cochn`, U4 plastinkasi — AICA infarkti yoki shvannoma) zararlansa bir tomonlama karlik bo'ladi; undan yuqorida tolalar trapetsiyasimon tana (`tb`) orqali ikkala yuqori zaytun va lateral lemniskka tarqalgani uchun markaziy o'choq faqat tovush manbaini aniqlashni buzadi"
+      },
+      {
+        "en": "A unilateral lesion of the inferior colliculus causes complete deafness of the ipsilateral ear",
+        "uz": "Pastki do'nglikning bir tomonlama zararlanishi o'sha tomondagi quloqni butunlay kar qiladi"
+      },
+      {
+        "en": "Auditory fibres never enter the brainstem and project directly from the cochlea to the temporal cortex",
+        "uz": "Eshitish tolalari miya ustuniga kirmasdan to'g'ridan-to'g'ri chakka po'stlog'iga boradi"
+      },
+      {
+        "en": "Only a lesion of the red nucleus causes unilateral deafness",
+        "uz": "Faqat qizil yadro zararlanishi bir tomonlama karlik beradi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "At the pontomedullary junction (plate U4), CN VIII (`n8-root`) terminates in the dorsal and ventral cochlear nuclei (`cochn`) draped over the inferior cerebellar peduncle. From there, axons cross in the trapezoid body (`tb`, plate K1) and project bilaterally to the superior olivary complexes (`so` — which compute interaural time and intensity differences) and up both lateral lemnisci (`ll`) to the inferior colliculi (`ic`). Hence unilateral deafness from a brainstem lesion localizes strictly to the CN VIII root or cochlear nuclei (typically an AICA/labyrinthine artery infarct).",
+      "uz": "U4 plastinkasida VIII nerv (`n8-root`) pastki miyacha oyoqchasi ustidagi eshitish yadrolarida (`cochn`) tugaydi; undan chiqqan ikkinchi neyronlar K1 da trapetsiyasimon tana (`tb`) orqali IKKALA tomondagi yuqori zaytun (`so`) va lateral lemniskka (`ll`) o'tadi. Shu bois eshitish yadrolaridan yuqoridagi bir tomonlama o'choq karlik bermaydi (faqat tovush yo'nalishini aniqlash buziladi); bir tomonlama karlik faqat VIII ildiz yoki `cochn` zararlanganda (masalan, AICA infarktida) kuzatiladi."
+    },
+    "refs": ["cochn", "n8-root", "tb", "so", "ll", "ic", "vestibulocochlear-nerve"],
+    "plate": "medulla-rostral",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Medulla Oblongata",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551589/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-016",
+    "level": "resident",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "What is the anatomical circuit of the direct and consensual pupillary light reflex at the midbrain–diencephalon junction (plate O3), and why does a dorsal midbrain (Parinaud) lesion cause light–near dissociation?",
+      "uz": "O'rta miya va oraliq miya chegarasida (O3 plastinkasi) qorachiqning to'g'ri va hamkor yorug'lik refleksi yoyi qaysi tuzilmalardan o'tadi hamda nima uchun dorsal o'rta miya (Parinaud) zararlanishida yorug'lik–yaqin dissotsiatsiyasi yuz beradi?"
+    },
+    "options": [
+      {
+        "en": "Retinal fibres travel via the brachium of the superior colliculus (`bsc`) to the olivary pretectal nucleus (`pretect`), which projects bilaterally (crossing in the posterior commissure `pc`) to BOTH Edinger–Westphal nuclei (`ew`) → CN III → ciliary ganglion → sphincter pupillae; dorsal compression of the pretectum/posterior commissure blocks the light reflex while sparing the more ventral near/accommodation pathway to Edinger–Westphal",
+        "uz": "To'r parda tolalari yuqori do'nglik dastasi (`bsc`) orqali pretektal sohaga (`pretect`), undan orqa komissura (`pc`) orqali IKKALA Edinger–Westphal yadrosiga (`ew`) → III nerv → kiprik tuguniga boradi; dorsal bosilish (pineal o'sma) pretektum va orqa komissurani zararlab yorug'lik refleksini yo'qotadi, ventralroqdan keluvchi yaqinga qarash (akkomodatsiya) yo'li esa saqlanib qoladi"
+      },
+      {
+        "en": "The light reflex relays in the lateral geniculate body to V1 and then descends through the pyramidal tract to the locus coeruleus",
+        "uz": "Yorug'lik refleksi LGN orqali V1 ga borib, so'ng piramida yo'li orqali ko'k dog'ga tushadi"
+      },
+      {
+        "en": "The Edinger–Westphal nucleus dilates the pupil via the sympathetic chain",
+        "uz": "Edinger–Westphal yadrosi simpatik zanjir orqali qorachiqni kengaytiradi"
+      },
+      {
+        "en": "The light reflex crosses in the optic chiasm only and has no brainstem commissure",
+        "uz": "Yorug'lik refleksi faqat ko'rish kesishmasida kesishadi va ustunda komissuraga ega emas"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plates O3 and O2, retinal ganglion cell axons bypass the LGN via the brachium of the superior colliculus (`bsc`) to enter the olivary pretectal nucleus (`pretect`), which projects uncrossed and crossed (via the posterior commissure `pc`) to both Edinger–Westphal nuclei (`ew`). In Parinaud syndrome (pineal tumour or hydrocephalus compressing dorsal O3), the pretectum/posterior commissure is compressed along with riMLF/INC — abolishing up-gaze and the pupillary light reflex while preserving pupillary constriction to near accommodation (which enters EW more ventrally).",
+      "uz": "O3 va O2 plastinkalarida to'r parda tolalari LGN ni chetlab, yuqori do'nglik dastasi (`bsc`) orqali pretektal yadroga (`pretect`) kiradi va u yerdan orqa komissura (`pc`) orqali ikkala Edinger–Westphal yadrosiga (`ew`) uzatiladi. Dorsal o'rta miya bosilganda (Parinaud sindromi) pretektum va orqa komissura (hamda vertikal qarash markazlari riMLF/INC) zararlanib, yuqoriga qarash falaji va qorachiqning yorug'likka javob bermay, yaqinga qaraganda torayishi (yorug'lik–yaqin dissotsiatsiyasi) kuzatiladi."
+    },
+    "refs": ["pretect", "pc", "ew", "n3", "bsc", "bs-pretectal-region", "posterior-commissure"],
+    "plate": "midbrain-pretectal",
+    "sources": [
+      {
+        "title": "Ruchalski & Hathout 2012, Radiol Res Pract — A medley of midbrain maladies: a brief review of midbrain anatomy and syndromology for radiologists",
+        "url": "https://doi.org/10.1155/2012/258524"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-017",
+    "level": "resident",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "In a patient with an enlarging posterior communicating artery (PCom) aneurysm or early uncal transtentorial herniation compressing the oculomotor nerve (CN III), why does the ipsilateral pupil dilate ('blown pupil') BEFORE extraocular muscle paralysis appears, whereas a diabetic microvascular CN III infarction typically spares the pupil?",
+      "uz": "Nima sababdan orqa biriktiruvchi arteriya (PCom) anevrizmasi yoki unkal churra III nervni tashqaridan bosganda eng birinchi bo'lib qorachiq kengayadi, diabetik mikrovaskulyar III nerv ishemiyasida esa qorachiq ko'pincha saqlanib qoladi?"
+    },
+    "options": [
+      {
+        "en": "Preganglionic parasympathetic pupillomotor fibres from the Edinger–Westphal nucleus travel superficially in the dorsomedial rim of the CN III nerve trunk (exposed to external compression by an aneurysm or uncus), whereas somatic motor fibres run in the deeper central core (vulnerable to vasa nervorum microvascular ischaemia)",
+        "uz": "Edinger–Westphal yadrosidan chiquvchi parasimpatik qorachiq tolalari III nerv o'zagining ustki (yuzaki dorsomedial) qavatida joylashgani uchun tashqi bosilishda (anevrizma, unkal churra) birinchi zararlanadi; ko'z mushaklarini harakatlantiruvchi somatik tolalar esa nervning ichki markazida joylashgan (diabetik ishemiyada zararlanadi)"
+      },
+      {
+        "en": "The pupil is innervated by the trochlear nerve (CN IV) on the dorsal midbrain",
+        "uz": "Qorachiq dorsal o'rta miyadagi g'altak nervi (IV) tomonidan innervatsiya qilinadi"
+      },
+      {
+        "en": "A PCom aneurysm stimulates the cervical sympathetic ganglion to cause active mydriasis",
+        "uz": "PCom anevrizmasi bo'yin simpatik tugunini qo'zg'atib qorachiqni kengaytiradi"
+      },
+      {
+        "en": "The Edinger–Westphal nucleus sits inside the cavernous sinus rather than the midbrain",
+        "uz": "Edinger–Westphal yadrosi o'rta miyada emas, g'ovakli sinus ichida joylashgan"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "As noted in `BRAINSTEM_STRUCTURES` (`ew`), parasympathetic pupilloconstrictor axons from the Edinger–Westphal nucleus ride along the superficial periphery of the oculomotor nerve trunk, Supplied by pial vessels, they are compressed first by a PCom aneurysm or herniating uncus ('surgical third': dilated unreactive pupil + ptosis + down-and-out eye), whereas microvascular ischaemia of the vasa nervorum hits the deep core ('medical third': pupil-sparing III palsy).",
+      "uz": "`ew` tavsifida ko'rsatilganidek, Edinger–Westphal yadrosidan keluvchi parasimpatik tolalar III nervning yuzaki qavatida joylashadi; shuning uchun tashqaridan bosilishda (PCom anevrizmasi yoki unkal churrada) eng birinchi bo'lib qorachiq kengayadi va yorug'likka javob bermay qoladi."
+    },
+    "refs": ["ew", "n3", "n3-root", "trunk-of-left-oculomotor-nerve", "posterior-communicating-artery"],
+    "plate": "midbrain-superior-colliculus",
+    "sources": [
+      {
+        "title": "Ruchalski & Hathout 2012, Radiol Res Pract — A medley of midbrain maladies",
+        "url": "https://doi.org/10.1155/2012/258524"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-018",
+    "level": "resident",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "What are the ten brainstem arousal nuclei mapped in the Harvard Ascending Arousal Network (AAN) Atlas v2.0 (`bstem` layer, plates K3, O1, O2) and their primary neurotransmitter systems?",
+      "uz": "Harvard Ascending Arousal Network (AAN) v2.0 atlasiga (`bstem` qatlami, K3, O1, O2 plastinkalari) kiritilgan miya ustunining uyg'onish yadrolari va ularning asosiy neyromediator tizimlari qaysilar?"
+    },
+    "options": [
+      {
+        "en": "Noradrenergic: locus coeruleus (LC); Serotonergic: dorsal raphe (DR) & median raphe (MnR); Dopaminergic: ventral tegmental area (VTA) & periaqueductal grey (PAG); Cholinergic/glutamatergic: pedunculopontine (PPN/PTg) & laterodorsal tegmental (LDTg) nuclei; Reticular/glutamatergic: parabrachial complex (PBC), oral pontine RF (PnO), & mesencephalic RF (mRt)",
+        "uz": "Noradrenergik: ko'k dog' (LC); Serotonergik: dorsal raphe (DR) va median raphe (MnR); Dofaminergik/modulyator: VTA va PAG; Xolinergik: pedunkulopontin (PPN/PTg) va laterodorsal tegmental (LDTg) yadrolar; Retikulyar/glutamatergik: parabraxial kompleks (PBC), oral pontin RF (PnO) va mezensefal RF (mRt)"
+      },
+      {
+        "en": "Hypoglossal, abducens, trochlear, oculomotor, facial, ambiguous, gracile, cuneate, dentate, and fastigial nuclei",
+        "uz": "Til osti, uzoqlashtiruvchi, g'altak, ko'zni harakatlantiruvchi, yuz, ikki ma'noli, nozik, ponasimon, tishsimon va chodirsimon yadrolar"
+      },
+      {
+        "en": "Caudate, putamen, GPe, GPi, STN, claustrum, amygdala, hippocampus, fornix, and mammillary body",
+        "uz": "Kaudat, putamen, GPe, GPi, STN, klaustrum, amigdala, gippokamp, fornix va so'rg'ichsimon tana"
+      },
+      {
+        "en": "VPL, VPM, LGN, MGN, pulvinar, VA, VL, anterior nucleus, reticular nucleus, and habenula",
+        "uz": "VPL, VPM, LGN, MGN, pulvinar, VA, VL, oldingi yadro, to'rsimon yadro va habenula"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "The `bstem` layer combines the Allen 3D brainstem subdivisions with the ten arousal nuclei of the Harvard AAN Atlas v2.0 (Edlow & Kinney 2023): midline DR, MnR, PAG, VTA and bilateral LC, LDTg, PTg (PPN), PBC, PnO, and mRt — the rostral brainstem network whose bilateral disruption in traumatic brain injury or basilar stroke causes coma.",
+      "uz": "`bstem` qatlamiga Harvard AAN v2.0 atlasining 10 ta uyg'oqlik yadrosi kiritilgan: o'rta chiziqda DR, MnR, PAG, VTA hamda ikki tomonda LC (noradrenalin), LDTg va PTg/PPN (atsetilxolin), PBC, PnO va mRt (retikulyar/glutamatergik); ushbu tarmoqning ikki tomonlama zararlanishi komaga olib keladi."
+    },
+    "refs": ["bs-locus-coeruleus-lc", "bs-dorsal-raphe-nucleus-dr", "bs-median-raphe-nucleus-mnr", "bs-periaqueductal-grey-pag", "bs-ventral-tegmental-area-vta", "bs-laterodorsal-tegmental-nucleus-ldtg", "bs-pedunculotegmental-pedunculopontine-nucleus-ptg", "bs-parabrachial-complex-pbc", "bs-pontine-reticular-formation-oral-part-pno", "bs-mesencephalic-reticular-formation-mrt"],
+    "plate": "pons-isthmus",
+    "sources": [
+      {
+        "title": "Edlow et al. 2024, Sci Transl Med — Multimodal MRI reveals brainstem connections that sustain wakefulness in human consciousness",
+        "url": "https://doi.org/10.1126/scitranslmed.adj4303"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-019",
+    "level": "resident",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "How do the horizontal gaze generators in the pons (`pprf` and `n6`, plate K1) differ from the vertical and torsional gaze generators at the midbrain–diencephalon junction (`rimlf` and `inc`, plate O3), and which neurodegenerative tauopathy selectively targets the vertical gaze centre?",
+      "uz": "Ko'prikdagi gorizontal qarash markazi (`pprf` va `n6`, K1 plastinkasi) o'rta miya–oraliq miya chegarasidagi vertikal qarash markazlaridan (`rimlf` va `inc`, O3 plastinkasi) qanday farq qiladi va qaysi neyrodegenerativ kasallik vertikal sakkadalarni erta falajlaydi?"
+    },
+    "options": [
+      {
+        "en": "PPRF burst neurons + CN VI nucleus in the caudal pons drive ipsilateral HORIZONTAL saccades; riMLF (burst generator) + interstitial nucleus of Cajal (INC, neural integrator) in the rostral midbrain/pretectum drive VERTICAL/torsional gaze and degenerate early in progressive supranuclear palsy (PSP, down-gaze first, 'hummingbird sign')",
+        "uz": "Kaudal ko'prikdagi PPRF va VI yadro o'sha tomonga GORIZONTAL sakkadalarni boshqaradi; rostral o'rta miyadagi riMLF ('portlovchi' generator) va Cajal interstitsial yadrosi (INC — integrator) esa VERTIKAL qarashni boshqaradi va progressiv supranuklear falajda (PSP — avval pastga qarash yo'qolishi, MRTda 'kolibri belgisi') erta zararlanadi"
+      },
+      {
+        "en": "PPRF drives vertical saccades and riMLF drives horizontal saccades",
+        "uz": "PPRF vertikal qarashni, riMLF esa gorizontal qarashni boshqaradi"
+      },
+      {
+        "en": "Both horizontal and vertical saccades are generated in the caudal medulla at the obex",
+        "uz": "Gorizontal va vertikal sakkadalar kaudal uzunchoq miyada (obexda) hosil bo'ladi"
+      },
+      {
+        "en": "PSP selectively destroys the abducens nerve root while sparing the midbrain",
+        "uz": "PSP o'rta miyani saqlab qolib, faqat VI nerv ildizini zararlaydi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "Horizontal saccades are generated in the caudal pons (plate K1) by burst neurons of the PPRF driving the ipsilateral abducens nucleus (`n6`). Vertical and torsional saccades are generated at the midbrain–diencephalon junction (plate O3) by burst neurons in the rostral interstitial nucleus of the MLF (`rimlf`) and held steady by the interstitial nucleus of Cajal (`inc`, projecting across the posterior commissure). Bilateral riMLF/INC involvement in top-of-the-basilar stroke or progressive supranuclear palsy (PSP, midbrain tegmental atrophy = 'hummingbird sign') causes vertical (especially downward) gaze palsy.",
+      "uz": "Gorizontal sakkadalar kaudal ko'prikda (K1) PPRF va VI yadro (`n6`) tomonidan, vertikal va torsion sakkadalar esa o'rta miya–oraliq miya chegarasida (O3) MLF ning rostral interstitsial yadrosi (`rimlf` — generator) va Cajal interstitsial yadrosi (`inc` — integrator) tomonidan boshqariladi. Progressiv supranuklear falajda (PSP, o'rta miya atrofiyasi — 'kolibri belgisi') yoki bazilyar arteriya uchi insultida riMLF/INC zararlanib, vertikal qarash falaji yuzaga keladi."
+    },
+    "refs": ["pprf", "n6", "rimlf", "inc", "pc", "mlf"],
+    "plate": "midbrain-pretectal",
+    "sources": [
+      {
+        "title": "Ruchalski & Hathout 2012, Radiol Res Pract — A medley of midbrain maladies",
+        "url": "https://doi.org/10.1155/2012/258524"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-020",
+    "level": "resident",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "In a comatose patient with severe brainstem compression, why does a transecting lesion ABOVE the red nucleus (plate O2) produce decorticate (upper-limb flexor) posturing, whereas a lesion BELOW the red nucleus (between the red nucleus and the vestibular/pontine reticular nuclei, plates O1–K2) produces decerebrate (four-limb extensor) posturing?",
+      "uz": "Og'ir miya jarohatida nima uchun qizil yadrodan YUQORIDAGI zararlanish (O2 plastinkasi) dekortikatsion (qo'llar bukilgan) holatni, qizil yadrodan PASTDAGI (qizil yadro bilan vestibulyar/pontin retikulyar yadrolar orasidagi, O1–K2) zararlanish esa detserebratsion (qo'l va oyoqlar yozilgan) rigidlikni keltirib chiqaradi?"
+    },
+    "options": [
+      {
+        "en": "Above the red nucleus, the intact rubrospinal tract (`rst`, crossing in the ventral tegmental decussation `vtd`) drives upper-limb flexors over the lower-limb extensor drive; below the red nucleus, the rubrospinal tract is cut and unopposed pontine reticulospinal (`PnO`) and lateral vestibulospinal (`vn` Deiters) tracts drive extensor tone in all four limbs",
+        "uz": "Qizil yadrodan yuqorida zararlanishda saqlanib qolgan rubrospinal trakt (`rst`) qo'l bukuvchilarini faollashtiradi (dekortikatsion holat); qizil yadrodan pastda esa rubrospinal trakt ham uzilib, ko'prik retikulospinal (`PnO`) va vestibulospinal (`vn` Deiters) yo'llarning yozuvchi (ekstenzor) tonusi ustun keladi (detserebratsion holat)"
+      },
+      {
+        "en": "Above the red nucleus the spinal cord is completely denervated; below the red nucleus the motor cortex is hyperactive",
+        "uz": "Qizil yadrodan yuqorida orqa miya to'liq falajlanadi, pastda esa harakat po'stlog'i kuchayadi"
+      },
+      {
+        "en": "The red nucleus directly inhibits the cerebellar Purkinje cells",
+        "uz": "Qizil yadro miyacha Purkinje hujayralarini bevosita tormozlaydi"
+      },
+      {
+        "en": "Decorticate posturing is caused by a lesion of the caudal medulla at U1",
+        "uz": "Dekortikatsion holat kaudal uzunchoq miya (U1) zararlanishidan kelib chiqadi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "As noted in `BRAINSTEM_STRUCTURES` (`rst` and `bs-pontine-reticular-formation-oral-part-pno`), the rubrospinal tract (`rst`, from the magnocellular red nucleus, crossing in the ventral tegmental decussation `vtd` at O2) facilitates upper-limb flexors. A lesion above the red nucleus spares `rst` (flexed arms + extended legs = decorticate); a lesion below the red nucleus removes `rst`, leaving the pontine reticulospinal (`PnO`) and lateral vestibulospinal (`vn`) antigravity extensor drive unopposed in all four limbs (decerebrate).",
+      "uz": "`rst` va `bs-pontine-reticular-formation-oral-part-pno` tavsiflarida ko'rsatilganidek, qizil yadrodan chiqib ventral tegmental kesishmada (`vtd`, O2) kesishuvchi rubrospinal trakt (`rst`) qo'l bukuvchi mushaklari tonusini kuchaytiradi. Qizil yadrodan yuqori zararlanishda `rst` saqlanib, qo'llar bukiladi (dekortikatsiya); qizil yadrodan pastki zararlanishda esa `rst` ham uzilib, pontin retikulospinal (`PnO`) va vestibulospinal (`vn`) ekstenzor ta'sir barcha oyoq-qo'llarni yozadi (detserebratsiya)."
+    },
+    "refs": ["rn", "rst", "vtd", "red-nucleus", "bs-pontine-reticular-formation-oral-part-pno", "vn"],
+    "plate": "midbrain-superior-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Mesencephalon (Midbrain)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551509/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-021",
+    "level": "expert",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "Compare three classic rostral midbrain syndromes at the superior colliculus level (plate O2, `midbrain-superior-colliculus`), all of which share an ipsilateral LEFT oculomotor (CN III) palsy (ptosis, eye down-and-out, dilated pupil) from involvement of the left CN III fascicles (`n3-root`): (1) left CN III palsy + right hemiplegia (including right lower face), (2) left CN III palsy + right cerebellar hemiataxia/asynergia without hemiplegia, and (3) left CN III palsy + right low-frequency resting/postural/intention (Holmes/rubral) tremor, choreoathetosis, and hemiparesis. Name the three syndromes and the exact structure hit alongside the left CN III fascicles in each:",
+      "uz": "Yuqori do'nglik darajasidagi rostral o'rta miya kesimida (O2 plastinkasi) chap III nerv tolalari (`n3-root`) zararlanishi tufayli uchala holatda ham CHAP III nerv falaji (ptoz, ko'z pastga-tashqariga, kengaygan qorachiq) mavjud: (1) chap III falaji + o'ng gemiplegiya, (2) chap III falaji + falajliksiz o'ng miyacha gemiataksiyasi, (3) chap III falaji + o'ng qo'lda qo'pol (Holmes/rubral) tremor, xoreoatetoz va gemiparez. Ushbu uchta sindromni va har birida chap III nerv tolalari bilan birga zararlangan tuzilmani aniqlang:"
+    },
+    "options": [
+      {
+        "en": "(1) Weber syndrome: left crus cerebri (`crus-cst`); (2) Claude syndrome: left red nucleus (`rn`) / crossed superior cerebellar peduncle (dentato-rubro-thalamic) fibres; (3) Benedikt syndrome: left red nucleus + substantia nigra + adjacent crus cerebri / medial lemniscus",
+        "uz": "(1) Weber sindromi: chap miya oyoqchasi (`crus-cst`); (2) Claude sindromi: chap qizil yadro (`rn`) va allaqachon kesishib o'tgan yuqori miyacha oyoqchasi tolalari; (3) Benedikt sindromi: chap qizil yadro + qora modda + yondosh miya oyoqchasi"
+      },
+      {
+        "en": "(1) Millard–Gubler: basis pontis; (2) Foville: PPRF; (3) Wallenberg: inferior cerebellar peduncle",
+        "uz": "(1) Millard–Gubler: ko'prik asosi; (2) Foville: PPRF; (3) Wallenberg: pastki miyacha oyoqchasi"
+      },
+      {
+        "en": "(1) Dejerine: pyramid; (2) Parinaud: posterior commissure; (3) Wernekink: SCP decussation",
+        "uz": "(1) Dejerine: piramida; (2) Parinaud: orqa komissura; (3) Wernekink: SCP kesishmasi"
+      },
+      {
+        "en": "(1) Claude: crus cerebri; (2) Weber: red nucleus; (3) Benedikt: inferior olive",
+        "uz": "(1) Claude: miya oyoqchasi; (2) Weber: qizil yadro; (3) Benedikt: pastki zaytun"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plate O2 (`midbrain-superior-colliculus`), the CN III fascicles (`n3-root`) sweep ventrally through the red nucleus (`rn`), medial substantia nigra (`snc`/`snr`), and medial crus cerebri (`crus`). Ventral infarction (crus + III) = Weber syndrome (ipsilateral III + contralateral hemiplegia). Dorsal/paramedian tegmental infarction (red nucleus/crossed SCP fibres + III) = Claude syndrome (ipsilateral III + contralateral ataxia, because SCP fibres already crossed at O1). Larger tegmento-ventral infarction (red nucleus + SN + crus + III) = Benedikt syndrome (ipsilateral III + contralateral Holmes tremor/choreoathetosis ± hemiparesis).",
+      "uz": "O2 plastinkasida III nerv tolalari (`n3-root`) qizil yadro (`rn`) va qora modda orqali miya oyoqchasi (`crus`) yonidan chiqadi: (1) Ventral o'choq (oyoqcha + III) — Weber sindromi (chap III falaji + o'ng gemiplegiya); (2) Tegmental o'choq (qizil yadro / O1 da allaqachon kesishgan SCP tolalari + III) — Claude sindromi (chap III falaji + o'ng ataksiya); (3) Kengroq tegmental-ventral o'choq (qizil yadro + qora modda + oyoqcha + III) — Benedikt sindromi (chap III falaji + o'ng Holmes tremori/xoreoatetoz va gemiparez)."
+    },
+    "refs": ["n3", "n3-root", "rn", "crus-cst", "snc", "red-nucleus", "bs-cerebral-peduncle-crus-cerebri"],
+    "plate": "midbrain-superior-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Weber Syndrome",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK559158/"
+      },
+      {
+        "title": "StatPearls — Benedikt Syndrome",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK560509/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-022",
+    "level": "expert",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "A 55-year-old patient with basilar artery thrombosis (or central pontine myelinolysis after over-rapid correction of hyponatraemia) suffers a bilateral infarction of the ventral pons (`basis-pontis`, plate K2) while the dorsal pontine tegmentum and midbrain above are spared. What is the patient's neurological state?",
+      "uz": "Bazilyar arteriya trombozi (yoki giponatriyemiyani haddan tashqari tez to'g'rilash oqibatida markaziy pontin miyelinoliz) tufayli 55 yoshli bemorda dorsal tegmentum va o'rta miya saqlangan holda ko'prikning ventral asosi (`basis-pontis`, K2 plastinkasi) ikki tomonlama zararlandi. Bemor qanday nevrologik holatda bo'ladi?"
+    },
+    "options": [
+      {
+        "en": "Locked-in syndrome: complete quadriplegia (bilateral corticospinal bundles `basis-cst`) and anarthria/aphonia (bilateral corticobulbar fibres) with fully preserved consciousness (spared dorsal tegmental arousal network), vertical eye movements, and voluntary blinking (spared midbrain riMLF/CN III)",
+        "uz": "'Qamalib qolish' (locked-in) sindromi: to'liq tetraplegiya (ikki tomonlama `basis-cst`) va anartriya (ikki tomonlama kortikobulbar tolalar); ammo dorsal tegmentum va o'rta miya saqlangani uchun hush to'liq joyida bo'lib, bemor faqat vertikal ko'z harakatlari va ko'z pirpiratish orqali muloqot qila oladi"
+      },
+      {
+        "en": "Deep coma with fixed dilated pupils and absent corneal and vestibulo-ocular reflexes",
+        "uz": "Kengaygan reaksiyasiz qorachiqlar bilan chuqur koma"
+      },
+      {
+        "en": "Akinetic mutism with normal limb strength and intact speech repetition",
+        "uz": "Qo'l-oyoq kuchi saqlangan holda akinetik mutizm"
+      },
+      {
+        "en": "Bilateral cerebellar ataxia and deafness with normal limb strength",
+        "uz": "Oyoq-qo'l kuchi normal bo'lib, ikki tomonlama ataksiya va karlik"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plate K2 (`pons-trigeminal`), the ventral basis pontis (`basis-pontis`) carries the descending corticospinal and corticobulbar bundles (`basis-cst`), while the ascending arousal nuclei (LC, raphe, PnO, PBC) sit dorsally in the pontine tegmentum (`tegm-pons`) and vertical gaze/blinking sit rostrally in the midbrain. Bilateral ventral pontine destruction therefore causes quadriplegia, facial/bulbar paralysis, and horizontal gaze palsy while leaving the patient fully conscious and able to communicate via vertical eye movements and blinking ('locked-in syndrome').",
+      "uz": "K2 plastinkasida ko'prikning ventral asosi (`basis-pontis`) barcha tushuvchi kortikospinal va kortikobulbar tutamlarni (`basis-cst`) o'tkazadi; uyg'oqlik tizimi esa dorsal tegmentumda (`tegm-pons`), vertikal ko'z harakatlari esa o'rta miyada joylashgan. Shu sababli ikki tomonlama ko'prik asosi infarkti yoki miyelinolizida bemor hushi to'liq saqlangan holda tetraplegiya va anartriyaga tushib, faqat ko'zini tepaga-pastga harakatlantira oladi ('qamalib qolish' — locked-in sindromi)."
+    },
+    "refs": ["basis-pontis", "basis-cst", "tegm-pons", "bs-basilar-part-of-pons", "bs-pontine-tegmentum", "trunk-of-basilar-artery"],
+    "plate": "pons-trigeminal",
+    "sources": [
+      {
+        "title": "StatPearls — Neuroanatomy, Pons",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK560589/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-023",
+    "level": "expert",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "At the caudal pontine level (plate K1, `pons-facial-colliculus`), distinguish the anatomical lesion and clinical triad of (1) Millard–Gubler syndrome (ventral caudal pons) from (2) Foville syndrome (dorsal caudal pontine tegmentum):",
+      "uz": "Kaudal ko'prik darajasida (K1 plastinkasi, `pons-facial-colliculus`) (1) Millard–Gubler sindromi (ventral kaudal ko'prik) va (2) Foville sindromining (dorsal kaudal ko'prik tegmentumi) anatomik o'chog'i hamda klinik belgilarini farqlang:"
+    },
+    "options": [
+      {
+        "en": "(1) Millard–Gubler (ventral basis/tegmental junction): ipsilateral peripheral CN VII root (`n7-root`) ± CN VI fascicle (`n6-root`, lateral rectus abduction weakness only) + contralateral hemiplegia (`basis-cst`); (2) Foville (dorsal tegmentum at facial colliculus): ipsilateral conjugate horizontal GAZE palsy (CN VI nucleus `n6` / `pprf`) + ipsilateral peripheral CN VII palsy (internal genu `n7-genu`) ± contralateral hemiparesis/hemisensory loss",
+        "uz": "(1) Millard–Gubler (ventral ko'prik): o'sha tomonda periferik VII falaji (`n7-root`) ± VI tolasi falaji (`n6-root` — faqat bitta ko'z tashqariga bormaydi) + qarama-qarshi gemiplegiya (`basis-cst`); (2) Foville (dorsal tegmentum / yuz do'ngligi): o'sha tomonga gorizontal QARASH falaji (VI yadrosi `n6` / `pprf`) + o'sha tomonda periferik VII falaji (ichki tizza `n7-genu`) ± qarama-qarshi gemiparez"
+      },
+      {
+        "en": "(1) Millard–Gubler: ipsilateral CN III palsy + contralateral hemiplegia; (2) Foville: ipsilateral CN XII palsy + contralateral hemiplegia",
+        "uz": "(1) Millard–Gubler: III nerv falaji + gemiplegiya; (2) Foville: XII nerv falaji + gemiplegiya"
+      },
+      {
+        "en": "(1) Millard–Gubler causes vertical gaze palsy; (2) Foville causes bitemporal hemianopia",
+        "uz": "(1) Millard–Gubler vertikal qarash falajini, (2) Foville esa bitemporal gemianopiyani beradi"
+      },
+      {
+        "en": "Both syndromes affect only the central lower face and spare the forehead",
+        "uz": "Ikkala sindrom ham peshonani saqlab, faqat yuzning pastki qismini falajlaydi"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plate K1, a ventral paramedian/short-circumferential lesion catches the exiting CN VII root (`n7-root`) and CN VI fascicles (`n6-root`) with the corticospinal bundles (`basis-cst`) in the basis pontis = Millard–Gubler syndrome (ipsilateral LMN facial palsy, ipsilateral lateral rectus abduction palsy, contralateral hemiplegia). A dorsal tegmental lesion at the facial colliculus catches the abducens nucleus (`n6`) / PPRF (`pprf`) and the looping internal genu of VII (`n7-genu`) = Foville syndrome (ipsilateral conjugate horizontal GAZE palsy + ipsilateral LMN facial palsy ± contralateral hemiparesis).",
+      "uz": "K1 plastinkasida ventral o'choq chiqib ketayotgan VII (`n7-root`) va VI (`n6-root`) nerv tolalarini ko'prik asosidagi kortikospinal tutamlar (`basis-cst`) bilan birga zararlaydi — Millard–Gubler sindromi (o'sha tomonda periferik VII va VI abduksiya falaji + qarama-qarshi gemiplegiya). Dorsal tegmentumdagi (yuz do'ngligidagi) o'choq esa VI yadroni (`n6` / `pprf`) va uning ustidan aylangan VII ichki tizzasini (`n7-genu`) zararlaydi — Foville sindromi (o'sha tomonga gorizontal QARASH falaji + periferik VII falaji ± qarama-qarshi gemiparez)."
+    },
+    "refs": ["n6", "n6-root", "n7", "n7-genu", "n7-root", "pprf", "basis-cst"],
+    "plate": "pons-facial-colliculus",
+    "sources": [
+      {
+        "title": "StatPearls — Millard-Gubler Syndrome",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK532907/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-024",
+    "level": "expert",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "Two lateral brainstem strokes both present with ipsilateral facial pain/temperature loss (spinal V), contralateral body pain/temperature loss (ALS), vertigo/nystagmus (vestibular nuclei), ipsilateral Horner syndrome, and ipsilateral limb ataxia. Patient A also has severe dysphagia, hoarseness, and an absent gag reflex (palate pulls to the normal side), with normal hearing and normal facial strength. Patient B has NO dysphagia or hoarseness, but has complete ipsilateral peripheral facial paralysis (CN VII) and ipsilateral sensorineural deafness/tinnitus (CN VIII). Localize Patient A and Patient B to their exact plates and arteries:",
+      "uz": "Miya ustunining lateral qismidagi ikki insultda ham o'sha tomonda yuzda og'riq/harorat yo'qolishi (spinal V), qarama-qarshi tanada og'riq/harorat yo'qolishi (ALS), bosh aylanishi/nistagm, o'sha tomonda Horner sindromi va o'sha tomonda ataksiya mavjud. A bemorda qo'shimcha ravishda kuchli disfagiya, ovoz bo'g'iqligi va qusish refleksi yo'qligi bor (eshitish va yuz mimikasi normal). B bemorda esa yutish va ovoz normal, biroq o'sha tomonda to'liq periferik yuz falaji (VII) va o'sha quloqda karlik (VIII) bor. A va B bemorlardagi o'choq darajasi (plastinkasi) hamda arteriyasini toping:"
+    },
+    "options": [
+      {
+        "en": "Patient A: open mid-olivary medulla (plate U3) — PICA/vertebral occlusion (Wallenberg syndrome, hitting nucleus ambiguus `amb` and ICP); Patient B: lateral pontomedullary/caudal pons (plates U4/K1) — AICA occlusion (hitting CN VII, CN VIII/cochlear nuclei `cochn`/labyrinthine artery, and MCP)",
+        "uz": "A bemor: ochiq uzunchoq miya (U3 plastinkasi) — PICA/umurtqa arteriyasi infarkti (Wallenberg sindromi: ikki ma'noli yadro `amb` va ICP zararlangan); B bemor: rostral uzunchoq miya / kaudal ko'prik (U4/K1 plastinkalari) — AICA infarkti (VII nerv, VIII nerv/eshitish yadrolari `cochn`/labirint arteriyasi va MCP zararlangan)"
+      },
+      {
+        "en": "Patient A: rostral pons (plate K3, SCA); Patient B: rostral midbrain (plate O2, PCA)",
+        "uz": "A bemor: rostral ko'prik (K3, SCA); B bemor: rostral o'rta miya (O2, PCA)"
+      },
+      {
+        "en": "Patient A: AICA occlusion; Patient B: PICA occlusion",
+        "uz": "A bemor: AICA infarkti; B bemor: PICA infarkti"
+      },
+      {
+        "en": "Both patients have anterior spinal artery occlusion at U2",
+        "uz": "Ikkala bemorda ham U2 darajasida oldingi orqa miya arteriyasi tiqilgan"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "As contrasted on plates U3 and U4 (`AICA (lateral pontomedullary) syndrome`), both PICA (lateral medulla, U3) and AICA (lateral pontomedullary junction/caudal pons, U4–K1) infarcts catch spinal V, ALS, vestibular nuclei, descending sympathetics (Horner), and a cerebellar peduncle (ICP vs MCP). The clinical separator is the cranial nerve level: PICA hits nucleus ambiguus (`amb`, CN IX/X → dysphagia, hoarseness, absent gag), whereas AICA (giving off the internal auditory/labyrinthine artery) hits CN VII and CN VIII/cochlear nuclei (`cochn` → ipsilateral facial palsy + ipsilateral deafness).",
+      "uz": "U3 va U4 plastinkalarida taqqoslanganidek, PICA (U3 — lateral medulla, Wallenberg) va AICA (U4/K1 — lateral pontomedullyar) infarktlarining ikkalasida ham spinal V, ALS, vestibulyar yadrolar, simpatik tolalar (Horner) va miyacha oyoqchasi zararlanadi. Ularni ajratuvchi asosiy belgi: PICA infarktida ikki ma'noli yadro (`amb`, IX–X) zararlanib disfagiya va ovoz xirillashi bo'ladi; AICA infarktida esa yuz nervi (VII) va eshitish yadrolari (`cochn`, VIII / labirint arteriyasi) zararlanib, o'sha tomonda periferik yuz falaji va bir tomonlama karlik yuzaga keladi."
+    },
+    "refs": ["amb", "icp", "cochn", "n8-root", "n7-root", "mcp", "posterior-inferior-cerebellar-artery", "anterior-inferior-cerebellar-artery"],
+    "plate": "medulla-rostral",
+    "sources": [
+      {
+        "title": "StatPearls — Lateral Medullary Syndrome (Wallenberg Syndrome)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK551670/"
+      }
+    ]
+  },
+  {
+    "id": "q-brainstem-025",
+    "level": "expert",
+    "topic": "brainstem",
+    "type": "mcq",
+    "q": {
+      "en": "A 64-year-old patient suffers an embolic stroke at the caudal midbrain tegmentum (inferior colliculus level, plate O1, `midbrain-inferior-colliculus`). On examination, he has BILATERAL cerebellar limb and gait ataxia (dysmetria and intention tremor on both sides) and bilateral internuclear ophthalmoplegia; four months later, he develops a rhythmic 2 Hz involuntary palatal tremor (myoclonus) and T2 hyperintensity with enlargement of both inferior olivary nuclei on U3 MRI. Which single midline structure at plate O1 was infarcted to cause bilateral ataxia and interrupt the Guillain–Mollaret triangle?",
+      "uz": "64 yoshli bemor kaudal o'rta miya tegmentumi darajasida (pastki do'nglik — O1 plastinkasi, `midbrain-inferior-colliculus`) embolik insult o'tkazdi. Ko'rikda IKKI TOMONLAMA miyacha ataksiyasi (ikkala qo'l va oyoqda dismetriya va intension tremor) hamda internuklear oftalmoplegiya aniqlandi; to'rt oydan so'ng esa bemorda ritmik tanglay tremori (mioklonusi) va U3 MRTsida pastki zaytun yadrolarining gipertrofik kattalashishi paydo bo'ldi. O1 kesimidagi qaysi o'rta chiziq tuzilmasi zararlanishi ushbu sindromni va Guillain–Mollaret uchburchagi uzilishini keltirib chiqargan?"
+    },
+    "options": [
+      {
+        "en": "Decussation of the superior cerebellar peduncles (`scp-dec`, Wernekink commissure syndrome at plate O1), interrupting dentato-rubro-thalamic and dentato-rubro-olivary fibres from both cerebellar hemispheres",
+        "uz": "Yuqori miyacha oyoqchalari kesishmasi (`scp-dec` — O1 plastinkasidagi Wernekink komissurasi sindromi); u ikkala miyacha yarim sharidan chiquvchi dentato-rubro-talamik va dentato-rubro-olivar tolalarni bir joyda uzib qo'yadi"
+      },
+      {
+        "en": "Pyramidal decussation (`pyr-dec` at plate U1)",
+        "uz": "Piramidalar kesishmasi (`pyr-dec` — U1 plastinkasi)"
+      },
+      {
+        "en": "Sensory decussation of the internal arcuate fibres (`ia` at plate U2)",
+        "uz": "Ichki yoysimon tolalarning sezgi kesishmasi (`ia` — U2 plastinkasi)"
+      },
+      {
+        "en": "Trapezoid body (`tb` at plate K1)",
+        "uz": "Trapetsiyasimon tana (`tb` — K1 plastinkasi)"
+      }
+    ],
+    "answer": 0,
+    "why": {
+      "en": "On plate O1 (`midbrain-inferior-colliculus`), the superior cerebellar peduncles from both dentate/interposed nuclei cross the midline tegmentum in the decussation of the superior cerebellar peduncles (`scp-dec`, Wernekink commissure). A small paramedian infarct here catches both crossing cerebellar outflows simultaneously — producing rare bilateral cerebellar ataxia, MLF involvement (INO), and interruption of the Guillain–Mollaret triangle (dentate → SCP → red nucleus → central tegmental tract → inferior olive), leading months later to hypertrophic olivary degeneration and palatal tremor.",
+      "uz": "O1 plastinkasida (`midbrain-inferior-colliculus`) ikkala miyacha yarim sharidan chiquvchi yuqori miyacha oyoqchalari o'rta chiziq tegmentumida kesishadi (`scp-dec` — Wernekink komissurasi). Shu yerdagi paramedian infarkt ikkala miyacha chiqishini birdan uzib, ikki tomonlama miyacha ataksiyasini (Wernekink komissurasi sindromi), MLF zararlanishi tufayli INO ni va Guillain–Mollaret uchburchagi (tishsimon yadro → SCP → qizil yadro → markaziy tegmental trakt → pastki zaytun) uzilishi tufayli kechikkan gipertrofik zaytun degeneratsiyasi hamda tanglay tremorini keltirib chiqaradi."
+    },
+    "refs": ["scp-dec", "scp", "ctt", "ion", "mlf", "bs-superior-cerebellar-peduncle", "bs-inferior-olive"],
+    "plate": "midbrain-inferior-colliculus",
+    "sources": [
+      {
+        "title": "Ruchalski & Hathout 2012, Radiol Res Pract — A medley of midbrain maladies",
+        "url": "https://doi.org/10.1155/2012/258524"
+      }
+    ]
+  }
+]
