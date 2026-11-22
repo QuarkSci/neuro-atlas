@@ -40,6 +40,8 @@ export interface AtlasState {
   theme: Theme
   /** Fresh-tissue colours and lighting, or the didactic atlas palette. A preference: survives reset. */
   colorMode: ColorMode
+  /** Contact shadows in the creases (screen-space AO) — a preference, off by default on phones. */
+  ao: boolean
   /** Systems currently shown. */
   visible: SystemId[]
   /** Atlas layers currently shown (independent of systems). */
@@ -87,6 +89,7 @@ export interface AtlasState {
   setLang: (l: Lang) => void
   setTheme: (t: Theme) => void
   setColorMode: (m: ColorMode) => void
+  setAo: (on: boolean) => void
   toggleSystem: (id: SystemId) => void
   showOnly: (ids: SystemId[]) => void
   toggleLayer: (id: LayerId) => void
@@ -150,6 +153,14 @@ const initialTheme = (): Theme => {
   } catch {}
   applyTheme(theme)
   return theme
+}
+
+const initialAo = (): boolean => {
+  try {
+    const v = localStorage.getItem('na:ao')
+    if (v) return v === '1'
+  } catch {}
+  return typeof window === 'undefined' || !window.matchMedia('(max-width: 767px)').matches
 }
 
 const initialColorMode = (): ColorMode => {
@@ -230,6 +241,7 @@ export const useAtlas = create<AtlasState>((set) => ({
   lang: initialLang(),
   theme: initialTheme(),
   colorMode: initialColorMode(),
+  ao: initialAo(),
   sidebar: initialSidebar(),
   ...sceneDefaults,
   resetTick: 0,
@@ -249,6 +261,12 @@ export const useAtlas = create<AtlasState>((set) => ({
     } catch {}
     applyTheme(theme)
     set({ theme })
+  },
+  setAo: (ao) => {
+    try {
+      localStorage.setItem('na:ao', ao ? '1' : '0')
+    } catch {}
+    set({ ao })
   },
   setColorMode: (colorMode) => {
     try {

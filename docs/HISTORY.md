@@ -1301,3 +1301,12 @@ savolda eng uzun, ishonarsiz distraktorlar, 57 savolda kod identifikatorlari. Ma
 - PhD/neyroxirurg qatlami: ekspert daraja klinik lokalizatsiya keyslari, kalibratsiya (xavfli "ishonchli xato"), takrorlash oraliqlari.
 - Tekshirildi: engine skripti (bir urug' = bir deck, weak/Leitner, variant o'rni taqsimoti, Anki matni), UI (qora va yorug' rejim, 3D/plastinka), tsc, build,
   audit-lesions 0, audit-pick 0. Tekshirilmadi: telefon kengligi, foydalanuvchi o'z brauzerida. Savollar sifati — AG-5b.
+
+## R2 — burmalardagi soyalar (2026-11-22)
+
+SSAO (three GTAOPass, alohida chunk). Frame odatdagidek (`renderer.render`) chiziladi, so'ng `gtaoMap` (depth+normal dan, 24 namuna, denoise)
+`CustomBlending` (Zero, SrcColor) bilan ustiga ko'paytiriladi — EffectComposer/OutputPass ishlatilmadi: u fonni ham ton egri chizig'idan o'tkazib
+yoritib yuborardi (sinab ko'rildi). Radius 4 mm (burma kengligi 2–6 mm). `aoWanted`: model yig'ilgan, kamera 220 ms tinch, kesim/tarqatish/peel/ajratish/dars/
+plastinka ko'ruvchisi yo'q (AO o'tishi har meshni qattiq va kesilmagan deb ko'radi). Kalit (kamera+ko'rinish) o'zgarmasa AO qayta hisoblanmaydi.
+Store `ao` (`na:ao`), menyu «Burmalardagi soyalar». Rad etilgan yo'l — vertexga pishirish (BVH, 1.0M vertex; qo'shni qismlar tutashgani uchun tarqatishda xato).
+QOLDI: haqiqiy GPU'da kadr vaqti; telefonda sinov; LG-3.

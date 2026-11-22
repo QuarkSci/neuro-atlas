@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, Check, Ellipsis, Info, Languages, Palette, SunMoon, PanelLeft, RotateCw, Search, Slice, Sparkles } from 'lucide-react'
+import { Box, Check, Ellipsis, Info, Languages, Palette, SunMoon, Sun, PanelLeft, RotateCw, Search, Slice, Sparkles } from 'lucide-react'
 import { LEAF_PARTS } from '@/data'
 import { useT } from '@/i18n'
 import { useAtlas, type View } from '@/store/useAtlas'
@@ -87,7 +87,8 @@ export function TabBar() {
  */
 export function ViewGroup() {
   const t = useT()
-  const { view, setView, explode, cutaway, setCutaway, autoRotate, setAutoRotate, isolate, lang, setLang, setAboutOpen, colorMode, setColorMode, theme, setTheme } = useAtlas()
+  const { view, setView, explode, cutaway, setCutaway, autoRotate, setAutoRotate, isolate, lang, setLang, setAboutOpen, colorMode, setColorMode, ao, setAo, theme, setTheme } =
+    useAtlas()
   const [open, setOpen] = useState<'view' | 'more' | null>(null)
   const aiOpen = useAI((s) => s.open)
   const toggleAI = useAI((s) => s.toggle)
@@ -206,6 +207,19 @@ export function ViewGroup() {
               </button>
               <button className={colorMode === 'atlas' ? 'active' : ''} aria-pressed={colorMode === 'atlas'} onClick={() => setColorMode('atlas')}>
                 {t.colourAtlas}
+              </button>
+            </div>
+          </div>
+          <div className="menu-row">
+            <span className="menu-label">
+              <Sun size={15} /> {t.creaseShadows}
+            </span>
+            <div className="seg" role="group" aria-label={t.creaseShadows}>
+              <button className={ao ? 'active' : ''} aria-pressed={ao} onClick={() => setAo(true)}>
+                {t.on}
+              </button>
+              <button className={!ao ? 'active' : ''} aria-pressed={!ao} onClick={() => setAo(false)}>
+                {t.off}
               </button>
             </div>
           </div>

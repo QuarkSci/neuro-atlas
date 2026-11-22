@@ -55,6 +55,8 @@ export interface SceneSnapshot {
   theme: 'dark' | 'light'
   /** Fresh-tissue look or the didactic atlas palette (see materials.ts). */
   colorMode: ColorMode
+  /** Screen-space ambient occlusion on (still frames of the assembled model only). */
+  ao: boolean
 }
 
 export interface SceneCallbacks {
@@ -233,6 +235,16 @@ export class BrainScene {
   private modelCentre = new T.Vector3()
   private modelRadius = 100
   private seed = 0
+  /** Screen-space AO: built on first use (its code is a separate chunk), skipped while the camera moves. */
+  private aoPipe: {
+    pass: import('three/examples/jsm/postprocessing/GTAOPass.js').GTAOPass
+    quad: import('three/examples/jsm/postprocessing/Pass.js').FullScreenQuad
+    mat: T.ShaderMaterial
+  } | null = null
+  private aoLoading = false
+  private aoKey = ''
+  private interacting = false
+  private aoTimer = 0
   /** Smoothed explode amount that chases the store value. */
   private amount = 0
   private lastFitAmount = -1
@@ -310,7 +322,18 @@ export class BrainScene {
     c.target.copy(this.modelCentre)
     this.camera.position.copy(this.modelCentre).add(new T.Vector3(300, 150, 350))
     c.addEventListener('change', () => (this.dirty = true))
-    c.addEventListener('start', () => (this.fly = null))
+    c.addEventListener('start', () => {
+      this.fly = null
+      this.interacting = true
+    })
+    // While the camera moves frames are plain; the occlusion pass joins once it has rested.
+    c.addEventListener('end', () => {
+      window.clearTimeout(this.aoTimer)
+      this.aoTimer = window.setTimeout(() => {
+        this.interacting = false
+        this.dirty = true
+      }, 220)
+    })
 
     // Image-based lighting from a neutral studio, plus key, rim and fill lights.
     const pmrem = new T.PMREMGenerator(r)
@@ -465,6 +488,12 @@ export class BrainScene {
   dispose() {
     this.disposed = true
     cancelAnimationFrame(this.frame)
+    window.clearTimeout(this.aoTimer)
+    if (this.aoPipe) {
+      this.aoPipe.pass.dispose()
+      this.aoPipe.quad.dispose()
+      this.aoPipe.mat.dispose()
+    }
     this.observer.disconnect()
     const el = this.renderer.domElement
     el.removeEventListener('pointerdown', this.onDown)
@@ -643,6 +672,7 @@ export class BrainScene {
     this.camera.aspect = w / h
     this.camera.updateProjectionMatrix()
     this.renderer.setSize(w, h)
+    this.aoPipe?.pass.setSize(w, h)
     for (const m of this.markers) m.material.resolution.set(w, h)
     for (const f of this.flows) for (const l of f.lines) (l.material as LineMaterial).resolution.set(w, h)
     this.markerInsets = null
@@ -1804,11 +1834,77 @@ export class BrainScene {
     if (this.dirty) this.settle = Math.max(this.settle, 3)
     if (this.settle > 0) {
       this.settle--
-      this.renderer.render(this.scene, this.camera)
+      this.draw(s)
       this.updateLabels()
       this.updateMarkers()
       this.updateLessonLabels()
       this.dirty = false
+    }
+  }
+
+  /**
+   * Crease shadows only where they are right: the model whole (nothing exploded, peeled, cut, isolated or
+   * in a lesson — the occlusion pass sees every mesh as solid and unclipped) and the camera at rest.
+   */
+  private aoWanted(s: SceneSnapshot) {
+    return s.ao && !this.interacting && this.amount < 0.02 && this.peel < 0.005 && !s.cutaway && !s.isolate && !s.lesson && !this.cutKey && !s.sectionId
+  }
+
+  private draw(s: SceneSnapshot) {
+    // The frame is drawn as ever (tone curve, MSAA, background untouched); the occlusion is computed
+    // from depth and normals and multiplied over it.
+    this.renderer.render(this.scene, this.camera)
+    if (!this.aoWanted(s)) return
+    if (!this.aoPipe) {
+      if (!this.aoLoading) this.loadAo()
+      return
+    }
+    const { pass, quad, mat } = this.aoPipe
+    // Atlas colours are flat and bright: the creases get a lighter touch there.
+    mat.uniforms.strength.value = s.colorMode === 'real' ? 1 : 0.7
+    // Depth and normals cost a second pass over every mesh: redo them only when the view or what is shown changed
+    // (hover and selection fades repaint the colours, not the creases).
+    const key = `${this.camera.matrixWorld.elements.join()}|${this.camera.projectionMatrix.elements[0]}|${this.host.clientWidth}x${this.host.clientHeight}|${s.visible.join()}|${JSON.stringify(s.layers)}|${this.parts.length}`
+    if (key !== this.aoKey) {
+      pass.render(this.renderer, null as unknown as T.WebGLRenderTarget, null as unknown as T.WebGLRenderTarget, 0, false)
+      this.aoKey = key
+    }
+    mat.uniforms.tAO.value = pass.gtaoMap
+    this.renderer.setRenderTarget(null)
+    const auto = this.renderer.autoClear
+    this.renderer.autoClear = false
+    quad.render(this.renderer)
+    this.renderer.autoClear = auto
+  }
+
+  private async loadAo() {
+    this.aoLoading = true
+    try {
+      const [{ GTAOPass }, { FullScreenQuad }] = await Promise.all([import('three/examples/jsm/postprocessing/GTAOPass.js'), import('three/examples/jsm/postprocessing/Pass.js')])
+      if (this.disposed) return
+      const pass = new GTAOPass(this.scene, this.camera, this.host.clientWidth, this.host.clientHeight)
+      pass.output = GTAOPass.OUTPUT.Off
+      // Scene units are millimetres: a sulcus is 2–6 mm wide, so the sampling radius is a few of them.
+      pass.updateGtaoMaterial({ radius: 4, distanceExponent: 1.6, thickness: 2, scale: 1, samples: 24, distanceFallOff: 1 })
+      pass.updatePdMaterial({ lumaPhi: 14, depthPhi: 1.5, normalPhi: 4, radius: 8, radiusExponent: 1, rings: 3, samples: 24 })
+      const mat = new T.ShaderMaterial({
+        uniforms: { tAO: { value: null }, strength: { value: 1 } },
+        vertexShader: 'varying vec2 vUv; void main() { vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }',
+        fragmentShader:
+          'uniform sampler2D tAO; uniform float strength; varying vec2 vUv; void main() { float ao = texture2D(tAO, vUv).r; gl_FragColor = vec4(vec3(mix(1.0, ao, strength)), 1.0); }',
+        // result = frame × occlusion
+        blending: T.CustomBlending,
+        blendEquation: T.AddEquation,
+        blendSrc: T.ZeroFactor,
+        blendDst: T.SrcColorFactor,
+        depthTest: false,
+        depthWrite: false,
+        transparent: true,
+      })
+      this.aoPipe = { pass, quad: new FullScreenQuad(mat), mat }
+      this.dirty = true
+    } catch (e) {
+      console.warn('Crease shadows unavailable', e)
     }
   }
 
