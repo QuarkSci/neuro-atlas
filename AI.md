@@ -379,7 +379,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | ID | Vazifa | Kim | Holat | Branch / handoff |
 |---|---|---|---|---|
 | AG-1 | Kontent: Desikan, JHU, Destrieux, Glasser ta'riflari | Antigravity | ✅ 2026-11-22 | birlashtirildi (`616d941`) · docs/handoff/AG-1.md |
-| AG-2 | Yorug' rejim: dars kartasi va kesim ko'ruvchisi | Antigravity | ⏳ | ag/AG-2 |
+| AG-2 | Yorug' rejim: dars kartasi va kesim ko'ruvchisi | Antigravity | ✅ 2026-11-22 | birlashtirildi · docs/handoff/AG-2.md |
 | AG-3 | Deploy: meshlar Release + Draco, README, ATTRIBUTION | Antigravity | ⏳ | ag/AG-3 |
 | AG-4 | Tadqiqot: U1 gistologiya; BigBrain 20 mkm | Antigravity | ⏳ | ag/AG-4 |
 | CL-1 | AI panel: haqiqiy Gemini kaliti bilan ishlamayapti | Claude | ✅ tashxis: Google 503 (bepul tarif, band model); xato tafsiloti + avtomatik model almashtirish (`cd06af4`, `8b8ef1b`) | master |
@@ -395,3 +395,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-22 · Claude · CL-1: Gemini 503 tashxisi, xato tafsiloti va avtomatik model almashtirish (`cd06af4`, `8b8ef1b`).
 - 2026-11-22 · Claude · AG-1 tekshirildi va birlashtirildi (`616d941`); kichik tuzatish: buzuq Wikipedia havolasi `Lateral_occipital_gyrus` → `Occipital_lobe` (desikan.json, gross-brain.json).
 - 2026-11-22 · Claude · CL-2: AI panel va o'ng kartalar (Inspector/dars/qidiruv) ustma-ust tushmaydi (index.css "CL-2" bloki); `look_at_screen` tool (16-tool; surat keyingi user xabari bo'lib ketadi, Anthropic/Gemini'da tool_result bilan birlashtiriladi). AI-6 tadqiqoti: SIWC ochiq manbali yo'li faqat loopback (`127.0.0.1`) mahalliy klient uchun; https/GitHub Pages, CORS va brauzerda token saqlash hujjatda yo'q, "remotely hosted" ilovalar qiziqish formasiga yo'naltiriladi → OpenAI'dan so'rash yoki mahalliy yordamchi kerak. Anthropic Claude.ai login — taqiqlangan; Google OAuth — verifikatsiya talab qiladi.
+- 2026-11-22 · Claude · AG-2 tekshirildi (tsc, build, audit-lesions 0, audit-pick 0, light+dark screenshot) va birlashtirildi: dars kartasi va kesim ko'ruvchisi yorug' rejimga o'tdi.
