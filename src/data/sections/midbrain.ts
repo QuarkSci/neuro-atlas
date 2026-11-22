@@ -162,7 +162,7 @@ export const MIDBRAIN: Section[] = [
       { id: 'lgn', mirror: true, shapes: [B([126, 172], [106, 192], [110, 226], [130, 216], [138, 192])] },
       { id: 'pag', shapes: [E(C, 130, 32, 26)], at: [306, 150] },
       { id: 'aq', shapes: [E(C, 122, 7, 10)], note: { en: 'opening into the 3rd ventricle', uz: 'III qorinchaga ochiladi' } },
-      { id: 'inc', mirror: true, shapes: [E(258, 152, 6, 5)] },
+      { id: 'inc', mirror: true, shapes: [E(254, 154, 6, 5)] },
       { id: 'rimlf', mirror: true, shapes: [E(250, 168, 7, 5)] },
       { id: 'mlf', mirror: true, shapes: [E(244, 184, 6, 5)] },
       { id: 'ctt', mirror: true, shapes: [E(206, 204, 7, 7)] },

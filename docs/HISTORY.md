@@ -1273,3 +1273,11 @@ qayta rasterlash (headless GPUTask 20 ms) — real GPU'da o'lchash kerak.
   `NA_URL=http://localhost:3021/ node scripts/audit-pick.mjs` (production preview'da `__atlas` yo'q).
 - Ochiq: `meshes-v1` Release; kod litsenziyasi (`LICENSE` fayli yo'q).
 
+## CL-3 — 5.1 yopildi (2026-11-22)
+
+`audit-sections.mjs --coverage`: hamma 22 plastinkada egasiz 0.0% (T2 ✅ 2026-11-16 dan keyin boshqa plastinkalarda ham, zamin/hudud
+hisobga olinganda); zamin ulushi 25–75% — haqiqiy to'qima (tegmentum, yarim shar oq moddasi, hypo-grey, miyacha oq moddasi), uni "bo'linma"ga
+aylantirish anatomik xato bo'lardi. `--min 0.15` da haqiqiy tirqish-ustma-ustliklar: U3 vn×icp (vn ichki nuqtalari o'ngga), O3 inc
+(PAG'dan tashqariga), B4 gpi (GPe medial chegarasidan chap), B5 ic-g (ic-al ostidan). Ataylab qolganlar: ichma-ich yadrolar va B1 striatal
+ko'priklari. Tekshirildi: audit (`--min 0.15`, `--coverage`), audit-lesions 0, audit-pick 0, tsc, B4 sxema surati.
+

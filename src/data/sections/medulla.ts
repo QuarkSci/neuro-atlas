@@ -145,7 +145,7 @@ export const MEDULLA: Section[] = [
       { id: 'n12', mirror: true, shapes: [E(236, 130, 9, 9)] },
       { id: 'dmx', mirror: true, shapes: [E(214, 124, 9, 7)] },
       { id: 'sol', mirror: true, shapes: [E(192, 130, 9, 9)] },
-      { id: 'vn', mirror: true, shapes: [B([176, 102], [150, 86], [132, 102], [144, 122], [170, 116])], note: { en: 'medial & inferior', uz: 'medial va pastki' } },
+      { id: 'vn', mirror: true, shapes: [B([176, 102], [152, 86], [141, 103], [150, 122], [170, 116])], note: { en: 'medial & inferior', uz: 'medial va pastki' } },
       { id: 'icp', mirror: true, shapes: [B([126, 72], [102, 90], [92, 124], [108, 146], [128, 126], [146, 92])] },
       { id: 'sp5t', mirror: true, shapes: [B([100, 148], [90, 180], [98, 206], [110, 184], [114, 156])] },
       { id: 'sp5n', mirror: true, shapes: [B([120, 152], [112, 182], [122, 206], [136, 184], [134, 158])], note: { en: 'subnucleus interpolaris', uz: 'interpolaris subyadro' } },

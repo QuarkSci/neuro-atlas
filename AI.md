@@ -454,7 +454,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | CL-7 | Apple ko'prigi 0-bosqich (veb tishlari) — `docs/APPLE.md` | Claude | ⏳ (AG-3 dan keyin; CL-6 ✅) | master |
 | AG-6 | Tadqiqot: App Store muvofiqligi, litsenziyalar | Antigravity | ⏳ | ag/AG-6 |
 | AG-7 | USDZ eksport (AR, Apple 2-bosqichi) | Antigravity | ⏳ (keyin) | ag/AG-7 |
-| CL-3 | 5.1: 21 plastinkada chegaralar 100% | Claude | 🔨 K3 qilindi (`c8883e2`) | master |
+| CL-3 | 5.1: 21 plastinkada chegaralar 100% | Claude | ✅ 2026-11-22 (egasiz 0% hamma 22 plastinkada; haqiqiy ustma-ustliklar tuzatildi) | master |
 | CL-4 | Mavzu viktorinasi + Anki | Claude | ⏳ | master |
 | CL-5 | R2 realizm, LG-3 harakat | Claude | ⏳ | master |
 
@@ -472,4 +472,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-22 · Claude · AG-3 tekshirildi va birlashtirildi (`6d6156f`): dekoder three.js gltf nusxasi bilan bir xil; Draco meshlar bilan audit-pick 0, audit-lesions 0; build+preview xatosiz. Ochiq: `meshes-v1` Release (foydalanuvchi), LICENSE fayli yo'q (README MIT deydi).
 - 2026-11-22 · Claude · Kod litsenziyasi: MIT (foydalanuvchi qarori) — `LICENSE`, `package.json`; ma'lumotlar o'z litsenziyalarida (ATTRIBUTION.md).
 - 2026-11-22 · Claude · AI panel Gemini: haqiqiy kalit bilan o'lchandi — 3.8/3.5/flash-latest 503 (band), 3.7-flash 70 s jim (0 bayt), Pro 429 (kvota yo'q), 3.5-flash-lite/3.1-flash-lite/3-flash-preview 1–8 s'da javob beradi. Tuzatish: qorovul 30 s (jim model → keyingisiga), zaxira tartibi `FALLBACK` (flash-lite → flash-preview, Pro hech qachon), "O'ylayapti… N s". E2E: 3.8-flash band → 21 s'da 3.5-flash-lite javob berdi.
-
+- 2026-11-22 · Claude · CL-3 yopildi: `--coverage` auditi hamma 22 plastinkada UNOWNED 0.0% (nuqta tuzilma → hudud → nomlangan zamin bo'yicha egasiga ega; zamin haqiqiy to'qima: tegmentum, oq modda, hypo-grey). `--min 0.15` da qolgan haqiqiy ustma-ustliklar tuzatildi: U3 icp×vn 18%, O3 pretectal pag×inc 21%, B4 gpe×gpi 16%, B5 ic-al×ic-g 17% (shared 0.3→0.1, 0.7→0.6). Qolganlari ataylab: ichma-ich yadrolar (PAG ichida aq/dr/ew, cg ichida cc/n12, fc×nc) va B1 striatal ko'priklari kapsula ichida (str-br×ic-al 88%). T1/G4 zamin ulushi (52%/75%) haqiqiy to'qima — qoldirildi.
