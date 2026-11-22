@@ -158,10 +158,10 @@ export const PONS: Section[] = [
     items: [
       { id: 'smv', shapes: [B(...sym([[C, 62], [248, 60], [226, 66], [232, 74], [254, 70], [C, 72]], C))], at: [C, 66] },
       { id: 'n4-dec', shapes: [L(3, [226, 70], [C, 66], [334, 70])], at: [306, 66] },
-      { id: 'pag', shapes: [E(C, 104, 46, 34)], at: [306, 128] },
+      { id: 'pag', shapes: [E(C, 104, 38, 34)], at: [306, 128] },
       { id: 'v4', shapes: [E(C, 96, 22, 16)], note: { en: 'upper end, opening into the aqueduct', uz: "yuqori uchi, suv yo'liga ochiladi" } },
       { id: 'dr', shapes: [E(C, 128, 6, 8)] },
-      { id: 'lc', mirror: true, shapes: [E(236, 104, 6, 10)] },
+      { id: 'lc', mirror: true, shapes: [E(230, 104, 6, 10)] },
       { id: 'mes5', mirror: true, at: [222, 92], shapes: [L(3, [228, 82], [222, 96], [222, 112])] },
       { id: 'scp', mirror: true, shapes: [B([212, 80], [186, 90], [170, 120], [184, 146], [210, 134], [222, 108])] },
       { id: 'pbc', mirror: true, shapes: [B([186, 84], [162, 96], [150, 124], [164, 120], [176, 98])] },
