@@ -85,17 +85,16 @@ export const anthropic: Provider = {
 function toMessages(turns: ChatTurn[]): Anthropic.Beta.BetaMessageParam[] {
   const out: Anthropic.Beta.BetaMessageParam[] = []
   for (const t of turns) {
-    if (t.role === 'user')
-      out.push({
-        role: 'user',
-        content: t.images?.length
-          ? [
-              ...t.images.map((im) => ({ type: 'image' as const, source: { type: 'base64' as const, media_type: im.mediaType, data: im.data } })),
-              { type: 'text' as const, text: t.text },
-            ]
-          : t.text,
-      })
-    else if (t.role === 'tool')
+    if (t.role === 'user') {
+      const content: Anthropic.Beta.BetaContentBlockParam[] = [
+        ...(t.images ?? []).map((im) => ({ type: 'image' as const, source: { type: 'base64' as const, media_type: im.mediaType, data: im.data } })),
+        { type: 'text' as const, text: t.text },
+      ]
+      // A picture from look_at_screen follows the tool_result blocks: same user message (results first).
+      const prev = out.at(-1)
+      if (prev?.role === 'user' && Array.isArray(prev.content) && prev.content.some((b) => b.type === 'tool_result')) prev.content.push(...content)
+      else out.push({ role: 'user', content: t.images?.length ? content : t.text })
+    } else if (t.role === 'tool')
       out.push({
         role: 'user',
         content: t.results.map((r) => ({ type: 'tool_result' as const, tool_use_id: r.id, content: r.content, ...(r.isError ? { is_error: true } : {}) })),

@@ -1241,3 +1241,14 @@ Reja va faktlar: `PLAN.md` 5.6. Qarorlar: OpenRouter bilan kirish + o'z API kali
 
 ## AG-1 — parcellation ta'riflari (2026-11-22)
 Antigravity: `src/data/content/{desikan,jhu,destrieux,glasser}.json` (35+27+74+179 konsept, 626 qism), `content/index.ts` ga ulandi. Claude tekshirdi (id'lar parts.json bilan to'liq mos, Crossref DOI'lar, audit-lesions 0, audit-pick 0) va birlashtirdi (`616d941`). Buzuq Wikipedia havolasi tuzatildi.
+
+## CL-2 (2026-11-22): AI panel joylashuvi, look_at_screen, AI-6 tadqiqoti
+- `src/index.css` "CL-2": `--ai-w`; ≥1560 px (yoki ≥1100 px va yon panel yopiq) kartalar AI panelning chapiga suriladi va markaz `--free-r` bilan
+  ergashadi; torroqda AI ochiq paytda kartalar yashirinadi; telefonda pastki varaq.
+- `look_at_screen` (`src/ai/tools.ts`): `capturePlate()` yoki `sceneSnapshot(1024)`; tool natijasi matn, surat `useAI` sikli
+  orqali keyingi user xabari (`images`) bo'lib ketadi; `gemini.ts`/`anthropic.ts` uni tool natijalari bilan bitta user xabariga birlashtiradi.
+  Mock: "ekranga qara" / "look at screen". Surat keyingi xabarlarda qayta yuborilmaydi (mavjud mexanizm).
+- AI-6 (SIWC): ochiq manbali yo'l `dynamic_agent_client` + PKCE + faqat `http://127.0.0.1:<port>/auth/callback`, tokenlar mahalliy faylda;
+  scope `offline_access resource.invoke chatgpt.tokens.use.direct`; inference `POST /v1/responses` (`store:false`, `stream:true`).
+  Statik GitHub Pages klienti hujjatlashtirilmagan (https redirect, CORS, brauzer saqlash) — OpenAI'dan so'rash kerak.
+

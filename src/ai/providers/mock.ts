@@ -29,6 +29,7 @@ function plan(q: string, system: string): ToolCall[] {
     ]
   if (system.includes('Mode: clinical case')) return [{ id: 'm4', name: 'simulate_territory', args: { level: 'medulla-rostral', side: 'right', zone: 'lateral' } }]
   if (system.includes('Mode: research')) return [{ id: 'm5', name: 'search_pubmed', args: { query: q.replace(/uydirma|fake/gi, '').trim(), max: 3 } }]
+  if (/ekranga qara|look at (the )?screen/i.test(q)) return [{ id: 'm7', name: 'look_at_screen', args: { target: 'auto' } }]
   if (/wallenberg/i.test(q)) return [{ id: 'm1', name: 'set_lesion_territory', args: { level: 'medulla-rostral', side: 'left', zone: 'lateral' } }]
   if (/\bmlf\b|\bino\b/i.test(q)) return [{ id: 'm2', name: 'place_lesion', args: { plate: 'K3', structure: 'mlf', side: 'left', radius_mm: 1.5, gd: true, replace: true } }]
   if (/(talamus|thalamus).*(ko'rsat|tanla|show|select)|(ko'rsat|show).*(talamus|thalamus)/i.test(q)) return [{ id: 'm3', name: 'select_structure', args: { query: 'thalamus' } }]

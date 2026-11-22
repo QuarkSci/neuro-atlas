@@ -111,8 +111,13 @@ function clean(v: unknown): unknown {
 function toContents(turns: ChatTurn[]) {
   const out: { role: 'user' | 'model'; parts: GPart[] }[] = []
   for (const t of turns) {
-    if (t.role === 'user') out.push({ role: 'user', parts: [...(t.images ?? []).map((im) => ({ inlineData: { mimeType: im.mediaType, data: im.data } })), { text: t.text }] })
-    else if (t.role === 'tool')
+    if (t.role === 'user') {
+      const parts: GPart[] = [...(t.images ?? []).map((im) => ({ inlineData: { mimeType: im.mediaType, data: im.data } })), { text: t.text }]
+      // A picture from look_at_screen follows the tool results: one user turn, as the API expects alternating roles.
+      const prev = out.at(-1)
+      if (prev?.role === 'user' && prev.parts.some((x) => 'functionResponse' in x)) prev.parts.push(...parts)
+      else out.push({ role: 'user', parts })
+    } else if (t.role === 'tool')
       out.push({
         role: 'user',
         parts: t.results.map((r) => ({

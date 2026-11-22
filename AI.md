@@ -383,7 +383,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | AG-3 | Deploy: meshlar Release + Draco, README, ATTRIBUTION | Antigravity | ⏳ | ag/AG-3 |
 | AG-4 | Tadqiqot: U1 gistologiya; BigBrain 20 mkm | Antigravity | ⏳ | ag/AG-4 |
 | CL-1 | AI panel: haqiqiy Gemini kaliti bilan ishlamayapti | Claude | ✅ tashxis: Google 503 (bepul tarif, band model); xato tafsiloti + avtomatik model almashtirish (`cd06af4`, `8b8ef1b`) | master |
-| CL-2 | AI-6 (ChatGPT/Google kirish), panel joylashuvi, look_at_screen | Claude | ⏳ | master |
+| CL-2 | AI-6 (ChatGPT/Google kirish), panel joylashuvi, look_at_screen | Claude | 🔨 panel joylashuvi va `look_at_screen` ✅ 2026-11-22; AI-6 — OpenAI javobini kutmoqda (SIWC statik sayt uchun hujjatlashtirilmagan) | master |
 | CL-3 | 5.1: 21 plastinkada chegaralar 100% | Claude | ⏳ | master |
 | CL-4 | Mavzu viktorinasi + Anki | Claude | ⏳ | master |
 | CL-5 | R2 realizm, LG-3 harakat | Claude | ⏳ | master |
@@ -394,3 +394,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-22 · Claude · Yagona `AI.md`; skriptlar `NA_URL` ni o'qiydi (Antigravity 3020 portda ishlaydi); TASKS/AGENTS → AI.md.
 - 2026-11-22 · Claude · CL-1: Gemini 503 tashxisi, xato tafsiloti va avtomatik model almashtirish (`cd06af4`, `8b8ef1b`).
 - 2026-11-22 · Claude · AG-1 tekshirildi va birlashtirildi (`616d941`); kichik tuzatish: buzuq Wikipedia havolasi `Lateral_occipital_gyrus` → `Occipital_lobe` (desikan.json, gross-brain.json).
+- 2026-11-22 · Claude · CL-2: AI panel va o'ng kartalar (Inspector/dars/qidiruv) ustma-ust tushmaydi (index.css "CL-2" bloki); `look_at_screen` tool (16-tool; surat keyingi user xabari bo'lib ketadi, Anthropic/Gemini'da tool_result bilan birlashtiriladi). AI-6 tadqiqoti: SIWC ochiq manbali yo'li faqat loopback (`127.0.0.1`) mahalliy klient uchun; https/GitHub Pages, CORS va brauzerda token saqlash hujjatda yo'q, "remotely hosted" ilovalar qiziqish formasiga yo'naltiriladi → OpenAI'dan so'rash yoki mahalliy yordamchi kerak. Anthropic Claude.ai login — taqiqlangan; Google OAuth — verifikatsiya talab qiladi.

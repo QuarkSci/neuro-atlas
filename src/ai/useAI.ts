@@ -353,13 +353,18 @@ export const useAI = create<AIState>((set, get) => ({
         turns.push({ role: 'assistant', text: said, calls, raw: raw === undefined ? undefined : { provider, content: raw } })
         if (!calls.length) break
         const results: ToolResult[] = []
+        const seen: ImagePart[] = []
         for (const c of calls) {
-          const { result, note } = await runTool(c, uz)
+          const { result, note, image } = await runTool(c, uz)
           results.push(result)
+          const part = image ? toPart(image.url) : null
+          if (part) seen.push(part)
           actions.push({ ...note, call: c })
           patch({ actions: [...actions] })
         }
         turns.push({ role: 'tool', results })
+        // look_at_screen: tool results are text, so the picture travels as the next user message.
+        if (seen.length) turns.push({ role: 'user', text: '(picture taken by look_at_screen)', images: seen })
       }
       // References the answer gives that no tool returned (or the atlas brief carries): flagged, never silently trusted.
       const allowed = (b?.text ?? '').toLowerCase()

@@ -11,6 +11,8 @@ import { cranialSigns, localiseWithSigns } from '@/ui/lesionSigns'
 import { focalOn, focalPlate, focalSet, structureCentre, type FocalLesion } from '@/ui/lesionFocal'
 import { focalLesson } from '@/ui/focalLesson'
 import { useScreen } from './screen'
+import { sceneSnapshot } from '@/scene/capture'
+import { capturePlate } from '@/ui/plateCapture'
 import type { ToolCall, ToolResult, ToolSpec } from './types'
 
 /**
@@ -159,6 +161,12 @@ export const TOOLS: ToolSpec[] = [
     ),
   },
   {
+    name: 'look_at_screen',
+    description:
+      'Take a picture of what the student sees right now and look at it (a 3D view or the open plate). Use it when the question depends on what is drawn — "what is this", "is the lesion where I think", after you changed the view — not for facts the context already gives. The picture arrives as the next message.',
+    parameters: obj({ target: { type: 'string', enum: ['auto', 'scene', 'plate'], description: 'auto (default): the open plate if there is one, else the 3D view' } }),
+  },
+  {
     name: 'set_view',
     description: `Turn the 3D model to a view and/or choose the atlas layers shown. Layers: ${LAYERS.map((l) => `${l.id} (${l.name.en})`).join(', ')}.`,
     parameters: obj({
@@ -176,7 +184,7 @@ export interface ActionNote {
   cards?: { deck: string; cards: { front: string; back: string }[] }
 }
 
-type Out = { content: unknown; note: string; ok?: boolean; cards?: { deck: string; cards: { front: string; back: string }[] } }
+type Out = { content: unknown; note: string; ok?: boolean; image?: { url: string; label: string }; cards?: { deck: string; cards: { front: string; back: string }[] } }
 const side = (s: BodySide | 'B') => (s === 'B' ? 'both' : s === 'L' ? 'left' : 'right')
 
 /** Plate by code or id (case-insensitive). */
@@ -472,6 +480,19 @@ const RUN: Record<string, (a: Record<string, unknown>, uz: boolean) => Out | Pro
     }
   },
 
+  look_at_screen: async (a, uz) => {
+    const want = a.target === 'scene' || a.target === 'plate' ? a.target : 'auto'
+    const plate = want !== 'scene' ? await capturePlate() : null
+    const url = plate ?? (want !== 'plate' ? sceneSnapshot(1024) : null)
+    if (!url) return { content: want === 'plate' ? 'no plate is open' : 'the 3D view is not available right now', note: uz ? "Ekranni ko'rish" : 'Look at screen', ok: false }
+    const label = plate ? 'plate' : '3D view'
+    return {
+      content: `picture of the ${label} follows in the next message`,
+      note: `${uz ? 'Ekranga qaradi' : 'Looked at'}: ${plate ? (uz ? 'plastinka' : 'plate') : '3D'}`,
+      image: { url, label },
+    }
+  },
+
   set_view: (a, uz) => {
     const st = useAtlas.getState()
     const notes: string[] = []
@@ -489,7 +510,7 @@ const RUN: Record<string, (a: Record<string, unknown>, uz: boolean) => Out | Pro
 }
 
 /** Run one tool call against the app. Unknown tools and bad input come back as errors the model can read. */
-export async function runTool(call: ToolCall, uz: boolean): Promise<{ result: ToolResult; note: ActionNote }> {
+export async function runTool(call: ToolCall, uz: boolean): Promise<{ result: ToolResult; note: ActionNote; image?: { url: string; label: string } }> {
   const fn = RUN[call.name]
   let out: Out
   try {
@@ -503,5 +524,6 @@ export async function runTool(call: ToolCall, uz: boolean): Promise<{ result: To
   return {
     result: { id: call.id, name: call.name, content: typeof out.content === 'string' ? out.content : JSON.stringify(out.content), isError: !ok },
     note: { text: out.note, ok, ...(out.cards ? { cards: out.cards } : {}) },
+    ...(out.image && ok ? { image: out.image } : {}),
   }
 }
