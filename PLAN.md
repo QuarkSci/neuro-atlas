@@ -338,3 +338,23 @@ o'zi boshqaradi va har amalni chip bilan ko'rsatadi; panel — o'ngdan chiquvchi
 - Narx: foydalanuvchi to'laydi; har javobda token/narx taxmini; standart model — arzon/tez, "chuqur" rejim — kuchli model.
 - Provayder API'lari tez o'zgaradi: model ro'yxati qattiq yozilmaydi (`listModels`), har provayderga fixture-test.
 - OpenAI SIWC va Anthropic shartlari o'zgarishi mumkin — AI-6 dan oldin qayta tekshirilsin.
+
+### 5.7 Apple ilovalari — macOS va iPadOS (2026-11-22, rejalashtirish; to'liq hujjat `docs/APPLE.md`)
+
+Talab (foydalanuvchi spetsifikatsiyasi): kelajakdagi Xcode ilovasi uchun vebda hozirdan toza ulanish nuqtalari ("tishlar")
+qoldirish va macOS/iPadOS native imkoniyatlarini bitta rejaga yig'ish. Qarorlar: bitta veb-kod `WKWebView` ichida
+(SwiftUI multiplatform, alohida repo `neuro-atlas-apple`); veb native'ni faqat `src/bridge/` orqali biladi; native buyruqlar,
+`#s=` havolalari va AI tool'lari bitta store amallar qatlamidan foydalanadi; ilova **bepul** (NC litsenziyalar);
+veb-kod va meshlar ilova paketida (oflayn).
+
+| Bosqich | Qamrov | Bog'liqlik |
+|---|---|---|
+| A0 (CL-7) veb tishlari | `src/bridge/*`, holat havolasi + "Havolani nusxalash", shaffof 2K/4K PNG, orqa/chap/o'ng rakurs, hotkey'lar 1–5/R/⌘K, kontekst menyu, 8 hook | AG-3 (mesh manzili), CL-6 (sahna pauzasi) |
+| A1 Xcode MVP | WKWebView + scheme handler (oflayn), titlebar, menyu, hotkey, haptik, Pencil hover/bosim, eksport, drag-and-drop | A0, AG-6 (litsenziya/App Store) |
+| A2 Pro/PhD | Spotlight, deep link, AR (USDZ — AG-7), taqdimot rejimi, iCloud, Circle-to-Ask, Pencil Pro, ovoz → AI | A1 |
+| A3 Ekotizim | Handoff, Menu Bar mini-ilova, vidjetlar, Live Text, Siri, ReplayKit, Touch ID, SpaceMouse | A2 |
+
+Spetsifikatsiyadan o'zgarishlar (`docs/APPLE.md` 1.3): `TOGGLE_LAYER` → `SET_SYSTEM`/`SET_LAYERS` (tomir va nerv — tizim);
+`SET_DEPTH` → `SET_PEEL`; PNG eksport hodisa emas, Promise qaytaruvchi buyruq; `PENCIL_ACTION` olib tashlandi (bosim, og'ish,
+hover WebKit Pointer Events'da bor); ovoz → AI panel. Xavflar: NC/HCP litsenziyalari, Guideline 4.2, 5.1.2 (AI'ga ma'lumot
+yuborish roziligi), iPad xotirasi (≤1.2 GB).

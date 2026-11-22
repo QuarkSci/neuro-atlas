@@ -271,6 +271,17 @@ cerebellum) × ≥25 savol, 3 daraja (`student` / `resident` / `expert`; taxmina
 **Tayyor mezoni:** kichik skript bilan: JSON yaroqli, `refs` dagi id'lar `parts.json` / `STRUCTURE_BY_ID` / `CONCEPTS` da bor
 (noma'lum = 0), har savolda 4 variant va `answer` 0–3, takroriy `id` yo'q; 5 ta tasodifiy savolning javobi qo'lda manbadan tekshirilgan.
 
+#### AG-6 — Tadqiqot: App Store muvofiqligi (faqat hujjat, kod yo'q)
+**Nega:** Apple ilovasi (`docs/APPLE.md`) bepul tarqatiladi, lekin ma'lumotlarning bir qismi tijoratsiz/maxsus shartlarda.
+**Qilish:** `docs/research/app-store.md`: (1) har qatlam litsenziyasi (`src/data/index.ts` `LAYERS` + BigBrain) — App Store'da
+bepul ilova ichida qayta tarqatishga ruxsat bormi, attribution talabi; HCP Open Access Data Use Terms va FSL (JHU) matnidan iqtibos;
+(2) App Review Guidelines 4.2, 2.5.2, 5.1.2 (uchinchi tomon AI'ga ma'lumot), 1.4.1 — joriy matndan iqtibos va bizga ta'siri;
+(3) WKWebView'da WebGL xotira chegarasi iPad'da (Apple/WebKit manbalari). Har havola ochib tekshirilgan, sana bilan.
+**Tegadigan fayllar:** `docs/research/app-store.md`, `docs/handoff/AG-6.md`.
+
+#### AG-7 — Pipeline: AR uchun USDZ eksport (Apple 2-bosqichi; hozir emas)
+GLB meshlardan tizim bo'yicha USDZ (`pipeline/tools/`), ≤150k uchburchak, ranglar `materials.ts` REAL presetidan. AG-3 dan keyin.
+
 ---
 
 ## 6. CLAUDE UCHUN
@@ -328,6 +339,11 @@ yengillashtirish (dash o'rniga ingichka to'liq chiziq yoki kesh); `perf-real.mjs
 **Tegadigan fayllar:** `src/ui/{SectionViewer,AtlasSliceView,ZoomPane}.tsx`, `src/index.css` (`.section-viewer`, `.sv-*`, `.as-*`,
 zoom), `src/scene/BrainScene.ts` (faqat pauza). **Tayyor mezoni:** Mc/B4/K3 da rasm ≥60% balandlik; zoom/hover Performance yozuvida
 kadr ≤16 ms; foydalanuvchi o'z brauzerida tasdiqlaydi; `audit-lesions` 0, `audit-pick` 0.
+
+#### CL-7 — Apple ko'prigi, 0-bosqich: vebdagi "tishlar" (`docs/APPLE.md` 1–2-bo'limlar)
+`src/bridge/{types,bridge,commands,state,export}.ts`; holat havolasi `#s=` + "Havolani nusxalash"; shaffof 2K/4K PNG eksport;
+`View` ga back/left/right; hotkey'lar 1–5/R/⌘K; kontekst menyu; 8 hook (1.5). Vebda native'siz to'liq ishlaydi; sinov —
+soxta `__NA_NATIVE__` bilan headless (buyruq → store, hodisa → postMessage jurnali). Bog'liq: AG-3 (mesh manzili), CL-6 (pauza).
 
 #### CL-3 — 5.1: plastinkalarda chegaralar 100% tutashsin
 21 plastinka kutmoqda (T2 ✅). Tafsilot: `PLAN.md` 5.1, `docs/HISTORY.md` "5.1". Audit: `scripts/audit-sections.mjs`.
@@ -420,9 +436,9 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 
 **Parallel yo'llar (fayllar kesishmaydi — ikkalasi bir vaqtda ishlashi mumkin):**
 - **Antigravity yo'li** (ketma-ket, bitta worktree): AG-3 (deploy: `loader.ts`, vite, workflow, README) → AG-5 (savollar banki,
-  yangi JSON) → AG-4 (tadqiqot hujjatlari). Hech biri `src/ui/**`, `BrainScene.ts` ga tegmaydi.
+  yangi JSON) → AG-6 (App Store tadqiqoti) → AG-4 (tadqiqot hujjatlari). Hech biri `src/ui/**`, `BrainScene.ts` ga tegmaydi.
 - **Claude yo'li** (ketma-ket): CL-6 (plastinka ko'ruvchisi: `SectionViewer/AtlasSliceView/ZoomPane`, `index.css` sv-/as-) → CL-3
-  (`src/data/sections/*.ts`) → CL-4 (viktorina dvigateli, AG-5 tayyor bo'lgach) → CL-5 (R2/LG-3). AI-6 — OpenAI javobini kutadi.
+  (`src/data/sections/*.ts`) → CL-7 (Apple ko'prigi, veb tishlari) → CL-4 (viktorina dvigateli, AG-5 tayyor bo'lgach) → CL-5 (R2/LG-3). AI-6 — OpenAI javobini kutadi.
 - Birlashtirish tartibi: avval AG-3 (sayt 3D'siz ochilmasin), keyin AG-5; Claude o'z ishini har bosqichda `master`ga commit qiladi.
 
 | ID | Vazifa | Kim | Holat | Branch / handoff |
@@ -434,7 +450,10 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | CL-1 | AI panel: haqiqiy Gemini kaliti bilan ishlamayapti | Claude | ✅ tashxis: Google 503 (bepul tarif, band model); xato tafsiloti + avtomatik model almashtirish (`cd06af4`, `8b8ef1b`) | master |
 | CL-2 | AI-6 (ChatGPT/Google kirish), panel joylashuvi, look_at_screen | Claude | 🔨 panel joylashuvi va `look_at_screen` ✅ 2026-11-22; AI-6 — OpenAI javobini kutmoqda (SIWC statik sayt uchun hujjatlashtirilmagan) | master |
 | AG-5 | Kontent: viktorina savollar banki (CL-4 uchun) | Antigravity | ⏳ | ag/AG-5 |
-| CL-6 | Plastinka ko'ruvchisi: rasm kattaroq, kursor javobi tez | Claude | ✅ 2026-11-22 (rasm 61–63%; foydalanuvchi o'z brauzerida tasdiqlashi kutilmoqda) | master |
+| CL-6 | Plastinka ko'ruvchisi: rasm kattaroq, kursor javobi tez | Claude | ✅ 2026-11-22 (rasm 61–63%; foydalanuvchi o'z brauzerida tasdiqladi) | master |
+| CL-7 | Apple ko'prigi 0-bosqich (veb tishlari) — `docs/APPLE.md` | Claude | ⏳ (AG-3 dan keyin; CL-6 ✅) | master |
+| AG-6 | Tadqiqot: App Store muvofiqligi, litsenziyalar | Antigravity | ⏳ | ag/AG-6 |
+| AG-7 | USDZ eksport (AR, Apple 2-bosqichi) | Antigravity | ⏳ (keyin) | ag/AG-7 |
 | CL-3 | 5.1: 21 plastinkada chegaralar 100% | Claude | 🔨 K3 qilindi (`c8883e2`) | master |
 | CL-4 | Mavzu viktorinasi + Anki | Claude | ⏳ | master |
 | CL-5 | R2 realizm, LG-3 harakat | Claude | ⏳ | master |
@@ -449,3 +468,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-22 · Claude · AG-2 tekshirildi (tsc, build, audit-lesions 0, audit-pick 0, light+dark screenshot) va birlashtirildi: dars kartasi va kesim ko'ruvchisi yorug' rejimga o'tdi.
 - 2026-11-22 · Claude · Yangi vazifalar: CL-6 (plastinka ko'ruvchisi tezligi va rasm hajmi), AG-5 (viktorina savollar banki); ikki yo'lli parallel reja (9-bo'lim boshi).
 - 2026-11-22 · Claude · CL-6: o'lchov — sahna viewer ochiqligida render qilmaydi (0/50), dash va blur headless'da ta'sirsiz (shovqin ichida), asosiy sabab joy: rasm 299 px edi. Tuzatish: bitta asboblar qatori (tablar+chiplar), izoh → ⓘ qalqib chiquvchi, afsona faqat sxemada, vertikal hoshiya 0.07→0.034, manba satri rasm ustiga; blur olib tashlandi (karta 93% shaffofmas), `.as-region`/`.sv-item` opacity-o'tishi olib tashlandi (hover darhol), BrainScene viewer ochiqligida kadrni o'tkazib yuboradi; `perf-real.mjs --trace`. Rasm Mc 427, B4 416, K3 433 px (balandlikning 62/61/63%); hover RunTask 72→45 ms/hodisa (headless), main-thread task 8 ms; audit-lesions 0, audit-pick 0.
+- 2026-11-22 · Claude · Apple ilovalari rejasi: foydalanuvchi spetsifikatsiyasi loyihaga moslashtirildi (`docs/APPLE.md`, PLAN 5.7); yangi vazifalar CL-7, AG-6, AG-7.
