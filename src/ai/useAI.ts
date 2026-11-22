@@ -290,6 +290,7 @@ export const useAI = create<AIState>((set, get) => ({
     let acc = ''
     let tools = true
     let busyTries = 0
+    const tried = new Set<string>(model ? [model] : [])
     try {
       if (!model) throw new AIError('model', 'no model')
       // The tool loop: the model may act on the app, read the results and go on, a few rounds at most.
@@ -331,6 +332,21 @@ export const useAI = create<AIState>((set, get) => ({
             patch({ retrying: undefined })
             round--
             continue
+          }
+          // Still busy after the waits: move to the next-best model of the same account (up to two), say so in the answer.
+          if (!said && e instanceof AIError && (e.kind === 'server' || e.kind === 'rate') && tried.size < 3) {
+            const alt = pickModel(
+              provider,
+              (get().models[provider] ?? []).filter((x) => !tried.has(x.id)),
+            )
+            if (alt) {
+              tried.add(alt)
+              model = alt
+              busyTries = 0
+              patch({ model: alt })
+              round--
+              continue
+            }
           }
           throw e
         }
