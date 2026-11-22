@@ -1,0 +1,1770 @@
+{
+  "ds-fronto-marginal-gyrus-sulcus": {
+    "la": "Gyrus et sulcus frontomarginalis (Wernicke)",
+    "uz": "Peshona chekka pushtasi va egati (frontomarginal)",
+    "description": {
+      "en": "Horizontal gyrus and sulcus running along the supraorbital margin at the inferior border of the frontal pole, separating the frontopolar cortex from the orbital surface.",
+      "uz": "Peshona qutbining pastki chegarasida ko'z kosasi usti qirrasi bo'ylab gorizontal yo'nalgan pushta va egat; peshona qutbini orbital yuzadan ajratadi."
+    },
+    "role": {
+      "en": "Ventral frontopolar prefrontal cortex (Brodmann area 10/11) involved in goal maintenance, prospective memory and reward-guided branching decisions.",
+      "uz": "Maqsadni saqlash, kelajakka mo'ljallangan xotira va mukofotga asoslangan murakkab qarorlarda qatnashuvchi ventral frontopolyar po'stloq (Brodmann 10/11)."
+    },
+    "clinical": {
+      "en": "Highly susceptible to frontal contusion against the orbital roof in head trauma, leading to subtle multitasking and behavioural planning deficits.",
+      "uz": "Bosh miya jarohatida ko'z kosasi tomiga urilib oson kontuziyalanadi va ko'p vazifali rejalashtirish hamda xulqiy nazorat buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-inferior-occipital-gyrus-sulcus": {
+    "la": "Gyrus et sulcus occipitalis inferior",
+    "uz": "Pastki ensa pushtasi va egati",
+    "description": {
+      "en": "Ventrolateral occipital gyrus and its bounding sulcus below the middle occipital gyrus, continuous anteriorly with the inferior temporal and fusiform gyri.",
+      "uz": "O'rta ensa pushtasi ostidagi ventrolateral ensa pushtasi va uni chegaralovchi egat; oldinda pastki chakka va duksimon pushtalarga davom etadi."
+    },
+    "role": {
+      "en": "Early ventral visual stream region containing the occipital face area (OFA) and shape-selective extrastriate cortex (Brodmann areas 18/19).",
+      "uz": "Ensa yuz sohasini (OFA) va shaklga sezgir ekstrastriar po'stloqni (Brodmann 18/19) o'z ichiga olgan erta ventral ko'ruv oqimi sohasi."
+    },
+    "clinical": {
+      "en": "Lesions disrupt structural encoding of facial features (apperceptive prosopagnosia) and early visual form recognition.",
+      "uz": "Zararlanishi yuz qismlarini tuzilmaviy kodlashni (apperseptiv prozopagnoziya) va erta ko'ruv shaklini tanishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-paracentral-lobule-sulcus": {
+    "la": "Lobulus et sulcus paracentralis",
+    "uz": "Markaz oldi bo'lakchasi va egati (paratsentral)",
+    "description": {
+      "en": "Quadrilateral lobule on the medial hemisphere wrapping around the upper end of the central sulcus, bounded anteriorly by the paracentral sulcus and posteriorly by the marginal ramus.",
+      "uz": "Yarim sharning medial yuzasida markaziy egatning yuqori uchini o'rab turuvchi to'rtburchak bo'lakcha; oldinda paratsentral egat, orqada belbog' egatining chekka shoxi bilan chegaralangan."
+    },
+    "role": {
+      "en": "Primary motor (anterior) and somatosensory (posterior) cortex for the contralateral lower extremity and pelvic floor (bladder and bowel sphincter control).",
+      "uz": "Qarama-qarshi oyoq va chanoq tubi (qovuq hamda to'g'ri ichak sfinkterlari nazorati) uchun birlamchi harakat (oldingi) va somatosensor (orqa) po'stloq."
+    },
+    "clinical": {
+      "en": "ACA territory stroke or falcine meningioma causes contralateral leg weakness/sensory loss and urinary incontinence.",
+      "uz": "ACA hovuzi insulti yoki o'roq meningiomasi qarama-qarshi oyoq kuchsizligi/sezgi yo'qolishi va siydik tuta olmaslikni chaqiradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Paracentral lobule",
+        "url": "https://en.wikipedia.org/wiki/Paracentral_lobule"
+      }
+    ]
+  },
+  "ds-subcentral-gyrus-sulci": {
+    "la": "Gyrus subcentralis et sulci subcentrales",
+    "uz": "Markaz osti pushtasi va egatlari (subsentral)",
+    "description": {
+      "en": "Opercular bridge uniting the lower ends of the precentral and postcentral gyri beneath the inferior tip of the central sulcus, bounded by the anterior and posterior subcentral sulci (Brodmann area 43).",
+      "uz": "Markaziy egatning pastki uchi ostida oldingi va orqa markaziy pushtalarning pastki uchlarini tutashtiruvchi qopqoq ko'prigi; oldingi va orqa subsentral egatlar bilan chegaralangan (Brodmann 43)."
+    },
+    "role": {
+      "en": "Sensorimotor control of the oropharynx, larynx, tongue and swallowing, together with gustatory (taste) representation at the frontoparietal opercular junction.",
+      "uz": "Halqum, hiqildoq, til va yutishning sensomotor boshqaruvi hamda peshona-tepa qopqog'i tutashuvidagi ta'm bilish vakilligi."
+    },
+    "clinical": {
+      "en": "Opercular lesions cause dysarthria, dysphagia and facial/lingual weakness (Foix–Chavany–Marie anterior opercular syndrome when bilateral).",
+      "uz": "Qopqoq zararlanishi dizartriya, disfagiya va yuz-til kuchsizligini beradi (ikki tomonlama bo'lsa Fua–Shavani–Mari sindromi)."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Brodmann area 43",
+        "url": "https://en.wikipedia.org/wiki/Brodmann_area_43"
+      }
+    ]
+  },
+  "ds-transverse-frontopolar-gyri-sulci": {
+    "la": "Gyri et sulci frontopolares transversi",
+    "uz": "Ko'ndalang peshona qutbi pushtalari va egatlari",
+    "description": {
+      "en": "Small transverse gyri and sulci at the anterior tip of the frontal pole above the frontomarginal sulcus (Brodmann area 10).",
+      "uz": "Frontomarginal egat ustida peshona qutbining eng oldingi uchida joylashgan kichik ko'ndalang pushta va egatlar (Brodmann 10)."
+    },
+    "role": {
+      "en": "Rostral apex of the prefrontal hierarchy: abstract relational reasoning, cognitive branching, prospective memory and metacognition.",
+      "uz": "Prefrontal iyerarxiyaning eng oldingi cho'qqisi: mavhum munosabatlar ustida mulohaza, ko'p vazifali tarmoqlanish, kelajakka mo'ljallangan xotira va metakognitsiya."
+    },
+    "clinical": {
+      "en": "Frontal pole trauma or tumour resection impairs long-horizon planning, multitasking and insight into one's own cognitive errors.",
+      "uz": "Peshona qutbi jarohati yoki o'sma rezeksiyasi uzoq muddatli rejalashtirish, ko'p vazifalilik va o'z xatolarini anglashni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Brodmann area 10",
+        "url": "https://en.wikipedia.org/wiki/Brodmann_area_10"
+      }
+    ]
+  },
+  "ds-cingulate-gyrus-sulcus-anterior-part": {
+    "la": "Gyrus et sulcus cinguli, pars anterior (ACC)",
+    "uz": "Belbog' pushtasi va egati, oldingi qismi (ACC)",
+    "description": {
+      "en": "Pregenual segment of the cingulate gyrus and cingulate sulcus curving in front of and around the genu of the corpus callosum (Brodmann areas 24a/b and 32).",
+      "uz": "Qadoqsimon tana tizzasi oldi va atrofidan egilib o'tuvchi belbog' pushtasi va belbog' egatining tizza oldi qismi (Brodmann 24a/b va 32)."
+    },
+    "role": {
+      "en": "Affective and social valuation hub linking emotional states with autonomic output and default-mode self-reflection.",
+      "uz": "Emotsional holatlarni vegetativ javob va o'zi haqida fikrlash (default-mode) bilan bog'lovchi affektiv hamda ijtimoiy baholash markazi."
+    },
+    "clinical": {
+      "en": "Lesions cause apathy and emotional blunting; altered metabolism is a consistent finding in major depressive disorder.",
+      "uz": "Zararlanishi apatiya va emotsional to'mtoqlik beradi; og'ir depressiyada metabolizmi barqaror o'zgaradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-cingulate-gyrus-sulcus-middle-anterior-part": {
+    "la": "Gyrus et sulcus cinguli, pars medio-anterior (aMCC)",
+    "uz": "Belbog' pushtasi va egati, o'rta-oldingi qismi (aMCC)",
+    "description": {
+      "en": "Anterior midcingulate cortex and sulcus above the anterior half of the body of the corpus callosum (caudal Brodmann area 24c'/32').",
+      "uz": "Qadoqsimon tana tanasining oldingi yarmi ustidagi o'rta-oldingi belbog' po'stlog'i va egati (kaudal Brodmann 24c'/32')."
+    },
+    "role": {
+      "en": "Core salience and cognitive-control node: conflict monitoring, error detection, pain unpleasantness and effortful action initiation (cingulate motor area).",
+      "uz": "Ahamiyatlilik (salience) va kognitiv nazoratning asosiy tuguni: ziddiyatni kuzatish, xatoni aniqlash, og'riq affekti va irodaviy harakatni boshlash."
+    },
+    "clinical": {
+      "en": "Bilateral ACA lesions cause akinetic mutism; neurosurgical anterior cingulotomy target for intractable pain and severe OCD.",
+      "uz": "Ikki tomonlama ACA zararlanishi akinetik mutizm beradi; davolab bo'lmas og'riq va og'ir OKBda neyroxirurgik singulotomiya nishoni."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-cingulate-gyrus-sulcus-middle-posterior-part": {
+    "la": "Gyrus et sulcus cinguli, pars medio-posterior (pMCC)",
+    "uz": "Belbog' pushtasi va egati, o'rta-orqa qismi (pMCC)",
+    "description": {
+      "en": "Posterior midcingulate cortex and sulcus above the posterior body of the corpus callosum, below the paracentral lobule (Brodmann area 24d/23c).",
+      "uz": "Qadoqsimon tananing orqa tanasi ustida va paratsentral bo'lakcha ostida joylashgan o'rta-orqa belbog' po'stlog'i va egati (Brodmann 24d/23c)."
+    },
+    "role": {
+      "en": "Caudal cingulate motor area: skeletomotor orientation of the body and eyes to noxious or sudden tactile stimuli.",
+      "uz": "Kaudal belbog' harakat sohasi: og'riqli yoki to'satdan bo'lgan taktil ta'sirlarga tana va ko'zlarni tez yo'naltirish."
+    },
+    "clinical": {
+      "en": "Seizures arising here produce complex hypermotor or tonic postural movements; strokes cause motor neglect or impaired midline movement initiation.",
+      "uz": "Bu yerdan boshlanuvchi tutqanoqlar murakkab gipermotor yoki tonik holat harakatlarini chaqiradi; insulti motor e'tiborsizlik beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-cingulate-gyrus-posterior-dorsal-part": {
+    "la": "Gyrus cinguli, pars postero-dorsalis (dPCC)",
+    "uz": "Belbog' pushtasi, orqa-dorsal qismi (dPCC)",
+    "description": {
+      "en": "Dorsal posterior cingulate gyrus above the splenium of the corpus callosum and below the subparietal sulcus (Brodmann areas 23a/b and 31).",
+      "uz": "Qadoqsimon tana spleniumi ustida va tepa osti egati ostida joylashgan belbog' pushtasining orqa-dorsal qismi (Brodmann 23a/b va 31)."
+    },
+    "role": {
+      "en": "Major hub of the default-mode network linking internally directed memory retrieval with externally directed visuospatial attention.",
+      "uz": "Ichki yo'nalgan xotirani chaqirishni tashqi ko'ruv-fazoviy diqqat bilan bog'lovchi default-mode tarmog'ining yirik markazi."
+    },
+    "clinical": {
+      "en": "Among the earliest cortical regions to show FDG-PET hypometabolism and amyloid plaque accumulation in Alzheimer disease.",
+      "uz": "Alzheimer kasalligida FDG-PET gipometabolizmi va amiloid pilakchalari to'planishi eng erta kuzatiladigan po'stloq sohalaridan biri."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-cingulate-gyrus-posterior-ventral-part": {
+    "la": "Gyrus cinguli, pars postero-ventralis (vPCC / isthmus)",
+    "uz": "Belbog' pushtasi, orqa-ventral qismi (retrosplenial bo'yin)",
+    "description": {
+      "en": "Ventral posterior cingulate and retrosplenial isthmus curving around and beneath the splenium toward the parahippocampal gyrus (Brodmann areas 29, 30 and ventral 23).",
+      "uz": "Splenium orti va ostidan parahippokampal pushtaga aylanib o'tuvchi belbog' pushtasining orqa-ventral (retrosplenial bo'yin) qismi (Brodmann 29, 30 va ventral 23)."
+    },
+    "role": {
+      "en": "Direct gateway between the hippocampal formation and posterior default-mode cortex for episodic memory retrieval and spatial head-direction navigation.",
+      "uz": "Epizodik xotirani chaqirish va fazoviy mo'ljal olish uchun gippokampal formatsiya bilan orqa default-mode po'stlog'i orasidagi bevosita darvoza."
+    },
+    "clinical": {
+      "en": "Lesions (e.g. splenial/retrosplenial stroke or haemorrhage from a pericallosal aneurysm) cause retrosplenial amnesia and topographical disorientation.",
+      "uz": "Zararlanishi (masalan, retrosplenial insult yoki perikallozal anevrizma qon quyilishi) retrosplenial amneziya va topografik mo'ljal yo'qolishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-cuneus": {
+    "la": "Cuneus",
+    "uz": "Cuneus (pona, Destrieux)",
+    "description": {
+      "en": "Triangular gyral surface on the medial occipital lobe between the parieto-occipital sulcus and the calcarine sulcus.",
+      "uz": "Medial ensa bo'lagida tepa-ensa egati bilan kalkarin egat orasidagi uchburchak ponasimon pushta yuzasi."
+    },
+    "role": {
+      "en": "Dorsal early visual cortex (dorsal V1–V3) processing the contralateral lower visual field and feeding the dorsal visuomotor stream.",
+      "uz": "Qarama-qarshi pastki ko'rish maydonini qayta ishlovchi va dorsal vizuomotor oqimni ta'minlovchi erta ko'ruv po'stlog'i (dorsal V1–V3)."
+    },
+    "clinical": {
+      "en": "Lesions produce a contralateral inferior homonymous quadrantanopia.",
+      "uz": "Zararlanishi qarama-qarshi pastki gomonim kvadrantanopsiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Cuneus",
+        "url": "https://en.wikipedia.org/wiki/Cuneus"
+      }
+    ]
+  },
+  "ds-inferior-frontal-gyrus-opercular-part": {
+    "la": "Gyrus frontalis inferior, pars opercularis",
+    "uz": "Pastki peshona pushtasi, qopqoq qismi (pars opercularis)",
+    "description": {
+      "en": "Posterior part of the inferior frontal gyrus between the inferior precentral sulcus and the vertical ramus of the lateral sulcus (Brodmann area 44).",
+      "uz": "Pastki peshona pushtasining pastki oldingi markaziy egat bilan lateral egat vertikal shoxi orasidagi orqa qismi (Brodmann 44)."
+    },
+    "role": {
+      "en": "Core motor-speech and syntactic node of Broca's area in the left hemisphere; key node of the right-hemisphere stopping/inhibition network.",
+      "uz": "Chap yarim sharda Broka sohasining asosiy nutq-harakat va sintaktik tuguni; o'ng yarim sharda harakatni to'xtatish/tormozlash tarmog'i tuguni."
+    },
+    "clinical": {
+      "en": "Dominant lesions cause Broca's aphasia and apraxia of speech.",
+      "uz": "Dominant yarim shardagi zararlanishi Broka afaziyasi va nutq apraksiyasini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Brodmann area 44",
+        "url": "https://en.wikipedia.org/wiki/Brodmann_area_44"
+      }
+    ]
+  },
+  "ds-inferior-frontal-gyrus-orbital-part": {
+    "la": "Gyrus frontalis inferior, pars orbitalis",
+    "uz": "Pastki peshona pushtasi, orbital qismi (pars orbitalis)",
+    "description": {
+      "en": "Ventral part of the inferior frontal gyrus below the horizontal ramus of the lateral sulcus, continuous with the lateral orbital gyrus (Brodmann area 47).",
+      "uz": "Pastki peshona pushtasining lateral egat gorizontal shoxi ostidagi ventral qismi; lateral orbital pushtaga davom etadi (Brodmann 47)."
+    },
+    "role": {
+      "en": "Semantic retrieval and controlled conceptual selection via ventral white-matter tracts (IFOF and uncinate fasciculus), plus emotional regulation.",
+      "uz": "Ventral oq modda yo'llari (IFOF va ilmoqsimon tutam) orqali semantik chaqirish va tushunchalarni tanlash hamda emotsional boshqaruv."
+    },
+    "clinical": {
+      "en": "Lesions impair semantic fluency and comprehension of complex or ambiguous meanings.",
+      "uz": "Zararlanishi semantik ravonlikni va murakkab ma'nolarni tushunishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Brodmann area 47",
+        "url": "https://en.wikipedia.org/wiki/Brodmann_area_47"
+      }
+    ]
+  },
+  "ds-inferior-frontal-gyrus-triangular-part": {
+    "la": "Gyrus frontalis inferior, pars triangularis",
+    "uz": "Pastki peshona pushtasi, uchburchak qismi (pars triangularis)",
+    "description": {
+      "en": "Triangular middle segment of the inferior frontal gyrus between the horizontal and vertical rami of the lateral sulcus (Brodmann area 45).",
+      "uz": "Pastki peshona pushtasining lateral egat gorizontal va vertikal shoxlari orasidagi uchburchak o'rta qismi (Brodmann 45)."
+    },
+    "role": {
+      "en": "Anterior part of Broca's area: lexical-semantic selection, sentence comprehension and verbal working memory.",
+      "uz": "Broka sohasining oldingi qismi: leksik-semantik tanlash, gapni tushunish va verbal ishchi xotira."
+    },
+    "clinical": {
+      "en": "Left MCA superior-division infarcts involving pars triangularis and opercularis produce classic non-fluent Broca's aphasia.",
+      "uz": "Uchburchak va qopqoq qismlarini qamragan chap MCA yuqori bo'limi infarkti klassik noravon Broka afaziyasini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Brodmann area 45",
+        "url": "https://en.wikipedia.org/wiki/Brodmann_area_45"
+      }
+    ]
+  },
+  "ds-middle-frontal-gyrus": {
+    "la": "Gyrus frontalis medius",
+    "uz": "O'rta peshona pushtasi (Destrieux)",
+    "description": {
+      "en": "Broad lateral frontal gyrus between the superior and inferior frontal sulci, corresponding to the dorsolateral prefrontal cortex (Brodmann areas 9, 46 and 8).",
+      "uz": "Yuqori va pastki peshona egatlari orasidagi keng lateral peshona pushtasi — dorsolateral prefrontal po'stloq (Brodmann 9, 46 va 8)."
+    },
+    "role": {
+      "en": "Working memory manipulation, executive planning, attentional control and (at its caudal end) voluntary saccadic eye movements.",
+      "uz": "Ishchi xotira, ijrochi rejalashtirish, diqqat nazorati va (kaudal uchida) ixtiyoriy sakkadik ko'z harakatlari."
+    },
+    "clinical": {
+      "en": "Lesions cause dorsolateral dysexecutive syndrome; standard cortical stimulation target for treatment-resistant depression.",
+      "uz": "Zararlanishi dorsolateral dizeksekutiv sindrom beradi; rezistent depressiyada standart rTMS nishoni."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Middle frontal gyrus",
+        "url": "https://en.wikipedia.org/wiki/Middle_frontal_gyrus"
+      }
+    ]
+  },
+  "ds-superior-frontal-gyrus": {
+    "la": "Gyrus frontalis superior",
+    "uz": "Yuqori peshona pushtasi (Destrieux)",
+    "description": {
+      "en": "Dorsal and medial frontal gyrus extending from the frontal pole to the precentral gyrus and paracentral lobule (Brodmann areas 6, 8, 9).",
+      "uz": "Peshona qutbidan oldingi markaziy pushta va paratsentral bo'lakchagacha cho'zilgan dorsal va medial peshona pushtasi (Brodmann 6, 8, 9)."
+    },
+    "role": {
+      "en": "Contains the supplementary motor area (SMA) and pre-SMA posteriorly for movement initiation and sequencing, and medial/dorsal prefrontal cortex anteriorly.",
+      "uz": "Orqada harakatni boshlash va ketma-ketlashtirish uchun qo'shimcha harakat sohasini (SMA va pre-SMA), oldinda esa medial/dorsal prefrontal po'stloqni saqlaydi."
+    },
+    "clinical": {
+      "en": "Posterior medial damage causes the SMA syndrome (transient contralateral akinesia and mutism); anterior lesions cause apathy and spatial working-memory deficits.",
+      "uz": "Orqa medial zararlanish SMA sindromini (o'tkinchi akineziya va mutizm), oldingi zararlanish esa apatiya va fazoviy ishchi xotira nuqsonini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Superior frontal gyrus",
+        "url": "https://en.wikipedia.org/wiki/Superior_frontal_gyrus"
+      }
+    ]
+  },
+  "ds-insula-insular-gyrus-central-sulcus": {
+    "la": "Gyri longi insulae et sulcus centralis insulae",
+    "uz": "Orolchaning uzun pushtalari va markaziy egati",
+    "description": {
+      "en": "Posterior division of the insula behind and including the central sulcus of the insula, formed by the anterior and posterior long insular gyri.",
+      "uz": "Orolcha markaziy egati va uning ortidagi orolcha orqa bo'limi; oldingi va orqa uzun orolcha pushtalaridan tashkil topgan."
+    },
+    "role": {
+      "en": "Granular posterior insula: primary interoceptive, nociceptive (pain), thermosensory and vestibular cortex receiving spinothalamic and vagal input via the posterior thalamus.",
+      "uz": "Granulyar orqa orolcha: orqa talamus orqali spinotalamik va vagal kirishni qabul qiluvchi birlamchi interotseptiv, og'riq, harorat va vestibulyar po'stloq."
+    },
+    "clinical": {
+      "en": "Lesions can cause central post-stroke pain, pseudothalamic sensory loss, vestibular tilt illusions and cardiac autonomic arrhythmias.",
+      "uz": "Zararlanishi insultdan keyingi markaziy og'riq, psevdotalamik sezgi yo'qolishi, vestibulyar og'ish illyuziyalari va yurak aritmiyalarini chaqirishi mumkin."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Insular cortex",
+        "url": "https://en.wikipedia.org/wiki/Insular_cortex"
+      }
+    ]
+  },
+  "ds-insular-gyri-short": {
+    "la": "Gyri breves insulae",
+    "uz": "Orolchaning qisqa pushtalari",
+    "description": {
+      "en": "Three to four short fan-like gyri forming the anterior lobule of the insula in front of the central insular sulcus, converging toward the apex and limen insulae.",
+      "uz": "Orolcha markaziy egati oldida orolchaning oldingi bo'lakchasini hosil qiluvchi 3–4 ta yelpig'ichsimon qisqa pushta; orolcha cho'qqisi tomon yig'iladi."
+    },
+    "role": {
+      "en": "Dysgranular and agranular anterior insula: subjective awareness of bodily feelings, taste/flavour, disgust, empathy, speech articulation (Dronkers' area) and salience network switching.",
+      "uz": "Disgranulyar va agranulyar oldingi orolcha: ichki tana hislarini anglash, ta'm, jirkanish, empatiya, nutq artikulyatsiyasi (Dronkers sohasi) va salience tarmog'i."
+    },
+    "clinical": {
+      "en": "Dominant anterior insular lesions cause apraxia of speech; strokes or seizures here trigger autonomic storms, nausea and viscerosensory auras.",
+      "uz": "Dominant oldingi orolcha zararlanishi nutq apraksiyasini beradi; insult va tutqanoqlari vegetativ o'zgarishlar, ko'ngil aynishi va visseral auralarni chaqiradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Insular cortex",
+        "url": "https://en.wikipedia.org/wiki/Insular_cortex"
+      }
+    ]
+  },
+  "ds-middle-occipital-gyrus": {
+    "la": "Gyrus occipitalis medius",
+    "uz": "O'rta ensa pushtasi",
+    "description": {
+      "en": "Largest lateral occipital gyrus lying between the superior occipital sulcus above and the inferior occipital sulcus below (Brodmann areas 18 and 19).",
+      "uz": "Yuqori va pastki ensa egatlari orasida joylashgan eng yirik lateral ensa pushtasi (Brodmann 18 va 19)."
+    },
+    "role": {
+      "en": "Extrastriate visual cortex contributing to intermediate object-shape processing and visuospatial orientation.",
+      "uz": "Narsa shaklini oraliq qayta ishlash va ko'ruv-fazoviy mo'ljalda ishtirok etuvchi ekstrastriar ko'ruv po'stlog'i."
+    },
+    "clinical": {
+      "en": "Lesions impair contour integration, shape recognition and visual motion perception at its anterior temporo-occipital border.",
+      "uz": "Zararlanishi konturlarni birlashtirish, shaklni tanish va chakka-ensa chegarasida harakatni idrok etishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-superior-occipital-gyrus": {
+    "la": "Gyrus occipitalis superior",
+    "uz": "Yuqori ensa pushtasi (Destrieux)",
+    "description": {
+      "en": "Dorsolateral occipital gyrus above the superior/transverse occipital sulcus, continuing the superior parietal lobule behind the parieto-occipital sulcus (Brodmann area 19).",
+      "uz": "Yuqori/ko'ndalang ensa egati ustidagi dorsolateral ensa pushtasi; tepa-ensa egati ortida yuqori tepa bo'lakchasini davom ettiradi (Brodmann 19)."
+    },
+    "role": {
+      "en": "Dorsal visual ('where/how') stream: processes spatial location, depth and motion to guide eye and hand movements.",
+      "uz": "Dorsal ko'ruv ('qayerda/qanday') oqimi: ko'z va qo'l harakatlarini yo'naltirish uchun fazoviy joylashuv, chuqurlik va harakatni qayta ishlaydi."
+    },
+    "clinical": {
+      "en": "Dorsal occipitoparietal lesions cause optic ataxia and, when bilateral, simultagnosia and Bálint syndrome.",
+      "uz": "Dorsal ensa-tepa zararlanishi optik ataksiya, ikki tomonlama bo'lsa simultagnoziya va Balint sindromini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-lateral-occipito-temporal-gyrus": {
+    "la": "Gyrus occipitotemporalis lateralis (gyrus fusiformis)",
+    "uz": "Lateral ensa-chakka pushtasi (duksimon pushta)",
+    "description": {
+      "en": "Spindle-shaped basal gyrus (fusiform gyrus) between the collateral sulcus medially and the lateral occipitotemporal sulcus laterally (Brodmann area 37).",
+      "uz": "Medialda kollateral egat bilan lateralda lateral ensa-chakka egati orasidagi pastki duksimon pushta (Brodmann 37)."
+    },
+    "role": {
+      "en": "Ventral visual stream hub containing the fusiform face area (right-dominant) and visual word form area (left-dominant).",
+      "uz": "Duksimon yuz sohasi (o'ng ustun) va ko'ruv so'z shakli sohasini (chap ustun) saqlovchi ventral ko'ruv oqimi markazi."
+    },
+    "clinical": {
+      "en": "Right lesions cause prosopagnosia; left lesions cause pure alexia and anomia.",
+      "uz": "O'ng zararlanish prozopagnoziya, chap zararlanish sof aleksiya va anomiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Fusiform gyrus",
+        "url": "https://en.wikipedia.org/wiki/Fusiform_gyrus"
+      }
+    ]
+  },
+  "ds-lingual-gyrus": {
+    "la": "Gyrus occipitotemporalis medialis (gyrus lingualis)",
+    "uz": "Tilsimon pushta (medial ensa-chakka, Destrieux)",
+    "description": {
+      "en": "Medial occipitotemporal gyrus between the calcarine sulcus above and the collateral sulcus below.",
+      "uz": "Yuqorida kalkarin egat bilan pastda kollateral egat orasidagi medial ensa-chakka (tilsimon) pushtasi."
+    },
+    "role": {
+      "en": "Processes the contralateral upper visual field in ventral V1–V3 and supports colour, letter and scene perception.",
+      "uz": "Ventral V1–V3 da qarama-qarshi yuqori ko'rish maydonini qayta ishlaydi hamda rang, harf va manzarani idrok etishni ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Lesions cause contralateral superior homonymous quadrantanopia and, if bilateral, cerebral achromatopsia.",
+      "uz": "Zararlanishi qarama-qarshi yuqori gomonim kvadrantanopsiya, ikki tomonlama bo'lsa serebral axromatopsiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Lingual gyrus",
+        "url": "https://en.wikipedia.org/wiki/Lingual_gyrus"
+      }
+    ]
+  },
+  "ds-parahippocampal-gyrus": {
+    "la": "Gyrus parahippocampalis",
+    "uz": "Gippokamp yoni pushtasi (Destrieux)",
+    "description": {
+      "en": "Medial temporal gyrus bordering the hippocampal fissure and collateral sulcus, including the entorhinal cortex anteriorly and parahippocampal cortex posteriorly.",
+      "uz": "Gippokamp egati va kollateral egat bilan chegaradosh medial chakka pushtasi; oldinda entorinal, orqada parahippokampal po'stloqni o'z ichiga oladi."
+    },
+    "role": {
+      "en": "Principal cortical interface of the hippocampus for episodic memory encoding/retrieval and visual scene/place recognition.",
+      "uz": "Epizodik xotirani kodlash/chaqirish hamda manzara va joylarni tanish uchun gippokampning asosiy po'stloq interfeysi."
+    },
+    "clinical": {
+      "en": "Earliest site of Alzheimer neurofibrillary pathology; uncal herniation across the tentorial notch compresses CN III and the midbrain.",
+      "uz": "Alzheimer neyrofibrillyar patologiyasining eng erta joyi; miyacha chodiri o'ymasidan unkal churrasi III nerv va o'rta miyani bosadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Parahippocampal gyrus",
+        "url": "https://en.wikipedia.org/wiki/Parahippocampal_gyrus"
+      }
+    ]
+  },
+  "ds-orbital-gyri": {
+    "la": "Gyri orbitales (anterior, medialis, lateralis, posterior)",
+    "uz": "Orbital pushtalar",
+    "description": {
+      "en": "The four orbital gyri (anterior, medial, posterior and lateral) arranged around the H-shaped orbital sulci on the basal frontal lobe lateral to the olfactory sulcus.",
+      "uz": "Peshona bo'lagi pastki yuzasida hid bilish egatidan lateralda H-simon orbital egatlar atrofida joylashgan to'rtta (oldingi, medial, orqa, lateral) orbital pushta."
+    },
+    "role": {
+      "en": "Orbitofrontal association cortex (Brodmann areas 11, 13, 47/12): integrates taste, smell and visceral signals to evaluate reward/punishment and guide social behaviour.",
+      "uz": "Orbitofrontal assotsiativ po'stloq (Brodmann 11, 13, 47/12): mukofot va jazoni baholash hamda ijtimoiy xulqni boshqarish uchun ta'm, hid va visseral signallarni birlashtiradi."
+    },
+    "clinical": {
+      "en": "Basal frontal contusions or meningiomas cause disinhibition, impulsivity, emotional lability and poor real-world judgement.",
+      "uz": "Bazal peshona kontuziyalari yoki meningiomalari tormozsizlik, impulsivlik, emotsional beqarorlik va mulohaza buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Orbitofrontal cortex",
+        "url": "https://en.wikipedia.org/wiki/Orbitofrontal_cortex"
+      }
+    ]
+  },
+  "ds-angular-gyrus": {
+    "la": "Gyrus angularis",
+    "uz": "Burchak pushtasi (Destrieux)",
+    "description": {
+      "en": "Posterior arch of the inferior parietal lobule capping the posterior end of the superior temporal sulcus (Brodmann area 39).",
+      "uz": "Pastki tepa bo'lakchasining yuqori chakka egati orqa uchini o'rab turuvchi orqa ravoq qismi (Brodmann 39)."
+    },
+    "role": {
+      "en": "Multimodal semantic, reading, calculation and episodic memory retrieval hub; lateral node of the default-mode network.",
+      "uz": "Ko'p modalli semantik, o'qish, hisoblash va epizodik xotirani chaqirish markazi; default-mode tarmog'ining lateral tuguni."
+    },
+    "clinical": {
+      "en": "Left lesions cause Gerstmann syndrome (acalculia, agraphia, finger agnosia, left–right confusion) and alexia; right lesions cause hemispatial neglect.",
+      "uz": "Chap zararlanish Gerstmann sindromi va aleksiya, o'ng zararlanish esa gemispatial e'tiborsizlik (neglect) beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Angular gyrus",
+        "url": "https://en.wikipedia.org/wiki/Angular_gyrus"
+      }
+    ]
+  },
+  "ds-supramarginal-gyrus": {
+    "la": "Gyrus supramarginalis",
+    "uz": "Chekka usti pushtasi (Destrieux)",
+    "description": {
+      "en": "Horseshoe-shaped anterior arch of the inferior parietal lobule wrapping around the posterior ascending ramus of the lateral sulcus (Brodmann area 40).",
+      "uz": "Pastki tepa bo'lakchasining lateral egat orqa ko'tariluvchi shoxini taqasimon o'rab turuvchi oldingi qismi (Brodmann 40)."
+    },
+    "role": {
+      "en": "Phonological working memory, skilled tool use and action planning (praxis) on the left; spatial attention and bodily self-representation on the right.",
+      "uz": "Chapda fonologik ishchi xotira, asbob ishlatish va harakatni rejalashtirish (praksis); o'ngda fazoviy diqqat va tana sxemasi."
+    },
+    "clinical": {
+      "en": "Dominant lesions cause ideomotor apraxia and conduction aphasia.",
+      "uz": "Dominant yarim shardagi zararlanish ideomotor apraksiya va o'tkazuvchi afaziya beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Supramarginal gyrus",
+        "url": "https://en.wikipedia.org/wiki/Supramarginal_gyrus"
+      }
+    ]
+  },
+  "ds-superior-parietal-lobule": {
+    "la": "Lobulus parietalis superior",
+    "uz": "Yuqori tepa bo'lakchasi (Destrieux)",
+    "description": {
+      "en": "Dorsal parietal gyrus behind the postcentral sulcus and above the intraparietal sulcus (Brodmann areas 5 and 7).",
+      "uz": "Orqa markaziy egat ortida va tepa ichi egati ustida joylashgan dorsal tepa bo'lakchasi (Brodmann 5 va 7)."
+    },
+    "role": {
+      "en": "Integrates somatosensory and visual coordinates for reaching, grasping and top-down spatial attention.",
+      "uz": "Qo'l uzatish, ushlash va fazoviy diqqatni yo'naltirish uchun somatosensor hamda ko'ruv koordinatalarini birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions cause optic ataxia and tactile agnosia; bilateral damage leads to Bálint syndrome.",
+      "uz": "Zararlanishi optik ataksiya va taktil agnoziya, ikki tomonlama bo'lsa Balint sindromini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Superior parietal lobule",
+        "url": "https://en.wikipedia.org/wiki/Superior_parietal_lobule"
+      }
+    ]
+  },
+  "ds-postcentral-gyrus": {
+    "la": "Gyrus postcentralis",
+    "uz": "Orqa markaziy pushta (Destrieux)",
+    "description": {
+      "en": "Crown and lip of the postcentral gyrus between the central and postcentral sulci — primary somatosensory cortex (Brodmann areas 1 and 2, with 3b at the lip).",
+      "uz": "Markaziy va orqa markaziy egatlar orasidagi orqa markaziy pushta cho'qqisi — birlamchi somatosensor po'stloq (Brodmann 1 va 2, qirg'oqda 3b)."
+    },
+    "role": {
+      "en": "Conscious perception of contralateral touch, texture, joint position and object shape (sensory homunculus).",
+      "uz": "Qarama-qarshi tomondan teginish, tekstura, bo'g'im holati va narsa shaklining ongli idroki (sensor gomunkulus)."
+    },
+    "clinical": {
+      "en": "Lesions cause contralateral cortical sensory loss (astereognosis, agraphesthesia, loss of two-point discrimination).",
+      "uz": "Zararlanishi qarama-qarshi tomonda kortikal sensor yo'qotish (astereognoz, agrafesteziya, ikki nuqtani farqlash buzilishi) beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Postcentral gyrus",
+        "url": "https://en.wikipedia.org/wiki/Postcentral_gyrus"
+      }
+    ]
+  },
+  "ds-precentral-gyrus": {
+    "la": "Gyrus precentralis",
+    "uz": "Oldingi markaziy pushta (Destrieux)",
+    "description": {
+      "en": "Crown of the precentral gyrus between the precentral and central sulci — primary motor cortex (Brodmann area 4) and caudal premotor border (area 6).",
+      "uz": "Oldingi markaziy va markaziy egatlar orasidagi oldingi markaziy pushta cho'qqisi — birlamchi harakat po'stlog'i (Brodmann 4) va orqa premotor chegara (6-maydon)."
+    },
+    "role": {
+      "en": "Drives contralateral voluntary movement of the face, upper limb and trunk via the corticobulbar and corticospinal tracts.",
+      "uz": "Kortikobulbar va kortikospinal traktlar orqali qarama-qarshi yuz, qo'l va gavdaning ixtiyoriy harakatini boshqaradi."
+    },
+    "clinical": {
+      "en": "Lesions produce contralateral hemiparesis (brachiofacial predominance in MCA stroke); focal irritative lesions cause Jacksonian motor seizures.",
+      "uz": "Zararlanishi qarama-qarshi gemiparez (MCA insultida yuz-qo'l ustunligi bilan), qo'zg'atuvchi o'choqlari esa Jekson harakat tutqanoqlarini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Precentral gyrus",
+        "url": "https://en.wikipedia.org/wiki/Precentral_gyrus"
+      }
+    ]
+  },
+  "ds-precuneus": {
+    "la": "Precuneus",
+    "uz": "Precuneus (oldingi pona, Destrieux)",
+    "description": {
+      "en": "Quadrilateral medial parietal surface between the marginal branch of the cingulate sulcus, the parieto-occipital sulcus and the subparietal sulcus (medial Brodmann area 7).",
+      "uz": "Belbog' egati chekka shoxi, tepa-ensa egati va tepa osti egati orasidagi to'rtburchak medial tepa yuzasi (medial Brodmann 7)."
+    },
+    "role": {
+      "en": "Visuospatial mental imagery, episodic memory retrieval, self-awareness and core default-mode network integration.",
+      "uz": "Ko'ruv-fazoviy tasavvur, epizodik xotirani chaqirish, o'z-o'zini anglash va default-mode tarmog'i integratsiyasi."
+    },
+    "clinical": {
+      "en": "Early hypometabolism and atrophy in Alzheimer disease; activity correlates with the level of consciousness.",
+      "uz": "Alzheimer kasalligida erta gipometabolizm va atrofiya; faolligi ong darajasi bilan chambarchas bog'liq."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Precuneus",
+        "url": "https://en.wikipedia.org/wiki/Precuneus"
+      }
+    ]
+  },
+  "ds-straight-gyrus": {
+    "la": "Gyrus rectus",
+    "uz": "To'g'ri pushta (gyrus rectus)",
+    "description": {
+      "en": "Longitudinal strip along the ventromedial edge of the orbital surface of the frontal lobe, medial to the olfactory sulcus (Brodmann area 11/14).",
+      "uz": "Peshona bo'lagi orbital yuzasining ventromedial qirrasi bo'ylab, hid bilish egatidan medialda joylashgan bo'ylama pushta (Brodmann 11/14)."
+    },
+    "role": {
+      "en": "Ventromedial orbitofrontal cortex: reward valuation, visceromotor/emotional integration and secondary olfactory processing.",
+      "uz": "Ventromedial orbitofrontal po'stloq: mukofotni baholash, visseromotor/emotsional integratsiya va ikkilamchi hid qayta ishlovi."
+    },
+    "clinical": {
+      "en": "Compressed by olfactory groove meningiomas or damaged during AComA aneurysm clipping, causing anosmia and personality/decision-making changes.",
+      "uz": "Hid egati meningiomalari yoki oldingi birlashtiruvchi arteriya anevrizmasi jarrohligida zararlanib, anosmiya va shaxsiyat o'zgarishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Straight gyrus",
+        "url": "https://en.wikipedia.org/wiki/Straight_gyrus"
+      }
+    ]
+  },
+  "ds-subcallosal-area-gyrus": {
+    "la": "Area subcallosa et gyrus paraterminalis",
+    "uz": "Kalloz osti sohasi va pushtasi (subkallozal)",
+    "description": {
+      "en": "Small medial frontal area below the rostrum and genu of the corpus callosum in front of the lamina terminalis (including Brodmann area 25 and paraterminal gyrus).",
+      "uz": "Qadoqsimon tana tumshug'i va tizzasi ostida, lamina terminalis oldida joylashgan kichik medial peshona sohasi (Brodmann 25 va paraterminal pushta)."
+    },
+    "role": {
+      "en": "Visceromotor limbic hub regulating mood, stress hormones, parasympathetic tone and negative affect via dense projections to the amygdala, hypothalamus and brainstem.",
+      "uz": "Amigdala, gipotalamus va miya ustuniga zich proyeksiyalar orqali kayfiyat, stress gormonlari va vegetativ tonusni boshqaruvchi visseromotor limbik markaz."
+    },
+    "clinical": {
+      "en": "Hyperactive in treatment-resistant major depression (Mayberg's subcallosal cingulate DBS target); injury after AComA rupture contributes to confabulatory amnesia and apathy.",
+      "uz": "Rezistent depressiyada giperfaol (Mayberg subkallozal DBS nishoni); AComA anevrizmasi yorilishida zararlanishi konfabulyator amneziya va apatiyaga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Brodmann area 25",
+        "url": "https://en.wikipedia.org/wiki/Brodmann_area_25"
+      }
+    ]
+  },
+  "ds-anterior-transverse-temporal-gyrus": {
+    "la": "Gyrus temporalis transversus anterior (Heschl)",
+    "uz": "Oldingi ko'ndalang chakka pushtasi (Geshl)",
+    "description": {
+      "en": "First transverse temporal gyrus (Heschl's gyrus) running obliquely across the superior temporal plane inside the lateral sulcus (Brodmann area 41).",
+      "uz": "Lateral egat ichida yuqori chakka tekisligi bo'ylab qiyshiq yo'nalgan birinchi ko'ndalang chakka (Geshl) pushtasi (Brodmann 41)."
+    },
+    "role": {
+      "en": "Primary auditory cortex (A1): tonotopically ordered first cortical relay for sound frequency and intensity from the medial geniculate body.",
+      "uz": "Birlamchi eshituv po'stlog'i (A1): medial tizzasimon tanadan tovush chastotasi va kuchini tonotopik tartibda qabul qiluvchi birinchi po'stloq bekati."
+    },
+    "clinical": {
+      "en": "Bilateral lesions cause cortical deafness; focal seizures produce simple auditory auras (ringing, buzzing, tones).",
+      "uz": "Ikki tomonlama zararlanish kortikal karlik beradi; fokal tutqanoqlari oddiy eshituv auralarini (shovqin, jiringlash) chaqiradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Transverse temporal gyrus",
+        "url": "https://en.wikipedia.org/wiki/Transverse_temporal_gyrus"
+      }
+    ]
+  },
+  "ds-superior-temporal-gyrus-lateral-aspect": {
+    "la": "Gyrus temporalis superior, facies lateralis",
+    "uz": "Yuqori chakka pushtasi, lateral yuzasi",
+    "description": {
+      "en": "Exposed lateral surface of the superior temporal gyrus between the lateral fissure above and the superior temporal sulcus below (Brodmann area 22).",
+      "uz": "Yuqorida lateral egat bilan pastda yuqori chakka egati orasidagi yuqori chakka pushtasining tashqi lateral yuzasi (Brodmann 22)."
+    },
+    "role": {
+      "en": "Auditory association cortex: phoneme and speech-sound recognition (left) and prosody, pitch and voice identity processing (right).",
+      "uz": "Eshituv assotsiativ po'stlog'i: fonema va nutq tovushlarini tanish (chapda) hamda intonatsiya, ohang va ovoz egasini tanish (o'ngda)."
+    },
+    "clinical": {
+      "en": "Posterior dominant lesions cause Wernicke's aphasia; right lesions cause sensory aprosodia and amusia.",
+      "uz": "Dominant orqa qismi zararlanishi Vernike afaziyasini, o'ng tomon zararlanishi esa sensor aprozodiya va amuziyani beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Superior temporal gyrus",
+        "url": "https://en.wikipedia.org/wiki/Superior_temporal_gyrus"
+      }
+    ]
+  },
+  "ds-superior-temporal-gyrus-planum-polare": {
+    "la": "Planum polare gyri temporalis superioris",
+    "uz": "Yuqori chakka pushtasi qutb tekisligi (planum polare)",
+    "description": {
+      "en": "Anterior dorsal surface of the superior temporal gyrus in front of Heschl's gyrus, hidden inside the anterior lateral fissure facing the insula.",
+      "uz": "Geshl pushtasi oldida, oldingi lateral egat ichida orolchaga qarab yotgan yuqori chakka pushtasining oldingi ustki tekisligi."
+    },
+    "role": {
+      "en": "Anterior auditory ('what') stream: processes complex pitch, melody, vocalizations and speaker identity toward the temporal pole.",
+      "uz": "Oldingi eshituv ('nima') oqimi: murakkab ohang, kuy, ovoz va so'zlovchi shaxsini chakka qutbi tomon uzatib qayta ishlaydi."
+    },
+    "clinical": {
+      "en": "Lesions impair voice recognition (phonagnosia) and musical pitch/melody perception.",
+      "uz": "Zararlanishi ovoz orqali tanishni (fonagnoziya) hamda musiqiy ohang va kuyni idrok etishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-planum-temporale": {
+    "la": "Planum temporale",
+    "uz": "Chakka tekisligi (planum temporale)",
+    "description": {
+      "en": "Triangular dorsal surface of the superior temporal gyrus behind Heschl's gyrus in the floor of the posterior lateral fissure — typically larger in the left hemisphere.",
+      "uz": "Orqa lateral egat tubida, Geshl pushtasi ortidagi yuqori chakka pushtasining uchburchak ustki yuzasi — odatda chap yarim sharda sezilarli kattaroq."
+    },
+    "role": {
+      "en": "Posterior auditory ('where/how') stream and core of Wernicke's region: spectrotemporal analysis of speech and auditory-motor transformation via the arcuate fasciculus.",
+      "uz": "Orqa eshituv oqimi va Vernike sohasining o'zagi: nutqning spektrotemporal tahlili va yoysimon tutam orqali eshituv-harakat integratsiyasi."
+    },
+    "clinical": {
+      "en": "Left lesions cause Wernicke's or conduction aphasia with severe phonological and repetition deficits.",
+      "uz": "Chap tomonlama zararlanishi og'ir fonologik va takrorlash buzilishi bilan kechuvchi Vernike yoki o'tkazuvchi afaziya beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Planum temporale",
+        "url": "https://en.wikipedia.org/wiki/Planum_temporale"
+      }
+    ]
+  },
+  "ds-inferior-temporal-gyrus": {
+    "la": "Gyrus temporalis inferior",
+    "uz": "Pastki chakka pushtasi (Destrieux)",
+    "description": {
+      "en": "Lowest lateral temporal gyrus between the inferior temporal sulcus and the lateral occipitotemporal sulcus (Brodmann area 20).",
+      "uz": "Pastki chakka egati bilan lateral ensa-chakka egati orasidagi eng pastki lateral chakka pushtasi (Brodmann 20)."
+    },
+    "role": {
+      "en": "High-level ventral visual stream cortex for object recognition and visual semantic memory.",
+      "uz": "Narsalarni tanish va ko'ruv-semantik xotira uchun yuqori darajali ventral ko'ruv oqimi po'stlog'i."
+    },
+    "clinical": {
+      "en": "Lesions cause visual object agnosia and anomia; early atrophy in semantic dementia.",
+      "uz": "Zararlanishi ko'ruv agnoziyasi va anomiya beradi; semantik demensiyada erta atrofiyalanadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Inferior temporal gyrus",
+        "url": "https://en.wikipedia.org/wiki/Inferior_temporal_gyrus"
+      }
+    ]
+  },
+  "ds-middle-temporal-gyrus": {
+    "la": "Gyrus temporalis medius",
+    "uz": "O'rta chakka pushtasi (Destrieux)",
+    "description": {
+      "en": "Middle lateral temporal gyrus between the superior and inferior temporal sulci (Brodmann area 21).",
+      "uz": "Yuqori va pastki chakka egatlari orasidagi o'rta lateral chakka pushtasi (Brodmann 21)."
+    },
+    "role": {
+      "en": "Multimodal lexical-semantic hub linking word forms to conceptual meaning.",
+      "uz": "So'z shakllarini tushunchaviy ma'no bilan bog'lovchi ko'p modalli leksik-semantik markaz."
+    },
+    "clinical": {
+      "en": "Dominant lesions cause anomia and word-comprehension deficits.",
+      "uz": "Dominant zararlanish anomiya va so'z ma'nosini tushunish buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Middle temporal gyrus",
+        "url": "https://en.wikipedia.org/wiki/Middle_temporal_gyrus"
+      }
+    ]
+  },
+  "ds-anterior-segment-of-lateral-sulcus-horizontal-ramus": {
+    "la": "Ramus anterior (horizontalis) sulci lateralis",
+    "uz": "Lateral egatning oldingi gorizontal shoxi",
+    "description": {
+      "en": "Horizontal anterior branch of the lateral (Sylvian) fissure extending forward into the inferior frontal gyrus between pars orbitalis and pars triangularis.",
+      "uz": "Pastki peshona pushtasiga oldinga kirib, pars orbitalis bilan pars triangularisni ajratib turuvchi lateral (Silviy) egatning gorizontal shoxi."
+    },
+    "role": {
+      "en": "Anatomical boundary separating ventral semantic-orbital frontal cortex (area 47) from anterior Broca's cortex (area 45).",
+      "uz": "Ventral semantik-orbital peshona po'stlog'ini (47-maydon) oldingi Broka po'stlog'idan (45-maydon) ajratuvchi anatomik chegara."
+    },
+    "clinical": {
+      "en": "Key surface landmark during awake craniotomy to identify pars triangularis and protect Broca's area.",
+      "uz": "Uyg'oq kraniotomiyada pars triangularisni aniqlash va Broka sohasini asrash uchun muhim yuza mo'ljali."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-anterior-segment-of-lateral-sulcus-vertical-ramus": {
+    "la": "Ramus ascendens (verticalis) sulci lateralis",
+    "uz": "Lateral egatning oldingi vertikal (ko'tariluvchi) shoxi",
+    "description": {
+      "en": "Ascending anterior branch of the lateral (Sylvian) fissure rising into the inferior frontal gyrus between pars triangularis and pars opercularis.",
+      "uz": "Pastki peshona pushtasiga yuqoriga ko'tarilib, pars triangularis bilan pars opercularisni ajratib turuvchi lateral (Silviy) egatning vertikal shoxi."
+    },
+    "role": {
+      "en": "Divides Broca's region into its anterior semantic-lexical division (area 45) and posterior phonological-articulatory division (area 44).",
+      "uz": "Broka sohasini oldingi leksik-semantik (45-maydon) va orqa fonologik-artikulyator (44-maydon) qismlarga ajratadi."
+    },
+    "clinical": {
+      "en": "Neurosurgical landmark marking the boundary between pars triangularis and pars opercularis over the anterior insula.",
+      "uz": "Oldingi orolcha ustida pars triangularis va pars opercularis chegarasini ko'rsatuvchi neyroxirurgik mo'ljal."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-lateral-sulcus-posterior-ramus": {
+    "la": "Ramus posterior sulci lateralis (Sylvii)",
+    "uz": "Lateral (Silviy) egatning orqa shoxi",
+    "description": {
+      "en": "Main posterior stem of the lateral (Sylvian) fissure separating the frontal and parietal opercula above from the superior temporal gyrus below, turning upward into the supramarginal gyrus.",
+      "uz": "Yuqoridagi peshona va tepa qopqoqlarini pastdagi yuqori chakka pushtasidan ajratib, orqada chekka usti pushtasiga ko'tariluvchi lateral (Silviy) egatning asosiy orqa shoxi."
+    },
+    "role": {
+      "en": "Contains the middle cerebral artery (M2/M3 segments) and hides the insula, Heschl's gyrus and secondary somatosensory cortex (S2) within its banks.",
+      "uz": "O'rta miya arteriyasi (M2/M3) shoxlarini olib o'tadi; qirg'oqlari ichida orolcha, Geshl pushtasi va ikkilamchi somatosensor po'stloq (S2) joylashgan."
+    },
+    "clinical": {
+      "en": "Perisylvian strokes cause the major aphasia syndromes (Broca, Wernicke, conduction, global); transsylvian microneurosurgical corridor to the insula and circle of Willis.",
+      "uz": "Perisilviy insultlari asosiy afaziya sindromlarini (Broka, Vernike, o'tkazuvchi, global) beradi; orolcha va Villiz doirasiga transsilviy mikroneyroxirurgik yo'lak."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Lateral sulcus",
+        "url": "https://en.wikipedia.org/wiki/Lateral_sulcus"
+      }
+    ]
+  },
+  "ds-occipital-pole": {
+    "la": "Polus occipitalis",
+    "uz": "Ensa qutbi",
+    "description": {
+      "en": "Posterior apex of the occipital lobe where the calcarine sulcus terminates on the posterolateral surface (Brodmann area 17/18).",
+      "uz": "Ensa bo'lagining eng orqa uchi — kalkarin egatning orqa-lateral yuzada tugash sohasi (Brodmann 17/18)."
+    },
+    "role": {
+      "en": "Cortical representation of the fovea (central 1–2° of high-acuity macular vision), occupying a disproportionately large area of V1.",
+      "uz": "Foveaning (yuqori o'tkirlikdagi markaziy 1–2° makulyar ko'rishning) po'stloq vakilligi — V1 ning nomutanosib katta qismini egallaydi."
+    },
+    "clinical": {
+      "en": "Dual collateral blood supply from the posterior and middle cerebral arteries often preserves the occipital pole in PCA stroke, producing homonymous hemianopia with macular sparing.",
+      "uz": "Orqa va o'rta miya arteriyalaridan ikki manbali qon ta'minoti tufayli PCA insultida ensa qutbi ko'pincha saqlanib qoladi (makula saqlangan gomonim gemianopsiya)."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-temporal-pole": {
+    "la": "Polus temporalis",
+    "uz": "Chakka qutbi (Destrieux)",
+    "description": {
+      "en": "Anterior apex of the temporal lobe in front of the superior, middle and inferior temporal gyri (Brodmann area 38).",
+      "uz": "Yuqori, o'rta va pastki chakka pushtalari oldidagi chakka bo'lagining eng oldingi uchi (Brodmann 38)."
+    },
+    "role": {
+      "en": "Transmodal semantic hub binding concepts, proper names, face/voice identity and socio-emotional meaning.",
+      "uz": "Tushunchalar, atoqli otlar, yuz/ovoz va ijtimoiy-emotsional ma'noni birlashtiruvchi transmodal semantik markaz."
+    },
+    "clinical": {
+      "en": "Primary site of atrophy in semantic dementia (svPPA); resected in anterior temporal lobectomy for mesial temporal lobe epilepsy.",
+      "uz": "Semantik demensiyada (svPPA) birlamchi atrofiya joyi; mezial chakka epilepsiyasida oldingi chakka lobektomiyasida rezeksiya qilinadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Brodmann area 38",
+        "url": "https://en.wikipedia.org/wiki/Brodmann_area_38"
+      }
+    ]
+  },
+  "ds-calcarine-sulcus": {
+    "la": "Sulcus calcarinus",
+    "uz": "Pixsimon (kalkarin) egat",
+    "description": {
+      "en": "Deep horizontal sulcus on the medial occipital lobe running from below the splenium to the occipital pole, dividing the cuneus above from the lingual gyrus below.",
+      "uz": "Medial ensa bo'lagida splenium ostidan ensa qutbigacha cho'zilib, yuqoridagi cuneusni pastdagi tilsimon pushtadan ajratuvchi chuqur gorizontal egat."
+    },
+    "role": {
+      "en": "Houses the majority of the primary visual cortex (V1, Brodmann area 17) buried in its upper (lower visual field) and lower (upper visual field) banks.",
+      "uz": "Birlamchi ko'ruv po'stlog'ining (V1, Brodmann 17) asosiy qismi uning yuqori (pastki ko'rish maydoni) va pastki (yuqori ko'rish maydoni) devorlarida joylashgan."
+    },
+    "clinical": {
+      "en": "Occlusion of the calcarine branch of the PCA causes contralateral homonymous hemianopia.",
+      "uz": "Orqa miya arteriyasi kalkarin shoxining tiqilishi qarama-qarshi gomonim gemianopsiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Calcarine sulcus",
+        "url": "https://en.wikipedia.org/wiki/Calcarine_sulcus"
+      }
+    ]
+  },
+  "ds-central-sulcus": {
+    "la": "Sulcus centralis (Rolandi)",
+    "uz": "Markaziy egat (Roland egati)",
+    "description": {
+      "en": "Deep oblique sulcus separating the frontal lobe (precentral gyrus) from the parietal lobe (postcentral gyrus), containing the characteristic 'hand knob' omega bend.",
+      "uz": "Peshona bo'lagini (oldingi markaziy pushta) tepa bo'lagidan (orqa markaziy pushta) ajratuvchi chuqur qiyshiq egat; o'rta qismida xos omega-simon 'qo'l bo'rtmasi' bor."
+    },
+    "role": {
+      "en": "Its anterior wall contains primary motor cortex (area 4, Betz cells) and its posterior wall and floor contain primary somatosensory cortex (areas 3b and 3a).",
+      "uz": "Oldingi devorida birlamchi harakat po'stlog'i (4-maydon, Betz hujayralari), orqa devori va tubida birlamchi somatosensor po'stloq (3b va 3a maydonlari) yotadi."
+    },
+    "clinical": {
+      "en": "A focal lesion in the 'hand knob' of the central sulcus causes isolated contralateral hand weakness ('cortical hand' / pseudoperipheral palsy).",
+      "uz": "Markaziy egatning 'qo'l bo'rtmasi'dagi kichik o'choq qarama-qarshi qo'l panjasining yakkalangan falajini ('kortikal qo'l') keltirib chiqaradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Central sulcus",
+        "url": "https://en.wikipedia.org/wiki/Central_sulcus"
+      }
+    ]
+  },
+  "ds-cingulate-sulcus-marginal-branch": {
+    "la": "Ramus marginalis sulci cinguli",
+    "uz": "Belbog' egatining chekka (marginal) shoxi",
+    "description": {
+      "en": "Ascending posterior termination of the cingulate sulcus curving upward onto the dorsomedial edge of the hemisphere between the paracentral lobule and the precuneus.",
+      "uz": "Belbog' egatining paratsentral bo'lakcha bilan precuneus orasida yarim sharning yuqori-medial qirrasiga ko'tariluvchi orqa shoxi."
+    },
+    "role": {
+      "en": "Reliable anatomical landmark on sagittal and axial MRI: on axial slices it forms the 'pars bracket', and the central sulcus lies one gyrus immediately anterior to it.",
+      "uz": "Sagittal va aksial MRTda eng ishonchli anatomik mo'ljal: aksial kesimlarda 'qavs' hosil qiladi, markaziy egat esa undan bitta pushta oldinda yotadi."
+    },
+    "clinical": {
+      "en": "Used in neuroradiology and neurosurgery to localise the motor strip (precentral gyrus) when lateral anatomy is distorted by tumour or oedema.",
+      "uz": "O'sma yoki shish tufayli lateral anatomiya siljiganda harakat po'stlog'ini (oldingi markaziy pushtani) topish uchun neyroradiologik va jarrohlik mo'ljali."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-insula-circular-sulcus-anterior-part": {
+    "la": "Sulcus circularis insulae, pars anterior",
+    "uz": "Orolcha halqasimon egati, oldingi qismi",
+    "description": {
+      "en": "Anterior segment of the peri-insular circular sulcus separating the short insular gyri from the fronto-orbital operculum.",
+      "uz": "Orolchaning qisqa pushtalarini peshona-orbital qopqog'idan ajratib turuvchi orolcha halqasimon egatining oldingi qismi."
+    },
+    "role": {
+      "en": "Transition zone between agranular anterior insula and fronto-orbital opercular cortex; overlies the uncinate fasciculus and extreme capsule.",
+      "uz": "Agranulyar oldingi orolcha bilan peshona-orbital qopqoq po'stlog'i orasidagi o'tish zonasi; ostidan ilmoqsimon tutam va eng tashqi kapsula o'tadi."
+    },
+    "clinical": {
+      "en": "Deep boundary landmark during transsylvian resection of insular gliomas, just lateral to the anterior lenticulostriate perforators.",
+      "uz": "Orolcha gliomalarini transsilviy rezeksiya qilishda oldingi lentikulostriar perforant arteriyalar yaqinidagi chuqur chegara mo'ljali."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-insula-circular-sulcus-inferior-part": {
+    "la": "Sulcus circularis insulae, pars inferior",
+    "uz": "Orolcha halqasimon egati, pastki qismi",
+    "description": {
+      "en": "Inferior limiting sulcus of the insula separating the insular cortex from the temporal operculum (planum polare and Heschl's gyrus).",
+      "uz": "Orolcha po'stlog'ini chakka qopqog'idan (planum polare va Geshl pushtasidan) ajratib turuvchi pastki chegaralovchi egat."
+    },
+    "role": {
+      "en": "Covers the floor of the insular cleft above the temporal stem (IFOF, uncinate fasciculus and Meyer's loop) and temporal horn.",
+      "uz": "Chakka oyoqchasi (IFOF, ilmoqsimon tutam, Meyer qovuzlog'i) va yon qorincha chakka shoxi ustida orolcha yorig'ining tubini hosil qiladi."
+    },
+    "clinical": {
+      "en": "Key surgical corridor: trans-inferior-insular-sulcus approach gives access to the temporal horn in selective amygdalohippocampectomy.",
+      "uz": "Muhim jarrohlik yo'lagi: selektiv amigdologippokampektomiyada pastki orolcha egati orqali yon qorincha chakka shoxiga kiriladi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-insula-circular-sulcus-superior-part": {
+    "la": "Sulcus circularis insulae, pars superior",
+    "uz": "Orolcha halqasimon egati, yuqori qismi",
+    "description": {
+      "en": "Superior limiting sulcus of the insula separating the upper edge of the insula from the frontoparietal operculum.",
+      "uz": "Orolchaning yuqori chekkasini peshona-tepa qopqog'idan ajratib turuvchi yuqori chegaralovchi egat."
+    },
+    "role": {
+      "en": "Contains secondary somatosensory (S2) and gustatory/viscerosensory transition cortex along the roof of the insular cleft.",
+      "uz": "Orolcha yorig'i tomi bo'ylab ikkilamchi somatosensor (S2) hamda ta'm va visserosensor o'tish po'stlog'ini o'z ichiga oladi."
+    },
+    "clinical": {
+      "en": "Marks the superior depth of the Sylvian fissure; M2 trunks of the middle cerebral artery turn at this sulcus to become M3 opercular branches.",
+      "uz": "Silviy egatining yuqori chuqur chegarasi; o'rta miya arteriyasining M2 shoxlari shu egatda qayrilib, M3 qopqoq shoxlariga aylanadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-anterior-transverse-collateral-sulcus": {
+    "la": "Sulcus collateralis transversus anterior",
+    "uz": "Oldingi ko'ndalang kollateral egat",
+    "description": {
+      "en": "Anterior transverse branch of the collateral (or rhinal) sulcus separating the parahippocampal/entorhinal region from the temporal pole and anterior fusiform gyrus.",
+      "uz": "Parahippokampal/entorinal sohani chakka qutbi va oldingi duksimon pushtadan ajratuvchi kollateral (yoki rinal) egatning oldingi ko'ndalang shoxi."
+    },
+    "role": {
+      "en": "Perirhinal/entorhinal border cortex (Brodmann areas 35/36) supporting object familiarity and visual memory encoding.",
+      "uz": "Narsalar tanishligi hissi va ko'ruv xotirasini kodlashni ta'minlovchi peririnal/entorinal chegara po'stlog'i (Brodmann 35/36)."
+    },
+    "clinical": {
+      "en": "Early site of cortical thinning and tau tangle deposition in prodromal Alzheimer disease.",
+      "uz": "Prodromal Alzheimer kasalligida po'stloq yupqalashishi va tau chigallari to'planishining erta joyi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-posterior-transverse-collateral-sulcus": {
+    "la": "Sulcus collateralis transversus posterior",
+    "uz": "Orqa ko'ndalang kollateral egat",
+    "description": {
+      "en": "Posterior transverse bifurcation of the collateral sulcus on the basal occipitotemporal surface between the posterior lingual and posterior fusiform gyri.",
+      "uz": "Pastki ensa-chakka yuzasida orqa tilsimon va orqa duksimon pushtalar orasida joylashgan kollateral egatning orqa ko'ndalang shoxi."
+    },
+    "role": {
+      "en": "Ventral extrastriate visual cortex (ventral V4/VO) involved in colour, texture and scene surface processing.",
+      "uz": "Rang, tekstura va manzara yuzasini qayta ishlashda qatnashuvchi ventral ekstrastriar ko'ruv po'stlog'i (ventral V4/VO)."
+    },
+    "clinical": {
+      "en": "Involved in posterior cerebral artery infarcts causing colour-vision deficits (achromatopsia) and upper visual field cuts.",
+      "uz": "Orqa miya arteriyasi infarktlarida zararlanib, rang ajratish buzilishi (axromatopsiya) va yuqori ko'rish maydoni nuqsonlarini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-inferior-frontal-sulcus": {
+    "la": "Sulcus frontalis inferior",
+    "uz": "Pastki peshona egati (Destrieux)",
+    "description": {
+      "en": "Longitudinal frontal sulcus running forward from the inferior precentral sulcus to separate the middle frontal gyrus above from the inferior frontal gyrus below.",
+      "uz": "Pastki oldingi markaziy egatdan oldinga yo'nalib, yuqoridagi o'rta peshona pushtasini pastdagi pastki peshona pushtasidan ajratuvchi bo'ylama egat."
+    },
+    "role": {
+      "en": "Contains prefrontal cognitive-control cortex and, at its posterior junction with the precentral sulcus (inferior frontal junction, IFJ), coordinates task switching and working memory.",
+      "uz": "Prefrontal kognitiv nazorat po'stlog'ini saqlaydi; oldingi markaziy egat bilan tutashgan orqa qismida (IFJ) vazifani almashtirish va ishchi xotirani muvofiqlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions impair cognitive flexibility, rule switching and top-down attentional control.",
+      "uz": "Zararlanishi kognitiv moslashuvchanlik, qoidalarni almashtirish va diqqat nazoratini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-middle-frontal-sulcus": {
+    "la": "Sulcus frontalis medius (intermedius)",
+    "uz": "O'rta peshona egati",
+    "description": {
+      "en": "Longitudinal sulcus running within the anterior middle frontal gyrus toward the frontal pole, dividing the middle frontal gyrus into dorsal and ventral tiers.",
+      "uz": "Oldingi o'rta peshona pushtasi ichida peshona qutbi tomon yo'nalib, o'rta peshona pushtasini dorsal va ventral qatorlarga bo'luvchi bo'ylama egat."
+    },
+    "role": {
+      "en": "Core dorsolateral prefrontal cortex (Brodmann areas 46 and 9/46) for working-memory manipulation and abstract rule representation.",
+      "uz": "Ishchi xotirada ma'lumotni qayta ishlash va mavhum qoidalarni ifodalash uchun asosiy dorsolateral prefrontal po'stloq (Brodmann 46 va 9/46)."
+    },
+    "clinical": {
+      "en": "Lesions cause executive working-memory deficits; anatomical landmark for targeting the dorsolateral prefrontal cortex in rTMS.",
+      "uz": "Zararlanishi ijrochi ishchi xotira nuqsonini beradi; rTMS muolajasida dorsolateral prefrontal po'stloqni nishonga olish uchun anatomik mo'ljal."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-superior-frontal-sulcus": {
+    "la": "Sulcus frontalis superior",
+    "uz": "Yuqori peshona egati (Destrieux)",
+    "description": {
+      "en": "Longitudinal dorsal frontal sulcus running forward from the superior precentral sulcus to separate the superior frontal gyrus from the middle frontal gyrus.",
+      "uz": "Yuqori oldingi markaziy egatdan oldinga cho'zilib, yuqori peshona pushtasini o'rta peshona pushtasidan ajratuvchi dorsal bo'ylama egat."
+    },
+    "role": {
+      "en": "At its posterior junction with the precentral sulcus lies the human frontal eye field (FEF); anteriorly it supports spatial working memory.",
+      "uz": "Oldingi markaziy egat bilan tutashgan orqa qismida odamning peshona ko'z maydoni (FEF) joylashgan; oldingi qismi fazoviy ishchi xotirani ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Posterior lesions cause ipsilesional conjugate gaze deviation and impaired contralateral voluntary saccades.",
+      "uz": "Orqa qismi zararlanishi nigohning o'choq tomonga og'ishini va qarama-qarshi tomonga ixtiyoriy sakkadalar buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-sulcus-intermedius-primus": {
+    "la": "Sulcus intermedius primus (Jensen)",
+    "uz": "Birinchi oraliq egat (Yensen egati)",
+    "description": {
+      "en": "Short vertical sulcus descending from the intraparietal sulcus into the inferior parietal lobule to separate the supramarginal gyrus anteriorly from the angular gyrus posteriorly.",
+      "uz": "Tepa ichi egatidan pastki tepa bo'lakchasiga vertikal tushib, oldindagi chekka usti pushtasini orqadagi burchak pushtasidan ajratuvchi qisqa egat."
+    },
+    "role": {
+      "en": "Inferior parietal transition cortex between phonological/sensorimotor praxis (area 40) and semantic/visuospatial integration (area 39).",
+      "uz": "Fonologik/sensomotor praksis (40-maydon) bilan semantik/ko'ruv-fazoviy integratsiya (39-maydon) orasidagi pastki tepa o'tish po'stlog'i."
+    },
+    "clinical": {
+      "en": "Left lesions contribute to Gerstmann syndrome and conduction/anomical aphasia; right lesions contribute to hemispatial neglect.",
+      "uz": "Chap zararlanish Gerstmann sindromi va afaziyaga, o'ng zararlanish esa gemispatial e'tiborsizlikka hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-intraparietal-sulcus-transverse-parietal-sulci": {
+    "la": "Sulcus intraparietalis et sulci parietales transversi",
+    "uz": "Tepa ichi egati va ko'ndalang tepa egatlari",
+    "description": {
+      "en": "Major longitudinal parietal sulcus running backward from the postcentral sulcus to the occipital lobe, separating the superior and inferior parietal lobules.",
+      "uz": "Orqa markaziy egatdan ensa bo'lagigacha cho'zilib, yuqori va pastki tepa bo'lakchalarini ajratib turuvchi asosiy tepa ichi egati."
+    },
+    "role": {
+      "en": "Houses specialized visuomotor and cognitive areas: AIP (hand grasping), LIP (saccades and spatial attention), VIP (peripersonal space), MIP (reaching) and horizontal IPS (number sense and calculation).",
+      "uz": "Maxsus vizuomotor va kognitiv maydonlarni saqlaydi: AIP (qo'l bilan ushlash), LIP (sakkada va diqqat), VIP (yaqin fazo), MIP (qo'l uzatish) hamda son hissi va hisoblash."
+    },
+    "clinical": {
+      "en": "Left IPS lesions cause primary acalculia and finger/praxis deficits; right IPS lesions disrupt the dorsal attention network, causing severe spatial neglect.",
+      "uz": "Chap IPS zararlanishi birlamchi akalkuliya va praksis buzilishini, o'ng IPS zararlanishi dorsal diqqat tarmog'ini uzib, og'ir fazoviy e'tiborsizlikni beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Intraparietal sulcus",
+        "url": "https://en.wikipedia.org/wiki/Intraparietal_sulcus"
+      }
+    ]
+  },
+  "ds-middle-occipital-lunatus-sulcus": {
+    "la": "Sulcus occipitalis medius et sulcus lunatus",
+    "uz": "O'rta ensa va oysimon (lunatus) egat",
+    "description": {
+      "en": "Horizontal sulcus within the lateral occipital cortex together with the variable crescentic lunate sulcus near the occipital pole.",
+      "uz": "Lateral ensa po'stlog'i ichidagi gorizontal o'rta ensa egati va ensa qutbi yaqinidagi o'roqsimon (lunatus) egat."
+    },
+    "role": {
+      "en": "Lateral extrastriate visual cortex (V2/V3/LO) processing intermediate contour, texture and shape features in the central visual field.",
+      "uz": "Markaziy ko'rish maydonidagi kontur, tekstura va shakl belgilarini qayta ishlovchi lateral ekstrastriar ko'ruv po'stlog'i (V2/V3/LO)."
+    },
+    "clinical": {
+      "en": "Lesions cause paracentral visual field scotomas or impaired visual form discrimination.",
+      "uz": "Zararlanishi paratsentral ko'rish maydoni skotomalari yoki ko'ruv shaklini farqlash buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-superior-transverse-occipital-sulcus": {
+    "la": "Sulcus occipitalis superior et sulcus occipitalis transversus",
+    "uz": "Yuqori va ko'ndalang ensa egati",
+    "description": {
+      "en": "Dorsal occipital sulcal complex formed by the posterior continuation of the intraparietal sulcus and its T-shaped transverse occipital branch, separating the superior and middle occipital gyri.",
+      "uz": "Tepa ichi egatining orqa davomi va uning T-simon ko'ndalang shoxidan hosil bo'lgan dorsal ensa egatlari; yuqori va o'rta ensa pushtalarini ajratadi."
+    },
+    "role": {
+      "en": "Dorsal retinotopic visual areas V3A and V3B/V7: stereoscopic depth perception, 3D global motion and visuospatial attention.",
+      "uz": "Dorsal retinotopik V3A va V3B/V7 ko'ruv maydonlari: stereoskopik chuqurlikni idrok etish, 3D harakat va ko'ruv-fazoviy diqqat."
+    },
+    "clinical": {
+      "en": "Lesions impair stereopsis (depth perception), motion-defined form perception and visually guided reaching.",
+      "uz": "Zararlanishi stereopsis (chuqurlikni his qilish), harakat orqali shaklni ajratish va ko'ruv nazoratidagi qo'l uzatishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-anterior-occipital-sulcus-preoccipital-notch": {
+    "la": "Sulcus occipitalis anterior et incisura preoccipitalis (Meynert)",
+    "uz": "Oldingi ensa egati va ensa oldi o'ymasi",
+    "description": {
+      "en": "Vertical sulcus at the ventrolateral temporo-occipital border above the preoccipital notch, marking the conventional lateral boundary between the temporal and occipital lobes.",
+      "uz": "Ensa oldi o'ymasi ustidagi ventrolateral chakka-ensa chegarasida joylashgan vertikal egat; chakka va ensa bo'laklari orasidagi shartli lateral chegara."
+    },
+    "role": {
+      "en": "Houses the human motion-sensitive visual complex (hMT+ / V5) where the inferior temporal sulcus meets the anterior occipital sulcus.",
+      "uz": "Pastki chakka egati bilan oldingi ensa egati tutashgan joyda odamning harakatga sezgir ko'ruv kompleksini (hMT+ / V5) saqlaydi."
+    },
+    "clinical": {
+      "en": "Bilateral or large unilateral lesions here cause cerebral akinetopsia (inability to perceive smooth visual motion).",
+      "uz": "Bu yerdagi ikki tomonlama yoki yirik zararlanish serebral akinetopsiyani (ravon harakatni ko'ra olmaslikni) keltirib chiqaradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-lateral-occipito-temporal-sulcus": {
+    "la": "Sulcus occipitotemporalis",
+    "uz": "Lateral ensa-chakka egati",
+    "description": {
+      "en": "Longitudinal basal sulcus separating the fusiform (lateral occipitotemporal) gyrus medially from the inferior temporal and inferior occipital gyri laterally.",
+      "uz": "Pastki yuzada medialdagi duksimon (lateral ensa-chakka) pushtani lateraldagi pastki chakka va pastki ensa pushtalaridan ajratuvchi bo'ylama egat."
+    },
+    "role": {
+      "en": "In the left hemisphere, the posterior-middle bank of this sulcus houses the visual word form area (VWFA) for rapid orthographic recognition of written words.",
+      "uz": "Chap yarim sharda ushbu egatning o'rta-orqa qirg'og'ida yozma so'zlarni tez tanuvchi ko'ruv so'z shakli sohasi (VWFA) joylashgan."
+    },
+    "clinical": {
+      "en": "Left-sided lesions cause pure alexia (letter-by-letter reading with preserved writing and spoken language).",
+      "uz": "Chap tomonlama zararlanishi sof aleksiya (yozish va og'zaki nutq saqlangan holda harfma-harf qiynalib o'qish) beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-collateral-lingual-sulcus": {
+    "la": "Sulcus collateralis et sulcus lingualis",
+    "uz": "Kollateral va tilsimon egat",
+    "description": {
+      "en": "Longitudinal ventromedial sulcus running from the occipital pole to the temporal pole, separating the lingual and parahippocampal gyri medially from the fusiform gyrus laterally.",
+      "uz": "Ensa qutbidan chakka qutbigacha cho'zilib, medialdagi tilsimon va parahippokampal pushtalarni lateraldagi duksimon pushtadan ajratuvchi bo'ylama egat."
+    },
+    "role": {
+      "en": "Its anterior banks contain perirhinal cortex (object recognition memory) and its posterior banks contain the parahippocampal place area (scene/landmark recognition).",
+      "uz": "Oldingi qirg'oqlarida peririnal po'stloq (narsalarni tanish xotirasi), orqa qirg'oqlarida esa parahippokampal joy sohasi (manzara va binolarni tanish) yotadi."
+    },
+    "clinical": {
+      "en": "Posterior PCA infarcts cause landmark agnosia and topographical disorientation; anterior flattening on coronal MRI reflects medial temporal atrophy in Alzheimer disease.",
+      "uz": "Orqa PCA infarkti topografik dezoriyentatsiya beradi; koronal MRTda egatning sayozlashishi Alzheimer kasalligidagi medial chakka atrofiyasini ko'rsatadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-lateral-orbital-sulcus": {
+    "la": "Sulcus orbitalis lateralis",
+    "uz": "Lateral orbital egat",
+    "description": {
+      "en": "Short longitudinal sulcus at the ventrolateral border of the orbital frontal surface between the lateral orbital gyrus and the orbital part of the inferior frontal gyrus.",
+      "uz": "Peshona bo'lagi orbital yuzasining ventrolateral chekkasida lateral orbital pushta bilan pastki peshona pushtasining orbital qismi orasidagi egat."
+    },
+    "role": {
+      "en": "Ventrolateral prefrontal/orbitofrontal transition cortex (area 47/12) involved in cognitive control of reward and interference resolution.",
+      "uz": "Mukofotni kognitiv nazorat qilish va chalg'ituvchi omillarni bostirishda qatnashuvchi ventrolateral prefrontal/orbitofrontal o'tish po'stlog'i (47/12-maydon)."
+    },
+    "clinical": {
+      "en": "Involved in frontobasal contusions causing disinhibition and impaired response switching.",
+      "uz": "Frontobazal kontuziyalarda zararlanib, tormozsizlik va javobni almashtirish buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-olfactory-sulcus": {
+    "la": "Sulcus olfactorius",
+    "uz": "Hid bilish (olfaktor) egati",
+    "description": {
+      "en": "Straight longitudinal sulcus on the medial orbital surface of the frontal lobe lateral to the gyrus rectus, cradling the olfactory bulb and olfactory tract.",
+      "uz": "Peshona bo'lagi medial orbital yuzasida to'g'ri pushtadan lateralda joylashgan to'g'ri bo'ylama egat; unda hid bilish piyozchasi va trakti yotadi."
+    },
+    "role": {
+      "en": "Medial orbitofrontal cortex (Brodmann area 11) integrating olfactory input with reward valuation and autonomic responses.",
+      "uz": "Hid kirishini mukofotni baholash va vegetativ javoblar bilan birlashtiruvchi medial orbitofrontal po'stloq (Brodmann 11)."
+    },
+    "clinical": {
+      "en": "Site of olfactory groove meningiomas (causing ipsilateral anosmia, optic nerve compression — Foster Kennedy syndrome, and frontal apathy); hypoplastic in Kallmann syndrome.",
+      "uz": "Hid egati meningiomalari joyi (o'z tomonida anosmiya, Foster Kennedi sindromi va frontal apatiya beradi); Kallmann sindromida gipoplaziyaga uchraydi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-orbital-sulci": {
+    "la": "Sulci orbitales (cruciformes / H-formes)",
+    "uz": "Orbital (H-simon) egatlar",
+    "description": {
+      "en": "H- or K-shaped complex of medial, lateral and transverse orbital sulci on the basal frontal surface subdividing the anterior, posterior, medial and lateral orbital gyri.",
+      "uz": "Peshona bo'lagi pastki yuzasida oldingi, orqa, medial va lateral orbital pushtalarni ajratib turuvchi H- yoki X-simon orbital egatlar majmuasi."
+    },
+    "role": {
+      "en": "Central orbitofrontal cortex (Brodmann areas 11 and 13): multisensory flavour/odor hedonic valuation and adaptive outcome expectation.",
+      "uz": "Markaziy orbitofrontal po'stloq (Brodmann 11 va 13): ta'm va hidning yoqimliligini baholash hamda harakat natijasini bashorat qilish."
+    },
+    "clinical": {
+      "en": "Damaged in closed-head trauma against the irregular floor of the anterior cranial fossa, causing orbitofrontal personality change.",
+      "uz": "Yopiq bosh miya jarohatida oldingi kalla chuqurchasining g'adir-budur tubiga urilib shikastlanadi va orbitofrontal shaxsiyat o'zgarishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-parieto-occipital-sulcus": {
+    "la": "Sulcus parietooccipitalis",
+    "uz": "Tepa-ensa egati (Destrieux)",
+    "description": {
+      "en": "Deep oblique fissure on the medial hemisphere running downward and forward from the upper margin to join the anterior calcarine sulcus, separating the precuneus from the cuneus.",
+      "uz": "Yarim sharning medial yuzasida yuqori qirradan pastga va oldinga tushib, oldingi kalkarin egatga qo'shiluvchi hamda precuneusni cuneusdan ajratuvchi chuqur egat."
+    },
+    "role": {
+      "en": "Contains dorsal visual stream areas V6 and V6A within its deep banks for wide-field optic flow analysis and visuomotor reaching.",
+      "uz": "Chuqur devorlarida keng ko'lamli optik oqim tahlili va qo'l uzatishni ko'ruv orqali boshqarish uchun V6 va V6A maydonlarini saqlaydi."
+    },
+    "clinical": {
+      "en": "Lesions in its depth cause optic ataxia (inability to reach accurately for objects in peripheral vision).",
+      "uz": "Chuqur devorlari zararlanishi optik ataksiyani (periferik ko'rish maydonidagi narsalarga aniq qo'l uzata olmaslikni) keltirib chiqaradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Parieto-occipital sulcus",
+        "url": "https://en.wikipedia.org/wiki/Parieto-occipital_sulcus"
+      }
+    ]
+  },
+  "ds-pericallosal-sulcus": {
+    "la": "Sulcus corporis callosi (pericallosus)",
+    "uz": "Qadoqsimon tana egati (perikallozal egat)",
+    "description": {
+      "en": "C-shaped sulcus curving directly along the dorsal surface of the corpus callosum, separating the corpus callosum from the overlying cingulate gyrus.",
+      "uz": "Qadoqsimon tananing ustki yuzasi bo'ylab C-simon egilib, qadoqsimon tanani ustidagi belbog' pushtasidan ajratib turuvchi egat."
+    },
+    "role": {
+      "en": "Contains the indusium griseum and Brodmann area 33 in its floor and serves as the anatomical channel for the pericallosal artery (terminal branch of the ACA).",
+      "uz": "Tubida indusium griseum va Brodmann 33-maydonini saqlaydi hamda perikallozal arteriya (oldingi miya arteriyasining yakuniy shoxi) o'tadigan kanal hisoblanadi."
+    },
+    "clinical": {
+      "en": "Key vascular landmark during interhemispheric transcallosal surgery and common site of distal ACA (pericallosal) aneurysms.",
+      "uz": "Yarim sharlararo transkallozal jarrohlikda asosiy qon-tomir mo'ljali va distal ACA (perikallozal) anevrizmalarining ko'p uchraydigan joyi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-postcentral-sulcus": {
+    "la": "Sulcus postcentralis",
+    "uz": "Orqa markaziy egat (Destrieux)",
+    "description": {
+      "en": "Vertical parietal sulcus running parallel and posterior to the central sulcus, separating the postcentral gyrus from the superior and inferior parietal lobules.",
+      "uz": "Markaziy egatga parallel va undan orqada vertikal yo'nalib, orqa markaziy pushtani yuqori hamda pastki tepa bo'lakchalaridan ajratuvchi egat."
+    },
+    "role": {
+      "en": "Houses Brodmann area 2 and anterior area 5 in its banks: integrates cutaneous touch with joint proprioception for active haptic exploration (stereognosis).",
+      "uz": "Devorlarida Brodmann 2 va oldingi 5-maydonlarni saqlaydi: narsalarni paypaslab tanish (stereognoz) uchun teri sezgisini bo'g'im proprioseptsiyasi bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions cause contralateral astereognosis and tactile apraxia despite relatively preserved elementary touch detection.",
+      "uz": "Zararlanishi oddiy teginish sezgisi saqlangan holda qarama-qarshi qo'lda astereognoz va taktil apraksiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-precentral-sulcus-inferior-part": {
+    "la": "Sulcus precentralis inferior",
+    "uz": "Oldingi markaziy egat, pastki qismi",
+    "description": {
+      "en": "Ventral segment of the precentral sulcus running parallel and anterior to the central sulcus, separating the inferior frontal gyrus (pars opercularis) from the ventral precentral gyrus.",
+      "uz": "Markaziy egatga parallel va undan oldinda yo'nalib, pastki peshona pushtasini (pars opercularis) ventral oldingi markaziy pushtadan ajratuvchi egat."
+    },
+    "role": {
+      "en": "Ventral premotor cortex (area 6v) and inferior frontal junction (IFJ): sensorimotor transformation for speech articulation, hand grasping and cognitive task rules.",
+      "uz": "Ventral premotor po'stloq (6v) va pastki peshona tutashuvi (IFJ): nutq artikulyatsiyasi, qo'l bilan ushlash va kognitiv qoidalar uchun sensomotor integratsiya."
+    },
+    "clinical": {
+      "en": "Dominant lesions impair speech motor programming (apraxia of speech) and phonological working memory.",
+      "uz": "Dominant yarim shardagi zararlanishi nutqni harakat jihatidan dasturlashni (nutq apraksiyasi) va fonologik ishchi xotirani buzadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-precentral-sulcus-superior-part": {
+    "la": "Sulcus precentralis superior",
+    "uz": "Oldingi markaziy egat, yuqori qismi",
+    "description": {
+      "en": "Dorsal segment of the precentral sulcus separating the posterior ends of the superior and middle frontal gyri from the dorsal precentral gyrus.",
+      "uz": "Yuqori va o'rta peshona pushtalarining orqa uchlarini dorsal oldingi markaziy pushtadan ajratib turuvchi oldingi markaziy egatning yuqori qismi."
+    },
+    "role": {
+      "en": "Dorsal premotor cortex (area 6d) and, at its junction with the superior frontal sulcus, the human frontal eye field (FEF) for voluntary gaze shifts and visually guided reaching.",
+      "uz": "Dorsal premotor po'stloq (6d) va yuqori peshona egati bilan tutashuvda ixtiyoriy nigoh ko'chirish hamda qo'l uzatish uchun peshona ko'z maydoni (FEF)."
+    },
+    "clinical": {
+      "en": "Lesions impair contralateral saccade initiation (eyes deviate toward the lesion acutely) and conditional visuomotor arm control.",
+      "uz": "Zararlanishi qarama-qarshi tomonga sakkadalarni boshlashni (o'tkir davrda ko'zlar o'choq tomonga og'adi) va ko'ruv nazoratidagi qo'l harakatini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-suborbital-sulcus": {
+    "la": "Sulcus suborbitalis (rostralis)",
+    "uz": "Orbital osti (rostral) egati",
+    "description": {
+      "en": "Horizontal sulcus on the anterior ventromedial frontal surface between the anterior cingulate sulcus above and the straight gyrus below (medial Brodmann area 10/11/32).",
+      "uz": "Oldingi ventromedial peshona yuzasida yuqoridagi oldingi belbog' egati bilan pastdagi to'g'ri pushta orasida gorizontal yo'nalgan egat (medial Brodmann 10/11/32)."
+    },
+    "role": {
+      "en": "Ventromedial prefrontal cortex (vmPFC): personal value computation, emotion regulation, fear extinction and default-mode self-referential processing.",
+      "uz": "Ventromedial prefrontal po'stloq (vmPFC): shaxsiy qiymatni hisoblash, emotsiyani boshqarish, qo'rquvni so'ndirish va o'zi haqida fikrlash."
+    },
+    "clinical": {
+      "en": "Lesions impair value-based decision making and emotional regulation; altered activity in PTSD and major depression.",
+      "uz": "Zararlanishi qiymatga asoslangan qaror qabul qilish va emotsional boshqaruvni buzadi; PTSD va depressiyada faolligi o'zgaradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-subparietal-sulcus": {
+    "la": "Sulcus subparietalis",
+    "uz": "Tepa osti (subparietal) egati",
+    "description": {
+      "en": "H- or Y-shaped sulcus on the medial parietal surface separating the precuneus above from the posterior cingulate gyrus below.",
+      "uz": "Yarim sharning medial tepa yuzasida yuqoridagi precuneusni pastdagi orqa belbog' pushtasidan ajratib turuvchi H- yoki Y-simon egat."
+    },
+    "role": {
+      "en": "Medial parietal/posterior cingulate border cortex (Brodmann area 31) integrating autobiographical memory with visuospatial imagery inside the default-mode network.",
+      "uz": "Default-mode tarmog'ida avtobiografik xotirani ko'ruv-fazoviy tasavvur bilan birlashtiruvchi medial tepa / orqa belbog' chegara po'stlog'i (Brodmann 31)."
+    },
+    "clinical": {
+      "en": "Early site of metabolic decline and amyloid deposition in Alzheimer disease.",
+      "uz": "Alzheimer kasalligida metabolizm pasayishi va amiloid to'planishining erta joyi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-inferior-temporal-sulcus": {
+    "la": "Sulcus temporalis inferior",
+    "uz": "Pastki chakka egati",
+    "description": {
+      "en": "Longitudinal sulcus on the lateral temporal lobe separating the middle temporal gyrus above from the inferior temporal gyrus below.",
+      "uz": "Chakka bo'lagining lateral yuzasida yuqoridagi o'rta chakka pushtasini pastdagi pastki chakka pushtasidan ajratib turuvchi bo'ylama egat."
+    },
+    "role": {
+      "en": "Ventral temporal association cortex participating in multimodal lexical-semantic and visual object processing; its posterior ascending limb approaches area hMT+/V5.",
+      "uz": "Ko'p modalli leksik-semantik va ko'ruv orqali narsalarni qayta ishlashda qatnashuvchi chakka assotsiativ po'stlog'i; orqa uchi hMT+/V5 harakat maydoniga tutashadi."
+    },
+    "clinical": {
+      "en": "Dominant lesions contribute to anomia and semantic retrieval deficits.",
+      "uz": "Dominant yarim shardagi zararlanishi anomiya va semantik eslash buzilishiga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  },
+  "ds-superior-temporal-sulcus": {
+    "la": "Sulcus temporalis superior",
+    "uz": "Yuqori chakka egati (Destrieux)",
+    "description": {
+      "en": "Deep, continuous longitudinal sulcus running from the temporal pole to the angular gyrus, separating the superior and middle temporal gyri.",
+      "uz": "Chakka qutbidan burchak pushtasigacha cho'zilib, yuqori va o'rta chakka pushtalarini ajratib turuvchi chuqur bo'ylama egat."
+    },
+    "role": {
+      "en": "Multisensory social-perception cortex: integrates voice, face motion, lip reading, eye gaze, biological motion and theory-of-mind cues.",
+      "uz": "Ko'p sezgili ijtimoiy idrok po'stlog'i: ovoz, yuz harakati, lab o'qish, nigoh yo'nalishi, biologik harakat va boshqalar niyatini anglash signallarini birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions impair audiovisual speech integration (McGurk effect), voice/gaze perception and social cognition; atypical activation in autism spectrum disorder.",
+      "uz": "Zararlanishi nutqning audiovizual integratsiyasini, ovoz/nigoh idrokini va ijtimoiy kognitsiyani buzadi; autizm spektrida faolligi o'zgaradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      },
+      {
+        "title": "Wikipedia — Superior temporal sulcus",
+        "url": "https://en.wikipedia.org/wiki/Superior_temporal_sulcus"
+      }
+    ]
+  },
+  "ds-transverse-temporal-sulcus": {
+    "la": "Sulcus temporalis transversus (Heschl)",
+    "uz": "Ko'ndalang chakka egati (Geshl egati)",
+    "description": {
+      "en": "Oblique sulcus on the dorsal surface of the superior temporal gyrus immediately behind Heschl's anterior transverse temporal gyrus, separating it from the planum temporale.",
+      "uz": "Yuqori chakka pushtasining ustki yuzasida Geshl oldingi ko'ndalang chakka pushtasining bevosita ortida joylashib, uni planum temporale'dan ajratuvchi qiyshiq egat."
+    },
+    "role": {
+      "en": "Auditory core-to-belt transition cortex (Brodmann area 41/42) relaying primary tonotopic sound representations into higher spectrotemporal analysis.",
+      "uz": "Birlamchi tonotopik tovush tasvirini yuqori spektrotemporal tahlilga uzatuvchi eshituv o'tish po'stlog'i (Brodmann 41/42)."
+    },
+    "clinical": {
+      "en": "Involved in auditory agnosia and pure word deafness when damaged bilaterally or in the dominant hemisphere with subcortical radiations.",
+      "uz": "Ikki tomonlama yoki dominant yarim sharda po'stloq osti nurlanishi bilan birga zararlanganda eshituv agnoziyasi va sof so'z karligini beradi."
+    },
+    "sources": [
+      {
+        "title": "Destrieux et al. 2010, NeuroImage — Automatic parcellation of human cortical gyri and sulci using standard anatomical nomenclature",
+        "url": "https://doi.org/10.1016/j.neuroimage.2010.06.010"
+      }
+    ]
+  }
+}

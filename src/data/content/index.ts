@@ -6,6 +6,10 @@ import brodmann from './brodmann.json'
 import brainstem from './brainstem.json'
 import cerebellum from './cerebellum.json'
 import julichAreas from './julich-areas.json'
+import desikan from './desikan.json'
+import jhu from './jhu.json'
+import destrieux from './destrieux.json'
+import glasser from './glasser.json'
 
 /**
  * One entry per concept (a left/right pair shares it). Text is written for
@@ -31,6 +35,10 @@ const FILES: ContentFile[] = [
   brainstem as ContentFile,
   cerebellum as ContentFile,
   julichAreas as ContentFile,
+  desikan as ContentFile,
+  jhu as ContentFile,
+  destrieux as ContentFile,
+  glasser as ContentFile,
 ]
 const BY_CONCEPT = new Map<string, ContentEntry>()
 for (const f of FILES) for (const [k, v] of Object.entries(f)) BY_CONCEPT.set(k, v)
