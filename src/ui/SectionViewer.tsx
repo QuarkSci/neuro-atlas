@@ -261,7 +261,7 @@ export function SectionViewer() {
   const viewHint = view === 'myelin' ? t.svViewMyelinHint : view === 'nissl' ? t.svViewNisslHint : view === 'atlas' ? t.svViewAtlasHint : view === 'real' ? t.svViewRealHint : null
 
   return (
-    <div className="section-viewer dark" role="dialog" aria-modal="true" aria-label={l(section.title)} onClick={() => openSection(null)}>
+    <div className="section-viewer" role="dialog" aria-modal="true" aria-label={l(section.title)} onClick={() => openSection(null)}>
       <div className={`sv-card glass ${full ? 'full' : ''}`} onClick={(e) => e.stopPropagation()}>
         <header className="sv-head">
           <span className="sv-code">{section.code}</span>
