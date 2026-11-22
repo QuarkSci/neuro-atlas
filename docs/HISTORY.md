@@ -1265,3 +1265,11 @@ sxemada, `AtlasSliceView` vertikal hoshiya 0.034 (yon 0.07 — o'q so'zlari uchu
 hover RunTask 72→45 ms. QOLDI: foydalanuvchi real GPU'li brauzerida Performance yozuvi bilan tasdiqlashi; zoom g'ildiragida
 qayta rasterlash (headless GPUTask 20 ms) — real GPU'da o'lchash kerak.
 
+## AG-3 (2026-11-22): Draco meshlar va deploy (Antigravity, Claude tekshirdi)
+- `pipeline/tools/draco_meshes.py` (DracoPy, qb 14, nqb 10, cl 7): 196.21 MB → 21.04 MB; `--tar` Release arxivi.
+- `src/scene/loader.ts`: `DRACOLoader` (`public/draco/` — three.js gltf dekoderi), `VITE_MESH_BASE`; siqilgan va siqilmagan GLB birdek.
+- `deploy.yml`: `vars.VITE_MESH_BASE` bo'lmasa `meshes-v1` Release'dan `meshes-draco.tar.gz` → `public/meshes` → Pages (bir origin).
+- Sinash: Draco meshlarni vaqtincha `public/_draco_tmp/` ga qo'yib `VITE_MESH_BASE=/_draco_tmp/ npx vite --port 3021`, keyin
+  `NA_URL=http://localhost:3021/ node scripts/audit-pick.mjs` (production preview'da `__atlas` yo'q).
+- Ochiq: `meshes-v1` Release; kod litsenziyasi (`LICENSE` fayli yo'q).
+

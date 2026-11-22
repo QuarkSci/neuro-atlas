@@ -445,7 +445,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 |---|---|---|---|---|
 | AG-1 | Kontent: Desikan, JHU, Destrieux, Glasser ta'riflari | Antigravity | ✅ 2026-11-22 | birlashtirildi (`616d941`) · docs/handoff/AG-1.md |
 | AG-2 | Yorug' rejim: dars kartasi va kesim ko'ruvchisi | Antigravity | ✅ 2026-11-22 | birlashtirildi · docs/handoff/AG-2.md |
-| AG-3 | Deploy: meshlar Release + Draco, README, ATTRIBUTION | Antigravity | ⏳ | ag/AG-3 |
+| AG-3 | Deploy: meshlar Release + Draco, README, ATTRIBUTION | Antigravity | ✅ 2026-11-22 (qoldi: `meshes-v1` Release'ni foydalanuvchi yuklaydi; kod LICENSE qarori) | birlashtirildi (`6d6156f`) · docs/handoff/AG-3.md |
 | AG-4 | Tadqiqot: U1 gistologiya; BigBrain 20 mkm | Antigravity | ⏳ | ag/AG-4 |
 | CL-1 | AI panel: haqiqiy Gemini kaliti bilan ishlamayapti | Claude | ✅ tashxis: Google 503 (bepul tarif, band model); xato tafsiloti + avtomatik model almashtirish (`cd06af4`, `8b8ef1b`) | master |
 | CL-2 | AI-6 (ChatGPT/Google kirish), panel joylashuvi, look_at_screen | Claude | 🔨 panel joylashuvi va `look_at_screen` ✅ 2026-11-22; AI-6 — OpenAI javobini kutmoqda (SIWC statik sayt uchun hujjatlashtirilmagan) | master |
@@ -469,3 +469,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-22 · Claude · Yangi vazifalar: CL-6 (plastinka ko'ruvchisi tezligi va rasm hajmi), AG-5 (viktorina savollar banki); ikki yo'lli parallel reja (9-bo'lim boshi).
 - 2026-11-22 · Claude · CL-6: o'lchov — sahna viewer ochiqligida render qilmaydi (0/50), dash va blur headless'da ta'sirsiz (shovqin ichida), asosiy sabab joy: rasm 299 px edi. Tuzatish: bitta asboblar qatori (tablar+chiplar), izoh → ⓘ qalqib chiquvchi, afsona faqat sxemada, vertikal hoshiya 0.07→0.034, manba satri rasm ustiga; blur olib tashlandi (karta 93% shaffofmas), `.as-region`/`.sv-item` opacity-o'tishi olib tashlandi (hover darhol), BrainScene viewer ochiqligida kadrni o'tkazib yuboradi; `perf-real.mjs --trace`. Rasm Mc 427, B4 416, K3 433 px (balandlikning 62/61/63%); hover RunTask 72→45 ms/hodisa (headless), main-thread task 8 ms; audit-lesions 0, audit-pick 0.
 - 2026-11-22 · Claude · Apple ilovalari rejasi: foydalanuvchi spetsifikatsiyasi loyihaga moslashtirildi (`docs/APPLE.md`, PLAN 5.7); yangi vazifalar CL-7, AG-6, AG-7.
+- 2026-11-22 · Claude · AG-3 tekshirildi va birlashtirildi (`6d6156f`): dekoder three.js gltf nusxasi bilan bir xil; Draco meshlar bilan audit-pick 0, audit-lesions 0; build+preview xatosiz. Ochiq: `meshes-v1` Release (foydalanuvchi), LICENSE fayli yo'q (README MIT deydi).

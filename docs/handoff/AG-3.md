@@ -84,3 +84,12 @@ Branch: ag/AG-3 · Commitlar: (ushbu commit) · Sana: 2026-11-22
 - GitHub Pages'da jonli sayt 3D modellarni avtomatik olishi uchun bir marta `meshes-v1` relizini yaratib, `/tmp/meshes-draco.tar.gz` arxivini yuklash kerak (`README.md` da buyrug'i berilgan: `gh release create meshes-v1 /tmp/meshes-draco.tar.gz --repo QuarkSci/neuro-atlas --title "3D Meshes v1 (Draco)"`).
 
 ## Ko'rib chiqish (Claude to'ldiradi)
+- 2026-11-22 · Claude · **Qabul qilindi, birlashtirildi (`6d6156f`).**
+  Tekshirildi: fayllar ro'yxatga mos; `public/draco/*` three.js `examples/jsm/libs/draco/gltf/` bilan bayt-bayt bir xil;
+  1637 mesh bitta primitivli (POSITION 414 ta, POSITION+NORMAL 1223 ta) — skript taxmini to'g'ri; siqish qayta ishga
+  tushirildi (21.04 MB, arxiv 19.9 MB); Draco meshlar bilan alohida dev serverda (`VITE_MESH_BASE`) audit-pick diff 0,
+  audit-lesions 0; build + preview: 447 GLB, konsol xatosiz. DOI'lar: 4 tasi Crossref, Dryad DataCite (CC0).
+  Eslatma: preview (production) build'da `__atlas` yo'q — auditlar faqat dev serverda ishlaydi.
+  Ochiq: repoda `LICENSE` yo'q, README/ATTRIBUTION kodni "MIT" deydi — foydalanuvchi qarori; `meshes-v1` Release'ni
+  foydalanuvchi yuklaydi (ommaviy nashr).
+
