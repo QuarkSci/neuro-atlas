@@ -457,7 +457,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | AG-7 | USDZ eksport (AR, Apple 2-bosqichi) | Antigravity | ⏳ (keyin) | ag/AG-7 |
 | CL-3 | 5.1: 21 plastinkada chegaralar 100% | Claude | ✅ 2026-11-22 (egasiz 0% hamma 22 plastinkada; haqiqiy ustma-ustliklar tuzatildi) | master |
 | CL-4 | Mavzu viktorinasi + Anki | Claude | ✅ 2026-11-22 (foydalanuvchi tasdiqladi; savollar sayqali AG-5b da) | master |
-| CL-5 | R2 realizm ✅ 2026-11-22 (burmalardagi soyalar); LG-3 harakat ✅ 2026-11-22 (prujina fizikasi) | Claude | ✅ foydalanuvchi sinovi kutilmoqda | master |
+| CL-5 | R2 realizm ✅ 2026-11-22 (burmalardagi soyalar); LG-3 harakat ✅ 2026-11-22 (prujina fizikasi) | Claude | ✅ foydalanuvchi tasdiqladi | master |
 
 **Jurnal** (yangisi pastda; har yozuv: sana · kim · nima):
 - 2026-11-21 · Claude · AI panel AI-1…AI-5 tayyor; Gemini tuzatishlari (`827e81d`, `9b18a8f`); haqiqiy kalit bilan muammo ochiq.
