@@ -107,7 +107,7 @@ export function polyArea(p: P2[]): number {
  * mask with marching squares. Robust to the left/right half-meshes and the
  * internal nuclei that make a raw plane cut a tangle of overlapping rings.
  */
-export function unionOutline(loops: P2[][], cell = 0.25, minFraction = 0.12): P2[][] {
+export function unionOutline(loops: P2[][], cell = 0.25, minFraction = 0.12, grow = 0): P2[][] {
   if (!loops.length) return []
   let x0 = Infinity,
     y0 = Infinity,
@@ -148,6 +148,9 @@ export function unionOutline(loops: P2[][], cell = 0.25, minFraction = 0.12): P2
   }
   // Morphological close (dilate then erode, 2 cells) seals the seams between half-meshes.
   mask = erode(dilate(mask, W, H, 2), W, H, 2)
+  // `grow` (mm): swell the mask so the traced outline lies just outside the surface. Done on the mask, not by pushing
+  // vertices along normals, which makes small self-crossing loops at every concave corner.
+  if (grow > 0) mask = dilate(mask, W, H, Math.min(pad - 1, Math.max(1, Math.round(grow / cell))))
   const segs = marching(mask, W, H, ox, oy, cell)
   const out = chainLoops(segs, cell / 4)
     .map((l) => ({ l, a: Math.abs(polyArea(l)) }))

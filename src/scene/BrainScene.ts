@@ -14,7 +14,8 @@ import { LineSegments2 } from 'three/examples/jsm/lines/LineSegments2.js'
 import { LineSegmentsGeometry } from 'three/examples/jsm/lines/LineSegmentsGeometry.js'
 import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial.js'
 import { SECTIONS, scenePlane, type Section } from '@/data/sections'
-import { chainLoops, decimate, offsetLoop, planeBasis, sliceSegments, smoothLoop, unionOutline } from './slice'
+import { buildCap } from './caps'
+import { chainLoops, decimate, planeBasis, sliceSegments, smoothLoop, unionOutline } from './slice'
 import type { Mode } from '@/store/useAtlas'
 import type { LessonStage, Mni } from '@/data/lessons'
 
@@ -75,6 +76,8 @@ interface Marker {
   /** Outline points (scene space) the leader line may attach to. */
   ring: T.Vector3[]
   lead: SVGPolylineElement
+  /** Its badge is under the pointer: the ring is drawn bright and thick. */
+  hot: boolean
 }
 
 interface PartEntry {
@@ -217,6 +220,12 @@ export class BrainScene {
   private leaders: SVGSVGElement | null = null
   private markerInsets: Insets | null = null
   private cutKey = ''
+  /** Filled cut faces (caps.ts): rebuilt once the planes and the visible parts have stopped changing. */
+  private capsGroup: T.Group | null = null
+  private capsKey = ''
+  private capsAt = 0
+  private capsBuilt = true
+  private capsVis = 0
   private clipIndicators: T.Group[] = []
   private labelLayer: HTMLDivElement
   /** Assembled bounds of the whole model. */
@@ -511,6 +520,84 @@ export class BrainScene {
       plane.normal.set(c.flip ? 1 : -1, 0, 0)
       indicator.position.set(-mm, this.modelCentre.y, this.modelCentre.z)
     }
+  }
+
+  // ── Cut faces ───────────────────────────────────────────────────────
+
+  private clearCaps() {
+    if (!this.capsGroup) return
+    this.scene.remove(this.capsGroup)
+    this.capsGroup.traverse((o) => {
+      if (o instanceof T.Mesh) {
+        o.geometry.dispose()
+        ;(o.material as T.Material).dispose()
+      }
+    })
+    this.capsGroup = null
+  }
+
+  private updateCaps(s: SceneSnapshot, visibilityChanged: boolean) {
+    const active = [0, 1, 2, 3].filter((i) => this.clipPlanes[i].constant < 1e4)
+    const want = active.length > 0 && !s.lesson && this.amount < 0.02 && this.peel < 0.005
+    if (visibilityChanged) this.capsVis++
+    const key = want
+      ? active
+          .map((i) => {
+            const p = this.clipPlanes[i]
+            return `${i}:${p.normal.x.toFixed(3)},${p.normal.y.toFixed(3)},${p.normal.z.toFixed(3)},${p.constant.toFixed(2)}`
+          })
+          .join('|') + `#${this.capsVis}`
+      : ''
+    if (key !== this.capsKey) {
+      this.capsKey = key
+      this.capsAt = performance.now()
+      this.capsBuilt = false
+      // Faces built for the old planes would hang in the air: hide them until the new ones are ready.
+      if (this.capsGroup) this.capsGroup.visible = false
+      this.dirty = true
+    }
+    if (this.capsBuilt) return
+    if (!want) {
+      this.clearCaps()
+      this.capsBuilt = true
+      this.dirty = true
+      return
+    }
+    // Wait for a slider to settle, then build (slicing every crossed part takes a moment).
+    if (performance.now() - this.capsAt < 130) {
+      this.dirty = true
+      return
+    }
+    this.clearCaps()
+    const group = new T.Group()
+    for (const k of active) {
+      const plane = this.clipPlanes[k]
+      const parts = this.parts
+        .filter((p) => p.mesh.visible && plane.intersectsBox(p.bounds))
+        .map((p) => ({ geometry: p.mesh.geometry, colour: (p.mesh.material.userData.base as T.Color).clone().multiplyScalar(0.92) }))
+      const geometry = buildCap(parts, plane)
+      if (!geometry) continue
+      const material = new T.MeshBasicMaterial({
+        vertexColors: true,
+        side: T.DoubleSide,
+        // Always passes yet still writes depth: the faces cover what lies behind the plane, in the order they were built (big sections first).
+        depthFunc: T.AlwaysDepth,
+        clippingPlanes: this.clipPlanes.filter((_, j) => j !== k),
+        // A hair behind the plane, so the section outline drawn on it stays in front.
+        polygonOffset: true,
+        polygonOffsetFactor: 1,
+        polygonOffsetUnits: 4,
+      })
+      const mesh = new T.Mesh(geometry, material)
+      mesh.renderOrder = -10
+      mesh.frustumCulled = false
+      mesh.raycast = () => {}
+      group.add(mesh)
+    }
+    this.scene.add(group)
+    this.capsGroup = group
+    this.capsBuilt = true
+    this.dirty = true
   }
 
   // ── Setup helpers ───────────────────────────────────────────────────
@@ -896,8 +983,8 @@ export class BrainScene {
       }
     }
     if (!flat.length) return []
-    return unionOutline(chainLoops(flat, 1e-3)).map((loop) =>
-      decimate(offsetLoop(smoothLoop(loop, 3), 0.6), 0.35).map(([a, b]) => origin.clone().addScaledVector(u, a).addScaledVector(v, b)),
+    return unionOutline(chainLoops(flat, 1e-3), 0.25, 0.12, 0.5).map((loop) =>
+      decimate(smoothLoop(loop, 3), 0.35).map(([a, b]) => origin.clone().addScaledVector(u, a).addScaledVector(v, b)),
     )
   }
 
@@ -967,10 +1054,10 @@ export class BrainScene {
       lead.dataset.region = section.region
       this.leaders.appendChild(lead)
       const hot = (on: boolean) => {
-        material.color.set(on ? 0xffd166 : 0x5ad1ff)
-        material.linewidth = on ? 3.4 : 2.2
+        const m = this.markers.find((x) => x.section === section)
+        if (m) m.hot = on
         lead.classList.toggle('hot', on)
-        this.dirty = true
+        this.dirty = true // updateMarkers restyles the rings
       }
       pill.addEventListener('click', (e) => {
         e.stopPropagation()
@@ -979,7 +1066,7 @@ export class BrainScene {
       pill.addEventListener('pointerenter', () => hot(true))
       pill.addEventListener('pointerleave', () => hot(false))
       this.markerLayer.appendChild(pill)
-      this.markers.push({ section, line, material, pill, anchor, ring, lead })
+      this.markers.push({ section, line, material, pill, anchor, ring, lead, hot: false })
     }
   }
 
@@ -1037,10 +1124,23 @@ export class BrainScene {
     }[] = []
     let minX = Infinity,
       maxX = -Infinity
+    const isActive = (m: Marker) => (s!.sectionCut ? s!.sectionCut === m.section.id : !s!.topicSections || s!.topicSections.includes(m.section.id))
+    // Several levels at once (a topic's plates) project onto each other and their rings cross: draw them faint and thin,
+    // and only the ring whose badge is under the pointer bright, so one ring at a time reads as a single clear outline.
+    const crowded = this.markers.filter((m) => m.line && isActive(m)).length > 1
     for (const m of this.markers) {
-      const active = s!.sectionCut ? s!.sectionCut === m.section.id : !s!.topicSections || s!.topicSections.includes(m.section.id)
+      const active = isActive(m)
       if (m.line && m.line.visible !== active) {
         m.line.visible = active
+        this.dirty = true
+      }
+      const dim = crowded && !m.hot
+      const want = { color: m.hot ? 0xffd166 : 0x5ad1ff, width: m.hot ? 3.4 : dim ? 1.4 : 2.2, opacity: dim ? 0.4 : 0.95 }
+      if (m.material.linewidth !== want.width || m.material.opacity !== want.opacity || m.material.color.getHex() !== want.color) {
+        m.material.color.set(want.color)
+        m.material.linewidth = want.width
+        m.material.opacity = want.opacity
+        if (m.line) m.line.renderOrder = m.hot ? 31 : 30
         this.dirty = true
       }
       const pts = active ? (m.ring.map(toScreen).filter(Boolean) as [number, number][]) : []
@@ -1596,6 +1696,7 @@ export class BrainScene {
       this.dirty = true
     }
     this.ground.visible = !s.isolate && this.amount < 0.45
+    this.updateCaps(s, visibilityChanged)
     if (lessonEnded) this.frameFor(s, true)
 
     // Offsets.
