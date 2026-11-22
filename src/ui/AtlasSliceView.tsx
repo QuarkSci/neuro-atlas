@@ -121,8 +121,10 @@ export function AtlasSliceView({
   const [x0, y0, x1, y1] = real ? real.window : slice.window
   const w = x1 - x0,
     h = y1 - y0
+  // Side margins hold the axis words; top and bottom only a line of text, so the slice gets the height.
   const pad = Math.max(w, h) * 0.07
-  const vb = `${x0 - pad} ${-y1 - pad} ${w + pad * 2} ${h + pad * 2}`
+  const padY = Math.max(w, h) * 0.034
+  const vb = `${x0 - pad} ${-y1 - padY} ${w + pad * 2} ${h + padY * 2}`
   const active = hover ?? selected
   const font = Math.max(w, h) / 46
   const bar = w > 60 ? 10 : 5
@@ -282,10 +284,10 @@ export function AtlasSliceView({
           ))}
         </g>
         <rect className="as-frame" x={x0} y={-y1} width={w} height={h} rx={Math.min(w, h) * 0.06} vectorEffect="non-scaling-stroke" />
-        <text className="as-axis" x={x0 + w / 2} y={-y1 - pad * 0.35} fontSize={font} textAnchor="middle">
+        <text className="as-axis" x={x0 + w / 2} y={-y1 - padY * 0.3} fontSize={font} textAnchor="middle">
           {axes[0]}
         </text>
-        <text className="as-axis" x={x0 + w / 2} y={-y0 + pad * 0.7} fontSize={font} textAnchor="middle">
+        <text className="as-axis" x={x0 + w / 2} y={-y0 + padY * 0.72} fontSize={font} textAnchor="middle">
           {axes[1]}
         </text>
         <text className="as-axis" x={x0 - pad * 0.3} y={-(y0 + y1) / 2} fontSize={font} textAnchor="end" dominantBaseline="middle">

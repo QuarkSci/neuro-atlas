@@ -12,6 +12,7 @@ import {
   Image as ImageIcon,
   Layers,
   Microscope,
+  Info,
   Spline,
   PenTool,
   ScanLine,
@@ -113,6 +114,7 @@ export function SectionViewer() {
   const [atlasSel, setAtlasSel] = useState<string | null>(null)
   // The figure filling the whole card (side panel and level strips hidden).
   const [full, setFull] = useState(false)
+  const [hintOpen, setHintOpen] = useState(false)
 
   // Mirror what the viewer shows for the AI tutor's context (ai/screen.ts); cleared when it closes.
   useEffect(() => {
@@ -370,74 +372,103 @@ export function SectionViewer() {
 
         <div className="sv-body">
           <div className="sv-figure">
-            <div className="sv-views" role="tablist" aria-label={t.svLevel}>
-              {(
-                [
-                  ['scheme', PenTool, t.svViewScheme],
-                  ['myelin', Layers, t.svViewMyelin],
-                  ['nissl', Microscope, t.svViewNissl],
-                  ['atlas', ScanLine, t.svViewAtlas],
-                  ['real', ImageIcon, t.svViewReal],
-                ] as const
-              ).map(([id, Icon, name]) => (
-                <button
-                  key={id}
-                  role="tab"
-                  aria-selected={view === id}
-                  className={view === id ? 'on' : ''}
-                  disabled={(id === 'atlas' && !section.plane) || (id === 'real' && !real)}
-                  title={id === 'real' && !real ? t.svRealNone : undefined}
-                  onClick={() => switchView(id)}
-                >
-                  <Icon size={13} />
-                  <span>{name}</span>
-                </button>
-              ))}
-            </div>
-            <div className="sv-tools">
-              {view === 'real' && (
-                <button className={contours ? 'on' : ''} onClick={() => setContours(!contours)} title={t.svRealContours}>
-                  <Spline size={13} />
-                  <span>{t.svRealContours}</span>
-                </button>
-              )}
-              {(!cutView || view === 'real') && (
-                <button className={numbers ? 'on' : ''} onClick={() => setNumbers(!numbers)} title={view === 'real' ? t.svRealNumbers : t.svNumbers}>
-                  <Hash size={13} />
-                  <span>{t.svNumbers}</span>
-                </button>
-              )}
-              <button className={labels ? 'on' : ''} onClick={() => setLabels(!labels)} disabled={quiz} title={t.svLabels}>
-                <Tags size={13} />
-                <span>{t.svLabels}</span>
-              </button>
-              {!cutView && (
-                <button
-                  className={quiz ? 'on quiz' : ''}
-                  onClick={() => {
-                    setQuiz(!quiz)
-                    setRevealed(new Set())
-                    setLabels(false)
-                    setSelected(null)
-                  }}
-                  title={t.svQuizHint}
-                >
-                  <GraduationCap size={13} />
-                  <span>{t.svQuiz}</span>
-                </button>
-              )}
-              {quiz && !cutView && (
-                <>
-                  <button onClick={randomQuiz} title={t.svRandom}>
-                    <Shuffle size={13} />
-                    <span>{t.svRandom}</span>
+            <div className="sv-bar">
+              <div className="sv-views" role="tablist" aria-label={t.svLevel}>
+                {(
+                  [
+                    ['scheme', PenTool, t.svViewScheme],
+                    ['myelin', Layers, t.svViewMyelin],
+                    ['nissl', Microscope, t.svViewNissl],
+                    ['atlas', ScanLine, t.svViewAtlas],
+                    ['real', ImageIcon, t.svViewReal],
+                  ] as const
+                ).map(([id, Icon, name]) => (
+                  <button
+                    key={id}
+                    role="tab"
+                    aria-selected={view === id}
+                    className={view === id ? 'on' : ''}
+                    disabled={(id === 'atlas' && !section.plane) || (id === 'real' && !real)}
+                    title={id === 'real' && !real ? t.svRealNone : undefined}
+                    onClick={() => switchView(id)}
+                  >
+                    <Icon size={13} />
+                    <span>{name}</span>
                   </button>
-                  <span className="sv-score">
-                    {revealed.size}/{numbered.length}
+                ))}
+              </div>
+              <div className="sv-tools">
+                {view === 'real' && (
+                  <button className={contours ? 'on' : ''} onClick={() => setContours(!contours)} title={t.svRealContours}>
+                    <Spline size={13} />
+                    <span>{t.svRealContours}</span>
+                  </button>
+                )}
+                {(!cutView || view === 'real') && (
+                  <button className={numbers ? 'on' : ''} onClick={() => setNumbers(!numbers)} title={view === 'real' ? t.svRealNumbers : t.svNumbers}>
+                    <Hash size={13} />
+                    <span>{t.svNumbers}</span>
+                  </button>
+                )}
+                <button className={labels ? 'on' : ''} onClick={() => setLabels(!labels)} disabled={quiz} title={t.svLabels}>
+                  <Tags size={13} />
+                  <span>{t.svLabels}</span>
+                </button>
+                {!cutView && (
+                  <button
+                    className={quiz ? 'on quiz' : ''}
+                    onClick={() => {
+                      setQuiz(!quiz)
+                      setRevealed(new Set())
+                      setLabels(false)
+                      setSelected(null)
+                    }}
+                    title={t.svQuizHint}
+                  >
+                    <GraduationCap size={13} />
+                    <span>{t.svQuiz}</span>
+                  </button>
+                )}
+                {quiz && !cutView && (
+                  <>
+                    <button onClick={randomQuiz} title={t.svRandom}>
+                      <Shuffle size={13} />
+                      <span>{t.svRandom}</span>
+                    </button>
+                    <span className="sv-score">
+                      {revealed.size}/{numbered.length}
+                    </span>
+                  </>
+                )}
+                {(viewHint || (view === 'real' && standIn)) && (
+                  <button
+                    type="button"
+                    className={`sv-info ${hintOpen ? 'on' : ''}`}
+                    aria-expanded={hintOpen}
+                    aria-label={t.svViewInfo}
+                    title={t.svViewInfo}
+                    onClick={() => setHintOpen(!hintOpen)}
+                  >
+                    <Info size={13} />
+                  </button>
+                )}
+                {view === 'real' && standIn && (
+                  <span className="sv-standin" title={`${t.svRealStandIn} ${standIn.code} · ${l(standIn.title)}`}>
+                    ≈ {standIn.code}
                   </span>
-                </>
-              )}
+                )}
+              </div>
             </div>
+            {hintOpen && (viewHint || standIn) && (
+              <div className="sv-hint-pop" role="note" onClick={() => setHintOpen(false)}>
+                {view === 'real' && standIn && (
+                  <p>
+                    {t.svRealStandIn} <b>{standIn.code}</b> · {l(standIn.title)}
+                  </p>
+                )}
+                {viewHint && <p>{viewHint}</p>}
+              </div>
+            )}
             <ZoomPane
               resetKey={`${section.id}|${view}|${labels}`}
               full={full}
@@ -482,21 +513,17 @@ export function SectionViewer() {
                 />
               )}
             </ZoomPane>
-            {view === 'real' && standIn && (
-              <p className="sv-view-hint sv-stand-in">
-                {t.svRealStandIn} <b>{standIn.code}</b> · {l(standIn.title)}
-              </p>
-            )}
-            {viewHint && <p className="sv-view-hint">{viewHint}</p>}
             <Locator section={section} onPick={(id) => openSection(id)} title={t.svLocator} />
-            <div className="sv-legend">
-              {cats.map((c) => (
-                <button key={c} className={focusCat === c ? 'on' : focusCat ? 'dim' : ''} onClick={() => setFocusCat(focusCat === c ? null : c)}>
-                  <i style={{ background: CATEGORY[c].color }} />
-                  {l(CATEGORY[c].name)}
-                </button>
-              ))}
-            </div>
+            {!cutView && (
+              <div className="sv-legend">
+                {cats.map((c) => (
+                  <button key={c} className={focusCat === c ? 'on' : focusCat ? 'dim' : ''} onClick={() => setFocusCat(focusCat === c ? null : c)}>
+                    <i style={{ background: CATEGORY[c].color }} />
+                    {l(CATEGORY[c].name)}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           <aside className="sv-side">

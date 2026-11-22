@@ -6,16 +6,29 @@
  *
  *   node scripts/perf-real.mjs [plate-id] [view-button-text]
  *   node scripts/perf-real.mjs bg-capsule-axial "Real kesim"
+ *   node scripts/perf-real.mjs bg-capsule-axial "Real kesim" --trace   (adds CDP tracing: GPU task / main-thread task / WebGL renders per event)
  */
 import puppeteer from 'puppeteer-core'
-const plate = process.argv[2] ?? 'bg-capsule-axial'
-const viewBtn = process.argv[3] ?? 'Real kesim'
+const args = process.argv.slice(2).filter((a) => !a.startsWith('--'))
+const TRACE = process.argv.includes('--trace')
+const plate = args[0] ?? 'bg-capsule-axial'
+const viewBtn = args[1] ?? 'Real kesim'
 const b = await puppeteer.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true, args: ['--no-sandbox'] })
 const p = await b.newPage()
 await p.setViewport({ width: 1280, height: 800 })
 await p.evaluateOnNewDocument(() => localStorage.setItem('na:lang', 'uz'))
 await p.goto(process.env.NA_URL ?? 'http://localhost:3019/', { waitUntil: 'domcontentloaded' })
 await p.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 60000 })
+await p.evaluate(() => {
+  const s = window.__scene
+  if (!s) return
+  window.__rc = 0
+  const r = s.renderer.render.bind(s.renderer)
+  s.renderer.render = (...a) => {
+    window.__rc++
+    return r(...a)
+  }
+})
 await p.evaluate((id) => window.__atlas.getState().openSection(id), plate)
 await new Promise((r) => setTimeout(r, 800))
 await p.evaluate((t) => [...document.querySelectorAll('.section-viewer button')].find((x) => x.textContent.trim().startsWith(t))?.click(), viewBtn)
@@ -30,6 +43,13 @@ await cdp.send('Performance.enable')
 const metrics = async () => Object.fromEntries((await cdp.send('Performance.getMetrics')).metrics.map((m) => [m.name, m.value]))
 const frame = () => p.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))))
 async function run(name, n, step) {
+  const events = []
+  const onData = (d) => events.push(...d.value)
+  if (TRACE) {
+    cdp.on('Tracing.dataCollected', onData)
+    await cdp.send('Tracing.start', { categories: 'devtools.timeline,disabled-by-default-devtools.timeline,gpu,cc,viz,toplevel', transferMode: 'ReportEvents' })
+  }
+  const rc0 = await p.evaluate(() => window.__rc ?? 0)
   const a = await metrics()
   const t0 = Date.now()
   for (let i = 0; i < n; i++) {
@@ -38,8 +58,20 @@ async function run(name, n, step) {
   }
   const z = await metrics()
   const d = (k) => ((z[k] - a[k]) * 1000) / n
+  let traced = ''
+  if (TRACE) {
+    const done = new Promise((r) => cdp.once('Tracing.tracingComplete', r))
+    await cdp.send('Tracing.end')
+    await done
+    cdp.off('Tracing.dataCollected', onData)
+    const sum = {}
+    for (const e of events) if (e.ph === 'X' && e.dur) sum[e.name] = (sum[e.name] ?? 0) + e.dur
+    const ms = (k) => ((sum[k] ?? 0) / 1000 / n).toFixed(1)
+    const renders = (await p.evaluate(() => window.__rc ?? 0)) - rc0
+    traced = ` · GPUTask ${ms('GPUTask')} · RunTask ${ms('RunTask')} · Paint ${ms('Paint')} · WebGL renders ${renders}/${n}`
+  }
   console.log(
-    `${name.padEnd(6)} per event: wall ${((Date.now() - t0) / n).toFixed(1)} ms · script ${d('ScriptDuration').toFixed(1)} · style ${d('RecalcStyleDuration').toFixed(1)} · layout ${d('LayoutDuration').toFixed(1)} · task ${d('TaskDuration').toFixed(1)} ms`,
+    `${name.padEnd(6)} per event: wall ${((Date.now() - t0) / n).toFixed(1)} ms · script ${d('ScriptDuration').toFixed(1)} · style ${d('RecalcStyleDuration').toFixed(1)} · layout ${d('LayoutDuration').toFixed(1)} · task ${d('TaskDuration').toFixed(1)} ms${traced}`,
   )
 }
 const at = (i) => [box.x + box.w * (0.2 + (0.6 * ((i * 37) % 100)) / 100), box.y + box.h * (0.25 + (0.5 * ((i * 53) % 100)) / 100)]

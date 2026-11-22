@@ -1252,3 +1252,16 @@ Antigravity: `src/data/content/{desikan,jhu,destrieux,glasser}.json` (35+27+74+1
   scope `offline_access resource.invoke chatgpt.tokens.use.direct`; inference `POST /v1/responses` (`store:false`, `stream:true`).
   Statik GitHub Pages klienti hujjatlashtirilmagan (https redirect, CORS, brauzer saqlash) — OpenAI'dan so'rash kerak.
 
+## CL-6 — plastinka ko'ruvchisida rasm kattaroq, kursor javobi tez (2026-11-22)
+
+Gipotezalar o'lchandi (headless, 1280×720, Mc "Real kesim", CDP tracing): (1) `backdrop-filter` — o'chirilganda farq shovqin ichida
+(RunTask 72→66–73); karta baribir ~93% shaffofmas, ya'ni blur hech narsa ko'rsatmas edi; (2) sahna sikli — `BrainScene` faqat `dirty` bo'lsa
+render qiladi: viewer ochiqligida WebGL render 0/50 (rAF qaytarilishi arzon); (3) `stroke-dasharray` — o'chirilganda farq yo'q;
+(4) hover SVG qayta chizilishi PERF-1 da tuzatilgan (4.5 ms). Asosiy sabab — joy: rasm 410×299 px (karta balandligining 44%).
+Tuzatish: `.sv-bar` (tablar + chiplar bir qatorda), izohlar ⓘ qalqib chiquvchida (`sv-hint-pop`), "≈ B5" belgisi (stand-in), afsona faqat
+sxemada, `AtlasSliceView` vertikal hoshiya 0.034 (yon 0.07 — o'q so'zlari uchun), manba satri rasm ustida; blur olib tashlandi,
+`.as-region`/`.sv-item` opacity `transition` olib tashlandi (hover darhol), `BrainScene.animate` `sectionId` bo'lsa kadrni o'tkazib yuboradi.
+`scripts/perf-real.mjs --trace` — GPUTask/RunTask/Paint/WebGL render soni. Natija: rasm Mc 427, B4 416, K3 433 px (62/61/63%);
+hover RunTask 72→45 ms. QOLDI: foydalanuvchi real GPU'li brauzerida Performance yozuvi bilan tasdiqlashi; zoom g'ildiragida
+qayta rasterlash (headless GPUTask 20 ms) — real GPU'da o'lchash kerak.
+

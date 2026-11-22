@@ -245,6 +245,32 @@ da modellar yuklanadi — screenshot; hajm jadvali; `audit-pick.mjs` diff 0.
 **Tegadigan fayllar:** `docs/research/u1-histology.md`, `docs/research/bigbrain-20um.md`, `docs/handoff/AG-4.md`.
 **Tayyor mezoni:** har havola ochib tekshirilgan, litsenziya sahifasidan iqtibos bilan; aniq tavsiya va xavflar.
 
+#### AG-5 — Kontent: viktorina savollar banki (CL-4 uchun xom ashyo, kod yo'q)
+**Nega:** CL-4 (mavzu viktorinasi + Anki) dvigatelini Claude yozadi; savollarni esa Antigravity tayyorlaydi — fayllar umuman
+kesishmaydi, shuning uchun parallel ishlash mumkin.
+**Qilish:** 8 mavzu (`src/data/topics.ts`: ventricles, callosum, limbic, basal-ganglia, diencephalon, pathways, brainstem,
+cerebellum) × ≥25 savol, 3 daraja (`student` / `resident` / `expert`; taxminan 40/40/20%). Faqat yangi fayllar:
+`src/data/quiz/<topic-id>.json` — massiv, har element:
+```json
+{ "id": "q-basal-ganglia-001", "level": "student", "topic": "basal-ganglia", "type": "mcq",
+  "q": { "en": "...", "uz": "..." },
+  "options": [ { "en": "...", "uz": "..." }, "... jami 4 ta" ],
+  "answer": 0,
+  "why": { "en": "...", "uz": "..." },
+  "refs": ["<concept-id yoki plastinka tuzilma id>"],
+  "plate": "bg-subthalamic",
+  "sources": [ { "title": "Muallif yil, jurnal — sarlavha", "url": "https://doi.org/..." } ] }
+```
+- `answer` — to'g'ri variant indeksi; variantlar tartibini Claude tasodifiy aralashtiradi. `plate` ixtiyoriy (savol qaysi
+  plastinkaga bog'liq bo'lsa — `src/data/sections/*.ts` dagi id).
+- Javoblar faqat `src/data/content/*.json` va `src/data/lesions.ts` / `pathways.ts` dagi ma'lumotga mos; yangi fakt kerak bo'lsa —
+  `sources` bilan (Crossref / eutils tekshiruvi, 2-bo'lim). `uz` da "Chap/O'ng" yozilmaydi.
+- `expert` daraja: klinik-lokalizatsiya keyslari ("quyidagi belgilar — qaysi daraja/hudud?"), `lesions.ts` simulyatori bilan mos.
+- Yomon variantlar ishonarli (bir tizimdagi qo'shni tuzilmalar), "yuqoridagilarning barchasi" yo'q.
+**Tegadigan fayllar:** `src/data/quiz/*.json` (yangi), `docs/handoff/AG-5.md`. **Tegmang:** `src/data/index.ts`, `topics.ts`, har qanday `.ts/.tsx`.
+**Tayyor mezoni:** kichik skript bilan: JSON yaroqli, `refs` dagi id'lar `parts.json` / `STRUCTURE_BY_ID` / `CONCEPTS` da bor
+(noma'lum = 0), har savolda 4 variant va `answer` 0–3, takroriy `id` yo'q; 5 ta tasodifiy savolning javobi qo'lda manbadan tekshirilgan.
+
 ---
 
 ## 6. CLAUDE UCHUN
@@ -287,11 +313,27 @@ ChatGPT rejasi bilan kirish (OpenAI "Sign in with ChatGPT" — hozir faqat lokal
 OAuth (Cloud loyiha + verifikatsiya) — avval shartlarni qayta tekshiring (PLAN 5.6 A). Inspector kartasi AI panel ostida
 qoladi (ikkalasi o'ngda) — joylashuvni hal qilish. `look_at_screen` tool (AI o'zi surat so'raydi).
 
+#### CL-6 — Plastinka ko'ruvchisi: rasm kattaroq va kursor javobi tez bo'lsin (foydalanuvchi, 2026-11-22)
+Kuzatuv (Mc, "Real kesim"): rasm panelning ~⅓ qismini egallaydi (≈445×325 px, panel ≈1280×660) — sarlavha, tablar, chiplar va
+uch qator izoh joyni yeydi; zoom ham rasmni "to'liq ko'rish" uchun kichik. Kursor ostidagi soha javobi kech.
+Sabab gipotezalari (tartib bilan tekshiring): (1) `.section-viewer { backdrop-filter: blur(6px) }` butun ekran bo'yicha —
+panel ichida har qayta chizishda orqa fon (jonli WebGL kanvas) qayta xiralashadi; (2) viewer ochiqligida 3D sahna rAF sikli
+to'xtamaydi (`BrainScene` `sectionId` bo'yicha pauza yo'q); (3) nuqtali (`stroke-dasharray`) konturlar yuzlab yo'l bilan;
+(4) hover uchun katta SVG qayta chizilishi. `perf-real.mjs` headless'da CPU ≈ 7 ms/hodisa ko'rsatadi (wall ≈ 50 ms — dasturiy GL
+shovqini), ya'ni kechikish GPU/chizish tomonida: foydalanuvchining haqiqiy brauzerida Performance yozuvi kerak
+(qo'shimcha: DevTools konsolda `document.querySelector('.section-viewer').style.backdropFilter='none'` — tezlashsa, (1) tasdiqlanadi).
+**Qilish:** rasm bo'sh joyni to'ldirsin (grid; izohlar bitta "ⓘ" ochiluvchi qatorga/qisqa tasmaga); zoom boshlang'ich "fit"
+kattaroq; `backdrop-filter`ni statik xiralashtirishsiz qoraytirish bilan almashtirish; viewer ochiqligida sahna pauza; konturlarni
+yengillashtirish (dash o'rniga ingichka to'liq chiziq yoki kesh); `perf-real.mjs` ga `--trace` (CDP tracing, kadr vaqti).
+**Tegadigan fayllar:** `src/ui/{SectionViewer,AtlasSliceView,ZoomPane}.tsx`, `src/index.css` (`.section-viewer`, `.sv-*`, `.as-*`,
+zoom), `src/scene/BrainScene.ts` (faqat pauza). **Tayyor mezoni:** Mc/B4/K3 da rasm ≥60% balandlik; zoom/hover Performance yozuvida
+kadr ≤16 ms; foydalanuvchi o'z brauzerida tasdiqlaydi; `audit-lesions` 0, `audit-pick` 0.
+
 #### CL-3 — 5.1: plastinkalarda chegaralar 100% tutashsin
 21 plastinka kutmoqda (T2 ✅). Tafsilot: `PLAN.md` 5.1, `docs/HISTORY.md` "5.1". Audit: `scripts/audit-sections.mjs`.
 
 #### CL-4 — Mavzu viktorinasi (kesim + dars) va Anki
-PLAN 5.3-3. AI-5 dagi `make_flashcards` va Anki .txt eksportini qayta ishlating.
+PLAN 5.3-3. AI-5 dagi `make_flashcards` va Anki .txt eksportini qayta ishlating. Savollar banki — **AG-5** (`src/data/quiz/*.json`, sxema AG-5 da); Claude faqat dvigatel va UI (aralashtirish, ball, xatolar ustida ishlash, Anki) yozadi.
 
 #### CL-5 — Realizm R2 (ambient occlusion, yumshoq soyalar) va Liquid Glass LG-3 (harakat)
 `CLAUDE.md` "Joriy holat" bo'limida tafsilot.
@@ -376,6 +418,13 @@ public/                        meshes/ (gitignore), sections/real/*.webp (commit
 
 Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) · 🔧 tuzatish kerak · ✅ birlashtirildi (faol).
 
+**Parallel yo'llar (fayllar kesishmaydi — ikkalasi bir vaqtda ishlashi mumkin):**
+- **Antigravity yo'li** (ketma-ket, bitta worktree): AG-3 (deploy: `loader.ts`, vite, workflow, README) → AG-5 (savollar banki,
+  yangi JSON) → AG-4 (tadqiqot hujjatlari). Hech biri `src/ui/**`, `BrainScene.ts` ga tegmaydi.
+- **Claude yo'li** (ketma-ket): CL-6 (plastinka ko'ruvchisi: `SectionViewer/AtlasSliceView/ZoomPane`, `index.css` sv-/as-) → CL-3
+  (`src/data/sections/*.ts`) → CL-4 (viktorina dvigateli, AG-5 tayyor bo'lgach) → CL-5 (R2/LG-3). AI-6 — OpenAI javobini kutadi.
+- Birlashtirish tartibi: avval AG-3 (sayt 3D'siz ochilmasin), keyin AG-5; Claude o'z ishini har bosqichda `master`ga commit qiladi.
+
 | ID | Vazifa | Kim | Holat | Branch / handoff |
 |---|---|---|---|---|
 | AG-1 | Kontent: Desikan, JHU, Destrieux, Glasser ta'riflari | Antigravity | ✅ 2026-11-22 | birlashtirildi (`616d941`) · docs/handoff/AG-1.md |
@@ -384,7 +433,9 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | AG-4 | Tadqiqot: U1 gistologiya; BigBrain 20 mkm | Antigravity | ⏳ | ag/AG-4 |
 | CL-1 | AI panel: haqiqiy Gemini kaliti bilan ishlamayapti | Claude | ✅ tashxis: Google 503 (bepul tarif, band model); xato tafsiloti + avtomatik model almashtirish (`cd06af4`, `8b8ef1b`) | master |
 | CL-2 | AI-6 (ChatGPT/Google kirish), panel joylashuvi, look_at_screen | Claude | 🔨 panel joylashuvi va `look_at_screen` ✅ 2026-11-22; AI-6 — OpenAI javobini kutmoqda (SIWC statik sayt uchun hujjatlashtirilmagan) | master |
-| CL-3 | 5.1: 21 plastinkada chegaralar 100% | Claude | ⏳ | master |
+| AG-5 | Kontent: viktorina savollar banki (CL-4 uchun) | Antigravity | ⏳ | ag/AG-5 |
+| CL-6 | Plastinka ko'ruvchisi: rasm kattaroq, kursor javobi tez | Claude | ✅ 2026-11-22 (rasm 61–63%; foydalanuvchi o'z brauzerida tasdiqlashi kutilmoqda) | master |
+| CL-3 | 5.1: 21 plastinkada chegaralar 100% | Claude | 🔨 K3 qilindi (`c8883e2`) | master |
 | CL-4 | Mavzu viktorinasi + Anki | Claude | ⏳ | master |
 | CL-5 | R2 realizm, LG-3 harakat | Claude | ⏳ | master |
 
@@ -396,3 +447,5 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-22 · Claude · AG-1 tekshirildi va birlashtirildi (`616d941`); kichik tuzatish: buzuq Wikipedia havolasi `Lateral_occipital_gyrus` → `Occipital_lobe` (desikan.json, gross-brain.json).
 - 2026-11-22 · Claude · CL-2: AI panel va o'ng kartalar (Inspector/dars/qidiruv) ustma-ust tushmaydi (index.css "CL-2" bloki); `look_at_screen` tool (16-tool; surat keyingi user xabari bo'lib ketadi, Anthropic/Gemini'da tool_result bilan birlashtiriladi). AI-6 tadqiqoti: SIWC ochiq manbali yo'li faqat loopback (`127.0.0.1`) mahalliy klient uchun; https/GitHub Pages, CORS va brauzerda token saqlash hujjatda yo'q, "remotely hosted" ilovalar qiziqish formasiga yo'naltiriladi → OpenAI'dan so'rash yoki mahalliy yordamchi kerak. Anthropic Claude.ai login — taqiqlangan; Google OAuth — verifikatsiya talab qiladi.
 - 2026-11-22 · Claude · AG-2 tekshirildi (tsc, build, audit-lesions 0, audit-pick 0, light+dark screenshot) va birlashtirildi: dars kartasi va kesim ko'ruvchisi yorug' rejimga o'tdi.
+- 2026-11-22 · Claude · Yangi vazifalar: CL-6 (plastinka ko'ruvchisi tezligi va rasm hajmi), AG-5 (viktorina savollar banki); ikki yo'lli parallel reja (9-bo'lim boshi).
+- 2026-11-22 · Claude · CL-6: o'lchov — sahna viewer ochiqligida render qilmaydi (0/50), dash va blur headless'da ta'sirsiz (shovqin ichida), asosiy sabab joy: rasm 299 px edi. Tuzatish: bitta asboblar qatori (tablar+chiplar), izoh → ⓘ qalqib chiquvchi, afsona faqat sxemada, vertikal hoshiya 0.07→0.034, manba satri rasm ustiga; blur olib tashlandi (karta 93% shaffofmas), `.as-region`/`.sv-item` opacity-o'tishi olib tashlandi (hover darhol), BrainScene viewer ochiqligida kadrni o'tkazib yuboradi; `perf-real.mjs --trace`. Rasm Mc 427, B4 416, K3 433 px (balandlikning 62/61/63%); hover RunTask 72→45 ms/hodisa (headless), main-thread task 8 ms; audit-lesions 0, audit-pick 0.

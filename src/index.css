@@ -523,12 +523,13 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .sv-code { display: inline-grid; place-items: center; min-width: 30px; height: 26px; padding: 0 7px; border-radius: 8px; background: #5ad1ff; color: #06202c; font-weight: 700; font-size: 13px; flex: none; }
 
 /* The viewer. */
-.section-viewer { position: absolute; inset: 0; z-index: 20; display: grid; place-items: center; padding: 18px; background: color-mix(in oklab, var(--background) 55%, transparent); backdrop-filter: blur(6px); animation: sv-in 0.22s ease; }
+.section-viewer { position: absolute; inset: 0; z-index: 20; display: grid; place-items: center; padding: 18px; background: color-mix(in oklab, var(--background) 82%, transparent); animation: sv-in 0.22s ease; }
 @keyframes sv-in { from { opacity: 0; } }
 .sv-card.glass {
   width: min(1320px, 100%); height: min(860px, 100%); border-radius: 26px; display: flex; flex-direction: column; overflow: hidden;
   background: linear-gradient(180deg, color-mix(in oklab, var(--background) 92%, transparent), color-mix(in oklab, var(--background) 94%, transparent));
-  backdrop-filter: blur(20px) saturate(1.5); -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  /* No backdrop-filter: the card is ~93% opaque, so the blur showed nothing but was recomputed every frame over the live canvas. */
+  backdrop-filter: none; -webkit-backdrop-filter: none;
 }
 .sv-head { display: flex; align-items: center; gap: 12px; padding: 16px 18px 8px; }
 .sv-heading { flex: 1; min-width: 0; }
@@ -581,11 +582,11 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 }
 .sv-view-hint { margin: 2px 0 4px; font-size: 11px; line-height: 1.4; color: var(--fa-muted); }
 /* Atlas (MNI) slice */
-.as-wrap { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.as-wrap { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; }
 .as-svg { cursor: crosshair; }
 .as-field { fill: #0f1319; }
 .as-frame { fill: none; stroke: #4b5666; stroke-width: 1; }
-.as-region { cursor: pointer; transition: opacity 0.15s; }
+.as-region { cursor: pointer; }
 .as-region.dim { opacity: 0.45; }
 .as-label { fill: #fff; font-weight: 600; paint-order: stroke; stroke: rgba(0, 0, 0, 0.75); stroke-width: 0.35px; pointer-events: none; }
 .as-axis { fill: var(--fa-muted); }
@@ -601,7 +602,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .as-facts dt { color: var(--fa-muted); }
 .as-facts dd { margin: 0; font-variant-numeric: tabular-nums; }
 .as-actions { display: flex; gap: 6px; flex-wrap: wrap; }
-.sv-item { cursor: pointer; transition: opacity 0.15s; }
+.sv-item { cursor: pointer; }
 .sv-item.dim { opacity: 0.22; }
 .sv-item.active .sv-fill { stroke: #fff; stroke-width: 2.4; }
 .sv-item.active .sv-stroke { filter: drop-shadow(0 0 3px #fff); }
@@ -1079,7 +1080,8 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .as-mark.dim { opacity: 0.4; }
 .as-mark.active rect { fill: #fff; }
 .as-mark.active text { fill: #0b0e14; }
-.as-credit { font-size: 10.5px; color: var(--fa-muted); margin: 4px 2px 0; }
+.as-credit { position: absolute; left: 8px; bottom: 30px; margin: 0; font-size: 10px; color: color-mix(in oklab, var(--ink) 55%, transparent); text-shadow: 0 0 3px var(--background); pointer-events: none; z-index: 1; }
+.as-credit a { pointer-events: auto; }
 .as-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 
 
@@ -1403,3 +1405,14 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .tool-strip .tool-title { flex: 1 1 auto; min-width: 0; }
 .tool-strip .sv-code { height: 30px; }
 .bottom-dock > .tool-strip { min-width: 0; max-width: 100%; }
+
+/* CL-6: one toolbar row, hints in an ⓘ popover, legend only on the scheme — the slice gets the height. */
+.sv-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-bottom: 6px; }
+.sv-bar .sv-views { margin-bottom: 0; align-self: auto; }
+.sv-info { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 999px; background: var(--fa-fill); color: var(--fa-muted); }
+.sv-info.on { background: var(--fa-accent); color: #fff; }
+.sv-standin { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: color-mix(in oklab, #d49400 20%, transparent); color: color-mix(in oklab, var(--ink) 30%, #d49400); }
+.sv-figure { position: relative; }
+.sv-hint-pop { position: absolute; z-index: 6; left: 18px; right: 14px; top: 46px; padding: 10px 14px; border-radius: 14px; background: color-mix(in oklab, var(--background) 96%, transparent); border: 1px solid var(--fa-line); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); font-size: 12px; line-height: 1.5; color: color-mix(in oklab, var(--ink) 86%, transparent); cursor: pointer; }
+.sv-hint-pop p { margin: 0; }
+.sv-hint-pop p + p { margin-top: 6px; }

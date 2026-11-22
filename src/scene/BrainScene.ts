@@ -1581,6 +1581,9 @@ export class BrainScene {
     const dt = Math.min(this.timer.getDelta(), 0.05)
     const s = this.state
     if (!s) return
+    // The plate viewer covers the whole scene: skip the frame work (state changes made meanwhile
+    // are picked up through `last` the moment it closes).
+    if (s.sectionId) return
     const last = this.last
     const first = last === null
     // A later addGeometries() resets `last` to re-run visibility; that must
