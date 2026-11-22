@@ -1,0 +1,3763 @@
+{
+  "gl-primary-visual-cortex": {
+    "la": "Area striata (V1)",
+    "uz": "Birlamchi ko'ruv po'stlog'i (V1, Glasser)",
+    "description": {
+      "en": "Area V1 (Brodmann area 17) along the banks of the calcarine sulcus on the medial occipital lobe, defined by its heavy myelination (stria of Gennari).",
+      "uz": "Medial ensa bo'lagidagi kalkarin egat qirg'oqlari bo'ylab joylashgan V1 maydoni (Brodmann 17); kuchli mielinlashuvi (Gennari chizig'i) bilan ajralib turadi."
+    },
+    "role": {
+      "en": "First cortical retinotopic map of the contralateral visual field: detects edges, spatial frequency, orientation and ocular dominance.",
+      "uz": "Qarama-qarshi ko'rish maydonining birinchi po'stloq retinotopik xaritasi: qirralar, fazoviy chastota va yo'nalishni aniqlaydi."
+    },
+    "clinical": {
+      "en": "Unilateral PCA lesion causes contralateral homonymous hemianopia (often with macular sparing); bilateral destruction causes cortical blindness.",
+      "uz": "Bir tomonlama PCA zararlanishi qarama-qarshi gomonim gemianopsiya (ko'pincha makula saqlanishi bilan), ikki tomonlama zararlanishi kortikal ko'rlik beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-medial-superior-temporal-area": {
+    "uz": "Medial yuqori chakka maydoni (MST)",
+    "description": {
+      "en": "Area MST in the lateral temporo-occipital cortex immediately anterior/dorsal to motion area MT (V5) within the MT+ complex.",
+      "uz": "Lateral chakka-ensa po'stlog'ida MT (V5) harakat maydonining bevosita oldi va ustida, MT+ kompleksi ichida joylashgan MST maydoni."
+    },
+    "role": {
+      "en": "Processes large-field optic flow (expansion, rotation, translation) during self-motion and drives smooth-pursuit eye movements.",
+      "uz": "O'z harakati davomida keng maydonli optik oqimni (kengayish, aylanish, siljish) tahlil qiladi va silliq kuzatuvchi ko'z harakatlarini boshqaradi."
+    },
+    "clinical": {
+      "en": "Lesions impair smooth-pursuit eye movements toward the lesioned side and optic-flow heading perception.",
+      "uz": "Zararlanishi o'choq tomonga silliq kuzatuvchi ko'z harakatlarini va optik oqim bo'yicha yo'nalishni idrok etishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-sixth-visual-area": {
+    "uz": "Oltinchi ko'ruv maydoni (V6)",
+    "description": {
+      "en": "Area V6 buried in the dorsal depth of the parieto-occipital sulcus on the medial hemisphere.",
+      "uz": "Medial yarim sharda tepa-ensa egatining dorsal tubida joylashgan V6 ko'ruv maydoni."
+    },
+    "role": {
+      "en": "Wide-field retinotopic representation without foveal magnification; distinguishes object motion from self-generated optic flow to guide reaching.",
+      "uz": "Periferik ko'rish maydonini keng qamrab oladi; qo'l uzatishni boshqarish uchun jism harakatini o'z harakati optik oqimidan farqlaydi."
+    },
+    "clinical": {
+      "en": "Dorsal parieto-occipital lesions involving V6/V6A contribute to optic ataxia.",
+      "uz": "V6/V6A ni qamragan dorsal tepa-ensa zararlanishi optik ataksiyaga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-second-visual-area": {
+    "uz": "Ikkinchi ko'ruv maydoni (V2)",
+    "description": {
+      "en": "Area V2 (Brodmann area 18) forming a concentric horseshoe band around V1 on the cuneus and lingual gyrus.",
+      "uz": "Cuneus va tilsimon pushtada V1 atrofida taqasimon halqa hosil qiluvchi V2 maydoni (Brodmann 18)."
+    },
+    "role": {
+      "en": "Integrates V1 signals to extract illusory contours, binocular disparity (depth), figure–ground border ownership and colour.",
+      "uz": "V1 signallarini birlashtirib, illyuzor konturlar, binokulyar chuqurlik, shakl-fon chegarasi va rangni ajratadi."
+    },
+    "clinical": {
+      "en": "Upper bank (cuneus) lesions cause contralateral inferior quadrantanopia; lower bank (lingual) lesions cause superior quadrantanopia.",
+      "uz": "Yuqori (cuneus) qismi zararlansa qarama-qarshi pastki kvadrantanopsiya, pastki (tilsimon) qismi zararlansa yuqori kvadrantanopsiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-third-visual-area": {
+    "uz": "Uchinchi ko'ruv maydoni (V3)",
+    "description": {
+      "en": "Area V3 surrounding V2 dorsally on the cuneus/superior occipital cortex and ventrally on the lingual gyrus.",
+      "uz": "Dorsal tomonda cuneus/yuqori ensa po'stlog'ida va ventral tomonda tilsimon pushtada V2 ni o'rab turuvchi V3 maydoni."
+    },
+    "role": {
+      "en": "Processes dynamic form, global motion and stereoscopic depth, feeding both dorsal and ventral visual streams.",
+      "uz": "Dinamik shakl, global harakat va stereoskopik chuqurlikni qayta ishlab, dorsal va ventral ko'ruv oqimlarini ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Damaged together with V1/V2 in posterior cerebral artery strokes, producing quadrantanopic or hemianopic field defects.",
+      "uz": "Orqa miya arteriyasi insultlarida V1/V2 bilan birga zararlanib, kvadrantanopsiya yoki gemianopsiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-forth-visual-area": {
+    "uz": "To'rtinchi ko'ruv maydoni (V4)",
+    "description": {
+      "en": "Area V4 on the ventral-lateral occipital surface anterior to V3 (spanning the lingual/fusiform transition and lateral occipital cortex).",
+      "uz": "V3 dan oldinda, ventral-lateral ensa yuzasida (tilsimon va duksimon pushtalar o'tish joyida) joylashgan V4 ko'ruv maydoni."
+    },
+    "role": {
+      "en": "Key intermediate stage of the ventral (\"what\") stream: colour constancy, texture, orientation curvature and feature-based visual attention.",
+      "uz": "Ventral ('nima') oqimning muhim bosqichi: rang doimiyligi, tekstura, egri konturlar va belgiga yo'naltirilgan ko'ruv diqqati."
+    },
+    "clinical": {
+      "en": "Ventral V4/V8 lesions cause cerebral achromatopsia (loss of colour vision in the contralateral hemifield or full field if bilateral).",
+      "uz": "Ventral V4/V8 zararlanishi serebral axromatopsiyani (qarama-qarshi yarim maydonda yoki ikki tomonlama bo'lsa to'liq rang ko'rmaslikni) beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-eighth-visual-area": {
+    "uz": "Sakkizinchi ko'ruv maydoni (V8 / VO1)",
+    "description": {
+      "en": "Area V8 (ventral occipital area VO1) on the posterior fusiform and anterior lingual gyri immediately anterior to ventral V4.",
+      "uz": "Orqa duksimon va oldingi tilsimon pushtalarda ventral V4 ning bevosita oldida joylashgan V8 (VO1) maydoni."
+    },
+    "role": {
+      "en": "Retinotopic ventral colour- and surface-selective cortex with a strong foveal representation.",
+      "uz": "Fovea vakilligi kuchli bo'lgan retinotopik ventral rang va yuza xususiyatlarini qayta ishlovchi po'stloq."
+    },
+    "clinical": {
+      "en": "Lesions produce hemiachromatopsia or full cerebral achromatopsia when bilateral.",
+      "uz": "Zararlanishi gemiaxromatopsiya, ikki tomonlama bo'lsa to'liq serebral axromatopsiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-primary-motor-cortex": {
+    "la": "Area gigantopyramidalis (BA 4)",
+    "uz": "Birlamchi harakat po'stlog'i (M1 / Area 4)",
+    "description": {
+      "en": "Area 4 (primary motor cortex) occupying the anterior wall of the central sulcus, precentral gyrus crown and anterior paracentral lobule.",
+      "uz": "Markaziy egatning oldingi devori, oldingi markaziy pushta cho'qqisi va oldingi paratsentral bo'lakchani egallagan 4-maydon (M1)."
+    },
+    "role": {
+      "en": "Heavily myelinated agranular cortex with giant Betz cells driving contralateral voluntary movement along the motor homunculus via the corticospinal tract.",
+      "uz": "Gigant Betz hujayralariga ega kuchli mielinlangan agranulyar po'stloq; kortikospinal trakt orqali qarama-qarshi tana yarmi ixtiyoriy harakatini boshqaradi."
+    },
+    "clinical": {
+      "en": "Lesions cause contralateral spastic paresis and loss of fractionated finger dexterity; seizures produce a Jacksonian motor march.",
+      "uz": "Zararlanishi qarama-qarshi spastik parez va nozik barmoq harakatlari yo'qolishini beradi; tutqanoqlari Jekson harakat marshini chaqiradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-primary-sensory-cortex": {
+    "uz": "Birlamchi somatosensor po'stloq (Area 3b)",
+    "description": {
+      "en": "Area 3b on the posterior wall of the central sulcus — the core primary somatosensory cortex.",
+      "uz": "Markaziy egatning orqa devorida joylashgan 3b maydoni — birlamchi somatosensor po'stloqning asosiy o'zagi."
+    },
+    "role": {
+      "en": "Receives dense cutaneous mechanoreceptor input from VPL and VPM of the thalamus, forming a sharp somatotopic map of touch on the opposite body.",
+      "uz": "Talamusning VPL va VPM yadrolaridan teri mexanoretseptor kirishini zich qabul qilib, qarama-qarshi tana yarmi teginish sezgisining aniq xaritasini tuzadi."
+    },
+    "clinical": {
+      "en": "Lesions cause contralateral loss of tactile detection, two-point discrimination and localization.",
+      "uz": "Zararlanishi qarama-qarshi tomonda teginishni sezish, ikki nuqtani farqlash va joyini aniqlashni yo'qotadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-frontal-eye-field": {
+    "uz": "Peshona ko'z maydoni (FEF)",
+    "description": {
+      "en": "Frontal eye field located at the junction of the precentral sulcus and the superior frontal sulcus.",
+      "uz": "Oldingi markaziy egat bilan yuqori peshona egati tutashgan joyda joylashgan peshona ko'z maydoni (FEF)."
+    },
+    "role": {
+      "en": "Generates voluntary and memory-guided saccadic eye movements to the contralateral visual field and directs top-down spatial visual attention.",
+      "uz": "Qarama-qarshi ko'rish maydoniga ixtiyoriy sakkadik ko'z harakatlarini hosil qiladi va fazoviy ko'ruv diqqatini yo'naltiradi."
+    },
+    "clinical": {
+      "en": "Acute destructive lesions deviate both eyes toward the side of the lesion; epileptic discharge drives the eyes to the opposite side.",
+      "uz": "O'tkir destruktiv zararlanishda ikkala ko'z o'choq tomonga, epileptik tutqanoqda esa qarama-qarshi tomonga og'adi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-premotor-eye-field": {
+    "uz": "Premotor ko'z maydoni (PEF)",
+    "description": {
+      "en": "Premotor eye field on the precentral gyrus ventral to the frontal eye field and dorsal to area 55b.",
+      "uz": "Oldingi markaziy pushtada peshona ko'z maydonidan ventralda va 55b maydonidan dorsalda joylashgan premotor ko'z maydoni (PEF)."
+    },
+    "role": {
+      "en": "Coordinates visually triggered oculomotor orienting, blink reflexes and eye–head coordination inside the dorsal attention network.",
+      "uz": "Dorsal diqqat tarmog'i tarkibida ko'ruv ta'sirida ko'z va boshni yo'naltirish hamda ko'z pirpiratishni muvofiqlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions impair rapid visually guided saccades and oculomotor scanning.",
+      "uz": "Zararlanishi ko'ruv mo'ljaliga tez sakkadalar qilishni va ko'z bilan ko'zdan kechirishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-55b": {
+    "uz": "55b maydoni (premotor nutq-hiqildoq sohasi)",
+    "description": {
+      "en": "Lightly myelinated area 55b on the mid-precentral gyrus wedged between the frontal eye field/PEF dorsally and ventral premotor cortex (6v) ventrally.",
+      "uz": "Oldingi markaziy pushtaning o'rta qismida dorsalda FEF/PEF bilan ventralda 6v orasida joylashgan kam mielinlangan 55b maydoni."
+    },
+    "role": {
+      "en": "Language- and voice-selective premotor hub discovered in HCP-MMP1: links the dorsal larynx motor cortex with posterior language areas for speech fluency and prosody.",
+      "uz": "HCP-MMP1 da kashf etilgan til va ovozga ixtisoslashgan premotor tugun: nutq ravonligi va ohang uchun hiqildoq harakat po'stlog'ini orqa til sohalari bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Surgical resection or stroke of left area 55b causes severe apraxia of speech and loss of vocal pitch control.",
+      "uz": "Chap 55b maydoni rezeksiyasi yoki insulti og'ir nutq apraksiyasi va ovoz ohangini boshqarish yo'qolishiga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-v3a": {
+    "uz": "V3A ko'ruv maydoni",
+    "description": {
+      "en": "Dorsal visual area V3A at the superior occipital / transverse occipital sulcus junction above dorsal V3.",
+      "uz": "Dorsal V3 ustida, yuqori va ko'ndalang ensa egatlari tutashuvida joylashgan V3A dorsal ko'ruv maydoni."
+    },
+    "role": {
+      "en": "Highly sensitive to coherent visual motion and stereoscopic depth across both upper and lower contralateral visual quadrants.",
+      "uz": "Qarama-qarshi ko'rish maydonining yuqori va pastki kvadrantlarida uyg'un harakat va stereoskopik chuqurlikka yuqori sezgir."
+    },
+    "clinical": {
+      "en": "Dorsal occipital lesions impair motion-based shape perception and depth judgements.",
+      "uz": "Dorsal ensa zararlanishi harakatga asoslangan shakl va chuqurlikni idrok etishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-retrosplenial-complex": {
+    "uz": "Retrosplenial kompleks (RSC, Area 29/30)",
+    "description": {
+      "en": "Retrosplenial cortex (Brodmann areas 29 and 30) in the callosal sulcus and isthmus of the cingulate gyrus behind the splenium.",
+      "uz": "Splenium ortida kallozal egat va belbog' pushtasi bo'ynida joylashgan retrosplenial po'stloq (Brodmann 29 va 30)."
+    },
+    "role": {
+      "en": "Translates between egocentric visual perspective and allocentric hippocampal spatial maps; supports episodic memory and scene navigation.",
+      "uz": "Egotsentrik ko'ruv nuqtai nazari bilan allotsentrik gippokampal fazoviy xarita orasida tarjima qiladi; epizodik xotira va yo'l topishni ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Lesions cause retrosplenial amnesia and topographical disorientation; earliest hypometabolic site in Alzheimer disease.",
+      "uz": "Zararlanishi retrosplenial amneziya va topografik dezoriyentatsiya beradi; Alzheimer kasalligida eng erta gipometabolizm joyi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-parieto-occipital-sulcus-area-2": {
+    "uz": "Tepa-ensa egati 2-maydoni (POS2)",
+    "description": {
+      "en": "Area POS2 on the anterior-dorsal wall of the parieto-occipital sulcus above POS1.",
+      "uz": "Tepa-ensa egatining oldingi-dorsal devorida, POS1 ustida joylashgan POS2 maydoni."
+    },
+    "role": {
+      "en": "Multimodal medial parieto-occipital area integrating visual scene layout with dorsal default-mode and spatial-orientation networks.",
+      "uz": "Ko'ruv manzarasi tuzilishini dorsal default-mode va fazoviy mo'ljal tarmoqlari bilan birlashtiruvchi medial tepa-ensa maydoni."
+    },
+    "clinical": {
+      "en": "Medial parieto-occipital lesions contribute to spatial disorientation and impaired scene memory.",
+      "uz": "Medial tepa-ensa zararlanishi fazoviy dezoriyentatsiya va manzara xotirasi buzilishiga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-seventh-visual-area": {
+    "uz": "Yettinchi ko'ruv maydoni (V7 / IPS0)",
+    "description": {
+      "en": "Area V7 (also called IPS0) at the junction of the transverse occipital sulcus and the posterior end of the intraparietal sulcus.",
+      "uz": "Ko'ndalang ensa egati bilan tepa ichi egatining orqa uchi tutashgan joyda joylashgan V7 (IPS0) ko'ruv maydoni."
+    },
+    "role": {
+      "en": "Entry point to the intraparietal retinotopic hierarchy: stereoscopic depth, spatial working memory and top-down visual attention.",
+      "uz": "Tepa ichi retinotopik qatorining boshlanish nuqtasi: stereoskopik chuqurlik, fazoviy ishchi xotira va ko'ruv diqqati."
+    },
+    "clinical": {
+      "en": "Lesions impair visuospatial working memory and spatial attention in the contralateral field.",
+      "uz": "Zararlanishi qarama-qarshi maydonda ko'ruv-fazoviy ishchi xotira va diqqatni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-intraparietal-sulcus-area-1": {
+    "uz": "Tepa ichi egati 1-maydoni (IPS1)",
+    "description": {
+      "en": "Area IPS1 in the posterior intraparietal sulcus immediately anterior/dorsal to V7 (IPS0).",
+      "uz": "Orqa tepa ichi egatida V7 (IPS0) maydonining bevosita oldi va ustida joylashgan IPS1 maydoni."
+    },
+    "role": {
+      "en": "Retinotopically organised dorsal-attention area maintaining spatial priority maps for saccades and visual working memory.",
+      "uz": "Sakkadalar va ko'ruv ishchi xotirasi uchun fazoviy ustuvorlik xaritasini saqlovchi retinotopik dorsal diqqat maydoni."
+    },
+    "clinical": {
+      "en": "Posterior IPS lesions cause contralateral visual extinction, simultagnosia or optic ataxia.",
+      "uz": "Orqa IPS zararlanishi qarama-qarshi ko'ruv so'nishi (ekstinksiya), simultagnoziya yoki optik ataksiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-fusiform-face-complex": {
+    "uz": "Duksimon yuz kompleksi (FFC)",
+    "description": {
+      "en": "Fusiform face complex on the mid-fusiform gyrus (lateral bank of the mid-fusiform sulcus), heavily myelinated relative to adjacent temporal cortex.",
+      "uz": "O'rta duksimon pushtada joylashgan duksimon yuz kompleksi (FFC); yondosh chakka po'stlog'iga nisbatan kuchliroq mielinlangan."
+    },
+    "role": {
+      "en": "Core face-selective area (Kanwisher FFA1/FFA2) for holistic face perception and identity recognition on the right, and visual word/object form processing on the left.",
+      "uz": "O'ngda yuzni yaxlit idrok etish va shaxsni tanishning asosiy markazi (FFA), chapda esa yozma so'z va narsa shaklini tanishda qatnashadi."
+    },
+    "clinical": {
+      "en": "Right or bilateral lesions cause prosopagnosia (face blindness); left lesions cause pure alexia.",
+      "uz": "O'ng yoki ikki tomonlama zararlanish prozopagnoziya (yuz ko'rligi), chap zararlanish sof aleksiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-v3b": {
+    "uz": "V3B ko'ruv maydoni",
+    "description": {
+      "en": "Dorsal visual area V3B located lateral to V3A and ventral to V7 in the dorsal occipital cortex.",
+      "uz": "Dorsal ensa po'stlog'ida V3A dan lateralda va V7 dan ventralda joylashgan V3B ko'ruv maydoni."
+    },
+    "role": {
+      "en": "Contains the kinetic occipital (KO) region specialized for extracting motion-defined borders and 3D shape from motion and disparity.",
+      "uz": "Harakat va binokulyar farq asosida 3D shakl hamda harakat chegaralarini ajratuvchi kinetik ensa (KO) sohasini o'z ichiga oladi."
+    },
+    "clinical": {
+      "en": "Lesions impair perception of kinetic contours and 3D depth structure.",
+      "uz": "Zararlanishi kinetik konturlar va 3D chuqurlik shaklini idrok etishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-lateral-occipital-area-1": {
+    "uz": "Lateral ensa 1-maydoni (LO1)",
+    "description": {
+      "en": "Area LO1 on the lateral occipital surface between dorsal V3 and lateral V4.",
+      "uz": "Lateral ensa yuzasida dorsal V3 bilan lateral V4 orasida joylashgan LO1 maydoni."
+    },
+    "role": {
+      "en": "Retinotopic extrastriate area extracting local orientation and boundary curvature for object-shape processing.",
+      "uz": "Narsa shaklini qayta ishlash uchun mahalliy yo'nalish va chegara egriligini ajratib oluvchi retinotopik ekstrastriar maydon."
+    },
+    "clinical": {
+      "en": "Lateral occipital lesions contribute to apperceptive visual form agnosia.",
+      "uz": "Lateral ensa zararlanishi apperseptiv ko'ruv shakl agnoziyasiga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-lateral-occipital-area-2": {
+    "uz": "Lateral ensa 2-maydoni (LO2)",
+    "description": {
+      "en": "Area LO2 on the lateral occipital convexity immediately anterior to LO1.",
+      "uz": "Lateral ensa qabariq yuzasida LO1 maydonining bevosita oldida joylashgan LO2 maydoni."
+    },
+    "role": {
+      "en": "Shape-selective lateral occipital cortex representing 2D and 3D object geometry independent of low-level contrast.",
+      "uz": "Past darajali kontrastdan qat'i nazar 2D va 3D narsa geometriyasini ifodalovchi shaklga sezgir lateral ensa po'stlog'i."
+    },
+    "clinical": {
+      "en": "Damage impairs visual recognition of object shapes and line drawings (visual form agnosia).",
+      "uz": "Zararlanishi narsa shakllari va chizma tasvirlarni ko'rib tanishni buzadi (ko'ruv shakl agnoziyasi)."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-posterior-inferotemporal-complex": {
+    "uz": "Orqa pastki chakka kompleksi (PIT)",
+    "description": {
+      "en": "Area PIT on the ventrolateral occipitotemporal surface anterior to V4/LO2 and lateral to the fusiform face complex.",
+      "uz": "Ventrolateral ensa-chakka yuzasida V4/LO2 dan oldinda va duksimon yuz kompleksidan lateralda joylashgan PIT maydoni."
+    },
+    "role": {
+      "en": "Ventral stream stage integrating colour, surface texture and local part features of faces and objects.",
+      "uz": "Yuz va narsalarning rangi, yuza teksturasi hamda mahalliy qismlarini birlashtiruvchi ventral ko'ruv oqimi bosqichi."
+    },
+    "clinical": {
+      "en": "Lesions contribute to prosopagnosia, object agnosia and colour-form integration deficits.",
+      "uz": "Zararlanishi prozopagnoziya, narsa agnoziyasi va rang-shakl integratsiyasi buzilishiga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-middle-temporal-area": {
+    "uz": "O'rta chakka harakat maydoni (MT / V5)",
+    "description": {
+      "en": "Area MT (V5) at the junction of the inferior temporal and lateral occipital sulci, distinguished by very dense cortical myelination.",
+      "uz": "Pastki chakka va lateral ensa egatlari tutashuvida joylashgan, juda zich mielinlashuvi bilan ajralib turuvchi MT (V5) harakat maydoni."
+    },
+    "role": {
+      "en": "Core motion-sensitive visual cortex: computes speed and direction of moving stimuli across the contralateral visual field.",
+      "uz": "Harakatga sezgir asosiy ko'ruv po'stlog'i: qarama-qarshi ko'rish maydonidagi harakatlanuvchi jismlar tezligi va yo'nalishini hisoblaydi."
+    },
+    "clinical": {
+      "en": "Bilateral lesions produce cerebral akinetopsia (motion blindness: moving objects appear as frozen snapshots).",
+      "uz": "Ikki tomonlama zararlanishi serebral akinetopsiya (harakat ko'rligi: harakatdagi narsalar qotib qolgan kadrlar kabi ko'rinishi) beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-primary-auditory-cortex": {
+    "uz": "Birlamchi eshituv po'stlog'i (A1, Glasser)",
+    "description": {
+      "en": "Primary auditory core (A1) on the medial two-thirds of Heschl’s transverse temporal gyrus inside the Sylvian fissure, heavily myelinated.",
+      "uz": "Silviy egati ichida Geshl ko'ndalang chakka pushtasining medial ikki uchdan bir qismini egallagan, kuchli mielinlangan birlamchi eshituv o'zagi (A1)."
+    },
+    "role": {
+      "en": "Receives tonotopically organised input from the ventral medial geniculate body for elementary pitch, loudness and timing analysis.",
+      "uz": "Ventral medial tizzasimon tanadan tonotopik tartiblangan kirishni qabul qilib, tovush balandligi, kuchi va vaqtini birlamchi tahlil qiladi."
+    },
+    "clinical": {
+      "en": "Bilateral lesions cause cortical deafness; focal seizures produce simple auditory auras.",
+      "uz": "Ikki tomonlama zararlanish kortikal karlik, fokal tutqanoqlari esa oddiy eshituv auralarini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-perisylvian-language-area": {
+    "uz": "Perisilviy til maydoni (PSL)",
+    "description": {
+      "en": "Area PSL at the posterior-superior corner of the Sylvian fissure where the planum temporale meets the supramarginal gyrus (area Spt).",
+      "uz": "Silviy egatining orqa-yuqori burchagida, planum temporale chekka usti pushtasiga tutashgan joydagi perisilviy til maydoni (PSL / Spt)."
+    },
+    "role": {
+      "en": "Auditory-motor interface for speech: converts heard phonological representations into articulatory motor plans for vocal repetition.",
+      "uz": "Nutqning eshituv-harakat interfeysi: eshitilgan fonologik tasvirni takrorlab aytish uchun artikulyator harakat dasturiga aylantiradi."
+    },
+    "clinical": {
+      "en": "Dominant lesions cause conduction aphasia with prominent phonemic paraphasias and impaired repetition.",
+      "uz": "Dominant yarim shardagi zararlanishi fonemik parafaziyalar va takrorlash buzilishi bilan kechuvchi o'tkazuvchi afaziya beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-superior-frontal-language-area": {
+    "uz": "Yuqori peshona til maydoni (SFL)",
+    "description": {
+      "en": "Area SFL on the medial/dorsal superior frontal gyrus just anterior to the supplementary motor area (pre-SMA language zone).",
+      "uz": "Medial/dorsal yuqori peshona pushtasida qo'shimcha harakat sohasining (SMA) bevosita oldida joylashgan yuqori peshona til maydoni (SFL)."
+    },
+    "role": {
+      "en": "Connected via the frontal aslant tract (FAT) to Broca’s area: initiates spontaneous speech, verbal fluency and narrative sequencing.",
+      "uz": "Peshona qiyshiq trakti (FAT) orqali Broka sohasi bilan bog'langan: spontan nutqni boshlash, so'z ravonligi va hikoya ketma-ketligini ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Dominant lesions or glioma resections here cause transcortical motor aphasia or transient post-operative speech mutism.",
+      "uz": "Dominant yarim sharda zararlanishi yoki o'sma rezeksiyasi transkortikal motor afaziya yoki jarrohlikdan keyingi o'tkinchi nutq mutizmini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-precuneus-visual-area": {
+    "uz": "Precuneus ko'ruv maydoni (PCV)",
+    "description": {
+      "en": "Area PCV on the anterior-central precuneus above the subparietal sulcus and anterior to visual parieto-occipital areas.",
+      "uz": "Oldingi-markaziy precuneusda tepa osti egati ustida joylashgan precuneus ko'ruv maydoni (PCV)."
+    },
+    "role": {
+      "en": "Integrates visual motion and spatial memory with body movement for visuospatial imagery and navigation.",
+      "uz": "Ko'ruv-fazoviy tasavvur va mo'ljal olish uchun ko'ruv harakati hamda fazoviy xotirani tana harakati bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Medial parietal lesions impair visuospatial mental rotation and navigation.",
+      "uz": "Medial tepa zararlanishi ko'ruv-fazoviy tasavvur va yo'l topishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-superior-temporal-visual-area": {
+    "uz": "Yuqori chakka ko'ruv maydoni (STV)",
+    "description": {
+      "en": "Area STV at the posterior superior temporal gyrus/sulcus junction just anterior to the temporo-parieto-occipital junction.",
+      "uz": "Orqa yuqori chakka pushtasi va egati tutashuvida, chakka-tepa-ensa chorrahasining bevosita oldida joylashgan STV maydoni."
+    },
+    "role": {
+      "en": "Processes biological motion (eye gaze, facial expression, hand actions) and integrates visual with auditory social signals.",
+      "uz": "Biologik harakatni (nigoh, yuz ifodasi, qo'l harakati) qayta ishlaydi hamda ko'ruv va eshituv ijtimoiy signallarini birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions impair biological-motion perception and social gaze/intention decoding.",
+      "uz": "Zararlanishi biologik harakatni va ijtimoiy nigoh/niyatni tushunishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-medial-area-7p": {
+    "uz": "Medial 7P maydoni (7Pm)",
+    "description": {
+      "en": "Area 7Pm on the posterior-dorsal precuneus on the medial parietal surface just anterior to the parieto-occipital sulcus.",
+      "uz": "Medial tepa yuzasida tepa-ensa egatining bevosita oldida, orqa-dorsal precuneusda joylashgan 7Pm maydoni."
+    },
+    "role": {
+      "en": "Links dorsal visual stream representations with medial parietal spatial working memory and navigation circuits.",
+      "uz": "Dorsal ko'ruv oqimi ma'lumotlarini medial tepa fazoviy ishchi xotira va navigatsiya zanjirlari bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Lesions contribute to visuospatial disorientation and optic ataxia.",
+      "uz": "Zararlanishi ko'ruv-fazoviy dezoriyentatsiya va optik ataksiyaga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-7m": {
+    "uz": "7m maydoni (medial precuneus)",
+    "description": {
+      "en": "Area 7m on the ventral-posterior precuneus between the parieto-occipital sulcus and the posterior cingulate cortex.",
+      "uz": "Ventral-orqa precuneusda tepa-ensa egati bilan orqa belbog' po'stlog'i orasida joylashgan 7m maydoni."
+    },
+    "role": {
+      "en": "Node of the posterior default-mode network connecting retrosplenial/hippocampal memory with medial parietal visuospatial processing.",
+      "uz": "Retrosplenial/gippokampal xotirani medial tepa ko'ruv-fazoviy tahlili bilan bog'lovchi orqa default-mode tarmog'i tuguni."
+    },
+    "clinical": {
+      "en": "Shows early metabolic decline in Alzheimer disease.",
+      "uz": "Alzheimer kasalligida metabolizmi erta pasayadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-parieto-occipital-sulcus-area-1": {
+    "uz": "Tepa-ensa egati 1-maydoni (POS1)",
+    "description": {
+      "en": "Area POS1 in the ventral-anterior bank of the parieto-occipital sulcus adjacent to the retrosplenial complex and calcarine sulcus.",
+      "uz": "Tepa-ensa egatining ventral-oldingi devorida, retrosplenial kompleks va kalkarin egat yonida joylashgan POS1 maydoni."
+    },
+    "role": {
+      "en": "Scene- and place-selective medial parieto-occipital area (medial place area) linking visual scenes to spatial memory.",
+      "uz": "Ko'ruv manzaralarini fazoviy xotira bilan bog'lovchi manzara va joyga sezgir medial tepa-ensa maydoni."
+    },
+    "clinical": {
+      "en": "Lesions cause landmark/scene orientation deficits (topographical disorientation).",
+      "uz": "Zararlanishi joy va mo'ljallarni tanish buzilishini (topografik dezoriyentatsiya) beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-23d": {
+    "uz": "23d maydoni (dorsal orqa belbog')",
+    "description": {
+      "en": "Area 23d on the dorsal-anterior portion of the posterior cingulate gyrus above the posterior body of the corpus callosum.",
+      "uz": "Qadoqsimon tananing orqa tanasi ustida, orqa belbog' pushtasining dorsal-oldingi qismida joylashgan 23d maydoni."
+    },
+    "role": {
+      "en": "Transition hub between midcingulate cognitive control and posterior cingulate default-mode autobiographical memory networks.",
+      "uz": "O'rta belbog' kognitiv nazorati bilan orqa belbog' default-mode avtobiografik xotira tarmoqlari orasidagi o'tish markazi."
+    },
+    "clinical": {
+      "en": "Early site of amyloid plaque deposition and hypometabolism in Alzheimer disease.",
+      "uz": "Alzheimer kasalligida amiloid to'planishi va gipometabolizmning erta joyi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-ventral-23-a-b": {
+    "uz": "Ventral 23a/b maydoni (orqa belbog', v23ab)",
+    "description": {
+      "en": "Area v23ab on the ventral bank of the posterior cingulate gyrus adjacent to the retrosplenial cortex above the splenium.",
+      "uz": "Splenium ustida retrosplenial po'stloq yonida, orqa belbog' pushtasining ventral qismida joylashgan v23ab maydoni."
+    },
+    "role": {
+      "en": "Core posterior default-mode node strongly coupled to the hippocampus and parahippocampal cortex for episodic memory retrieval.",
+      "uz": "Epizodik xotirani chaqirish uchun gippokamp va parahippokampal po'stloq bilan kuchli bog'langan orqa default-mode tarmog'i o'zagi."
+    },
+    "clinical": {
+      "en": "Severely affected early in Alzheimer disease; lesions contribute to retrosplenial/posterior cingulate amnesia.",
+      "uz": "Alzheimer kasalligida erta zararlanadi; o'choqlari orqa belbog' amneziyasiga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-dorsal-23-a-b": {
+    "uz": "Dorsal 23a/b maydoni (orqa belbog', d23ab)",
+    "description": {
+      "en": "Area d23ab on the crown of the posterior cingulate gyrus dorsal to v23ab and ventral to area 31.",
+      "uz": "Orqa belbog' pushtasi cho'qqisida v23ab dan dorsalda va 31-maydondan ventralda joylashgan d23ab maydoni."
+    },
+    "role": {
+      "en": "Central default-mode hub integrating self-referential thought, future prospection and episodic memory.",
+      "uz": "O'zi haqida fikrlash, kelajakni tasavvur qilish va epizodik xotirani birlashtiruvchi markaziy default-mode tuguni."
+    },
+    "clinical": {
+      "en": "Classic site of early FDG-PET hypometabolism in prodromal Alzheimer disease.",
+      "uz": "Prodromal Alzheimer kasalligida FDG-PET gipometabolizmining klassik joyi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-31p-ventral": {
+    "uz": "31pv maydoni (orqa-ventral 31-maydon)",
+    "description": {
+      "en": "Area 31pv on the posterior cingulate gyrus between d23ab ventrally and 31pd/31a dorsally.",
+      "uz": "Orqa belbog' pushtasida ventralda d23ab bilan dorsalda 31pd/31a orasida joylashgan 31pv maydoni."
+    },
+    "role": {
+      "en": "Posterior cingulate default-mode subdivision linking medial prefrontal and lateral parietal association cortices.",
+      "uz": "Medial prefrontal va lateral tepa assotsiativ po'stloqlarini bog'lovchi orqa belbog' default-mode bo'linmasi."
+    },
+    "clinical": {
+      "en": "Vulnerable to early metabolic and functional connectivity decline in Alzheimer disease.",
+      "uz": "Alzheimer kasalligida metabolizmi va funksional aloqalari erta pasayadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-5m": {
+    "uz": "5m maydoni (medial somatosensor assotsiativ)",
+    "description": {
+      "en": "Area 5m on the posterior paracentral lobule and anterior-dorsal precuneus behind the primary lower-limb somatosensory cortex.",
+      "uz": "Orqa paratsentral bo'lakcha va oldingi-dorsal precuneusda, oyoq birlamchi somatosensor po'stlog'i ortida joylashgan 5m maydoni."
+    },
+    "role": {
+      "en": "Medial somatosensory association cortex processing proprioception and posture of the lower limb and trunk.",
+      "uz": "Oyoq va gavda propriosepsiyasi hamda holatini qayta ishlovchi medial somatosensor assotsiativ po'stloq."
+    },
+    "clinical": {
+      "en": "Medial parietal lesions impair lower-limb position sense and postural control.",
+      "uz": "Medial tepa zararlanishi oyoq holati sezgisini va tana muvozanatini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-5m-ventral": {
+    "uz": "5mv maydoni (ventral-medial 5-maydon)",
+    "description": {
+      "en": "Area 5mv in the cingulate sulcus marginal ramus immediately ventral to area 5m and dorsal to area 23c.",
+      "uz": "Belbog' egatining chekka shoxida, 5m maydonidan ventralda va 23c maydonidan dorsalda joylashgan 5mv maydoni."
+    },
+    "role": {
+      "en": "Integrates trunk/limb somatosensory feedback with caudal cingulate motor control.",
+      "uz": "Gavda va oyoq-qo'l somatosensor qayta aloqasini kaudal belbog' harakat nazorati bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions impair coordinated postural adjustments and sensorimotor integration.",
+      "uz": "Zararlanishi muvofiqlashgan tana holati moslashuvini va sensomotor integratsiyani buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-23c": {
+    "uz": "23c maydoni (kaudal belbog' harakat sohasi)",
+    "description": {
+      "en": "Area 23c in the posterior midcingulate sulcus beneath the paracentral lobule.",
+      "uz": "Paratsentral bo'lakcha ostidagi orqa-o'rta belbog' egatida joylashgan 23c maydoni."
+    },
+    "role": {
+      "en": "Caudal cingulate motor and somatosensory area projecting directly to the spinal cord and primary motor cortex for rapid defensive/orienting actions.",
+      "uz": "Tezkor himoya va yo'nalish harakatlari uchun orqa miya hamda birlamchi harakat po'stlog'iga bevosita proyeksiya beruvchi kaudal belbog' harakat sohasi."
+    },
+    "clinical": {
+      "en": "Lesions contribute to motor neglect and impaired voluntary movement initiation.",
+      "uz": "Zararlanishi motor e'tiborsizlik va ixtiyoriy harakatni boshlash buzilishiga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-5l": {
+    "uz": "5L maydoni (lateral 5-maydon)",
+    "description": {
+      "en": "Area 5L on the anterior crown of the superior parietal lobule immediately behind the postcentral gyrus (area 2).",
+      "uz": "Yuqori tepa bo'lakchasining oldingi cho'qqisida, orqa markaziy pushta (2-maydon) ortida joylashgan 5L maydoni."
+    },
+    "role": {
+      "en": "Higher-order somatosensory association cortex combining hand/arm proprioception with tactile shape for reaching and manipulation.",
+      "uz": "Qo'l uzatish va ushlash uchun qo'l propriosepsiyasini taktil shakl bilan birlashtiruvchi yuqori tartibli somatosensor assotsiativ po'stloq."
+    },
+    "clinical": {
+      "en": "Lesions cause contralateral tactile agnosia and tactile apraxia of the hand.",
+      "uz": "Zararlanishi qarama-qarshi qo'lda taktil agnoziya va taktil apraksiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-dorsal-area-24d": {
+    "uz": "Dorsal 24d maydoni (belbog' harakat sohasi, 24dd)",
+    "description": {
+      "en": "Area 24dd on the upper bank of the midcingulate sulcus directly below the supplementary motor area and paracentral lobule.",
+      "uz": "O'rta belbog' egatining yuqori qirg'og'ida, qo'shimcha harakat sohasi va paratsentral bo'lakcha ostida joylashgan 24dd maydoni."
+    },
+    "role": {
+      "en": "Dorsal caudal cingulate motor area representing the lower limb and trunk in internally and feedback-guided movement.",
+      "uz": "Ichki va qayta aloqa nazoratidagi harakatlarda oyoq hamda gavdani ifodalovchi dorsal kaudal belbog' harakat sohasi."
+    },
+    "clinical": {
+      "en": "ACA strokes affecting 24d and SMA cause contralateral crural akinesia and abulia.",
+      "uz": "24d va SMA ni qamragan ACA insulti qarama-qarshi oyoq akineziyasi va abuliya beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-lateral-area-7a": {
+    "uz": "Lateral 7A maydoni (7AL)",
+    "description": {
+      "en": "Area 7AL on the anterior-lateral superior parietal lobule behind area 5L and above the intraparietal sulcus.",
+      "uz": "Yuqori tepa bo'lakchasining oldingi-lateral qismida, 5L maydoni ortida va tepa ichi egati ustida joylashgan 7AL maydoni."
+    },
+    "role": {
+      "en": "Visuomotor and somatosensory integration for hand reaching and body-centred spatial coordinates.",
+      "uz": "Qo'l uzatish va tana markazli fazoviy koordinatalar uchun vizuomotor hamda somatosensor integratsiya."
+    },
+    "clinical": {
+      "en": "Lesions impair visually and proprioceptively guided reaching (optic ataxia).",
+      "uz": "Zararlanishi ko'ruv va propriosepsiya nazoratidagi qo'l uzatishni buzadi (optik ataksiya)."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-supplementary-and-cingulate-eye-field": {
+    "uz": "Qo'shimcha va belbog' ko'z maydoni (SCEF)",
+    "description": {
+      "en": "Area SCEF on the medial frontal cortex spanning the upper bank of the cingulate sulcus and ventral pre-SMA/SMA.",
+      "uz": "Medial peshona po'stlog'ida belbog' egati yuqori qirg'og'i va ventral pre-SMA/SMA bo'ylab joylashgan SCEF maydoni."
+    },
+    "role": {
+      "en": "Medial oculomotor control hub: plans saccade sequences, monitors oculomotor conflict and inhibits reflexive saccades.",
+      "uz": "Medial ko'z harakati markazi: sakkadalar ketma-ketligini rejalashtiradi, ko'z harakati ziddiyatini nazorat qiladi va reflektor sakkadalarni tormozlaydi."
+    },
+    "clinical": {
+      "en": "Lesions impair anti-saccade performance and sequential memory-guided eye movements.",
+      "uz": "Zararlanishi antisakkadalarni va xotiraga asoslangan ketma-ket ko'z harakatlarini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-6m-anterior": {
+    "uz": "Oldingi 6m maydoni (pre-SMA, 6ma)",
+    "description": {
+      "en": "Area 6ma on the dorsomedial superior frontal gyrus anterior to the supplementary motor area proper (6mp).",
+      "uz": "Dorsomedial yuqori peshona pushtasida xususiy qo'shimcha harakat sohasidan (6mp) oldinda joylashgan 6ma (pre-SMA) maydoni."
+    },
+    "role": {
+      "en": "Cognitive motor control: selecting action rules, switching motor plans, stopping ongoing actions and initiating speech.",
+      "uz": "Harakatning kognitiv nazorati: harakat qoidalarini tanlash, rejani almashtirish, davom etayotgan harakatni to'xtatish va nutqni boshlash."
+    },
+    "clinical": {
+      "en": "Lesions impair response inhibition and cause transient speech initiation deficits.",
+      "uz": "Zararlanishi javobni tormozlashni buzadi va nutqni boshlashda o'tkinchi qiyinchilik beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-medial-6m-anterior": {
+    "uz": "Ventral-old 24d maydoni (belbog' harakat sohasi, 24dv)",
+    "description": {
+      "en": "Cingulate motor subdivision on the lower bank of the posterior midcingulate sulcus below 24dd and posterior to p24'.",
+      "uz": "Orqa-o'rta belbog' egatining pastki qirg'og'ida, 24dd ostida joylashgan belbog' harakat bo'linmasi (24dv)."
+    },
+    "role": {
+      "en": "Upper-limb and facial division of the caudal cingulate motor area, linking cognitive feedback to hand and vocal motor output.",
+      "uz": "Kaudal belbog' harakat sohasining qo'l va yuz bo'limi; kognitiv qayta aloqani qo'l va ovoz harakati chiqishi bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Medial frontal lesions here contribute to contralateral motor neglect and akinetic mutism.",
+      "uz": "Bu yerdagi medial peshona zararlanishi qarama-qarshi motor e'tiborsizlik va akinetik mutizmga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-medial-area-7a": {
+    "uz": "Medial 7A maydoni (7Am)",
+    "description": {
+      "en": "Area 7Am on the anterodorsal precuneus and medial superior parietal lobule behind area 5m.",
+      "uz": "Oldingi-dorsal precuneus va medial yuqori tepa bo'lakchasida, 5m maydoni ortida joylashgan 7Am maydoni."
+    },
+    "role": {
+      "en": "Coordinates visuospatial attention, egocentric spatial reference frames and visually guided limb movements.",
+      "uz": "Ko'ruv-fazoviy diqqat, egotsentrik fazoviy sanoq tizimi va ko'ruv nazoratidagi oyoq-qo'l harakatlarini muvofiqlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions cause optic ataxia and visuospatial disorientation.",
+      "uz": "Zararlanishi optik ataksiya va ko'ruv-fazoviy dezoriyentatsiya beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-lateral-area-7p": {
+    "uz": "Lateral 7P maydoni (7PL)",
+    "description": {
+      "en": "Area 7PL on the posterior-lateral crown of the superior parietal lobule above the intraparietal sulcus.",
+      "uz": "Yuqori tepa bo'lakchasining orqa-lateral cho'qqisida, tepa ichi egati ustida joylashgan 7PL maydoni."
+    },
+    "role": {
+      "en": "Dorsal visuospatial attention and visuomotor transformation for reaching into peripheral space.",
+      "uz": "Periferik fazoga qo'l uzatish uchun dorsal ko'ruv-fazoviy diqqat va vizuomotor transformatsiya."
+    },
+    "clinical": {
+      "en": "Lesions cause contralateral optic ataxia and spatial attention deficits.",
+      "uz": "Zararlanishi qarama-qarshi tomonda optik ataksiya va fazoviy diqqat nuqsonini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-7pc": {
+    "uz": "7PC maydoni (postsentral 7-maydon)",
+    "description": {
+      "en": "Area 7PC at the anterior-lateral corner of the superior parietal lobule behind the postcentral sulcus and above AIP.",
+      "uz": "Yuqori tepa bo'lakchasining oldingi-lateral burchagida, orqa markaziy egat ortida va AIP ustida joylashgan 7PC maydoni."
+    },
+    "role": {
+      "en": "Somatosensory-visual convergence zone guiding hand preshaping and reach trajectories toward targets.",
+      "uz": "Nishonga qo'l uzatish yo'nalishi va panjani moslashtirishni boshqaruvchi somatosensor-ko'ruv konvergensiya zonasi."
+    },
+    "clinical": {
+      "en": "Lesions impair hand transport and tactile-visual guidance during reaching.",
+      "uz": "Zararlanishi qo'l uzatishda panjani ko'ruv va sezgi asosida yo'naltirishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-lateral-intraparietal-ventral": {
+    "uz": "Ventral lateral tepa ichi maydoni (LIPv)",
+    "description": {
+      "en": "Area LIPv on the lateral/upper bank of the mid-intraparietal sulcus ventral to LIPd.",
+      "uz": "O'rta tepa ichi egatining yuqori-lateral devorida LIPd ostida joylashgan LIPv maydoni."
+    },
+    "role": {
+      "en": "Retinotopic priority map for saccadic eye movements and covert shifts of visual spatial attention.",
+      "uz": "Sakkadik ko'z harakatlari va fazoviy ko'ruv diqqatini ko'chirish uchun retinotopik ustuvorlik xaritasi."
+    },
+    "clinical": {
+      "en": "Right LIP lesions disrupt the dorsal attention network and contribute to contralateral visual neglect and extinction.",
+      "uz": "O'ng LIP zararlanishi dorsal diqqat tarmog'ini buzib, qarama-qarshi ko'ruv e'tiborsizligi (neglect) va so'nishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-ventral-intraparietal-complex": {
+    "uz": "Ventral tepa ichi kompleksi (VIP)",
+    "description": {
+      "en": "Area VIP in the fundus of the intraparietal sulcus surrounded by LIP, MIP and area 7.",
+      "uz": "Tepa ichi egati tubida LIP, MIP va 7-maydonlar orasida joylashgan VIP kompleksi."
+    },
+    "role": {
+      "en": "Multisensory (visual, tactile, vestibular, auditory) map of peripersonal space around the head and upper body for collision avoidance.",
+      "uz": "To'qnashuvdan himoyalanish uchun bosh va gavda atrofidagi yaqin fazoning ko'p sezgili (ko'ruv, taktil, vestibulyar, eshituv) xaritasi."
+    },
+    "clinical": {
+      "en": "Lesions impair peripersonal space representation and defensive visuomotor reactions.",
+      "uz": "Zararlanishi tana atrofidagi yaqin fazoni idrok etishni va himoya vizuomotor reaksiyalarini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-medial-intraparietal-area": {
+    "uz": "Medial tepa ichi maydoni (MIP)",
+    "description": {
+      "en": "Area MIP on the medial/posterior bank of the intraparietal sulcus (part of the parietal reach region).",
+      "uz": "Tepa ichi egatining medial-orqa devorida joylashgan MIP maydoni (tepa qo'l uzatish sohasining qismi)."
+    },
+    "role": {
+      "en": "Transforms visual target coordinates into arm-reaching motor commands in concert with dorsal premotor cortex (PMd).",
+      "uz": "Dorsal premotor po'stloq (PMd) bilan birgalikda ko'ruv nishoni koordinatalarini qo'l uzatish harakat buyruqlariga aylantiradi."
+    },
+    "clinical": {
+      "en": "Lesions cause classic optic ataxia (misreaching for visual targets despite intact motor strength and primary vision).",
+      "uz": "Zararlanishi klassik optik ataksiyani (harakat kuchi va ko'rish saqlangan holda nishonga noaniq qo'l uzatishni) beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-1": {
+    "uz": "1-maydon (birlamchi somatosensor, Glasser)",
+    "description": {
+      "en": "Brodmann area 1 running along the crown of the postcentral gyrus between area 3b anteriorly and area 2 posteriorly.",
+      "uz": "Orqa markaziy pushta cho'qqisi bo'ylab oldinda 3b va orqada 2-maydon orasida joylashgan Brodmann 1-maydoni."
+    },
+    "role": {
+      "en": "Processes cutaneous texture, slip and multi-digit tactile features relayed from area 3b.",
+      "uz": "3b maydonidan uzatilgan teri teksturasi, sirpanish va bir necha barmoq taktil belgilarini qayta ishlaydi."
+    },
+    "clinical": {
+      "en": "Lesions impair fine texture discrimination and two-point tactile acuity on the opposite body.",
+      "uz": "Zararlanishi qarama-qarshi tomonda nozik teksturani va ikki nuqtani farqlashni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-2": {
+    "uz": "2-maydon (birlamchi somatosensor, Glasser)",
+    "description": {
+      "en": "Brodmann area 2 on the posterior wall of the postcentral gyrus and anterior bank of the postcentral sulcus.",
+      "uz": "Orqa markaziy pushtaning orqa devori va orqa markaziy egatning oldingi qirg'og'ida joylashgan Brodmann 2-maydoni."
+    },
+    "role": {
+      "en": "Combines cutaneous touch from area 3b/1 with deep joint and muscle proprioception from area 3a to perceive object size and 3D shape (stereognosis).",
+      "uz": "Narsaning o'lchami va 3D shaklini paypaslab bilish (stereognoz) uchun teri sezgisini (3b/1) chuqur bo'g'im-mushak propriosepsiyasi (3a) bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions cause contralateral astereognosis (inability to identify objects by touch alone).",
+      "uz": "Zararlanishi qarama-qarshi qo'lda astereognoz (narsani faqat paypaslab taniy olmaslik) beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-3a": {
+    "uz": "3a maydoni (proprioseptiv somatosensor)",
+    "description": {
+      "en": "Brodmann area 3a in the deep floor (fundus) of the central sulcus between primary motor area 4 and cutaneous area 3b.",
+      "uz": "Markaziy egatning eng chuqur tubida birlamchi harakat (4-maydon) va teri sezgisi (3b) maydonlari orasida joylashgan 3a maydoni."
+    },
+    "role": {
+      "en": "Receives muscle-spindle and deep joint proprioceptive input from the thalamus and links directly with primary motor cortex for kinesthesia.",
+      "uz": "Talamusdan mushak duklari va bo'g'im proprioseptiv kirishini qabul qiladi hamda harakat sezgisi (kinesteziya) uchun M1 bilan bevosita bog'lanadi."
+    },
+    "clinical": {
+      "en": "Lesions cause loss of conscious joint position and movement sense (kinesthetic ataxia) on the opposite side.",
+      "uz": "Zararlanishi qarama-qarshi tomonda bo'g'im holati va harakat sezgisining yo'qolishini (kinestetik ataksiya) beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-dorsal-area-6": {
+    "uz": "Dorsal 6-maydon (6d, dorsal premotor)",
+    "description": {
+      "en": "Area 6d on the dorsal precentral gyrus immediately anterior to the upper-limb and trunk primary motor cortex.",
+      "uz": "Dorsal oldingi markaziy pushtada qo'l va gavda birlamchi harakat po'stlog'ining bevosita oldida joylashgan 6d maydoni."
+    },
+    "role": {
+      "en": "Caudal dorsal premotor cortex (PMd): prepares and guides reaching and proximal limb movements using visual and somatosensory cues.",
+      "uz": "Kaudal dorsal premotor po'stloq (PMd): ko'ruv va somatosensor mo'ljallar asosida qo'l uzatish va proksimal harakatlarni tayyorlaydi."
+    },
+    "clinical": {
+      "en": "Lesions cause limb-kinetic apraxia and difficulty coordinating proximal arm and shoulder movements.",
+      "uz": "Zararlanishi oyoq-qo'l kinetik apraksiyasi va yelka-qo'l harakatlarini muvofiqlashtirish qiyinligini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-6mp": {
+    "uz": "Orqa-medial 6-maydon (SMA, 6mp)",
+    "description": {
+      "en": "Area 6mp on the posterior medial superior frontal gyrus just in front of the paracentral lobule — the supplementary motor area proper.",
+      "uz": "Orqa medial yuqori peshona pushtasida paratsentral bo'lakcha oldida joylashgan 6mp maydoni — xususiy qo'shimcha harakat sohasi (SMA)."
+    },
+    "role": {
+      "en": "Initiates internally generated movement sequences, bimanual coordination and postural stabilization.",
+      "uz": "Ichki rejalashtirilgan harakat ketma-ketliklarini boshlash, ikki qo'l muvofiqligi va tana muvozanatini ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Surgical resection or ACA infarction produces the SMA syndrome (contralateral akinesia and mutism that typically recovers over weeks).",
+      "uz": "Jarrohlik rezeksiyasi yoki ACA infarkti SMA sindromini (haftalar ichida tiklanuvchi qarama-qarshi akineziya va mutizm) keltirib chiqaradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-ventral-area-6": {
+    "uz": "Ventral 6-maydon (6v, ventral premotor)",
+    "description": {
+      "en": "Area 6v on the lower precentral gyrus anterior to the face and hand representations of primary motor cortex.",
+      "uz": "Pastki oldingi markaziy pushtada M1 ning yuz va qo'l vakilligi oldida joylashgan 6v (ventral premotor) maydoni."
+    },
+    "role": {
+      "en": "Controls hand grasping, orofacial/articulatory motor coordination and mirror-neuron action recognition in concert with area AIP and PF.",
+      "uz": "AIP va PF maydonlari bilan birgalikda qo'l bilan ushlash, yuz-og'iz artikulyatsiyasi va ko'zgu neyronlari orqali harakatni tushunishni boshqaradi."
+    },
+    "clinical": {
+      "en": "Lesions cause apraxia of speech, buccofacial apraxia and impaired hand preshaping for grasping.",
+      "uz": "Zararlanishi nutq apraksiyasi, yuz-og'iz apraksiyasi va narsani ushlashda panjani moslashtirish buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-posterior-24": {
+    "uz": "Orqa 24-maydon (p24)",
+    "description": {
+      "en": "Area p24 in the pregenual/dorsal anterior cingulate gyrus curving over the anterior corpus callosum.",
+      "uz": "Oldingi qadoqsimon tana ustidan egilib o'tuvchi tizza oldi/dorsal oldingi belbog' pushtasidagi p24 maydoni."
+    },
+    "role": {
+      "en": "Integrates emotional and visceral signals with cognitive control and pain modulation.",
+      "uz": "Emotsional va visseral signallarni kognitiv nazorat hamda og'riq modulyatsiyasi bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Involved in affective pain processing, apathy syndromes and mood disorders.",
+      "uz": "Og'riqning affektiv idroki, apatiya sindromlari va kayfiyat buzilishlarida ishtirok etadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-33-prime": {
+    "uz": "33' maydoni (kallozal egat belbog' po'stlog'i)",
+    "description": {
+      "en": "Area 33 prime forming a narrow ribbon deep in the callosal sulcus directly abutting the dorsal surface of the corpus callosum.",
+      "uz": "Kallozal egat tubida qadoqsimon tananing ustki yuzasiga bevosita tegib yotuvchi tor tasma shaklidagi 33' maydoni."
+    },
+    "role": {
+      "en": "Thin periallocortical transition belt between the corpus callosum indusium griseum and midcingulate area 24.",
+      "uz": "Qadoqsimon tana ustidagi indusium griseum bilan o'rta belbog' 24-maydoni orasidagi periallokortikal o'tish tasmasi."
+    },
+    "clinical": {
+      "en": "Damaged along with the pericallosal artery in distal ACA infarcts or callosal gliomas.",
+      "uz": "Distal ACA infarktlari yoki qadoqsimon tana gliomalarida perikallozal arteriya bilan birga zararlanadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-anterior-24-prime": {
+    "uz": "Oldingi 24' maydoni (a24', o'rta belbog')",
+    "description": {
+      "en": "Area a24 prime on the midcingulate gyrus above the anterior body of the corpus callosum.",
+      "uz": "Qadoqsimon tana tanasining oldingi qismi ustidagi o'rta belbog' pushtasida joylashgan a24' maydoni."
+    },
+    "role": {
+      "en": "Anterior midcingulate cognitive-control and salience hub monitoring response conflict, pain and reward effort.",
+      "uz": "Javob ziddiyati, og'riq va harakat kuchini baholovchi oldingi-o'rta belbog' kognitiv nazorat va salience markazi."
+    },
+    "clinical": {
+      "en": "Target region of stereotactic anterior cingulotomy for intractable pain and OCD; bilateral damage causes akinetic mutism.",
+      "uz": "Rezistent og'riq va OKBda stereotaktik oldingi singulotomiya nishoni; ikki tomonlama zararlanishi akinetik mutizm beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-p32-prime": {
+    "uz": "Orqa 32' maydoni (p32', dorsal o'rta belbog')",
+    "description": {
+      "en": "Area p32 prime in the dorsal bank of the midcingulate sulcus above area a24' and ventral to SCEF.",
+      "uz": "O'rta belbog' egatining dorsal qirg'og'ida, a24' ustida va SCEF ostida joylashgan p32' maydoni."
+    },
+    "role": {
+      "en": "Cognitive control network node supporting error detection, decision uncertainty and task-set maintenance.",
+      "uz": "Xatoni aniqlash, noaniqlikda qaror qabul qilish va vazifa holatini saqlashni ta'minlovchi kognitiv nazorat tuguni."
+    },
+    "clinical": {
+      "en": "Lesions impair conflict resolution and executive initiation.",
+      "uz": "Zararlanishi ziddiyatni hal qilish va ijrochi tashabbusni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-a24": {
+    "uz": "Oldingi 24-maydon (a24, tizza oldi belbog')",
+    "description": {
+      "en": "Area a24 on the rostral/pregenual anterior cingulate gyrus immediately in front of the genu of the corpus callosum.",
+      "uz": "Qadoqsimon tana tizzasining bevosita oldidagi rostral oldingi belbog' pushtasida joylashgan a24 maydoni."
+    },
+    "role": {
+      "en": "Core medial default-mode and affective cingulate node: emotional valuation, social cognition and autonomic regulation.",
+      "uz": "Medial default-mode va affektiv belbog' tuguni: emotsional baholash, ijtimoiy kognitsiya va vegetativ boshqaruv."
+    },
+    "clinical": {
+      "en": "Shows altered activity and connectivity to the dorsolateral prefrontal cortex in major depressive disorder.",
+      "uz": "Og'ir depressiyada faolligi va dorsolateral prefrontal po'stloq bilan aloqasi o'zgaradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-dorsal-32": {
+    "uz": "Dorsal 32-maydon (d32, medial prefrontal)",
+    "description": {
+      "en": "Area d32 on the medial prefrontal surface dorsal to the anterior cingulate sulcus and anterior to 8BM.",
+      "uz": "Medial prefrontal yuzada oldingi belbog' egatidan dorsalda va 8BM maydonidan oldinda joylashgan d32 maydoni."
+    },
+    "role": {
+      "en": "Medial prefrontal cognitive-control and theory-of-mind area evaluating social intentions and decision outcomes.",
+      "uz": "Ijtimoiy niyatlar va qaror natijalarini baholovchi medial prefrontal kognitiv nazorat hamda mentalizatsiya maydoni."
+    },
+    "clinical": {
+      "en": "Medial frontal lesions cause apathy, reduced spontaneous speech and impaired social mentalizing.",
+      "uz": "Medial peshona zararlanishi apatiya, spontan nutq kamayishi va ijtimoiy tushunish buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-8bm": {
+    "uz": "Medial 8B maydoni (8BM, dorsomedial prefrontal)",
+    "description": {
+      "en": "Area 8BM on the dorsomedial superior frontal gyrus anterior to pre-SMA/SCEF and dorsal to d32.",
+      "uz": "Dorsomedial yuqori peshona pushtasida pre-SMA/SCEF dan oldinda va d32 dan dorsalda joylashgan 8BM maydoni."
+    },
+    "role": {
+      "en": "Part of the multiple-demand cognitive control network: rule retrieval, working memory and decision monitoring.",
+      "uz": "Ko'p talabli (multiple-demand) kognitiv nazorat tarmog'i qismi: qoidalarni eslash, ishchi xotira va qaror monitoringi."
+    },
+    "clinical": {
+      "en": "Lesions impair complex executive rule switching and cognitive effort allocation.",
+      "uz": "Zararlanishi murakkab ijrochi qoidalarni almashtirish va kognitiv diqqatni taqsimlashni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-p32": {
+    "uz": "Pregenual 32-maydon (p32, medial prefrontal)",
+    "description": {
+      "en": "Area p32 on the rostral medial prefrontal surface anterior to pregenual area a24 and caudal to 10r.",
+      "uz": "Rostral medial prefrontal yuzada tizza oldi a24 maydonidan oldinda va 10r dan orqada joylashgan p32 maydoni."
+    },
+    "role": {
+      "en": "Affective and self-referential medial prefrontal hub of the default-mode network, regulating optimism, valuation and emotion.",
+      "uz": "Default-mode tarmog'ining o'zi haqida fikrlash, qiymat berish va emotsiyani boshqaruvchi medial prefrontal markazi."
+    },
+    "clinical": {
+      "en": "Lesions cause emotional blunting and impaired value-based choice; dysfunctional in mood and anxiety disorders.",
+      "uz": "Zararlanishi emotsional to'mtoqlik va qiymatga asoslangan tanlov buzilishini beradi; depressiya va xavotirda disfunksiyaga uchraydi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-10r": {
+    "uz": "Rostral 10-maydon (10r, ventromedial qutb)",
+    "description": {
+      "en": "Area 10r on the rostral ventromedial prefrontal surface anterior to p32 and dorsal to 10v.",
+      "uz": "Rostral ventromedial prefrontal yuzada p32 dan oldinda va 10v dan dorsalda joylashgan 10r maydoni."
+    },
+    "role": {
+      "en": "Anterior default-mode node integrating episodic memory, future imagination and personal value.",
+      "uz": "Epizodik xotira, kelajakni tasavvur qilish va shaxsiy ahamiyatni birlashtiruvchi oldingi default-mode tuguni."
+    },
+    "clinical": {
+      "en": "Ventromedial frontopolar lesions impair personal decision making and prospective memory.",
+      "uz": "Ventromedial peshona qutbi zararlanishi shaxsiy qaror qabul qilish va kelajakka mo'ljallangan xotirani buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-47m": {
+    "uz": "Medial 47-maydon (47m, lateral orbitofrontal)",
+    "description": {
+      "en": "Area 47m on the lateral orbital surface medial to 47l and lateral to area 11l/13l.",
+      "uz": "Lateral orbital yuzada 47l dan medialda va 11l/13l maydonlaridan lateralda joylashgan 47m maydoni."
+    },
+    "role": {
+      "en": "Orbitofrontal valuation area linking sensory/semantic representations with reward and non-reward outcomes.",
+      "uz": "Sezgi va semantik ma'lumotlarni mukofot yoki jazoga bog'lovchi orbitofrontal baholash maydoni."
+    },
+    "clinical": {
+      "en": "Lesions impair reversal learning and adaptive behavioural switching.",
+      "uz": "Zararlanishi reversiv o'rganish va o'zgaruvchan sharoitga moslashishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-8av": {
+    "uz": "Ventral 8A maydoni (8Av, dorsolateral prefrontal)",
+    "description": {
+      "en": "Area 8Av on the posterior middle frontal gyrus ventral to 8Ad and anterior to area 8C.",
+      "uz": "Orqa o'rta peshona pushtasida 8Ad dan ventralda va 8C maydonidan oldinda joylashgan 8Av maydoni."
+    },
+    "role": {
+      "en": "Dorsolateral prefrontal node coupling visual/spatial attention with working memory and cognitive control.",
+      "uz": "Ko'ruv-fazoviy diqqatni ishchi xotira va kognitiv nazorat bilan bog'lovchi dorsolateral prefrontal tugun."
+    },
+    "clinical": {
+      "en": "Lesions cause executive working-memory and attentional filtering deficits.",
+      "uz": "Zararlanishi ijrochi ishchi xotira va diqqatni filtrlash nuqsonini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-8ad": {
+    "uz": "Dorsal 8A maydoni (8Ad, dorsolateral prefrontal)",
+    "description": {
+      "en": "Area 8Ad on the posterior superior frontal sulcus and dorsal middle frontal gyrus anterior to the frontal eye field.",
+      "uz": "Orqa yuqori peshona egati va dorsal o'rta peshona pushtasida peshona ko'z maydonidan oldinda joylashgan 8Ad maydoni."
+    },
+    "role": {
+      "en": "Spatial working memory and executive oculomotor planning.",
+      "uz": "Fazoviy ishchi xotira va ko'z harakatlarini ijrochi rejalashtirish."
+    },
+    "clinical": {
+      "en": "Lesions impair spatial working memory and voluntary gaze control.",
+      "uz": "Zararlanishi fazoviy ishchi xotira va ixtiyoriy nigoh nazoratini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-9-middle": {
+    "uz": "Medial 9-maydon (9m, dorsomedial prefrontal)",
+    "description": {
+      "en": "Area 9m on the anterior dorsomedial surface of the superior frontal gyrus above d32 and 10d.",
+      "uz": "Yuqori peshona pushtasining oldingi dorsomedial yuzasida d32 va 10d ustida joylashgan 9m maydoni."
+    },
+    "role": {
+      "en": "Core social-cognition (theory of mind) and default-mode area for reasoning about others’ beliefs, emotions and intentions.",
+      "uz": "Boshqalarning fikri, hissiyoti va niyatlari haqida mulohaza yurituvchi ijtimoiy kognitsiya (mentalizatsiya) va default-mode maydoni."
+    },
+    "clinical": {
+      "en": "Lesions impair social inference, empathy and autobiographical reflection.",
+      "uz": "Zararlanishi ijtimoiy xulosa chiqarish, empatiya va avtobiografik mulohazani buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-8b-lateral": {
+    "uz": "Lateral 8B maydoni (8BL, dorsal prefrontal)",
+    "description": {
+      "en": "Area 8BL on the crown of the superior frontal gyrus lateral to 8BM and medial to 8Ad.",
+      "uz": "Yuqori peshona pushtasi cho'qqisida 8BM dan lateralda va 8Ad dan medialda joylashgan 8BL maydoni."
+    },
+    "role": {
+      "en": "Bridges the default-mode/social network with executive prefrontal control during internally guided cognition.",
+      "uz": "Ichki yo'nalgan tafakkur davomida default-mode/ijtimoiy tarmoqni ijrochi prefrontal nazorat bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Lesions contribute to dysexecutive symptoms and reduced cognitive initiative.",
+      "uz": "Zararlanishi dizeksekutiv belgilar va kognitiv tashabbus pasayishiga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-9-posterior": {
+    "uz": "Orqa 9-maydon (9p, dorsal prefrontal)",
+    "description": {
+      "en": "Area 9p on the dorsal superior frontal gyrus anterior to 8BL/8Ad and posterior to 9a.",
+      "uz": "Dorsal yuqori peshona pushtasida 8BL/8Ad dan oldinda va 9a dan orqada joylashgan 9p maydoni."
+    },
+    "role": {
+      "en": "Supports abstract cognitive reasoning, narrative comprehension and executive goal maintenance.",
+      "uz": "Mavhum kognitiv mulohaza, matn mazmunini tushunish va maqsadni saqlashni ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Lesions impair high-level planning and executive organization.",
+      "uz": "Zararlanishi yuqori darajali rejalashtirish va ijrochi tartibni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-10d": {
+    "uz": "Dorsal 10-maydon (10d, dorsal peshona qutbi)",
+    "description": {
+      "en": "Area 10d on the dorsal-medial aspect of the frontal pole below 9m and above 10r/10pp.",
+      "uz": "Peshona qutbining dorsal-medial qismida 9m ostida va 10r/10pp ustida joylashgan 10d maydoni."
+    },
+    "role": {
+      "en": "Frontopolar hub linking default-mode prospection with executive multitasking and long-term goal tracking.",
+      "uz": "Kelajakni tasavvur qilishni ijrochi ko'p vazifalilik va uzoq muddatli maqsad nazorati bilan bog'lovchi qutb markazi."
+    },
+    "clinical": {
+      "en": "Frontopolar contusions or resections impair real-life multitasking and prospective memory.",
+      "uz": "Peshona qutbi kontuziyasi yoki rezeksiyasi kundalik ko'p vazifalilik va kelajakka mo'ljallangan xotirani buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-8c": {
+    "uz": "8C maydoni (kaudal dorsolateral prefrontal)",
+    "description": {
+      "en": "Area 8C in the posterior middle frontal gyrus/inferior precentral junction between 8Av and IFJp/PEF.",
+      "uz": "Orqa o'rta peshona pushtasida 8Av bilan IFJp/PEF orasida joylashgan 8C maydoni."
+    },
+    "role": {
+      "en": "Multiple-demand cognitive-control node integrating working memory with oculomotor and manual action selection.",
+      "uz": "Ishchi xotirani ko'z va qo'l harakati tanlovi bilan birlashtiruvchi kognitiv nazorat tuguni."
+    },
+    "clinical": {
+      "en": "Lesions impair attentional control and working-memory updating.",
+      "uz": "Zararlanishi diqqat nazorati va ishchi xotirani yangilashni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-44": {
+    "uz": "44-maydon (Broka, qopqoq qismi, Glasser)",
+    "description": {
+      "en": "Brodmann area 44 on the pars opercularis of the inferior frontal gyrus in front of the ventral precentral sulcus.",
+      "uz": "Pastki peshona pushtasining qopqoq qismida (pars opercularis), ventral oldingi markaziy egat oldida joylashgan 44-maydon."
+    },
+    "role": {
+      "en": "Posterior core of Broca’s area in the left hemisphere (syntactic structure building and phonological-motor speech programming); response inhibition on the right.",
+      "uz": "Chap yarim sharda Broka sohasining orqa o'zagi (sintaktik qurilish va nutqning fonologik-harakat dasturi); o'ngda harakatni tormozlash."
+    },
+    "clinical": {
+      "en": "Left lesions cause non-fluent, agrammatic Broca’s aphasia; critical eloquent zone spared during awake glioma surgery.",
+      "uz": "Chap zararlanishi noravon, agrammatik Broka afaziyasini beradi; uyg'oq glioma jarrohligida saqlanishi shart bo'lgan nutq zonasi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-45": {
+    "uz": "45-maydon (Broka, uchburchak qismi, Glasser)",
+    "description": {
+      "en": "Brodmann area 45 on the pars triangularis of the inferior frontal gyrus between the horizontal and ascending rami of the lateral sulcus.",
+      "uz": "Pastki peshona pushtasining uchburchak qismida (pars triangularis), lateral egatning gorizontal va ko'tariluvchi shoxlari orasidagi 45-maydon."
+    },
+    "role": {
+      "en": "Anterior core of Broca’s area: controlled semantic/lexical retrieval and sentence-level language comprehension.",
+      "uz": "Broka sohasining oldingi o'zagi: boshqariladigan leksik-semantik chaqirish va gap darajasida tilni tushunish."
+    },
+    "clinical": {
+      "en": "Combined damage with area 44 produces chronic Broca’s aphasia.",
+      "uz": "44-maydon bilan birgalikda zararlanishi surunkali Broka afaziyasini keltirib chiqaradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-47l": {
+    "uz": "Lateral 47-maydon (47l, pars orbitalis)",
+    "description": {
+      "en": "Area 47l on the lateral orbital part of the inferior frontal gyrus ventral to area 45.",
+      "uz": "Pastki peshona pushtasining lateral orbital qismida, 45-maydondan ventralda joylashgan 47l maydoni."
+    },
+    "role": {
+      "en": "Ventral semantic language hub connected via the IFOF and uncinate fasciculus to temporal semantic cortex.",
+      "uz": "IFOF va ilmoqsimon tutam orqali chakka semantik po'stlog'i bilan bog'langan ventral semantik til markazi."
+    },
+    "clinical": {
+      "en": "Dominant lesions impair semantic word selection and comprehension of figurative or ambiguous language.",
+      "uz": "Dominant yarim shardagi zararlanishi so'zlarni semantik tanlash va ko'chma ma'nolarni tushunishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-anterior-47r": {
+    "uz": "Oldingi rostral 47-maydon (a47r)",
+    "description": {
+      "en": "Area a47r at the rostral-ventral corner of the lateral prefrontal cortex between the frontal pole and pars orbitalis.",
+      "uz": "Lateral prefrontal po'stloqning rostral-ventral burchagida, peshona qutbi bilan pars orbitalis orasida joylashgan a47r maydoni."
+    },
+    "role": {
+      "en": "Ventrolateral prefrontal cognitive control: relational reasoning, rule abstraction and semantic working memory.",
+      "uz": "Ventrolateral prefrontal kognitiv nazorat: munosabatlar ustida mulohaza, qoidalarni umumlashtirish va semantik ishchi xotira."
+    },
+    "clinical": {
+      "en": "Lesions impair flexible rule application and controlled memory retrieval.",
+      "uz": "Zararlanishi qoidalarni moslashuvchan qo'llash va xotiradan tanlab eslashni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-rostral-area-6": {
+    "uz": "Rostral 6-maydon (6r, ventral premotor)",
+    "description": {
+      "en": "Area 6r in the inferior precentral sulcus and posterior bank of the pars opercularis between area 44 and 6v.",
+      "uz": "Pastki oldingi markaziy egat va pars opercularis orqa qirg'og'ida, 44 va 6v maydonlari orasida joylashgan 6r maydoni."
+    },
+    "role": {
+      "en": "Auditory-motor and articulatory premotor interface coordinating speech production and orofacial praxis.",
+      "uz": "Nutq hosil qilish va yuz-og'iz praksisini muvofiqlashtiruvchi eshituv-harakat hamda artikulyator premotor interfeys."
+    },
+    "clinical": {
+      "en": "Dominant lesions cause apraxia of speech and non-fluent articulatory breakdown.",
+      "uz": "Dominant zararlanishi nutq apraksiyasi va artikulyatsiya buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-ifja": {
+    "uz": "Oldingi pastki peshona tutashuvi (IFJa)",
+    "description": {
+      "en": "Area IFJa in the posterior inferior frontal sulcus immediately anterior to IFJp and dorsal to area 44.",
+      "uz": "Orqa pastki peshona egatida IFJp ning bevosita oldida va 44-maydonning ustida joylashgan IFJa maydoni."
+    },
+    "role": {
+      "en": "Key cognitive-control hub at the inferior frontal junction: updates task rules and coordinates verbal working memory.",
+      "uz": "Pastki peshona tutashuvidagi kognitiv nazorat markazi: vazifa qoidalarini yangilaydi va verbal ishchi xotirani muvofiqlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions cause perseveration and difficulty switching between cognitive tasks.",
+      "uz": "Zararlanishi perseveratsiya va kognitiv vazifalar orasida almashish qiyinligini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-ifjp": {
+    "uz": "Orqa pastki peshona tutashuvi (IFJp)",
+    "description": {
+      "en": "Area IFJp at the exact junction of the inferior frontal sulcus and the inferior precentral sulcus.",
+      "uz": "Pastki peshona egati bilan pastki oldingi markaziy egat tutashgan nuqtada joylashgan IFJp maydoni."
+    },
+    "role": {
+      "en": "Core multiple-demand node linking top-down attentional templates with premotor action selection.",
+      "uz": "Yuqoridan pastga yo'nalgan diqqat andozalarini premotor harakat tanlovi bilan bog'lovchi kognitiv nazorat tuguni."
+    },
+    "clinical": {
+      "en": "Lesions impair selective attention, Stroop interference control and task switching.",
+      "uz": "Zararlanishi tanlovchi diqqat, Strup ziddiyatini yengish va vazifa almashtirishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-ifsp": {
+    "uz": "Orqa pastki peshona egati maydoni (IFSp)",
+    "description": {
+      "en": "Area IFSp along the banks of the posterior-middle inferior frontal sulcus anterior to IFJa.",
+      "uz": "O'rta-orqa pastki peshona egati qirg'oqlari bo'ylab IFJa dan oldinda joylashgan IFSp maydoni."
+    },
+    "role": {
+      "en": "Maintains phonological and rule representations in working memory during language and executive tasks.",
+      "uz": "Til va ijrochi vazifalar davomida ishchi xotirada fonologik hamda qoida tasvirlarini saqlab turadi."
+    },
+    "clinical": {
+      "en": "Lesions impair verbal working memory and complex sentence processing.",
+      "uz": "Zararlanishi verbal ishchi xotira va murakkab gaplarni qayta ishlashni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-ifsa": {
+    "uz": "Oldingi pastki peshona egati maydoni (IFSa)",
+    "description": {
+      "en": "Area IFSa in the anterior inferior frontal sulcus between area 46/p9-46v dorsally and area 45/47 ventrally.",
+      "uz": "Oldingi pastki peshona egatida dorsalda 46/p9-46v bilan ventralda 45/47 maydonlari orasida joylashgan IFSa maydoni."
+    },
+    "role": {
+      "en": "Integrates semantic retrieval from the inferior frontal gyrus with dorsolateral executive working memory.",
+      "uz": "Pastki peshona pushtasidan semantik chaqirishni dorsolateral ijrochi ishchi xotira bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions impair strategic verbal retrieval and executive control.",
+      "uz": "Zararlanishi strategik so'z eslash va ijrochi nazoratni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-posterior-9-46v": {
+    "uz": "Orqa 9-46v maydoni (p9-46v, dorsolateral prefrontal)",
+    "description": {
+      "en": "Area p9-46v on the mid-ventral middle frontal gyrus above the inferior frontal sulcus.",
+      "uz": "O'rta peshona pushtasining o'rta-ventral qismida, pastki peshona egati ustida joylashgan p9-46v maydoni."
+    },
+    "role": {
+      "en": "Central hub of the frontoparietal executive control network: active manipulation of items in working memory and cognitive flexibility.",
+      "uz": "Peshona-tepa ijrochi nazorat tarmog'ining markaziy tuguni: ishchi xotirada ma'lumotlarni faol qayta ishlash va kognitiv moslashuvchanlik."
+    },
+    "clinical": {
+      "en": "Lesions cause classic dorsolateral prefrontal dysexecutive syndrome; main anatomical zone targeted in left DLPFC rTMS for depression.",
+      "uz": "Zararlanishi klassik dorsolateral dizeksekutiv sindrom beradi; depressiyada chap DLPFC rTMS muolajasining asosiy nishoni."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-46": {
+    "uz": "46-maydon (dorsolateral prefrontal, Glasser)",
+    "description": {
+      "en": "Brodmann area 46 on the anterior-middle frontal gyrus dorsal to a9-46v and ventral to 9-46d.",
+      "uz": "Oldingi-o'rta peshona pushtasida a9-46v dan dorsalda va 9-46d dan ventralda joylashgan Brodmann 46-maydoni."
+    },
+    "role": {
+      "en": "Sustains abstract goals and multi-step plans in working memory while resisting distraction.",
+      "uz": "Chalg'ituvchi ta'sirlarga bardosh bergan holda ishchi xotirada mavhum maqsadlar va ko'p bosqichli rejalarni ushlab turadi."
+    },
+    "clinical": {
+      "en": "Lesions impair planning, working-memory capacity and executive behavioural organization.",
+      "uz": "Zararlanishi rejalashtirish, ishchi xotira hajmi va xulqni ijrochi tashkil etishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-anterior-9-46v": {
+    "uz": "Oldingi 9-46v maydoni (a9-46v, rostral DLPFC)",
+    "description": {
+      "en": "Area a9-46v on the rostral middle frontal gyrus approaching the frontal pole above a47r.",
+      "uz": "Rostral o'rta peshona pushtasida peshona qutbi yaqinida, a47r ustida joylashgan a9-46v maydoni."
+    },
+    "role": {
+      "en": "High-order relational reasoning, rule abstraction and subgoal management.",
+      "uz": "Yuqori tartibli mantiqiy mulohaza, qoidalarni umumlashtirish va oraliq maqsadlarni boshqarish."
+    },
+    "clinical": {
+      "en": "Lesions impair abstract problem solving and multi-step decision making.",
+      "uz": "Zararlanishi mavhum masalalarni yechish va ko'p bosqichli qaror qabul qilishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-9-46d": {
+    "uz": "Dorsal 9-46 maydoni (9-46d, dorsolateral prefrontal)",
+    "description": {
+      "en": "Area 9-46d on the dorsal middle frontal gyrus and middle frontal sulcus between area 46 and area 9.",
+      "uz": "Dorsal o'rta peshona pushtasi va o'rta peshona egatida 46 hamda 9-maydonlar orasida joylashgan 9-46d maydoni."
+    },
+    "role": {
+      "en": "Coordinates spatial and non-spatial working memory with dorsal executive control.",
+      "uz": "Fazoviy va nofazoviy ishchi xotirani dorsal ijrochi nazorat bilan muvofiqlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions cause executive dysfunction, poor planning and impaired working-memory monitoring.",
+      "uz": "Zararlanishi ijrochi disfunksiya, rejalashtirish va ishchi xotira monitoringi buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-9-anterior": {
+    "uz": "Oldingi 9-maydon (9a, dorsolateral qutb oldi)",
+    "description": {
+      "en": "Area 9a on the anterior superior/middle frontal boundary immediately behind the lateral frontal pole (10pp/a10p).",
+      "uz": "Yuqori va o'rta peshona pushtalarining oldingi chegarasida, lateral peshona qutbi (10pp/a10p) ortida joylashgan 9a maydoni."
+    },
+    "role": {
+      "en": "Supports prospective memory, self-generated abstract thought and cognitive branching.",
+      "uz": "Kelajakka mo'ljallangan xotira, mavhum fikrlash va ko'p vazifali tarmoqlanishni ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Lesions impair complex real-world planning and multitasking.",
+      "uz": "Zararlanishi kundalik hayotda murakkab rejalashtirish va ko'p vazifalilikni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-10v": {
+    "uz": "Ventral 10-maydon (10v, ventromedial qutb)",
+    "description": {
+      "en": "Area 10v at the anterior-inferior medial frontal pole continuous with the anterior gyrus rectus.",
+      "uz": "Peshona qutbining oldingi-pastki medial qismida, oldingi to'g'ri pushtaga davom etuvchi 10v maydoni."
+    },
+    "role": {
+      "en": "Ventromedial frontopolar node of the default-mode network encoding subjective reward value and future personal outcomes.",
+      "uz": "Subyektiv mukofot qiymati va kelajakdagi shaxsiy natijalarni kodlovchi ventromedial peshona qutbi default-mode tuguni."
+    },
+    "clinical": {
+      "en": "Damaged in frontobasal trauma or olfactory groove meningiomas, impairing value-based judgement.",
+      "uz": "Frontobazal travma yoki hid egati meningiomalarida zararlanib, qiymatga asoslangan mulohazani buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-anterior-10p": {
+    "uz": "Oldingi qutb 10-maydoni (a10p)",
+    "description": {
+      "en": "Area a10p on the anterolateral apex of the frontal pole.",
+      "uz": "Peshona qutbining oldingi-lateral cho'qqisida joylashgan a10p maydoni."
+    },
+    "role": {
+      "en": "Rostral frontopolar executive hub for cognitive branching (holding a primary goal on hold while exploring alternatives).",
+      "uz": "Asosiy maqsadni yodda saqlagan holda muqobil yo'llarni tekshirish (kognitiv tarmoqlanish) uchun rostral peshona qutbi markazi."
+    },
+    "clinical": {
+      "en": "Frontal pole contusions cause multitasking failure and impaired prospective memory.",
+      "uz": "Peshona qutbi kontuziyasi ko'p vazifani bajara olmaslik va kelajakka mo'ljallangan xotira buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-polar-10p": {
+    "uz": "Qutb 10p maydoni (10pp, dorsal peshona qutbi)",
+    "description": {
+      "en": "Area 10pp at the dorsal tip of the frontal pole between 10d medially and a10p ventrolaterally.",
+      "uz": "Peshona qutbining dorsal uchida, medialda 10d bilan ventrolateralda a10p orasida joylashgan 10pp maydoni."
+    },
+    "role": {
+      "en": "Metacognitive monitoring, confidence judgement and integration of internal thoughts with external goals.",
+      "uz": "Metakognitiv monitoring, o'z qaroriga ishonchni baholash va ichki fikrlarni tashqi maqsadlar bilan birlashtirish."
+    },
+    "clinical": {
+      "en": "Lesions reduce metacognitive insight and strategic planning.",
+      "uz": "Zararlanishi o'z holatini tanqidiy anglash (metakognitsiya) va strategik rejalashtirishni pasaytiradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-11": {
+    "uz": "Lateral 11-maydon (11l, oldingi orbitofrontal)",
+    "description": {
+      "en": "Area 11l on the anterior orbital surface of the frontal lobe between the olfactory sulcus and lateral orbital sulcus.",
+      "uz": "Peshona bo'lagining oldingi orbital yuzasida hid bilish egati bilan lateral orbital egat orasida joylashgan 11l maydoni."
+    },
+    "role": {
+      "en": "Evaluates sensory reward value (food, odour, visual cues) and updates choices when reward contingencies change (sensory-specific satiety).",
+      "uz": "Sezgi mukofoti qiymatini (ta'm, hid, ko'ruv belgilari) baholaydi va sharoit o'zgarganda tanlovni yangilaydi."
+    },
+    "clinical": {
+      "en": "Orbitofrontal trauma or tumours here cause disinhibition, impulsivity and poor financial/social judgement.",
+      "uz": "Bu yerdagi orbitofrontal travma yoki o'smalar tormozsizlik, impulsivlik va ijtimoiy mulohaza buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-13": {
+    "uz": "Lateral 13-maydon (13l, orqa orbitofrontal)",
+    "description": {
+      "en": "Area 13l on the posterior orbital gyrus anterior to the anterior perforated substance and insula.",
+      "uz": "Orqa orbital pushtada oldingi ilma-teshik modda va orolcha oldida joylashgan 13l maydoni."
+    },
+    "role": {
+      "en": "Dysgranular posterior orbitofrontal cortex integrating olfactory, gustatory and visceral signals with amygdala emotional input.",
+      "uz": "Hid, ta'm va visseral signallarni amigdala emotsional kirishi bilan birlashtiruvchi disgranulyar orqa orbitofrontal po'stloq."
+    },
+    "clinical": {
+      "en": "Lesions disrupt emotional conditioning, autonomic responses to social cues and impulse control.",
+      "uz": "Zararlanishi emotsional shartli reflekslarni, ijtimoiy ishoralarga vegetativ javobni va impuls nazoratini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-orbital-frontal-complex": {
+    "uz": "Orbitofrontal kompleks (OFC, medial 11/13/14)",
+    "description": {
+      "en": "Medial orbital frontal complex spanning the gyrus rectus and olfactory sulcus on the ventromedial orbital surface.",
+      "uz": "Ventromedial orbital yuzada to'g'ri pushta (gyrus rectus) va hid bilish egatini qamrab olgan medial orbitofrontal kompleks (OFC)."
+    },
+    "role": {
+      "en": "Primary reward-valuation hub computing subjective pleasantness and expected value in decision making.",
+      "uz": "Qaror qabul qilishda subyektiv yoqimlilik va kutilayotgan mukofot qiymatini hisoblovchi asosiy markaz."
+    },
+    "clinical": {
+      "en": "Lesions (AComA aneurysm rupture, olfactory groove meningioma, trauma) impair value-based decision making and emotional regulation.",
+      "uz": "Zararlanishi (AComA anevrizmasi, hid egati meningiomasi, travma) qiymatga asoslangan qaror qabul qilish va emotsional boshqaruvni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-47s": {
+    "uz": "47s maydoni (orqa-medial 47-maydon)",
+    "description": {
+      "en": "Area 47s on the posterior-medial orbital/opercular transition near the limen insulae lateral to area 13l.",
+      "uz": "Limen insulae yaqinida 13l maydonidan lateralda, orqa-medial orbital va qopqoq o'tish joyida joylashgan 47s maydoni."
+    },
+    "role": {
+      "en": "Links orbitofrontal reward/visceral circuits with anterior insular salience and ventrolateral prefrontal semantic networks.",
+      "uz": "Orbitofrontal mukofot/visseral zanjirlarni oldingi orolcha salience va ventrolateral prefrontal semantik tarmoqlari bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Involved in frontotemporal lobar degeneration and mood/anxiety network dysfunction.",
+      "uz": "Peshona-chakka degeneratsiyasi hamda kayfiyat va xavotir tarmoqlari disfunksiyasida ishtirok etadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-lateral-intraparietal-dorsal": {
+    "uz": "Dorsal lateral tepa ichi maydoni (LIPd)",
+    "description": {
+      "en": "Area LIPd on the upper bank of the mid-intraparietal sulcus immediately dorsal to LIPv.",
+      "uz": "O'rta tepa ichi egatining yuqori devorida LIPv ning bevosita ustida joylashgan LIPd maydoni."
+    },
+    "role": {
+      "en": "Top-down visuospatial attention and oculomotor saccade planning within the frontoparietal dorsal attention network.",
+      "uz": "Peshona-tepa dorsal diqqat tarmog'ida ko'ruv-fazoviy diqqat va sakkadalarni rejalashtirishni ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Right-hemisphere lesions contribute to contralateral hemispatial neglect.",
+      "uz": "O'ng yarim shardagi zararlanishi qarama-qarshi gemispatial e'tiborsizlikka (neglect) olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-6-anterior": {
+    "uz": "Oldingi 6-maydon (6a, rostral dorsal premotor)",
+    "description": {
+      "en": "Area 6a on the posterior superior and middle frontal gyri rostral to area 6d and dorsal to the frontal eye field.",
+      "uz": "Orqa yuqori va o'rta peshona pushtalarida 6d maydonidan oldinda va peshona ko'z maydonidan dorsalda joylashgan 6a maydoni."
+    },
+    "role": {
+      "en": "Rostral dorsal premotor cortex (pre-PMd): links abstract cognitive rules and spatial attention with motor preparation.",
+      "uz": "Rostral dorsal premotor po'stloq (pre-PMd): mavhum kognitiv qoidalar va fazoviy diqqatni harakatga tayyorgarlik bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Lesions impair conditional visuomotor learning (selecting actions based on arbitrary visual symbols) and writing (Exner region).",
+      "uz": "Zararlanishi shartli vizuomotor o'rganishni va yozishni (Eksner sohasi) buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-inferior-6-8-transitional-area": {
+    "uz": "Pastki 6–8 o'tish maydoni (i6-8)",
+    "description": {
+      "en": "Area i6-8 on the middle frontal gyrus at the transition between rostral premotor area 6a and prefrontal area 8.",
+      "uz": "O'rta peshona pushtasida rostral premotor 6a bilan prefrontal 8-maydon orasidagi pastki 6–8 o'tish maydoni (i6-8)."
+    },
+    "role": {
+      "en": "Multiple-demand executive node bridging cognitive working memory with premotor action selection.",
+      "uz": "Kognitiv ishchi xotirani premotor harakat tanlovi bilan bog'lovchi ijrochi nazorat tuguni."
+    },
+    "clinical": {
+      "en": "Lesions impair executive control and rule-guided motor sequencing.",
+      "uz": "Zararlanishi ijrochi nazorat va qoidaga asoslangan harakat ketma-ketligini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-superior-6-8-transitional-area": {
+    "uz": "Yuqori 6–8 o'tish maydoni (s6-8)",
+    "description": {
+      "en": "Area s6-8 on the dorsal superior frontal gyrus between premotor area 6a and prefrontal area 8Ad/8BL.",
+      "uz": "Dorsal yuqori peshona pushtasida premotor 6a bilan prefrontal 8Ad/8BL maydonlari orasida joylashgan s6-8 maydoni."
+    },
+    "role": {
+      "en": "Coordinates spatial working memory and top-down attentional control of goal-directed actions.",
+      "uz": "Maqsadga yo'naltirilgan harakatlarda fazoviy ishchi xotira va diqqat nazoratini muvofiqlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions contribute to dorsal frontal executive and spatial working-memory deficits.",
+      "uz": "Zararlanishi dorsal peshona ijrochi va fazoviy ishchi xotira nuqsoniga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-43": {
+    "uz": "43-maydon (subsentral qopqoq, Glasser)",
+    "description": {
+      "en": "Brodmann area 43 on the subcentral gyrus (Rolandic operculum) at the lower end of the central sulcus.",
+      "uz": "Markaziy egatning pastki uchidagi subsentral pushtada (Roland qopqog'i) joylashgan Brodmann 43-maydoni."
+    },
+    "role": {
+      "en": "Sensorimotor representation of the oral cavity, pharynx, larynx and swallowing, adjoining the gustatory cortex.",
+      "uz": "Og'iz bo'shlig'i, halqum, hiqildoq va yutishning sensomotor vakilligi; ta'm bilish po'stlog'iga tutashgan."
+    },
+    "clinical": {
+      "en": "Lesions cause dysarthria and neurogenic dysphagia (bi-opercular Foix–Chavany–Marie syndrome when bilateral).",
+      "uz": "Zararlanishi dizartriya va neyrogen disfagiya beradi (ikki tomonlama bo'lsa Fua–Shavani–Mari sindromi)."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-op4-pv": {
+    "uz": "Tepa qopqog'i OP4/PV maydoni (parietal ventral S2)",
+    "description": {
+      "en": "Area OP4 (parietal ventral somatosensory area, PV) on the anterior parietal operculum immediately behind area 43.",
+      "uz": "Oldingi tepa qopqog'ida 43-maydonning bevosita ortida joylashgan OP4 (parietal ventral ikkilamchi somatosensor, PV) maydoni."
+    },
+    "role": {
+      "en": "Anterior division of secondary somatosensory cortex (S2): integrates bilateral tactile feedback with motor control of the hand and vocal tract.",
+      "uz": "Ikkilamchi somatosensor po'stloqning (S2) oldingi qismi: ikki tomonlama taktil qayta aloqani qo'l va nutq harakati nazorati bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions impair sensorimotor tactile guidance of hand manipulation and speech articulation.",
+      "uz": "Zararlanishi qo'l manipulyatsiyasi va nutq artikulyatsiyasining taktil-sensomotor nazoratini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-op1-sii": {
+    "uz": "Tepa qopqog'i OP1/SII maydoni (ikkilamchi somatosensor)",
+    "description": {
+      "en": "Area OP1 (human SII proper) on the posterior-lateral parietal operculum in the upper bank of the Sylvian fissure.",
+      "uz": "Silviy egatining yuqori qirg'og'ida, orqa-lateral tepa qopqog'ida joylashgan OP1 (xususiy ikkilamchi somatosensor, SII) maydoni."
+    },
+    "role": {
+      "en": "Processes bilateral tactile discrimination, tool-related touch, tactile working memory and pain perception.",
+      "uz": "Ikki tomonlama taktil farqlash, asbob ishlatish sezgisi, taktil ishchi xotira va og'riq idrokini qayta ishlaydi."
+    },
+    "clinical": {
+      "en": "Lesions cause tactile agnosia or central opercular pain syndromes.",
+      "uz": "Zararlanishi taktil agnoziya yoki markaziy qopqoq og'riq sindromlarini keltirib chiqaradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-op2-3-vs": {
+    "uz": "Tepa qopqog'i OP2-3/VS maydoni (vestibulyar po'stloq)",
+    "description": {
+      "en": "Area OP2-3 deeply buried in the medial parietal operculum at the junction with the posterior circular sulcus of the insula.",
+      "uz": "Medial tepa qopqog'i tubida, orolcha orqa halqasimon egati bilan tutashuvda joylashgan OP2-3 (vestibulyar) maydoni."
+    },
+    "role": {
+      "en": "Core human parieto-insular vestibular cortex (PIVC): integrates semicircular-canal and otolith signals with proprioception for balance and verticality.",
+      "uz": "Odamning asosiy tepa-orolcha vestibulyar po'stlog'i (PIVC): muvozanat va vertikallik hissi uchun dahliz-yarim halqa kanallari signallarini propriosepsiya bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Acute strokes here shift the perceived subjective visual vertical and cause cortical vertigo or Lateropulsion (pusher syndrome).",
+      "uz": "O'tkir insulti subyektiv ko'ruv vertikali og'ishini, kortikal bosh aylanishini yoki tana og'ishini (pusher sindromi) chaqiradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-52": {
+    "uz": "52-maydon (parainsulyar eshituv-somatosensor)",
+    "description": {
+      "en": "Brodmann area 52 on the medial surface of Heschl’s gyrus at the junction of the temporal operculum and posterior insula.",
+      "uz": "Geshl pushtasining medial qismida, chakka qopqog'i bilan orqa orolcha tutashgan joydagi Brodmann 52-maydoni."
+    },
+    "role": {
+      "en": "Medial auditory belt / parainsular transition zone integrating auditory signals with somatosensory and visceral inputs.",
+      "uz": "Eshituv signallarini somatosensor va visseral kirishlar bilan birlashtiruvchi medial eshituv kamari / parainsulyar o'tish zonasi."
+    },
+    "clinical": {
+      "en": "Involved in perisylvian auditory-autonomic processing and auditory auras.",
+      "uz": "Perisilviy eshituv-vegetativ integratsiya va eshituv auralarida ishtirok etadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-retroinsular-cortex": {
+    "uz": "Orolcha orti po'stlog'i (RI, retroinsulyar)",
+    "description": {
+      "en": "Retroinsular area (RI) at the posterior end of the Sylvian fissure behind the posterior insula and medial to Heschl’s gyrus.",
+      "uz": "Silviy egatining orqa uchida, orqa orolcha ortida va Geshl pushtasidan medialda joylashgan retroinsulyar po'stloq (RI)."
+    },
+    "role": {
+      "en": "Multisensory convergence zone combining vestibular, somatosensory and auditory motion cues.",
+      "uz": "Vestibulyar, somatosensor va eshituv harakat signallarini birlashtiruvchi ko'p sezgili konvergensiya zonasi."
+    },
+    "clinical": {
+      "en": "Lesions contribute to vestibular spatial disorientation and central pain.",
+      "uz": "Zararlanishi vestibulyar fazoviy dezoriyentatsiya va markaziy og'riqqa hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-pfcm": {
+    "uz": "PFcm maydoni (qopqoq-chekka usti po'stlog'i)",
+    "description": {
+      "en": "Area PFcm in the posterior Sylvian fissure on the upper bank of the parietal operculum behind OP1 and ventral to PF/PFop.",
+      "uz": "Orqa Silviy egatining yuqori qirg'og'ida, OP1 ortida va PF/PFop ostida joylashgan PFcm maydoni."
+    },
+    "role": {
+      "en": "Integrates auditory, somatosensory and vocal-motor signals for speech monitoring and peripersonal action.",
+      "uz": "Nutqni nazorat qilish va yaqin fazodagi harakatlar uchun eshituv, somatosensor hamda ovoz-harakat signallarini birlashtiradi."
+    },
+    "clinical": {
+      "en": "Dominant lesions contribute to conduction aphasia and phonological repetition deficits.",
+      "uz": "Dominant yarim shardagi zararlanishi o'tkazuvchi afaziya va fonologik takrorlash buzilishiga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-posterior-insular-area-2": {
+    "uz": "Orqa orolcha 2-maydoni (PoI2)",
+    "description": {
+      "en": "Area PoI2 on the dorsal-anterior portion of the posterior long insular gyri.",
+      "uz": "Orqa orolchaning uzun pushtalari dorsal-oldingi qismida joylashgan PoI2 maydoni."
+    },
+    "role": {
+      "en": "Somato-visceral and nociceptive insular cortex mapping graded temperature, pinprick pain and interoceptive bodily state.",
+      "uz": "Harorat, sanchuvchi og'riq va ichki a'zolar (interotseptiv) holatini xaritalovchi somato-visseral orolcha po'stlog'i."
+    },
+    "clinical": {
+      "en": "Posterior insular strokes can produce central neuropathic pain (pseudothalamic syndrome) or loss of pain affect.",
+      "uz": "Orqa orolcha insulti markaziy neyropatik og'riq (psevdotalamik sindrom) yoki og'riq hissining o'zgarishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-ta2": {
+    "uz": "Chakka oldingi eshituv maydoni (TA2)",
+    "description": {
+      "en": "Area TA2 on the planum polare of the anterior superior temporal gyrus just in front of Heschl’s gyrus and the auditory belt.",
+      "uz": "Oldingi yuqori chakka pushtasining planum polare yuzasida, Geshl pushtasi va eshituv kamarining bevosita oldida joylashgan TA2 maydoni."
+    },
+    "role": {
+      "en": "Anterior auditory parabelt processing complex vocalizations, speech melody and environmental sound identity.",
+      "uz": "Murakkab ovozlar, nutq ohangi va atrof-muhit tovushlarini tanib oluvchi oldingi eshituv parabelt po'stlog'i."
+    },
+    "clinical": {
+      "en": "Lesions impair recognition of complex sounds, music and speaker voices.",
+      "uz": "Zararlanishi murakkab tovushlar, musiqa va suhbatdosh ovozini tanishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-frontal-opercular-area-4": {
+    "uz": "Peshona qopqog'i 4-maydoni (FOP4)",
+    "description": {
+      "en": "Area FOP4 on the inner surface of the frontal operculum facing the anterior superior circular sulcus of the insula.",
+      "uz": "Peshona qopqog'ining ichki yuzasida, orolchaning oldingi-yuqori halqasimon egatiga qaragan FOP4 maydoni."
+    },
+    "role": {
+      "en": "Node of the cingulo-opercular salience and task-control network; also participates in articulatory and gustatory processing.",
+      "uz": "Belbog'-qopqoq salience va vazifa nazorati tarmog'i tuguni; artikulyatsiya va ta'm qayta ishlovida ham qatnashadi."
+    },
+    "clinical": {
+      "en": "Lesions impair tonic alertness, task maintenance and speech motor coordination.",
+      "uz": "Zararlanishi hushyorlikni saqlash, vazifa nazorati va nutq harakati muvofiqligini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-middle-insular-area": {
+    "uz": "O'rta orolcha maydoni (MI)",
+    "description": {
+      "en": "Middle insular area (MI) on the posterior short insular gyri just in front of the central sulcus of the insula.",
+      "uz": "Orolcha markaziy egatining bevosita oldida, orqa qisqa orolcha pushtalarida joylashgan o'rta orolcha maydoni (MI)."
+    },
+    "role": {
+      "en": "Dysgranular bridge translating posterior insular interoceptive/pain signals into anterior insular conscious feelings and autonomic responses.",
+      "uz": "Orqa orolchadagi interotseptiv/og'riq signallarini oldingi orolchadagi ongli his-tuyg'u va vegetativ javoblarga aylantiruvchi ko'prik."
+    },
+    "clinical": {
+      "en": "Insular strokes or epileptic discharges here trigger autonomic instability, viscerosensory auras and dysarthria.",
+      "uz": "Bu yerdagi insult yoki epileptik tutqanoqlar vegetativ beqarorlik, visserosensor auralar va dizartriya chaqiradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-pirform-cortex": {
+    "uz": "Noksimon po'stloq (Pir, birlamchi hid bilish)",
+    "description": {
+      "en": "Piriform cortex spanning the frontal-temporal junction at the limen insulae and adjacent dorsomedial uncus.",
+      "uz": "Limen insulae'dagi peshona-chakka tutashuvi va yondosh dorsomedial uncusda joylashgan noksimon (piriform) po'stloq."
+    },
+    "role": {
+      "en": "Primary olfactory cortex: receives direct axons from the olfactory bulb via the lateral olfactory stria to encode odour identity.",
+      "uz": "Birlamchi hid bilish po'stlog'i: hidni tanish uchun lateral hid yo'li orqali hid piyozchasidan bevosita aksonlarni qabul qiladi."
+    },
+    "clinical": {
+      "en": "Hyperexcitable focus in temporal lobe epilepsy causing classic uncinate fits (unpleasant olfactory hallucinations); early pathology in Parkinson and Alzheimer diseases.",
+      "uz": "Chakka epilepsiyasida yoqimsiz hid gallyutsinatsiyalarini (unkal tutqanoqlar) chaqiruvchi o'choq; Parkinson va Alzheimer kasalliklarida erta zararlanadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-anterior-ventral-insular-area": {
+    "uz": "Oldingi-ventral orolcha maydoni (AVI)",
+    "description": {
+      "en": "Area AVI on the anterior-superior apex of the short insular gyri adjacent to the frontal operculum (FOP4/FOP5).",
+      "uz": "Qisqa orolcha pushtalarining oldingi-yuqori cho'qqisida, peshona qopqog'i (FOP4/FOP5) yonida joylashgan AVI maydoni."
+    },
+    "role": {
+      "en": "Core cognitive-salience hub of the anterior insula: detects behaviourally important stimuli and switches between default-mode and executive networks.",
+      "uz": "Oldingi orolchaning asosiy kognitiv-salience markazi: muhim ta'sirlarni aniqlaydi hamda default-mode va ijrochi tarmoqlar orasida almashishni boshqaradi."
+    },
+    "clinical": {
+      "en": "Dysfunction is linked to anxiety, addiction craving, frontotemporal dementia and executive slowing.",
+      "uz": "Disfunksiyasi xavotir, giyohvandlik xumori, peshona-chakka demensiyasi va ijrochi sekinlashuv bilan bog'liq."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-anterior-agranular-insula-complex": {
+    "uz": "Oldingi agranulyar orolcha kompleksi (AAIC)",
+    "description": {
+      "en": "Area AAIC on the ventral-anterior insula above the limen insulae and piriform cortex.",
+      "uz": "Ventral-oldingi orolchada limen insulae va noksimon po'stloq ustida joylashgan oldingi agranulyar orolcha kompleksi (AAIC)."
+    },
+    "role": {
+      "en": "Agranular visceromotor and socio-emotional insula (rich in von Economo neurons): subjective emotion, empathy, disgust and autonomic outflow.",
+      "uz": "Fon Ekonomo neyronlariga boy agranulyar visseromotor va ijtimoiy-emotsional orolcha: subyektiv hissiyot, empatiya, jirkanish va vegetativ boshqaruv."
+    },
+    "clinical": {
+      "en": "Selectively and severely degenerates in behavioural-variant frontotemporal dementia (bvFTD), causing loss of empathy and social warmth.",
+      "uz": "Xulqiy peshona-chakka demensiyasida (bvFTD) tanlab degeneratsiyalanib, empatiya va ijtimoiy hislarning yo'qolishiga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-frontal-opercular-area-1": {
+    "uz": "Peshona qopqog'i 1-maydoni (FOP1)",
+    "description": {
+      "en": "Area FOP1 on the posterior inner wall of the frontal operculum adjacent to area 6r and OP4.",
+      "uz": "Peshona qopqog'ining orqa ichki devorida, 6r va OP4 maydonlari yonida joylashgan FOP1 maydoni."
+    },
+    "role": {
+      "en": "Orofacial, laryngeal and gustatory opercular cortex supporting speech articulation and swallowing.",
+      "uz": "Nutq artikulyatsiyasi va yutishni ta'minlovchi yuz-og'iz, hiqildoq va ta'm qopqoq po'stlog'i."
+    },
+    "clinical": {
+      "en": "Lesions contribute to opercular dysarthria and dysphagia.",
+      "uz": "Zararlanishi qopqoq dizartriyasi va disfagiyasiga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-frontal-opercular-area-3": {
+    "uz": "Peshona qopqog'i 3-maydoni (FOP3)",
+    "description": {
+      "en": "Area FOP3 on the deep medial wall of the frontal operculum in the superior circular sulcus of the insula between FOP2 and FOP4.",
+      "uz": "Orolchaning yuqori halqasimon egatida, peshona qopqog'ining chuqur medial devorida FOP2 va FOP4 orasida joylashgan FOP3 maydoni."
+    },
+    "role": {
+      "en": "Integrates primary gustatory (taste) input from VPMpc with interoceptive and articulatory signals.",
+      "uz": "VPMpc yadrosidan keluvchi birlamchi ta'm kirishini interotseptiv va artikulyator signallar bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions can cause dysgeusia/ageusia and opercular motor speech deficits.",
+      "uz": "Zararlanishi ta'm bilish buzilishi (disgevziya/agevziya) va nutq harakati nuqsonini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-frontal-opercular-area-2": {
+    "uz": "Peshona qopqog'i 2-maydoni (FOP2)",
+    "description": {
+      "en": "Area FOP2 on the inner frontal operculum between FOP1 posteriorly and FOP3 anteriorly.",
+      "uz": "Ichki peshona qopqog'ida orqada FOP1 bilan oldinda FOP3 orasida joylashgan FOP2 maydoni."
+    },
+    "role": {
+      "en": "Coordinates somatosensory feedback from the mouth and tongue with premotor articulatory commands.",
+      "uz": "Og'iz va tildan keluvchi somatosensor qayta aloqani premotor artikulyator buyruqlar bilan muvofiqlashtiradi."
+    },
+    "clinical": {
+      "en": "Dominant lesions impair articulatory precision and speech initiation.",
+      "uz": "Dominant yarim shardagi zararlanishi artikulyatsiya aniqligini va nutqni boshlashni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-pft": {
+    "uz": "PFt maydoni (oldingi chekka usti pushtasi)",
+    "description": {
+      "en": "Area PFt on the anterior crown of the supramarginal gyrus immediately behind the postcentral sulcus (area 2) and ventral to AIP.",
+      "uz": "Chekka usti pushtasining oldingi cho'qqisida, orqa markaziy egat (2-maydon) ortida va AIP ostida joylashgan PFt maydoni."
+    },
+    "role": {
+      "en": "Core node of the human tool-use and action-observation network: translates visual object affordances into skilled hand actions.",
+      "uz": "Odamda asbob ishlatish va harakatni kuzatish tarmog'ining asosiy tuguni: narsa ko'rinishini mohir qo'l harakatlariga aylantiradi."
+    },
+    "clinical": {
+      "en": "Left PFt lesions cause ideomotor and limb-kinetic apraxia (inability to pantomime or properly use tools).",
+      "uz": "Chap PFt zararlanishi ideomotor apraksiyani (asbob ishlatishni ko'rsatib yoki bajarib bera olmaslikni) keltirib chiqaradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-anterior-intraparietal-area": {
+    "uz": "Oldingi tepa ichi maydoni (AIP)",
+    "description": {
+      "en": "Area AIP in the anterior end of the intraparietal sulcus at its junction with the postcentral sulcus.",
+      "uz": "Tepa ichi egatining oldingi uchida, orqa markaziy egat bilan tutashgan joyda joylashgan AIP maydoni."
+    },
+    "role": {
+      "en": "Visuomotor grasping hub: extracts 3D size, shape and orientation of objects to shape the hand and fingers before contact (in loop with ventral premotor area 6v).",
+      "uz": "Vizuomotor ushlash markazi: narsaning 3D o'lchami va shaklini tahlil qilib, ushlashdan oldin barmoqlarni moslashtiradi (ventral premotor 6v bilan halqada)."
+    },
+    "clinical": {
+      "en": "Lesions cause deficits in hand preshaping and fine visually guided grasping.",
+      "uz": "Zararlanishi narsani ushlashda panjani oldindan moslashtirish va nozik ko'ruv-harakat nazoratini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-entorhinal-cortex": {
+    "uz": "Entorinal po'stloq (EC, Glasser)",
+    "description": {
+      "en": "Entorhinal cortex (Brodmann area 28) on the anterior medial parahippocampal gyrus and uncus.",
+      "uz": "Oldingi medial parahippokampal pushta va uncusda joylashgan entorinal po'stloq (Brodmann 28)."
+    },
+    "role": {
+      "en": "Main bidirectional gateway between neocortex and hippocampus via the perforant path; houses spatial grid cells for navigation and episodic memory.",
+      "uz": "Perforant yo'l orqali neokorteks bilan gippokamp orasidagi asosiy ikki tomonlama darvoza; fazoviy mo'ljal va epizodik xotira uchun to'r hujayralarini saqlaydi."
+    },
+    "clinical": {
+      "en": "Earliest cortical site of neurofibrillary tau pathology in Alzheimer disease (Braak stages I–II).",
+      "uz": "Alzheimer kasalligida neyrofibrillyar tau patologiyasining eng erta po'stloq joyi (Braak I–II bosqichlari)."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-presubiculum": {
+    "uz": "Presubikulum (PreS)",
+    "description": {
+      "en": "Presubiculum on the medial surface of the parahippocampal gyrus between the subiculum of the hippocampus and the entorhinal/retrosplenial cortex.",
+      "uz": "Parahippokampal pushtaning medial yuzasida gippokamp subikulumi bilan entorinal/retrosplenial po'stloq orasida joylashgan presubikulum (PreS)."
+    },
+    "role": {
+      "en": "Rich in head-direction cells; relays vestibular and visual landmark azimuth between Papez circuit nuclei (anterior thalamus), retrosplenial cortex and entorhinal grid cells.",
+      "uz": "Bosh yo'nalishi hujayralariga boy; Papez zanjiri (oldingi talamus), retrosplenial po'stloq va entorinal to'r hujayralari orasida fazoviy yo'nalishni uzatadi."
+    },
+    "clinical": {
+      "en": "Early amyloid and tau involvement in Alzheimer disease contributes to spatial disorientation.",
+      "uz": "Alzheimer kasalligida erta zararlanib, fazoviy mo'ljal yo'qolishiga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-hippocampus": {
+    "uz": "Gippokamp (H, Glasser)",
+    "description": {
+      "en": "Hippocampal proper and subiculum parcel along the medial temporal horn floor in the HCP-MMP1 cortical surface model.",
+      "uz": "HCP-MMP1 po'stloq yuzasi modelida yon qorincha chakka shoxi medial tubi bo'ylab joylashgan gippokamp va subikulum sohasi."
+    },
+    "role": {
+      "en": "Forms and consolidates new declarative/episodic memories and builds cognitive spatial maps via place cells.",
+      "uz": "Yangi deklarativ/epizodik xotiralarni shakllantiradi va mustahkamlaydi hamda joy hujayralari orqali fazoviy kognitiv xarita tuzadi."
+    },
+    "clinical": {
+      "en": "Bilateral damage (anoxia, HSV encephalitis, resection) causes profound anterograde amnesia; hippocampal sclerosis is the classic lesion of mesial temporal lobe epilepsy.",
+      "uz": "Ikki tomonlama zararlanishi og'ir anterograd amneziya beradi; gippokampal skleroz mezial chakka epilepsiyasining klassik o'chog'i."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-prostraite-area": {
+    "uz": "Prostriar maydon (ProS)",
+    "description": {
+      "en": "Prostriate cortex (ProS) at the anterior junction of the calcarine sulcus and parieto-occipital sulcus immediately behind the retrosplenial complex.",
+      "uz": "Kalkarin egat bilan tepa-ensa egati tutashgan oldingi burchakda, retrosplenial kompleksning bevosita ortida joylashgan prostriar po'stloq (ProS)."
+    },
+    "role": {
+      "en": "Primitive limbic visual area with ultra-fast response to peripheral visual motion, linking far-peripheral V1 directly with limbic/retrosplenial orientation circuits.",
+      "uz": "Uzoq periferik ko'rish maydonidagi harakatga juda tez javob beruvchi limbik ko'ruv maydoni; V1 ni bevosita retrosplenial mo'ljal zanjirlari bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Lesions impair rapid orienting to far-peripheral visual motion and scene navigation.",
+      "uz": "Zararlanishi uzoq periferik harakatga tez yo'nalish va manzara bo'yicha mo'ljal olishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-perirhinal-ectorhinal-cortex": {
+    "uz": "Peririnal va ektorinal po'stloq (PeEc, Area 35/36)",
+    "description": {
+      "en": "Perirhinal and ectorhinal cortex (Brodmann areas 35 and 36) along the banks of the rhinal and anterior collateral sulci lateral to the entorhinal cortex.",
+      "uz": "Entorinal po'stloqdan lateralda, rinal va oldingi kollateral egatlar qirg'oqlari bo'ylab joylashgan peririnal hamda ektorinal po'stloq (Brodmann 35 va 36)."
+    },
+    "role": {
+      "en": "Apex of the ventral object-recognition stream: encodes item familiarity, fine feature conjunctions and semantic object memory for the hippocampus.",
+      "uz": "Ventral narsa tanish oqimining cho'qqisi: gippokamp uchun narsaning tanishlik hissini, nozik belgilar birikmasini va semantik xotirani kodlaydi."
+    },
+    "clinical": {
+      "en": "Transentorhinal/perirhinal area 35 is the very first site of neurofibrillary tangle formation in Alzheimer disease (Braak stage I).",
+      "uz": "Transentorinal/peririnal 35-maydon Alzheimer kasalligida neyrofibrillyar tau chigallari paydo bo'ladigan eng birinchi nuqta (Braak I bosqichi)."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-stga": {
+    "uz": "Oldingi yuqori chakka pushtasi maydoni (STGa)",
+    "description": {
+      "en": "Area STGa on the anterior lateral superior temporal gyrus behind the dorsal temporal pole (TGd) and below TA2.",
+      "uz": "Oldingi lateral yuqori chakka pushtasida dorsal chakka qutbi (TGd) ortida va TA2 ostida joylashgan STGa maydoni."
+    },
+    "role": {
+      "en": "Anterior auditory-semantic pathway processing voice identity, vocal emotion and spoken phrase comprehension.",
+      "uz": "Ovoz egasini, ovozdagi hissiyotni va og'zaki iboralarni tushunishni qayta ishlovchi oldingi eshituv-semantik yo'l."
+    },
+    "clinical": {
+      "en": "Atrophies early in semantic dementia (svPPA); lesions impair voice and anterior language comprehension.",
+      "uz": "Semantik demensiyada (svPPA) erta atrofiyalanadi; zararlanishi ovoz tanish va nutqni tushunishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-parabelt-complex": {
+    "uz": "Eshituv parabelt kompleksi (PBelt)",
+    "description": {
+      "en": "Parabelt auditory cortex (PBelt) on the lateral edge of the superior temporal plane and upper STG lateral to the lateral belt (LBelt).",
+      "uz": "Yuqori chakka tekisligining lateral chekkasida, lateral eshituv kamaridan (LBelt) tashqarida joylashgan parabelt eshituv kompleksi (PBelt)."
+    },
+    "role": {
+      "en": "Third stage of cortical auditory processing: extracts spectrotemporal speech phonemes, pitch contours and environmental sound patterns.",
+      "uz": "Po'stloq eshituv tahlilining uchinchi bosqichi: nutq fonemalari, ohang konturlari va tabiiy tovush andozalarini ajratadi."
+    },
+    "clinical": {
+      "en": "Left lesions cause pure word deafness or Wernicke-spectrum auditory comprehension deficits; right lesions cause amusia.",
+      "uz": "Chap zararlanishi sof so'z karligi yoki Vernike turidagi tushunish buzilishini, o'ng zararlanishi amuziyani beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-auditory-5-complex": {
+    "uz": "5-eshituv kompleksi (A5)",
+    "description": {
+      "en": "Area A5 on the lateral superior temporal gyrus immediately ventral to A4 and dorsal to the superior temporal sulcus.",
+      "uz": "Lateral yuqori chakka pushtasida A4 maydonidan bevosita ventralda va yuqori chakka egatidan dorsalda joylashgan A5 eshituv kompleksi."
+    },
+    "role": {
+      "en": "High-level auditory association cortex linking acoustic phoneme and prosody representations with the superior temporal sulcus language network.",
+      "uz": "Akustik fonema va intonatsiya tasvirlarini yuqori chakka egati til tarmog'i bilan bog'lovchi yuqori darajali eshituv assotsiativ po'stlog'i."
+    },
+    "clinical": {
+      "en": "Dominant lesions impair spoken word recognition and auditory sentence comprehension.",
+      "uz": "Dominant yarim shardagi zararlanishi og'zaki so'zlarni tanish va eshitib tushunishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-parahippocampal-area-1": {
+    "uz": "Parahippokampal 1-maydon (PHA1)",
+    "description": {
+      "en": "Area PHA1 on the medial bank of the posterior parahippocampal gyrus adjacent to the presubiculum.",
+      "uz": "Orqa parahippokampal pushtaning medial qirg'og'ida, presubikulum yonida joylashgan PHA1 maydoni."
+    },
+    "role": {
+      "en": "Medial division of the parahippocampal place area (PPA): connects visual scene layout directly to the hippocampal formation.",
+      "uz": "Parahippokampal joy sohasining (PPA) medial bo'limi: ko'ruv manzarasi tuzilishini bevosita gippokampal formatsiya bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Lesions impair spatial scene encoding and landmark navigation.",
+      "uz": "Zararlanishi fazoviy manzarani eslab qolish va mo'ljal bo'yicha yo'l topishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-parahippocampal-area-3": {
+    "uz": "Parahippokampal 3-maydon (PHA3)",
+    "description": {
+      "en": "Area PHA3 on the lateral bank of the collateral sulcus between PHA2 medially and the fusiform/VVC cortex laterally.",
+      "uz": "Kollateral egatning lateral qirg'og'ida, medialda PHA2 bilan lateralda duksimon po'stloq orasida joylashgan PHA3 maydoni."
+    },
+    "role": {
+      "en": "Lateral division of the parahippocampal place area integrating large-scale object and scene features.",
+      "uz": "Yirik narsalar va manzara belgilarini birlashtiruvchi parahippokampal joy sohasining lateral bo'limi."
+    },
+    "clinical": {
+      "en": "Posterior cerebral artery infarcts here cause landmark agnosia (inability to recognise buildings and landscapes).",
+      "uz": "Bu yerdagi orqa miya arteriyasi infarkti binolar va manzaralarni taniy olmaslik (topografik agnoziya) beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-stsd-anterior": {
+    "uz": "Yuqori chakka egati oldingi-dorsal maydoni (STSda)",
+    "description": {
+      "en": "Area STSda on the anterior-dorsal bank of the superior temporal sulcus below STGa and A5.",
+      "uz": "Yuqori chakka egatining oldingi-dorsal qirg'og'ida, STGa va A5 ostida joylashgan STSda maydoni."
+    },
+    "role": {
+      "en": "Anterior dorsal STS language and social-voice node: processes intelligible speech, voice identity and narrative meaning.",
+      "uz": "Tushunarli nutq, ovoz egasi va hikoya mazmunini qayta ishlovchi oldingi-dorsal STS til va ijtimoiy ovoz tuguni."
+    },
+    "clinical": {
+      "en": "Dominant lesions impair auditory sentence comprehension and semantic integration.",
+      "uz": "Dominant zararlanishi gaplarni eshitib tushunish va semantik integratsiyani buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-stsd-posterior": {
+    "uz": "Yuqori chakka egati orqa-dorsal maydoni (STSdp)",
+    "description": {
+      "en": "Area STSdp on the posterior-dorsal bank of the superior temporal sulcus ventral to A5 and anterior to STV.",
+      "uz": "Yuqori chakka egatining orqa-dorsal qirg'og'ida, A5 ostida va STV oldida joylashgan STSdp maydoni."
+    },
+    "role": {
+      "en": "Audiovisual speech and social-perception hub integrating lip movement with spoken phonemes and vocal prosody.",
+      "uz": "Lab harakatini nutq fonemalari va ovoz ohangi bilan birlashtiruvchi audiovizual nutq hamda ijtimoiy idrok markazi."
+    },
+    "clinical": {
+      "en": "Left lesions cause Wernicke-like comprehension deficits; right lesions impair prosody and social cue perception.",
+      "uz": "Chap zararlanishi Vernike turidagi tushunish buzilishini, o'ng zararlanishi intonatsiya va ijtimoiy ishoralar idrokini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-stsv-posterior": {
+    "uz": "Yuqori chakka egati orqa-ventral maydoni (STSvp)",
+    "description": {
+      "en": "Area STSvp on the posterior-ventral bank of the superior temporal sulcus above TE1p/PHT.",
+      "uz": "Yuqori chakka egatining orqa-ventral qirg'og'ida, TE1p/PHT ustida joylashgan STSvp maydoni."
+    },
+    "role": {
+      "en": "Core language-comprehension and theory-of-mind area linking visual/auditory inputs with conceptual semantic networks.",
+      "uz": "Ko'ruv va eshituv kirishlarini tushunchaviy semantik tarmoqlar bilan bog'lovchi asosiy tilni tushunish va mentalizatsiya maydoni."
+    },
+    "clinical": {
+      "en": "Dominant lesions cause severe semantic and syntactic comprehension deficits.",
+      "uz": "Dominant yarim shardagi zararlanishi og'ir semantik va sintaktik tushunish buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-tg-dorsal": {
+    "uz": "Dorsal chakka qutbi maydoni (TGd, Area 38)",
+    "description": {
+      "en": "Area TGd covering the dorsal and anterolateral apex of the temporal pole (Brodmann area 38).",
+      "uz": "Chakka qutbining dorsal va oldingi-lateral cho'qqisini qoplagan TGd maydoni (Brodmann 38)."
+    },
+    "role": {
+      "en": "Transmodal semantic hub binding verbal, visual, auditory and socio-emotional knowledge about people and concepts.",
+      "uz": "Insonlar va tushunchalar haqidagi verbal, ko'ruv, eshituv hamda ijtimoiy-emotsional bilimlarni birlashtiruvchi semantik markaz."
+    },
+    "clinical": {
+      "en": "Epicentre of cortical atrophy in semantic variant primary progressive aphasia (semantic dementia).",
+      "uz": "Semantik demensiyada (svPPA) po'stloq atrofiyasining asosiy markazi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-te1-anterior": {
+    "uz": "Oldingi o'rta chakka pushtasi maydoni (TE1a)",
+    "description": {
+      "en": "Area TE1a on the anterior crown of the middle temporal gyrus below STSva and behind TGd.",
+      "uz": "O'rta chakka pushtasining oldingi cho'qqisida, STSva ostida va TGd ortida joylashgan TE1a maydoni."
+    },
+    "role": {
+      "en": "Anterior temporal semantic and default-mode node supporting conceptual retrieval and narrative comprehension.",
+      "uz": "Tushunchalarni eslash va matn mazmunini tushunishni ta'minlovchi oldingi chakka semantik va default-mode tuguni."
+    },
+    "clinical": {
+      "en": "Atrophies early in semantic dementia, causing severe anomia and loss of word meaning.",
+      "uz": "Semantik demensiyada erta atrofiyalanib, og'ir anomiya va so'z ma'nosini yo'qotishga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-te1-posterior": {
+    "uz": "Orqa o'rta chakka pushtasi maydoni (TE1p)",
+    "description": {
+      "en": "Area TE1p on the posterior-ventral middle temporal gyrus between TE1m anteriorly and PHT posteriorly.",
+      "uz": "Orqa-ventral o'rta chakka pushtasida oldinda TE1m bilan orqada PHT orasida joylashgan TE1p maydoni."
+    },
+    "role": {
+      "en": "Multimodal lexical-semantic integration hub linking visual and auditory word forms to conceptual knowledge.",
+      "uz": "Ko'ruv va eshituv so'z shakllarini tushunchaviy bilim bilan bog'lovchi leksik-semantik integratsiya markazi."
+    },
+    "clinical": {
+      "en": "Dominant lesions cause transcortical sensory aphasia and severe word-finding difficulty (anomia).",
+      "uz": "Dominant zararlanishi transkortikal sensor afaziya va og'ir so'z topish qiyinligini (anomiya) beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-te2-anterior": {
+    "uz": "Oldingi pastki chakka pushtasi maydoni (TE2a)",
+    "description": {
+      "en": "Area TE2a on the anterior-middle inferior temporal gyrus below TE1a/TE1m and lateral to TF.",
+      "uz": "Oldingi-o'rta pastki chakka pushtasida TE1a/TE1m ostida va TF dan lateralda joylashgan TE2a maydoni."
+    },
+    "role": {
+      "en": "High-level ventral visual and semantic association cortex representing object concepts and visual memory.",
+      "uz": "Narsa tushunchalari va ko'ruv xotirasini ifodalovchi yuqori darajali ventral ko'ruv va semantik assotsiativ po'stloq."
+    },
+    "clinical": {
+      "en": "Affected in semantic dementia and herpes encephalitis, causing multimodal object anomia and agnosia.",
+      "uz": "Semantik demensiya va gerpetik ensefalitda zararlanib, narsalarni nomlay va taniy olmaslikni beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-tf": {
+    "uz": "TF maydoni (oldingi bazal duksimon/pastki chakka)",
+    "description": {
+      "en": "Area TF on the anterior basal occipitotemporal surface (anterior fusiform gyrus) lateral to the perirhinal/parahippocampal cortex.",
+      "uz": "Oldingi pastki ensa-chakka yuzasida (oldingi duksimon pushta), peririnal va parahippokampal po'stloqdan lateralda joylashgan TF maydoni."
+    },
+    "role": {
+      "en": "Ventral visual stream bridge funneling high-level face, word and object representations into the perirhinal/hippocampal memory system.",
+      "uz": "Yuqori darajali yuz, so'z va narsa tasvirlarini peririnal/gippokampal xotira tizimiga uzatuvchi ventral ko'ruv oqimi ko'prigi."
+    },
+    "clinical": {
+      "en": "Lesions impair visual recognition memory and face/object naming.",
+      "uz": "Zararlanishi ko'ruv tanish xotirasini hamda yuz va narsalarni nomlashni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-te2-posterior": {
+    "uz": "Orqa pastki chakka pushtasi maydoni (TE2p)",
+    "description": {
+      "en": "Area TE2p on the posterior inferior temporal gyrus and lateral occipitotemporal sulcus lateral to the fusiform face complex.",
+      "uz": "Orqa pastki chakka pushtasi va lateral ensa-chakka egatida, duksimon yuz kompleksidan lateralda joylashgan TE2p maydoni."
+    },
+    "role": {
+      "en": "Ventral visual stream area involved in orthography/reading (visual word form network on the left) and object/body recognition.",
+      "uz": "Chapda yozma so'zlarni o'qish (VWFA tarmog'i) hamda narsa va tana shaklini tanishda qatnashuvchi ventral ko'ruv maydoni."
+    },
+    "clinical": {
+      "en": "Left lesions cause pure alexia or surface dyslexia; right lesions impair visual object/body perception.",
+      "uz": "Chap zararlanishi sof aleksiya yoki disleksiya, o'ng zararlanishi narsa va tana shaklini idrok etish buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-pht": {
+    "uz": "Orqa o'rta-pastki chakka maydoni (PHT)",
+    "description": {
+      "en": "Area PHT on the posterior middle and inferior temporal gyri immediately anterior to the MT+ motion complex.",
+      "uz": "Orqa o'rta va pastki chakka pushtalarida MT+ harakat kompleksining bevosita oldida joylashgan PHT maydoni."
+    },
+    "role": {
+      "en": "Links visual motion and action perception with semantic knowledge of tools and mechanical actions.",
+      "uz": "Ko'ruv harakati va harakat idrokini asboblar hamda mexanik harakatlar haqidagi semantik bilim bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Dominant lesions impair action/verb naming and semantic understanding of tool use.",
+      "uz": "Dominant yarim shardagi zararlanishi harakat/fe'llarni nomlashni va asbob vazifasini tushunishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-ph": {
+    "uz": "PH maydoni (ventrolateral chakka-ensa o'tish sohasi)",
+    "description": {
+      "en": "Area PH at the ventrolateral temporo-occipital junction between TE2p/FFC anteriorly and PIT/FST posteriorly.",
+      "uz": "Ventrolateral chakka-ensa tutashuvida oldinda TE2p/FFC bilan orqada PIT/FST orasida joylashgan PH maydoni."
+    },
+    "role": {
+      "en": "Integrates ventral stream form/word information with dorsal/lateral motion signals.",
+      "uz": "Ventral oqimdagi shakl va so'z ma'lumotini lateral harakat signallari bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Left lesions contribute to alexia and visual naming deficits.",
+      "uz": "Chap tomonlama zararlanishi aleksiya va ko'rib nomlash buzilishiga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-temporoparietooccipital-junction-1": {
+    "uz": "Chakka-tepa-ensa tutashuvi 1-maydoni (TPOJ1)",
+    "description": {
+      "en": "Area TPOJ1 in the posterior end of the superior temporal sulcus between STV/STSdp anteriorly and TPOJ2 posteriorly.",
+      "uz": "Yuqori chakka egatining orqa uchida oldinda STV/STSdp bilan orqada TPOJ2 orasida joylashgan TPOJ1 maydoni."
+    },
+    "role": {
+      "en": "Multisensory temporoparietal junction hub for social attention, gaze following, audiovisual speech and theory of mind.",
+      "uz": "Ijtimoiy diqqat, nigohni kuzatish, audiovizual nutq va mentalizatsiya uchun ko'p sezgili chakka-tepa tutashuvi markazi."
+    },
+    "clinical": {
+      "en": "Right lesions contribute to hemispatial neglect; left lesions impair posterior language comprehension.",
+      "uz": "O'ng zararlanishi gemispatial e'tiborsizlikka, chap zararlanishi orqa til tushunish buzilishiga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-temporoparietooccipital-junction-2": {
+    "uz": "Chakka-tepa-ensa tutashuvi 2-maydoni (TPOJ2)",
+    "description": {
+      "en": "Area TPOJ2 at the temporo-parieto-occipital junction posterior to TPOJ1 and dorsal to TPOJ3/MT+.",
+      "uz": "Chakka-tepa-ensa chorrahasida TPOJ1 dan orqada va TPOJ3/MT+ dan dorsalda joylashgan TPOJ2 maydoni."
+    },
+    "role": {
+      "en": "Ventral attention and social-cognition node reorienting attention to unexpected salient visual and auditory events.",
+      "uz": "Kutilmagan muhim ko'ruv va eshituv hodisalariga diqqatni qayta yo'naltiruvchi ventral diqqat va ijtimoiy kognitsiya tuguni."
+    },
+    "clinical": {
+      "en": "Right TPOJ lesions cause spatial neglect and out-of-body / vestibular self-location disturbances.",
+      "uz": "O'ng TPOJ zararlanishi fazoviy e'tiborsizlik va tana joylashuvi hissi buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-temporoparietooccipital-junction-3": {
+    "uz": "Chakka-tepa-ensa tutashuvi 3-maydoni (TPOJ3)",
+    "description": {
+      "en": "Area TPOJ3 immediately anterior-dorsal to the MT+ motion complex and ventral to TPOJ2/PGp.",
+      "uz": "MT+ harakat kompleksining bevosita oldi va ustida, TPOJ2/PGp ostida joylashgan TPOJ3 maydoni."
+    },
+    "role": {
+      "en": "Bridges visual motion (MT+) with inferior parietal spatial and social-action networks.",
+      "uz": "Ko'ruv harakati (MT+) tahlilini pastki tepa fazoviy va ijtimoiy harakat tarmoqlari bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Lesions impair visual motion integration and spatial attention.",
+      "uz": "Zararlanishi ko'ruv harakati integratsiyasi va fazoviy diqqatni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-dorsal-transitional-visual-area": {
+    "uz": "Dorsal o'tish ko'ruv maydoni (DVT)",
+    "description": {
+      "en": "Dorsal transitional visual area (DVT) on the medial parieto-occipital sulcus bank between POS2/PCV and dorsal V2/V6.",
+      "uz": "Medial tepa-ensa egati devorida POS2/PCV bilan dorsal V2/V6 orasida joylashgan dorsal o'tish ko'ruv maydoni (DVT)."
+    },
+    "role": {
+      "en": "Relays peripheral visual motion and optic flow from early visual cortex (V2/V6) to medial parietal navigation circuits.",
+      "uz": "Periferik ko'ruv harakati va optik oqimni erta ko'ruv po'stlog'idan (V2/V6) medial tepa navigatsiya zanjirlariga uzatadi."
+    },
+    "clinical": {
+      "en": "Medial parieto-occipital lesions impair visually guided locomotion and reaching.",
+      "uz": "Medial tepa-ensa zararlanishi ko'ruv nazoratidagi harakatlanish va qo'l uzatishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-pgp": {
+    "uz": "PGp maydoni (burchak pushtasi orqa qismi)",
+    "description": {
+      "en": "Area PGp on the caudal angular gyrus at the transition between the inferior parietal lobule and lateral occipital cortex.",
+      "uz": "Burchak pushtasining kaudal qismida, pastki tepa bo'lakchasi bilan lateral ensa po'stlog'i o'tish joyida joylashgan PGp maydoni."
+    },
+    "role": {
+      "en": "Visuospatial and scene-memory node linking occipital visual areas with the posterior parahippocampal and default-mode networks.",
+      "uz": "Ensa ko'ruv sohalarini orqa parahippokampal va default-mode tarmoqlari bilan bog'lovchi ko'ruv-fazoviy va manzara xotirasi tuguni."
+    },
+    "clinical": {
+      "en": "Bilateral or right lesions contribute to topographical disorientation, constructional apraxia and Bálint-spectrum deficits.",
+      "uz": "Ikki tomonlama yoki o'ng zararlanishi topografik dezoriyentatsiya va konstruktiv apraksiyaga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-intraparietal-2": {
+    "uz": "Tepa ichi 2-maydoni (IP2)",
+    "description": {
+      "en": "Area IP2 in the anterior-lateral bank of the horizontal intraparietal sulcus dorsal to PFm and anterior to IP1.",
+      "uz": "Gorizontal tepa ichi egatining oldingi-lateral devorida, PFm ustida va IP1 oldida joylashgan IP2 maydoni."
+    },
+    "role": {
+      "en": "Core parietal node for numerical magnitude processing (number sense), mental arithmetic and executive working memory.",
+      "uz": "Son miqdorini idrok etish (son hissi), og'zaki hisoblash va ijrochi ishchi xotiraning asosiy tepa tuguni."
+    },
+    "clinical": {
+      "en": "Dominant (left) lesions cause primary acalculia (part of Gerstmann syndrome).",
+      "uz": "Dominant (chap) zararlanishi birlamchi akalkuliyani (Gerstmann sindromi qismi) keltirib chiqaradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-intraparietal-1": {
+    "uz": "Tepa ichi 1-maydoni (IP1)",
+    "description": {
+      "en": "Area IP1 in the middle-posterior lateral bank of the intraparietal sulcus between IP2 anteriorly and IP0 posteriorly.",
+      "uz": "Tepa ichi egatining o'rta-orqa lateral devorida oldinda IP2 bilan orqada IP0 orasida joylashgan IP1 maydoni."
+    },
+    "role": {
+      "en": "Frontoparietal executive control network node supporting visuospatial working memory, relational reasoning and calculation.",
+      "uz": "Ko'ruv-fazoviy ishchi xotira, mantiqiy mulohaza va hisoblashni ta'minlovchi peshona-tepa ijrochi nazorat tuguni."
+    },
+    "clinical": {
+      "en": "Lesions impair visuospatial working memory and numerical reasoning.",
+      "uz": "Zararlanishi ko'ruv-fazoviy ishchi xotira va sonli mulohazani buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-intraparietal-0": {
+    "uz": "Tepa ichi 0-maydoni (IP0)",
+    "description": {
+      "en": "Area IP0 at the posterior-lateral end of the intraparietal sulcus between IP1/PGp and visual areas V3B/V7.",
+      "uz": "Tepa ichi egatining orqa-lateral uchida IP1/PGp bilan V3B/V7 ko'ruv maydonlari orasida joylashgan IP0 maydoni."
+    },
+    "role": {
+      "en": "Bridges early dorsal retinotopic visual representations with frontoparietal cognitive control and spatial working memory.",
+      "uz": "Erta dorsal retinotopik ko'ruv tasvirlarini peshona-tepa kognitiv nazorati va fazoviy ishchi xotira bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Lesions impair visual multi-object tracking and spatial attention.",
+      "uz": "Zararlanishi bir necha jismni ko'z bilan kuzatish va fazoviy diqqatni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-pf-opercular": {
+    "uz": "PF qopqoq maydoni (PFop, pastki chekka usti)",
+    "description": {
+      "en": "Area PFop on the anterior-inferior supramarginal gyrus forming the parietal opercular lip above the Sylvian fissure.",
+      "uz": "Oldingi-pastki chekka usti pushtasida, Silviy egati ustidagi tepa qopqog'i qirg'og'ini hosil qiluvchi PFop maydoni."
+    },
+    "role": {
+      "en": "Integrates secondary somatosensory feedback (OP1/OP4) with phonological and praxis networks.",
+      "uz": "Ikkilamchi somatosensor qayta aloqani (OP1/OP4) fonologik va praksis tarmoqlari bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Dominant lesions contribute to conduction aphasia, phonological working-memory loss and oral/limb apraxia.",
+      "uz": "Dominant yarim shardagi zararlanishi o'tkazuvchi afaziya va og'iz/qo'l apraksiyasiga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-pf-complex": {
+    "uz": "PF maydoni (chekka usti pushtasi markazi)",
+    "description": {
+      "en": "Area PF occupying the main crown of the supramarginal gyrus (Brodmann area 40).",
+      "uz": "Chekka usti pushtasining asosiy cho'qqisini egallagan PF maydoni (Brodmann 40)."
+    },
+    "role": {
+      "en": "Action organization, tool praxis and phonological storage on the left; ventral attention reorienting and bodily self-awareness on the right.",
+      "uz": "Chapda harakatni tashkil etish, asbob praksisi va fonologik xotira; o'ngda ventral diqqatni qayta yo'naltirish va tana sxemasi."
+    },
+    "clinical": {
+      "en": "Left PF lesions cause ideomotor apraxia and phonological/repetition deficits; right PF lesions cause hemispatial neglect.",
+      "uz": "Chap PF zararlanishi ideomotor apraksiya va takrorlash nuqsonini, o'ng PF zararlanishi gemispatial e'tiborsizlikni beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-pfm-complex": {
+    "uz": "PFm maydoni (orqa chekka usti / burchak o'tish sohasi)",
+    "description": {
+      "en": "Area PFm at the transition between the posterior supramarginal gyrus and anterior angular gyrus below IP2.",
+      "uz": "Orqa chekka usti pushtasi bilan oldingi burchak pushtasi o'tish joyida, IP2 ostida joylashgan PFm maydoni."
+    },
+    "role": {
+      "en": "Major lateral parietal hub of the frontoparietal executive control network: rule switching, decision making and working memory.",
+      "uz": "Peshona-tepa ijrochi nazorat tarmog'ining yirik lateral tepa markazi: qoidalarni almashtirish, qaror qabul qilish va ishchi xotira."
+    },
+    "clinical": {
+      "en": "Right lesions cause severe spatial neglect; left lesions cause executive, calculation and praxis deficits.",
+      "uz": "O'ng zararlanishi og'ir fazoviy e'tiborsizlik, chap zararlanishi ijrochi, hisoblash va praksis buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-pgi": {
+    "uz": "PGi maydoni (burchak pushtasi pastki qismi)",
+    "description": {
+      "en": "Area PGi on the ventral-anterior angular gyrus capping the posterior superior temporal sulcus.",
+      "uz": "Burchak pushtasining ventral-oldingi qismida, orqa yuqori chakka egati uchini o'rab turuvchi PGi maydoni."
+    },
+    "role": {
+      "en": "Core lateral parietal node of the default-mode and semantic networks: narrative comprehension, episodic memory retrieval and social mentalizing.",
+      "uz": "Default-mode va semantik tarmoqlarning lateral tepa o'zagi: matnni tushunish, epizodik xotirani chaqirish va ijtimoiy mentalizatsiya."
+    },
+    "clinical": {
+      "en": "Left lesions cause semantic aphasia, alexia and components of Gerstmann syndrome.",
+      "uz": "Chap zararlanishi semantik afaziya, aleksiya va Gerstmann sindromi belgilarini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-pgs": {
+    "uz": "PGs maydoni (burchak pushtasi yuqori qismi)",
+    "description": {
+      "en": "Area PGs on the dorsal angular gyrus between PGi ventrally and the intraparietal sulcus (IP1/IP0) dorsally.",
+      "uz": "Dorsal burchak pushtasida ventralda PGi bilan dorsalda tepa ichi egati (IP1/IP0) orasida joylashgan PGs maydoni."
+    },
+    "role": {
+      "en": "Integrates default-mode episodic memory retrieval with visuospatial attention and number/reading processing.",
+      "uz": "Epizodik xotirani chaqirishni ko'ruv-fazoviy diqqat hamda hisoblash va o'qish bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Left lesions cause Gerstmann syndrome (acalculia, agraphia, finger agnosia, left–right disorientation); early hypometabolism in Alzheimer disease.",
+      "uz": "Chap zararlanishi Gerstmann sindromini beradi; Alzheimer kasalligida metabolizmi erta pasayadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-v6a": {
+    "uz": "V6A ko'ruv-harakat maydoni",
+    "description": {
+      "en": "Area V6A in the dorsal parieto-occipital sulcus immediately dorsal to area V6.",
+      "uz": "Tepa-ensa egatining dorsal qismida V6 maydonining bevosita ustida joylashgan V6A ko'ruv-harakat maydoni."
+    },
+    "role": {
+      "en": "Visuomotor reach-and-grasp area encoding target position in spatial coordinates and directing the arm during fast reaching.",
+      "uz": "Tezkor qo'l uzatish va ushlashda nishonning fazoviy o'rnini kodlovchi va qo'lni yo'naltiruvchi vizuomotor maydon."
+    },
+    "clinical": {
+      "en": "Lesions of V6A are a primary cause of human optic ataxia (misreaching into peripheral visual fields).",
+      "uz": "V6A zararlanishi odamda optik ataksiyaning (periferik ko'rish maydonidagi narsalarga noaniq qo'l uzatishning) asosiy sabablaridan biri."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-ventromedial-visual-area-1": {
+    "uz": "Ventromedial 1-ko'ruv maydoni (VMV1)",
+    "description": {
+      "en": "Area VMV1 on the anterior lingual gyrus along the medial bank of the collateral sulcus behind PHA1/PHA2.",
+      "uz": "Oldingi tilsimon pushtada kollateral egatning medial qirg'og'i bo'ylab PHA1/PHA2 ortida joylashgan VMV1 maydoni."
+    },
+    "role": {
+      "en": "Far-peripheral upper-visual-field and scene-surface processing feeding the parahippocampal place area.",
+      "uz": "Uzoq periferik yuqori ko'rish maydoni va manzara yuzasini tahlil qilib, parahippokampal joy sohasini ta'minlaydi."
+    },
+    "clinical": {
+      "en": "Medial PCA infarcts impair visual scene recognition and peripheral upper-field vision.",
+      "uz": "Medial PCA infarkti manzarani ko'rib tanish va periferik yuqori maydon ko'rishini buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-ventromedial-visual-area-3": {
+    "uz": "Ventromedial 3-ko'ruv maydoni (VMV3)",
+    "description": {
+      "en": "Area VMV3 on the anterior lingual/collateral sulcus bank lateral to VMV2 and medial to VVC/V8.",
+      "uz": "Oldingi tilsimon pushta va kollateral egat qirg'og'ida VMV2 dan lateralda hamda VVC/V8 dan medialda joylashgan VMV3 maydoni."
+    },
+    "role": {
+      "en": "Integrates colour, texture and spatial layout of visual scenes between ventral V4/V8 and the parahippocampal cortex.",
+      "uz": "Ventral V4/V8 bilan parahippokampal po'stloq orasida ko'ruv manzaralarining rangi, teksturasi va fazoviy tuzilishini birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions contribute to landmark agnosia and colour/texture deficits.",
+      "uz": "Zararlanishi joy va mo'ljal agnoziyasiga hamda rang-tekstura idroki buzilishiga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-parahippocampal-area-2": {
+    "uz": "Parahippokampal 2-maydon (PHA2)",
+    "description": {
+      "en": "Area PHA2 along the crown and medial bank of the posterior parahippocampal gyrus between PHA1 medially and PHA3 laterally.",
+      "uz": "Orqa parahippokampal pushtada medialda PHA1 bilan lateralda PHA3 orasida joylashgan PHA2 maydoni."
+    },
+    "role": {
+      "en": "Central core of the parahippocampal place area (PPA): encodes 3D spatial geometry of rooms, streets and landscapes.",
+      "uz": "Parahippokampal joy sohasining (PPA) markaziy o'zagi: xonalar, ko'chalar va manzaralarning 3D fazoviy geometriyasini kodlaydi."
+    },
+    "clinical": {
+      "en": "Lesions cause topographical disorientation and inability to learn new spatial environments.",
+      "uz": "Zararlanishi topografik dezoriyentatsiya va yangi joylarni eslab qola olmaslikni beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-v4t": {
+    "uz": "V4t o'tish ko'ruv maydoni",
+    "description": {
+      "en": "Area V4t (V4 transitional) on the lateral occipital cortex immediately ventral to MT and dorsal to LO3/FST.",
+      "uz": "Lateral ensa po'stlog'ida MT maydonidan bevosita ventralda va LO3/FST dan dorsalda joylashgan V4t o'tish maydoni."
+    },
+    "role": {
+      "en": "Bridges form-selective area V4/LO with motion-selective area MT within the human MT+ complex.",
+      "uz": "Odamning MT+ kompleksi ichida shaklga sezgir V4/LO maydonini harakatga sezgir MT maydoni bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Lesions impair perception of moving shapes and biological motion.",
+      "uz": "Zararlanishi harakatdagi shakllar va biologik harakatni idrok etishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-fst": {
+    "uz": "Yuqori chakka egati tubi harakat maydoni (FST)",
+    "description": {
+      "en": "Area FST at the anterior-ventral edge of the MT+ motion complex between MT/MST and PH.",
+      "uz": "MT+ harakat kompleksining oldingi-ventral chekkasida, MT/MST bilan PH maydoni orasida joylashgan FST maydoni."
+    },
+    "role": {
+      "en": "Extracts 3D structure-from-motion, articulated biological motion and action kinematics.",
+      "uz": "Harakat orqali 3D tuzilishni, bo'g'imli biologik harakatni va harakat kinematikasini ajratib oladi."
+    },
+    "clinical": {
+      "en": "Lesions impair 3D motion perception and recognition of actions from point-light displays.",
+      "uz": "Zararlanishi 3D harakat idrokini va harakatlanuvchi shakl orqali harakatni tanishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-v3cd": {
+    "uz": "V3CD lateral ko'ruv maydoni",
+    "description": {
+      "en": "Area V3CD on the lateral occipital cortex between V3A/V3B dorsally and LO1/LO2 ventrally.",
+      "uz": "Lateral ensa po'stlog'ida dorsalda V3A/V3B bilan ventralda LO1/LO2 orasida joylashgan V3CD ko'ruv maydoni."
+    },
+    "role": {
+      "en": "Processes kinetic boundaries, central/paracentral contours and 3D shape cues.",
+      "uz": "Kinetik chegaralar, markaziy konturlar va 3D shakl belgilarini qayta ishlaydi."
+    },
+    "clinical": {
+      "en": "Lateral occipital lesions cause contour-integration and form-recognition deficits.",
+      "uz": "Lateral ensa zararlanishi konturlarni birlashtirish va shaklni tanish buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-lateral-occipital-3": {
+    "uz": "Lateral ensa 3-maydoni (LO3)",
+    "description": {
+      "en": "Area LO3 on the lateral temporo-occipital cortex between LO1/LO2 posteriorly and MT/V4t anteriorly.",
+      "uz": "Lateral chakka-ensa po'stlog'ida orqada LO1/LO2 bilan oldinda MT/V4t orasida joylashgan LO3 maydoni."
+    },
+    "role": {
+      "en": "Integrates static object shape (LO) with motion signals (MT+) for recognizing moving objects and bodies.",
+      "uz": "Harakatdagi narsalar va tana qismlarini tanish uchun statik shakl (LO) va harakat (MT+) signallarini birlashtiradi."
+    },
+    "clinical": {
+      "en": "Lesions contribute to visual object and body-form agnosia.",
+      "uz": "Zararlanishi narsa va tana shakli ko'ruv agnoziyasiga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-ventromedial-visual-area-2": {
+    "uz": "Ventromedial 2-ko'ruv maydoni (VMV2)",
+    "description": {
+      "en": "Area VMV2 in the collateral sulcus between VMV1 medially and VMV3 laterally.",
+      "uz": "Kollateral egatda medialda VMV1 bilan lateralda VMV3 orasida joylashgan VMV2 ko'ruv maydoni."
+    },
+    "role": {
+      "en": "Retinotopic ventromedial scene- and surface-processing area feeding the parahippocampal place area.",
+      "uz": "Parahippokampal joy sohasini ma'lumot bilan ta'minlovchi retinotopik ventromedial manzara va yuza tahlili maydoni."
+    },
+    "clinical": {
+      "en": "PCA infarcts here impair visual scene layout recognition.",
+      "uz": "Bu yerdagi PCA infarkti manzara tuzilishini ko'rib tanishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-31pd": {
+    "uz": "Orqa-dorsal 31-maydon (31pd, orqa belbog')",
+    "description": {
+      "en": "Area 31pd on the dorsal-posterior cingulate gyrus and lower bank of the subparietal sulcus above 31pv and d23ab.",
+      "uz": "Dorsal-orqa belbog' pushtasi va tepa osti egatining pastki qirg'og'ida, 31pv va d23ab ustida joylashgan 31pd maydoni."
+    },
+    "role": {
+      "en": "Default-mode network hub integrating autobiographical memory with medial parietal spatial attention.",
+      "uz": "Avtobiografik xotirani medial tepa fazoviy diqqati bilan birlashtiruvchi default-mode tarmog'i markazi."
+    },
+    "clinical": {
+      "en": "Shows early hypometabolism in Alzheimer disease.",
+      "uz": "Alzheimer kasalligida erta gipometabolizm namoyon qiladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-31a": {
+    "uz": "Oldingi 31-maydon (31a, orqa belbog')",
+    "description": {
+      "en": "Area 31a on the anterior dorsal posterior cingulate gyrus between 23d ventrally and the subparietal sulcus dorsally.",
+      "uz": "Oldingi-dorsal orqa belbog' pushtasida ventralda 23d bilan dorsalda tepa osti egati orasida joylashgan 31a maydoni."
+    },
+    "role": {
+      "en": "Default-mode node linking posterior cingulate memory circuits with midcingulate and prefrontal cortex.",
+      "uz": "Orqa belbog' xotira zanjirlarini o'rta belbog' va prefrontal po'stloq bilan bog'lovchi default-mode tuguni."
+    },
+    "clinical": {
+      "en": "Early amyloid accumulation and metabolic decline in Alzheimer disease.",
+      "uz": "Alzheimer kasalligida erta amiloid to'planishi va metabolizm pasayishi kuzatiladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-ventral-visual-complex": {
+    "uz": "Ventral ko'ruv kompleksi (VVC)",
+    "description": {
+      "en": "Ventral visual complex (VVC) on the mid-fusiform and collateral sulcus cortex anterior to V8 and medial to the fusiform face complex.",
+      "uz": "O'rta duksimon pushta va kollateral egatda V8 dan oldinda hamda duksimon yuz kompleksidan medialda joylashgan ventral ko'ruv kompleksi (VVC)."
+    },
+    "role": {
+      "en": "Processes colour, surface material properties and non-face object categories along the ventral visual stream.",
+      "uz": "Ventral ko'ruv oqimi bo'ylab rang, yuza materiali xossalari va narsalar toifalarini qayta ishlaydi."
+    },
+    "clinical": {
+      "en": "Lesions cause colour agnosia/achromatopsia and visual object agnosia.",
+      "uz": "Zararlanishi rang agnoziyasi/axromatopsiya va ko'ruv narsa agnoziyasini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-25": {
+    "uz": "25-maydon (tizza osti belbog', subgenual, Glasser)",
+    "description": {
+      "en": "Brodmann area 25 (subgenual/subcallosal cingulate) beneath the rostrum and genu of the corpus callosum in front of the lamina terminalis.",
+      "uz": "Qadoqsimon tana tumshug'i va tizzasi ostida, lamina terminalis oldida joylashgan Brodmann 25-maydoni (subgenual belbog')."
+    },
+    "role": {
+      "en": "Primary visceromotor cortical driver of autonomic, neuroendocrine (HPA axis) and negative-mood responses via projections to the amygdala, hypothalamus and PAG.",
+      "uz": "Amigdala, gipotalamus va PAG ga proyeksiyalar orqali vegetativ, neyroendokrin va salbiy kayfiyat javoblarini boshqaruvchi visseromotor markaz."
+    },
+    "clinical": {
+      "en": "Hyperactive in major depressive disorder; surgical target of subcallosal cingulate DBS for treatment-resistant depression.",
+      "uz": "Og'ir depressiyada giperfaol; davolashga chidamli depressiyada subkallozal DBS neyroxirurgik nishoni."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-s32": {
+    "uz": "Tizza osti 32-maydon (s32, subgenual prefrontal)",
+    "description": {
+      "en": "Area s32 on the ventromedial prefrontal surface immediately anterior to subgenual area 25 and ventral to a24/p32.",
+      "uz": "Ventromedial prefrontal yuzada subgenual 25-maydonning bevosita oldida va a24/p32 ostida joylashgan s32 maydoni."
+    },
+    "role": {
+      "en": "Couples default-mode self-referential valuation with subgenual visceromotor and emotional regulation.",
+      "uz": "O'zi haqida fikrlash va baholashni (default-mode) tizza osti visseromotor hamda emotsional boshqaruvi bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Key node of the affective network altered in major depression and targeted via DLPFC-to-subgenual rTMS connectivity.",
+      "uz": "Og'ir depressiyada o'zgaradigan va DLPFC rTMS aloqalari orqali nishonga olinadigan affektiv tarmoq tuguni."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-posterior-ofc-complex": {
+    "uz": "Orqa orbitofrontal kompleks (pOFC)",
+    "description": {
+      "en": "Area pOFC at the caudal medial edge of the orbitofrontal cortex immediately anterior to the anterior perforated substance and ventral striatum.",
+      "uz": "Orbitofrontal po'stloqning eng orqa-medial chekkasida, oldingi ilma-teshik modda va ventral striatum oldida joylashgan pOFC maydoni."
+    },
+    "role": {
+      "en": "Limbic periallocortical orbitofrontal zone integrating olfactory, visceral and amygdala inputs to regulate autonomic arousal and emotion.",
+      "uz": "Vegetativ qo'zg'alish va emotsiyani boshqarish uchun hid, visseral hamda amigdala kirishlarini birlashtiruvchi limbik orbitofrontal zona."
+    },
+    "clinical": {
+      "en": "Involved in frontotemporal dementia, autonomic emotion dysregulation and post-aneurysmal frontal syndromes.",
+      "uz": "Peshona-chakka demensiyasi, emotsional-vegetativ disregulyatsiya va anevrizmadan keyingi frontal sindromlarda ishtirok etadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-posterior-insular-1": {
+    "uz": "Orqa orolcha 1-maydoni (PoI1)",
+    "description": {
+      "en": "Area PoI1 on the ventral-posterior long gyrus of the insula along the inferior circular sulcus.",
+      "uz": "Orolchaning ventral-orqa uzun pushtasida, pastki halqasimon egat bo'ylab joylashgan PoI1 maydoni."
+    },
+    "role": {
+      "en": "Granular viscerosensory and nociceptive cortex receiving spinothalamic and vagal interoceptive projections.",
+      "uz": "Spinotalamik va adashgan nerv (vagal) interotseptiv proyeksiyalarini qabul qiluvchi granulyar visserosensor va og'riq po'stlog'i."
+    },
+    "clinical": {
+      "en": "Lesions alter pain/temperature perception and cardiovascular autonomic tone.",
+      "uz": "Zararlanishi og'riq va harorat idrokini hamda yurak-qon tomir vegetativ tonusini o'zgartiradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-insular-granular-complex": {
+    "uz": "Orolcha granulyar kompleksi (Ig)",
+    "description": {
+      "en": "Insular granular complex (Ig) at the dorsal-posterior corner of the insula adjacent to retroinsular cortex (RI) and OP2-3.",
+      "uz": "Orolchaning dorsal-orqa burchagida, retroinsulyar po'stloq (RI) va OP2-3 yonida joylashgan orolcha granulyar kompleksi (Ig)."
+    },
+    "role": {
+      "en": "Primary interoceptive, thermosensory (cooling/warming), nociceptive and vestibular representation of the body.",
+      "uz": "Tananing birlamchi interotseptiv, harorat (sovuq/issiq), og'riq va vestibulyar vakilligi."
+    },
+    "clinical": {
+      "en": "Strokes here cause contralateral thermosensory/pain deficits, central post-stroke pain or vestibular imbalance.",
+      "uz": "Bu yerdagi insult qarama-qarshi harorat/og'riq sezgisi buzilishini, markaziy og'riq yoki vestibulyar muvozanat yo'qolishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-frontal-opercular-5": {
+    "uz": "Peshona qopqog'i 5-maydoni (FOP5)",
+    "description": {
+      "en": "Area FOP5 on the anterior inner surface of the frontal operculum deep to pars triangularis (area 45) and dorsal to AVI.",
+      "uz": "Peshona qopqog'ining oldingi ichki yuzasida, pars triangularis (45-maydon) ostida va AVI ustida joylashgan FOP5 maydoni."
+    },
+    "role": {
+      "en": "Links Broca’s language network (area 44/45) with the cingulo-opercular salience and cognitive-control network.",
+      "uz": "Broka til tarmog'ini (44/45-maydonlar) belbog'-qopqoq salience va kognitiv nazorat tarmog'i bilan bog'laydi."
+    },
+    "clinical": {
+      "en": "Dominant lesions contribute to expressive language initiation and articulatory control deficits.",
+      "uz": "Dominant zararlanishi ekspressiv nutqni boshlash va artikulyator nazorat buzilishiga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-posterior-10p": {
+    "uz": "Orqa qutb 10-maydoni (p10p)",
+    "description": {
+      "en": "Area p10p on the lateral frontopolar boundary posterior to a10p/10pp and anterior to area 46/a9-46v.",
+      "uz": "Lateral peshona qutbi chegarasida a10p/10pp dan orqada va 46/a9-46v maydonlaridan oldinda joylashgan p10p maydoni."
+    },
+    "role": {
+      "en": "Transition hub between frontopolar metacognitive branching and dorsolateral prefrontal working memory.",
+      "uz": "Peshona qutbi metakognitiv tarmoqlanishi bilan dorsolateral prefrontal ishchi xotira orasidagi o'tish markazi."
+    },
+    "clinical": {
+      "en": "Lesions impair multi-step task management and cognitive flexibility.",
+      "uz": "Zararlanishi ko'p bosqichli vazifalarni boshqarish va kognitiv moslashuvchanlikni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-posterior-47r": {
+    "uz": "Orqa rostral 47-maydon (p47r)",
+    "description": {
+      "en": "Area p47r in the anterior inferior frontal sulcus/gyrus transition between a47r anteriorly and 45/IFSa posteriorly.",
+      "uz": "Oldingi pastki peshona egati va pushtasi o'tish joyida, oldinda a47r bilan orqada 45/IFSa orasida joylashgan p47r maydoni."
+    },
+    "role": {
+      "en": "Ventrolateral prefrontal control node for controlled memory retrieval and resolution of competition among semantic alternatives.",
+      "uz": "Xotiradan boshqariladigan eslash va semantik muqobillar orasidagi raqobatni hal qilish uchun ventrolateral prefrontal tugun."
+    },
+    "clinical": {
+      "en": "Lesions impair verbal fluency and executive retrieval.",
+      "uz": "Zararlanishi nutq ravonligi va xotiradan ijrochi chaqirishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-tg-ventral": {
+    "uz": "Ventral chakka qutbi maydoni (TGv, Area 38)",
+    "description": {
+      "en": "Area TGv forming the ventral and basal aspect of the temporal pole anterior to TE2a and PeEc.",
+      "uz": "Chakka qutbining TE2a va PeEc dan oldindagi ventral hamda pastki yuzasini hosil qiluvchi TGv maydoni (Brodmann 38)."
+    },
+    "role": {
+      "en": "Ventral transmodal semantic hub linking visual object/face representations with socio-emotional and conceptual memory via the uncinate fasciculus.",
+      "uz": "Ilmoqsimon tutam orqali ko'ruv narsa/yuz tasvirlarini ijtimoiy-emotsional va tushunchaviy xotira bilan bog'lovchi ventral semantik markaz."
+    },
+    "clinical": {
+      "en": "Severely atrophic early in semantic dementia (svPPA), causing multimodal loss of object and person knowledge.",
+      "uz": "Semantik demensiyada (svPPA) erta va kuchli atrofiyalanib, narsalar hamda shaxslar haqidagi bilimning yo'qolishiga olib keladi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-medial-belt-complex": {
+    "uz": "Medial eshituv kamari kompleksi (MBelt)",
+    "description": {
+      "en": "Medial auditory belt (MBelt) along the anteromedial border of Heschl’s gyrus inside the Sylvian fissure medial to A1.",
+      "uz": "Silviy egati ichida Geshl pushtasining oldingi-medial qirrasi bo'ylab A1 dan medialda joylashgan medial eshituv kamari (MBelt)."
+    },
+    "role": {
+      "en": "Second-stage auditory cortex receiving direct input from A1 to process pitch, vocalizations and temporal sound envelopes.",
+      "uz": "A1 dan bevosita kirish qabul qilib, ohang, ovoz va tovushning vaqt xususiyatlarini qayta ishlovchi ikkinchi bosqich eshituv po'stlog'i."
+    },
+    "clinical": {
+      "en": "Bilateral belt lesions contribute to auditory agnosia and amusia.",
+      "uz": "Ikki tomonlama zararlanishi eshituv agnoziyasi va amuziyaga hissa qo'shadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-lateral-belt-complex": {
+    "uz": "Lateral eshituv kamari kompleksi (LBelt)",
+    "description": {
+      "en": "Lateral auditory belt (LBelt) along the posterolateral border of Heschl’s gyrus immediately behind A1 and medial to PBelt.",
+      "uz": "Geshl pushtasining orqa-lateral qirrasi bo'ylab A1 ning bevosita ortida va PBelt dan medialda joylashgan lateral eshituv kamari (LBelt)."
+    },
+    "role": {
+      "en": "Second-stage auditory cortex integrating bandwidth and frequency sweeps for speech-phoneme and spatial sound processing.",
+      "uz": "Nutq fonemalari va tovushning fazoviy joylashuvini qayta ishlash uchun chastota o'zgarishlarini birlashtiruvchi ikkinchi bosqich eshituv po'stlog'i."
+    },
+    "clinical": {
+      "en": "Left lesions impair early phonological decoding of speech sounds.",
+      "uz": "Chap tomonlama zararlanishi nutq tovushlarini erta fonologik dekodlashni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-auditory-4-complex": {
+    "uz": "4-eshituv kompleksi (A4)",
+    "description": {
+      "en": "Area A4 on the lateral aspect of the superior temporal gyrus and planum temporale immediately ventral/lateral to PBelt.",
+      "uz": "Yuqori chakka pushtasining lateral qirrasi va planum temporale'da PBelt dan bevosita tashqarida joylashgan A4 eshituv kompleksi."
+    },
+    "role": {
+      "en": "Higher auditory association cortex analyzing complex spectrotemporal patterns of speech, voices and music.",
+      "uz": "Nutq, ovoz va musiqaning murakkab spektrotemporal andozalarini tahlil qiluvchi yuqori darajali eshituv assotsiativ po'stlog'i."
+    },
+    "clinical": {
+      "en": "Dominant lesions cause Wernicke-spectrum speech comprehension and phonological deficits.",
+      "uz": "Dominant yarim shardagi zararlanishi Vernike turidagi nutqni tushunish va fonologik buzilishlarni beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-stsv-anterior": {
+    "uz": "Yuqori chakka egati oldingi-ventral maydoni (STSva)",
+    "description": {
+      "en": "Area STSva on the anterior-ventral bank of the superior temporal sulcus between STSda dorsally and TE1a ventrally.",
+      "uz": "Yuqori chakka egatining oldingi-ventral qirg'og'ida dorsalda STSda bilan ventralda TE1a orasida joylashgan STSva maydoni."
+    },
+    "role": {
+      "en": "Anterior temporal language, semantic and social-cognition node integrating spoken words into sentence meaning.",
+      "uz": "Og'zaki so'zlarni gap mazmuniga birlashtiruvchi oldingi chakka til, semantik va ijtimoiy kognitsiya tuguni."
+    },
+    "clinical": {
+      "en": "Affected in semantic dementia and anterior temporal strokes, impairing sentence and lexical comprehension.",
+      "uz": "Semantik demensiya va oldingi chakka insultlarida zararlanib, leksik va gap tushunishni buzadi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-te1-middle": {
+    "uz": "O'rta chakka pushtasi o'rta maydoni (TE1m)",
+    "description": {
+      "en": "Area TE1m on the mid-lateral crown of the middle temporal gyrus between TE1a anteriorly and TE1p posteriorly.",
+      "uz": "O'rta chakka pushtasining o'rta cho'qqisida oldinda TE1a bilan orqada TE1p orasida joylashgan TE1m maydoni."
+    },
+    "role": {
+      "en": "Lateral temporal node of the default-mode and semantic networks supporting conceptual retrieval and autobiographical memory.",
+      "uz": "Tushunchalarni eslash va avtobiografik xotirani ta'minlovchi default-mode hamda semantik tarmoqlarning lateral chakka tuguni."
+    },
+    "clinical": {
+      "en": "Dominant lesions cause anomia and semantic memory deficits.",
+      "uz": "Dominant yarim shardagi zararlanishi anomiya va semantik xotira nuqsonini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-para-insular-area": {
+    "uz": "Parainsulyar maydon (PI)",
+    "description": {
+      "en": "Para-insular area (PI) in the anterior inferior circular sulcus of the insula at the junction of the temporal pole/planum polare and ventral insula.",
+      "uz": "Orolchaning oldingi-pastki halqasimon egatida, chakka qutbi/planum polare bilan ventral orolcha tutashuvida joylashgan parainsulyar maydon (PI)."
+    },
+    "role": {
+      "en": "Integrates auditory-vocal signals from the anterior temporal plane with visceromotor and autonomic circuits of the ventral insula.",
+      "uz": "Oldingi chakka tekisligidan keluvchi eshituv-ovoz signallarini ventral orolchaning visseromotor va vegetativ zanjirlari bilan birlashtiradi."
+    },
+    "clinical": {
+      "en": "Involved in temporal-insular seizure spread producing autonomic and viscerosensory auras.",
+      "uz": "Chakka-orolcha tutqanoqlari tarqalishida ishtirok etib, vegetativ va visserosensor auralarni chaqiradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  },
+  "gl-area-anterior-32-prime": {
+    "uz": "Oldingi 32' maydoni (a32', dorsal oldingi belbog')",
+    "description": {
+      "en": "Area a32 prime on the dorsal bank of the anterior/midcingulate sulcus anterior to p32' and ventral to 8BM.",
+      "uz": "Oldingi-o'rta belbog' egatining dorsal qirg'og'ida, p32' dan oldinda va 8BM ostida joylashgan a32' maydoni."
+    },
+    "role": {
+      "en": "Cingulo-opercular and executive control node evaluating cognitive effort, decision conflict and error feedback.",
+      "uz": "Kognitiv zo'riqish, qaror ziddiyati va xato haqidagi qayta aloqani baholovchi belbog'-qopqoq hamda ijrochi nazorat tuguni."
+    },
+    "clinical": {
+      "en": "Lesions cause executive apathy, reduced cognitive effort and impaired conflict monitoring.",
+      "uz": "Zararlanishi ijrochi apatiya, kognitiv tashabbus pasayishi va ziddiyat monitoringi buzilishini beradi."
+    },
+    "sources": [
+      {
+        "title": "Glasser et al. 2016, Nature — A multi-modal parcellation of human cerebral cortex",
+        "url": "https://doi.org/10.1038/nature18933"
+      }
+    ]
+  }
+}
