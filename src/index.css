@@ -704,9 +704,9 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .lesson-dot.done { color: var(--foreground); background: rgba(0, 136, 255, 0.22); }
 .lesson-dot.on { background: var(--fa-accent); color: #fff; }
 
-.lesson-panel { position: absolute; top: 64px; right: var(--gap-edge); bottom: 32px; width: var(--side-panel-w); border-radius: 24px; display: flex; flex-direction: column; z-index: 4; overflow: hidden; animation: lesson-in 0.28s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.lesson-panel { position: absolute; top: 64px; right: var(--gap-edge); bottom: 32px; width: var(--side-panel-w); border-radius: 24px; display: flex; flex-direction: column; z-index: 4; overflow: hidden; animation: lesson-in var(--lg-glide-t) var(--lg-glide) both; }
 .lesson-panel.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 84%, transparent), color-mix(in oklab, var(--background) 80%, transparent)); backdrop-filter: blur(18px) saturate(1.5); -webkit-backdrop-filter: blur(18px) saturate(1.5); }
-@keyframes lesson-in { from { transform: translateX(24px); opacity: 0; } }
+@keyframes lesson-in { from { translate: 28px 0; scale: 0.96; opacity: 0; filter: blur(5px); } }
 .lesson-head { display: flex; justify-content: space-between; gap: 10px; padding: 16px 14px 8px 18px; }
 .lesson-eyebrow { font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--fa-muted); }
 .lesson-head h2 { font-size: 17px; font-weight: 650; line-height: 1.25; margin-top: 4px; }
@@ -783,6 +783,17 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 :root {
   --lg-spring: cubic-bezier(0.3, 1.55, 0.5, 1);
   --lg-glide: cubic-bezier(0.3, 1.3, 0.5, 1);
+  --lg-spring-t: 0.5s;
+  --lg-glide-t: 0.45s;
+}
+/* LG-3: the same easings as real damped springs (scripts/gen-spring.mjs) where `linear()` exists. */
+@supports (transition-timing-function: linear(0, 1)) {
+  :root {
+  --lg-spring: linear(0 0%, 0.0031 0.79%, 0.0189 2.02%, 0.053 3.49%, 0.1071 5.15%, 0.18 6.96%, 0.2686 8.9%, 0.3687 10.96%, 0.475 13.13%, 0.5824 15.39%, 0.6859 17.74%, 0.7813 20.18%, 0.8654 22.69%, 0.936 25.28%, 0.9921 27.94%, 1.0337 30.67%, 1.0616 33.46%, 1.0775 36.32%, 1.0834 39.23%, 1.0814 42.2%, 1.0738 45.23%, 1.0628 48.3%, 1.0501 51.44%, 1.0372 54.62%, 1.0253 57.85%, 1.015 61.12%, 1.0067 64.45%, 1.0006 67.82%, 0.9965 71.23%, 0.9941 74.68%, 0.9931 78.18%, 0.9932 81.72%, 0.9939 85.3%, 0.995 88.92%, 0.9963 92.57%, 0.9975 96.27%, 0.9985 100%);
+  --lg-spring-t: 0.48s;
+  --lg-glide: linear(0 0%, 0.0019 0.79%, 0.0118 2.02%, 0.0333 3.49%, 0.0675 5.15%, 0.1142 6.96%, 0.1721 8.9%, 0.2389 10.96%, 0.3123 13.13%, 0.3895 15.39%, 0.4679 17.74%, 0.5452 20.18%, 0.6192 22.69%, 0.6882 25.28%, 0.7512 27.94%, 0.8071 30.67%, 0.8557 33.46%, 0.8969 36.32%, 0.9308 39.23%, 0.9581 42.2%, 0.9792 45.23%, 0.9949 48.3%, 1.0061 51.44%, 1.0134 54.62%, 1.0177 57.85%, 1.0196 61.12%, 1.0198 64.45%, 1.0188 67.82%, 1.017 71.23%, 1.0148 74.68%, 1.0124 78.18%, 1.0101 81.72%, 1.0079 85.3%, 1.006 88.92%, 1.0043 92.57%, 1.003 96.27%, 1.0019 100%);
+  --lg-glide-t: 0.43s;
+  }
 }
 
 /* Refracting controls: a thinner frost, so the bend at the rim stays readable. */
@@ -797,17 +808,17 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
   position: absolute; left: 0; top: 0; width: var(--bw, 0px); height: var(--bh, 0px); translate: var(--bx, 0px) var(--by, 0px);
   border-radius: 999px; pointer-events: none; opacity: 0; z-index: 0;
   background: color-mix(in oklab, var(--ink) 13%, transparent);
-  transition: translate 0.46s var(--lg-glide), width 0.3s ease, height 0.3s ease, scale 0.42s var(--lg-spring), opacity 0.2s, background 0.25s, box-shadow 0.25s;
+  transition: translate var(--lg-glide-t) var(--lg-glide), width var(--lg-glide-t) var(--lg-glide), height var(--lg-glide-t) var(--lg-glide), scale var(--lg-spring-t) var(--lg-spring), opacity 0.2s, background 0.25s, box-shadow 0.25s;
 }
 .lens-blob.shown { opacity: 1; }
 /* Held: lifted above the items, clear, with a bright rim — a lens, not a tint. */
 .lens-blob.held {
-  z-index: 3; scale: 1.2 1.3;
+  z-index: 3; scale: var(--sx, 1.2) var(--sy, 1.3);
   background: color-mix(in oklab, var(--ink) 9%, transparent);
   box-shadow: var(--lg-rim), 0 8px 22px -4px color-mix(in oklab, #000 50%, transparent);
 }
 /* Tracking the pointer: no glide lag, it has to stay under the finger. */
-.lens-blob.drag { transition: translate 0.07s linear, width 0.2s ease, height 0.2s ease, scale 0.42s var(--lg-spring), opacity 0.2s, background 0.25s, box-shadow 0.25s; }
+.lens-blob.drag { transition: translate 0.07s linear, width 0.2s ease, height 0.2s ease, scale 0.16s ease-out, opacity 0.2s, background 0.25s, box-shadow 0.25s; }
 /* The item under the lens: tinted and enlarged, as if seen through it. */
 .lens-over { color: var(--fa-accent) !important; scale: 1.16; z-index: 4; }
 
@@ -874,9 +885,9 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .view-group .bar-icon { width: 40px; }
 
 /* Menus: a sibling of the glass that opens them, growing out of its corner. */
-.menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 256px; padding: 6px; border-radius: 22px; display: flex; flex-direction: column; transform-origin: 85% 0; animation: menu-in 0.34s var(--lg-spring); }
+.menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 256px; padding: 6px; border-radius: 22px; display: flex; flex-direction: column; transform-origin: 85% 0; animation: menu-in var(--lg-glide-t) var(--lg-glide) both; }
 .menu.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 50%, transparent), color-mix(in oklab, var(--background) 38%, transparent)); backdrop-filter: blur(16px) saturate(1.6); -webkit-backdrop-filter: blur(16px) saturate(1.6); }
-@keyframes menu-in { from { opacity: 0; scale: 0.6; } }
+@keyframes menu-in { from { opacity: 0; scale: 0.7; filter: blur(6px); } }
 .menu-item { display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 12px 0 8px; border-radius: 14px; font-size: 14px; text-align: left; }
 .menu-item:hover:not(:disabled) { background: var(--fa-fill); }
 .menu-item:disabled { opacity: 0.35; }
@@ -898,7 +909,7 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .seg > button:not(.seg-item).active { background: color-mix(in oklab, var(--ink) 20%, transparent); color: var(--foreground); }
 
 /* Sidebar: a floating glass column; its list scrolls, head and foot stay. */
-.sidebar { position: absolute; left: var(--edge); top: var(--edge); bottom: var(--edge); width: var(--side-w); border-radius: 26px; display: flex; flex-direction: column; z-index: 4; opacity: 0; pointer-events: none; translate: calc(-100% - var(--edge)) 0; transition: translate 0.5s var(--lg-glide), opacity 0.25s; }
+.sidebar { position: absolute; left: var(--edge); top: var(--edge); bottom: var(--edge); width: var(--side-w); border-radius: 26px; display: flex; flex-direction: column; z-index: 4; opacity: 0; pointer-events: none; translate: calc(-100% - var(--edge)) 0; transition: translate var(--lg-glide-t) var(--lg-glide), opacity 0.25s; }
 .sidebar.open { opacity: 1; pointer-events: auto; translate: 0 var(--sheet-dy, 0px); }
 .sidebar.dragging { transition: opacity 0.22s; }
 .sidebar.glass { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 44%, transparent), color-mix(in oklab, var(--background) 32%, transparent)); backdrop-filter: blur(14px) saturate(1.6); -webkit-backdrop-filter: blur(14px) saturate(1.6); }
@@ -1468,3 +1479,14 @@ body { font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiase
 .qz-return { position: absolute; z-index: 25; left: 50%; bottom: 84px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 18px; border-radius: 999px; font-size: 13px; font-weight: 600; }
 .topic-quiz small { color: var(--fa-muted); }
 @media (max-width: 860px) { .qz .qz-card { height: 100%; } .qz-row { grid-template-columns: 90px 1fr 44px; } }
+
+/* LG-3: panels and cards arrive as springs, out of a blur, the way system glass materialises. */
+.sv-card, .qz-card { animation: card-in var(--lg-glide-t) var(--lg-glide) both; }
+@keyframes card-in { from { opacity: 0; scale: 0.94; translate: 0 14px; } }
+.ai-panel { animation: panel-in var(--lg-glide-t) var(--lg-glide) both; }
+@keyframes panel-in { from { opacity: 0; scale: 0.96; translate: 28px 0; filter: blur(6px); } }
+.qz-opt.right, .qz-opt.wrong { animation: qz-pop var(--lg-spring-t) var(--lg-spring); }
+@keyframes qz-pop { from { scale: 0.97; } }
+@media (prefers-reduced-motion: reduce) {
+  .menu, .lesson-panel, .sv-card, .qz-card, .ai-panel, .qz-opt.right, .qz-opt.wrong { animation: none; }
+}

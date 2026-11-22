@@ -22,6 +22,29 @@ export function useLens(containerRef: RefObject<HTMLElement | null>, blobRef: Re
     blob.style.setProperty('--bh', `${item.offsetHeight}px`)
   }
 
+  /**
+   * Squash and stretch: a capsule that travels is drawn out along its way and relaxes on arrival, like a drop of
+   * glass pulled by the target. The longer the trip the longer the stretch; volume is roughly kept.
+   */
+  const stretch = (blob: HTMLElement, to: HTMLElement) => {
+    const from = axis === 'x' ? parseFloat(blob.style.getPropertyValue('--bx')) : parseFloat(blob.style.getPropertyValue('--by'))
+    const dest = axis === 'x' ? to.offsetLeft : to.offsetTop
+    const d = Math.abs(dest - from)
+    if (!Number.isFinite(d) || d < 6 || matchMedia('(prefers-reduced-motion: reduce)').matches || !blob.animate) return
+    const k = Math.min(0.34, 0.08 + d / 420)
+    const along = 1 + k
+    const across = 1 - k * 0.42
+    const [sx, sy] = axis === 'x' ? [along, across] : [across, along]
+    blob.animate([{ scale: '1 1' }, { scale: `${sx} ${sy}`, offset: 0.32 }, { scale: '1 1' }], { duration: 430, easing: 'ease-out' })
+  }
+
+  /** Held lens drawn out by finger speed `v` (0 at rest): longer along the strip, a little thinner across it. */
+  const drawOut = (blob: HTMLElement, v: number) => {
+    const [sx, sy] = axis === 'x' ? [1.2 + v, 1.3 - v * 0.6] : [1.2 - v * 0.6, 1.3 + v]
+    blob.style.setProperty('--sx', String(sx))
+    blob.style.setProperty('--sy', String(sy))
+  }
+
   const rest = () => {
     const box = containerRef.current
     const blob = blobRef.current
@@ -34,6 +57,7 @@ export function useLens(containerRef: RefObject<HTMLElement | null>, blobRef: Re
     // First appearance: land in place instead of flying in from the corner.
     const first = !blob.classList.contains('shown')
     if (first) blob.style.transition = 'none'
+    else stretch(blob, active)
     place(blob, active)
     blob.classList.add('shown')
     if (first) {
@@ -73,8 +97,18 @@ export function useLens(containerRef: RefObject<HTMLElement | null>, blobRef: Re
       hover = n
       hover?.classList.add('lens-over')
     }
+    let lastPos = 0
+    let lastT = 0
+    let calm = 0
     const onMove = (e: PointerEvent) => {
       const pos = axis === 'x' ? e.clientX : e.clientY
+      // The faster the finger, the more the lens is drawn out along it (decays when it stops).
+      const now = performance.now()
+      if (lastT) drawOut(blob, Math.min(0.3, (Math.abs(pos - lastPos) / Math.max(8, now - lastT)) * 0.1))
+      lastPos = pos
+      lastT = now
+      window.clearTimeout(calm)
+      calm = window.setTimeout(() => drawOut(blob, 0), 90)
       if (!moved && Math.abs(pos - start) < 4) return
       moved = true
       const rect = box.getBoundingClientRect()
@@ -100,6 +134,9 @@ export function useLens(containerRef: RefObject<HTMLElement | null>, blobRef: Re
       window.removeEventListener('pointercancel', onUp)
       const target = moved && e.type === 'pointerup' ? nearest(e) : undefined
       held.current = false
+      window.clearTimeout(calm)
+      lastT = 0
+      drawOut(blob, 0)
       blob.classList.remove('held', 'drag')
       setHover(undefined)
       // A release on the item that was pressed is an ordinary click; only a

@@ -1310,3 +1310,12 @@ yoritib yuborardi (sinab ko'rildi). Radius 4 mm (burma kengligi 2–6 mm). `aoWa
 plastinka ko'ruvchisi yo'q (AO o'tishi har meshni qattiq va kesilmagan deb ko'radi). Kalit (kamera+ko'rinish) o'zgarmasa AO qayta hisoblanmaydi.
 Store `ao` (`na:ao`), menyu «Burmalardagi soyalar». Rad etilgan yo'l — vertexga pishirish (BVH, 1.0M vertex; qo'shni qismlar tutashgani uchun tarqatishda xato).
 QOLDI: haqiqiy GPU'da kadr vaqti; telefonda sinov; LG-3.
+
+## LG-3 — harakat: prujina fizikasi (2026-11-22)
+
+Namuna video Desktop'da topilmadi, shuning uchun kadrma-kadr solishtirish o'rniga iOS prujina modeli (`spring(response, dampingFraction)`) bo'yicha:
+`scripts/gen-spring.mjs` → CSS `linear()` (36 nuqta) + o'rnashish vaqti. Tokenlar `--lg-glide` (0.34/0.78, overshoot 2 %, 0.43 s) va `--lg-spring`
+(0.30/0.62, 8.4 %, 0.48 s), `--lg-*-t` davomiylik. `useLens.ts`: sayohatda squash & stretch (WAAPI, ≤1.34× yo'l bo'ylab, 0.58× ko'ndalang),
+sudralganda tezlikka qarab cho'zilish. Menyu, dars kartasi, AI panel, plastinka/viktorina kartasi — prujina + xiralikdan paydo bo'lish
+(katta kartalarda blur yo'q: SVG qimmat). Tekshiruv: WAAPI `currentTime` bilan deterministik namuna (headless'da real vaqtli rAF kadr tashlaydi):
+71 px siljish, overshoot 2.0 %, cho'zilish 1.24× @100 ms, 430 ms da tinadi. QOLDI: haqiqiy qurilmada his qilish, video bilan solishtirish.
