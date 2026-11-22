@@ -105,7 +105,7 @@ export async function httpError(res: Response): Promise<AIError> {
     const body = await res.json()
     msg = body?.error?.message ?? body?.message ?? body?.[0]?.error?.message ?? msg
   } catch {}
-  return new AIError(kindOf(res.status), String(msg || res.status), res.status)
+  return new AIError(kindOf(res.status), `HTTP ${res.status}: ${String(msg || res.statusText || res.status)}`, res.status)
 }
 
 /** fetch() that turns a network/CORS failure into AIError('network') and an abort into AIError('abort'). */

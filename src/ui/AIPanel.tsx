@@ -353,7 +353,14 @@ function Message({ m, last }: { m: ChatMessage; last?: boolean }) {
       {m.error && (
         <p className="ai-error">
           {l(ERR[m.error.kind])}
-          {m.error.kind === 'bad' || m.error.kind === 'server' || m.error.kind === 'rate' ? <small> {m.error.message}</small> : null}
+          {/* The provider's own words always show (status, model): "it does not work" must be diagnosable from the panel. */}
+          {m.error.message ? (
+            <small>
+              {' '}
+              {m.model ? `[${m.model}] ` : ''}
+              {m.error.message}
+            </small>
+          ) : null}
         </p>
       )}
       {m.error && last && <RetryBar m={m} />}
