@@ -1545,3 +1545,20 @@ html.hands-on .part-hover { display: none; }
 .hands-retry { margin-top: 8px; padding: 5px 12px; border-radius: 999px; font-weight: 600; background: color-mix(in oklab, var(--ink) 12%, transparent); }
 @media (max-width: 760px) { .hands-hud { left: 12px; right: 12px; width: auto; bottom: 96px; } .hands-preview { width: 100%; height: auto; aspect-ratio: 16 / 9; } }
 @media (prefers-reduced-motion: reduce) { .hands-hud, .hand-ripple { animation: none; } }
+/* Camera features: two switches (hands, head) in the HUD; head row with depth slider and recenter. */
+.hands-feats { display: flex; gap: 4px; flex: 1; min-width: 0; }
+.hands-feats button {
+  display: inline-flex; align-items: center; gap: 5px; height: 28px; padding: 0 9px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; color: color-mix(in oklab, var(--ink) 62%, transparent);
+  background: color-mix(in oklab, var(--ink) 6%, transparent); transition: background 0.15s, color 0.15s, scale 0.3s var(--lg-spring);
+}
+.hands-feats button.on { color: var(--ink); background: color-mix(in oklab, var(--ink) 16%, transparent); }
+.hands-feats button:active { scale: 0.94; }
+.hands-feats .hands-dots { margin-left: 1px; }
+.hands-feats .hands-dots i { width: 6px; height: 6px; }
+.head-row { display: flex; align-items: center; gap: 8px; margin-top: 9px; }
+.head-row label { display: flex; align-items: center; gap: 8px; flex: 1; font-size: 11.5px; color: color-mix(in oklab, var(--ink) 70%, transparent); }
+.head-row input[type='range'] { flex: 1; accent-color: #8fd0ff; }
+.hands-hud { width: 284px; }
+.hands-hud-row { gap: 6px; }
+.hands-preview { width: 100%; height: auto; aspect-ratio: 16 / 9; }

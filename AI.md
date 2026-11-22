@@ -459,6 +459,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | CL-4 | Mavzu viktorinasi + Anki | Claude | ✅ 2026-11-22 (foydalanuvchi tasdiqladi; savollar sayqali AG-5b da) | master |
 | CL-5 | R2 realizm ✅ 2026-11-22 (burmalardagi soyalar); LG-3 harakat ✅ 2026-11-22 (prujina fizikasi) | Claude | ✅ foydalanuvchi tasdiqladi | master |
 | HT-1 | Qo'l bilan boshqarish (Mac kamerasi, MediaPipe) — PLAN 5.8 | Claude | 👀 2026-11-22 (foydalanuvchi o'z kamerasida sinashi kerak) | hands/HT-1 |
+| HP-1 | Bosh bilan qarash ("3D oyna", off-axis) — PLAN 5.8 | Claude | 👀 2026-11-22 (foydalanuvchi sinovi) | hands/HT-1 |
 
 **Jurnal** (yangisi pastda; har yozuv: sana · kim · nima):
 - 2026-11-21 · Claude · AI panel AI-1…AI-5 tayyor; Gemini tuzatishlari (`827e81d`, `9b18a8f`); haqiqiy kalit bilan muammo ochiq.
@@ -481,3 +482,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-22 · Claude · CL-5/LG-3: harakat. Namuna video (`Screen Recording 2026-11-15 at 18.54.53.mov`) Desktop'da yo'q bo'lib chiqdi — kadrma-kadr emas, haqiqiy prujina modeli bo'yicha: `scripts/gen-spring.mjs` (SwiftUI `response/damping` → CSS `linear()`; glide 0.34 s/0.78 → overshoot 2.0 %, 0.43 s; spring 0.30 s/0.62 → 8.4 %, 0.48 s), `@supports (linear())` bilan cubic-bezier zaxirasi. Tanlov kapsulasi sayohatda cho'ziladi (squash & stretch, masofaga qarab ≤ 1.34×, 430 ms) va sudralganda barmoq tezligiga qarab (`--sx/--sy`); menyu, dars kartasi, AI panel, plastinka/viktorina kartasi prujinada va xiralikdan chiqadi (`prefers-reduced-motion` o'chiradi). O'lchandi (WAAPI currentTime): siljish 71 px, overshoot 2.0 %, cho'zilish cho'qqisi 1.24× @100 ms, 430 ms da joyiga. TEKSHIRILMAGAN: haqiqiy qurilmada "hissi" — foydalanuvchi sinovi; kerak bo'lsa video qayta berilsa kadrlar bilan solishtiriladi.
 
 - 2026-11-22 · Claude · HT-1: qo'l bilan boshqarish (`src/hands/`), alohida worktree'da (R2 sessiyasi `BrainScene.ts` da ishlayotgan edi); PLAN 5.8 neyroxirurgik simulyator rejasi.
+- 2026-11-22 · Claude · HP-1: bosh bilan qarash (yuz detektori → off-axis proyeksiya); `hands/HT-1` master ustiga ko'chirildi (R2/LG-3 bilan).

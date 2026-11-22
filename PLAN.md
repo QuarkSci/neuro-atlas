@@ -366,6 +366,10 @@ tamoyili). Uskuna: hozircha faqat Mac kamerasi → VR'ga o'xshash, lekin ekranda
 3D shisha qo'l bo'lib ko'rinadi va asbob/modelni boshqaradi. Kiritish qatlami alohida (kamera → keyin Apple Pencil, WebXR,
 haptik), simulyator dvigateli har biri bilan bir xil ishlaydi.
 
+Shlemsiz aylanma yo'llar (2026-11-22, Wraith-VR videosi bilan solishtirib): bosh bilan qarash oynasi (HP-1), chop etilgan
+marker yopishtirilgan qalam — 6DoF asbob, iPhone giroskopi asbob sifatida, geympad titrashi (Gamepad API), qizil-ko'k ko'zoynak.
+Kuch qaytarish yo'q — ovoz/titrash/vizual bilan almashtiriladi. Tartib: HP-1 → virtual operatsiya xonasi → qalam + voksel burg'u → OP-1.
+
 Mavjud ma'lumot (`parts.json`): bosh suyagi 22 suyak, qattiq parda/o'roq/chodir, venoz sinuslar (sigmasimon, g'orsimon, to'g'ri,
 quyilish), 175 arteriya (ICA, MCA segmentlari, AComA, bazilyar), 29 kalla nervi, gipofiz, qorinchalar + Monro teshigi, STN, JHU.
 Yo'q: teri, chakka mushagi, suyak choklari (Kocher nuqtasi va pterion suyak chegaralaridan hisoblanadi).
@@ -373,6 +377,7 @@ Yo'q: teri, chakka mushagi, suyak choklari (Kocher nuqtasi va pterion suyak cheg
 | Bosqich | Qamrov | Holat |
 |---|---|---|
 | HT-1 | Qo'l kuzatuvi (MediaPipe, mahalliy), 3D shisha qo'llar, imo-ishoralar: ko'rsatish = nom, chimdish+surish = burash, tez chimdish = tanlash, ikki qo'l = zoom; HUD + kamera tasviri | ✅ 2026-11-22 (branch `hands/HT-1`) |
+| HP-1 | Bosh bilan qarash ("3D oyna"): yuz detektori → off-axis proyeksiya, ekran deraza bo'lib ko'rinadi; shlemsiz chuqurlik hissi | ✅ 2026-11-22 (branch `hands/HT-1`) |
 | HT-2 | Asbob qo'lda: kursor o'rniga zond/kateter; barmoqlar orasidagi chuqurlik → asbob chuqurligi; to'qnashuv va masofa (mm) | ⏳ |
 | OP-1 | Simulyator dvigateli + EVD: Kocher nuqtasi, kateterni qo'l bilan kiritish (burchak, chuqurlik), Monro teshigiga tegish, yo'ldagi tuzilmalar; mahorat hisoboti (vaqt, titrash, yo'l samaradorligi, xavfli tegishlar) | ⏳ |
 | OP-2 | DBS (STN/GPi/Vim): traektoriya tanlash, elektrodni sekin kiritish, MER "signal" ketma-ketligi, AC–PC koordinatalari | ⏳ |

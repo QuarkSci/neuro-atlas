@@ -141,7 +141,8 @@ Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; BigBrain 20 m
 
 **Qo'l bilan boshqarish HT-1 👀 (2026-11-22, branch `hands/HT-1`)** — reja PLAN 5.8 (neyroxirurgik simulyator: HT-2 asbob qo'lda,
 OP-1 EVD, OP-2 DBS, OP-3 trepanatsiya + pterional, ...), tafsilot `docs/HISTORY.md` "HT-1". `src/hands/` (MediaPipe, mahalliy model
-`public/models/`), "boshqa" menyusi → "Qo'l bilan boshqarish". Sinov: `node scripts/shot-hands.mjs <papka> [--camera]`;
+`public/models/`), "boshqa" menyusi → "Qo'l bilan boshqarish" va "Bosh bilan qarash (3D oyna)" (HP-1: `BrainScene.setEye`,
+off-axis; orbit kamera siljimaydi). Sinov: `node scripts/shot-hands.mjs <papka> [--camera]`;
 headless'da `__hands.getState().start('synthetic')` + `__handsDev.engine.feed(...)`.
 
 Ish uslubi bo'yicha eslatmalar (2026-11-17):

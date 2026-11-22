@@ -58,3 +58,13 @@ export const BONES: [number, number][] = [
 export const PALM = [0, 1, 5, 9, 13, 17]
 
 export const TIPS = [4, 8, 12, 16, 20]
+
+/** The viewer's head, from the face detector: eyes' midpoint (normalised image coords, un-mirrored) and the gap between the eyes. */
+export interface FaceObs {
+  x: number
+  y: number
+  /** Inter-ocular distance in frame heights (aspect-corrected) — grows as the head comes closer. */
+  iod: number
+  aspect: number
+  score: number
+}

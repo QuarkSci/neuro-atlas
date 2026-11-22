@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, Check, Ellipsis, Hand, Info, Languages, Palette, SunMoon, Sun, PanelLeft, RotateCw, Search, Slice, Sparkles } from 'lucide-react'
+import { Box, Check, Ellipsis, Hand, Info, ScanFace, Languages, Palette, SunMoon, Sun, PanelLeft, RotateCw, Search, Slice, Sparkles } from 'lucide-react'
 import { LEAF_PARTS } from '@/data'
 import { useT } from '@/i18n'
 import { useAtlas, type View } from '@/store/useAtlas'
@@ -258,24 +258,31 @@ export function ViewGroup() {
   )
 }
 
-/** "More" menu: switch hand control (webcam) on or off. */
+/** "More" menu: the camera features (hand control, head-tracked view), each on its own switch. */
 function HandsMenuItem({ onDone }: { onDone: () => void }) {
   const lang = useAtlas((s) => s.lang)
-  const status = useHands((s) => s.status)
-  const on = status === 'starting' || status === 'on'
-  return (
+  const hands = useHands((s) => s.hands)
+  const head = useHands((s) => s.head)
+  const t = HAND_STRINGS[lang]
+  const item = (f: 'hands' | 'head', on: boolean, label: string, icon: React.ReactNode) => (
     <button
       role="menuitemcheckbox"
       aria-checked={on}
       className="menu-item"
       onClick={() => {
-        useHands.getState().toggle()
+        useHands.getState().toggle(f)
         onDone()
       }}
     >
       <span className="menu-check">{on && <Check size={15} />}</span>
-      {HAND_STRINGS[lang].menu}
-      <Hand size={16} className="menu-trail" />
+      {label}
+      {icon}
     </button>
+  )
+  return (
+    <>
+      {item('hands', hands, t.menu, <Hand size={16} className="menu-trail" />)}
+      {item('head', head, t.headMenu, <ScanFace size={16} className="menu-trail" />)}
+    </>
   )
 }

@@ -1,10 +1,10 @@
 import * as T from 'three'
 import { activeScene } from '@/scene/sceneRef'
 import { CameraTracker } from './tracker'
-import { HandFilter } from './oneEuro'
+import { HandFilter, OneEuro } from './oneEuro'
 import { HandRig, type HandPose } from './rig'
-import { BONES, INDEX_TIP, MIDDLE_MCP, THUMB_TIP, WRIST, type HandFrame, type Pt } from './types'
-import type { Gesture, HandsError, HandsState } from './useHands'
+import { BONES, INDEX_TIP, MIDDLE_MCP, THUMB_TIP, WRIST, type FaceObs, type HandFrame, type Pt } from './types'
+import { useHands, type Gesture, type HandsError, type HandsState } from './useHands'
 import { imageToScreen, REACH_GAIN } from './mapping'
 
 type Side = 'left' | 'right'
@@ -23,6 +23,16 @@ const TAP_MS = 380
 const TAP_PX = 16
 /** Lost for longer than this → the hand is gone (fade, release). */
 const LOST_MS = 350
+/** Head lost for longer than this → the view eases back to centre. */
+const FACE_LOST_MS = 600
+/**
+ * Window effect: eye offset in window half-widths per frame-width of head travel. A webcam
+ * frame spans ~70 cm at arm's length and a laptop screen's half-width is ~15 cm, so the
+ * physically right value is ≈ 4.5; less reads as depth without the scene swimming.
+ */
+const HEAD_GAIN_X = 3
+/** Fraction of the viewing distance the eye moves in per relative change of the eye gap. */
+const HEAD_GAIN_Z = 0.7
 
 interface SideState {
   filterImg: HandFilter
@@ -58,12 +68,23 @@ export class HandsEngine {
   private lastT = 0
   private aspect = 16 / 9
   private synthetic: HandFrame | null = null
+  /** Synthetic head (undefined = use the camera's). */
+  private syntheticFace: FaceObs | null | undefined = undefined
+  private headF = { x: new OneEuro(0.9, 0.8), y: new OneEuro(0.9, 0.8), iod: new OneEuro(0.6, 0.3) }
+  private head = { x: 0, y: 0, iod: 0, seenAt: -1e9 }
+  /** Neutral head position, averaged over the first frames (and again on "recenter"). */
+  private centre: { x: number; y: number; iod: number; n: number } | null = null
+  private recenterSeen = 0
+  private eye = { x: 0, y: 0, z: 0 }
+  private eyeOn = false
   private zoomDist: number | null = null
   private velocity = { yaw: 0, pitch: 0 }
   private hovering = false
   private stopped = false
   private preview: { canvas: HTMLCanvasElement; ctx: CanvasRenderingContext2D } | null = null
   private lastFrame: HandFrame | null = null
+  /** Frames of a seen face averaged into the "straight ahead" centre. */
+  calibFrames = 15
   /** Longest pinch (ms) that still counts as a tap. */
   tapMs = TAP_MS
   /** Frames processed so far (headless checks wait on it). */
@@ -118,6 +139,11 @@ export class HandsEngine {
     this.synthetic = frame
   }
 
+  /** Headless checks: a synthetic head (null = no face; undefined → back to the camera). */
+  feedFace(face: FaceObs | null | undefined) {
+    this.syntheticFace = face
+  }
+
   resize() {
     this.rig.resize(window.innerWidth, window.innerHeight)
   }
@@ -129,14 +155,88 @@ export class HandsEngine {
     const dt = Math.min(0.1, this.lastT ? (now - this.lastT) / 1000 : 1 / 60)
     this.lastT = now
 
-    const frame = this.synthetic ? { ...this.synthetic, time: now } : this.tracker?.detect(now)
-    if (frame) this.ingest(frame, now)
-    else if (this.lastFrame && now - this.lastFrame.time > LOST_MS) this.ingest({ hands: [], aspect: this.aspect, time: now }, now)
+    const want = useHands.getState()
+    if (this.tracker) {
+      this.tracker.wantHands = want.hands
+      this.tracker.wantFace = want.head
+    }
+    const cam = this.tracker?.detect(now) ?? null
 
-    this.gestures(dt, now)
+    if (want.hands) {
+      const frame = this.synthetic ? { ...this.synthetic, time: now } : cam?.hands
+      if (frame) this.ingest(frame, now)
+      else if (this.lastFrame && now - this.lastFrame.time > LOST_MS) this.ingest({ hands: [], aspect: this.aspect, time: now }, now)
+      this.gestures(dt, now)
+    } else if (this.lastFrame) {
+      // Hands switched off: let them fade, drop the cursor and any hover they held.
+      this.ingest({ hands: [], aspect: this.aspect, time: now }, now)
+      this.lastFrame = null
+      this.hooks.cursor(null)
+      if (this.hovering) activeScene()?.externalHover(null)
+      this.hovering = false
+      this.hooks.report({ count: 0, gesture: 'none' })
+    }
+
+    this.headTick(want.head, want.headGain, want.recenterTick, this.syntheticFace !== undefined ? this.syntheticFace : cam?.face, now, dt)
+
     this.rig.theme = this.hooks.theme()
-    this.rig.render(dt)
+    if (want.hands || this.rig.anyVisible) this.rig.render(dt)
     this.drawPreview()
+  }
+
+  /**
+   * Head → eye: the eyes' midpoint relative to the calibrated centre, mirrored so moving
+   * your head right moves the eye right; the eye gap gives distance (closer = larger).
+   */
+  private headTick(on: boolean, gain: number, recenter: number, face: FaceObs | null | undefined, now: number, dt: number) {
+    const scene = activeScene()
+    if (!on) {
+      if (this.eyeOn) scene?.setEye(null)
+      this.eyeOn = false
+      this.centre = null
+      this.hooks.report({ face: false })
+      return
+    }
+    if (recenter !== this.recenterSeen) {
+      this.recenterSeen = recenter
+      this.centre = null
+    }
+    if (face) {
+      const h = this.head
+      if (now - h.seenAt > FACE_LOST_MS) for (const f of Object.values(this.headF)) f.reset()
+      h.seenAt = now
+      h.x = this.headF.x.filter(face.x, now)
+      h.y = this.headF.y.filter(face.y, now)
+      h.iod = this.headF.iod.filter(face.iod, now)
+      this.aspect = face.aspect
+      // Calibrate: the first ~half second of a seen face is "straight ahead".
+      const c = this.centre
+      if (!c || c.n < this.calibFrames) {
+        const n = (c?.n ?? 0) + 1
+        this.centre = c ? { x: c.x + (h.x - c.x) / n, y: c.y + (h.y - c.y) / n, iod: c.iod + (h.iod - c.iod) / n, n } : { x: h.x, y: h.y, iod: h.iod, n: 1 }
+      }
+    }
+    const seen = now - this.head.seenAt <= FACE_LOST_MS
+    this.hooks.report({ face: seen })
+    let target = { x: 0, y: 0, z: 0 }
+    if (seen && this.centre) {
+      const c = this.centre
+      const W = window.innerWidth,
+        H = window.innerHeight
+      const ex = (c.x - this.head.x) * HEAD_GAIN_X * gain
+      // Same physical travel up as sideways: frame heights → widths (× camera aspect), window widths → heights (× screen aspect).
+      const ey = ((c.y - this.head.y) / this.aspect) * HEAD_GAIN_X * gain * (W / H)
+      const ez = (1 - c.iod / Math.max(1e-4, this.head.iod)) * HEAD_GAIN_Z * gain
+      target = { x: T.MathUtils.clamp(ex, -1.6, 1.6), y: T.MathUtils.clamp(ey, -1.6, 1.6), z: T.MathUtils.clamp(ez, -0.5, 0.4) }
+    }
+    // Lost face: glide home rather than snap.
+    const k = seen ? 1 : 1 - Math.exp(-3 * dt)
+    const e = this.eye
+    e.x += (target.x - e.x) * k
+    e.y += (target.y - e.y) * k
+    e.z += (target.z - e.z) * k
+    scene?.setEye(e)
+    this.eyeOn = true
   }
 
   private ingest(frame: HandFrame, now: number) {
@@ -285,6 +385,30 @@ export class HandsEngine {
       ctx.drawImage(v, (v.videoWidth - sw) / 2, (v.videoHeight - sh) / 2, sw, sh, 0, 0, w, h)
     }
     ctx.restore()
+    // Head: the calibrated centre (cross) and where the eyes are now (ring).
+    const toPv = (x: number, y: number) => {
+      const m = imageToScreen({ x, y, z: 0 }, this.aspect, w, h)
+      return { x: w / 2 + (m.x - w / 2) / REACH_GAIN, y: h / 2 + (m.y - h / 2) / REACH_GAIN }
+    }
+    if (this.eyeOn && this.centre) {
+      const c = toPv(this.centre.x, this.centre.y)
+      ctx.strokeStyle = 'rgba(255,255,255,0.7)'
+      ctx.lineWidth = 1.5
+      ctx.beginPath()
+      ctx.moveTo(c.x - 6, c.y)
+      ctx.lineTo(c.x + 6, c.y)
+      ctx.moveTo(c.x, c.y - 6)
+      ctx.lineTo(c.x, c.y + 6)
+      ctx.stroke()
+      if (performance.now() - this.head.seenAt <= FACE_LOST_MS) {
+        const p = toPv(this.head.x, this.head.y)
+        ctx.strokeStyle = '#4cd964'
+        ctx.lineWidth = 2
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, 9, 0, Math.PI * 2)
+        ctx.stroke()
+      }
+    }
     const f = this.lastFrame
     if (!f) return
     ctx.lineWidth = 2
@@ -321,6 +445,7 @@ export class HandsEngine {
     this.tracker?.stop()
     this.tracker = null
     if (this.hovering) activeScene()?.externalHover(null)
+    if (this.eyeOn) activeScene()?.setEye(null)
     this.hooks.cursor(null)
     this.rig.dispose()
   }

@@ -1,4 +1,4 @@
-import type { HandFrame, Pt, TrackedHand } from './types'
+import type { FaceObs, HandFrame, Pt, TrackedHand } from './types'
 
 /**
  * Synthetic hands for headless checks (no camera there): a canonical open or
@@ -60,3 +60,6 @@ export function synthHand(cx: number, cy: number, opts: { pinch?: boolean; side?
 }
 
 export const synthFrame = (hands: TrackedHand[], time = performance.now()): HandFrame => ({ hands, aspect: ASPECT, time })
+
+/** A head at image point (x, y) of the un-mirrored 16:9 frame; `iod` = eye gap in frame heights (≈ 0.11 at arm's length). */
+export const synthFace = (x: number, y: number, iod = 0.11): FaceObs => ({ x, y, iod, aspect: ASPECT, score: 1 })

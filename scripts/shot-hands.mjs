@@ -56,14 +56,23 @@ try {
   }
 
   if (camera) {
-    await page.evaluate(() => window.__hands.getState().start('camera'))
+    await page.evaluate(() => {
+      window.__hands.getState().setFeature('hands', true, 'camera')
+      window.__hands.getState().setFeature('head', true)
+    })
     await page.waitForFunction(() => ['on', 'error'].includes(window.__hands.getState().status), { timeout: 60000 })
     const s = await page.evaluate(() => ({ status: window.__hands.getState().status, error: window.__hands.getState().error }))
     check(s.status === 'on', `camera path starts (status ${s.status}${s.error ? ', ' + s.error : ''})`)
-    await sleep(1500)
+    await sleep(4000)
+    // Both models are created (MediaPipe fetches them itself, so they do not show in resource timing).
+    const ready = await page.evaluate(() => {
+      const tr = window.__handsDev.engine.tracker
+      return { hands: !!tr?.landmarker, face: !!tr?.face }
+    })
+    check(ready.hands && ready.face, `hand and face models running (hands ${ready.hands}, face ${ready.face})`)
     await shot('camera')
   } else {
-    await page.evaluate(() => window.__hands.getState().start('synthetic'))
+    await page.evaluate(() => window.__hands.getState().setFeature('hands', true, 'synthetic'))
     await page.waitForFunction(() => window.__hands.getState().status === 'on' && window.__handsDev)
     // Headless WebGL is software-rendered (a frame or two per second), so steps wait on engine frames, not on time.
     const feed = (hands, frames = 1) =>
@@ -133,11 +142,82 @@ try {
     check(zg === 'zoom' && z1 < z0 * 0.85, `two-hand pull zooms in (${zg}, ${z0.toFixed(0)} → ${z1.toFixed(0)} mm)`)
     await shot('4-zoom')
 
+    // 6 (after 5). Head-tracked view: the window plane stays, nearer things shift.
+    const headCheck = async () => {
+      await page.evaluate(() => {
+        window.__oldEngine = window.__handsDev.engine
+        window.__hands.getState().setFeature('hands', false)
+        window.__hands.getState().setFeature('head', true)
+        window.__atlas.getState().setView('three-quarter')
+      })
+      // Everything off then on again is a new camera session: wait for the rebuilt engine.
+      await page.waitForFunction(() => window.__handsDev.engine !== window.__oldEngine && window.__hands.getState().status === 'on')
+      await page.evaluate(() => (window.__handsDev.engine.calibFrames = 1))
+      await sleep(5000) // let the fly-to finish
+      const face = (x, y, iod = 0.11, frames = 3) =>
+        page.evaluate(
+          async (x, y, iod, frames) => {
+            const d = window.__handsDev
+            d.engine.feedFace(d.synthFace(x, y, iod))
+            const until = d.engine.ticks + frames
+            while (d.engine.ticks < until) await new Promise((r) => setTimeout(r, 10))
+          },
+          x,
+          y,
+          iod,
+          frames,
+        )
+      // Screen position of the orbit target (on the window plane) and of a point 60 mm in front of it.
+      const probe = () =>
+        page.evaluate(() => {
+          const sc = window.__scene
+          const T = sc.camera.position.constructor
+          const tgt = sc.controls.target.clone()
+          const toCam = sc.camera.position.clone().sub(tgt).normalize()
+          // Off the view axis, so both sideways moves and leaning in show on it.
+          const right = new T().setFromMatrixColumn(sc.camera.matrixWorld, 0)
+          const near = tgt.clone().add(toCam.multiplyScalar(60)).add(right.multiplyScalar(40))
+          const W = sc.hostElement.clientWidth,
+            H = sc.hostElement.clientHeight
+          const px = (v) => [((v.x + 1) / 2) * W, ((1 - v.y) / 2) * H]
+          return sc.withEye(() => ({ tgt: px(tgt.clone().project(sc.camera)), near: px(near.clone().project(sc.camera)) }))
+        })
+      await face(0.5, 0.45, 0.11, 3) // calibrate: straight ahead
+      const p0 = await probe()
+      await shot('5-head-centre')
+      await face(0.36, 0.45, 0.11, 4) // head to the viewer's right (the un-mirrored frame shows it left)
+      const p1 = await probe()
+      await shot('6-head-right')
+      await face(0.64, 0.45, 0.11, 4)
+      const p2 = await probe()
+      await shot('7-head-left')
+      const d = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1])
+      check(d(p0.tgt, p1.tgt) < 1.5 && d(p0.tgt, p2.tgt) < 1.5, `window plane stays put (target moved ${d(p0.tgt, p1.tgt).toFixed(2)} / ${d(p0.tgt, p2.tgt).toFixed(2)} px)`)
+      check(
+        d(p0.near, p1.near) > 8 && p1.near[0] < p0.near[0] && p2.near[0] > p0.near[0],
+        `nearer point shifts against the head (${(p1.near[0] - p0.near[0]).toFixed(1)} / ${(p2.near[0] - p0.near[0]).toFixed(1)} px)`,
+      )
+      const cam0 = await cam()
+      await face(0.5, 0.45, 0.11, 4)
+      const back = await probe()
+      check(d(back.near, p0.near) < 1.5, `back to centre restores the view (${d(back.near, p0.near).toFixed(2)} px)`)
+      const cam1 = await cam()
+      check(Math.hypot(...cam1.p.map((v, i) => v - cam0.p[i])) < 1e-6, 'orbit camera itself never moves')
+      await face(0.5, 0.45, 0.14, 4) // closer
+      const pz = await probe()
+      check(
+        d(pz.tgt, p0.tgt) < 1.5 && d(pz.near, pz.tgt) > d(p0.near, p0.tgt) + 0.5,
+        `leaning in keeps the window, depth reacts (${d(pz.near, pz.tgt).toFixed(1)} vs ${d(p0.near, p0.tgt).toFixed(1)} px)`,
+      )
+      await page.evaluate(() => window.__hands.getState().setFeature('head', false))
+    }
+
     // 5. Hands gone: they fade and hover clears.
     await page.evaluate(() => window.__handsDev.engine.feed(null))
     await sleep(2500)
     const gone = await page.evaluate(() => ({ count: window.__hands.getState().count, hovered: window.__atlas.getState().hovered }))
     check(gone.count === 0 && !gone.hovered, `hands leave cleanly (${gone.count}, ${gone.hovered})`)
+    await headCheck()
   }
 } finally {
   await browser.close()

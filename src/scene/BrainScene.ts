@@ -329,6 +329,7 @@ export class BrainScene {
     // While the camera moves frames are plain; the occlusion pass joins once it has rested.
     c.addEventListener('end', () => {
       window.clearTimeout(this.aoTimer)
+    window.clearTimeout(this.eyeRestTimer)
       this.aoTimer = window.setTimeout(() => {
         this.interacting = false
         this.dirty = true
@@ -1007,7 +1008,89 @@ export class BrainScene {
     return this.host
   }
 
+  // ── Head-coupled perspective ("window" view, src/hands) ─────────────
+  //
+  // The screen is treated as a window onto the scene: the viewer's eye moves
+  // with their head, the window (the plane through the orbit target, framed as
+  // the camera frames it now) stays put, and the frustum skews to keep it so —
+  // an off-axis projection (Kooima, "Generalized Perspective Projection").
+  // The orbit camera itself is never moved: the eye is applied around drawing
+  // and picking only, so OrbitControls, fly-to and framing are unaffected.
+
+  private eye = { x: 0, y: 0, z: 0, on: false }
+  private eyeMovingUntil = 0
+  private eyeRestTimer = 0
+  private eyeSaved = { pos: new T.Vector3(), proj: new T.Matrix4(), projInv: new T.Matrix4() }
+
+  /**
+   * Viewer's eye relative to the screen centre: x, y in half-widths / half-heights of the window
+   * (+x right, +y up), z as a fraction of the viewing distance towards the scene. null switches it off.
+   */
+  setEye(e: { x: number; y: number; z: number } | null) {
+    const on = !!e
+    const next = e ?? { x: 0, y: 0, z: 0 }
+    const moved = Math.abs(next.x - this.eye.x) + Math.abs(next.y - this.eye.y) + Math.abs(next.z - this.eye.z) > 1e-4
+    if (!moved && on === this.eye.on) return
+    this.eye = { ...next, on }
+    this.dirty = true
+    // Crease shadows wait while the head moves (they would be recomputed every frame), and come back once it rests.
+    this.eyeMovingUntil = performance.now() + 220
+    window.clearTimeout(this.eyeRestTimer)
+    this.eyeRestTimer = window.setTimeout(() => (this.dirty = true), 240)
+  }
+
+  private withEye<R>(fn: () => R): R {
+    const e = this.eye
+    if (!e.on || Math.abs(e.x) + Math.abs(e.y) + Math.abs(e.z) < 1e-5) return fn()
+    const cam = this.camera
+    const sv = this.eyeSaved
+    sv.pos.copy(cam.position)
+    sv.proj.copy(cam.projectionMatrix)
+    sv.projInv.copy(cam.projectionMatrixInverse)
+    cam.updateMatrixWorld()
+    // The current frustum (view offset for side panels and zoom included), read back from the matrix.
+    const m = cam.projectionMatrix.elements
+    const n = cam.near
+    const l = (n * (m[8] - 1)) / m[0],
+      r = (n * (m[8] + 1)) / m[0]
+    const b = (n * (m[9] - 1)) / m[5],
+      t = (n * (m[9] + 1)) / m[5]
+    // The window: that frustum's cross-section at the orbit target.
+    const D = Math.max(cam.near * 4, cam.position.distanceTo(this.controls.target))
+    const k = D / n
+    const W = ((r - l) / 2) * k,
+      H = ((t - b) / 2) * k
+    const cx = ((r + l) / 2) * k,
+      cy = ((t + b) / 2) * k
+    // The eye, in camera space (the camera sits at the origin; e = 0 reproduces the plain frame exactly).
+    const ex = e.x * W,
+      ey = e.y * H
+    const ez = T.MathUtils.clamp(e.z, -0.6, 0.45) * D
+    const d = D - ez
+    const right = new T.Vector3().setFromMatrixColumn(cam.matrixWorld, 0)
+    const up = new T.Vector3().setFromMatrixColumn(cam.matrixWorld, 1)
+    const back = new T.Vector3().setFromMatrixColumn(cam.matrixWorld, 2)
+    cam.position.addScaledVector(right, ex).addScaledVector(up, ey).addScaledVector(back, -ez)
+    // Skew the frustum so the window's edges stay where they are on screen.
+    const s = n / d
+    cam.projectionMatrix.makePerspective((cx - W - ex) * s, (cx + W - ex) * s, (cy + H - ey) * s, (cy - H - ey) * s, n, cam.far)
+    cam.projectionMatrixInverse.copy(cam.projectionMatrix).invert()
+    cam.updateMatrixWorld()
+    try {
+      return fn()
+    } finally {
+      cam.position.copy(sv.pos)
+      cam.projectionMatrix.copy(sv.proj)
+      cam.projectionMatrixInverse.copy(sv.projInv)
+      cam.updateMatrixWorld()
+    }
+  }
+
   private pick(x: number, y: number): string | null {
+    return this.withEye(() => this.pickRaw(x, y))
+  }
+
+  private pickRaw(x: number, y: number): string | null {
     const w = this.host.clientWidth,
       h = this.host.clientHeight
     const ndc = new T.Vector2((x / w) * 2 - 1, -(y / h) * 2 + 1)
@@ -1881,10 +1964,13 @@ export class BrainScene {
     if (this.dirty) this.settle = Math.max(this.settle, 3)
     if (this.settle > 0) {
       this.settle--
-      this.draw(s)
-      this.updateLabels()
-      this.updateMarkers()
-      this.updateLessonLabels()
+      // Labels and markers are projected through the same (head-coupled) camera the frame is drawn with.
+      this.withEye(() => {
+        this.draw(s)
+        this.updateLabels()
+        this.updateMarkers()
+        this.updateLessonLabels()
+      })
       this.dirty = false
     }
   }
@@ -1894,7 +1980,7 @@ export class BrainScene {
    * in a lesson — the occlusion pass sees every mesh as solid and unclipped) and the camera at rest.
    */
   private aoWanted(s: SceneSnapshot) {
-    return s.ao && !this.interacting && this.amount < 0.02 && this.peel < 0.005 && !s.cutaway && !s.isolate && !s.lesson && !this.cutKey && !s.sectionId
+    return s.ao && !this.interacting && performance.now() > this.eyeMovingUntil && this.amount < 0.02 && this.peel < 0.005 && !s.cutaway && !s.isolate && !s.lesson && !this.cutKey && !s.sectionId
   }
 
   private draw(s: SceneSnapshot) {

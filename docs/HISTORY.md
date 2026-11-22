@@ -1344,3 +1344,25 @@ kamerasi → "VR'dek, lekin ekranda, qo'l ekranda chiroyli ko'rinib tursin". Rej
   chiqib ketish) va `--camera` (Chrome soxta kamerasi: WASM + model + GPU delegati ishga tushadi). Headless WebGL ≈ 1.5 kadr/s —
   skript vaqtni emas, `engine.ticks` ni kutadi; tez chimdish oynasi testda `engine.tapMs` bilan kengaytiriladi.
   Qora va yorug' rejim, uz/en screenshot. Tekshirilmadi: haqiqiy qo'l bilan (foydalanuvchi kamerasi), telefon kengligi.
+
+## HP-1 — bosh bilan qarash, "3D oyna" (2026-11-22)
+
+Foydalanuvchi Wraith-VR (Ghost Medical, tizza protezi VR simulyatori) videosini ko'rsatib "shu darajaga chiqa olamizmi, VR
+uskunasi yo'q, aylanma yo'l bilan" deb so'radi. Aylanma yo'llar PLAN 5.8 da; birinchisi — head-coupled perspective (Johnny Lee
+Wii, 2007; off-axis proyeksiya — Kooima "Generalized Perspective Projection").
+
+- Yuz: MediaPipe `FaceDetector` (BlazeFace short range, 230 KB, Apache-2.0, `public/models/`) — ko'zlar o'rtasi + ko'zlar
+  orasidagi masofa (yaqinlik). Landmarker emas: 6 nuqta yetarli va ancha yengil. `CameraTracker` endi `wantHands`/`wantFace`
+  bilan har modelni birinchi kerak bo'lganda yuklaydi; bitta kamera ikkala funksiyaga xizmat qiladi.
+- `BrainScene.setEye({x,y,z} | null)` + `withEye(fn)`: joriy frustumni matritsadan o'qiydi (yon panel view offset va zoom
+  bilan), nishon orqali tekislik = "oyna"; ko'z kamera fazosida siljiydi, frustum qiyshayadi, oyna chetlari ekranda joyida qoladi.
+  Orbit kamera HECH QACHON siljimaydi — ko'z faqat chizish (yorliqlar, markerlar bilan birga) va `pick` atrofida qo'llanadi,
+  shuning uchun OrbitControls, fly-to, ramkalash buzilmaydi. Bosh harakatlanayotganda SSAO kutadi (`eyeMovingUntil`).
+- Engine: One Euro (x,y 0.9/0.8; iod 0.6/0.3), birinchi 15 kadr — "to'g'ri qarash" markazi ("Markazlash" tugmasi qayta oladi),
+  `HEAD_GAIN_X` 3 (fizik ≈ 4.5 — kamroq bo'lsa sahna "suzmaydi"), vertikal kamera va ekran aspekti bilan tenglashtirilgan,
+  yaqinlik `HEAD_GAIN_Z` 0.7; yuz yo'qolsa ko'rinish markazga silliq qaytadi. HUD'da kuch slayderi (`na:head-gain`).
+- Store: `hands` va `head` mustaqil (`setFeature`), kamera ikkalasi o'chsa to'xtaydi; `session` — hammasi o'chib qayta yoqilsa
+  dvigatel qayta quriladi (avval holat "ishga tushmoqda" da qotib qolardi). Menyu: "Bosh bilan qarash (3D oyna)".
+- Tekshiruv (`scripts/shot-hands.mjs`): oyna tekisligi 0.00 px siljiydi, 60 mm oldingi nuqta ±21.6 px (boshga qarshi —
+  to'g'ri yo'nalish), markazga qaytish 0.00 px, orbit kamera siljimaydi, yaqinlashganda chuqurlik o'sadi; `--camera` da
+  ikkala model ishlaydi. Tekshirilmadi: haqiqiy yuz bilan (foydalanuvchi), effekt kuchining qulayligi.

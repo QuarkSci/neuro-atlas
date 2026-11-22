@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Hand, Video, VideoOff, X } from 'lucide-react'
+import { Crosshair, Hand, ScanFace, Video, VideoOff, X } from 'lucide-react'
 import { PART_BY_ID } from '@/data'
 import { useAtlas } from '@/store/useAtlas'
 import { useL } from '@/i18n'
@@ -7,17 +7,19 @@ import { activeScene } from '@/scene/sceneRef'
 import { HandsEngine } from './engine'
 import { useHands } from './useHands'
 import { HAND_STRINGS } from './strings'
-import { synthFrame, synthHand } from './synth'
+import { synthFace, synthFrame, synthHand } from './synth'
 
 /**
- * Hand control: the person's own hands drawn over the atlas (their canvas sits
- * above everything but never takes a pointer event), a cursor ring that names
- * what the index finger points at, and a small glass panel with the camera
- * picture and the current gesture.
+ * Camera features. Hand control: the person's own hands drawn over the atlas
+ * (their canvas sits above everything but never takes a pointer event) and a
+ * cursor ring that names what the index finger points at. Head-tracked view:
+ * the scene's perspective follows the head (BrainScene.setEye). A small glass
+ * panel holds the camera picture, both switches and the current hint.
  */
 export function HandsLayer() {
   const status = useHands((s) => s.status)
   const source = useHands((s) => s.source)
+  const session = useHands((s) => s.session)
   const active = status === 'starting' || status === 'on'
   const canvas = useRef<HTMLCanvasElement>(null)
   const cursor = useRef<HTMLDivElement>(null)
@@ -63,7 +65,7 @@ export function HandsLayer() {
         (code) => useHands.getState().report({ status: 'error', error: code }),
       )
     else useHands.getState().report({ status: 'on' })
-    if (import.meta.env.DEV) (window as unknown as { __handsDev: object }).__handsDev = { engine: eng, synthHand, synthFrame }
+    if (import.meta.env.DEV) (window as unknown as { __handsDev: object }).__handsDev = { engine: eng, synthHand, synthFrame, synthFace }
     // Leaving the tab releases the camera; coming back does not silently turn it on again.
     const onHide = () => document.hidden && source === 'camera' && useHands.getState().stop()
     document.addEventListener('visibilitychange', onHide)
@@ -74,7 +76,7 @@ export function HandsLayer() {
       eng.dispose()
       setEngine(null)
     }
-  }, [active, source])
+  }, [active, source, session])
 
   return (
     <>
@@ -99,7 +101,7 @@ function HoverName() {
 function HandsHud({ engine }: { engine: HandsEngine | null }) {
   const lang = useAtlas((s) => s.lang)
   const t = HAND_STRINGS[lang]
-  const { status, error, preview, count, gesture, setPreview, stop, start, source } = useHands()
+  const { status, error, preview, count, gesture, setPreview, stop, start, source, hands, head, face, headGain, setHeadGain, recenter, toggle } = useHands()
   const pv = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -108,18 +110,28 @@ function HandsHud({ engine }: { engine: HandsEngine | null }) {
     return () => engine.setPreviewCanvas(null)
   }, [engine, preview, source, status])
 
-  const hint =
-    status === 'starting' ? t.starting : status === 'error' ? t[error ?? 'load'] : count === 0 ? t.noHands : gesture === 'grab' ? t.grab : gesture === 'zoom' ? t.zoom : t.point
+  const handHint = count === 0 ? t.noHands : gesture === 'grab' ? t.grab : gesture === 'zoom' ? t.zoom : t.point
+  const headHint = face ? t.headHint : t.noFace
+  const hint = status === 'starting' ? t.starting : status === 'error' ? t[error ?? 'load'] : hands && count > 0 ? handHint : head ? headHint : handHint
 
   return (
     <div className={`hands-hud glass ${status}`} role="status" aria-live="polite">
       <div className="hands-hud-row">
-        <Hand size={16} className="hands-hud-icon" />
-        <span className="hands-hud-title">{t.title}</span>
-        <span className="hands-dots" aria-hidden>
-          <i className={count >= 1 ? 'on' : ''} />
-          <i className={count >= 2 ? 'on' : ''} />
-        </span>
+        <div className="hands-feats" role="group" aria-label={t.camera}>
+          <button className={hands ? 'on' : ''} aria-pressed={hands} onClick={() => toggle('hands')} title={t.menu}>
+            <Hand size={14} /> {t.title}
+            <span className="hands-dots" aria-hidden>
+              <i className={hands && count >= 1 ? 'on' : ''} />
+              <i className={hands && count >= 2 ? 'on' : ''} />
+            </span>
+          </button>
+          <button className={head ? 'on' : ''} aria-pressed={head} onClick={() => toggle('head')} title={t.headMenu}>
+            <ScanFace size={14} /> {t.head}
+            <span className="hands-dots" aria-hidden>
+              <i className={head && face ? 'on' : ''} />
+            </span>
+          </button>
+        </div>
         {source === 'camera' && status === 'on' && (
           <button className="hands-hud-btn" aria-pressed={preview} title={t.preview} aria-label={t.preview} onClick={() => setPreview(!preview)}>
             {preview ? <Video size={15} /> : <VideoOff size={15} />}
@@ -130,6 +142,17 @@ function HandsHud({ engine }: { engine: HandsEngine | null }) {
         </button>
       </div>
       {preview && source === 'camera' && status === 'on' && <canvas ref={pv} className="hands-preview" width={224} height={126} aria-label={t.preview} />}
+      {head && status === 'on' && (
+        <div className="head-row">
+          <label>
+            <span>{t.strength}</span>
+            <input type="range" min={0.3} max={2} step={0.05} value={headGain} onChange={(e) => setHeadGain(+e.target.value)} aria-label={t.strength} />
+          </label>
+          <button className="hands-hud-btn" title={t.recenter} aria-label={t.recenter} onClick={recenter}>
+            <Crosshair size={15} />
+          </button>
+        </div>
+      )}
       <p className="hands-hint">{hint}</p>
       {status === 'error' ? (
         <button className="hands-retry" onClick={() => start()}>
