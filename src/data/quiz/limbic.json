@@ -279,8 +279,8 @@
     "plate": "bg-pallidal",
     "sources": [
       {
-        "title": "Purves, Neuroscience — The amygdala (NCBI Bookshelf)",
-        "url": "https://www.ncbi.nlm.nih.gov/books/NBK11020/"
+        "title": "Purves, Neuroscience — The importance of the amygdala (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10891/"
       }
     ]
   },
@@ -684,8 +684,8 @@
     "plate": "bg-commissural",
     "sources": [
       {
-        "title": "Purves, Neuroscience — The amygdala (NCBI Bookshelf)",
-        "url": "https://www.ncbi.nlm.nih.gov/books/NBK11020/"
+        "title": "Purves, Neuroscience — The importance of the amygdala (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10891/"
       }
     ]
   },
@@ -725,8 +725,8 @@
     "plate": "thalamus-nuclei-map",
     "sources": [
       {
-        "title": "Purves, Neuroscience — The amygdala (NCBI Bookshelf)",
-        "url": "https://www.ncbi.nlm.nih.gov/books/NBK11020/"
+        "title": "Purves, Neuroscience — The importance of the amygdala (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10891/"
       }
     ]
   },
@@ -805,8 +805,8 @@
     "refs": ["hippocampus-proper", "j-ca1", "j-ca3", "j-area-ec", "j-hippocampal-region"],
     "sources": [
       {
-        "title": "Purves, Neuroscience — Memory and the hippocampus (NCBI Bookshelf)",
-        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10994/"
+        "title": "StatPearls — Neuroanatomy, Hippocampus",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK482171/"
       }
     ]
   },
@@ -927,8 +927,8 @@
     "plate": "bg-pallidal",
     "sources": [
       {
-        "title": "Purves, Neuroscience — The amygdala (NCBI Bookshelf)",
-        "url": "https://www.ncbi.nlm.nih.gov/books/NBK11020/"
+        "title": "Purves, Neuroscience — The importance of the amygdala (NCBI Bookshelf)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK10891/"
       }
     ]
   },

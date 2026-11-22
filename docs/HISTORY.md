@@ -1281,3 +1281,9 @@ aylantirish anatomik xato bo'lardi. `--min 0.15` da haqiqiy tirqish-ustma-ustlik
 (PAG'dan tashqariga), B4 gpi (GPe medial chegarasidan chap), B5 ic-g (ic-al ostidan). Ataylab qolganlar: ichma-ich yadrolar va B1 striatal
 ko'priklari. Tekshirildi: audit (`--min 0.15`, `--coverage`), audit-lesions 0, audit-pick 0, tsc, B4 sxema surati.
 
+
+## AG-5 birlashtirildi (2026-11-22)
+
+`ag/AG-5` (200 ikki tilli viktorina savoli, `src/data/quiz/*.json`) tekshirildi va birlashtirildi. Tasdiqlandi: sxema/ref/plate 0 xato, 47 manba
+Crossref + eutils bilan mos. Tuzatildi: ikki noto'g'ri Purves NBK ID (savollarda va eski `gross-brain.json` da). Qoldi (AG-5b): to'g'ri javob 83%
+savolda eng uzun, ishonarsiz distraktorlar, 57 savolda kod identifikatorlari. Ma'lumot CL-4 UI ulanmaguncha faol emas.

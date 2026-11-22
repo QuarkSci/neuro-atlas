@@ -64,3 +64,15 @@
 ### Ochiq savollar / takliflar
 - Barcha savollarda `AI.md` §5.4 sxemasiga muvofiq to'g'ri javob `options[0]` (`"answer": 0`) ga joylashtirildi; CL-4 viktorina dvijogi savolni ko'rsatishda `options` massivini tasodifiy aralashtirib (shuffle), yangi to'g'ri indeksni hisoblab oladi.
 - Har bir savoldagi `refs` massivida ham 3D konsept ID'lari (`parts.json`), ham 2D kesim tuzilmasi ID'lari (`STRUCTURE_BY_ID`) berilgan — CL-4 da javob tanlangach foydalanuvchiga bir tugma bilan 3D sahnada (`refs`) yoki 2D gistologik plastinkada (`plate`) o'sha tuzilmani yoritib ko'rsatish imkoniyati tayyor.
+
+## Ko'rib chiqish (Claude, 2026-11-22) — birlashtirildi, AG-5b tuzatishlari bilan
+- Qamrov: faqat `src/data/quiz/*.json` va handoff; kod yo'q. Struktura: 200 savol, 80/80/40, `refs`/`plate`/dublikat/variant 0 xato.
+- Manbalar: 47 tasi Crossref (DOI) va eutils (NBK) bilan qayta tekshirildi. **2 ta noto'g'ri Purves ID**: NBK11020 ("Critical Periods") va NBK10994 ("CNS Dimorphisms…") "amygdala"/"hippocampus" deb yozilgan edi → NBK10891 va StatPearls NBK482171 ga almashtirildi (xuddi shu xato `gross-brain.json` da ham bor edi — tuzatildi).
+- Anatomiya (7 tasodifiy savol): to'g'ri.
+- **AG-5b uchun tuzatishlar (majburiy, CL-4 ishga tushishidan oldin):**
+  1. To'g'ri javob 200 dan 166 savolda eng uzun variant (o'rtacha 2.1× distraktor). Distraktorlarni to'g'ri javob bilan bir xil uzunlik va ohangda yozing; to'g'ri javobni qisqartiring (ortiqcha izoh `why` ga).
+  2. Distraktorlar ishonarli bo'lsin (bir tizimdagi qo'shni tuzilma/sindrom): "VTA → V1 dopamin yo'li", "faqat motor neyronlar … velum" kabilar bir qarashda ma'lum noto'g'ri.
+  3. Matnda kod identifikatorlari yo'q: 57 savolda `n6`, `sp5n`, `BRAINSTEM_STRUCTURES`, `lesions.ts` kabilar (jami ~560 ta backtick). Tuzilma nomini yozing ("abducens yadrosi"); plastinka kodi (K2, O1) qolishi mumkin. `refs` maydoni o'zgarmaydi.
+  4. `why` da "As noted in …" kabi ichki manba havolalari yo'q.
+  5. Tekshiruv: o'sha validatsiya skripti + "to'g'ri javob eng uzun" ulushi ≤ 35% (4 variantda tasodifiy ≈ 25%).
+
