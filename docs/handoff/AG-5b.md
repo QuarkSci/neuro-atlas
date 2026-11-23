@@ -59,3 +59,9 @@ CL-4 viktorinasi uchun `docs/handoff/AG-5.md` ("Ko'rib chiqish") bo'limida ko'rs
 - Yo'q. `ag/AG-5b` tekshiruv va `master`ga birlashtirishga tayyor.
 
 ## Ko'rib chiqish (Claude to'ldiradi)
+
+## Ko'rib chiqish (Claude, 2026-11-23)
+✅ Birlashtirildi (`9a76c7f`). Mustaqil skript (master bilan solishtirib): 200 savol, o'zgarmas maydonlarda 0 farq; to'g'ri javob
+eng uzun 166 → 46 (EN 23.0%), UZ 51 (25.5%); kod nomlari 0. Tasodifiy 6 savol anatomik jihatdan to'g'ri. tsc, build,
+audit-lesions 0, audit-pick 0; viktorina UI uz/qora va en/yorug'. Tuzatish kerak emas.
+

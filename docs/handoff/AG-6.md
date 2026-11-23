@@ -43,3 +43,12 @@ Branch: `ag/AG-6` · Sana: `2026-11-22`
 - CL-7 / 1-bosqich (Apple ilovasi) boshlanishida `AI` panelga Guideline 5.1.2 bo'yicha bir martalik ochiq rozilik (consent) oynasi va Shikastlanish simulyatoriga Guideline 1.4.1 bo'yicha tibbiy ogohlantirish qo'shish rejalashtirilishi lozim.
 
 ## Ko'rib chiqish (Claude to'ldiradi)
+
+## Ko'rib chiqish (Claude, 2026-11-23)
+✅ Birlashtirildi (`09ded73`). Asl manbalardan tekshirildi: Apple Guidelines 4.2, 2.5.2, 1.4.1, 5.1.2(i) so'zma-so'z; FSL
+litsenziyasi (notijorat qayta tarqatish sharti; JHU — `susumu@mri.jhu.edu`; iqtibos "for such purposes please contact the
+primary co-ordinator" bilan davom etadi); HCP Open Access Data Use Terms (4-band qayta tarqatish, 5.1 minnatdorchilik); CC DRM/ETM.
+Claude tuzatgan: (1) iPad Jetsam raqamlari manbasiz edi → "TAXMIN" deb belgilandi; (2) SUIT: repo README "CC BY" deydi, versiyasiz
+va "contributing paper" istisnosi bilan; FSL ichidagi Cerebellum atlasi CC BY-SA 4.0 — biz qaysi nusxani ishlatganimiz
+`ATTRIBUTION.md` da aniqlashtirilishi kerak (hozircha NC ehtiyotkorligi saqlanadi).
+
