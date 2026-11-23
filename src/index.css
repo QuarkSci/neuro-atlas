@@ -1585,3 +1585,21 @@ html.hands-on .part-hover { display: none; }
 /* The room replaces the atlas's own bottom controls (they would rearrange what the room is built around). */
 html.or-on .bottom-dock, html.or-on .studio-credit { display: none; }
 @media (max-width: 760px) { .or-panel { top: auto; bottom: 56px; width: calc(100vw - 24px); max-height: 46vh; overflow: auto; } .or-warn { bottom: 8px; border-radius: 14px; } }
+/* Instruments (SX-2) */
+.tool-grid { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; font-size: 11.5px; font-variant-numeric: tabular-nums; }
+.tool-grid span { color: color-mix(in oklab, var(--ink) 58%, transparent); }
+.tool-grid b { font-weight: 600; text-align: right; overflow-wrap: anywhere; }
+.tool-grid b.warn, .tool-ev.hazard { color: #f2b51f; }
+.tool-grid b.bad { color: #ff6b5e; }
+.tool-events { display: flex; flex-direction: column; gap: 2px; font-size: 11px; max-height: 92px; overflow: auto; }
+.tool-ev span { color: color-mix(in oklab, var(--ink) 50%, transparent); font-variant-numeric: tabular-nums; }
+.tool-hud { position: absolute; left: 50%; bottom: 62px; translate: -50% 0; z-index: 6; min-width: 150px; padding: 8px 18px; border-radius: 20px; display: flex; flex-direction: column; align-items: center; pointer-events: none; color: var(--ink); background: color-mix(in oklab, var(--background) 78%, transparent); }
+.tool-hud b { font-size: 22px; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.tool-hud span { font-size: 11px; color: color-mix(in oklab, var(--ink) 62%, transparent); max-width: 260px; text-align: center; }
+.tool-hud.warn b { color: #f2b51f; }
+.tool-hud.bad b { color: #ff6b5e; }
+.tool-pulse { position: absolute; inset: 0; z-index: 3; pointer-events: none; box-shadow: inset 0 0 90px 12px rgba(255, 190, 40, 0.28); }
+.tool-pulse.bad { box-shadow: inset 0 0 120px 24px rgba(255, 70, 50, 0.45); animation: tool-pulse 0.5s ease-in-out infinite alternate; }
+@keyframes tool-pulse { from { opacity: 0.55; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .tool-pulse.bad { animation: none; } }
+.or-panel { max-height: calc(100vh - 150px); overflow: auto; }

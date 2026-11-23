@@ -329,7 +329,7 @@ export class BrainScene {
     // While the camera moves frames are plain; the occlusion pass joins once it has rested.
     c.addEventListener('end', () => {
       window.clearTimeout(this.aoTimer)
-    window.clearTimeout(this.eyeRestTimer)
+      window.clearTimeout(this.eyeRestTimer)
       this.aoTimer = window.setTimeout(() => {
         this.interacting = false
         this.dirty = true
@@ -1069,7 +1069,7 @@ export class BrainScene {
   }
 
   /** First surface point under (x, y): visible structures plus `extra` objects. Null when nothing is hit. */
-  pickPoint(x: number, y: number, extra: T.Object3D[] = []): { point: T.Vector3; id: string } | null {
+  pickPoint(x: number, y: number, extra: T.Object3D[] = []): { point: T.Vector3; id: string; normal: T.Vector3; dir: T.Vector3 } | null {
     return this.withEye(() => {
       const w = this.host.clientWidth,
         h = this.host.clientHeight
@@ -1077,8 +1077,18 @@ export class BrainScene {
       this.raycaster.firstHitOnly = true
       const objs = [...this.parts.filter((p) => p.mesh.visible).map((p) => p.mesh), ...extra.filter((o) => o.visible)]
       const hit = this.raycaster.intersectObjects(objs, false)[0]
-      return hit ? { point: hit.point.clone(), id: hit.object.name } : null
+      if (!hit) return null
+      const dir = this.raycaster.ray.direction.clone()
+      // Face normal in scene space (the meshes carry no rotation in the room), turned to face the viewer.
+      const normal = hit.face ? hit.face.normal.clone() : dir.clone().negate()
+      if (normal.dot(dir) > 0) normal.negate()
+      return { point: hit.point.clone(), id: hit.object.name, normal, dir }
     })
+  }
+
+  /** Every loaded structure's geometry (with its BVH), for the instrument engine's distance queries. */
+  toolTargets() {
+    return this.parts.map((p) => ({ id: p.id, system: p.system, geometry: p.mesh.geometry as T.BufferGeometry & { boundsTree?: import('three-mesh-bvh').MeshBVH } }))
   }
 
   /** Ask for a redraw (the room animates lights and screens on its own). */
@@ -2072,7 +2082,19 @@ export class BrainScene {
    * in a lesson — the occlusion pass sees every mesh as solid and unclipped) and the camera at rest.
    */
   private aoWanted(s: SceneSnapshot) {
-    return s.ao && !this.orActive && !this.interacting && performance.now() > this.eyeMovingUntil && this.amount < 0.02 && this.peel < 0.005 && !s.cutaway && !s.isolate && !s.lesson && !this.cutKey && !s.sectionId
+    return (
+      s.ao &&
+      !this.orActive &&
+      !this.interacting &&
+      performance.now() > this.eyeMovingUntil &&
+      this.amount < 0.02 &&
+      this.peel < 0.005 &&
+      !s.cutaway &&
+      !s.isolate &&
+      !s.lesson &&
+      !this.cutKey &&
+      !s.sectionId
+    )
   }
 
   private draw(s: SceneSnapshot) {

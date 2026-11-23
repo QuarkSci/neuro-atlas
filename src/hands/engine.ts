@@ -1,4 +1,5 @@
 import * as T from 'three'
+import { handTool } from '@/or/tools/handBridge'
 import { activeScene } from '@/scene/sceneRef'
 import { CameraTracker } from './tracker'
 import { HandFilter, OneEuro } from './oneEuro'
@@ -323,7 +324,7 @@ export class HandsEngine {
           // Same feel as a mouse drag: a screen height of travel ≈ one full turn.
           const k = (2 * Math.PI) / Math.max(400, window.innerHeight)
           // A tap must not nudge the model: turning starts once the fingers clearly travel.
-          if (s.down.travel >= TAP_PX) {
+          if (s.down.travel >= TAP_PX && !handTool.active) {
             scene?.orbitBy(dx * k, dy * k)
             const yaw = (dx * k) / dt,
               pitch = (dy * k) / dt
@@ -350,12 +351,15 @@ export class HandsEngine {
     if (lead && this.rig.visible(lead)) {
       const c = point(lead)
       this.hooks.cursor({ x: c.x, y: c.y, grab: gesture === 'grab' || gesture === 'zoom' })
-      if (scene && host && gesture === 'point') {
+      // An instrument takes the hand: it points (open) or grips (pinch) instead of hovering and turning.
+      if (handTool.active) handTool.hand(c.x, c.y, gesture === 'grab')
+      else if (scene && host && gesture === 'point') {
         scene.externalHover(c.x - host.left, c.y - host.top)
         this.hovering = true
       }
     } else {
       this.hooks.cursor(null)
+      if (handTool.active) handTool.lost()
       if (this.hovering) {
         scene?.externalHover(null)
         this.hovering = false

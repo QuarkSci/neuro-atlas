@@ -6,6 +6,8 @@ import { OR_STRINGS } from './strings'
 import { useOR, type OrCamera } from './useOR'
 import { exitOR, measuresCsv, sceneToMni } from './orMode'
 import type { Skin } from './room'
+import { ToolHUD, ToolPanel } from './tools/ToolPanel'
+import { useTool } from './tools/useTool'
 
 /** The operating-room panel: views, scalp, lamp, ruler, and the teaching-only notice. */
 export function ORPanel() {
@@ -89,11 +91,20 @@ export function ORPanel() {
             {seg<Skin>('off', skin, t.skinOff, (v) => set({ skin: v }))}
           </div>
         </div>
+        <ToolPanel />
         <div className="or-row">
           <button className={`or-chip ${lamp ? 'on' : ''}`} aria-pressed={lamp} onClick={() => set({ lamp: !lamp })} type="button">
             <Lamp size={15} /> {t.lamp}
           </button>
-          <button className={`or-chip ${measure ? 'on' : ''}`} aria-pressed={measure} onClick={() => set({ measure: !measure })} type="button">
+          <button
+            className={`or-chip ${measure ? 'on' : ''}`}
+            aria-pressed={measure}
+            onClick={() => {
+              set({ measure: !measure })
+              if (!measure) useTool.setState({ tool: 'off' })
+            }}
+            type="button"
+          >
             <Ruler size={15} /> {t.ruler}
           </button>
         </div>
@@ -120,6 +131,7 @@ export function ORPanel() {
         )}
         <p className="or-scale">{t.scale}</p>
       </aside>
+      <ToolHUD />
       <div className="or-warn glass" role="note">
         {t.warn}
       </div>

@@ -6,6 +6,8 @@ import type { SystemId } from '@/data/types'
 import { OperatingRoom, type Skin } from './room'
 import { SKULL_IDS } from './scalp'
 import { useOR, type Measure, type OrCamera } from './useOR'
+import { ToolEngine } from './tools/engine'
+import { useTool } from './tools/useTool'
 
 /** Atlas fields the room overrides while it is on (restored exactly on the way out). */
 const FORCED = { explode: 0, peel: 0, isolate: false, cutaway: false, autoRotate: false, sidebar: false } as const
@@ -31,11 +33,14 @@ interface Session {
   }
   envIntensity: number
   measureGroup: T.Group
+  tools: ToolEngine
   unsub: (() => void)[]
 }
 
 let session: Session | null = null
 export const orActive = () => !!session
+/** The live instrument engine (panel buttons, dev checks). */
+export const activeTools = () => session?.tools ?? null
 /** The live room (dev checks and the panel's readouts). */
 export const activeRoom = () => session?.room ?? null
 
@@ -85,6 +90,7 @@ export function enterOR(): boolean {
     },
     envIntensity: scene.scene.environmentIntensity,
     measureGroup: new T.Group(),
+    tools: new ToolEngine(scene, room),
     unsub: [],
   }
   session = s
@@ -119,6 +125,7 @@ export function enterOR(): boolean {
       if (st.lamp !== prev.lamp) room.setLamp(st.lamp)
       if (st.camera !== prev.camera) applyCamera(st.camera, true)
       if (st.measure !== prev.measure && !st.measure) useOR.setState({ pending: null })
+      if (st.measure && !prev.measure) useTool.setState({ tool: 'off' })
       if (st.measures !== prev.measures || st.pending !== prev.pending) drawMeasures()
       scene.scene.environmentIntensity = room.envIntensity
       scene.redraw()
@@ -133,7 +140,16 @@ export function enterOR(): boolean {
       if (st.mode === 'learn' || st.sectionId) exitOR()
     }),
   )
+  s.unsub.push(
+    useTool.subscribe((st, prev) => {
+      if (!session || st.tool === prev.tool) return
+      s.tools.refreshTargets()
+      s.tools.setTool(st.tool)
+      if (st.tool !== 'off') useOR.setState({ measure: false, pending: null })
+    }),
+  )
   scene.tapOverride = (x, y) => {
+    if (useTool.getState().tool !== 'off') return s.tools.tap()
     if (!useOR.getState().measure) return false
     const hit = scene.pickPoint(x, y, [room.scalpMesh])
     if (hit) addPoint(hit.point.toArray() as [number, number, number])
@@ -150,6 +166,8 @@ export function exitOR() {
   for (const u of s.unsub) u()
   const { scene, cam: k } = s
   scene.tapOverride = null
+  s.tools.dispose()
+  useTool.setState({ tool: 'off', lock: false, depth: 0 })
   s.measureGroup.removeFromParent()
   disposeGroup(s.measureGroup)
   s.room.dispose()
@@ -274,4 +292,4 @@ export function measuresCsv(measures: Measure[]) {
   return rows.join('\n')
 }
 
-if (import.meta.env.DEV) (window as unknown as { __orMode: unknown }).__orMode = { enterOR, exitOR, toggleOR, applyCamera, activeRoom }
+if (import.meta.env.DEV) (window as unknown as { __orMode: unknown }).__orMode = { enterOR, exitOR, toggleOR, applyCamera, activeRoom, tools: () => session?.tools }

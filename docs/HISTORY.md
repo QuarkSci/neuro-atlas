@@ -1412,3 +1412,31 @@ monitor), Mayfield turidagi bosh ushlagich (3 ta pin: 1 + 2, yarim halqa, ustun)
 - **Tekshirilmadi:** haqiqiy kamera bilan; Mac'dagi FPS (headless dasturiy WebGL ≈ 1 kadr/s — faqat pastki chegara); real soyalar
   (hozir SpotLight soyasiz, konus faqat vizual); telefon maketi. Assetlar protsedurali: AG-11 dan keyin almashtiriladi.
 - Keyingi: SX-2 (asbob dvigateli: zond/kateter/burg'u, `three-mesh-bvh` masofasi, to'qnashuv, titrash).
+
+## SX-2 — asbob dvigateli (2026-11-23, `sx/main`)
+
+Operatsiya xonasi panelida **Asbob**: Zond | Kateter | Burg'u (protsedurali, uchi = boshlanish nuqtasi, mm masshtabda; kateter 2.7 mm
+tashqi diametr, har 10 mm da chuqurlik belgisi). `src/or/tools/`: `engine.ts` (`ToolEngine`), `models.ts`, `useTool.ts`, `ToolPanel.tsx`
+(panel + HUD), `handBridge.ts`.
+- **Kiritish qatlami manbaga qaramaydi:** `ToolEngine.setInput(tip, dir)` (sahna mm). Manbalar: sichqoncha (ko'rsatkich ostidagi sirt
+  nuqtasi, `BrainScene.pickPoint` endi normal va nur yo'nalishini ham qaytaradi), g'ildirak / ikki barmoq — uchini ichkariga suradi
+  (chuqurlik −20…120 mm; atlasning o'z g'ildirak ishlovchisi surish qiladi, shuning uchun bizniki `host` ota-elementida capture'da,
+  pinch = Ctrl zoom, Shift surish saqlanadi), bosish — qotirish/bo'shatish. Qo'l: ochiq = ko'rsatish, chimdish = ushlash (nur qotadi,
+  qo'lni pastga siljitish 0.25 mm/px kiritadi); asbob yoqiqligida `HandsEngine` kamerani aylantirmaydi (`handBridge.handTool`),
+  ikki qo'l zoomi saqlanadi.
+- **Masofa:** `three-mesh-bvh` `closestPointToPoint` atlas meshlarining o'zida (yuklangan barcha tuzilmalar + bosh terisi), qutilar bo'yicha
+  qirqish; eng yaqin sirt, eng yaqin tomir/nerv, terigacha ishorali masofa (manfiy = chuqurlik). "Ichida" — yopiq meshda nur-juftlik testi
+  (qattiq burchakli bir nur, birinchi urilgan yuz teskari bo'lsa ichkarida).
+- **To'qnashuv:** tomir/nerv yuzasigacha < 1 mm = TEGDI (bitta `hazard` hodisasi), tuzilmaga kirish/chiqish `enter`/`exit` hodisalari
+  (chuqurlik bilan). HUD: pastda katta mm raqami va nomi; < 5 mm sariq, tegsa qizil chekka pulsi (`prefers-reduced-motion` hurmat qilinadi);
+  Gamepad `vibrationActuator` titrashi yaqinlikka qarab (gamepad yo'q bo'lsa faqat vizual).
+- **PhD:** uch traektoriyasi (≥ 0.2 mm va ≥ 50 ms siljishda nuqta): yo'l uzunligi, eng chuqur nuqta, tomir/nervga eng yaqin masofa,
+  CSV (MNI mm; `t_s,x_mni,y_mni,z_mni,skin_mm,hazard_mm`) — SX-3 baholash (yo'l samaradorligi, titrash RMS) shundan hisoblanadi.
+- Chizg'ich va asbob bir-birini o'chiradi (ikkalasi ham bosishni ishlatadi).
+- Tekshiruv: `NA_URL=http://localhost:3021/ node scripts/shot-tools.mjs /tmp/sx-tools` — masofa brute-force bilan (xato ≈ 1e-15 mm,
+  chegara 0.5), ichida/tashqarida (60/60 yuz, normallar tashqariga), bitta kirish/chiqish hodisasi, arteriya uchida TEGDI, sichqoncha va
+  qo'l bir xil uchni beradi (Δ 0), g'ildirak 20.000 mm, chimdish 10 mm, qotirish, 40 mm yo'l → 40.00 mm, CSV MNI, bir harakat 0.3 ms
+  (headless CPU), xonadan chiqqanda asbob olib tashlanadi. `shot-or` 20/20, `shot-hands` 13/13, `audit-pick` 0, `audit-lesions` 0.
+- **Tekshirilmadi:** haqiqiy kamera bilan qo'l (chimdish chuqurligi barmoq-ekran bo'yicha, kameraga yaqinlik bo'yicha emas), haqiqiy
+  gamepad titrashi, Mac'da kadr byudjeti. Burg'u hozircha faqat ko'rinish (kesish SX-4 da). "Ichida" testi nomanifold meshlarda adashishi mumkin.
+- Keyingi: SX-3 (EVD: Kocher nuqtasi, qadamlar, baholash; AG-9 va AG-12 hujjatlari kerak — taxtani tekshiring).
