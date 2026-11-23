@@ -537,8 +537,8 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | AG-12 | Tadqiqot: simulyator validatsiyasi va mahorat o'lchovlari | Antigravity | ⏳ | ag/AG-12 |
 | AG-13 | Tadqiqot: marker kuzatuvi (6DoF qalam) | Antigravity | ⏳ | ag/AG-13 |
 | SX-1 | Virtual operatsiya xonasi (docs/SURGERY.md 2) | Claude Code | ✅ 2026-11-23 (`1bb44e0`) | sx/main |
-| SX-2 | Asbob dvigateli (HT-2): masofa, to'qnashuv, titrash | Claude Code | ⏳ KEYINGI | sx/main |
-| SX-3 | OP-1 EVD simulyatori + baholash | Claude Code | ⏳ (AG-9, AG-12) | sx/main |
+| SX-2 | Asbob dvigateli (HT-2): masofa, to'qnashuv, titrash | Claude Code | ✅ 2026-11-23 (`0fa0815`) | sx/main |
+| SX-3 | OP-1 EVD simulyatori + baholash | Claude Code | ⏳ KEYINGI (AG-9, AG-12 kerak) | sx/main |
 | SX-4 | Suyakni burg'ulash (voksel) | Claude Code | ⏳ | sx/main |
 | SX-5 | Kuzatiladigan qalam (6DoF marker) | Claude Code | ⏳ (AG-13) | sx/main |
 | SX-6 | OP-2 DBS | Claude Code | ⏳ | sx/main |
@@ -566,4 +566,5 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-23 · Claude · HT-1 (qo'l bilan boshqarish) va HP-1 (bosh bilan qarash, "3D oyna") `hands/HT-1` branchida tayyor; foydalanuvchi qarori bilan master'ga qo'shilmaydi (veb / faqat Mac / faqat iPad keyin hal qilinadi). Holat: `docs/HANDS.md`. Antigravity uchun AG-8 (platformalar tadqiqoti), AG-9 (EVD/DBS kontenti), AG-10 (operatsiya xonasi assetlari).
 - 2026-11-23 · Claude · AG-5b va AG-6 tekshirildi va birlashtirildi. AG-5b: mustaqil skript (o'zgarmas maydonlar 0 farq, eng uzun to'g'ri javob 166→46), 6 savol anatomik tekshiruvi, audit-lesions 0, audit-pick 0, viktorina UI. AG-6: Apple 4.2/2.5.2/1.4.1/5.1.2, FSL, HCP, CC iqtiboslari asl manbalardan tasdiqlandi; Jetsam raqamlari "taxmin" deb belgilandi, SUIT litsenziya izohi aniqlashtirildi. Muhim xulosalar (App Store'dan oldin): AI rozilik oynasi (5.1.2), tibbiy ogohlantirish (1.4.1), JHU uchun yozma ruxsat, HCP minnatdorchilik matni.
 - 2026-11-23 · Claude · Jarrohlik simulyatori ish paketi: `docs/SURGERY.md` (qarorlar, sharoit, SX-1…SX-7, promptlar), integratsiya branchi `sx/main` (= hands/HT-1 + master, `../neuro-atlas-sx`, port 3021, shot-hands 13/13), yangi AGY vazifalari AG-11 (assetlar → sx/main), AG-12 (validatsiya o'lchovlari), AG-13 (marker kuzatuvi).
+- 2026-11-23 · Claude · SX-2 tayyor (`sx/main` `0fa0815`, push qilindi): `src/or/tools/` asbob dvigateli (zond/kateter/burg'u, BVH masofa, to'qnashuv, HUD, titrash, traektoriya CSV); `scripts/shot-tools.mjs` hammasi ✓ (masofa xatosi ~1e-15 mm), shot-or 20/20, shot-hands 13/13, audit 0. Tekshirilmadi: haqiqiy kamera/gamepad. Keyingi: SX-3 (AG-9 va AG-12 hujjatlari master'da bormi — tekshirish kerak).
 - 2026-11-23 · Claude · SX-1 tayyor (`sx/main` `1bb44e0`, push qilindi): `src/or/` virtual operatsiya xonasi, bosh terisi suyakdan, Mayfield, chiroq, chizg'ich; `scripts/shot-or.mjs` 20 tekshiruv ✓, `audit-pick` 0, `audit-lesions` 0, `shot-hands` 13/13. Tafsilot: sx/main `docs/HISTORY.md` "SX-1". Tekshirilmadi: haqiqiy kamera, Mac FPS. Keyingi: SX-2.
