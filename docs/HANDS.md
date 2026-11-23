@@ -1,5 +1,7 @@
 # HANDS.md: kamera bilan boshqarish (HT-1, HP-1), saqlangan holat
 
+> **Davomi: `docs/SURGERY.md`** — ish endi `sx/main` integratsiya branchida (`../neuro-atlas-sx`, port 3021) davom etadi.
+>
 > **Holat (2026-11-23): saqlab qo'yilgan, master'ga BIRLASHTIRILMAYDI.** Foydalanuvchi qarori: avval funksiyaning qaysi qismi
 > umumiy veb loyihaga kirishini, qaysi qismi faqat maxsus qurilmalar (faqat Mac yoki faqat iPad, Apple ilovasi
 > `docs/APPLE.md`) uchun bo'lishini hal qilish kerak. Kod faqat **`hands/HT-1`** branchida (origin'da ham bor). Uni master'ga faqat

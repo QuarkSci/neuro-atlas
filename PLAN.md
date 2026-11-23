@@ -361,6 +361,7 @@ yuborish roziligi), iPad xotirasi (≤1.2 GB).
 
 ### 5.8 Neyroxirurgik simulyator — qo'l bilan boshqarish (2026-11-22, foydalanuvchi bilan muhokama)
 
+> 2026-11-23 (2): ish paketi va vazifalar — `docs/SURGERY.md` (SX-1…SX-7, integratsiya branchi `sx/main`).
 > 2026-11-23: HT-1 va HP-1 kodi `hands/HT-1` branchida saqlangan, master'ga qo'shilmaydi — avval veb / faqat Mac / faqat iPad
 > taqsimoti hal qilinadi (`docs/HANDS.md` 4-bo'lim, AG-8 tadqiqoti).
 
