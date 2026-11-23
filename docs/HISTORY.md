@@ -1382,3 +1382,33 @@ qo'shilmaydi — avval veb / faqat Mac / faqat iPad taqsimoti (AG-8). To'liq taf
   rozilik oynasi (Guideline 5.1.2(i) "including with third-party AI", so'zma-so'z tasdiqlandi), tibbiy ogohlantirish (1.4.1),
   JHU uchun `susumu@mri.jhu.edu` dan yozma ruxsat (FSL notijorat sharti), HCP majburiy minnatdorchilik matni, FreeSurfer Part B
   prefiksi, CC-SA + FairPlay DRM uchun DRM'siz parallel tarqatish. iPad WebContent/GPU Jetsam raqamlari — taxmin, A1 da o'lchanadi.
+
+## SX-1 — virtual operatsiya xonasi (2026-11-23, `sx/main`)
+
+"Boshqa" menyusida **Operatsiya xonasi** (`src/or/`): protsedurali xona haqiqiy millimetrlarda (stol 620 × 1950 mm, pol plitkasi 600,
+devor 300, stol yon chizig'ida har 100 mm da belgi), operatsiya stoli, steril qoplama, Mayo stoli, anesteziya aravachasi (DEMO
+monitor), Mayfield turidagi bosh ushlagich (3 ta pin: 1 + 2, yarim halqa, ustun), shipdagi chiroq (SpotLight + ko'rinadigan konus).
+- **Atlas koordinatalari o'zgarmaydi:** xona `T.Group` (rotation.x = +90°): xonaning "yuqori" o'qi = bemorning old o'qi (supin).
+  Miya meshlari, tanlash, BVH, keyingi SX lar (asbob, burg'u) atlas (MNI→sahna) koordinatasida ishlaydi. Kamera `up = (0,0,1)`
+  (`BrainScene.setUp`: OrbitControls `_quat` ni qayta hisoblaydi; `orbitBy` ham unga bo'ysunadi).
+- **Bosh terisi suyakdan** (`scalp.ts`): bosh markazidan har yo'nalishda suyakning eng tashqi radiusi (144 × 84 to'r), dilatatsiya +
+  4 marta silliqlash, + 6 mm yumshoq to'qima, so'ng bo'yinga loft. Tekshiruv: 3177 suyak uchi terining ichida (eng kichik zaxira
+  5.3 mm, tashqarida 0), normallar tashqariga (1180/1181). Yuz soddalashtirilgan (burun silliq bo'rtma, ko'z kosalari yo'q).
+- **Qatlamlar:** Teri | Shaffof (teri 20% + suyak) | Suyak | Miya (`visible` tizimlariga `skull` qo'shiladi/olinadi).
+- **Kamera presetlari:** Jarroh (FOV 40°, ≈ 650 mm), Mikroskop (FOV 9°, o'ng frontal qavariq, Kocher hududi, aylana maydon
+  vinyetkasi), Erkin. HP-1 "3D oyna" xonada ishlaydi (frustum og'adi, orbit kamera siljimaydi).
+- **Yorug'lik:** qora rejim — qorong'i xona, chiroq bilan yoritilgan; yorug' rejim — yorug' xona (`room.setTheme`).
+  Atlasning o'z yorug'liklari, zamini va SSAO i vaqtincha o'chadi (`BrainScene.setOrMode`).
+- **Chizg'ich (PhD):** ikki marta bosish → to'g'ri masofa mm da (3D da sprite yorlig'i), uchlari MNI koordinatasida,
+  "CSV nusxa". Sichqoncha va qo'l (`externalTap`) bilan ham ishlaydi (`BrainScene.tapOverride`).
+- **Atlasga qaytganda holat aynan tiklanadi:** kamera (pos/target/up/fov/near/far, masofa va qutb chegaralari), `explode/peel/
+  isolate/cutaway/autoRotate/sidebar/visible`, muhit yorug'ligi. Xatolik topilgan edi: xonaga kirganda `explode → 0` atlasning
+  o'z qayta kadrlashini ishga tushirib, xona kamerasini surib yuborardi (va chiqishda ham): endi OR yoqiqligida kadrlash o'chiq,
+  `explode/peel` ikki yo'nalishda ham bir zumda qo'yiladi (`setOrMode(on, settle)`).
+- **Ta'lim ogohlantirishi** pastda doim turadi; "draws/s" ko'rsatkichi panelda (Mac'da qo'l + bosh yoqilgan holda o'qiladi).
+- Tekshiruv: `NA_URL=http://localhost:3021/ node scripts/shot-or.mjs /tmp/sx-or` — 20 sonli tekshiruv ✓ (kirish, kamera up,
+  teri o'lchami va suyakni o'rashi, stol relslari 644 mm, chizg'ich, mikroskop FOV, bosh oynasi, to'liq tiklanish) + 12 screenshot
+  (jarroh / shaffof / suyak / miya / mikroskop, qora va yorug'). `audit-pick` diff 0, `audit-lesions` 0, `shot-hands` 13/13.
+- **Tekshirilmadi:** haqiqiy kamera bilan; Mac'dagi FPS (headless dasturiy WebGL ≈ 1 kadr/s — faqat pastki chegara); real soyalar
+  (hozir SpotLight soyasiz, konus faqat vizual); telefon maketi. Assetlar protsedurali: AG-11 dan keyin almashtiriladi.
+- Keyingi: SX-2 (asbob dvigateli: zond/kateter/burg'u, `three-mesh-bvh` masofasi, to'qnashuv, titrash).

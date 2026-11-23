@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, Check, Ellipsis, Hand, Info, ScanFace, Languages, Palette, SunMoon, Sun, PanelLeft, RotateCw, Search, Slice, Sparkles } from 'lucide-react'
+import { Box, Check, Ellipsis, Hand, Info, ScanFace, Languages, Palette, SunMoon, Sun, PanelLeft, RotateCw, Search, Slice, Sparkles, Stethoscope } from 'lucide-react'
 import { LEAF_PARTS } from '@/data'
 import { useT } from '@/i18n'
 import { useAtlas, type View } from '@/store/useAtlas'
@@ -7,6 +7,9 @@ import { useLens } from './useLens'
 import { useAI } from '@/ai/useAI'
 import { useHands } from '@/hands/useHands'
 import { HAND_STRINGS } from '@/hands/strings'
+import { OR_STRINGS } from '@/or/strings'
+import { useOR } from '@/or/useOR'
+import { toggleOR } from '@/or/orMode'
 
 const VIEWS: View[] = ['three-quarter', 'lateral', 'front', 'top']
 
@@ -186,6 +189,7 @@ export function ViewGroup() {
             <RotateCw size={16} className="menu-trail" />
           </button>
           <HandsMenuItem onDone={() => setOpen(null)} />
+          <OrMenuItem onDone={() => setOpen(null)} />
           <div className="menu-sep" />
           <div className="menu-row">
             <span className="menu-label">
@@ -284,5 +288,30 @@ function HandsMenuItem({ onDone }: { onDone: () => void }) {
       {item('hands', hands, t.menu, <Hand size={16} className="menu-trail" />)}
       {item('head', head, t.headMenu, <ScanFace size={16} className="menu-trail" />)}
     </>
+  )
+}
+
+/** "More" menu: the virtual operating room (SX-1). */
+function OrMenuItem({ onDone }: { onDone: () => void }) {
+  const lang = useAtlas((s) => s.lang)
+  const mode = useAtlas((s) => s.mode)
+  const on = useOR((s) => s.on)
+  const t = OR_STRINGS[lang]
+  return (
+    <button
+      role="menuitemcheckbox"
+      aria-checked={on}
+      className="menu-item"
+      disabled={mode === 'learn' && !on}
+      title={mode === 'learn' && !on ? t.unavailable : undefined}
+      onClick={() => {
+        toggleOR()
+        onDone()
+      }}
+    >
+      <span className="menu-check">{on && <Check size={15} />}</span>
+      {t.menu}
+      <Stethoscope size={16} className="menu-trail" />
+    </button>
   )
 }

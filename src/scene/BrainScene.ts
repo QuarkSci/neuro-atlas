@@ -199,7 +199,7 @@ export class BrainScene {
   private rimLight!: T.DirectionalLight
   private fillLight!: T.DirectionalLight
   private env: T.Texture
-  private fly: { pos: T.Vector3; target: T.Vector3; t: number } | null = null
+  private fly: { pos: T.Vector3; target: T.Vector3; t: number; fov?: { from: number; to: number } } | null = null
   private isolateKey = ''
   private layoutKey = ''
   private selectionKey = ''
@@ -913,6 +913,7 @@ export class BrainScene {
   private onUp = (e: PointerEvent) => {
     if (!this.tap.up(e.pointerId, e.clientX, e.clientY)) return
     const rect = this.host.getBoundingClientRect()
+    if (this.tapOverride?.(e.clientX - rect.left, e.clientY - rect.top)) return
     this.cb.onSelect(this.pick(e.clientX - rect.left, e.clientY - rect.top))
   }
   private onVisible = () => {
@@ -975,6 +976,7 @@ export class BrainScene {
 
   /** A tap at (x, y): selects exactly as a click there would. */
   externalTap(x: number, y: number) {
+    if (this.tapOverride?.(x, y)) return
     this.cb.onSelect(this.pick(x, y))
   }
 
@@ -982,11 +984,12 @@ export class BrainScene {
   orbitBy(yaw: number, pitch: number) {
     const c = this.controls
     if (!c.enableRotate) return
-    const offset = this.camera.position.clone().sub(c.target)
+    const q = (c as unknown as { _quat: T.Quaternion })._quat
+    const offset = this.camera.position.clone().sub(c.target).applyQuaternion(q)
     const sph = new T.Spherical().setFromVector3(offset)
     sph.theta -= yaw
     sph.phi = T.MathUtils.clamp(sph.phi - pitch, Math.max(0.05, c.minPolarAngle), Math.min(Math.PI - 0.05, c.maxPolarAngle))
-    offset.setFromSpherical(sph)
+    offset.setFromSpherical(sph).applyQuaternion(q.clone().invert())
     this.camera.position.copy(c.target).add(offset)
     this.camera.lookAt(c.target)
     this.fly = null
@@ -1000,6 +1003,86 @@ export class BrainScene {
     const d = T.MathUtils.clamp(offset.length() * factor, c.minDistance, c.maxDistance)
     this.camera.position.copy(c.target).add(offset.setLength(d))
     this.fly = null
+    this.dirty = true
+  }
+
+  // ── Operating-room mode (src/or) ────────────────────────────────────
+  private orActive = false
+  /** While set, a tap goes here first; returning true consumes it (the measuring tool). */
+  tapOverride: ((x: number, y: number) => boolean) | null = null
+
+  /** The atlas rig, for the room to dim or restore. */
+  get rig() {
+    return { hemi: this.hemi, key: this.keyLight, rim: this.rimLight, fill: this.fillLight, ground: this.ground }
+  }
+
+  /** The atlas backdrop, ground, lights and crease shadows step aside for the room. */
+  setOrMode(on: boolean, settle?: { explode: number; peel: number }) {
+    this.orActive = on
+    // The room needs the assembled head at once, and leaving it must not make the atlas refit the camera
+    // (it would chase an explode / peel change): both take their values instantly, with no framing.
+    const st = on ? { explode: 0, peel: 0 } : settle
+    if (st) {
+      this.amount = st.explode
+      this.peel = st.peel
+      this.lastFitAmount = st.explode
+      this.lastFitPeel = st.peel
+      this.last = null
+    }
+    for (const l of [this.hemi, this.keyLight, this.rimLight, this.fillLight]) l.visible = !on
+    this.ground.visible = !on
+    if (!on) {
+      const th = THEMES[this.state?.theme ?? 'dark']
+      this.renderer.setClearColor(th.clear)
+    }
+    this.aoKey = ''
+    this.warmUp()
+  }
+
+  /** Turn the camera's "up" (the room's up is the patient's anterior axis). OrbitControls caches it at construction. */
+  setUp(up: T.Vector3) {
+    this.camera.up.copy(up)
+    const c = this.controls as unknown as { _quat: T.Quaternion; _quatInverse: T.Quaternion }
+    c._quat.setFromUnitVectors(up, new T.Vector3(0, 1, 0))
+    c._quatInverse.copy(c._quat).invert()
+    this.dirty = true
+  }
+
+  /** Camera to `pos` looking at `target`, optionally with a new field of view. */
+  flyCamera(pos: T.Vector3, target: T.Vector3, o: { fov?: number; animate?: boolean } = {}) {
+    const animate = o.animate !== false
+    if (animate) {
+      this.fly = { pos: pos.clone(), target: target.clone(), t: 0, fov: o.fov === undefined ? undefined : { from: this.camera.fov, to: o.fov } }
+      this.dirty = true
+      return
+    }
+    if (o.fov !== undefined) {
+      this.camera.fov = o.fov
+      this.camera.updateProjectionMatrix()
+    }
+    this.goTo(pos.clone(), target.clone(), false)
+  }
+
+  /** A structure's mesh (assembled geometry), for the room to build the scalp from. */
+  partMesh(id: string) {
+    return this.byId.get(id)?.mesh ?? null
+  }
+
+  /** First surface point under (x, y): visible structures plus `extra` objects. Null when nothing is hit. */
+  pickPoint(x: number, y: number, extra: T.Object3D[] = []): { point: T.Vector3; id: string } | null {
+    return this.withEye(() => {
+      const w = this.host.clientWidth,
+        h = this.host.clientHeight
+      this.raycaster.setFromCamera(new T.Vector2((x / w) * 2 - 1, -(y / h) * 2 + 1), this.camera)
+      this.raycaster.firstHitOnly = true
+      const objs = [...this.parts.filter((p) => p.mesh.visible).map((p) => p.mesh), ...extra.filter((o) => o.visible)]
+      const hit = this.raycaster.intersectObjects(objs, false)[0]
+      return hit ? { point: hit.point.clone(), id: hit.object.name } : null
+    })
+  }
+
+  /** Ask for a redraw (the room animates lights and screens on its own). */
+  redraw() {
     this.dirty = true
   }
 
@@ -1858,7 +1941,7 @@ export class BrainScene {
       }
       this.dirty = true
     }
-    this.ground.visible = !s.isolate && this.amount < 0.45
+    this.ground.visible = !s.isolate && this.amount < 0.45 && !this.orActive
     this.updateCaps(s, visibilityChanged)
     if (lessonEnded) this.frameFor(s, true)
 
@@ -1876,7 +1959,12 @@ export class BrainScene {
     const selectionKey = s.selected.join(',')
     const selectionChanged = !first && selectionKey !== this.selectionKey
     this.selectionKey = selectionKey
-    if (firstEver || (!first && (viewChanged || isolateChanged))) {
+    if (this.orActive) {
+      // The room owns the camera: no atlas framing while it is on.
+      this.isolateKey = isolateKey
+      this.lastFitAmount = this.amount
+      this.lastFitPeel = this.peel
+    } else if (firstEver || (!first && (viewChanged || isolateChanged))) {
       this.framedOnce = true
       this.frameFor(s, !firstEver)
       this.isolateKey = isolateKey
@@ -1926,6 +2014,10 @@ export class BrainScene {
       const k = 1 - Math.pow(1 - this.fly.t, 3)
       this.camera.position.lerp(this.fly.pos, k)
       this.controls.target.lerp(this.fly.target, k)
+      if (this.fly.fov) {
+        this.camera.fov = this.fly.fov.from + (this.fly.fov.to - this.fly.fov.from) * k
+        this.camera.updateProjectionMatrix()
+      }
       if (this.fly.t >= 1) this.fly = null
       this.dirty = true
     }
@@ -1980,7 +2072,7 @@ export class BrainScene {
    * in a lesson — the occlusion pass sees every mesh as solid and unclipped) and the camera at rest.
    */
   private aoWanted(s: SceneSnapshot) {
-    return s.ao && !this.interacting && performance.now() > this.eyeMovingUntil && this.amount < 0.02 && this.peel < 0.005 && !s.cutaway && !s.isolate && !s.lesson && !this.cutKey && !s.sectionId
+    return s.ao && !this.orActive && !this.interacting && performance.now() > this.eyeMovingUntil && this.amount < 0.02 && this.peel < 0.005 && !s.cutaway && !s.isolate && !s.lesson && !this.cutKey && !s.sectionId
   }
 
   private draw(s: SceneSnapshot) {
