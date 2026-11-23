@@ -361,6 +361,9 @@ yuborish roziligi), iPad xotirasi (≤1.2 GB).
 
 ### 5.8 Neyroxirurgik simulyator — qo'l bilan boshqarish (2026-11-22, foydalanuvchi bilan muhokama)
 
+> 2026-11-23: HT-1 va HP-1 kodi `hands/HT-1` branchida saqlangan, master'ga qo'shilmaydi — avval veb / faqat Mac / faqat iPad
+> taqsimoti hal qilinadi (`docs/HANDS.md` 4-bo'lim, AG-8 tadqiqoti).
+
 Maqsad: operatsiyalarni 3D da ko'rsatish emas, **qo'l bilan bajarish** — inson omili natijani belgilaydi (NeuroVR/NeuroTouch
 tamoyili). Uskuna: hozircha faqat Mac kamerasi → VR'ga o'xshash, lekin ekranda: foydalanuvchining qo'llari sahna oldida
 3D shisha qo'l bo'lib ko'rinadi va asbob/modelni boshqaradi. Kiritish qatlami alohida (kamera → keyin Apple Pencil, WebXR,
@@ -376,8 +379,8 @@ Yo'q: teri, chakka mushagi, suyak choklari (Kocher nuqtasi va pterion suyak cheg
 
 | Bosqich | Qamrov | Holat |
 |---|---|---|
-| HT-1 | Qo'l kuzatuvi (MediaPipe, mahalliy), 3D shisha qo'llar, imo-ishoralar: ko'rsatish = nom, chimdish+surish = burash, tez chimdish = tanlash, ikki qo'l = zoom; HUD + kamera tasviri | ✅ 2026-11-22 (branch `hands/HT-1`) |
-| HP-1 | Bosh bilan qarash ("3D oyna"): yuz detektori → off-axis proyeksiya, ekran deraza bo'lib ko'rinadi; shlemsiz chuqurlik hissi | ✅ 2026-11-22 (branch `hands/HT-1`) |
+| HT-1 | Qo'l kuzatuvi (MediaPipe, mahalliy), 3D shisha qo'llar, imo-ishoralar: ko'rsatish = nom, chimdish+surish = burash, tez chimdish = tanlash, ikki qo'l = zoom; HUD + kamera tasviri | 🅿️ tayyor, saqlangan (branch `hands/HT-1`, birlashtirilmagan — `docs/HANDS.md`) |
+| HP-1 | Bosh bilan qarash ("3D oyna"): yuz detektori → off-axis proyeksiya, ekran deraza bo'lib ko'rinadi; shlemsiz chuqurlik hissi | 🅿️ tayyor, saqlangan (branch `hands/HT-1`, birlashtirilmagan — `docs/HANDS.md`) |
 | HT-2 | Asbob qo'lda: kursor o'rniga zond/kateter; barmoqlar orasidagi chuqurlik → asbob chuqurligi; to'qnashuv va masofa (mm) | ⏳ |
 | OP-1 | Simulyator dvigateli + EVD: Kocher nuqtasi, kateterni qo'l bilan kiritish (burchak, chuqurlik), Monro teshigiga tegish, yo'ldagi tuzilmalar; mahorat hisoboti (vaqt, titrash, yo'l samaradorligi, xavfli tegishlar) | ⏳ |
 | OP-2 | DBS (STN/GPi/Vim): traektoriya tanlash, elektrodni sekin kiritish, MER "signal" ketma-ketligi, AC–PC koordinatalari | ⏳ |

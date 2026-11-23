@@ -6,30 +6,30 @@
     "type": "mcq",
     "q": {
       "en": "Which sensory modality is the ONLY one that reaches the cerebral cortex directly without first relaying in the thalamus?",
-      "uz": "Qaysi sezgi turi talamusda almashinmasdan (uni chetlab o'tib) to'g'ridan-to'g'ri bosh miya po'stlog'iga yetib boradigan YAGONA sezgidir?"
+      "uz": "Qaysi sezgi turi talamusda almashinmasdan to'g'ridan-to'g'ri bosh miya po'stlog'iga yetib boradigan YAGONA sezgidir?"
     },
     "options": [
       {
         "en": "Olfaction (smell)",
-        "uz": "Hid bilish (olfaksiya)"
+        "uz": "Hid bilish sezgisi"
       },
       {
-        "en": "Vision (sight)",
-        "uz": "Ko'rish"
+        "en": "Vision (retinal sight)",
+        "uz": "Ko'rish (retinal) sezgisi"
       },
       {
-        "en": "Audition (hearing)",
-        "uz": "Eshitish"
+        "en": "Audition (cochlear hearing)",
+        "uz": "Eshitish (koxlear) sezgisi"
       },
       {
-        "en": "Gustation (taste)",
-        "uz": "Ta'm bilish"
+        "en": "Gustation (visceral taste)",
+        "uz": "Ta'm bilish (gustator) sezgisi"
       }
     ],
     "answer": 0,
     "why": {
       "en": "Every sensory pathway to the neocortex relays in the thalamus (VPL/VPM for somatosensory, VPMpc for taste, LGN for vision, MGN for hearing) except olfaction, which projects directly from the olfactory bulb to the primary olfactory (piriform) cortex.",
-      "uz": "Po'stloqqa boruvchi deyarli barcha sezgi yo'llari talamusda almashinadi (tana/yuz sezgisi uchun VPL/VPM, ta'm uchun VPMpc, ko'rish uchun LGN, eshitish uchun MGN); faqat hid bilish talamusni chetlab o'tib, hidlov piyozchasidan bevosita noksimon (piriform) po'stloqqa boradi."
+      "uz": "Po'stloqqa boruvchi barcha sezgi yo'llari talamusda almashinadi (tana va yuz sezgisi uchun VPL/VPM, ta'm uchun VPMpc, ko'rish uchun LGN, eshitish uchun MGN); faqat hid bilish talamusni chetlab o'tib, hidlov piyozchasidan bevosita noksimon (piriform) po'stloqqa boradi."
     },
     "refs": ["thalamus", "thal", "olfactory-tract", "j-piriformcortexmesial"],
     "plate": "thalamus-coronal",
@@ -46,8 +46,8 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "Which Y-shaped white-matter sheet inside the thalamus divides it into anterior, medial, and lateral nuclear groups (and houses the intralaminar nuclei such as the centromedian nucleus)?",
-      "uz": "Talamus ichidagi qaysi Y-shaklli oq modda qatlami uni oldingi, medial va lateral yadro guruhlariga ajratadi (hamda o'z ichida sentromedian kabi intralaminar yadrolarni saqlaydi)?"
+      "en": "Which Y-shaped white-matter sheet inside the thalamus divides it into anterior, medial, and lateral nuclear groups and houses the intralaminar nuclei?",
+      "uz": "Talamus ichidagi qaysi Y-shaklli oq modda qatlami uni oldingi, medial va lateral yadro guruhlariga ajratadi hamda o'z ichida intralaminar yadrolarni saqlaydi?"
     },
     "options": [
       {
@@ -59,12 +59,12 @@
         "uz": "Tashqi medullyar plastinka (lamina medullaris externa)"
       },
       {
-        "en": "Lamina terminalis",
-        "uz": "Oxirgi plastinka (lamina terminalis)"
+        "en": "Lamina terminalis of the third ventricle",
+        "uz": "Uchinchi qorinchaning oxirgi plastinkasi (lamina terminalis)"
       },
       {
-        "en": "Septum pellucidum",
-        "uz": "Shaffof to'siq (septum pellucidum)"
+        "en": "Stria medullaris thalami",
+        "uz": "Talamusning miya chizig'i (stria medullaris thalami)"
       }
     ],
     "answer": 0,
@@ -92,20 +92,20 @@
     },
     "options": [
       {
-        "en": "Ventral posterolateral nucleus (VPL — body/limbs) and ventral posteromedial nucleus (VPM — face/mouth)",
-        "uz": "Ventral orqa-lateral yadro (VPL — tana va oyoq-qo'llar) hamda ventral orqa-medial yadro (VPM — yuz va og'iz)"
+        "en": "Ventral posterolateral (VPL) and ventral posteromedial (VPM) nuclei",
+        "uz": "Ventral orqa-lateral (VPL) va ventral orqa-medial (VPM) yadrolar"
       },
       {
-        "en": "Ventral anterior nucleus (VA) and ventral lateral nucleus (VL)",
-        "uz": "Ventral oldingi yadro (VA) va ventral lateral yadro (VL)"
+        "en": "Ventral anterior (VA) and ventral lateral (VL) motor relay nuclei",
+        "uz": "Ventral oldingi (VA) va ventral lateral (VL) harakat yadrolari"
       },
       {
-        "en": "Lateral geniculate nucleus (LGN) and medial geniculate body (MGN)",
-        "uz": "Lateral tizzasimon yadro (LGN) va medial tizzasimon tana (MGN)"
+        "en": "Lateral geniculate (LGN) and medial geniculate (MGN) relay nuclei",
+        "uz": "Lateral tizzasimon (LGN) va medial tizzasimon (MGN) yadrolar"
       },
       {
-        "en": "Anterior nuclear group (AV/AM) and mediodorsal nucleus (MD)",
-        "uz": "Oldingi yadrolar guruhi (AV/AM) va mediodorsal yadro (MD)"
+        "en": "Anterior nuclear group (AV/AM) and mediodorsal (MD) association nucleus",
+        "uz": "Oldingi yadrolar guruhi (AV/AM) va mediodorsal (MD) assotsiativ yadro"
       }
     ],
     "answer": 0,
@@ -133,20 +133,20 @@
     },
     "options": [
       {
-        "en": "Lateral geniculate nucleus (LGN — vision to V1) and medial geniculate body (MGN — hearing to Heschl's gyrus, A1)",
-        "uz": "Lateral tizzasimon yadro (LGN — ko'rishni V1 ga) va medial tizzasimon tana (MGN — eshitishni Geshl pushtasiga, A1 ga)"
+        "en": "Lateral geniculate (vision to V1) and medial geniculate (hearing to A1)",
+        "uz": "Lateral tizzasimon (ko'rishni V1 ga) va medial tizzasimon (eshitishni A1 ga)"
       },
       {
-        "en": "Habenula and pineal gland",
-        "uz": "Habenula va epifiz (pineal bez)"
+        "en": "Habenular nuclei (limbic aversion) and pineal body (circadian melatonin)",
+        "uz": "Habenula yadrolari (limbik aloqa) va epifiz bezi (sirkad melatonin ajratish)"
       },
       {
-        "en": "Subthalamic nucleus and zona incerta",
-        "uz": "Subtalamik yadro va zona incerta"
+        "en": "Subthalamic nucleus (motor gating) and zona incerta (sensory modulation)",
+        "uz": "Subtalamik yadro (harakat boshqaruvi) va zona incerta (sezgi modulyatsiyasi)"
       },
       {
-        "en": "Suprachiasmatic nucleus and supraoptic nucleus",
-        "uz": "Suprachiazmatik yadro va supraoptik yadro"
+        "en": "Ventral posterolateral (body touch) and ventral posteromedial (facial pain)",
+        "uz": "Ventral orqa-lateral (tana sezgisi) va ventral orqa-medial (yuz sezgisi)"
       }
     ],
     "answer": 0,
@@ -174,8 +174,8 @@
     },
     "options": [
       {
-        "en": "Pulvinar",
-        "uz": "Pulvinar (yostiqcha)"
+        "en": "Pulvinar nucleus",
+        "uz": "Pulvinar (yostiqcha) yadrosi"
       },
       {
         "en": "Anterior nuclear group",
@@ -186,13 +186,13 @@
         "uz": "Parafassikulyar yadro"
       },
       {
-        "en": "Habenula",
-        "uz": "Habenula (yuganak)"
+        "en": "Mediodorsal thalamic nucleus",
+        "uz": "Mediodorsal talamik yadro"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The pulvinar (Latin for 'cushion') forms the large posterior pole of the thalamus (plate T2 and O3); it connects reciprocally with the superior colliculus and parieto-temporo-occipital association cortex to direct visual attention (lesions cause contralateral visual neglect-like inattention).",
+      "en": "The pulvinar (Latin for 'cushion') forms the large posterior pole of the thalamus (plates T2 and O3); it connects reciprocally with the superior colliculus and parieto-temporo-occipital association cortex to direct visual attention (lesions cause contralateral visual neglect-like inattention).",
       "uz": "Pulvinar (lotincha 'yostiqcha') talamusning eng yirik orqa yadrosi bo'lib (T2 va O3 plastinkalari), yuqori do'nglik va tepa-chakka-ensa assotsiativ po'stlog'i orasida ko'rish diqqatini boshqaradi (zararlanishi qarama-qarshi ko'rish e'tiborsizligini beradi)."
     },
     "refs": ["th-pul", "j-pum", "thalamus"],
@@ -219,16 +219,16 @@
         "uz": "Suprachiazmatik yadro (SCN)"
       },
       {
-        "en": "Mammillary body",
-        "uz": "So'rg'ichsimon tana"
+        "en": "Mammillary body complex (MB)",
+        "uz": "So'rg'ichsimon tana majmuasi (MB)"
       },
       {
-        "en": "Ventromedial nucleus (VMN)",
-        "uz": "Ventromedial yadro (VMN)"
+        "en": "Ventromedial hypothalamic nucleus (VMN)",
+        "uz": "Ventromedial gipotalamik yadro (VMN)"
       },
       {
-        "en": "Posterior hypothalamic nucleus",
-        "uz": "Orqa gipotalamik yadro"
+        "en": "Posterior hypothalamic nucleus (PHN)",
+        "uz": "Orqa gipotalamik yadro (PHN)"
       }
     ],
     "answer": 0,
@@ -251,7 +251,7 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "Which two hypothalamic nuclei contain magnocellular neurosecretory neurons that synthesize vasopressin (ADH) and oxytocin and send their axons down the pituitary stalk to the posterior pituitary (neurohypophysis)?",
+      "en": "Which two hypothalamic nuclei contain magnocellular neurosecretory neurons that synthesize vasopressin (ADH) and oxytocin and send their axons down the pituitary stalk to the posterior pituitary?",
       "uz": "Gipotalamusning qaysi ikki yadrosidagi magnotsellyulyar neyronlar vazopressin (ADG) hamda oksitotsin ishlab chiqarib, o'z aksonlari orqali orqa gipofizga (neyrogipofizga) yuboradi?"
     },
     "options": [
@@ -264,8 +264,8 @@
         "uz": "Ventromedial yadro (VMN) va dorsomedial yadro (DMN)"
       },
       {
-        "en": "Medial preoptic nucleus and mammillary body",
-        "uz": "Medial preoptik yadro va so'rg'ichsimon tana"
+        "en": "Medial preoptic nucleus (MPO) and mammillary body (MB)",
+        "uz": "Medial preoptik yadro (MPO) va so'rg'ichsimon tana (MB)"
       },
       {
         "en": "Suprachiasmatic nucleus (SCN) and posterior hypothalamic nucleus",
@@ -297,16 +297,16 @@
     },
     "options": [
       {
-        "en": "Preoptic → Supraoptic (anterior) → Tuberal → Mammillary (posterior)",
-        "uz": "Preoptik → Supraoptik (oldingi) → Tuberal → Mamillyar (orqa)"
+        "en": "Preoptic → Supraoptic → Tuberal → Mammillary",
+        "uz": "Preoptik → Supraoptik → Tuberal → Mamillyar"
       },
       {
-        "en": "Rostrum → Genu → Body → Splenium",
-        "uz": "Tumshuq → Tizza → Tana → Splenium"
+        "en": "Supraoptic → Preoptic → Mammillary → Tuberal",
+        "uz": "Supraoptik → Preoptik → Mamillyar → Tuberal"
       },
       {
-        "en": "Frontal → Parietal → Occipital → Temporal",
-        "uz": "Frontal → Tepa → Ensa → Chakka"
+        "en": "Periventricular → Medial → Intermediate → Lateral",
+        "uz": "Periventrikulyar → Medial → Oraliq → Lateral"
       },
       {
         "en": "Anterior → Ventral → Pulvinar → Metathalamic",
@@ -333,31 +333,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "How do the anterior hypothalamic (preoptic/supraoptic) and posterior hypothalamic regions oppose each other in thermoregulation?",
+      "en": "How do the anterior (preoptic/supraoptic) and posterior hypothalamic regions oppose each other in thermoregulation?",
       "uz": "Tana haroratini boshqarishda oldingi (preoptik/supraoptik) va orqa gipotalamus yadrolari bir-biriga qanday qarama-qarshi vazifani bajaradi?"
     },
     "options": [
       {
-        "en": "The anterior/preoptic hypothalamus drives heat loss (sweating, vasodilation, parasympathetic tone; lesion → hyperthermia), whereas the posterior hypothalamus drives heat conservation (shivering, vasoconstriction, sympathetic tone; lesion → poikilothermia)",
-        "uz": "Oldingi/preoptik gipotalamus issiqlik chiqarishni (terlash, tomir kengayishi; zararlanishi → gipertermiya), orqa gipotalamus esa issiqlikni saqlashni (titrash, simpatik tonus; zararlanishi → poykilotermiya) boshqaradi"
+        "en": "Anterior/preoptic drives heat loss (sweating, vasodilation); posterior drives heat conservation (shivering, vasoconstriction)",
+        "uz": "Oldingi/preoptik issiqlik chiqarishni (terlash, tomir kengayishi); orqa esa issiqlik saqlashni (titrash, tomir torayishi) boshqaradi"
       },
       {
-        "en": "The anterior hypothalamus causes shivering, whereas the posterior hypothalamus causes sweating",
-        "uz": "Oldingi gipotalamus titrashni, orqa gipotalamus esa terlashni chaqiradi"
+        "en": "Anterior/preoptic drives heat conservation (shivering, vasoconstriction); posterior drives heat loss (sweating, vasodilation)",
+        "uz": "Oldingi/preoptik issiqlik saqlashni (titrash, tomir torayishi); orqa esa issiqlik chiqarishni (terlash, tomir kengayishi) boshqaradi"
       },
       {
-        "en": "Both regions only heat the body and have no cooling mechanism",
-        "uz": "Ikkala soha ham faqat tanani isitadi va sovitish mexanizmiga ega emas"
+        "en": "Anterior/preoptic sets basal thyroid tone via TRH release; posterior regulates core temperature solely via cutaneous vasodilation",
+        "uz": "Oldingi/preoptik TRH orqali bazal qalqonsimon bez tonusini; orqa esa haroratni faqat teri tomirlarini kengaytirish orqali boshqaradi"
       },
       {
-        "en": "Thermoregulation is controlled by the lateral geniculate body, not the hypothalamus",
-        "uz": "Harorat gipotalamusda emas, lateral tizzasimon tanada boshqariladi"
+        "en": "Ventromedial nucleus drives sympathetic heat generation; dorsomedial nucleus drives parasympathetic cooling during fever",
+        "uz": "Ventromedial yadro simpatik issiqlik hosil qilishni; dorsomedial yadro esa isitmada parasimpatik sovitishni ta'minlaydi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Warm-sensitive neurons in the medial preoptic and anterior hypothalamic nuclei (mpo, ahn) dissipate heat via sweating and cutaneous vasodilation (lesions cause central hyperthermia). The posterior hypothalamic nucleus (phn) conserves and generates heat via vasoconstriction and shivering (lesions cause poikilothermia/hypothermia).",
-      "uz": "Oldingi va medial preoptik yadrolar (`mpo`, `ahn`) issiqlik chiqarish (terlash, tomir kengayishi, parasimpatik faollashuv) uchun javobgar bo'lib, zararlansa gipertermiya yuzaga keladi; orqa gipotalamik yadro (`phn`) esa issiqlikni saqlash (titrash, simpatik faollashuv) markazi bo'lib, zararlansa poykilotermiya beradi."
+      "en": "Warm-sensitive neurons in the medial preoptic and anterior hypothalamic nuclei dissipate heat via sweating, cutaneous vasodilation, and parasympathetic tone (lesions cause central hyperthermia). The posterior hypothalamic nucleus conserves and generates heat via vasoconstriction, shivering, and sympathetic tone (lesions cause poikilothermia/hypothermia).",
+      "uz": "Oldingi va medial preoptik yadrolar issiqlik chiqarish (terlash, tomir kengayishi, parasimpatik faollashuv) uchun javobgar bo'lib, zararlansa markaziy gipertermiya yuzaga keladi; orqa gipotalamik yadro esa issiqlikni saqlash (titrash, tomir torayishi, simpatik faollashuv) markazi bo'lib, zararlansa poykilotermiya beradi."
     },
     "refs": ["anterior-nucleus-of-hypothalamus", "posterior-nucleus-of-hypothalamus", "medial-preoptic-nucleus", "ahn", "phn", "mpo"],
     "plate": "hypothalamus-zones",
@@ -374,30 +374,30 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "Which two main structures make up the epithalamus at the dorsocaudal roof of the diencephalon (plate O3), and what hormone does the endocrine gland secrete at night?",
+      "en": "Which two main structures make up the epithalamus at the dorsocaudal roof of the diencephalon (plate O3), and what hormone does its endocrine gland secrete at night?",
       "uz": "Oraliq miyaning orqa-yuqori qismida (O3 plastinkasi) epitalamusni qaysi ikki asosiy tuzilma hosil qiladi va uning endokrin bezi kechasi qaysi gormonni ajratadi?"
     },
     "options": [
       {
-        "en": "Pineal gland (secreting melatonin at night) and the habenula (receiving the stria medullaris thalami)",
-        "uz": "Epifiz — pineal bez (kechasi melatonin ajratadi) va habenula — yuganak (stria medullarisni qabul qiladi)"
+        "en": "Pineal gland (secreting melatonin) and the paired habenulae",
+        "uz": "Epifiz bezi (melatonin ajratadi) va juft habenula yadrolari"
       },
       {
-        "en": "Pituitary gland (secreting growth hormone) and the mammillary bodies",
-        "uz": "Gipofiz (o'sish gormoni ajratadi) va so'rg'ichsimon tanalar"
+        "en": "Neurohypophysis (secreting vasopressin) and the mammillary bodies",
+        "uz": "Neyrogipofiz (vazopressin ajratadi) va so'rg'ichsimon tanalar"
       },
       {
-        "en": "Subthalamic nucleus and zona incerta",
-        "uz": "Subtalamik yadro va zona incerta"
+        "en": "Subthalamic nucleus (motor relay) and the adjacent zona incerta",
+        "uz": "Subtalamik yadro (harakat bo'g'ini) va yonidagi zona incerta"
       },
       {
-        "en": "Optic chiasm and median eminence",
-        "uz": "Ko'rish kesishmasi va median bo'rtma"
+        "en": "Median eminence (releasing GnRH) and the subfornical organ",
+        "uz": "Median bo'rtma (GnRH ajratadi) va gumbazosti a'zo (subfornikal organ)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The epithalamus sits above the posterior commissure at the midbrain–diencephalon junction (plate O3) and consists of the pineal gland (a circumventricular endocrine organ secreting melatonin at night under SCN → PVN → IML → superior cervical ganglion control) and the paired habenulae (which receive the stria medullaris and project via the fasciculus retroflexus to the interpeduncular nucleus/VTA).",
+      "en": "The epithalamus sits above the posterior commissure at the midbrain–diencephalon junction (plate O3) and consists of the pineal gland (a circumventricular endocrine organ secreting melatonin at night under SCN → PVN → IML → superior cervical ganglion control) and the paired habenulae (which receive the stria medullaris thalami and project via the fasciculus retroflexus to the interpeduncular nucleus and VTA).",
       "uz": "O3 plastinkasida orqa komissura ustida epitalamusning ikki asosiy tuzilmasi joylashgan: kechasi SCN boshqaruvi ostida melatonin ajratuvchi epifiz (pineal bez) hamda stria medullaris orqali limbik signal oluvchi juft habenula (yuganak)."
     },
     "refs": ["pineal-body", "habenula", "stria-medullaris-of-thalamus", "pin", "hab", "sm"],
@@ -415,31 +415,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "How is the ventral lateral (VL) motor thalamus subdivided between basal-ganglia (pallidal) outflow and cerebellar (dentate) outflow, and which subdivision is the stereotactic target for essential and parkinsonian tremor?",
-      "uz": "Harakat talamusining ventral lateral (VL) yadrosi bazal yadrolar (pallidar) va miyacha (tishsimon yadro) chiqishlari o'rtasida qanday bo'lingan va uning qaysi qismi tremorda DBS / ultratovush nishoni hisoblanadi?"
+      "en": "How is the ventral lateral (VL) motor thalamus subdivided between basal-ganglia and cerebellar outflow, and which subdivision is the stereotactic target for essential and parkinsonian tremor?",
+      "uz": "Harakat talamusining ventral lateral (VL) yadrosi bazal yadrolar va miyacha chiqishlari o'rtasida qanday bo'lingan va uning qaysi qismi tremorda DBS / fokuslangan ultratovush nishoni hisoblanadi?"
     },
     "options": [
       {
-        "en": "Anterior VL (VLa, with VA) receives GABAergic pallidal (GPi) outflow via the thalamic fasciculus (H1); posterior VL (VLp = Vim, ventral intermediate nucleus) receives crossed excitatory dentate outflow via the dentato-rubro-thalamic tract and is the DBS / MRgFUS target for tremor",
-        "uz": "Oldingi VL (VLa, VA bilan) talamik tutam (H1) orqali GPi chiqishini oladi; orqa VL (VLp = Vim, ventral oraliq yadro) esa dentato-rubro-talamik trakt orqali qarama-qarshi tishsimon yadro signalini oladi va essensial hamda parkinson tremorida DBS / fokuslangan ultratovush nishonidir"
+        "en": "VLa receives pallidal (GPi) outflow; VLp (Vim) receives cerebellar dentate outflow and is the tremor target",
+        "uz": "VLa pallidar (GPi) chiqishni oladi; VLp (Vim) miyacha tishsimon yadro signalini oladi va tremor nishonidir"
       },
       {
-        "en": "Both VLa and VLp receive only retinal visual fibres; the pulvinar is the target for tremor",
-        "uz": "VLa va VLp faqat to'r parda tolalarini oladi; tremorda esa pulvinar nishonga olinadi"
+        "en": "VLa receives cerebellar dentate outflow and is the tremor target; VLp (Vim) receives pallidal (GPi) outflow",
+        "uz": "VLa miyacha tishsimon yadro signalini oladi va tremor nishonidir; VLp (Vim) pallidar (GPi) chiqishni oladi"
       },
       {
-        "en": "VLa receives the medial lemniscus; VLp receives the lateral lemniscus",
-        "uz": "VLa medial lemniskni, VLp esa lateral lemniskni qabul qiladi"
+        "en": "VLa receives spinothalamic afferents; VLp receives medial lemniscal fibres and is the tremor target",
+        "uz": "VLa spinotalamik tolalarni oladi; VLp medial lemnisk tolalarini qabul qiladi va tremor nishoni hisoblanadi"
       },
       {
-        "en": "VLa projects to the spinal cord; VLp projects to the posterior pituitary",
-        "uz": "VLa orqa miyaga, VLp esa orqa gipofizga proyeksiya beradi"
+        "en": "Both VLa and VLp receive nigral (SNr) outflow exclusively; the centromedian nucleus is the tremor target",
+        "uz": "VLa va VLp ning ikkalasi ham faqat SNr chiqishini oladi; tremorda esa sentromedian yadro nishonga olinadi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As shown on plates T2 and B4, basal-ganglia and cerebellar loops converge on the motor thalamus without mixing: GPi/SNr inhibit VA and VLa (anterior VL), while the contralateral dentate nucleus excites VLp (= Hassler's Vim, ventral intermediate nucleus), which projects to M1 (BA4). Vim is the premier DBS and MR-guided focused ultrasound thalamotomy target for essential and parkinsonian tremor.",
-      "uz": "T2 va B4 plastinkalarida ko'rsatilganidek, VL yadroning oldingi qismi (VLa, VA bilan birga) GPi signalini, orqa qismi (VLp = Vim) esa dentato-rubro-talamik trakt orqali qarama-qarshi miyacha tishsimon yadrosi signalini M1 (BA4) po'stlog'iga uzatadi. Vim — essensial va parkinson tremorida asosiy DBS va fokuslangan ultratovush nishonidir."
+      "en": "On plates T2 and B4, basal-ganglia and cerebellar loops converge on the motor thalamus without mixing: GPi and SNr send GABAergic inhibition via the thalamic fasciculus (H1) to VA and VLa (anterior VL), while the contralateral dentate nucleus sends excitatory fibres via the dentato-rubro-thalamic tract to VLp (Hassler's Vim, ventral intermediate nucleus), which projects to M1 (BA4). Vim is the premier DBS and MR-guided focused ultrasound thalamotomy target for essential and parkinsonian tremor.",
+      "uz": "T2 va B4 plastinkalarida ko'rsatilganidek, VL yadroning oldingi qismi (VLa, VA bilan birga) talamik tutam (H1) orqali GPi/SNr tormozlovchi signalini, orqa qismi (VLp = Vim, ventral oraliq yadro) esa dentato-rubro-talamik trakt orqali qarama-qarshi miyacha tishsimon yadrosining qo'zg'atuvchi signalini M1 (BA4) po'stlog'iga uzatadi. Vim — essensial va parkinson tremorida asosiy DBS va fokuslangan ultratovush nishonidir."
     },
     "refs": ["th-vl", "th-va", "j-vim", "j-va", "tf", "cb-dentate-nucleus"],
     "plate": "thalamus-nuclei-map",
@@ -456,31 +456,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "What is the unique neurochemical and connectional feature of the thalamic reticular nucleus (`th-ret`, `j-rt`), and which rhythm does it generate in sleep and absence epilepsy?",
-      "uz": "Talamusning to'rsimon yadrosi (`th-ret`, `j-rt`) neyromediatori va bog'lanishi jihatidan boshqa talamus yadrolaridan nimasi bilan farq qiladi hamda uyqu va absans epilepsiyasida qanday ritmni boshqaradi?"
+      "en": "What is the unique neurochemical and connectional feature of the thalamic reticular nucleus, and which rhythm does it generate in sleep and absence epilepsy?",
+      "uz": "Talamusning to'rsimon yadrosi neyromediatori va bog'lanishi jihatidan boshqa talamus yadrolaridan nimasi bilan farq qiladi hamda uyqu va absans epilepsiyasida qanday ritmni boshqaradi?"
     },
     "options": [
       {
-        "en": "It is a thin GABAergic shell lateral to the external medullary lamina that does NOT project to the cortex; instead it receives collaterals of thalamocortical and corticothalamic fibres and inhibits thalamic relay nuclei — generating sleep spindles and the 3-Hz spike-and-wave rhythm of absence seizures (via T-type Ca²⁺ channels, target of ethosuximide)",
-        "uz": "U tashqi medullyar plastinka va ichki kapsula orasidagi yupqa GABAergik qobiq bo'lib, po'stloqqa tola bermaydi; talamokortikal va kortikotalamik kollaterallarni olib bo'g'in yadrolarini tormozlaydi hamda uyqu urchuqlari va absans tutqanoqlaridagi 3 Gs cho'qqi-to'lqin ritmini (T-tip Ca²⁺ kanallari — etosuksimid nishoni) yuritadi"
+        "en": "A GABAergic shell that does not project to cortex, inhibiting thalamic relay nuclei to drive sleep spindles and 3-Hz absence rhythms",
+        "uz": "Po'stloqqa tola bermaydigan GABAergik qobiq bo'lib, bo'g'in yadrolarini tormozlab uyqu urchuqlari va 3 Gs absans ritmini yuritadi"
       },
       {
-        "en": "It is a glutamatergic nucleus inside the third ventricle that projects directly to the spinal ventral horn",
-        "uz": "U uchinchi qorincha ichidagi glutamatergik yadro bo'lib, bevosita orqa miya oldingi shoxiga boradi"
+        "en": "A glutamatergic midline nucleus projecting diffusely to prefrontal cortex to drive slow-wave delta sleep and tonic-clonic seizures",
+        "uz": "Prefrontal po'stloqqa diffuz tola beruvchi glutamatergik o'rta chiziq yadrosi bo'lib, delta uyqu va tonik-klonik tutqanoqlarni yuritadi"
       },
       {
-        "en": "It is a dopaminergic nucleus that secretes prolactin-inhibiting factor into the portal system",
-        "uz": "U portal tizimga prolaktinni tormozlovchi omil chiqaradigan dofaminergik yadrodir"
+        "en": "A cholinergic intralaminar nucleus projecting to the striatum and hippocampus to drive REM theta rhythms and temporal lobe seizures",
+        "uz": "Striatum va gippokampga tola beruvchi xolinergik intralaminar yadro bo'lib, REM teta ritmi va chakka tutqanoqlarini boshqaradi"
       },
       {
-        "en": "It is the primary auditory relay projecting to Heschl's gyrus",
-        "uz": "U Geshl pushtasiga boruvchi birlamchi eshitish bo'g'inidir"
+        "en": "A dopaminergic periventricular shell projecting directly to the basal ganglia to drive beta oscillations and myoclonic jerks",
+        "uz": "Bazal yadrolarga bevosita tola beruvchi dofaminergik periventrikulyar qobiq bo'lib, beta tebranishlar va mioklonik silkinishlarni yuritadi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "On plates T1 and T2, the thalamic reticular nucleus (Rt) forms a thin GABAergic shell between the external medullary lamina and the internal capsule. Unlike all other thalamic nuclei, it sends no axons to the cortex; it gates thalamocortical relay nuclei, generates sleep spindles, and acts as the pacemaker for generalized 3-Hz spike-wave absence seizures via T-type Ca²⁺ channels (blocked by ethosuximide).",
-      "uz": "T1 va T2 plastinkalarida talamusning to'rsimon yadrosi (`th-ret`, `j-rt`) tashqi medullyar plastinka va ichki kapsula orasida yupqa GABAergik qobiq hosil qiladi. U po'stloqqa emas, talamusning bo'g'in yadrolariga tormozlovchi chiqish berib, diqqat 'darvozasi', uyqu urchuqlari va absans tutqanoqlaridagi 3 Gs cho'qqi-to'lqin ritmini (T-tip Ca²⁺ kanallari — etosuksimid nishoni) boshqaradi."
+      "en": "On plates T1 and T2, the thalamic reticular nucleus (Rt) forms a thin GABAergic shell between the external medullary lamina and the internal capsule. Unlike all other thalamic nuclei, it sends no axons to the cortex; instead it receives collaterals from thalamocortical and corticothalamic fibres, gates relay nuclei, generates sleep spindles, and acts as the pacemaker for generalized 3-Hz spike-wave absence seizures via T-type Ca²⁺ channels (the target of ethosuximide).",
+      "uz": "T1 va T2 plastinkalarida talamusning to'rsimon yadrosi tashqi medullyar plastinka va ichki kapsula orasida yupqa GABAergik qobiq hosil qiladi. U po'stloqqa emas, talamusning bo'g'in yadrolariga tormozlovchi chiqish berib, diqqat 'darvozasi', uyqu urchuqlari va absans tutqanoqlaridagi 3 Gs cho'qqi-to'lqin ritmini (T-tip Ca²⁺ kanallari — etosuksimid nishoni) boshqaradi."
     },
     "refs": ["th-ret", "j-rt", "th-eml", "thalamus"],
     "plate": "thalamus-coronal",
@@ -497,33 +497,45 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "What are the four major arterial territories of the thalamus, and which thalamic nuclear groups does each supply?",
-      "uz": "Talamusning to'rtta asosiy arterial qon ta'minoti havzasi qaysilar va ularning har biri qaysi yadrolar guruhini ta'minlaydi?"
+      "en": "Which set accurately lists the four major arterial territories of the thalamus and their primary parent vessels?",
+      "uz": "Talamusning to'rtta asosiy arterial qon ta'minoti havzasi va ularning asosiy manba tomirlari qaysi javobda to'g'ri ko'rsatilgan?"
     },
     "options": [
       {
-        "en": "1) Tuberothalamic/polar (from PCom: anterior nuclei, VA, ventral VL); 2) Paramedian/thalamoperforating (from P1 PCA, artery of Percheron: MD, CM/intralaminar); 3) Inferolateral/thalamogeniculate (from P2 PCA: VPL, VPM, VL); 4) Posterior choroidal (from P2 PCA: pulvinar, LGN, LP)",
-        "uz": "1) Tuberotalamik/qutb (PCom'dan: oldingi yadrolar, VA, ventral VL); 2) Paramedian/talamoperforant (P1 dan, Percheron arteriyasi: MD, CM/intralaminar); 3) Inferolateral/talamogenikulyar (P2 dan: VPL, VPM, VL); 4) Orqa xorioidal (P2 dan: pulvinar, LGN, LP)"
+        "en": "Tuberothalamic (PCom), paramedian (P1 PCA), inferolateral/thalamogeniculate (P2 PCA), and posterior choroidal (P2 PCA)",
+        "uz": "Tuberotalamik (PCom), paramedian (P1 PCA), inferolateral/talamogenikulyar (P2 PCA) va orqa xorioidal (P2 PCA)"
       },
       {
-        "en": "1) Anterior spinal; 2) Posterior spinal; 3) PICA; 4) AICA",
-        "uz": "1) Oldingi orqa miya; 2) Orqa orqa miya; 3) PICA; 4) AICA"
+        "en": "Recurrent artery of Heubner (ACA), medial lenticulostriate (M1 MCA), anterior choroidal (ICA), and basilar pontine perforators",
+        "uz": "Heubner qaytuvchi arteriyasi (ACA), medial lentikulostriar (M1 MCA), oldingi xorioidal (ICA) va bazilyar ko'prik perforantlari"
       },
       {
-        "en": "1) Ophthalmic; 2) Middle meningeal; 3) Superficial temporal; 4) Maxillary",
-        "uz": "1) Ko'z arteriyasi; 2) O'rta parda arteriyasi; 3) Yuzaki chakka; 4) Yuqori jag' arteriyasi"
+        "en": "Tuberothalamic (M1 MCA), paramedian (ACom), thalamogeniculate (superior cerebellar artery), and anterior choroidal (P1 PCA)",
+        "uz": "Tuberotalamik (M1 MCA), paramedian (ACom), talamogenikulyar (ustki miyacha arteriyasi) va oldingi xorioidal (P1 PCA)"
       },
       {
-        "en": "The entire thalamus is supplied exclusively by the recurrent artery of Heubner from the ACA",
-        "uz": "Butun talamus faqat oldingi miya arteriyasining Heubner shoxidan qon oladi"
+        "en": "Lateral lenticulostriate (MCA), anterior spinal (vertebral), posterior inferior cerebellar (PICA), and anterior inferior cerebellar (AICA)",
+        "uz": "Lateral lentikulostriar (MCA), oldingi orqa miya (umurtqa), orqa pastki miyacha (PICA) va oldingi pastki miyacha (AICA)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As summarized on plates T1 and T2, thalamic strokes divide into four classic vascular syndromes: tuberothalamic (PCom → anterior/VA), paramedian thalamoperforating (P1 / artery of Percheron → MD, CM, intralaminar), thalamogeniculate (P2 → VPL, VPM, VL), and posterior choroidal (pulvinar, LGN, LP).",
-      "uz": "T1 va T2 plastinkalarida keltirilganidek, talamus to'rtta arterial havzadan qon oladi: tuberotalamik (PCom: oldingi, VA, ventral VL), paramedian / talamoperforant (P1: MD, CM, intralaminar — Percheron arteriyasi), inferolateral / talamogenikulyar (P2: VPL, VPM, VL) va orqa xorioidal (pulvinar, LGN, LP)."
+      "en": "On plates T1 and T2, thalamic strokes divide into four classic vascular territories: (1) tuberothalamic/polar from PCom (anterior nuclei, VA, ventral VL); (2) paramedian/thalamoperforating from P1 PCA, including the artery of Percheron (MD, CM/intralaminar); (3) inferolateral/thalamogeniculate from P2 PCA (VPL, VPM, VL); and (4) posterior choroidal from P2 PCA (pulvinar, LGN, LP).",
+      "uz": "T1 va T2 plastinkalarida keltirilganidek, talamus to'rtta arterial havzadan qon oladi: (1) tuberotalamik/qutb (PCom: oldingi yadrolar, VA, ventral VL); (2) paramedian/talamoperforant (P1 PCA, Percheron arteriyasi: MD, CM/intralaminar); (3) inferolateral/talamogenikulyar (P2 PCA: VPL, VPM, VL); va (4) orqa xorioidal (P2 PCA: pulvinar, LGN, LP)."
     },
-    "refs": ["thalamus", "th-an", "th-md", "th-cm", "th-vpl", "th-vpm", "th-pul", "thalamogeniculate-artery", "thalamoperforating-artery", "posterior-medial-choroidal-artery", "thalamotuberal-artery"],
+    "refs": [
+      "thalamus",
+      "th-an",
+      "th-md",
+      "th-cm",
+      "th-vpl",
+      "th-vpm",
+      "th-pul",
+      "thalamogeniculate-artery",
+      "thalamoperforating-artery",
+      "posterior-medial-choroidal-artery",
+      "thalamotuberal-artery"
+    ],
     "plate": "thalamus-coronal",
     "sources": [
       {
@@ -538,31 +550,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "How are the six layers of the lateral geniculate nucleus (LGN, `lgn`, `j-cgl`) organized with respect to eye of origin (contralateral vs ipsilateral) and functional stream (magnocellular vs parvocellular)?",
-      "uz": "Lateral tizzasimon yadroning (LGN, `lgn`, `j-cgl`) 6 ta qatlami ko'z tomoni (qarama-qarshi va o'sha tomon) hamda funksional oqimlar (magnotsellyulyar va parvotsellyulyar) bo'yicha qanday taqsimlangan?"
+      "en": "How are the six layers of the lateral geniculate nucleus (LGN) organized with respect to eye of origin and magnocellular versus parvocellular streams?",
+      "uz": "Lateral tizzasimon yadroning (LGN) 6 ta qatlami ko'z tomoni (qarama-qarshi va o'sha tomon) hamda magnotsellyulyar va parvotsellyulyar oqimlar bo'yicha qanday taqsimlangan?"
     },
     "options": [
       {
-        "en": "Layers 1, 4, 6 receive the contralateral (nasal) retina and layers 2, 3, 5 receive the ipsilateral (temporal) retina; ventral layers 1–2 are magnocellular (motion/contrast) and dorsal layers 3–6 are parvocellular (colour/fine detail)",
-        "uz": "1, 4, 6-qatlamlar qarama-qarshi ko'zdan, 2, 3, 5-qatlamlar o'sha tomon ko'zdan tola oladi; pastki 1–2-qatlamlar magnotsellyulyar (harakat), yuqori 3–6-qatlamlar esa parvotsellyulyar (rang va mayda detal)"
+        "en": "Layers 1, 4, 6 contralateral and 2, 3, 5 ipsilateral; ventral layers 1–2 magnocellular, dorsal layers 3–6 parvocellular",
+        "uz": "1, 4, 6-qatlamlar qarama-qarshi va 2, 3, 5 o'sha tomon ko'zdan; pastki 1–2 magnotsellyulyar, yuqori 3–6 parvotsellyulyar"
       },
       {
-        "en": "Layers 1–3 receive the left ear and layers 4–6 receive the right ear",
-        "uz": "1–3-qatlamlar chap quloqdan, 4–6-qatlamlar esa o'ng quloqdan signal oladi"
+        "en": "Layers 1, 3, 5 contralateral and 2, 4, 6 ipsilateral; ventral layers 1–2 parvocellular, dorsal layers 3–6 magnocellular",
+        "uz": "1, 3, 5-qatlamlar qarama-qarshi va 2, 4, 6 o'sha tomon ko'zdan; pastki 1–2 parvotsellyulyar, yuqori 3–6 magnotsellyulyar"
       },
       {
-        "en": "All six layers receive uncrossed fibres from the ipsilateral eye only",
-        "uz": "Oltala qatlam ham faqat o'sha tomondagi ko'zdan kesishmagan tolalarni oladi"
+        "en": "Layers 1, 2, 3 contralateral and 4, 5, 6 ipsilateral; ventral layers 1–4 magnocellular, dorsal layers 5–6 koniocellular",
+        "uz": "1, 2, 3-qatlamlar qarama-qarshi va 4, 5, 6 o'sha tomon ko'zdan; pastki 1–4 magnotsellyulyar, yuqori 5–6 koniotsellyulyar"
       },
       {
-        "en": "Layers 1–2 project to the spinal cord and layers 3–6 project to the cerebellum",
-        "uz": "1–2-qatlamlar orqa miyaga, 3–6-qatlamlar esa miyachaga boradi"
+        "en": "Layers 2, 3, 5 contralateral and 1, 4, 6 ipsilateral; all six layers mix magnocellular and parvocellular retinal inputs",
+        "uz": "2, 3, 5-qatlamlar qarama-qarshi va 1, 4, 6 o'sha tomon ko'zdan; oltala qatlam ham magnotsellyulyar va parvotsellyulyar aralash"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The LGN has six layers representing the contralateral visual hemifield: crossed nasal-retina fibres end in layers 1, 4, and 6; uncrossed temporal-retina fibres end in layers 2, 3, and 5. Ventral layers 1 and 2 are magnocellular (M-stream, motion) and dorsal layers 3–6 are parvocellular (P-stream, colour and acuity), projecting via the optic radiation to V1 (BA17).",
-      "uz": "Lateral tizzasimon yadro (LGN) 6 qatlamli ko'rish bo'g'inidir: 1, 4, 6-qatlamlar qarama-qarshi ko'zdan (kesishgan burun yarmi), 2, 3, 5-qatlamlar o'sha tomon ko'zdan (kesishmagan chakka yarmi) signal oladi; 1–2-qatlamlar magnotsellyulyar (harakat), 3–6-qatlamlar esa parvotsellyulyar (rang va detal) bo'lib, ko'rish radiatsiyasi orqali V1 (BA17) ga boradi."
+      "en": "The LGN has six layers representing the contralateral visual hemifield: crossed nasal-retina fibres end in layers 1, 4, and 6; uncrossed temporal-retina fibres end in layers 2, 3, and 5. Ventral layers 1 and 2 are magnocellular (M-stream, motion and contrast) and dorsal layers 3–6 are parvocellular (P-stream, colour and fine acuity), projecting via the optic radiation to V1 (BA17).",
+      "uz": "Lateral tizzasimon yadro (LGN) 6 qatlamli ko'rish bo'g'inidir: 1, 4, 6-qatlamlar qarama-qarshi ko'zdan (kesishgan burun yarmi), 2, 3, 5-qatlamlar o'sha tomon ko'zdan (kesishmagan chakka yarmi) signal oladi; 1–2-qatlamlar magnotsellyulyar (harakat va kontrast), 3–6-qatlamlar esa parvotsellyulyar (rang va mayda detal) bo'lib, ko'rish radiatsiyasi orqali V1 (BA17) ga boradi."
     },
     "refs": ["lgn", "j-cgl", "lateral-geniculate-body", "optic-tract", "j-v1"],
     "plate": "thalamus-nuclei-map",
@@ -579,33 +591,42 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "In the tuberal and lateral hypothalamus (plates G2 and G4), how do the two opposing neuron populations of the arcuate nucleus (`arc`) interact with leptin/insulin versus ghrelin, and how do they link to the paraventricular nucleus (`pvn`), ventromedial nucleus (`vmn`), and lateral hypothalamic area (`lha`) to control feeding?",
-      "uz": "Tuberal va lateral gipotalamusda (G2 va G4 plastinkalari) yoysimon yadroning (`arc`) ikki qarama-qarshi neyron guruhi leptin/insulin va grelinga qanday javob beradi hamda ovqatlanishni boshqarishda PVN, VMN va LHA bilan qanday ishlaydi?"
+      "en": "In the tuberal and lateral hypothalamus (plates G2 and G4), how do arcuate nucleus neurons respond to leptin and ghrelin, and what are the classic effects of VMN versus LHA lesions?",
+      "uz": "Tuberal va lateral gipotalamusda (G2 va G4 plastinkalari) yoysimon yadro neyronlari leptin va grelinga qanday javob beradi hamda VMN va LHA zararlanishining klassik oqibatlari qanday?"
     },
     "options": [
       {
-        "en": "Leptin and insulin excite arcuate POMC/CART neurons (which release α-MSH onto MC4R in PVN → satiety) and inhibit NPY/AgRP neurons (which are excited by ghrelin and drive LHA orexin/MCH neurons → hunger); VMN lesions cause hyperphagic obesity while LHA lesions cause aphagia (and orexin loss causes narcolepsy with cataplexy)",
-        "uz": "Leptin va insulin yoysimon yadrodagi POMC/CART neyronlarini qo'zg'atadi (ular PVN dagi MC4R ga α-MSH chiqarib to'qlik beradi) va NPY/AgRP neyronlarini tormozlaydi (ularni grelin qo'zg'atib, LHA oreksin/MCH orqali ochlik chaqiradi); VMN zararlanishi giperfagik semizlik, LHA zararlanishi afagiya (oreksin yo'qolishi esa katapleksiyali narkolepsiya) beradi"
+        "en": "Leptin excites POMC/CART (satiety) and inhibits NPY/AgRP (ghrelin-driven hunger); VMN lesion causes obesity, LHA lesion causes aphagia",
+        "uz": "Leptin POMC/CART (to'qlik) ni qo'zg'atib, NPY/AgRP (grelinli ochlik) ni tormozlaydi; VMN zararlanishi semizlik, LHA afagiya beradi"
       },
       {
-        "en": "Ghrelin excites POMC neurons to stop eating, while leptin excites LHA to induce starvation",
-        "uz": "Grelin POMC neyronlarini qo'zg'atib ovqatlanishni to'xtatadi, leptin esa LHA ni qo'zg'atib ochlik chaqiradi"
+        "en": "Ghrelin excites POMC/CART (satiety) and inhibits NPY/AgRP (leptin-driven hunger); VMN lesion causes aphagia, LHA lesion causes obesity",
+        "uz": "Grelin POMC/CART (to'qlik) ni qo'zg'atib, NPY/AgRP (leptinli ochlik) ni tormozlaydi; VMN zararlanishi afagiya, LHA semizlik beradi"
       },
       {
-        "en": "The arcuate nucleus contains only motor neurons for swallowing; VMN lesions cause anorexia and LHA lesions cause obesity",
-        "uz": "Yoysimon yadro faqat yutish motoneyronlaridan iborat; VMN zararlanishi ozib ketish, LHA zararlanishi esa semizlik beradi"
+        "en": "Leptin excites NPY/AgRP neurons to stimulate PVN satiety receptors; VMN and LHA lesions both produce severe anorexia and weight loss",
+        "uz": "Leptin PVN to'qlik reseptorlarini faollashtirish uchun NPY/AgRP ni qo'zg'atadi; VMN va LHA zararlanishi ikkalasi ham anoreksiya beradi"
       },
       {
-        "en": "Feeding is regulated solely by the suprachiasmatic nucleus and pineal melatonin",
-        "uz": "Ovqatlanish faqat suprachiazmatik yadro va epifiz melatonini tomonidan boshqariladi"
+        "en": "Insulin excites LHA orexin neurons to suppress appetite; VMN lesion causes diabetes insipidus while LHA lesion causes hyperphagia",
+        "uz": "Insulin ishtahani bosish uchun LHA oreksin neyronlarini qo'zg'atadi; VMN zararlanishi qandsiz diabet, LHA esa giperfagiya beradi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As detailed on plates G2 and G4 (`arc`, `vmn`, `lha`, `pvn`), arcuate POMC/CART (anorexigenic) and NPY/AgRP (orexigenic) neurons sense circulating leptin, insulin, and ghrelin above the median eminence. POMC → α-MSH → PVN MC4R promotes satiety (defects cause monogenic obesity); NPY/AgRP and LHA (orexin/hypocretin and MCH) promote feeding. VMN ('satiety centre') destruction causes hyperphagic obesity; LHA ('hunger centre') destruction causes aphagia, and selective loss of LHA orexin neurons causes narcolepsy with cataplexy.",
-      "uz": "G2 va G4 plastinkalarida yozilganidek, yoysimon yadrodagi (`arc`) POMC/CART (to'qlik) neyronlari leptin va insulindan qo'zg'alib, PVN dagi MC4R orqali to'qlik beradi; NPY/AgRP (ochlik) neyronlari esa grelindan qo'zg'alib, LHA (oreksin/MCH — 'ochlik markazi') orqali ishtahani oshiradi. VMN ('to'qlik markazi') zararlansa giperfagik semizlik, LHA zararlansa afagiya, LHA oreksin neyronlari yo'qolsa katapleksiyali narkolepsiya kelib chiqadi."
+      "en": "On plates G2 and G4, arcuate POMC/CART (anorexigenic) and NPY/AgRP (orexigenic) neurons sense circulating leptin, insulin, and ghrelin above the median eminence. Leptin and insulin excite POMC/CART (releasing α-MSH onto PVN MC4R → satiety) and inhibit NPY/AgRP (which ghrelin excites to drive LHA orexin/MCH hunger circuits). VMN ('satiety centre') destruction causes hyperphagic obesity; LHA ('hunger centre') destruction causes aphagia, and selective loss of LHA orexin neurons causes narcolepsy with cataplexy.",
+      "uz": "G2 va G4 plastinkalarida ko'rsatilganidek, yoysimon yadrodagi POMC/CART (to'qlik) neyronlari leptin va insulindan qo'zg'alib, PVN dagi MC4R ga α-MSH chiqarish orqali to'qlik beradi; NPY/AgRP (ochlik) neyronlari esa grelindan qo'zg'alib, LHA (oreksin/MCH — 'ochlik markazi') orqali ishtahani oshiradi. VMN ('to'qlik markazi') zararlansa giperfagik semizlik, LHA zararlansa afagiya, LHA oreksin neyronlari yo'qolsa katapleksiyali narkolepsiya kelib chiqadi."
     },
-    "refs": ["arcuate-nucleus-of-hypothalamus", "ventromedial-nucleus-of-hypothalamus", "lateral-hypothalamic-nucleus", "paraventricular-nucleus-of-hypothalamus", "arc", "vmn", "lha", "pvn"],
+    "refs": [
+      "arcuate-nucleus-of-hypothalamus",
+      "ventromedial-nucleus-of-hypothalamus",
+      "lateral-hypothalamic-nucleus",
+      "paraventricular-nucleus-of-hypothalamus",
+      "arc",
+      "vmn",
+      "lha",
+      "pvn"
+    ],
     "plate": "hypothalamus-tuberal",
     "sources": [
       {
@@ -620,31 +641,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "Why does mechanical compression or transection of the pituitary stalk / median eminence ('stalk effect', plate G2) cause hyperprolactinaemia alongside anterior hypopituitarism and diabetes insipidus?",
-      "uz": "Nima sababdan gipofiz oyoqchasi yoki median bo'rtmaning bosilishi/kesilishi ('oyoqcha ta'siri' — G2 plastinkasi) oldingi gipopituitarizm va qandsiz diabet bilan bir qatorda giperprolaktinemiyani (prolaktin oshishini) keltirib chiqaradi?"
+      "en": "Why does mechanical compression or transection of the pituitary stalk ('stalk effect', plate G2) cause hyperprolactinaemia alongside anterior hypopituitarism?",
+      "uz": "Nima sababdan gipofiz oyoqchasining bosilishi yoki kesilishi ('oyoqcha ta'siri', G2 plastinkasi) oldingi gipopituitarizm bilan bir qatorda giperprolaktinemiyani keltirib chiqaradi?"
     },
     "options": [
       {
-        "en": "Because stalk compression interrupts tuberoinfundibular dopamine (from the arcuate nucleus), which normally tonically inhibits prolactin secretion by anterior pituitary lactotrophs",
-        "uz": "Chunki oyoqcha bosilganda yoysimon yadrodan (arcuate) kelib, oldingi gipofizda prolaktin ajralishini doimiy tormozlab turuvchi tuberoinfundibulyar dofamin oqimi to'xtab qoladi"
+        "en": "It interrupts tuberoinfundibular dopamine from the arcuate nucleus, removing tonic inhibition of lactotrophs",
+        "uz": "Yoysimon yadrodan keluvchi tuberoinfundibulyar dofamin oqimi uzilib, laktotroflarning doimiy tormozlanishi yo'qoladi"
       },
       {
-        "en": "Because the posterior pituitary normally secretes prolactin into the third ventricle",
-        "uz": "Chunki orqa gipofiz normada uchinchi qorinchaga prolaktin ajratadi"
+        "en": "It blocks somatostatin delivery from the periventricular nucleus, disinhibiting prolactin and growth hormone equally",
+        "uz": "Periventrikulyar yadrodan somatostatin kelishi to'xtab, prolaktin va o'sish gormoni ajralishi birdek kuchayadi"
       },
       {
-        "en": "Because stalk compression stimulates the pineal gland to convert melatonin into prolactin",
-        "uz": "Chunki oyoqcha bosilishi epifizda melatoninning prolaktinga aylanishini kuchaytiradi"
+        "en": "It triggers retrograde leakage of stored prolactin from degenerating magnocellular axons in the posterior pituitary",
+        "uz": "Orqa gipofizdagi yemirilayotgan magnotsellyulyar aksonlardan zaxiralangan prolaktinning qonga chiqishiga sabab bo'ladi"
       },
       {
-        "en": "Because the optic chiasm releases prolactin-releasing hormone when stretched",
-        "uz": "Chunki ko'rish kesishmasi cho'zilganda prolaktin-rilizing gormon ajratadi"
+        "en": "It increases TRH concentration in the hypophyseal portal veins by obstructing venous outflow from the median eminence",
+        "uz": "Median bo'rtmadan venoz oqimni to'sib qo'yib, gipofizar portal venalarda TRH konsentratsiyasini keskin oshiradi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Unlike all other anterior pituitary hormones (which require hypothalamic releasing hormones), prolactin is under tonic inhibition by dopamine released from arcuate (tuberoinfundibular) neurons into the hypophyseal portal vessels at the median eminence (`me`, `arc`). Stalk compression cuts off dopamine delivery, causing mild-to-moderate hyperprolactinaemia ('stalk effect', typically < 100 ng/mL).",
-      "uz": "Oldingi gipofizning boshqa gormonlaridan farqli ravishda, prolaktin yoysimon yadrodan (`arc`) median bo'rtma (`me`) portal kapillyarlariga chiqadigan tuberoinfundibulyar dofamin tomonidan doimiy tormozlab turiladi. Oyoqcha bosilsa yoki kesilsa, dofamin yetib bormaydi va prolaktin miqdori oshadi ('oyoqcha ta'siri')."
+      "en": "Unlike all other anterior pituitary hormones (which require hypothalamic releasing hormones), prolactin is under tonic inhibition by dopamine released from arcuate (tuberoinfundibular) neurons into the hypophyseal portal vessels at the median eminence. Stalk compression cuts off dopamine delivery, causing mild-to-moderate hyperprolactinaemia ('stalk effect', typically < 100 ng/mL).",
+      "uz": "Oldingi gipofizning boshqa gormonlaridan farqli ravishda, prolaktin yoysimon yadrodan median bo'rtma portal kapillyarlariga chiqadigan tuberoinfundibulyar dofamin tomonidan doimiy tormozlab turiladi. Oyoqcha bosilsa yoki kesilsa, dofamin yetib bormaydi va prolaktin miqdori oshadi ('oyoqcha ta'siri', odatda < 100 ng/ml)."
     },
     "refs": ["arcuate-nucleus-of-hypothalamus", "tuber-cinereum", "pituitary-gland", "arc", "me"],
     "plate": "hypothalamus-tuberal",
@@ -661,31 +682,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "What are the connections and clinical significance of the centromedian (CM, `th-cm`, `j-cm`) and parafascicular (Pf, `th-pf`, `j-pf`) nuclei inside the internal medullary lamina of the thalamus (plates T1 and T2)?",
-      "uz": "Talamusning ichki medullyar plastinkasi ichida joylashgan sentromedian (CM, `th-cm`, `j-cm`) va parafassikulyar (Pf, `th-pf`, `j-pf`) intralaminar yadrolarning bog'lanishlari hamda klinik ahamiyati qanday (T1 va T2 plastinkalari)?"
+      "en": "What are the main connections and clinical significance of the centromedian (CM) and parafascicular (Pf) intralaminar nuclei inside the internal medullary lamina (plates T1 and T2)?",
+      "uz": "Talamusning ichki medullyar plastinkasi ichida joylashgan sentromedian (CM) va parafassikulyar (Pf) intralaminar yadrolarning asosiy bog'lanishlari hamda klinik ahamiyati qanday (T1 va T2 plastinkalari)?"
     },
     "options": [
       {
-        "en": "They receive input from GPi, the ascending reticular activating system, and the paleospinothalamic tract, and project strongly to the striatum (CM → putamen, Pf → caudate) and diffusely to cortex for arousal and affective pain; CM–Pf is a DBS target for Tourette syndrome and generalized epilepsy",
-        "uz": "Ular GPi, retikulyar formatsiya va spinotalamik traktdan signal olib, striatumga (CM → putamen, Pf → kaudat) hamda po'stloqqa diffuz chiqish beradi (uyg'oqlik, diqqat va sekin hissiy og'riq yo'li); CM–Pf Tourette sindromi va generallashgan epilepsiyada DBS nishonidir"
+        "en": "Relay GPi, reticular arousal, and affective pain inputs to striatum and diffuse cortex; DBS target for Tourette syndrome and generalized epilepsy",
+        "uz": "GPi, retikulyar uyg'oqlik va hissiy og'riq signallarini striatum va po'stloqqa uzatadi; Tourette sindromi va generallashgan epilepsiyada DBS nishoni"
       },
       {
-        "en": "They are the primary visual relay nuclei projecting solely to the calcarine sulcus",
-        "uz": "Ular faqat kalkarin egatga proyeksiya beruvchi birlamchi ko'rish yadrolaridir"
+        "en": "Relay retinal ganglion and superior collicular inputs to parieto-occipital association cortex; lesion causes contralateral visual hemineglect",
+        "uz": "To'r parda va yuqori do'nglik signallarini tepa-ensa assotsiativ po'stlog'iga uzatadi; zararlanishi qarama-qarshi ko'rish e'tiborsizligini beradi"
       },
       {
-        "en": "They are motor cranial nerve nuclei innervating the tongue and pharynx",
-        "uz": "Ular til va halqumni innervatsiya qiluvchi harakat yadrolaridir"
+        "en": "Relay mammillothalamic and hippocampal inputs directly to the cingulate gyrus within the Papez circuit; lesion causes Korsakoff amnesia",
+        "uz": "Papez halqasida mamillotalamik va gippokamp signallarini belbog' pushtasiga uzatadi; zararlanishi Korsakov amneziyasini keltirib chiqaradi"
       },
       {
-        "en": "They synthesize oxytocin and vasopressin for the posterior pituitary",
-        "uz": "Ular orqa gipofiz uchun oksitotsin va vazopressin sintezlaydi"
+        "en": "Relay trigeminal and spinothalamic discriminative touch inputs to primary somatosensory cortex (S1); lesion causes Dejerine–Roussy pain",
+        "uz": "Trigeminal va spinotalamik nozik teginish signallarini birlamchi somatosensor po'stloqqa (S1) uzatadi; zararlanishi Dejerine–Roussy og'rig'ini beradi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "On plates T1 and T2, the centromedian (CM) and parafascicular (Pf) nuclei are the largest intralaminar nuclei inside the internal medullary lamina (split by the fasciculus retroflexus). They relay reticular arousal, spinothalamic affective pain, and GPi signals to the striatum and diffuse cortex; CM–Pf DBS is used for refractory Tourette syndrome and generalized (e.g. Lennox–Gastaut) epilepsy.",
-      "uz": "T1 va T2 plastinkalarida CM va Pf ichki medullyar plastinka ichidagi eng yirik intralaminar yadrolardir. Ular GPi, retikulyar formatsiya va spinotalamik traktdan signal olib, striatumga (putamen va kaudat) hamda po'stloqqa diffuz chiqish beradi (uyg'oqlik va og'riqning sekin yo'li); CM–Pf Tourette sindromi va generallashgan epilepsiyada DBS nishoni sifatida ishlatiladi."
+      "en": "On plates T1 and T2, the centromedian (CM) and parafascicular (Pf) nuclei are the largest intralaminar nuclei inside the internal medullary lamina (split by the fasciculus retroflexus). They relay reticular activating system arousal, paleospinothalamic affective pain, and GPi signals to the striatum (CM → putamen, Pf → caudate) and diffuse cortex; CM–Pf DBS is used for refractory Tourette syndrome and generalized (e.g. Lennox–Gastaut) epilepsy.",
+      "uz": "T1 va T2 plastinkalarida CM va Pf ichki medullyar plastinka ichidagi eng yirik intralaminar yadrolardir. Ular GPi, retikulyar formatsiya va paleospinotalamik traktdan signal olib, striatumga (CM → putamen, Pf → kaudat) hamda po'stloqqa diffuz chiqish beradi (uyg'oqlik va og'riqning sekin hissiy yo'li); CM–Pf Tourette sindromi va generallashgan epilepsiyada DBS nishoni sifatida ishlatiladi."
     },
     "refs": ["th-cm", "th-pf", "j-cm", "j-pf", "th-iml"],
     "plate": "thalamus-coronal",
@@ -702,31 +723,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "What is the multi-synaptic pathway by which the suprachiasmatic nucleus (SCN) controls nocturnal melatonin secretion from the pineal gland, and what tract connects the habenula to the midbrain?",
-      "uz": "Suprachiazmatik yadro (SCN) kechasi epifizdan (pineal bezdan) melatonin ajralishini qaysi ko'p bo'g'inli avtonom yo'l orqali boshqaradi va habenulani o'rta miya bilan qaysi trakt bog'laydi?"
+      "en": "Which pathway allows the suprachiasmatic nucleus (SCN) to control nocturnal pineal melatonin secretion, and which tract connects the habenula to the midbrain?",
+      "uz": "Suprachiazmatik yadro (SCN) kechasi epifizdan melatonin ajralishini qaysi yo'l orqali boshqaradi va habenulani o'rta miya bilan qaysi trakt bog'laydi?"
     },
     "options": [
       {
-        "en": "Retina → retinohypothalamic tract → SCN → PVN → spinal intermediolateral cell column (IML, T1–T2) → superior cervical sympathetic ganglion → pineal gland; the habenula receives the stria medullaris and projects via the fasciculus retroflexus to the interpeduncular nucleus, VTA, and raphe ('anti-reward' signal)",
-        "uz": "To'r parda → retinogipotalamik trakt → SCN → PVN → orqa miya IML (T1–T2) → yuqori bo'yin simpatik tuguni → epifiz; habenula esa stria medullarisni olib, fasciculus retroflexus orqali oyoqchalararo yadro, VTA va raphega ('anti-mukofot' signali) uzatadi"
+        "en": "SCN → PVN → spinal IML (T1–T2) → superior cervical ganglion → pineal; habenula projects via fasciculus retroflexus",
+        "uz": "SCN → PVN → orqa miya IML (T1–T2) → yuqori bo'yin simpatik tuguni → epifiz; habenula fasciculus retroflexus orqali chiqadi"
       },
       {
-        "en": "SCN projects directly through the posterior commissure into the pineal gland via the vagus nerve; the habenula projects via the mammillothalamic tract",
-        "uz": "SCN adashgan nerv orqali to'g'ridan-to'g'ri epifizga boradi; habenula esa mamillotalamik trakt orqali chiqadi"
+        "en": "SCN → posterior commissure → Edinger–Westphal nucleus → ciliary ganglion → pineal; habenula projects via mammillothalamic tract",
+        "uz": "SCN → orqa komissura → Edinger–Westphal yadrosi → kiprik tuguni → epifiz; habenula mamillotalamik trakt orqali chiqadi"
       },
       {
-        "en": "SCN secretes melatonin into the hypophyseal portal system; the habenula forms the optic radiation",
-        "uz": "SCN gipofizar portal tizimga melatonin chiqaradi; habenula esa ko'rish radiatsiyasini hosil qiladi"
+        "en": "SCN → arcuate nucleus → hypophyseal portal veins → posterior pituitary → pineal; habenula projects via stria terminalis",
+        "uz": "SCN → yoysimon yadro → gipofizar portal venalar → orqa gipofiz → epifiz; habenula stria terminalis orqali chiqadi"
       },
       {
-        "en": "Pineal melatonin is driven by the oculomotor Edinger–Westphal nucleus via the ciliary ganglion",
-        "uz": "Epifiz melatonini Edinger–Westphal yadrosi va kiprik tuguni orqali boshqariladi"
+        "en": "SCN → dorsal motor nucleus of vagus → otic parasympathetic ganglion → pineal; habenula projects via medial forebrain bundle",
+        "uz": "SCN → adashgan nerv dorsal yadrosi → quloq parasimpatik tuguni → epifiz; habenula medial old miya tutami orqali chiqadi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As described in FOREBRAIN_STRUCTURES (`pin`, `hab`, `scn`), light suppresses melatonin via retina → SCN → PVN → descending sympathetic tract to spinal IML → superior cervical ganglion → postganglionic noradrenergic fibres to the pineal gland. Adjacent to the pineal, the habenula receives limbic/pallidal input via the stria medullaris thalami and projects via the fasciculus retroflexus (Meynert) to the interpeduncular nucleus, VTA, and raphe (encoding negative reward prediction / 'anti-reward', hyperactive in depression).",
-      "uz": "`pin`, `hab` va `scn` tavsiflarida ko'rsatilganidek, epifiz kechasi SCN → PVN → orqa miya IML → yuqori bo'yin simpatik tuguni zanjiri orqali melatonin ajratadi. Yonidagi habenula esa stria medullaris orqali signal olib, fasciculus retroflexus orqali oyoqchalararo yadro (`ipn`), VTA va raphega 'anti-mukofot' signallarini yuboradi."
+      "en": "Light suppresses nocturnal pineal melatonin via the multi-synaptic sympathetic chain: retina → retinohypothalamic tract → SCN → PVN → descending autonomic fibres to the spinal intermediolateral cell column (IML, T1–T2) → superior cervical sympathetic ganglion → postganglionic noradrenergic fibres to the pineal gland. Adjacent to the pineal, the habenula receives limbic and pallidal input via the stria medullaris thalami and projects via the fasciculus retroflexus (of Meynert) to the interpeduncular nucleus, VTA, and raphe ('anti-reward' signal).",
+      "uz": "Epifiz kechasi ko'p bo'g'inli simpatik zanjir orqali melatonin ajratadi: to'r parda → retinogipotalamik trakt → SCN → PVN → orqa miya IML (T1–T2) → yuqori bo'yin simpatik tuguni → epifiz. Yonidagi habenula esa stria medullaris orqali limbik signal olib, fasciculus retroflexus orqali oyoqchalararo yadro, VTA va raphega 'anti-mukofot' signallarini yuboradi."
     },
     "refs": ["pineal-body", "habenula", "stria-medullaris-of-thalamus", "suprachiasmatic-nucleus", "pin", "hab", "sm", "scn", "ipn"],
     "plate": "midbrain-pretectal",
@@ -743,31 +764,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "How do the visual field defects caused by compression of the optic chiasm (`och`, plate G1) differ from those caused by a lesion of the left optic tract (`ot`, plate G2/G3) or left lateral geniculate nucleus (`lgn`, plate T2)?",
-      "uz": "Ko'rish kesishmasi (`och`, G1 plastinkasi) bosilganda yuzaga keladigan ko'rish maydoni nuqsoni chap ko'rish trakti (`ot`, G2/G3) yoki chap lateral tizzasimon yadro (`lgn`, T2) zararlanishidan qanday farq qiladi?"
+      "en": "How do the visual field defects caused by optic chiasm compression (plate G1) differ from those caused by a lesion of the left optic tract (plate G2/G3) or left LGN (plate T2)?",
+      "uz": "Ko'rish kesishmasi bosilganda (G1 plastinkasi) yuzaga keladigan ko'rish maydoni nuqsoni chap ko'rish trakti (G2/G3) yoki chap LGN (T2) zararlanishidan qanday farq qiladi?"
     },
     "options": [
       {
-        "en": "Optic chiasm compression (crossing nasal-retina fibres) causes bitemporal hemianopia (pituitary macroadenoma from below hits upper temporal quadrants first; craniopharyngioma from above hits lower temporal quadrants first); a left optic tract or left LGN lesion (after the crossing) causes a contralateral (right) homonymous hemianopia",
-        "uz": "Ko'rish kesishmasi bosilishi (to'r pardaning kesishuvchi burun yarmi tolalari) bitemporal gemianopiya beradi (pastdan gipofiz makroadenomasi avval yuqori kvadrantlarni, yuqoridan kraniofaringioma avval pastki kvadrantlarni oladi); chap ko'rish trakti yoki chap LGN zararlanishi esa qarama-qarshi (o'ng) gomonim gemianopiya beradi"
+        "en": "Optic chiasm compression causes bitemporal hemianopia; left optic tract or left LGN lesion causes right homonymous hemianopia",
+        "uz": "Ko'rish kesishmasi bosilishi bitemporal gemianopiya beradi; chap ko'rish trakti yoki chap LGN zararlanishi o'ng gomonim gemianopiya beradi"
       },
       {
-        "en": "Optic chiasm compression causes monocular blindness of one eye only, whereas an optic tract lesion causes bitemporal hemianopia",
-        "uz": "Ko'rish kesishmasi bosilishi faqat bitta ko'z ko'rligini, ko'rish trakti zararlanishi esa bitemporal gemianopiyani beradi"
+        "en": "Optic chiasm compression causes binasal hemianopia; left optic tract or left LGN lesion causes left ipsilateral homonymous hemianopia",
+        "uz": "Ko'rish kesishmasi bosilishi binazal gemianopiya beradi; chap ko'rish trakti yoki chap LGN zararlanishi chap ipsilateral gomonim gemianopiya beradi"
       },
       {
-        "en": "Both optic chiasm and optic tract lesions cause binasal hemianopia",
-        "uz": "Ikkala holat ham binazal gemianopiyani keltirib chiqaradi"
+        "en": "Optic chiasm compression causes monocular blindness of one eye; left optic tract or left LGN lesion causes bitemporal hemianopia",
+        "uz": "Ko'rish kesishmasi bosilishi bitta ko'zning to'liq ko'rligini beradi; chap ko'rish trakti yoki chap LGN zararlanishi bitemporal gemianopiya beradi"
       },
       {
-        "en": "An LGN lesion causes vertical gaze palsy (Parinaud syndrome) with completely normal visual fields",
-        "uz": "LGN zararlanishi ko'rish maydoni saqlangan holda vertikal qarash falajini (Parinaud sindromi) beradi"
+        "en": "Optic chiasm compression causes right homonymous hemianopia; left optic tract or left LGN lesion causes vertical gaze palsy with intact fields",
+        "uz": "Ko'rish kesishmasi bosilishi o'ng gomonim gemianopiya beradi; chap ko'rish trakti yoki chap LGN zararlanishi esa ko'rish maydoni saqlangan vertikal falaj beradi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In the optic chiasm (plate G1), nasal-retina fibres (carrying the temporal visual fields of both eyes) decussate: compression from below by a pituitary macroadenoma causes bitemporal superior quadrantanopia progressing to bitemporal hemianopia, whereas compression from above by a craniopharyngioma hits the inferior temporal quadrants first. Behind the chiasm, each optic tract (`ot`) and LGN (`lgn`) carries fibres from both eyes representing the contralateral visual hemifield, so a unilateral lesion causes contralateral homonymous hemianopia.",
-      "uz": "Ko'rish kesishmasida (G1 plastinkasi) to'r pardaning burun yarmi tolalari (chakka ko'rish maydonlari) kesishadi: pastdan o'suvchi gipofiz makroadenomasi bitemporal gemianopiya (avval yuqori kvadrantlar), yuqoridan bosuvchi kraniofaringioma esa avval pastki kvadrantlar nuqsonini beradi. Kesishmadan keyingi ko'rish trakti (`ot`) va LGN (`lgn`) zararlanishi esa qarama-qarshi gomonim gemianopiyani keltirib chiqaradi."
+      "en": "In the optic chiasm (plate G1), crossing nasal-retina fibres (carrying the temporal visual fields of both eyes) decussate: compression from below by a pituitary macroadenoma causes bitemporal superior quadrantanopia progressing to bitemporal hemianopia, whereas compression from above by a craniopharyngioma hits the inferior temporal quadrants first. Behind the chiasm, each optic tract and LGN carries fibres from both eyes representing the contralateral visual hemifield, so a left-sided lesion causes right homonymous hemianopia.",
+      "uz": "Ko'rish kesishmasida (G1 plastinkasi) to'r pardaning burun yarmi tolalari (ikkala ko'zning chakka ko'rish maydonlari) kesishadi: pastdan o'suvchi gipofiz makroadenomasi avval yuqori kvadrantlarni, yuqoridan bosuvchi kraniofaringioma esa avval pastki kvadrantlarni zararlab, bitemporal gemianopiya beradi. Kesishmadan keyingi chap ko'rish trakti va chap LGN zararlanishi esa qarama-qarshi (o'ng) gomonim gemianopiyani keltirib chiqaradi."
     },
     "refs": ["optic-chiasm", "optic-tract", "lateral-geniculate-body", "och", "ot", "lgn", "j-cgl"],
     "plate": "hypothalamus-chiasmatic",
@@ -784,8 +805,8 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "A child presents with brief, stereotyped episodes of unprovoked mechanical laughter (gelastic seizures) and central precocious puberty. MRI at the tuberal hypothalamic level (plate G2) reveals a non-enhancing sessile mass attached to the floor of the third ventricle between the infundibular stalk and the mammillary bodies. What is this lesion and which structure does it arise from?",
-      "uz": "Yosh bolada sababsiz xurujsimon mexanik kulgi (gelastik tutqanoqlar) va markaziy erta jinsiy yetilish aniqlandi. Tuberal gipotalamus darajasidagi MRTda (G2 plastinkasi) voronka (infundibulum) bilan so'rg'ichsimon tanalar orasida III qorincha tubiga yopishgan hosila topildi. Bu qanday hosila va u qaysi tuzilmadan rivojlangan?"
+      "en": "A child presents with brief episodes of unprovoked mechanical laughter (gelastic seizures) and central precocious puberty. MRI at the tuberal hypothalamic level (plate G2) reveals a non-enhancing sessile mass attached to the third-ventricle floor between the infundibulum and mammillary bodies. What is this lesion?",
+      "uz": "Yosh bolada sababsiz xurujsimon mexanik kulgi (gelastik tutqanoqlar) va markaziy erta jinsiy yetilish aniqlandi. Tuberal gipotalamus darajasidagi MRTda (G2 plastinkasi) voronka bilan so'rg'ichsimon tanalar orasida III qorincha tubiga yopishgan kontrast olmaydigan hosila topildi. Bu qanday hosila?"
     },
     "options": [
       {
@@ -793,22 +814,22 @@
         "uz": "Kulrang do'mboqning (tuber cinereum) gipotalamik gamartomasi"
       },
       {
-        "en": "Colloid cyst of the foramen of Monro",
-        "uz": "Monro teshigining kolloid kistasi"
+        "en": "Colloid cyst of the anterosuperior foramen of Monro",
+        "uz": "Monro teshigi old-yuqori qismining kolloid kistasi"
       },
       {
-        "en": "Pineoblastoma of the epithalamus",
-        "uz": "Epitalamusning pineoblastomasi"
+        "en": "Suprasellar craniopharyngioma of Rathke's pouch remnants",
+        "uz": "Ratke cho'ntagi qoldiqlaridan o'sgan suprasellyar kraniofaringioma"
       },
       {
-        "en": "Vestibular schwannoma of the cerebellopontine angle",
-        "uz": "Ko'prik-miyacha burchagining vestibulyar shvannomasi"
+        "en": "Pineoblastoma of the dorsocaudal epithalamic roof",
+        "uz": "Epitalamus orqa-yuqori tomining pineoblastomasi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As noted on plate G2 (`me` / `hypo-grey`), a hypothalamic hamartoma arising from the tuber cinereum classically presents in childhood with gelastic (laughing) seizures and central precocious puberty (from premature pulsatile GnRH activation), treated by stereotactic laser interstitial thermal therapy (LITT) or endoscopic disconnection.",
-      "uz": "G2 plastinkasida ko'rsatilganidek, tuber cinereum (kulrang do'mboq) sohasidagi gipotalamik gamartoma klassik ravishda gelastik (kulgili) tutqanoqlar va markaziy erta jinsiy yetilish (GnRH erta faollashuvi) triadasini beradi."
+      "en": "At the tuberal level (plate G2), a hypothalamic hamartoma arising from the tuber cinereum classically presents in childhood with gelastic (laughing) seizures and central precocious puberty (from premature pulsatile GnRH activation). Because it consists of heterotopic mature neurons and glia, it is non-enhancing on MRI and is treated by stereotactic laser interstitial thermal therapy (LITT) or endoscopic disconnection.",
+      "uz": "Tuberal darajada (G2 plastinkasi) tuber cinereum (kulrang do'mboq) sohasidan rivojlanuvchi gipotalamik gamartoma klassik ravishda gelastik (kulgili) tutqanoqlar va markaziy erta jinsiy yetilish (GnRH erta pulsatsion faollashuvi) belgilari bilan kechadi; MRTda kontrast yutmaydi."
     },
     "refs": ["tuber-cinereum", "hypothalamus", "me", "hypo-grey", "mb"],
     "plate": "hypothalamus-tuberal",
@@ -825,31 +846,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "A 63-year-old patient presents with sudden total loss of pain, temperature, fine touch, vibration, and joint position sense over the entire right side of the face and right half of the body, without any motor weakness. Four weeks later, as sensation partially returns, the patient develops excruciating, persistent burning pain and allodynia over the right side of the body triggered by light touch of clothing. In the lesion simulator (`level: 'thalamus', side: 'L', zone: 'all'`, plate T1), which nuclei and vascular territory are responsible?",
-      "uz": "63 yoshli bemorda harakat kuchsizligi bo'lmagan holda to'satdan yuzning o'ng yarmi va tananing butun o'ng tomonida barcha sezgi turlari (og'riq, harorat, teginish, tebranish va bo'g'im holati) yo'qoldi. To'rt haftadan so'ng sezgi qisman qayta boshlaganda, bemorda tananing o'ng yarmida kiyim tegishidan ham kuchayadigan chidab bo'lmas achishtiruvchi markaziy og'riq (allodiniya) paydo bo'ldi. Shikastlanish simulyatoriga (`level: 'thalamus', side: 'L', zone: 'all'`, T1 plastinkasi) ko'ra, qaysi yadrolar va qaysi arteriya havzasi zararlangan?"
+      "en": "A 63-year-old patient develops sudden total loss of pain, temperature, touch, vibration, and position sense over the entire right face and right body without motor weakness. Four weeks later, excruciating burning pain and allodynia emerge on the right side. On coronal thalamic anatomy (plate T1), which nuclei and vascular territory are responsible?",
+      "uz": "63 yoshli bemorda harakat kuchsizligi bo'lmagan holda to'satdan yuzning o'ng yarmi va tananing butun o'ng tomonida barcha sezgi turlari yo'qoldi. To'rt haftadan so'ng o'ng tomonda chidab bo'lmas achishtiruvchi markaziy og'riq (allodiniya) paydo bo'ldi. Talamusning koronal anatomiyasiga (T1 plastinkasi) ko'ra, qaysi yadrolar va arteriya havzasi zararlangan?"
     },
     "options": [
       {
-        "en": "Left ventral posterolateral (VPL) and ventral posteromedial (VPM) thalamic nuclei — inferolateral (thalamogeniculate, P2 PCA) infarct causing pure sensory stroke followed by Dejerine–Roussy thalamic pain syndrome",
-        "uz": "Chap talamusning VPL va VPM yadrolari — inferolateral (PCA P2 segmentining talamogenikulyar shoxlari) infarkti oqibatida 'sof sezgi insulti' va keyinchalik Dejerine–Roussy talamik og'riq sindromi"
+        "en": "Left VPL and VPM thalamic nuclei — inferolateral (thalamogeniculate, P2 PCA) infarct (Dejerine–Roussy syndrome)",
+        "uz": "Chap talamusning VPL va VPM yadrolari — inferolateral (talamogenikulyar, P2 PCA) infarkti (Dejerine–Roussy sindromi)"
       },
       {
-        "en": "Left posterior limb of the internal capsule (anterior motor half) — lenticulostriate infarct causing pure motor hemiparesis",
-        "uz": "Chap ichki kapsula orqa oyog'ining oldingi yarmi — lentikulostriar infarkt ('sof harakat lakunasi')"
+        "en": "Left posterior limb of the internal capsule — lateral lenticulostriate (M1 MCA) lacunar infarct (pure motor stroke)",
+        "uz": "Chap ichki kapsula orqa oyog'i — lateral lentikulostriar (M1 MCA) lakunar infarkti (sof harakat insulti)"
       },
       {
-        "en": "Left lateral medulla — PICA infarct causing Wallenberg crossed sensory loss (left face, right body)",
-        "uz": "Chap lateral uzunchoq miya — PICA infarkti (Wallenberg sindromi: chap yuz va o'ng tanada og'riq yo'qolishi)"
+        "en": "Left dorsolateral medulla — posterior inferior cerebellar artery (PICA) infarct (Wallenberg lateral medullary syndrome)",
+        "uz": "Chap dorsolateral uzunchoq miya — orqa pastki miyacha arteriyasi (PICA) infarkti (Wallenberg lateral medullyar sindromi)"
       },
       {
-        "en": "Left postcentral gyrus (S1) — cortical ACA stroke causing isolated leg astereognosis",
-        "uz": "Chap orqa markaziy pushta (S1) — po'stloq ACA infarkti (faqat oyoqda astereognoz)"
+        "en": "Left postcentral gyrus (S1) — distal anterior cerebral artery (ACA) cortical infarct (isolated crural astereognosis)",
+        "uz": "Chap orqa markaziy pushta (S1) — distal oldingi miya arteriyasi (ACA) po'stloq infarkti (yakka oyoq astereognozi)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In the lesion simulator (`thalamus`, `L`, `all`, plate T1), all ascending somatosensory pathways from the right body (DCML and ALS → left VPL) and right face (trigeminal lemniscus → left VPM) converge in the left ventral posterior thalamus, supplied by the thalamogeniculate (inferolateral) branches of the P2 PCA. Infarction causes contralateral hemianaesthesia of face and body without weakness ('pure sensory stroke'), and weeks later can evolve into Dejerine–Roussy central thalamic pain syndrome.",
-      "uz": "Shikastlanish simulyatorida (`thalamus`, `L`, `all`, T1 plastinkasi) o'ng tana (DCML va ALS → chap VPL) hamda o'ng yuzdan (trigeminal lemnisk → chap VPM) keluvchi barcha sezgi yo'llari chap talamusning ventral orqa yadrolarida uchrashadi. PCA ning talamogenikulyar shoxlari tiqilganda falajliksiz o'ng yuz va tanada barcha sezgilar yo'qoladi ('sof sezgi insulti'), bir necha haftadan so'ng esa Dejerine–Roussy markaziy talamik og'riq sindromi rivojlanadi."
+      "en": "On plate T1, all ascending somatosensory pathways from the right body (DCML and spinothalamic tract → left VPL) and right face (trigeminal lemniscus → left VPM) converge in the left ventral posterior thalamus, supplied by the inferolateral (thalamogeniculate) branches of the P2 PCA. Infarction causes contralateral hemianaesthesia of face and body without weakness ('pure sensory stroke'), and weeks later can evolve into Dejerine–Roussy central thalamic pain syndrome.",
+      "uz": "T1 plastinkasida o'ng tana (DCML va spinotalamik trakt → chap VPL) hamda o'ng yuzdan (trigeminal lemnisk → chap VPM) keluvchi barcha sezgi yo'llari chap talamusning ventral orqa yadrolarida uchrashadi. P2 PCA ning talamogenikulyar shoxlari tiqilganda falajliksiz o'ng yuz va tanada barcha sezgilar yo'qoladi ('sof sezgi insulti'), bir necha haftadan so'ng esa Dejerine–Roussy markaziy talamik og'riq sindromi rivojlanadi."
     },
     "refs": ["th-vpl", "th-vpm", "j-vpl", "j-vpm", "thalamus", "thalamogeniculate-artery"],
     "plate": "thalamus-coronal",
@@ -866,25 +887,25 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "A 58-year-old woman is found unresponsive in the morning. On examination she is stuporous/hypersomnolent, has a complete vertical gaze palsy (both up-gaze and down-gaze), and as she becomes more alert over the next days displays severe anterograde amnesia and profound apathy. Brain DWI MRI (plates T1 and O3) reveals symmetric paramedian hyperintensities in BOTH medial thalami extending into the rostral midbrain tegmentum. Occlusion of which anatomical vascular variant explains this bilateral diencephalic–mesencephalic infarct from a single embolus?",
-      "uz": "58 yoshli ayol ertalab behush holda topildi. Ko'rikda gipersomnoliya/koma, vertikal qarashning (yuqoriga va pastga) falaji, keyingi kunlarda hushi ochilgach esa og'ir anterograd amneziya va chuqur apatiya aniqlandi. DWI MRTda (T1 va O3 plastinkalari) IKKALA talamusning paramedian sohasida va rostral o'rta miya tegmentumida simmetrik infarkt o'choqlari ko'rindi. Bitta embol qaysi anatomik tomir variantini berkitib qo'ygan va qaysi yadrolar zararlangan?"
+      "en": "A 58-year-old woman is found stuporous with a complete vertical gaze palsy, and later shows severe anterograde amnesia and profound apathy. DWI MRI (plates T1 and O3) reveals symmetric paramedian infarcts in BOTH medial thalami extending into the rostral midbrain tegmentum. Occlusion of which vascular variant explains this bilateral infarct from a single embolus?",
+      "uz": "58 yoshli ayol stupor va to'liq vertikal qarash falaji bilan topildi, keyinchalik og'ir anterograd amneziya va chuqur apatiya aniqlandi. DWI MRTda (T1 va O3 plastinkalari) IKKALA medial talamusda va rostral o'rta miya tegmentumida simmetrik paramedian infarkt ko'rindi. Bitta embol qaysi tomir variantini berkitib qo'ygan?"
     },
     "options": [
       {
-        "en": "Artery of Percheron (a single unpaired paramedian thalamoperforating trunk arising from one P1 PCA segment to supply both mediodorsal/intralaminar thalami and the rostral midbrain riMLF/INC)",
-        "uz": "Percheron arteriyasi (bitta P1 PCA segmentidan chiquvchi yagona paramedian talamoperforant shox bo'lib, ikkala mediodorsal/intralaminar talamusni hamda rostral o'rta miyadagi riMLF/INC yadrolarini ta'minlaydi)"
+        "en": "Artery of Percheron — a single unpaired P1 PCA paramedian trunk supplying both medial thalami and rostral midbrain",
+        "uz": "Percheron arteriyasi — ikkala medial talamus va rostral o'rta miyani ta'minlovchi yagona P1 PCA paramedian shoxi"
       },
       {
-        "en": "Anterior communicating artery supplying the bilateral optic tracts",
-        "uz": "Ikkala ko'rish traktini ta'minlovchi oldingi biriktiruvchi arteriya"
+        "en": "Recurrent artery of Heubner — an unpaired A1/A2 ACA trunk supplying both anterior thalamic poles and septal nuclei",
+        "uz": "Heubner qaytuvchi arteriyasi — ikkala oldingi talamus qutbi va septal yadrolarni ta'minlovchi A1/A2 ACA shoxi"
       },
       {
-        "en": "Left anterior choroidal artery supplying the retrolenticular internal capsule",
-        "uz": "Ichki kapsula retrolentikulyar qismini ta'minlovchi chap oldingi xorioidal arteriya"
+        "en": "Anterior choroidal artery — a distal ICA trunk supplying both lateral geniculate bodies and retrolenticular capsules",
+        "uz": "Oldingi xorioidal arteriya — ikkala lateral tizzasimon tana va retrolentikulyar kapsulani ta'minlovchi ICA shoxi"
       },
       {
-        "en": "Anterior spinal artery supplying the medullary pyramids at the foramen magnum",
-        "uz": "Katta teshik darajasida uzunchoq miya piramidalarini ta'minlovchi oldingi orqa miya arteriyasi"
+        "en": "Posterior medial choroidal artery — a P2 PCA trunk supplying both pulvinars and the superior collicular tectum",
+        "uz": "Orqa medial xorioidal arteriya — ikkala pulvinar va yuqori do'nglik tomini ta'minlovchi P2 PCA shoxi"
       }
     ],
     "answer": 0,
@@ -907,31 +928,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "A 24-year-old patient undergoes transsphenoidal resection of a large suprasellar craniopharyngioma compressing the supraoptic/chiasmatic hypothalamus from above (plate G1). Which visual field deficit was present preoperatively (in contrast to a pituitary macroadenoma pushing from below), and what is the pathophysiology of the classic 'triphasic water-balance response' seen over the first two postoperative weeks?",
-      "uz": "24 yoshli bemorda supraoptik/xiazmatik gipotalamusni yuqoridan bosib turgan yirik kraniofaringioma olib tashlandi (G1 plastinkasi). Operatsiyadan oldin bemorda ko'rish maydonining qaysi qismi birinchi zararlangan (pastdan o'suvchi gipofiz makroadenomasidan farqli ravishda) va operatsiyadan keyingi dastlabki ikki haftada kuzatiladigan klassik 'uch fazali suv almashinuvi javobi' qanday kechadi?"
+      "en": "A 24-year-old patient undergoes resection of a suprasellar craniopharyngioma compressing the optic chiasm from above (plate G1). Which visual field deficit appeared first preoperatively, and what is the sequence of the classic postoperative 'triphasic water-balance response'?",
+      "uz": "24 yoshli bemorda ko'rish kesishmasini yuqoridan bosib turgan suprasellyar kraniofaringioma olib tashlandi (G1 plastinkasi). Operatsiyadan oldin qaysi ko'rish maydoni nuqsoni birinchi paydo bo'lgan va operatsiyadan keyingi klassik 'uch fazali suv almashinuvi javobi' qanday ketma-ketlikda kechadi?"
     },
     "options": [
       {
-        "en": "Preoperatively: bitemporal inferior quadrantanopia first (compression of superior chiasmal fibres from above); Postoperatively: Phase 1 acute central diabetes insipidus (axon shock of SON/PVN stalk) → Phase 2 SIADH / hyponatraemia (uncontrolled release of preformed ADH from degenerating posterior pituitary terminals) → Phase 3 permanent diabetes insipidus (once SON/PVN magnocellular neurons degenerate)",
-        "uz": "Operatsiyadan oldin: avval bitemporal pastki kvadrantanopiya (kesishmaning yuqoridan bosilishi); Operatsiyadan keyin: 1-faza o'tkir markaziy qandsiz diabet (SON/PVN aksonlari shoki) → 2-faza SIADH / giponatriyemiya (yemirilayotgan akson uchlaridan tayyor ADG ning chiqib ketishi) → 3-faza doimiy qandsiz diabet (SON/PVN neyronlari nobud bo'lgach)"
+        "en": "Bitemporal inferior quadrantanopia first; then acute central DI → transient SIADH/hyponatraemia → permanent central DI",
+        "uz": "Avval bitemporal pastki kvadrantanopiya; so'ngra o'tkir markaziy DI → vaqtinchalik SIADH/giponatriyemiya → doimiy markaziy DI"
       },
       {
-        "en": "Preoperatively: right homonymous hemianopia with macular sparing; Postoperatively: hyperprolactinaemia → acromegaly → Cushing disease",
-        "uz": "Operatsiyadan oldin: makula saqlangan o'ng gomonim gemianopiya; Operatsiyadan keyin: giperprolaktinemiya → akromegaliya → Kushing kasalligi"
+        "en": "Bitemporal superior quadrantanopia first; then transient SIADH/hyponatraemia → acute central DI → spontaneous normalization",
+        "uz": "Avval bitemporal yuqori kvadrantanopiya; so'ngra vaqtinchalik SIADH/giponatriyemiya → o'tkir markaziy DI → o'z-o'zidan tiklanish"
       },
       {
-        "en": "Preoperatively: monocular central scotoma; Postoperatively: SIADH first → hyperaldosteronism → normal water balance",
-        "uz": "Operatsiyadan oldin: bitta ko'zda markaziy skotoma; Operatsiyadan keyin: avval SIADH → giperaldosteronizm → sog'ayish"
+        "en": "Right homonymous hemianopia with macular sparing; then acute nephrogenic DI → secondary hyperaldosteronism → permanent SIADH",
+        "uz": "Makula saqlangan o'ng gomonim gemianopiya; so'ngra o'tkir nefrogen DI → ikkilamchi giperaldosteronizm → doimiy SIADH"
       },
       {
-        "en": "Preoperatively: bitemporal superior quadrantanopia; Postoperatively: nephrogenic diabetes insipidus resistant to desmopressin",
-        "uz": "Operatsiyadan oldin: bitemporal yuqori kvadrantanopiya; Operatsiyadan keyin: desmopressinga chidamli nefrogen qandsiz diabet"
+        "en": "Binasal inferior quadrantanopia first; then cerebral salt wasting → hyperprolactinaemia → desmopressin-resistant polyuria",
+        "uz": "Avval binazal pastki kvadrantanopiya; so'ngra serebral tuz yo'qotish → giperprolaktinemiya → desmopressinga chidamli poliuriya"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As described on plate G1, a pituitary macroadenoma compresses the optic chiasm from below (inferior nasal fibres → bitemporal superior quadrantanopia first), whereas a craniopharyngioma compresses from above (superior nasal fibres → bitemporal inferior quadrantanopia first). High stalk/SON/PVN surgical trauma produces the classic triphasic response: (1) transient central DI (stunned axons, days 1–5), (2) SIADH (leakage of stored ADH from degenerating neurohypophyseal terminals, days 5–10), and (3) permanent central DI (responds to desmopressin).",
-      "uz": "G1 plastinkasida yozilganidek, pastdan o'suvchi gipofiz makroadenomasi avval bitemporal yuqori kvadrantlarni, yuqoridan bosuvchi kraniofaringioma esa avval bitemporal pastki kvadrantlarni zararlaydi. SON/PVN va yuqori oyoqcha jarohatida operatsiyadan so'ng uch fazali javob kuzatiladi: 1) o'tkir qandsiz diabet (DI) → 2) SIADH (yemirilayotgan nerv oxirlaridan ADG chiqishi) → 3) doimiy markaziy qandsiz diabet (desmopressinga javob beradi)."
+      "en": "On plate G1, a pituitary macroadenoma compresses the optic chiasm from below (inferior nasal fibres → bitemporal superior quadrantanopia first), whereas a craniopharyngioma compresses from above (superior nasal fibres → bitemporal inferior quadrantanopia first). High stalk/SON/PVN surgical trauma produces the classic triphasic response: (1) acute central DI from stunned axons (days 1–5), (2) SIADH from uncontrolled leakage of stored ADH out of degenerating neurohypophyseal terminals (days 5–10), and (3) permanent central DI once SON/PVN magnocellular neurons degenerate (responds to desmopressin).",
+      "uz": "G1 plastinkasida ko'rsatilganidek, pastdan o'suvchi gipofiz makroadenomasi avval bitemporal yuqori kvadrantlarni, yuqoridan bosuvchi kraniofaringioma esa avval bitemporal pastki kvadrantlarni zararlaydi. SON/PVN va yuqori oyoqcha jarohatida operatsiyadan so'ng uch fazali javob kuzatiladi: 1) o'tkir markaziy qandsiz diabet (aksonlar shoki) → 2) SIADH (yemirilayotgan nerv oxirlaridan tayyor ADG chiqib ketishi) → 3) doimiy markaziy qandsiz diabet (desmopressinga javob beradi)."
     },
     "refs": ["supraoptic-nucleus", "paraventricular-nucleus-of-hypothalamus", "optic-chiasm", "tuber-cinereum", "son", "pvn", "och", "me"],
     "plate": "hypothalamus-chiasmatic",
@@ -948,31 +969,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "A 19-year-old student develops excessive daytime sleepiness with irresistible sleep attacks, sudden brief losses of muscle tone triggered by laughter or strong emotion (cataplexy) with preserved consciousness, hypnagogic hallucinations, and sleep paralysis. CSF analysis shows undetectable levels of a hypothalamic neuropeptide (< 110 pg/mL). Loss of neurons in which specific hypothalamic region (plates G1–G3) causes this disorder?",
-      "uz": "19 yoshli talabada kunduzgi chidab bo'lmas uyqu xurujlari, kulganda yoki kuchli hayajonda hush saqlangan holda mushak tonusining to'satdan yo'qolishi (katapleksiya), gipnagogik gallyutsinatsiyalar va uyqu falaji paydo bo'ldi. Likvor tahlilida gipotalamik neyropeptid miqdori keskin kamaygani aniqlandi. Gipotalamusning qaysi sohasidagi (G1–G3 plastinkalari) qaysi neyronlar yo'qolishi ushbu kasallikka sabab bo'ladi?"
+      "en": "A 19-year-old student develops irresistible daytime sleep attacks, sudden emotion-triggered loss of muscle tone (cataplexy) with preserved consciousness, hypnagogic hallucinations, and sleep paralysis, with CSF neuropeptide < 110 pg/mL. Loss of which hypothalamic neurons (plates G1–G3) causes this disorder?",
+      "uz": "19 yoshli talabada kunduzgi chidab bo'lmas uyqu xurujlari, emotsiyadan keyingi mushak tonusi yo'qolishi (katapleksiya), gipnagogik gallyutsinatsiyalar va uyqu falaji paydo bo'ldi, likvorda neyropeptid < 110 pg/ml. Gipotalamusning qaysi neyronlari yo'qolishi (G1–G3 plastinkalari) bunga sabab bo'ladi?"
     },
     "options": [
       {
-        "en": "Orexin (hypocretin) neurons of the lateral hypothalamic area (LHA, traversed by the medial forebrain bundle) — causing narcolepsy type 1 (with cataplexy)",
-        "uz": "Lateral gipotalamik sohadagi (LHA, medial old miya tutami o'tadigan zona) oreksin (gipokretin) neyronlarining yo'qolishi — 1-tip (katapleksiyali) narkolepsiya"
+        "en": "Orexin (hypocretin) neurons of the lateral hypothalamic area (LHA) — narcolepsy type 1",
+        "uz": "Lateral gipotalamik sohadagi (LHA) oreksin (gipokretin) neyronlari — 1-tip narkolepsiya"
       },
       {
-        "en": "Magnocellular vasopressin neurons of the supraoptic nucleus (SON) — causing central diabetes insipidus",
+        "en": "Magnocellular vasopressin neurons of the supraoptic nucleus (SON) — central diabetes insipidus",
         "uz": "Supraoptik yadrodagi (SON) magnotsellyulyar vazopressin neyronlari — markaziy qandsiz diabet"
       },
       {
-        "en": "Dopaminergic tuberoinfundibular neurons of the arcuate nucleus — causing hyperprolactinaemia",
-        "uz": "Yoysimon yadrodagi tuberoinfundibulyar dofamin neyronlari — giperprolaktinemiya"
+        "en": "Tuberoinfundibular dopamine neurons of the arcuate nucleus — stalk-effect hyperprolactinaemia",
+        "uz": "Yoysimon yadrodagi tuberoinfundibulyar dofamin neyronlari — oyoqcha ta'siri giperprolaktinemiyasi"
       },
       {
-        "en": "GABAergic neurons of the thalamic reticular nucleus — causing absence epilepsy",
-        "uz": "Talamusning to'rsimon yadrosidagi GABAergik neyronlar — absans epilepsiyasi"
+        "en": "Histaminergic arousal neurons of the tuberomammillary nucleus — fatal familial insomnia",
+        "uz": "Tuberomamillyar yadrodagi gistaminergik uyg'oqlik neyronlari — oilaviy halokatli uyqusizlik"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The lateral hypothalamic area (`lha`, plates G1–G4), lateral to the fornix column and traversed by the medial forebrain bundle, houses the brain's sole orexin (hypocretin) neurons, which stabilize wakefulness and suppress inappropriate REM-sleep atonia intrusions via projections to the locus coeruleus, raphe, tuberomammillary nucleus, and PnO. Autoimmune loss of LHA orexin neurons causes narcolepsy with cataplexy.",
-      "uz": "G1–G4 plastinkalarida fornix ustunidan lateralda joylashgan lateral gipotalamik sohada (`lha`) oreksin (gipokretin) neyronlari yotadi; ular uyg'oqlikni barqaror ushlab turadi va REM-uyqu atoniyasi uyg'oq paytda qo'shilib ketishining oldini oladi. LHA dagi oreksin neyronlarining yo'qolishi katapleksiyali narkolepsiyani keltirib chiqaradi."
+      "en": "The lateral hypothalamic area (LHA, plates G1–G4), lateral to the fornix column and traversed by the medial forebrain bundle, houses the brain's sole orexin (hypocretin) neurons, which stabilize wakefulness and suppress inappropriate REM-sleep atonia intrusions via projections to the locus coeruleus, raphe, tuberomammillary nucleus, and pontine reticular formation. Autoimmune loss of LHA orexin neurons causes narcolepsy type 1 (with cataplexy).",
+      "uz": "G1–G4 plastinkalarida fornix ustunidan lateralda joylashgan lateral gipotalamik sohada (LHA) oreksin (gipokretin) neyronlari yotadi; ular uyg'oqlikni barqaror ushlab turadi va REM-uyqu atoniyasi uyg'oq paytda qo'shilib ketishining oldini oladi. LHA dagi oreksin neyronlarining autoimmun yo'qolishi 1-tip (katapleksiyali) narkolepsiyani keltirib chiqaradi."
     },
     "refs": ["lateral-hypothalamic-nucleus", "lha", "hypothalamus", "fx"],
     "plate": "hypothalamus-tuberal",
@@ -989,31 +1010,31 @@
     "topic": "diencephalon",
     "type": "mcq",
     "q": {
-      "en": "A 57-year-old right-handed man presents with acute disorientation, severe anterograde verbal memory impairment, apathy, and transcortical motor-like speech difficulty (palilalia/anomia), without hemiparesis or primary somatosensory loss. MRI on axial plate B5 and coronal plate T2 shows an isolated infarct of the left anterior and anteromedial thalamus (anterior nuclear group, VA, ventral VL, and rostral MD/mammillothalamic tract termination). Occlusion of which artery caused this thalamic syndrome?",
-      "uz": "57 yoshli o'ngاقay bemorda falajlik va birlamchi sezgi yo'qolishi bo'lmagan holda to'satdan vaqt-makonda mo'ljal yo'qolishi, og'ir anterograd amneziya, apatiya va so'z topish qiyinligi rivojlandi. MRTda (B5 va T2 plastinkalari) chap talamusning oldingi qutbi (oldingi yadrolar guruhi, VA, mamillotalamik trakt tugash joyi va oldingi MD) infarkti aniqlandi. Qaysi arteriya tiqilishi ushbu oldingi talamus sindromini chaqirgan?"
+      "en": "A 57-year-old right-handed man presents with acute disorientation, severe anterograde verbal amnesia, apathy, and transcortical motor-like anomia without hemiparesis or primary sensory loss. MRI (plates B5 and T2) shows an isolated infarct of the left anterior/anteromedial thalamus (anterior nuclei, VA, ventral VL, and mammillothalamic tract termination). Occlusion of which artery caused this syndrome?",
+      "uz": "57 yoshli o'ng qo'lli bemorda falajlik va birlamchi sezgi yo'qolishi bo'lmagan holda to'satdan vaqt-makonda mo'ljal yo'qolishi, og'ir anterograd amneziya, apatiya va so'z topish qiyinligi rivojlandi. MRTda (B5 va T2 plastinkalari) chap talamusning oldingi qutbi (oldingi yadrolar, VA, ventral VL va mamillotalamik trakt tugash joyi) infarkti aniqlandi. Qaysi arteriya tiqilishi ushbu sindromni chaqirgan?"
     },
     "options": [
       {
-        "en": "Left tuberothalamic (polar / premammillary) artery arising from the posterior communicating artery (PCom)",
-        "uz": "Orqa biriktiruvchi arteriyadan (PCom) chiquvchi chap tuberotalamik (qutb / thalamotuberal) arteriya"
+        "en": "Left tuberothalamic (polar) artery arising from the posterior communicating artery (PCom)",
+        "uz": "Orqa biriktiruvchi arteriyadan (PCom) chiquvchi chap tuberotalamik (qutb) arteriya"
       },
       {
         "en": "Left posterior choroidal artery arising from the P2 segment of the posterior cerebral artery",
         "uz": "Orqa miya arteriyasi P2 segmentidan chiquvchi chap orqa xorioidal arteriya"
       },
       {
-        "en": "Left posterior inferior cerebellar artery (PICA) arising from the vertebral artery",
-        "uz": "Umurtqa arteriyasidan chiquvchi chap orqa pastki miyacha arteriyasi (PICA)"
+        "en": "Left thalamogeniculate (inferolateral) artery arising from the P2 segment of the PCA",
+        "uz": "Orqa miya arteriyasi P2 segmentidan chiquvchi chap talamogenikulyar arteriya"
       },
       {
-        "en": "Left middle meningeal artery arising from the maxillary artery",
-        "uz": "Yuqori jag' arteriyasidan chiquvchi chap o'rta parda arteriyasi"
+        "en": "Left paramedian thalamoperforating artery arising from the P1 segment of the PCA",
+        "uz": "Orqa miya arteriyasi P1 segmentidan chiquvchi chap paramedian talamoperforant arteriya"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As detailed on plates T1, T2, and B3 (`thalamotuberal-artery` / tuberothalamic territory), the tuberothalamic (polar) branch of the posterior communicating artery supplies the anterior thalamic nuclei, the mammillothalamic tract termination, VA, and rostral pole of MD. Infarction disconnects both the Papez circuit (mammillothalamic tract → anterior nucleus → amnesia) and anterior thalamic–prefrontal projections (VA/MD → apathy, executive dysfunction, thalamic aphasia/anomia on the left) while sparing VPL/VPM and the internal capsule.",
-      "uz": "T1, T2 va B3 plastinkalarida ko'rsatilganidek, orqa biriktiruvchi arteriyadan (PCom) chiquvchi tuberotalamik (`thalamotuberal-artery`, qutb) arteriya talamusning oldingi yadrolarini (`th-an`), mamillotalamik trakt (`mtt`) kirishini, VA (`th-va`) va MD ning oldingi qutbini ta'minlaydi. Uning infarkti VPL/VPM va ichki kapsulani chetlab o'tib, Papez halqasi uzilishi hisobiga o'tkir amneziya, apatiya va talamik nutq buzilishini beradi."
+      "en": "On plates T1, T2, and B3, the tuberothalamic (polar / premammillary) branch of the posterior communicating artery supplies the anterior thalamic nuclei, the mammillothalamic tract termination, VA, ventral VL, and the rostral pole of MD. Infarction disconnects both the Papez circuit (mammillothalamic tract → anterior nucleus → amnesia) and anterior thalamic–prefrontal projections (VA/MD → apathy, executive dysfunction, thalamic aphasia/anomia on the left) while sparing VPL/VPM and the internal capsule.",
+      "uz": "T1, T2 va B3 plastinkalarida ko'rsatilganidek, orqa biriktiruvchi arteriyadan (PCom) chiquvchi tuberotalamik (qutb) arteriya talamusning oldingi yadrolarini, mamillotalamik trakt tugash joyini, VA va MD ning oldingi qutbini ta'minlaydi. Uning infarkti VPL/VPM va ichki kapsulani chetlab o'tib, Papez halqasi uzilishi hisobiga o'tkir amneziya, apatiya va talamik nutq buzilishini beradi."
     },
     "refs": ["th-an", "th-va", "th-md", "mtt", "thalamotuberal-artery", "posterior-communicating-artery", "j-av"],
     "plate": "thalamus-nuclei-map",

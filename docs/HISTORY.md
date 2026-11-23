@@ -1366,3 +1366,19 @@ Wii, 2007; off-axis proyeksiya — Kooima "Generalized Perspective Projection").
 - Tekshiruv (`scripts/shot-hands.mjs`): oyna tekisligi 0.00 px siljiydi, 60 mm oldingi nuqta ±21.6 px (boshga qarshi —
   to'g'ri yo'nalish), markazga qaytish 0.00 px, orbit kamera siljimaydi, yaqinlashganda chuqurlik o'sadi; `--camera` da
   ikkala model ishlaydi. Tekshirilmadi: haqiqiy yuz bilan (foydalanuvchi), effekt kuchining qulayligi.
+
+## HT-1 + HP-1 — kamera bilan boshqarish, saqlangan (2026-11-22/23)
+
+Neyroxirurgik simulyator g'oyasi (PLAN 5.8) bo'yicha birinchi ikki qatlam `hands/HT-1` branchida tayyorlandi: qo'l bilan
+boshqarish (MediaPipe, 3D shisha qo'llar, imo-ishoralar) va bosh bilan qarash (BlazeFace → off-axis "3D oyna"). Headless'da
+13/13 tekshiruv o'tdi, `audit-pick` 0; haqiqiy kamerada sinalmagan. Foydalanuvchi qarori (2026-11-23): master'ga
+qo'shilmaydi — avval veb / faqat Mac / faqat iPad taqsimoti (AG-8). To'liq tafsilot branchdagi HISTORY "HT-1", "HP-1" va `docs/HANDS.md`.
+
+## AG-5b + AG-6 birlashtirildi (2026-11-23)
+
+- AG-5b (viktorina sayqali): eng uzun to'g'ri javob 83% → 23% (EN) / 25.5% (UZ), o'rtacha nisbat 0.98; kod nomlari olib tashlandi;
+  javob/refs/plate/manbalar o'zgarmagan (mustaqil skript bilan tasdiqlandi). 6 tasodifiy savol anatomik tekshirildi.
+- AG-6 (`docs/research/app-store.md`): ilova 100% bepul bo'lishi shart (NC qatlamlar); App Store'dan oldin kerak — AI uchun aniq
+  rozilik oynasi (Guideline 5.1.2(i) "including with third-party AI", so'zma-so'z tasdiqlandi), tibbiy ogohlantirish (1.4.1),
+  JHU uchun `susumu@mri.jhu.edu` dan yozma ruxsat (FSL notijorat sharti), HCP majburiy minnatdorchilik matni, FreeSurfer Part B
+  prefiksi, CC-SA + FairPlay DRM uchun DRM'siz parallel tarqatish. iPad WebContent/GPU Jetsam raqamlari — taxmin, A1 da o'lchanadi.

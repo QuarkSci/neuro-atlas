@@ -10,20 +10,20 @@
     },
     "options": [
       {
-        "en": "Caudate nucleus, putamen, and nucleus accumbens (ventral striatum)",
-        "uz": "Dumli yadro (kaudat), qobiq (putamen) va accumbens yadrosi (ventral striatum)"
+        "en": "Caudate nucleus, putamen, and nucleus accumbens",
+        "uz": "Dumli yadro, putamen va accumbens yadrosi"
       },
       {
-        "en": "Globus pallidus externus (GPe), globus pallidus internus (GPi), and subthalamic nucleus (STN)",
-        "uz": "Tashqi rangpar shar (GPe), ichki rangpar shar (GPi) va subtalamik yadro (STN)"
+        "en": "GPe, GPi, and subthalamic nucleus",
+        "uz": "GPe, GPi va subtalamik yadro"
       },
       {
-        "en": "Thalamus, hypothalamus, and epithalamus",
-        "uz": "Talamus, gipotalamus va epitalamus"
+        "en": "Thalamus, subthalamic nucleus, and zona incerta",
+        "uz": "Talamus, subtalamik yadro va zona incerta"
       },
       {
-        "en": "Red nucleus, substantia nigra, and periaqueductal grey",
-        "uz": "Qizil yadro, qora modda va periakveduktal kulrang modda"
+        "en": "Substantia nigra, red nucleus, and VTA",
+        "uz": "Qora modda, qizil yadro va VTA"
       }
     ],
     "answer": 0,
@@ -51,8 +51,8 @@
     },
     "options": [
       {
-        "en": "Putamen (laterally) and globus pallidus — GPe and GPi (medially)",
-        "uz": "Qobiq — putamen (lateralda) va rangpar shar — GPe hamda GPi (medialda)"
+        "en": "Putamen (laterally) and globus pallidus (medially)",
+        "uz": "Putamen (lateralda) va rangpar shar (medialda)"
       },
       {
         "en": "Caudate nucleus (medially) and thalamus (laterally)",
@@ -63,8 +63,8 @@
         "uz": "Klaustrum (medialda) va orolcha po'stlog'i (lateralda)"
       },
       {
-        "en": "Subthalamic nucleus and substantia nigra",
-        "uz": "Subtalamik yadro va qora modda"
+        "en": "Subthalamic nucleus (dorsally) and substantia nigra (ventrally)",
+        "uz": "Subtalamik yadro (yuqorida) va qora modda (pastda)"
       }
     ],
     "answer": 0,
@@ -92,8 +92,8 @@
     },
     "options": [
       {
-        "en": "Internal capsule (anterior limb, genu, and posterior limb)",
-        "uz": "Ichki kapsula (oldingi oyog'i, tizzasi va orqa oyog'i)"
+        "en": "Internal capsule",
+        "uz": "Ichki kapsula"
       },
       {
         "en": "External capsule",
@@ -104,14 +104,14 @@
         "uz": "Eng tashqi kapsula"
       },
       {
-        "en": "Corpus callosum",
-        "uz": "Qadoqsimon tana"
+        "en": "Anterior commissure",
+        "uz": "Oldingi komissura"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "On axial section (plate B5), the internal capsule forms a V-shaped boomerang ('>') opening laterally around the lentiform nucleus: its anterior limb separates the caudate head from the lentiform nucleus, and its posterior limb separates the thalamus from the lentiform nucleus.",
-      "uz": "Aksial kesimda (B5 plastinkasi) ichki kapsula lateralga ochilgan bumerang ('>') shaklida ko'rinadi: uning oldingi oyog'i kaudat boshini yasmiqsimon yadrodan, orqa oyog'i esa talamusni yasmiqsimon yadrodan ajratadi."
+      "en": "On axial section (plate B5), the internal capsule (anterior limb, genu, and posterior limb) forms a V-shaped boomerang ('>') opening laterally around the lentiform nucleus: its anterior limb separates the caudate head from the lentiform nucleus, and its posterior limb separates the thalamus from the lentiform nucleus.",
+      "uz": "Aksial kesimda (B5 plastinkasi) ichki kapsula (oldingi oyog'i, tizzasi va orqa oyog'i) lateralga ochilgan bumerang ('>') shaklida ko'rinadi: uning oldingi oyog'i kaudat boshini yasmiqsimon yadrodan, orqa oyog'i esa talamusni yasmiqsimon yadrodan ajratadi."
     },
     "refs": ["internal-capsule", "ic-al", "ic-g", "ic-pl", "caudate-nucleus", "thalamus", "putamen"],
     "plate": "bg-capsule-axial",
@@ -145,8 +145,8 @@
         "uz": "Dofaminergik neyromelanin saqlovchi neyronlar"
       },
       {
-        "en": "Noradrenergic pigmented neurons",
-        "uz": "Noradrenergik pigmentli neyronlar"
+        "en": "Cholinergic tonically active interneurons",
+        "uz": "Xolinergik tonik faol interneyronlar"
       }
     ],
     "answer": 0,
@@ -174,20 +174,20 @@
     },
     "options": [
       {
-        "en": "Globus pallidus internal segment (GPi) and substantia nigra pars reticulata (SNr)",
-        "uz": "Rangpar sharning ichki segmenti (GPi) va qora moddaning to'rsimon qismi (SNr)"
+        "en": "Internal globus pallidus (GPi) and substantia nigra pars reticulata (SNr)",
+        "uz": "Ichki rangpar shar (GPi) va qora modda to'rsimon qismi (SNr)"
       },
       {
-        "en": "Globus pallidus external segment (GPe) and subthalamic nucleus (STN)",
-        "uz": "Rangpar sharning tashqi segmenti (GPe) va subtalamik yadro (STN)"
+        "en": "External globus pallidus (GPe) and subthalamic nucleus (STN)",
+        "uz": "Tashqi rangpar shar (GPe) va subtalamik yadro (STN)"
       },
       {
-        "en": "Caudate nucleus and putamen",
-        "uz": "Dumli yadro (kaudat) va qobiq (putamen)"
+        "en": "Dorsal caudate nucleus and sensorimotor putamen (striatum)",
+        "uz": "Dorsal dumli yadro (kaudat) va sensomotor putamen"
       },
       {
-        "en": "Substantia nigra pars compacta (SNc) and ventral tegmental area (VTA)",
-        "uz": "Qora moddaning zich qismi (SNc) va ventral tegmental soha (VTA)"
+        "en": "Substantia nigra pars compacta (SNc) and ventral tegmental area",
+        "uz": "Qora moddaning zich qismi (SNc) va ventral tegmental soha"
       }
     ],
     "answer": 0,
@@ -219,16 +219,16 @@
         "uz": "Subtalamik yadro (STN)"
       },
       {
-        "en": "Globus pallidus external segment (GPe)",
-        "uz": "Rangpar sharning tashqi segmenti (GPe)"
+        "en": "Globus pallidus externus (GPe)",
+        "uz": "Tashqi rangpar shar (GPe)"
       },
       {
-        "en": "Globus pallidus internal segment (GPi)",
-        "uz": "Rangpar sharning ichki segmenti (GPi)"
+        "en": "Globus pallidus internus (GPi)",
+        "uz": "Ichki rangpar shar (GPi)"
       },
       {
-        "en": "Putamen",
-        "uz": "Qobiq (putamen)"
+        "en": "Substantia nigra pars reticulata (SNr)",
+        "uz": "Qora modda to'rsimon qismi (SNr)"
       }
     ],
     "answer": 0,
@@ -257,19 +257,19 @@
     "options": [
       {
         "en": "Substantia nigra pars compacta (SNc)",
-        "uz": "Qora moddaning zich qismi (substantia nigra pars compacta, SNc)"
+        "uz": "Qora moddaning zich qismi (SNc)"
       },
       {
-        "en": "Substantia nigra pars reticulata (SNr)",
-        "uz": "Qora moddaning to'rsimon qismi (substantia nigra pars reticulata, SNr)"
+        "en": "Substantia nigra pars reticulata",
+        "uz": "Qora moddaning to'rsimon qismi"
       },
       {
-        "en": "Red nucleus",
-        "uz": "Qizil yadro (nucleus ruber)"
+        "en": "Ventral tegmental area (VTA)",
+        "uz": "Ventral tegmental soha (VTA)"
       },
       {
-        "en": "Inferior olivary nucleus",
-        "uz": "Pastki zaytun yadrosi"
+        "en": "Red nucleus (magnocellular)",
+        "uz": "Qizil yadro (magnotsellyulyar)"
       }
     ],
     "answer": 0,
@@ -298,19 +298,19 @@
     "options": [
       {
         "en": "External capsule → claustrum → extreme capsule → insular cortex",
-        "uz": "Tashqi kapsula → klaustrum → eng tashqi kapsula → orolcha po'stlog'i (insula)"
+        "uz": "Tashqi kapsula → klaustrum → eng tashqi kapsula → orolcha po'stlog'i"
       },
       {
         "en": "Internal capsule → claustrum → external capsule → insular cortex",
         "uz": "Ichki kapsula → klaustrum → tashqi kapsula → orolcha po'stlog'i"
       },
       {
-        "en": "Lateral medullary lamina → GPe → medial medullary lamina → GPi",
-        "uz": "Lateral medullyar plastinka → GPe → medial medullyar plastinka → GPi"
+        "en": "Extreme capsule → claustrum → external capsule → insular cortex",
+        "uz": "Eng tashqi kapsula → klaustrum → tashqi kapsula → orolcha po'stlog'i"
       },
       {
-        "en": "Tapetum → optic radiation → internal capsule → thalamus",
-        "uz": "Tapetum → ko'rish radiatsiyasi → ichki kapsula → talamus"
+        "en": "Lateral medullary lamina → GPe → medial medullary lamina → GPi",
+        "uz": "Lateral medullyar plastinka → GPe → medial medullyar plastinka → GPi"
       }
     ],
     "answer": 0,
@@ -338,20 +338,20 @@
     },
     "options": [
       {
-        "en": "The direct pathway (D1 → inhibits GPi/SNr) disinhibits the thalamus to initiate/release movement; the indirect pathway (D2 → inhibits GPe → disinhibits STN → excites GPi/SNr) suppresses unwanted movement",
-        "uz": "To'g'ri yo'l (D1 → GPi/SNr ni tormozlaydi) talamusni tormozdan chiqarib harakatni boshlaydi; bilvosita yo'l (D2 → GPe ni tormozlaydi → STN qo'zg'aladi → GPi/SNr kuchayadi) keraksiz harakatni to'xtatadi"
+        "en": "Direct (D1) inhibits GPi/SNr to disinhibit thalamus and release movement; indirect (D2) inhibits GPe, activating STN/GPi to suppress movement",
+        "uz": "To'g'ri yo'l (D1) GPi/SNr ni tormozlab talamusni ochadi va harakatni boshlaydi; bilvosita yo'l (D2) GPe ni tormozlab STN/GPi orqali harakatni bostiradi"
       },
       {
-        "en": "The direct pathway descends directly to spinal α-motor neurons; the indirect pathway projects to the cerebellum",
-        "uz": "To'g'ri yo'l bevosita orqa miya motoneyronlariga tushadi; bilvosita yo'l esa miyachaga boradi"
+        "en": "Direct (D2) inhibits GPe to activate STN/GPi and suppress movement; indirect (D1) inhibits GPi/SNr directly to disinhibit thalamus and release movement",
+        "uz": "To'g'ri yo'l (D2) GPe ni tormozlab STN/GPi orqali harakatni bostiradi; bilvosita yo'l (D1) GPi/SNr ni tormozlab talamusni ochadi va harakatni boshlaydi"
       },
       {
-        "en": "The direct pathway uses glutamate in the striatum; the indirect pathway uses acetylcholine in the STN",
-        "uz": "To'g'ri yo'l striatumda glutamat ishlatadi; bilvosita yo'l esa STNda atsetilxolin ishlatadi"
+        "en": "Direct (D1) excites VA/VL thalamus directly to initiate movement; indirect (D2) projects from the striatum straight to spinal motor neurons",
+        "uz": "To'g'ri yo'l (D1) VA/VL talamusni bevosita qo'zg'atib harakatni boshlaydi; bilvosita yo'l (D2) striatumdan to'g'ridan-to'g'ri orqa miya motoneyronlariga tushadi"
       },
       {
-        "en": "Both pathways excite the GPi to block all cortical activity during sleep",
-        "uz": "Ikkala yo'l ham uyqu vaqtida GPi ni qo'zg'atib, po'stloq faolligini to'liq bloklaydi"
+        "en": "Direct (D1) uses glutamate to excite GPi/SNr during posture; indirect (D2) uses acetylcholine in the STN to inhibit cortical motor planning",
+        "uz": "To'g'ri yo'l (D1) qomatni ushlashda glutamat bilan GPi/SNr ni qo'zg'atadi; bilvosita yo'l (D2) STNda atsetilxolin orqali harakat rejasini tormozlaydi"
       }
     ],
     "answer": 0,
@@ -379,20 +379,20 @@
     },
     "options": [
       {
-        "en": "Contralateral hemiballismus (violent flinging movements of the opposite limbs)",
-        "uz": "Qarama-qarshi gemiballizm (qarama-qarshi qo'l va oyoqning keskin otilib ketuvchi harakatlari)"
+        "en": "Contralateral hemiballismus (violent flinging of the opposite limbs)",
+        "uz": "Qarama-qarshi gemiballizm (qarama-qarshi oyoq-qo'lning keskin otilishi)"
       },
       {
-        "en": "Ipsilateral resting pill-rolling tremor and bradykinesia",
-        "uz": "O'sha tomonda tinch holat tremori va bradikineziya"
+        "en": "Ipsilateral resting pill-rolling tremor, rigidity, and bradykinesia",
+        "uz": "O'sha tomonda tinch holat tremori, mushak rigidligi va bradikineziya"
       },
       {
-        "en": "Bilateral spastic paraplegia with extensor plantar responses",
-        "uz": "Babinski belgisi bilan ikki tomonlama spastik paraplegiya"
+        "en": "Contralateral spastic hemiparesis with hyperreflexia and Babinski sign",
+        "uz": "Qarama-qarshi spastik gemiparez, giperrefleksiya va Babinski belgisi"
       },
       {
-        "en": "Ipsilateral scanning dysarthria and truncal titubation",
-        "uz": "O'sha tomonda skandirlangan nutq va gavda tebranishi (titubatsiya)"
+        "en": "Ipsilateral intention tremor, dysmetria, and scanning dysarthria",
+        "uz": "O'sha tomonda intension tremor, dismetriya va skandirlangan nutq"
       }
     ],
     "answer": 0,
@@ -420,20 +420,20 @@
     },
     "options": [
       {
-        "en": "Ansa lenticularis (looping ventrally around the internal capsule) and lenticular fasciculus / Forel field H2 (piercing the capsule straight medially between zona incerta and STN)",
-        "uz": "Ansa lenticularis (ichki kapsulaning pastki chetini aylanib o'tadi) va yasmiqsimon tutam / Forel H2 maydoni (kapsulani teshib o'tib, zona incerta bilan STN orasidan boradi)"
+        "en": "Ansa lenticularis and lenticular fasciculus (Forel field H2)",
+        "uz": "Ansa lenticularis va yasmiqsimon tutam (Forel H2 maydoni)"
       },
       {
-        "en": "Stria terminalis (curving along the caudothalamic groove) and stria medullaris thalami (to the habenula)",
-        "uz": "Stria terminalis (kaudotalamik egat bo'ylab) va stria medullaris thalami (habenulaga)"
+        "en": "Stria terminalis and stria medullaris thalami (epithalamic bundle)",
+        "uz": "Stria terminalis va stria medullaris thalami (epitalamik tutam)"
       },
       {
-        "en": "Mammillothalamic tract and central tegmental tract",
-        "uz": "Mamillotalamik trakt va markaziy tegmental trakt"
+        "en": "Mammillothalamic tract and central tegmental tract (brainstem bundle)",
+        "uz": "Mamillotalamik trakt va markaziy tegmental trakt (ustun tutami)"
       },
       {
-        "en": "Superior cerebellar peduncle and medial longitudinal fasciculus",
-        "uz": "Yuqori miyacha oyoqchasi va medial bo'ylama tutam"
+        "en": "Subthalamic fasciculus and superior cerebellar peduncle (dentatothalamic)",
+        "uz": "Subtalamik tutam va yuqori miyacha oyoqchasi (dentatotalamik yo'l)"
       }
     ],
     "answer": 0,
@@ -461,20 +461,20 @@
     },
     "options": [
       {
-        "en": "Thalamic fasciculus (H1) → zona incerta → lenticular fasciculus (H2) → subthalamic nucleus (STN) (with SNc/SNr and crus cerebri beneath STN)",
-        "uz": "Talamik tutam (H1) → zona incerta → yasmiqsimon tutam (H2) → subtalamik yadro (STN) (uning ostida esa SNc/SNr va miya oyoqchasi)"
+        "en": "Thalamic fasciculus (H1) → zona incerta → lenticular fasciculus (H2) → subthalamic nucleus",
+        "uz": "Talamik tutam (H1) → zona incerta → yasmiqsimon tutam (H2) → subtalamik yadro"
       },
       {
-        "en": "Subthalamic nucleus (STN) → thalamic fasciculus (H1) → substantia nigra → zona incerta",
-        "uz": "Subtalamik yadro (STN) → talamik tutam (H1) → qora modda → zona incerta"
+        "en": "Lenticular fasciculus (H2) → zona incerta → thalamic fasciculus (H1) → subthalamic nucleus",
+        "uz": "Yasmiqsimon tutam (H2) → zona incerta → talamik tutam (H1) → subtalamik yadro"
       },
       {
-        "en": "External capsule → claustrum → extreme capsule → insula",
-        "uz": "Tashqi kapsula → klaustrum → eng tashqi kapsula → orolcha"
+        "en": "Subthalamic nucleus → thalamic fasciculus (H1) → zona incerta → lenticular fasciculus (H2)",
+        "uz": "Subtalamik yadro → talamik tutam (H1) → zona incerta → yasmiqsimon tutam (H2)"
       },
       {
-        "en": "Corpus callosum → lateral ventricle → fornix → third ventricle",
-        "uz": "Qadoqsimon tana → yon qorincha → fornix → uchinchi qorincha"
+        "en": "Zona incerta → subthalamic nucleus → thalamic fasciculus (H1) → lenticular fasciculus (H2)",
+        "uz": "Zona incerta → subtalamik yadro → talamik tutam (H1) → yasmiqsimon tutam (H2)"
       }
     ],
     "answer": 0,
@@ -502,20 +502,20 @@
     },
     "options": [
       {
-        "en": "Direct monosynaptic glutamatergic projection from motor/prefrontal cortex (M1, SMA, IFG) to the subthalamic nucleus (STN), which rapidly excites GPi/SNr as a fast global 'brake' to stop or cancel action",
-        "uz": "Harakat va prefrontal po'stloqdan (M1, SMA, IFG) striatumni chetlab to'g'ridan-to'g'ri subtalamik yadroga (STN) boruvchi glutamatergik yo'l bo'lib, GPi/SNr ni tez qo'zg'atadi va harakatni to'xtatish uchun tezkor 'tormoz' vazifasini o'taydi"
+        "en": "Monosynaptic glutamatergic projection from motor/prefrontal cortex to STN, exciting GPi/SNr as a fast global brake",
+        "uz": "Harakat/prefrontal po'stloqdan STNga to'g'ridan-to'g'ri glutamatergik yo'l; GPi/SNr ni tez qo'zg'atib global tormoz beradi"
       },
       {
-        "en": "Direct dopaminergic projection from the VTA to the primary visual cortex",
-        "uz": "VTAdan birlamchi ko'rish po'stlog'iga boruvchi to'g'ridan-to'g'ri dofaminergik yo'l"
+        "en": "Monosynaptic GABAergic projection from dorsal striatum to VA/VL thalamus, bypassing GPi to accelerate action initiation",
+        "uz": "Dorsal striatumdan GPi ni chetlab VA/VL talamusga boruvchi GABAergik yo'l; ixtiyoriy harakatni boshlashni tezlashtiradi"
       },
       {
-        "en": "Direct GABAergic projection from the caudate tail to the spinal ventral horn",
-        "uz": "Kaudat dumidan orqa miya oldingi shoxiga boruvchi to'g'ridan-to'g'ri GABAergik yo'l"
+        "en": "Direct dopaminergic projection from SNc to motor cortex M1, bypassing the striatum to potentiate corticospinal output",
+        "uz": "SNc dan striatumni chetlab M1 harakat po'stlog'iga boruvchi dofaminergik yo'l; kortikospinal chiqishni kuchaytiradi"
       },
       {
-        "en": "Direct cholinergic projection from the putamen to the cerebellar Purkinje cells",
-        "uz": "Putamendan miyacha Purkinje hujayralariga boruvchi xolinergik yo'l"
+        "en": "Direct glutamatergic projection from GPe to motor thalamus, bypassing STN and GPi to sustain ongoing rhythmic movements",
+        "uz": "GPe dan STN va GPi ni chetlab harakat talamusiga boruvchi glutamatergik yo'l; davom etayotgan ritmik harakatlarni ushlaydi"
       }
     ],
     "answer": 0,
@@ -543,20 +543,20 @@
     },
     "options": [
       {
-        "en": "The lateral core connects with orbitofrontal/cingulate cortex and ventral pallidum → MD thalamus to drive cue-triggered goal-directed approach; the medial/ventral shell resembles extended amygdala (projecting to LHA, VTA, VP), holds hedonic 'liking' hotspots, and shows the largest dopamine surge to addictive drugs",
-        "uz": "Lateral o'zak (core) orbitofrontal/belbog' po'stlog'i va ventral pallidum → MD talamus bilan bog'lanib maqsadli harakatni quvvatlaydi; medial/ventral qobiq (shell) esa LHA, VTA va VP ga chiqish berib, hedonik 'yoqtirish' nuqtalarini saqlaydi va giyohvand moddalarga eng kuchli dofamin otilishini ko'rsatadi"
+        "en": "Core links OFC/ACC and ventral pallidum → MD thalamus for cue-driven approach; shell links LHA/VTA/VP for hedonic hotspots and drug dopamine surges",
+        "uz": "O'zak (core) OFC/ACC va VP → MD talamus orqali maqsadli harakatni; qobiq (shell) LHA/VTA/VP orqali hedonik nuqtalar va dorilarga dofamin otilishini boshqaradi"
       },
       {
-        "en": "The core is purely motor cortex; the shell is purely primary auditory cortex",
-        "uz": "O'zak faqat harakat po'stlog'i, qobiq esa faqat birlamchi eshitish po'stlog'idir"
+        "en": "Core links LHA and VTA for visceral hedonic hotspots and drug surges; shell links dorsolateral prefrontal cortex and GPi for motor habit execution",
+        "uz": "O'zak (core) LHA va VTA orqali visseral hedonik nuqtalar hamda dorilarga dofamin javobini; qobiq (shell) DLPFC va GPi orqali harakat odatlarini boshqaradi"
       },
       {
-        "en": "The core projects down the spinal cord; the shell projects through the optic chiasm",
-        "uz": "O'zak orqa miyaga tushadi, qobiq esa ko'rish kesishmasidan o'tadi"
+        "en": "Core projects directly via the fornix to mammillary bodies for spatial memory; shell projects via the internal capsule to primary motor cortex M1",
+        "uz": "O'zak (core) fornix orqali so'rg'ichsimon tanalarga fazoviy xotira uchun; qobiq (shell) ichki kapsula orqali birlamchi harakat po'stlog'i M1 ga proyeksiya beradi"
       },
       {
-        "en": "The core uses serotonin only; the shell uses noradrenaline from the locus coeruleus only",
-        "uz": "O'zak faqat serotonin, qobiq esa faqat ko'k dog'dan noradrenalin oladi"
+        "en": "Core receives exclusively serotonergic raphe input for sleep-wake transitions; shell receives exclusively noradrenergic locus coeruleus input for arousal",
+        "uz": "O'zak (core) uyqu-uyg'oqlik uchun faqat chok yadrolari serotoninini; qobiq (shell) esa hushyorlik uchun faqat ko'k dog' noradrenalinini qabul qiladi"
       }
     ],
     "answer": 0,
@@ -584,20 +584,20 @@
     },
     "options": [
       {
-        "en": "Anterior limb: frontopontine & anterior thalamic (MD/anterior → prefrontal) radiation; Genu: corticobulbar (face/head); Posterior limb: corticospinal (arm anterior → leg posterior) & superior thalamic radiation (VPL/VPM → S1); Retrolenticular: optic radiation (LGN → V1)",
-        "uz": "Oldingi oyoq: frontopontin va oldingi talamik radiatsiya; Tizza: kortikobulbar (yuz/bosh); Orqa oyoq: kortikospinal (qo'l oldinda → oyoq orqada) va yuqori talamik sezgi radiatsiyasi (VPL/VPM → S1); Retrolentikulyar: ko'rish radiatsiyasi (LGN → V1)"
+        "en": "Anterior limb: frontopontine/anterior thalamic; Genu: corticobulbar; Posterior limb: corticospinal/sensory; Retrolenticular: optic radiation",
+        "uz": "Oldingi oyoq: frontopontin/oldingi talamik; Tizza: kortikobulbar; Orqa oyoq: kortikospinal/sezgi; Retrolentikulyar: ko'rish radiatsiyasi"
       },
       {
-        "en": "Anterior limb: optic radiation; Genu: auditory radiation; Posterior limb: olfactory tract; Retrolenticular: corticospinal tract",
-        "uz": "Oldingi oyoq: ko'rish radiatsiyasi; Tizza: eshitish radiatsiyasi; Orqa oyoq: hidlov trakti; Retrolentikulyar: kortikospinal trakt"
+        "en": "Anterior limb: corticobulbar; Genu: frontopontine/anterior thalamic; Posterior limb: optic radiation; Retrolenticular: corticospinal/sensory",
+        "uz": "Oldingi oyoq: kortikobulbar; Tizza: frontopontin/oldingi talamik; Orqa oyoq: ko'rish radiatsiyasi; Retrolentikulyar: kortikospinal/sezgi"
       },
       {
-        "en": "Anterior limb: corticospinal leg fibres; Genu: spinothalamic tract; Posterior limb: frontopontine fibres; Retrolenticular: fornix",
-        "uz": "Oldingi oyoq: oyoq harakat tolalari; Tizza: spinotalamik trakt; Orqa oyoq: frontopontin tolalar; Retrolentikulyar: fornix"
+        "en": "Anterior limb: corticospinal (arm/leg); Genu: superior thalamic sensory; Posterior limb: corticobulbar; Retrolenticular: frontopontine fibres",
+        "uz": "Oldingi oyoq: kortikospinal (qo'l/oyoq); Tizza: yuqori talamik sezgi; Orqa oyoq: kortikobulbar; Retrolentikulyar: frontopontin tolalar"
       },
       {
-        "en": "All four parts carry only commissural fibres between the two putamina",
-        "uz": "To'rtala qism ham faqat ikki putamen orasidagi komissural tolalarni o'tkazadi"
+        "en": "Anterior limb: optic/auditory radiations; Genu: corticospinal (leg); Posterior limb: frontopontine; Retrolenticular: anterior thalamic radiation",
+        "uz": "Oldingi oyoq: ko'rish/eshitish radiatsiyasi; Tizza: kortikospinal (oyoq); Orqa oyoq: frontopontin; Retrolentikulyar: oldingi talamik radiatsiya"
       }
     ],
     "answer": 0,
@@ -620,25 +620,25 @@
     "topic": "basal-ganglia",
     "type": "mcq",
     "q": {
-      "en": "Which subregion of the striatum loses dopaminergic innervation earliest in Parkinson disease (producing the 'comma → full stop' transition on DaT-SPECT imaging), and why?",
+      "en": "Which subregion of the striatum loses dopaminergic innervation earliest in Parkinson disease (producing the 'comma → full stop' transition on DaT-SPECT imaging)?",
       "uz": "Parkinson kasalligida striatumning qaysi qismida dofamin eng birinchi yo'qoladi (DaT-SPECT tasvirida 'vergul → nuqta' o'zgarishini beradi)?"
     },
     "options": [
       {
-        "en": "The dorsolateral (postcommissural) putamen — the sensorimotor striatum receiving M1/S1/SMA input",
-        "uz": "Dorsolateral (komissuradan keyingi) putamen — M1, S1 va SMA po'stlog'idan kirish oluvchi sensomotor striatum"
+        "en": "Dorsolateral (postcommissural) putamen — sensorimotor striatum",
+        "uz": "Dorsolateral (postkommissural) putamen — sensomotor striatum"
       },
       {
-        "en": "The medial shell of the nucleus accumbens — the limbic striatum receiving VTA input",
-        "uz": "Accumbens yadrosining medial qobig'i — VTAdan kirish oluvchi limbik striatum"
+        "en": "Anteromedial caudate head — associative prefrontal striatum",
+        "uz": "Anteromedial kaudat boshi — assotsiativ prefrontal striatum"
       },
       {
-        "en": "The tip of the caudate tail in the roof of the temporal horn — the visual striatum",
-        "uz": "Chakka shoxi tomidagi kaudat dumi — ko'rish striatumi"
+        "en": "Medial shell of nucleus accumbens — limbic ventral striatum",
+        "uz": "Accumbens yadrosi medial qobig'i — limbik ventral striatum"
       },
       {
-        "en": "The bed nucleus of the stria terminalis (BNST)",
-        "uz": "Stria terminalisning to'shak yadrosi (BNST)"
+        "en": "Ventrolateral caudate tail — occipitotemporal visual striatum",
+        "uz": "Ventrolateral kaudat dumi — ensa-chakka ko'rish striatumi"
       }
     ],
     "answer": 0,
@@ -666,20 +666,20 @@
     },
     "options": [
       {
-        "en": "Indirect-pathway D2/enkephalin MSNs of the caudate head die first (disinhibiting GPe → suppressing STN/GPi → chorea), flattening the lateral ventricular wall into 'boxcar' frontal horns",
-        "uz": "Kaudat boshidagi bilvosita yo'lning D2/enkefalin MSN'lari birinchi nobud bo'ladi (GPe ortiqcha tormozlanib, STN va GPi susayadi → xoreya); kaudat boshi yassilanib frontal shoxlar 'quti' (boxcar) shaklini oladi"
+        "en": "Indirect-pathway D2/enkephalin MSNs of the caudate head die first, creating flattened 'boxcar' frontal horns",
+        "uz": "Kaudat boshidagi bilvosita D2/enkefalin MSN'lari birinchi nobud bo'lib, 'quti' (boxcar) frontal shoxlar hosil qiladi"
       },
       {
-        "en": "Direct-pathway D1/substance P neurons of the STN die first, causing aqueductal stenosis",
-        "uz": "STNdagi to'g'ri yo'l D1/P modda neyronlari birinchi nobud bo'lib, suv yo'li stenozini beradi"
+        "en": "Direct-pathway D1/substance P MSNs of the posterior putamen die first, creating narrow slit-like frontal horns",
+        "uz": "Orqa putamendagi to'g'ri D1/P modda MSN'lari birinchi nobud bo'lib, tor tirqishsimon frontal shoxlar hosil qiladi"
       },
       {
-        "en": "Cholinergic neurons of the red nucleus die first, causing colpocephaly of the occipital horns",
-        "uz": "Qizil yadroning xolinergik neyronlari birinchi nobud bo'lib, orqa shoxlar kolpotsefaliyasini beradi"
+        "en": "Cholinergic striatal interneurons of nucleus accumbens die first, creating asymmetrically enlarged temporal horns",
+        "uz": "Accumbens yadrosining xolinergik interneyronlari birinchi nobud bo'lib, kengaygan chakka shoxlarini hosil qiladi"
       },
       {
-        "en": "Purkinje cells of the cerebellar vermis die first, causing fourth-ventricular cyst formation",
-        "uz": "Miyacha chuvalchangining Purkinje hujayralari birinchi nobud bo'lib, IV qorincha kistasini beradi"
+        "en": "Dopaminergic SNc neurons and pallidal border cells die first, creating pronounced colpocephaly of occipital horns",
+        "uz": "SNc dofaminergik neyronlari va pallidal chegara hujayralari birinchi nobud bo'lib, orqa shox kolpotsefaliyasini beradi"
       }
     ],
     "answer": 0,
@@ -707,25 +707,25 @@
     },
     "options": [
       {
-        "en": "Striosomes receive limbic cortical input and project directly to SNc dopamine neurons, while the surrounding matrix receives sensorimotor/associative input and projects to GPe/GPi/SNr; GPe contains prototypic (parvalbumin+, → STN/GPi) and arkypallidal (FoxP2+, → back to striatum as a 'stop' signal) GABAergic neurons",
-        "uz": "Striosomalar limbik kirish olib SNc ga proyeksiya beradi, matriks esa sensomotor/assotsiativ kirish olib GPe/GPi/SNr ga boradi; GPe da prototipik (parvalbumin+, → STN/GPi) va arkipallidal (FoxP2+, faqat striatumga qaytuvchi 'to'xta' signali) hujayralar bor"
+        "en": "Striosomes project to SNc and matrix projects to GPe/GPi/SNr; GPe has prototypic (→ STN/GPi) and arkypallidal (→ striatum) cells",
+        "uz": "Striosomalar SNc ga, matriks GPe/GPi/SNr ga boradi; GPe da prototipik (→ STN/GPi) va arkipallidal (→ striatum) hujayralar bor"
       },
       {
-        "en": "Striosomes are pure white-matter tracts and matrix is cerebrospinal fluid; GPe contains only glutamatergic granule cells",
-        "uz": "Striosomalar oq modda traktlari, matriks esa likvor; GPe da faqat glutamatergik donador hujayralar bor"
+        "en": "Striosomes project to GPi/SNr and matrix projects exclusively to SNc; GPe contains direct (D1+) and indirect (D2+) spiny neurons",
+        "uz": "Striosomalar GPi/SNr ga, matriks esa faqat SNc ga boradi; GPe da to'g'ri (D1+) va bilvosita (D2+) o'rta tikanli neyronlar bor"
       },
       {
-        "en": "Striosomes project to the spinal cord and matrix projects to the retina; GPe contains Betz and Purkinje cells",
-        "uz": "Striosomalar orqa miyaga, matriks to'r pardaga boradi; GPe da Bets va Purkinje hujayralari bor"
+        "en": "Striosomes relay motor cortex to STN and matrix relays thalamus to M1; GPe has glutamatergic relay and cholinergic interneurons",
+        "uz": "Striosomalar harakat po'stlog'ini STNga, matriks talamusni M1 ga bog'laydi; GPe da glutamatergik va xolinergik hujayralar bor"
       },
       {
-        "en": "Striosomes and matrix are layers of the cerebellar cortex; GPe cells secrete melatonin and vasopressin",
-        "uz": "Striosoma va matriks miyacha po'stlog'i qavatlari; GPe hujayralari melatonin va vazopressin ajratadi"
+        "en": "Striosomes form internal capsule fascicles and matrix holds glial syncytia; GPe has dopaminergic (→ putamen) and serotonergic cells",
+        "uz": "Striosomalar ichki kapsula tutamlarini, matriks glia qatlamini tuzadi; GPe da dofaminergik (→ putamen) va serotoninergik hujayralar bor"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As detailed in BASAL_STRUCTURES (cau-head and gpe), striatal MSNs are organized into limbic-recipient striosomes (projecting to SNc) embedded in a sensorimotor/associative matrix (projecting to GPe/GPi/SNr). In GPe, ~2/3 of neurons are parvalbumin+ prototypic cells projecting to STN and GPi/SNr, whereas FoxP2+ arkypallidal cells project exclusively back to the striatum to cancel evolving actions (Mallet 2012/2016).",
+      "en": "Striatal MSNs are organized into limbic-recipient striosomes (projecting to SNc) embedded in a sensorimotor/associative matrix (projecting to GPe/GPi/SNr). In GPe, roughly two-thirds of neurons are parvalbumin-positive prototypic cells projecting to STN and GPi/SNr, whereas FoxP2-positive arkypallidal cells project exclusively back to the striatum to cancel evolving actions (Mallet 2012/2016).",
       "uz": "Striatum MSN'lari matriks ichidagi striosomalardan (limbik kirish olib SNc ga boradi; matriks esa sensomotor/assotsiativ kirish olib GPe/GPi/SNr ga boradi) iborat. GPe ichida esa ikki xil GABAergik hujayra bor: prototipik (≈2/3, parvalbumin+, STN va chiqish yadrolariga boradi) hamda arkipallidal (FoxP2+, faqat striatumga qaytib 'to'xta' signalini beradi)."
     },
     "refs": ["cau-head", "gpe", "put", "snc", "stn"],
@@ -748,25 +748,25 @@
     },
     "options": [
       {
-        "en": "(1) Recurrent artery of Heubner (and medial lenticulostriate branches of ACA A1/A2); (2) Lateral lenticulostriate arteries from the M1 segment of the middle cerebral artery",
-        "uz": "(1) Heubner qaytuvchi arteriyasi (va ACA A1/A2 medial lentikulostriar shoxlari); (2) O'rta miya arteriyasi M1 segmentidan chiquvchi lateral lentikulostriar arteriyalar"
+        "en": "(1) Recurrent artery of Heubner (ACA); (2) Lateral lenticulostriate arteries (M1 MCA)",
+        "uz": "(1) Heubner qaytuvchi arteriyasi (ACA); (2) Lateral lentikulostriar arteriyalar (M1 MCA)"
       },
       {
-        "en": "(1) Posterior inferior cerebellar artery (PICA); (2) Anterior spinal artery",
-        "uz": "(1) Orqa pastki miyacha arteriyasi (PICA); (2) Oldingi orqa miya arteriyasi"
+        "en": "(1) Lateral lenticulostriate arteries (M1 MCA); (2) Recurrent artery of Heubner (ACA)",
+        "uz": "(1) Lateral lentikulostriar arteriyalar (M1 MCA); (2) Heubner qaytuvchi arteriyasi (ACA)"
       },
       {
-        "en": "(1) Superior cerebellar artery (SCA); (2) Labyrinthine artery",
-        "uz": "(1) Yuqori miyacha arteriyasi (SCA); (2) Labirint arteriyasi"
+        "en": "(1) Anterior choroidal artery (ICA); (2) Thalamoperforating arteries (P1 PCA segment)",
+        "uz": "(1) Oldingi xorioidal arteriya (ICA); (2) Talamoperforant arteriyalar (P1 PCA segmenti)"
       },
       {
-        "en": "(1) Ophthalmic artery; (2) Middle meningeal artery",
-        "uz": "(1) Ko'z arteriyasi; (2) O'rta parda arteriyasi"
+        "en": "(1) Thalamogeniculate arteries (P2 PCA); (2) Paramedian pontine perforators (basilar)",
+        "uz": "(1) Talamogenikulyar arteriyalar (P2 PCA); (2) Paramedian ko'prik perforantlari (bazilyar)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "On plates B1–B2, the recurrent artery of Heubner (from A1/A2 ACA) supplies the anteromedial caudate head, anterior limb, and nucleus accumbens (infarction causes abulia/apathy rather than weakness). The lateral lenticulostriate perforators (from M1 MCA) supply the putamen, GPe, and dorsal internal capsule, and are the site of ~35 % of hypertensive intracerebral haemorrhages.",
+      "en": "On plates B1–B2, the recurrent artery of Heubner (from A1/A2 ACA, alongside medial lenticulostriate branches) supplies the anteromedial caudate head, anterior limb, and nucleus accumbens (infarction causes abulia/apathy rather than weakness). The lateral lenticulostriate perforators (from M1 MCA) supply the putamen, GPe, and dorsal internal capsule, and are the site of ~35 % of hypertensive intracerebral haemorrhages.",
       "uz": "Heubner qaytuvchi arteriyasi (ACA A1/A2 tutashuvidan) kaudat boshining anteromedial qismi, oldingi oyoq va accumbensni ta'minlaydi (infarkti kuchsizlik emas, abuliya va apatiya beradi). O'rta miya arteriyasi (M1) dan chiquvchi lateral lentikulostriar arteriyalar esa putamen, GPe va kapsulaning dorsal qismini ta'minlaydi hamda gipertonik miya ichi qon quyilishining (~35 %) eng ko'p uchraydigan joyidir."
     },
     "refs": ["cau-head", "ic-al", "acb-core", "put", "gpe", "anterior-cerebral-artery", "trunk-of-right-middle-cerebral-artery"],
@@ -789,26 +789,26 @@
     },
     "options": [
       {
-        "en": "The globus pallidus has high iron content and a vascular border-zone supply (causing bilateral pallidal necrosis and delayed parkinsonism after CO poisoning, and T1 hyperintensity in manganese toxicity / kernicterus); the putamen is targeted by Wilson disease (copper) and methanol toxicity",
-        "uz": "Rangpar sharda temir ko'p va qon ta'minoti chegara zonasida joylashgan (CO zaharlanishida ikki tomonlama pallidar nekroz, marganets zaharlanishi va yadro sariqligida zararlanish beradi); putamen esa Vilson kasalligi (mis) va metanol zaharlanishida nishonga olinadi"
+        "en": "High iron content and border-zone supply make GP vulnerable to CO/hypoxia and manganese; Wilson disease and methanol target the putamen",
+        "uz": "Yuqori temir va chegara qon ta'minoti GP ni CO/gipoksiya va marganetsga sezgir qiladi; Vilson kasalligi va metanol putamenni zararlaydi"
       },
       {
-        "en": "The globus pallidus lacks capillaries entirely and is the sole site of vitamin B12 subacute combined degeneration",
-        "uz": "Rangpar sharda kapillyarlar umuman yo'q va u B12 tanqisligidagi subakut qo'shma degeneratsiyaning yagona joyidir"
+        "en": "High dopamine uptake and venous drainage make GP vulnerable to methanol and Wilson disease; CO poisoning and kernicterus target the putamen",
+        "uz": "Yuqori dofamin va venoz oqim GP ni metanol hamda Vilson kasalligiga sezgir qiladi; CO zaharlanishi va yadro sariqligi putamenni zararlaydi"
       },
       {
-        "en": "CO poisoning selectively calcifies the claustrum while methanol only affects the pineal gland",
-        "uz": "CO zaharlanishi faqat klaustrumni kalsinatlaydi, metanol esa faqat epifizni zararlaydi"
+        "en": "Lack of blood-brain barrier makes GP vulnerable to thiamine deficiency and osmotic stress; CO poisoning selectively targets the claustrum",
+        "uz": "Gematotsefalik to'siq yo'qligi GP ni tiamin tanqisligi va osmotik stressga sezgir qiladi; CO zaharlanishi esa faqat klaustrumni zararlaydi"
       },
       {
-        "en": "Wilson disease and CO poisoning affect only the primary visual cortex (V1)",
-        "uz": "Vilson kasalligi va is gazi faqat birlamchi ko'rish po'stlog'ini (V1) zararlaydi"
+        "en": "High cholinergic density makes GP vulnerable to copper overload and hypoglycemia; manganese toxicity selectively targets the caudate tail",
+        "uz": "Yuqori xolinergik zichlik GP ni mis ortiqchaligi va gipoglikemiyaga sezgir qiladi; marganets zaharlanishi esa faqat kaudat dumini zararlaydi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As noted in plates B2 and B3, the globus pallidus is iron-rich and sits at an arterial border zone (lenticulostriate vs anterior choroidal): CO poisoning/hypoxia causes bilateral pallidal T2 hyperintensity and necrosis; unconjugated bilirubin (kernicterus) and manganese (liver failure/TPN) also target GP. The putamen is classically damaged in Wilson disease (copper), methanol poisoning (formic acid), and mitochondrial Leigh disease.",
-      "uz": "B2 va B3 plastinkalarida ko'rsatilganidek, rangpar shar temirga boy va arterial chegara zonasida yotadi: is gazi (CO) va gipoksiya ikki tomonlama pallidar nekroz va kechikkan parkinsonizm beradi; yadro sariqligi (bilirubin) va marganets ham GP ni zararlaydi. Putamen esa Vilson kasalligi (mis), metanol va gipoksiyada tanlab shikastlanadi."
+      "en": "On plates B2 and B3, the globus pallidus is iron-rich and sits at an arterial border zone (lenticulostriate vs anterior choroidal): CO poisoning/hypoxia causes bilateral pallidal T2 hyperintensity and necrosis; unconjugated bilirubin (kernicterus) and manganese (liver failure/TPN) also target GP. The putamen is classically damaged in Wilson disease (copper), methanol poisoning (formic acid), and mitochondrial Leigh disease.",
+      "uz": "B2 va B3 plastinkalarida rangpar shar temirga boy va arterial chegara zonasida yotadi: is gazi (CO) va gipoksiya ikki tomonlama pallidar nekroz va kechikkan parkinsonizm beradi; yadro sariqligi (bilirubin) va marganets ham GP ni zararlaydi. Putamen esa Vilson kasalligi (mis), metanol va gipoksiyada tanlab shikastlanadi."
     },
     "refs": ["globus-pallidus", "putamen", "gpe", "gpi", "put"],
     "plate": "bg-commissural",
@@ -830,25 +830,25 @@
     },
     "options": [
       {
-        "en": "Track: quiet zona incerta (dorsal) → sensorimotor dorsolateral STN (beta LFPs) → SNr (regular ~70 Hz ventral); Neighbours: (a) internal capsule posterior limb laterally, (b) CN III oculomotor fascicles medially, (c) medial lemniscus posteriorly, (d) limbic medial tip of the tripartite STN",
-        "uz": "Yo'l: sokin zona incerta (yuqorida) → dorsolateral sensomotor STN (beta LFP) → SNr (pastda muntazam ~70 Gs); Qo'shnilar: (a) lateralda ichki kapsula orqa oyog'i, (b) medialda III nerv tolalari, (c) orqada medial lemnisk, (d) STNning limbik medial uchi"
+        "en": "Track: zona incerta → dorsolateral STN → SNr; Neighbours: (a) internal capsule, (b) CN III fibres, (c) medial lemniscus, (d) limbic STN tip",
+        "uz": "Yo'l: zona incerta → dorsolateral STN → SNr; Qo'shnilar: (a) ichki kapsula, (b) III nerv tolalari, (c) medial lemnisk, (d) STN limbik uchi"
       },
       {
-        "en": "Track: caudate head → putamen → claustrum; Neighbours: (a) optic chiasm, (b) fourth ventricle, (c) facial nerve genu, (d) dentate nucleus",
-        "uz": "Yo'l: kaudat boshi → putamen → klaustrum; Qo'shnilar: (a) ko'rish kesishmasi, (b) IV qorincha, (c) yuz nervi tizzasi, (d) tishsimon yadro"
+        "en": "Track: thalamic fasciculus → VLa thalamus → zona incerta; Neighbours: (a) optic tract, (b) fornix column, (c) pulvinar, (d) mammillary body",
+        "uz": "Yo'l: talamik tutam → VLa talamus → zona incerta; Qo'shnilar: (a) ko'rish trakti, (b) fornix ustuni, (c) pulvinar, (d) so'rg'ichsimon tana"
       },
       {
-        "en": "Track: corpus callosum → septum pellucidum → fornix; Neighbours: (a) external capsule, (b) pineal gland, (c) fasciculus gracilis, (d) area postrema",
-        "uz": "Yo'l: qadoqsimon tana → shaffof to'siq → fornix; Qo'shnilar: (a) tashqi kapsula, (b) epifiz, (c) nozik tutam, (d) area postrema"
+        "en": "Track: GPe → medial medullary lamina → GPi; Neighbours: (a) external capsule, (b) internal capsule, (c) optic tract, (d) nucleus basalis",
+        "uz": "Yo'l: GPe → medial plastinka → GPi; Qo'shnilar: (a) tashqi kapsula, (b) ichki kapsula, (c) ko'rish trakti, (d) bazal Meynert yadrosi"
       },
       {
-        "en": "Track: VPL thalamus → mammillary body → optic tract; Neighbours: (a) superior colliculus, (b) hypoglossal nucleus, (c) inferior olive, (d) vermis",
-        "uz": "Yo'l: VPL talamus → so'rg'ichsimon tana → ko'rish trakti; Qo'shnilar: (a) yuqori do'nglik, (b) til osti nervi yadrosi, (c) pastki zaytun, (d) chuvalchang"
+        "en": "Track: dorsolateral STN → zona incerta → VPL thalamus; Neighbours: (a) medial lemniscus, (b) internal capsule, (c) CN III fibres, (d) red nucleus",
+        "uz": "Yo'l: dorsolateral STN → zona incerta → VPL talamus; Qo'shnilar: (a) medial lemnisk, (b) ichki kapsula, (c) III nerv tolalari, (d) qizil yadro"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As detailed on plate B4, a dorsal-to-ventral STN DBS trajectory passes through the quiet zona incerta (and H2) into the dorsolateral sensorimotor STN (20–50 Hz bursty firing + pathological beta LFPs used for adaptive DBS), and below into the GABAergic SNr (~70 Hz regular firing). Current spread maps directly onto the anatomy: lateral = internal capsule (corticospinal contractions), medial = oculomotor (CN III) fibres/red nucleus, posterior = medial lemniscus (paraesthesias), and the medial tip of the tripartite STN = limbic territory (hypomania/impulsivity).",
+      "en": "On plate B4, a dorsal-to-ventral STN DBS trajectory passes through the quiet zona incerta (and H2) into the dorsolateral sensorimotor STN (20–50 Hz bursty firing + pathological beta LFPs used for adaptive DBS), and below into the GABAergic SNr (~70 Hz regular firing). Current spread maps directly onto the anatomy: lateral = internal capsule (corticospinal contractions), medial = oculomotor (CN III) fibres/red nucleus, posterior = medial lemniscus (paraesthesias), and the medial tip of the tripartite STN = limbic territory (hypomania/impulsivity).",
       "uz": "B4 plastinkasida STN DBS yo'li yuqoridan pastga sokin zona incertadan o'tib, dorsolateral sensomotor STNga (20–50 Gs razryad va adaptiv DBS uchun ishlatiladigan beta LFP) va uning ostidagi SNr ga (~70 Gs muntazam razryad) tushadi. Nojo'ya ta'sirlar qo'shnilarga aniq mos keladi: lateralda — ichki kapsula (mushak qisqarishi), medialda — III nerv tolalari (diplopiya), orqada — medial lemnisk (paresteziya) va uch qismli STNning medial uchida — limbik zona (gipomaniya)."
     },
     "refs": ["stn", "j-stn", "zi", "snr", "ic-pl", "n3-root", "ml"],
@@ -871,20 +871,20 @@
     },
     "options": [
       {
-        "en": "Transition: GPe (pausing) → medial medullary lamina → GPi (tonic 60–100 Hz); Phosphenes (too deep/ventral): optic tract directly beneath posteroventral GPi; Contractions (too medial/posterior): posterior limb of the internal capsule",
-        "uz": "O'tish: GPe (pauzali) → medial medullyar plastinka → GPi (tonik 60–100 Gs); Fosfenlar (juda chuqur/ventral): posteroventral GPi ostida yotgan ko'rish trakti; Mushak qisqarishi (juda medial): ichki kapsulaning orqa oyog'i"
+        "en": "Transition: GPe → medial medullary lamina → GPi; Phosphenes: optic tract ventrally; Contractions: internal capsule posterior limb medially",
+        "uz": "O'tish: GPe → medial medullyar plastinka → GPi; Fosfenlar: ostidagi ko'rish trakti; Qisqarish: medialdagi ichki kapsula orqa oyog'i"
       },
       {
-        "en": "Transition: putamen → external capsule → claustrum; Phosphenes: superior colliculus; Contractions: facial motor nucleus",
-        "uz": "O'tish: putamen → tashqi kapsula → klaustrum; Fosfenlar: yuqori do'nglik; Mushak qisqarishi: yuz nervi harakat yadrosi"
+        "en": "Transition: putamen → lateral medullary lamina → GPe; Phosphenes: lateral geniculate nucleus; Contractions: corticobulbar genu anteriorly",
+        "uz": "O'tish: putamen → lateral medullyar plastinka → GPe; Fosfenlar: lateral tizzasimon yadro; Qisqarish: oldindagi kortikobulbar tizza"
       },
       {
-        "en": "Transition: caudate head → septum pellucidum → fornix; Phosphenes: pineal gland; Contractions: pyramid",
-        "uz": "O'tish: kaudat boshi → shaffof to'siq → fornix; Fosfenlar: epifiz; Mushak qisqarishi: piramida"
+        "en": "Transition: zona incerta → lenticular fasciculus → STN; Phosphenes: optic radiation posteriorly; Contractions: cerebral peduncle ventrally",
+        "uz": "O'tish: zona incerta → yasmiqsimon tutam → STN; Fosfenlar: orqadagi ko'rish radiatsiyasi; Qisqarish: ventral miya oyoqchasi tolalari"
       },
       {
-        "en": "Transition: VPL → internal medullary lamina → MD thalamus; Phosphenes: area postrema; Contractions: red nucleus",
-        "uz": "O'tish: VPL → ichki medullyar plastinka → MD talamus; Fosfenlar: area postrema; Mushak qisqarishi: qizil yadro"
+        "en": "Transition: VPL → internal medullary lamina → VLa thalamus; Phosphenes: superior colliculus; Contractions: red nucleus rubral outflow",
+        "uz": "O'tish: VPL → ichki medullyar plastinka → VLa talamus; Fosfenlar: yuqori do'nglik; Qisqarish: qizil yadro rubral chiqish tolalari"
       }
     ],
     "answer": 0,
@@ -912,26 +912,26 @@
     },
     "options": [
       {
-        "en": "Left internal capsule posterior limb (corticospinal/corticobulbar fibres anterior to the thalamocortical sensory radiation) — pure motor lacunar stroke supplied by lateral lenticulostriate (MCA) or anterior choroidal arteries",
-        "uz": "Chap ichki kapsulaning orqa oyog'i (sezgi radiatsiyasidan oldinda yotgan kortikospinal/kortikobulbar tolalar) — lateral lentikulostriar yoki oldingi xorioidal arteriya havzasidagi 'sof harakat lakunar insulti'"
+        "en": "Left internal capsule posterior limb — pure motor lacunar stroke (lenticulostriate or anterior choroidal arteries)",
+        "uz": "Chap ichki kapsula orqa oyog'i — sof harakat lakunar insulti (lentikulostriar yoki oldingi xorioidal arteriya)"
       },
       {
-        "en": "Left VPL and VPM nuclei of the thalamus — thalamogeniculate (PCA) territory",
-        "uz": "Chap talamusning VPL va VPM yadrolari — talamogenikulyar (PCA) arteriya havzasi"
+        "en": "Left VPL and VPM thalamic nuclei — pure sensory lacunar stroke (thalamogeniculate branches of posterior cerebral artery)",
+        "uz": "Chap talamus VPL va VPM yadrolari — sof sezgi lakunar insulti (orqa miya arteriyasining talamogenikulyar shoxlari)"
       },
       {
-        "en": "Left caudate head and nucleus accumbens — recurrent artery of Heubner (ACA) territory",
-        "uz": "Chap dumli yadro boshi va accumbens yadrosi — Heubner qaytuvchi arteriyasi (ACA) havzasi"
+        "en": "Left caudate head and anterior capsule limb — abulic lacunar stroke (recurrent artery of Heubner from ACA)",
+        "uz": "Chap kaudat boshi va kapsula oldingi oyog'i — abulik lakunar insulti (ACA ning Heubner qaytuvchi arteriyasi)"
       },
       {
-        "en": "Left lateral medulla — PICA territory (Wallenberg syndrome)",
-        "uz": "Chap uzunchoq miyaning lateral qismi — PICA havzasi (Wallenberg sindromi)"
+        "en": "Left internal capsule genu and corona radiata — dysarthria-clumsy hand stroke (paramedian basilar perforating branches)",
+        "uz": "Chap ichki kapsula tizzasi va nursimon toj — dizartriya-no'noq qo'l insulti (bazilyar paramedian perforantlar)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In the lesion simulator (`level: 'capsule', side: 'L', zone: 'motor'`, plate B5), a small lacunar infarct in the corticospinal/corticobulbar portion of the left posterior limb of the internal capsule (lenticulostriate or anterior choroidal artery) produces equal contralateral (right) face, arm, and leg weakness without sensory, visual, or cortical deficits — Fisher's 'pure motor hemiparesis', the commonest lacunar syndrome.",
-      "uz": "Shikastlanish simulyatorida (`level: 'capsule', side: 'L', zone: 'motor'`, B5 plastinkasi) chap ichki kapsula orqa oyog'ining harakat qismidagi kichik lakunar infarkt (lentikulostriar yoki oldingi xorioidal arteriya) sezgi, ko'rish va kognitiv belgilarsiz o'ng yuz, qo'l va oyoqning teng gemiparezini — eng ko'p uchraydigan 'sof harakat lakunasi'ni beradi."
+      "en": "On axial plate B5, a small lacunar infarct in the corticospinal and corticobulbar portion of the left posterior limb of the internal capsule (supplied by lateral lenticulostriate or anterior choroidal arteries) produces equal contralateral (right) face, arm, and leg weakness without sensory, visual, or cortical deficits — Fisher's 'pure motor hemiparesis', the commonest lacunar syndrome.",
+      "uz": "B5 aksial plastinkasida chap ichki kapsula orqa oyog'ining harakat qismidagi kichik lakunar infarkt (lateral lentikulostriar yoki oldingi xorioidal arteriya) sezgi, ko'rish va kognitiv belgilarsiz o'ng yuz, qo'l va oyoqning teng gemiparezini — eng ko'p uchraydigan 'sof harakat lakunasi'ni beradi."
     },
     "refs": ["ic-pl", "cst-ic", "internal-capsule", "wm-internal-capsule-posterior-limb"],
     "plate": "bg-capsule-axial",
@@ -953,26 +953,26 @@
     },
     "options": [
       {
-        "en": "Left anterior choroidal artery (branch of the supraclinoid internal carotid artery)",
-        "uz": "Chap oldingi xorioidal arteriya (ichki uyqu arteriyasining shoxi)"
+        "en": "Left anterior choroidal artery (branch of internal carotid artery)",
+        "uz": "Chap oldingi xorioidal arteriya (ichki uyqu arteriyasi shoxi)"
       },
       {
-        "en": "Left recurrent artery of Heubner (branch of the anterior cerebral artery)",
-        "uz": "Chap Heubner qaytuvchi arteriyasi (oldingi miya arteriyasining shoxi)"
+        "en": "Left recurrent artery of Heubner (branch of anterior cerebral artery)",
+        "uz": "Chap Heubner qaytuvchi arteriyasi (oldingi miya arteriyasi shoxi)"
       },
       {
         "en": "Artery of Percheron (paramedian branch of P1 posterior cerebral artery)",
-        "uz": "Percheron arteriyasi (orqa miya arteriyasi P1 segmentining paramedian shoxi)"
+        "uz": "Percheron arteriyasi (orqa miya arteriyasi P1 paramedian shoxi)"
       },
       {
-        "en": "Left anterior inferior cerebellar artery (AICA)",
-        "uz": "Chap oldingi pastki miyacha arteriyasi (AICA)"
+        "en": "Left lateral lenticulostriate arteries (M1 middle cerebral artery)",
+        "uz": "Chap lateral lentikulostriar arteriyalar (o'rta miya arteriyasi M1)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As described on plates B3 and B5 (`ic-rl`), the anterior choroidal artery (from the internal carotid) supplies the globus pallidus internus (GPi), the ventral/retrolenticular posterior limb of the internal capsule, the optic tract and LGN, the uncus/amygdala, and the temporal horn choroid plexus. Its occlusion produces the classic Monakow triad of contralateral hemiplegia, hemianaesthesia, and homonymous hemianopia with spared cortical language function.",
-      "uz": "B3 va B5 plastinkalarida (`ic-rl`) ko'rsatilganidek, oldingi xorioidal arteriya ichki rangpar sharni (GPi), ichki kapsula orqa oyog'ining pastki va retrolentikulyar qismini hamda ko'rish trakti / LGN ni ta'minlaydi. Uning tiqilishi po'stloq belgilari (afaziya) bo'lmagan holda klassik triadani: qarama-qarshi gemiparez, gemigipesteziya va gomonim gemianopiyani beradi."
+      "en": "On plates B3 and B5, the anterior choroidal artery (arising from the supraclinoid internal carotid artery) supplies the globus pallidus internus (GPi), the ventral and retrolenticular posterior limb of the internal capsule, the optic tract and LGN, the uncus/amygdala, and the temporal horn choroid plexus. Its occlusion produces the classic Monakow triad of contralateral hemiplegia, hemianaesthesia, and homonymous hemianopia with spared cortical language function.",
+      "uz": "B3 va B5 plastinkalarida ko'rinib turganidek, oldingi xorioidal arteriya (ichki uyqu arteriyasi shoxi) ichki rangpar sharni (GPi), ichki kapsula orqa oyog'ining pastki va retrolentikulyar qismini hamda ko'rish trakti / LGN ni ta'minlaydi. Uning tiqilishi po'stloq belgilari (afaziya) bo'lmagan holda klassik triadani: qarama-qarshi gemiparez, gemigipesteziya va gomonim gemianopiyani beradi."
     },
     "refs": ["anterior-choroidal-artery", "gpi", "ic-pl", "ic-rl", "ot", "lgn"],
     "plate": "bg-pallidal",
@@ -994,20 +994,20 @@
     },
     "options": [
       {
-        "en": "(1) Sensorimotor: M1/S1/SMA → dorsolateral putamen → posteroventral GPi & dorsolateral STN → VLa thalamus; (2) Associative: DLPFC → caudate head/body → dorsomedial GPi/SNr & ventromedial STN → VA/MD thalamus; (3) Limbic: OFC/ACC/amygdala/hippocampus → nucleus accumbens → ventral pallidum & medial-tip STN → MD thalamus",
-        "uz": "(1) Sensomotor: M1/S1/SMA → dorsolateral putamen → posteroventral GPi va dorsolateral STN → VLa talamus; (2) Assotsiativ: DLPFC → kaudat boshi/tanasi → dorsomedial GPi/SNr va ventromedial STN → VA/MD talamus; (3) Limbik: OFC/ACC/amigdala/gippokamp → accumbens → ventral pallidum va STN medial uchi → MD talamus"
+        "en": "(1) Putamen → posteroventral GPi/dorsolateral STN → VLa; (2) Caudate → dorsomedial GPi/ventromedial STN → VA/MD; (3) Accumbens → VP/medial STN → MD",
+        "uz": "(1) Putamen → posteroventral GPi/dorsolateral STN → VLa; (2) Kaudat → dorsomedial GPi/ventromedial STN → VA/MD; (3) Accumbens → VP/medial STN → MD"
       },
       {
-        "en": "(1) Sensorimotor: V1 → accumbens → LGN; (2) Associative: A1 → putamen → MGN; (3) Limbic: M1 → caudate tail → VPL",
-        "uz": "(1) Sensomotor: V1 → accumbens → LGN; (2) Assotsiativ: A1 → putamen → MGN; (3) Limbik: M1 → kaudat dumi → VPL"
+        "en": "(1) Caudate → posteroventral GPi/medial STN → VA/MD; (2) Putamen → dorsomedial GPi/dorsolateral STN → VLa; (3) Accumbens → GPe/dorsal STN → VPL",
+        "uz": "(1) Kaudat → posteroventral GPi/medial STN → VA/MD; (2) Putamen → dorsomedial GPi/dorsolateral STN → VLa; (3) Accumbens → GPe/dorsal STN → VPL"
       },
       {
-        "en": "All three cortical loops converge indiscriminately onto a single homogeneous neuron population in the claustrum before projecting to the cerebellum",
-        "uz": "Uchala halqa ham klaustrumda bitta nuqtaga qo'shilib ketadi va u yerdan miyachaga yo'naladi"
+        "en": "(1) Accumbens → ventral pallidum/dorsolateral STN → VLa; (2) Putamen → posteroventral GPi/medial STN → MD; (3) Caudate → dorsomedial GPi/STN → VA",
+        "uz": "(1) Accumbens → ventral pallidum/dorsolateral STN → VLa; (2) Putamen → posteroventral GPi/medial STN → MD; (3) Kaudat → dorsomedial GPi/STN → VA"
       },
       {
-        "en": "(1) Sensorimotor runs through the anterior commissure; (2) Associative runs through the optic chiasm; (3) Limbic runs through the pyramidal decussation",
-        "uz": "(1) Sensomotor oldingi komissuradan, (2) Assotsiativ ko'rish kesishmasidan, (3) Limbik esa piramidalar kesishmasidan o'tadi"
+        "en": "(1) Putamen → ventral pallidum/medial STN → pulvinar; (2) Caudate → posteroventral GPi/dorsolateral STN → VPL; (3) Accumbens → GPi/ventral STN → VLa",
+        "uz": "(1) Putamen → ventral pallidum/medial STN → pulvinar; (2) Kaudat → posteroventral GPi/dorsolateral STN → VPL; (3) Accumbens → GPi/ventral STN → VLa"
       }
     ],
     "answer": 0,
