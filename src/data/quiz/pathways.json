@@ -10,26 +10,26 @@
     },
     "options": [
       {
-        "en": "At the pyramidal (motor) decussation in the caudal medulla (medulla–cord junction, plate U1)",
-        "uz": "Uzunchoq miyaning pastki qismidagi piramidalar (harakat) kesishmasida (U1 plastinkasi)"
+        "en": "At the pyramidal decussation in the caudal medulla (plate U1)",
+        "uz": "Uzunchoq miya pastidagi piramidalar kesishmasida (U1 plastinkasi)"
       },
       {
-        "en": "In the anterior white commissure of the spinal cord at each segmental level",
+        "en": "In the anterior white commissure at each spinal cord segment",
         "uz": "Orqa miyaning har bir segmentidagi old oq bitishmasida"
       },
       {
-        "en": "In the basis pontis via the transverse pontocerebellar fibres (plate K2)",
+        "en": "Across the basis pontis via transverse pontocerebellar fibres (plate K2)",
         "uz": "Ko'prik asosida ko'ndalang ko'prik-miyacha tolalari orqali (K2 plastinkasi)"
       },
       {
-        "en": "In the genu of the internal capsule at the foramen of Monro (plate B5)",
+        "en": "Within the internal capsule genu at the foramen of Monro (plate B5)",
         "uz": "Monro teshigi darajasida ichki kapsula tizzasida (B5 plastinkasi)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "The corticospinal tract descends uncrossed through the internal capsule, crus cerebri, basis pontis, and medullary pyramid until the caudal medulla (plate U1), where 85–90 % of fibres cross in the pyramidal decussation into the opposite lateral funiculus.",
-      "uz": "Kortikospinal yo'l ichki kapsula, miya oyoqchasi, ko'prik asosi va uzunchoq miya piramidasidan o'z tomonida tushib, uzunchoq miyaning pastki qismida (U1 plastinkasi) piramidalar kesishmasida 85–90 % tolasi qarama-qarshi lateral tizimchaga o'tadi."
+      "en": "The corticospinal tract descends uncrossed through the internal capsule, crus cerebri, basis pontis, and medullary pyramid until the caudal medulla (medulla–cord junction, plate U1), where 85–90 % of fibres cross in the pyramidal (motor) decussation into the opposite lateral funiculus.",
+      "uz": "Kortikospinal yo'l ichki kapsula, miya oyoqchasi, ko'prik asosi va uzunchoq miya piramidasidan o'z tomonida tushib, uzunchoq miyaning pastki qismida (orqa miya chegarasi, U1 plastinkasi) piramidalar harakat kesishmasida 85–90 % tolasi qarama-qarshi lateral tizimchaga o'tadi."
     },
     "refs": ["pyr-dec", "pyramid", "lcst", "bs-pyramid-of-medulla-oblongata", "wm-corticospinal-tract"],
     "plate": "medulla-pyramidal-decussation",
@@ -51,26 +51,26 @@
     },
     "options": [
       {
-        "en": "Fine discriminative touch, vibration, and conscious joint position sense (proprioception)",
-        "uz": "Nozik farqlovchi teginish, tebranish (vibratsiya) va ongli bo'g'im-mushak holati sezgisi (proprioretsepsiya)"
+        "en": "Discriminative touch, vibration, and conscious joint position sense",
+        "uz": "Nozik farqlovchi teginish, tebranish va ongli bo'g'im holati sezgisi"
       },
       {
-        "en": "Pain, temperature, and crude touch",
-        "uz": "Og'riq, harorat va dag'al teginish"
+        "en": "Nociceptive pain, thermal sensation, and poorly localized crude touch",
+        "uz": "Og'riq, harorat o'zgarishi va aniq chegaralanmagan dag'al teginish"
       },
       {
-        "en": "Unconscious muscle-spindle proprioception to the cerebellar vermis",
-        "uz": "Miyacha chuvalchangiga boruvchi ongsiz mushak urchug'i proprioretsepsiyasi"
+        "en": "Unconscious muscle-spindle proprioception ascending to the cerebellum",
+        "uz": "Miyacha chuvalchangiga ko'tariluvchi ongsiz mushak proprioretsepsiyasi"
       },
       {
-        "en": "Taste from the anterior two-thirds of the tongue",
-        "uz": "Tilning oldingi uchdan ikki qismidan ta'm bilish sezgisi"
+        "en": "Gustatory taste and visceral sensation from the anterior tongue mucosa",
+        "uz": "Tilning oldingi uchdan ikki qismidan keluvchi ta'm va visseral sezgi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Large myelinated Aβ fibres of the dorsal column–medial lemniscus pathway carry discriminative (two-point) touch, vibration, and conscious joint position sense from the body to the VPL thalamus and primary somatosensory cortex (S1).",
-      "uz": "Orqa ustun – medial lemnisk (DCML) yo'lining yo'g'on miyelinli (Aβ) tolalari nozik farqlovchi teginish, tebranish (vibratsiya) va bo'g'im holati sezgisini talamusning VPL yadrosi orqali birlamchi somatosensor po'stloqqa (S1) olib boradi."
+      "en": "Large myelinated Aβ fibres of the dorsal column–medial lemniscus pathway carry fine discriminative (two-point) touch, vibration, and conscious joint position sense (proprioception) from the body to the VPL thalamus and primary somatosensory cortex (S1).",
+      "uz": "Orqa ustun – medial lemnisk (DCML) yo'lining yo'g'on miyelinli Aβ tolalari nozik farqlovchi teginish, tebranish (vibratsiya) va ongli bo'g'im-mushak holati sezgisini (proprioretsepsiyani) talamusning VPL yadrosi orqali birlamchi somatosensor po'stloqqa (S1) olib boradi."
     },
     "refs": ["fg", "fc", "ml", "th-vpl", "wm-medial-lemniscus", "j-vpl"],
     "plate": "medulla-sensory-decussation",
@@ -87,31 +87,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "How are the two tracts of the spinal dorsal column — fasciculus gracilis and fasciculus cuneatus — arranged from medial to lateral, and which body regions do they represent?",
-      "uz": "Orqa ustunning ikki tutami — nozik tutam (fasciculus gracilis) va ponasimon tutam (fasciculus cuneatus) medialdan lateralga qanday joylashgan va tananing qaysi qismlaridan signal olib keladi?"
+      "en": "How are fasciculus gracilis and fasciculus cuneatus arranged from medial to lateral in the cervical dorsal column, and which body regions do they represent?",
+      "uz": "Bo'yin orqa ustunida nozik tutam (fasciculus gracilis) va ponasimon tutam (fasciculus cuneatus) medialdan lateralga qanday joylashgan va tananing qaysi qismlaridan signal olib keladi?"
     },
     "options": [
       {
-        "en": "Fasciculus gracilis is medial (leg and lower trunk, below T6); fasciculus cuneatus is lateral (arm and upper trunk, T6 and above)",
-        "uz": "Nozik tutam (gracilis) medialda (oyoq va tananing pastki qismi, T6 dan pastda); ponasimon tutam (cuneatus) lateralda (qo'l va tananing yuqori qismi, T6 va undan yuqorida)"
+        "en": "Gracilis sits medially (legs and lower trunk below T6); cuneatus sits laterally (arms and upper trunk from T6 up)",
+        "uz": "Nozik tutam medialda (T6 dan pastki tana va oyoqlar); ponasimon tutam lateralda (T6 dan yuqori tana va qo'llar)"
       },
       {
-        "en": "Fasciculus gracilis is lateral (face and neck); fasciculus cuneatus is medial (sacral segments)",
-        "uz": "Nozik tutam lateralda (yuz va bo'yin); ponasimon tutam medialda (dumg'aza segmentlari)"
+        "en": "Gracilis sits laterally (arms and upper trunk from T6 up); cuneatus sits medially (legs and lower trunk below T6)",
+        "uz": "Nozik tutam lateralda (T6 dan yuqori tana va qo'llar); ponasimon tutam medialda (T6 dan pastki tana va oyoqlar)"
       },
       {
-        "en": "Fasciculus gracilis carries motor fibres; fasciculus cuneatus carries pain fibres",
-        "uz": "Nozik tutam harakat tolalarini, ponasimon tutam esa og'riq tolalarini olib boradi"
+        "en": "Gracilis sits medially (bilateral visceral afferents); cuneatus sits laterally (contralateral pain and temperature)",
+        "uz": "Nozik tutam medialda (ikki tomonlama visseral sezgi); ponasimon tutam lateralda (qarama-qarshi og'riq va harorat)"
       },
       {
-        "en": "Both fasciculi cross immediately in the lumbar spinal cord",
-        "uz": "Ikkala tutam ham bel orqa miyasida darhol qarama-qarshi tomonga kesishadi"
+        "en": "Gracilis sits dorsally (sacral descending motor axons); cuneatus sits ventrally (cervical tactile afferents)",
+        "uz": "Nozik tutam dorsalda (dumg'aza harakat tolalari); ponasimon tutam ventralda (bo'yin segmentlari teginish tolalari)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "First-order dorsal column axons ascend ipsilaterally: fibres from the leg and lower trunk (below T6) enter first and sit medially as the fasciculus gracilis ('graceful legs'), while fibres from the upper trunk and arm (above T6) are added laterally as the fasciculus cuneatus.",
-      "uz": "Birinchi neyron aksonlari orqa miyada o'z tomonida kesishmasdan ko'tariladi: oyoq va pastki tanadan (T6 dan pastdan) keluvchi tolalar medialda — nozik tutamni (`fg`), T6 dan yuqorida qo'shiladigan qo'l va yuqori tana tolalari esa lateralda — ponasimon tutamni (`fc`) hosil qiladi."
+      "en": "First-order dorsal column axons ascend ipsilaterally: fibres from the leg and lower trunk (below T6) enter first and sit medially as the fasciculus gracilis, while fibres from the upper trunk and arm (T6 and above) are added laterally as the fasciculus cuneatus.",
+      "uz": "Birinchi neyron aksonlari orqa miyada o'z tomonida kesishmasdan ko'tariladi: oyoq va pastki tanadan (T6 dan pastdan) keluvchi tolalar medialda nozik tutamni, T6 va undan yuqorida qo'shiladigan qo'l hamda yuqori tana tolalari esa lateralda ponasimon tutamni hosil qiladi."
     },
     "refs": ["fg", "fc", "ng", "nc"],
     "plate": "medulla-pyramidal-decussation",
@@ -133,26 +133,26 @@
     },
     "options": [
       {
-        "en": "In the caudal medulla (plate U2, just above the pyramidal decussation), where second-order axons from the gracile and cuneate nuclei cross as the internal arcuate fibres (sensory decussation)",
-        "uz": "Uzunchoq miyaning pastki qismida (U2 plastinkasi, piramidalar kesishmasidan sal yuqorida), nozik va ponasimon yadrolardagi ikkinchi neyron aksonlari ichki yoysimon tolalar (sezgi kesishmasi) bo'lib kesishadi"
+        "en": "Caudal medulla (plate U2), where second-order axons cross as internal arcuate fibres",
+        "uz": "Kaudal medullada (U2), ikkinchi neyronlar ichki yoysimon tolalar bo'lib"
       },
       {
-        "en": "In the spinal cord within 1–2 segments of entry, where first-order dorsal root ganglion axons cross the anterior white commissure",
-        "uz": "Orqa miyaga kirgan joyidan 1–2 segment ichida, birinchi neyron aksonlari old oq bitishmada kesishadi"
+        "en": "Spinal cord dorsal horn, where first-order axons cross the anterior white commissure",
+        "uz": "Orqa miya orqa shoxida, birinchi neyron aksonlari old oq bitishma orqali kesishib"
       },
       {
-        "en": "In the midbrain tegmentum at the decussation of the superior cerebellar peduncles (plate O1)",
-        "uz": "O'rta miya tegmentumidagi yuqori miyacha oyoqchalari kesishmasida (O1 plastinkasi)"
+        "en": "Caudal midbrain tegmentum (plate O1), where second-order axons cross in the SCP decussation",
+        "uz": "Kaudal o'rta miya tegmentumida (O1), ikkinchi neyron tolalari SCP kesishmasida"
       },
       {
-        "en": "In the corpus callosum after synapsing in the VPL thalamus",
-        "uz": "Talamusning VPL yadrosida sinaps hosil qilgandan so'ng qadoqsimon tanada"
+        "en": "Caudal pons (plate K1), where third-order axons cross midline within the trapezoid body",
+        "uz": "Kaudal ko'prikda (K1), uchinchi neyron aksonlari trapetsiyasimon tana ichida"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "First-order dorsal column axons ascend uncrossed to the caudal medulla (plate U2) and synapse on second-order neurons in the nucleus gracilis and nucleus cuneatus. Their axons sweep ventromedially as the internal arcuate fibres (`ia`), cross the midline in the sensory decussation, and ascend as the contralateral medial lemniscus (`ml`).",
-      "uz": "Birinchi neyron aksonlari kesishmasdan uzunchoq miya pastigacha (U2 plastinkasi) chiqib, nozik (`ng`) va ponasimon (`nc`) yadrolardagi ikkinchi neyronda tugaydi. Ikkinchi neyron aksonlari ichki yoysimon tolalar (`ia`) bo'lib o'rta chiziqni kesib o'tadi (sezgi kesishmasi) va qarama-qarshi tomonda medial lemnisk (`ml`) bo'lib ko'tariladi."
+      "en": "First-order dorsal column axons ascend uncrossed to the caudal medulla (plate U2, just above the pyramidal decussation) and synapse on second-order neurons in the nucleus gracilis and nucleus cuneatus. Their axons sweep ventromedially as the internal arcuate fibres, cross the midline in the sensory decussation, and ascend as the contralateral medial lemniscus.",
+      "uz": "Birinchi neyron aksonlari kesishmasdan uzunchoq miya pastigacha (U2 plastinkasi, piramidalar kesishmasidan sal yuqoriga) chiqib, nozik va ponasimon yadrolardagi ikkinchi neyronda tugaydi. Ikkinchi neyron aksonlari ichki yoysimon tolalar bo'lib o'rta chiziqni kesib o'tadi (sezgi kesishmasi) va qarama-qarshi tomonda medial lemnisk bo'lib ko'tariladi."
     },
     "refs": ["ng", "nc", "ia", "ml", "wm-medial-lemniscus"],
     "plate": "medulla-sensory-decussation",
@@ -174,26 +174,26 @@
     },
     "options": [
       {
-        "en": "Pain, temperature, and crude touch; second-order axons cross immediately in the anterior white commissure of the spinal cord (within 1–2 segments of entry)",
-        "uz": "Og'riq, harorat va dag'al teginish; ikkinchi neyron aksonlari orqa miyaga kirgan joyidan 1–2 segment ichida old oq bitishmada darhol kesishadi"
+        "en": "Pain, temperature, and crude touch; second-order axons cross in the spinal anterior white commissure",
+        "uz": "Og'riq, harorat va dag'al teginish; ikkinchi neyron aksonlari orqa miya old oq bitishmasida kesishadi"
       },
       {
-        "en": "Vibration and joint position sense; fibres cross in the caudal medulla as internal arcuate fibres",
-        "uz": "Tebranish va bo'g'im holati; tolalari uzunchoq miyada ichki yoysimon tolalar bo'lib kesishadi"
+        "en": "Vibration and joint position sense; second-order axons cross in the caudal medulla as arcuate fibres",
+        "uz": "Tebranish va bo'g'im holati sezgisi; ikkinchi neyron aksonlari uzunchoq miyada yoysimon tolalar bo'lib kesishadi"
       },
       {
-        "en": "Voluntary motor commands; fibres cross at the pyramidal decussation",
-        "uz": "Ixtiyoriy harakat buyruqlari; tolalari piramidalar kesishmasida kesishadi"
+        "en": "Facial pain and thermal sensation; second-order axons cross in the caudal pons via the trapezoid body",
+        "uz": "Yuz og'rig'i va harorat sezgisi; ikkinchi neyron tolalari kaudal ko'prikda trapetsiyasimon tanada kesishadi"
       },
       {
-        "en": "Facial discriminative touch; fibres cross in the mid-pons",
-        "uz": "Yuzning nozik teginish sezgisi; tolalari o'rta ko'prikda kesishadi"
+        "en": "Unconscious limb proprioception; second-order axons cross twice to reach the ipsilateral cerebellum",
+        "uz": "Ongsiz oyoq-qo'l proprioretsepsiyasi; ikkinchi neyron tolalari miyachaga borishda ikki marta kesishadi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Thin Aδ and C primary afferents for pain and temperature synapse in the dorsal horn (laminae I, II, V); the second-order neuron's axon crosses within 1–2 spinal segments through the anterior white commissure and ascends in the contralateral anterolateral column and lateral brainstem to VPL.",
-      "uz": "Birinchi neyronning ingichka Aδ va C tolalari orqa miya orqa shoxida (I, II, V plastinkalar) tugaydi; ikkinchi neyron aksoni darhol (1–2 segment ichida) old oq bitishmada qarama-qarshi tomonga kesishib, anterolateral ustun va miya ustunining lateral qismi bo'ylab VPL talamusga ko'tariladi ('Og'riq darhol kesishadi, teginish uzunchoq miyagacha kutadi')."
+      "en": "Thin Aδ and C primary afferents for pain, temperature, and crude touch synapse in the dorsal horn (laminae I, II, V); the second-order neuron's axon crosses within 1–2 spinal segments through the anterior white commissure and ascends in the contralateral anterolateral column and lateral brainstem to VPL thalamus.",
+      "uz": "Birinchi neyronning ingichka Aδ va C tolalari orqa miya orqa shoxida (I, II, V plastinkalar) tugaydi; ikkinchi neyron aksoni kirgan joyidan 1–2 segment ichida old oq bitishmada qarama-qarshi tomonga kesishib, anterolateral ustun va miya ustunining lateral qismi bo'ylab VPL talamusga ko'tariladi."
     },
     "refs": ["als", "th-vpl", "j-vpl"],
     "plate": "medulla-olive",
@@ -210,31 +210,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "Which pathway carries pain and temperature sensation from the FACE, and what unusual route do its primary afferent fibres take after entering the lateral pons?",
-      "uz": "YUZNING og'riq va harorat sezgisini qaysi yo'l olib boradi va uning birinchi neyron tolalari ko'prikning lateral qismiga kirgach qanday o'ziga xos yo'nalishda harakatlanadi?"
+      "en": "Which pathway carries pain and temperature sensation from the face, and what unusual route do its primary afferent fibres take after entering the lateral pons?",
+      "uz": "Yuzning og'riq va harorat sezgisini qaysi yo'l olib boradi va uning birinchi neyron tolalari ko'prikning lateral qismiga kirgach qanday o'ziga xos yo'nalishda harakatlanadi?"
     },
     "options": [
       {
-        "en": "Trigeminothalamic pathway: primary afferents from the trigeminal ganglion enter the mid-pons (plate K2) and turn DOWN in the spinal trigeminal tract (`sp5t`) to the caudal medulla/upper cervical cord (`sp5n` pars caudalis) before synapsing and crossing to the opposite VPM thalamus",
-        "uz": "Trigeminotalamik yo'l: uch shoxli nerv tugunidan kelgan birinchi neyron tolalari o'rta ko'prikka (K2 plastinkasi) kirib, spinal trigeminal trakt (`sp5t`) bo'ylab uzunchoq miya pastigacha (`sp5n` kaudal qism) PASTGA tushadi, so'ng ikkinchi neyronga o'tib kesishadi va qarama-qarshi VPM talamusga ko'tariladi"
+        "en": "Trigeminothalamic pathway: afferents descend in the spinal trigeminal tract to the caudal medulla before synapsing and crossing to VPM",
+        "uz": "Trigeminotalamik yo'l: tolalar spinal trigeminal traktda kaudal medullaga tushib, sinapsdan keyin VPM ga kesishadi"
       },
       {
-        "en": "Dorsal column pathway: fibres enter the sacral cord and ascend in the fasciculus gracilis to VPL",
-        "uz": "Orqa ustun yo'li: tolalar dumg'aza segmentidan kirib, nozik tutam bo'ylab VPL ga ko'tariladi"
+        "en": "Dorsal column–medial lemniscus: afferents ascend ipsilaterally in the fasciculus cuneatus to the cuneate nucleus before crossing to VPL",
+        "uz": "Orqa ustun – medial lemnisk: tolalar ponasimon tutam bo'ylab o'z tomonida ko'tarilib, ponasimon yadrodan VPL ga kesishadi"
       },
       {
-        "en": "Facial nerve (CN VII) pathway: fibres enter at the cerebellopontine angle and ascend uncrossed to the motor cortex",
-        "uz": "Yuz nervi (VII) yo'li: tolalar ko'prik-miyacha burchagidan kirib, kesishmasdan harakat po'stlog'iga chiqadi"
+        "en": "Ventral spinothalamic pathway: afferents synapse immediately in the mid-pontine principal nucleus and ascend uncrossed to the VPM thalamus",
+        "uz": "Ventral spinotalamik yo'l: tolalar o'rta ko'prikdagi asosiy yadroda darhol tugab, kesishmasdan VPM talamusga ko'tariladi"
       },
       {
-        "en": "Optic radiation: fibres pass through the lateral geniculate body to the calcarine sulcus",
-        "uz": "Ko'rish radiatsiyasi: tolalar lateral tizzasimon tana orqali kalkarin egatga boradi"
+        "en": "Solitariothalamic pathway: afferents descend through the solitary tract to the caudal medulla before ascending bilaterally to the VPM thalamus",
+        "uz": "Solitariotalamik yo'l: tolalar yolg'iz yo'l trakti bo'ylab kaudal medullaga tushib, ikki tomonlama VPM talamusga chiqadi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "First-order neurons in the trigeminal (Gasserian) ganglion enter the lateral pons (`n5-root`, plate K2). While touch fibres synapse at once in the principal sensory nucleus (`pr5`), pain and temperature fibres turn caudally in the spinal trigeminal tract (`sp5t`) down to the caudal medulla (`sp5n` pars caudalis, plates U3–U1), synapse, cross the midline, and ascend as the ventral trigeminothalamic tract (`tl`) to VPM.",
-      "uz": "Uch shoxli nerv (Gasser) tugunidagi birinchi neyron tolalari ko'prikning yon qismidan (`n5-root`, K2) kiradi: teginish tolalari shu yerda asosiy yadroda (`pr5`) tugasa, yuzning og'riq va harorat tolalari spinal trigeminal trakt (`sp5t`) bo'ylab uzunchoq miya pastigacha (U3–U1) PASTGA tushadi, kaudal yadroda (`sp5n`) ikkinchi neyronga uzatilib o'rta chiziqni kesadi va qarama-qarshi VPM talamusga ko'tariladi."
+      "en": "First-order neurons in the trigeminal (Gasserian) ganglion enter the lateral mid-pons (plate K2). While discriminative touch fibres synapse at once in the principal sensory nucleus, pain and temperature fibres turn caudally in the spinal trigeminal tract down to the caudal medulla and upper cervical cord (spinal trigeminal nucleus pars caudalis, plates U3–U1), synapse, cross the midline, and ascend as the ventral trigeminothalamic tract to VPM thalamus.",
+      "uz": "Uch shoxli nerv (Gasser) tugunidagi birinchi neyron tolalari o'rta ko'prikning yon qismidan (K2 plastinkasi) kiradi: teginish tolalari shu yerda asosiy sezuvchi yadroda tugasa, yuzning og'riq va harorat tolalari spinal trigeminal trakt bo'ylab uzunchoq miya pastigacha (U3–U1) pastga tushadi, spinal trigeminal yadroning kaudal qismida ikkinchi neyronga uzatilib o'rta chiziqni kesadi va qarama-qarshi VPM talamusga ko'tariladi."
     },
     "refs": ["n5-root", "sp5t", "sp5n", "tl", "th-vpm", "trunk-of-right-trigeminal-nerve", "j-vpm"],
     "plate": "pons-trigeminal",
@@ -256,25 +256,25 @@
     },
     "options": [
       {
-        "en": "Leg and foot sit on the medial surface (supplied by the anterior cerebral artery, ACA); trunk, arm, hand, and face hang down the lateral convexity (supplied by the middle cerebral artery, MCA)",
-        "uz": "Oyoq va tovon yarim sharning medial yuzasida (oldingi miya arteriyasi — ACA ta'minlaydi); tana, qo'l, kaft va yuz esa lateral qavariq yuzada pastga qarab joylashgan (o'rta miya arteriyasi — MCA ta'minlaydi)"
+        "en": "Leg and foot sit medially (ACA territory); trunk, arm, hand, and face lie on the lateral convexity (MCA territory)",
+        "uz": "Oyoq va tovon medial yuzada (ACA havzasi); tana, qo'l, kaft va yuz lateral qavariq yuzada (MCA havzasi)"
       },
       {
-        "en": "Face sits on the medial surface (supplied by the ACA); leg and foot sit at the inferior lateral fissure (supplied by the MCA)",
-        "uz": "Yuz medial yuzada (ACA ta'minlaydi); oyoq va tovon esa pastki lateral egat yonida (MCA ta'minlaydi)"
+        "en": "Face and hand sit medially (ACA territory); trunk, leg, and foot lie along the inferior lateral fissure (MCA territory)",
+        "uz": "Yuz va kaft medial yuzada (ACA havzasi); tana, oyoq va tovon pastki lateral egat bo'ylab (MCA havzasi)"
       },
       {
-        "en": "The entire homunculus lies inside the occipital lobe and is supplied by the posterior cerebral artery (PCA)",
-        "uz": "Butun gomunkulus ensa bo'lagida joylashgan bo'lib, orqa miya arteriyasi (PCA) tomonidan ta'minlanadi"
+        "en": "Leg and trunk sit in the occipital pole (PCA territory); arm and face lie on the medial paracentral lobule (ACA territory)",
+        "uz": "Oyoq va tana ensa qutbida (PCA havzasi); qo'l va yuz medial paratsentral bo'lakchada (ACA havzasi)"
       },
       {
-        "en": "Both motor and sensory strips represent the ipsilateral side of the body",
-        "uz": "Harakat va sezgi pushtalari tananing o'sha (ipsilateral) tomonini boshqaradi"
+        "en": "Ipsilateral leg sits medially (MCA territory); ipsilateral arm and face lie along the superior temporal gyrus (PCA territory)",
+        "uz": "O'sha tomon oyog'i medialda (MCA havzasi); o'sha tomon qo'li va yuzi yuqori chakka pushtasida (PCA havzasi)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Along both the precentral (M1) and postcentral (S1) gyri, the contralateral body is mapped upside down: the foot and leg hang over into the medial paracentral lobule (ACA territory — an ACA stroke causes contralateral leg-predominant weakness/sensory loss), while the arm, hand (the precentral omega 'knob', Yousry 1997), and face lie on the lateral convexity (MCA territory).",
+      "en": "Along both the precentral (M1) and postcentral (S1) gyri, the contralateral body is mapped upside down: the foot and leg hang over into the medial paracentral lobule (ACA territory — an ACA stroke causes contralateral leg-predominant weakness and sensory loss), while the arm, hand (the precentral omega knob, Yousry 1997), and face lie on the lateral convexity (MCA territory).",
       "uz": "Oldingi (M1) va orqa (S1) markaziy pushtalarda qarama-qarshi tana teskari tartibda joylashgan: oyoq medial yuzada (ACA havzasi — ACA insultida qarama-qarshi oyoq falajlanadi), qo'l, kaft (oldingi markaziy pushtadagi teskari omega bo'rtig'i — Yousry 1997) va yuz esa lateral qavariq yuzada (MCA havzasi — MCA insultida yuz va qo'l zaiflashadi)."
     },
     "refs": ["precentral-gyrus", "postcentral-gyrus", "j-area-4p", "j-area-4a", "j-area-3b", "anterior-cerebral-artery", "trunk-of-right-middle-cerebral-artery"],
@@ -291,31 +291,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "Which clinical signs distinguish an upper motor neuron (UMN, corticospinal) lesion from a lower motor neuron (LMN, anterior horn / ventral root) lesion?",
-      "uz": "Yuqori motoneyron (kortikospinal yo'l) zararlanishini pastki motoneyron (orqa miya oldingi shoxi / old ildiz) zararlanishidan qaysi klinik belgilar ajratib turadi?"
+      "en": "Which clinical signs distinguish an upper motor neuron (UMN, corticospinal) lesion from a lower motor neuron (LMN, anterior horn or ventral root) lesion?",
+      "uz": "Yuqori motoneyron (kortikospinal yo'l) zararlanishini pastki motoneyron (orqa miya oldingi shoxi yoki old ildiz) zararlanishidan qaysi klinik belgilar ajratib turadi?"
     },
     "options": [
       {
-        "en": "UMN lesion: spasticity, hyperreflexia (brisk deep tendon reflexes), extensor plantar response (Babinski sign), and minimal early atrophy; LMN lesion: flaccidity, areflexia, marked muscle wasting (atrophy), and fasciculations",
-        "uz": "Yuqori motoneyron zararlanishi: spastiklik, reflekslar oshishi (giperrefleksiya), musbat Babinski belgisi va kam atrofiya; Pastki motoneyron zararlanishi: sust (flaksid) falaj, reflekslar yo'qolishi, yaqqol mushak atrofiyasi va fassikulyatsiyalar"
+        "en": "UMN: spasticity, hyperreflexia, and Babinski sign; LMN: flaccidity, areflexia, marked atrophy, and fasciculations",
+        "uz": "Yuqori motoneyron: spastiklik, giperrefleksiya va Babinski belgisi; pastki: sust falaj, arefleksiya, atrofiya va fassikulyatsiya"
       },
       {
-        "en": "UMN lesion: flaccid paralysis, absent reflexes, and fasciculations; LMN lesion: spasticity and Babinski sign",
-        "uz": "Yuqori motoneyronda sust falaj, reflekslar yo'qligi va fassikulyatsiyalar; pastki motoneyronda esa spastiklik va Babinski belgisi"
+        "en": "UMN: flaccid paralysis, areflexia, and fasciculations; LMN: spasticity, brisk reflexes, and extensor plantar sign",
+        "uz": "Yuqori motoneyron: sust falaj, arefleksiya va fassikulyatsiya; pastki: spastiklik, giperrefleksiya va Babinski belgisi"
       },
       {
-        "en": "Both UMN and LMN lesions produce identical resting pill-rolling tremor and cogwheel rigidity",
-        "uz": "Ikkala holat ham tinch holat tremori va 'tishli g'ildirak' rigidligini beradi"
+        "en": "UMN: cogwheel rigidity, bradykinesia, and resting tremor; LMN: intention tremor, dysmetria, and hypotonic gait",
+        "uz": "Yuqori motoneyron: tishli g'ildirak rigidligi, bradikineziya va tinch tremor; pastki: intension tremor, dismetriya va gipotoniya"
       },
       {
-        "en": "UMN lesions cause only sensory loss, whereas LMN lesions cause only visual loss",
-        "uz": "Yuqori motoneyron faqat sezgi yo'qolishini, pastki motoneyron esa faqat ko'rish yo'qolishini beradi"
+        "en": "UMN: distal stocking-glove sensory loss with normal tone; LMN: pure proximal weakness with hyperactive reflexes",
+        "uz": "Yuqori motoneyron: normal tonusda distal sezgi yo'qolishi; pastki: oshgan reflekslar bilan sof proksimal mushak zaifligi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Damage to the first neuron (UMN: M1 → capsule → brainstem → lateral CST) releases spinal stretch reflexes, producing spastic tone, brisk tendon reflexes, and a Babinski sign. Damage to the second neuron (LMN: anterior horn α-motor neuron or cranial motor nucleus/nerve) denervates muscle directly, causing flaccid weakness, lost reflexes, rapid atrophy, and fasciculations.",
-      "uz": "Birinchi neyron (yuqori motoneyron: po'stloqdan lateral CST gacha) zararlansa spastiklik, pay reflekslarining oshishi va musbat Babinski belgisi kuzatiladi; ikkinchi neyron (pastki motoneyron: oldingi shox yoki kalla nervi harakat yadrosi/tolasi) zararlansa sust (flaksid) falaj, arefleksiya, mushak atrofiyasi va fassikulyatsiyalar paydo bo'ladi."
+      "en": "Damage to the first neuron (UMN: M1 → internal capsule → brainstem → lateral CST) releases spinal stretch reflexes, producing spastic tone, brisk tendon reflexes, a Babinski sign, and minimal early atrophy. Damage to the second neuron (LMN: anterior horn α-motor neuron or cranial motor nucleus/nerve) denervates muscle directly, causing flaccid weakness, lost reflexes, rapid atrophy, and fasciculations.",
+      "uz": "Birinchi neyron (yuqori motoneyron: po'stloqdan lateral CST gacha) zararlansa spastiklik, pay reflekslarining oshishi, musbat Babinski belgisi va kam atrofiya kuzatiladi; ikkinchi neyron (pastki motoneyron: oldingi shox yoki kalla nervi harakat yadrosi/tolasi) zararlansa sust (flaksid) falaj, arefleksiya, yaqqol mushak atrofiyasi va fassikulyatsiyalar paydo bo'ladi."
     },
     "refs": ["lcst", "pyramid", "precentral-gyrus", "wm-corticospinal-tract"],
     "plate": "medulla-pyramidal-decussation",
@@ -332,30 +332,30 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "Regarding the corticospinal tract, why does a unilateral lesion in the cerebral hemisphere or brainstem paralyse the OPPOSITE (contralateral) side of the body, whereas a unilateral lesion in the cervical or thoracic spinal cord paralyses the SAME (ipsilateral) side?",
-      "uz": "Nima uchun yarim sharlarda yoki miya ustunidagi bir tomonlama o'choq tananing QARAMA-QARSHI tomonini falaj qiladi, orqa miyadagi bir tomonlama o'choq esa O'SHA tomonni falaj qiladi?"
+      "en": "Regarding the corticospinal tract, why does a unilateral lesion in the cerebral hemisphere or brainstem paralyse the contralateral side of the body, whereas a unilateral lesion in the cervical or thoracic spinal cord paralyses the ipsilateral side?",
+      "uz": "Nima uchun yarim sharlarda yoki miya ustunidagi bir tomonlama o'choq tananing qarama-qarshi tomonini falaj qiladi, orqa miyadagi bir tomonlama o'choq esa o'sha tomonni falaj qiladi?"
     },
     "options": [
       {
-        "en": "Because the corticospinal fibres cross the midline at the pyramidal decussation (caudal medulla, U1): above the decussation they are on the hemisphere's side; below it (in the spinal cord) they have already crossed to the body's side",
-        "uz": "Chunki kortikospinal tolalar uzunchoq miyaning eng pastida (piramidalar kesishmasi, U1) o'rta chiziqni kesib o'tadi: kesishmadan yuqorida o'choq qarama-qarshi tomonni, kesishmadan pastda (orqa miyada) esa o'sha tomonni falaj qiladi"
+        "en": "Corticospinal fibres decussate in the caudal medulla (plate U1), so lesions above U1 are contralateral and lesions below U1 are ipsilateral",
+        "uz": "Kortikospinal tolalar kaudal medullada (U1) kesishadi: U1 dan yuqori o'choq qarama-qarshi, pastki o'choq o'sha tomonni falajlaydi"
       },
       {
-        "en": "Because the spinal cord motor neurons cross back to the opposite side in the ventral root",
-        "uz": "Chunki orqa miya motoneyronlari old ildizda yana qarama-qarshi tomonga qaytib o'tadi"
+        "en": "Corticospinal fibres cross in the basis pontis and then recross at the cervicomedullary junction before entering the anterior horn",
+        "uz": "Kortikospinal tolalar ko'prik asosida kesishib, so'ngra bo'yin-medulla chegarasida yana o'z tomoniga qaytib o'tadi"
       },
       {
-        "en": "Because the corticospinal tract crosses in the corpus callosum and then crosses a second time in the internal capsule",
-        "uz": "Chunki kortikospinal trakt avval qadoqsimon tanada, keyin ichki kapsulada ikkinchi marta kesishadi"
+        "en": "Spinal anterior horn motor neurons send axons across the anterior white commissure to exit through the contralateral ventral root",
+        "uz": "Orqa miya oldingi shox motoneyronlari old oq bitishmadan kesib o'tib, qarama-qarshi old ildiz orqali mushakka chiqadi"
       },
       {
-        "en": "Because the brainstem contains only sensory pathways and no motor fibres",
-        "uz": "Chunki miya ustunida harakat tolalari bo'lmaydi, faqat sezgi yo'llari o'tadi"
+        "en": "Corticospinal fibres descend uncrossed through the brainstem and cross segmentally inside the ipsilateral dorsal root ganglion",
+        "uz": "Kortikospinal tolalar miya ustunidan kesishmay tushib, har bir segmentda orqa ildiz tuguni ichida kesishadi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "From M1 through the internal capsule, crus cerebri, basis pontis, and medullary pyramid, the corticospinal fibres travel on the side of their hemisphere of origin, so a lesion above the pyramidal decussation weakens the contralateral body. At the medulla–cord junction (U1) they decussate into the opposite lateral funiculus, so any spinal cord lesion below U1 weakens the ipsilateral body.",
+      "en": "From M1 through the internal capsule, crus cerebri, basis pontis, and medullary pyramid, the corticospinal fibres travel on the side of their hemisphere of origin, so a lesion above the pyramidal decussation weakens the contralateral body. At the medulla–cord junction (plate U1) they decussate into the opposite lateral funiculus, so any spinal cord lesion below U1 weakens the ipsilateral body.",
       "uz": "Harakat po'stlog'idan (M1) ichki kapsula, miya oyoqchasi, ko'prik asosi va uzunchoq miya piramidasigacha tolalar o'z yarim shari tomonida tushadi va U1 darajasida (piramidalar kesishmasi) qarama-qarshi tomonga o'tadi. Shuning uchun kesishmadan yuqoridagi o'choq qarama-qarshi tomonni, orqa miyadagi o'choq esa o'sha tomonni falaj qiladi."
     },
     "refs": ["pyr-dec", "pyramid", "lcst", "bs-pyramid-of-medulla-oblongata"],
@@ -373,31 +373,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "How do you clinically distinguish a CENTRAL (supranuclear, corticobulbar) facial palsy from a PERIPHERAL (CN VII nucleus or nerve root) facial palsy?",
-      "uz": "Yuzning MARKAZIY (kortikobulbar) falajini PERIFERIK (VII nerv yadrosi yoki ildizi) falajidan klinik ko'rikda qanday farqlash mumkin?"
+      "en": "How do you clinically distinguish a central (supranuclear, corticobulbar) facial palsy from a peripheral (CN VII nucleus or nerve root) facial palsy?",
+      "uz": "Yuzning markaziy (kortikobulbar) falajini periferik (VII nerv yadrosi yoki ildizi) falajidan klinik ko'rikda qanday farqlash mumkin?"
     },
     "options": [
       {
-        "en": "A central (corticobulbar) lesion paralyses only the contralateral LOWER face while sparing the forehead (upper-face motor neurons receive bilateral cortical input); a peripheral (CN VII) lesion paralyses the entire ipsilateral half of the face, forehead included",
-        "uz": "Markaziy (kortikobulbar) zararlanishda faqat qarama-qarshi tomonda yuzning PASTKI yarmi falajlanib, peshona saqlanib qoladi (yuqori yuz ikkala yarim shardan tola oladi); periferik (VII nerv) zararlanishda esa o'sha tomonda yuzning butun yarmi (peshona bilan birga) falajlanadi"
+        "en": "Central: weakens only the contralateral lower face (sparing the forehead); peripheral: paralyses the entire ipsilateral hemiface",
+        "uz": "Markaziy: qarama-qarshi yuzning faqat pastki yarmi zaiflashadi (peshona saqlanadi); periferik: o'sha tomon yuzi to'liq falajlanadi"
       },
       {
-        "en": "A central lesion paralyses only the forehead while sparing the mouth; a peripheral lesion paralyses both sides of the face",
-        "uz": "Markaziy zararlanishda faqat peshona falajlanib og'iz saqlanadi; periferik zararlanishda esa yuzning ikkala tomoni falajlanadi"
+        "en": "Central: weakens only the contralateral forehead (sparing the mouth); peripheral: paralyses the lower half of both sides of the face",
+        "uz": "Markaziy: qarama-qarshi peshona zaiflashib og'iz saqlanadi; periferik: yuzning ikkala tomonida faqat pastki qism falajlanadi"
       },
       {
-        "en": "A central lesion causes loss of facial pain sensation, whereas a peripheral VII lesion causes tongue deviation",
-        "uz": "Markaziy zararlanish yuzda og'riq sezgisini yo'qotadi, periferik VII falaji esa til og'ishini beradi"
+        "en": "Central: weakens the entire ipsilateral hemiface including the forehead; peripheral: weakens only the contralateral perioral muscles",
+        "uz": "Markaziy: o'sha tomonda peshona bilan butun yuz falajlanadi; periferik: faqat qarama-qarshi og'iz atrofi mushaklari zaiflashadi"
       },
       {
-        "en": "There is no clinical difference between central and peripheral facial palsy",
-        "uz": "Markaziy va periferik yuz falaji orasida klinik farq yo'q"
+        "en": "Central: impairs facial pain sensation with preserved facial movement; peripheral: causes bilateral ptosis with preserved eye closure",
+        "uz": "Markaziy: yuz harakati saqlanib og'riq sezgisi yo'qoladi; periferik: ko'z yumilishi saqlanib ikki tomonlama ptoz yuz beradi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In the facial motor nucleus (`n7`, plate K1), neurons supplying the upper face (frontalis, orbicularis oculi) receive bilateral corticobulbar input, whereas neurons supplying the lower face receive only contralateral input. Therefore, a supranuclear lesion (motor cortex, internal capsule genu, or crus cerebri) weakens only the contralateral lower face, whereas a nuclear/infranuclear CN VII lesion paralyses the entire ipsilateral hemiface.",
-      "uz": "Yuz nervi harakat yadrosining (`n7`, K1 plastinkasi) peshona va ko'z atrofini boshqaruvchi yuqori qismi ikkala yarim shardan, og'iz atrofini boshqaruvchi pastki qismi esa faqat qarama-qarshi yarim shardan kortikobulbar tola oladi. Shu bois markaziy (po'stloq, ichki kapsula, oyoqcha) o'choqda qarama-qarshi yuzning faqat pastki qismi, yadro yoki ildiz (VII) o'chog'ida esa o'sha tomonda butun yuz (peshona ham) falajlanadi."
+      "en": "In the facial motor nucleus (plate K1), neurons supplying the upper face (frontalis, orbicularis oculi) receive bilateral corticobulbar input, whereas neurons supplying the lower face receive only contralateral input. Therefore, a supranuclear lesion (motor cortex, internal capsule genu, or crus cerebri) weakens only the contralateral lower face, whereas a nuclear or infranuclear CN VII lesion paralyses the entire ipsilateral hemiface including the forehead.",
+      "uz": "Yuz nervi harakat yadrosining (K1 plastinkasi) peshona va ko'z atrofini boshqaruvchi yuqori qismi ikkala yarim shardan, og'iz atrofini boshqaruvchi pastki qismi esa faqat qarama-qarshi yarim shardan kortikobulbar tola oladi. Shu bois markaziy (po'stloq, ichki kapsula, oyoqcha) o'choqda qarama-qarshi yuzning faqat pastki qismi, yadro yoki ildiz (CN VII) o'chog'ida esa o'sha tomonda butun yuz (peshona ham) falajlanadi."
     },
     "refs": ["n7", "n7-root", "n7-genu", "ic-g", "crus-cst", "trunk-of-left-facial-nerve"],
     "plate": "pons-facial-colliculus",
@@ -414,31 +414,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "Why does a lateral medullary (Wallenberg) infarct (plate U3) produce 'crossed' pain and temperature loss — ipsilateral on the FACE and contralateral on the BODY — while completely sparing fine touch, vibration, and joint position sense?",
-      "uz": "Nima sababdan lateral uzunchoq miya (Wallenberg) infarkti (U3 plastinkasi) og'riq va harorat sezgisini YUZDA o'sha tomonda, TANADA esa qarama-qarshi tomonda yo'qotadi ('kesishgan sezgi buzilishi'), biroq nozik teginish, tebranish va holat sezgisini butunlay saqlab qoladi?"
+      "en": "Why does a lateral medullary (Wallenberg) infarct (plate U3) produce crossed pain and temperature loss — ipsilateral on the face and contralateral on the body — while sparing fine touch, vibration, and joint position sense?",
+      "uz": "Nima sababdan lateral uzunchoq miya (Wallenberg) infarkti (U3 plastinkasi) og'riq va harorat sezgisini yuzda o'sha tomonda, tanada esa qarama-qarshi tomonda yo'qotadi (kesishgan sezgi buzilishi), biroq nozik teginish, tebranish va holat sezgisini saqlab qoladi?"
     },
     "options": [
       {
-        "en": "In the lateral medulla (PICA territory), the uncrossed descending spinal trigeminal tract/nucleus (`sp5t`/`sp5n`, ipsilateral face pain) runs right beside the already-crossed ascending spinothalamic tract (`als`, contralateral body pain), while the medial lemniscus (`ml`, touch/proprioception) and pyramid sit medially in the anterior spinal artery territory",
-        "uz": "Lateral uzunchoq miyada (PICA havzasi) hali kesishmagan tushuvchi spinal trigeminal trakt (`sp5t`/`sp5n` — o'sha tomon yuz og'rig'i) va orqa miyada allaqachon kesishgan spinotalamik trakt (`als` — qarama-qarshi tana og'rig'i) yonma-yon yotadi; teginish/holatni eltuvchi medial lemnisk (`ml`) va piramida esa o'rta chiziqda (oldingi orqa miya arteriyasi havzasida) saqlanib qoladi"
+        "en": "Lateral medulla holds uncrossed spinal trigeminal and crossed spinothalamic tracts; the medial lemniscus lies medially in ASA territory",
+        "uz": "Lateral medullada kesishmagan spinal trigeminal va kesishgan spinotalamik trakt yotadi; medial lemnisk esa medialda saqlanadi"
       },
       {
-        "en": "Because the medial lemniscus carries pain from the face and the pyramid carries pain from the body",
-        "uz": "Chunki medial lemnisk yuz og'rig'ini, piramida esa tana og'rig'ini tashiydi"
+        "en": "Lateral medulla holds crossed medial lemniscus and uncrossed corticospinal tracts; pain fibres lie paramedially near the hypoglossal root",
+        "uz": "Lateral medullada kesishgan medial lemnisk va kortikospinal trakt yotadi; og'riq tolalari esa til osti ildizi yonida o'tadi"
       },
       {
-        "en": "Because both the spinothalamic and trigeminothalamic tracts cross in the corpus callosum",
-        "uz": "Chunki spinotalamik va trigeminotalamik traktlar qadoqsimon tanada kesishadi"
+        "en": "PICA occlusion destroys the contralateral VPL and ipsilateral VPM nuclei while sparing dorsal column fibres entering the cuneate nucleus",
+        "uz": "PICA tiqilishi qarama-qarshi VPL va o'sha tomon VPM yadrolarini zararlab, ponasimon yadroga kiruvchi tolalarni saqlab qoladi"
       },
       {
-        "en": "Because Wallenberg syndrome is a lesion of the VPL and VPM nuclei of the thalamus",
-        "uz": "Chunki Wallenberg sindromi talamusning VPL va VPM yadrolari zararlanishidir"
+        "en": "Lateral medulla contains uncrossed spinothalamic and crossed trigeminothalamic tracts; touch fibres ascend dorsally in the solitary tract",
+        "uz": "Lateral medullada kesishmagan spinotalamik va kesishgan trigeminotalamik trakt yotadi; teginish esa yolg'iz yo'lda ko'tariladi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "On plate U3 (`medulla-olive`), the lateral wedge supplied by PICA/vertebral artery contains both the descending uncrossed spinal V tract/nucleus (`sp5t`/`sp5n`, carrying pain/temperature from the ipsilateral face) and the ascending already-crossed spinothalamic tract (`als`, carrying pain/temperature from the contralateral body). The medial lemniscus (`ml`) and pyramid (`pyramid`) lie paramedian in the anterior spinal artery territory and are spared.",
-      "uz": "U3 plastinkasida PICA ta'minlaydigan lateral sohada ikki og'riq yo'li yonma-yon joylashgan: hali kesishmagan tushuvchi spinal trigeminal trakt (`sp5t`/`sp5n` — o'sha tomon yuzi) hamda orqa miyada allaqachon kesishgan ko'tariluvchi spinotalamik trakt (`als` — qarama-qarshi tana). Medial lemnisk (`ml`) va piramida esa paramedian sohada bo'lgani uchun zararlanmaydi."
+      "en": "On plate U3 (mid-olivary open medulla), the lateral wedge supplied by PICA and vertebral artery branches contains both the descending uncrossed spinal trigeminal tract and nucleus (carrying pain and temperature from the ipsilateral face) and the ascending already-crossed spinothalamic tract (carrying pain and temperature from the contralateral body). The medial lemniscus and pyramid lie paramedially in the anterior spinal artery (ASA) territory and are spared.",
+      "uz": "U3 plastinkasida PICA ta'minlaydigan lateral sohada ikki og'riq yo'li yonma-yon joylashgan: hali kesishmagan tushuvchi spinal trigeminal trakt va yadro (o'sha tomon yuzi) hamda orqa miyada allaqachon kesishgan ko'tariluvchi spinotalamik trakt (qarama-qarshi tana). Medial lemnisk va piramida esa oldingi orqa miya arteriyasi (ASA) havzasidagi paramedian sohada bo'lgani uchun zararlanmaydi."
     },
     "refs": ["als", "sp5t", "sp5n", "ml", "pyramid", "posterior-inferior-cerebellar-artery"],
     "plate": "medulla-olive",
@@ -460,26 +460,26 @@
     },
     "options": [
       {
-        "en": "Medial fifth: frontopontine fibres (`crus-fp`); Middle three-fifths: corticobulbar and corticospinal fibres (`crus-cst`, ordered medial → lateral as face → arm → trunk → leg); Lateral fifth: parieto-temporo-occipito-pontine fibres (`crus-ptop`)",
-        "uz": "Medial 1/5: frontopontin tolalar (`crus-fp`); O'rta 3/5: kortikobulbar va kortikospinal tolalar (`crus-cst`, medialdan lateralga: yuz → qo'l → tana → oyoq); Lateral 1/5: parieto-temporo-oksipito-pontin tolalar (`crus-ptop`)"
+        "en": "Medial fifth: frontopontine; middle three-fifths: corticobulbar and corticospinal (face → arm → leg); lateral fifth: parieto-temporo-occipito-pontine",
+        "uz": "Medial 1/5: frontopontin; o'rta 3/5: kortikobulbar va kortikospinal (yuz → qo'l → oyoq); lateral 1/5: parieto-temporo-oksipito-pontin"
       },
       {
-        "en": "Medial fifth: leg fibres; Middle three-fifths: spinothalamic and medial lemniscus; Lateral fifth: face fibres",
-        "uz": "Medial 1/5: oyoq tolalari; O'rta 3/5: spinotalamik va medial lemnisk; Lateral 1/5: yuz tolalari"
+        "en": "Medial fifth: parieto-temporo-occipito-pontine; middle three-fifths: corticospinal (leg → arm → face); lateral fifth: frontopontine and nigrostriatal",
+        "uz": "Medial 1/5: parieto-temporo-oksipito-pontin; o'rta 3/5: kortikospinal (oyoq → qo'l → yuz); lateral 1/5: frontopontin va nigrostriatal"
       },
       {
-        "en": "The crus cerebri carries only ascending cerebellar fibres from the dentate nucleus",
-        "uz": "Miya oyoqchasi faqat tishsimon yadrodan ko'tariluvchi miyacha tolalarini o'tkazadi"
+        "en": "Medial fifth: corticobulbar fibres; middle three-fifths: ascending medial lemniscus and spinothalamic tract; lateral fifth: rubrospinal and tectospinal",
+        "uz": "Medial 1/5: kortikobulbar tolalar; o'rta 3/5: ko'tariluvchi medial lemnisk va spinotalamik trakt; lateral 1/5: rubrospinal va tektospinal"
       },
       {
-        "en": "Medial to lateral: optic tract → auditory radiation → olfactory tract",
-        "uz": "Medialdan lateralga: ko'rish trakti → eshitish radiatsiyasi → hidlov trakti"
+        "en": "Medial fifth: dentato-rubro-thalamic outflow; middle three-fifths: transverse pontocerebellar fibres; lateral fifth: descending corticospinal fibres",
+        "uz": "Medial 1/5: dentato-rubro-talamik chiqish; o'rta 3/5: ko'ndalang ko'prik-miyacha tolalari; lateral 1/5: tushuvchi kortikospinal tolalar"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In the crus cerebri (plates O1–O3), the medial fifth carries frontopontine fibres, the lateral fifth carries parieto-temporo-occipito-pontine fibres, and the middle three-fifths carry corticobulbar and corticospinal fibres arranged somatotopically with face most medial, then arm, and leg lateral.",
-      "uz": "O1–O3 plastinkalarida miya oyoqchasi (crus cerebri) uch qismga bo'lingan: medial 1/5 — peshona-ko'prik (`crus-fp`), lateral 1/5 — tepa-chakka-ensa-ko'prik (`crus-ptop`) va o'rta 3/5 — kortikobulbar hamda kortikospinal (`crus-cst`) tolalar bo'lib, ularda yuz medialda, qo'l o'rtada va oyoq lateralda joylashgan."
+      "en": "In the crus cerebri (plates O1–O3), the medial fifth carries frontopontine fibres, the lateral fifth carries parieto-temporo-occipito-pontine fibres, and the middle three-fifths carry corticobulbar and corticospinal fibres arranged somatotopically with face most medial, then arm, trunk, and leg lateral.",
+      "uz": "O1–O3 plastinkalarida miya oyoqchasi (crus cerebri) uch qismga bo'lingan: medial 1/5 — peshona-ko'prik (frontopontin), lateral 1/5 — tepa-chakka-ensa-ko'prik (parieto-temporo-oksipito-pontin) va o'rta 3/5 — kortikobulbar hamda kortikospinal tolalar bo'lib, ularda yuz medialda, qo'l o'rtada va oyoq lateralda joylashgan."
     },
     "refs": ["crus", "crus-fp", "crus-cst", "crus-ptop", "wm-cerebral-peduncle", "bs-cerebral-peduncle-crus-cerebri"],
     "plate": "midbrain-superior-colliculus",
@@ -496,31 +496,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "How does the orientation and position of the medial lemniscus (`ml`) change as it ascends from the open medulla (plate U3) through the pons (plates K1–K3) into the midbrain (plate O2)?",
-      "uz": "Medial lemnisk (`ml`) ochiq uzunchoq miyadan (U3 plastinkasi) ko'prik (K1–K3) orqali o'rta miyaga (O2) ko'tarilar ekan, uning joylashuvi va holati qanday o'zgaradi?"
+      "en": "How do the orientation and position of the medial lemniscus change as it ascends from the open medulla (plate U3) through the pons (plates K1–K3) into the midbrain (plate O2)?",
+      "uz": "Medial lemnisk ochiq uzunchoq miyadan (U3 plastinkasi) ko'prik (K1–K3) orqali o'rta miyaga (O2) ko'tarilar ekan, uning joylashuvi va holati qanday o'zgaradi?"
     },
     "options": [
       {
-        "en": "In the medulla it stands as a vertical paramedian ribbon dorsal to the pyramid (leg ventral, neck dorsal); in the pons it tilts flat/horizontally at the tegmentum–basis border (leg lateral); in the midbrain it drifts dorsolaterally lateral to the red nucleus alongside the spinothalamic tract",
-        "uz": "Uzunchoq miyada piramida ustida o'rta chiziq yonida tik (vertikal) lenta bo'lib turadi (oyoq ventralda); ko'prikda tegmentum va asos chegarasida yotiq (gorizontal) holatga o'tadi (oyoq lateralda); o'rta miyada esa qizil yadrodan lateralga — spinotalamik trakt yoniga suriladi"
+        "en": "Vertical paramedian ribbon in medulla, horizontal at the pontine tegmentum–basis border, then dorsolateral to the red nucleus in midbrain",
+        "uz": "Medullada piramida ustida tik tasma, ko'prikda tegmentum–asos chegarasida yotiq lenta, o'rta miyada esa qizil yadrodan dorsolateralda"
       },
       {
-        "en": "It stays in the dorsal roof of the fourth ventricle and cerebral aqueduct throughout the brainstem",
-        "uz": "Butun miya ustuni bo'ylab IV qorincha va Silviy suv yo'lining dorsal tomida qoladi"
+        "en": "Horizontal band ventral to the medullary pyramid, vertical in the midline pontine raphe, then ventral inside the crus cerebri in midbrain",
+        "uz": "Medullada piramida ostida yotiq tasma, ko'prikda o'rta chiziq rafesida tik lenta, o'rta miyada esa miya oyoqchasining ventral qismida"
       },
       {
-        "en": "In the medulla it is lateral to the olive; in the pons it enters the middle cerebellar peduncle; in the midbrain it runs in the crus cerebri",
-        "uz": "Uzunchoq miyada zaytundan lateralda, ko'prikda o'rta miyacha oyoqchasida, o'rta miyada esa oyoqchada yotadi"
+        "en": "Dorsolateral to the inferior olive in medulla, traversing the middle cerebellar peduncle in pons, then medial to the aqueduct in midbrain",
+        "uz": "Medullada pastki zaytundan dorsolateralda, ko'prikda o'rta miyacha oyoqchasida, o'rta miyada esa Silviy suv yo'lidan medialda joylashadi"
       },
       {
-        "en": "It crosses the midline three separate times (once in the medulla, once in the pons, and once in the midbrain)",
-        "uz": "Uzunchoq miyada, ko'prikda va o'rta miyada uch marta qarama-qarshi tomonga kesishadi"
+        "en": "Paramedian in the fourth-ventricle floor throughout medulla and pons, then decussating dorsal to the cerebral aqueduct in the midbrain",
+        "uz": "Medulla va ko'prikda IV qorincha tubida paramedian o'tadi, so'ngra o'rta miyada Silviy suv yo'lining dorsal tomonida qarama-qarshi kesishadi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As traced in `DCML` (`ml-medulla`, `ml-pons`, `ml-midbrain`), in the open medulla (U3) the medial lemniscus is a vertical ribbon next to the midline between the pyramid and MLF ('a man standing upright on the pyramid', leg ventral). In the pons (K1–K2) it rotates 90° to lie horizontally along the ventral border of the tegmentum (leg lateral, traversed by the trapezoid body in K1). In the midbrain (O1–O2) it shifts dorsolaterally, lateral to the red nucleus, joining the spinothalamic and trigeminothalamic tracts on the way to VPL.",
-      "uz": "`DCML` yo'lida ko'rsatilganidek, uzunchoq miyada (U3) medial lemnisk piramida ustida tik turgan vertikal tasma ko'rinishida (oyoq ventralda); ko'prikda (K1–K2) tegmentum va asos chegarasida gorizontal yotib oladi (oyoq lateralda); o'rta miyada (O1–O2) esa qizil yadrodan lateralga surilib, spinotalamik tolalar bilan yonma-yon VPL talamusga boradi."
+      "en": "In the open medulla (plate U3), the medial lemniscus stands as a vertical paramedian ribbon between the pyramid and MLF (leg ventral, neck dorsal). In the pons (plates K1–K2) it rotates 90° to lie horizontally along the ventral border of the tegmentum (leg lateral, traversed by the trapezoid body in K1). In the midbrain (plates O1–O2) it shifts dorsolaterally, lateral to the red nucleus, joining the spinothalamic and trigeminothalamic tracts on the way to VPL thalamus.",
+      "uz": "Ochiq uzunchoq miyada (U3) medial lemnisk piramida va MLF orasida tik turgan vertikal tasma ko'rinishida (oyoq ventralda); ko'prikda (K1–K2) 90° burilib tegmentum va asos chegarasida gorizontal yotib oladi (oyoq lateralda, K1 da trapetsiyasimon tana kesib o'tadi); o'rta miyada (O1–O2) esa qizil yadrodan dorsolateralga surilib, spinotalamik tolalar bilan yonma-yon VPL talamusga boradi."
     },
     "refs": ["ml", "wm-medial-lemniscus", "pyramid", "tb", "rn"],
     "plate": "pons-trigeminal",
@@ -537,31 +537,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "Why does an expanding central-canal lesion in the cervical spinal cord (syringomyelia) cause a bilateral 'cape-like' loss of pain and temperature over the shoulders and arms while preserving fine touch, vibration, and joint position sense ('dissociated sensory loss')?",
-      "uz": "Nima sababdan bo'yin orqa miyasida markaziy kanalning kengayishi (siringomieliya) yelka va qo'llarda 'pelerin' (yopinchiq) shaklida ikki tomonlama og'riq va harorat sezgisini yo'qotib, teginish, tebranish va holat sezgisini saqlab qoladi ('dissotsiatsiyalangan sezgi buzilishi')?"
+      "en": "Why does an expanding central-canal lesion in the cervical spinal cord (syringomyelia) cause a bilateral cape-like loss of pain and temperature over the shoulders and arms while preserving fine touch, vibration, and joint position sense?",
+      "uz": "Nima sababdan bo'yin orqa miyasida markaziy kanalning kengayishi (siringomieliya) yelka va qo'llarda pelerin shaklida ikki tomonlama og'riq va harorat sezgisini yo'qotib, teginish, tebranish va holat sezgisini saqlab qoladi?"
     },
     "options": [
       {
-        "en": "Because the syrinx first interrupts the second-order spinothalamic (ALS) axons crossing in the anterior white commissure right in front of the central canal at those cervical segments, while the uncrossed dorsal columns (touch/proprioception) sit far dorsally",
-        "uz": "Chunki markaziy kanal oldidagi old oq bitishmada aynan shu bo'yin segmentlarining ikki tomonga kesishayotgan spinotalamik (og'riq/harorat) tolalari birinchi bo'lib uziladi, teginish va holatni eltuvchi orqa ustunlar esa orqada saqlanib qoladi"
+        "en": "The syrinx cuts crossing spinothalamic axons in the anterior white commissure while sparing the posterior dorsal columns",
+        "uz": "Kengaygan bo'shliq old oq bitishmada kesishuvchi spinotalamik tolalarni uzadi, orqadagi orqa ustunlar esa saqlanib qoladi"
       },
       {
-        "en": "Because syringomyelia selectively destroys the nucleus gracilis in the medulla",
-        "uz": "Chunki siringomieliya uzunchoq miyadagi nozik yadroni tanlab yemiradi"
+        "en": "The syrinx compresses the paired posterior spinal arteries while sparing the unpaired anterior spinal artery ventrally",
+        "uz": "Kengaygan bo'shliq juft orqa spinal arteriyalarni qisib qo'yadi, ventraldagi oldingi spinal arteriya esa saqlanib qoladi"
       },
       {
-        "en": "Because pain fibres run in the dorsal columns and touch fibres run in the anterior white commissure",
-        "uz": "Chunki og'riq tolalari orqa ustunda, teginish tolalari esa old oq bitishmada o'tadi"
+        "en": "The syrinx selectively destroys the nucleus gracilis and cuneatus while sparing ascending lateral spinothalamic fibres",
+        "uz": "Kengaygan bo'shliq nozik va ponasimon yadrolarni tanlab yemiradi, lateral spinotalamik tolalar esa zararlanmay qoladi"
       },
       {
-        "en": "Because the syrinx compresses only the posterior cerebral artery",
-        "uz": "Chunki bo'shliq faqat orqa miya arteriyasini qisib qo'yadi"
+        "en": "The syrinx interrupts uncrossed dorsal column afferents at entry while sparing first-order nociceptors in Lissauer's tract",
+        "uz": "Kengaygan bo'shliq kirishdagi orqa ustun tolalarini uzadi, Lissauer traktidagi birinchi neyron og'riq tolalari esa saqlanadi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In the spinal cord, second-order spinothalamic axons cross the midline in the anterior white commissure immediately ventral to the central canal. A cervical syrinx stretches and cuts these crossing fibres segmentally on both sides — producing a suspended 'cape' of bilateral pain and temperature loss over the shoulders and upper limbs — while sparing the dorsal columns (`fg`, `fc`) posteriorly.",
-      "uz": "Spinotalamik yo'lning ikkinchi neyron aksonlari markaziy kanalning bevosita oldidagi old oq bitishmada kesishadi. Siringomieliya markaziy kanalni kengaytirib, bir necha bo'yin segmentidagi kesishuvchi tolalarni ikki tomonda uzadi: yelka va qo'llarda 'pelerin' shaklida og'riq va harorat sezgisi yo'qoladi, orqa ustunlardagi teginish va holat sezgisi esa saqlanib qoladi."
+      "en": "In the spinal cord, second-order spinothalamic axons cross the midline in the anterior white commissure immediately ventral to the central canal. A cervical syrinx stretches and cuts these crossing fibres segmentally on both sides — producing a suspended cape of bilateral pain and temperature loss over the shoulders and upper limbs (dissociated sensory loss) — while sparing the dorsal columns (fasciculus gracilis and cuneatus) posteriorly.",
+      "uz": "Spinotalamik yo'lning ikkinchi neyron aksonlari markaziy kanalning bevosita oldidagi old oq bitishmada kesishadi. Siringomieliya markaziy kanalni kengaytirib, bir necha bo'yin segmentidagi kesishuvchi tolalarni ikki tomonda uzadi: yelka va qo'llarda pelerin shaklida og'riq va harorat sezgisi yo'qoladi (dissotsiatsiyalangan sezgi buzilishi), orqa ustunlardagi teginish va holat sezgisi esa saqlanib qoladi."
     },
     "refs": ["als", "cc", "fg", "fc"],
     "plate": "medulla-pyramidal-decussation",
@@ -578,31 +578,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "Why can a small focal lesion right at the pyramidal decussation (plate U1) or a foramen magnum meningioma produce 'cruciate hemiplegia' (weakness of ONE arm and the OPPOSITE leg)?",
-      "uz": "Nima uchun aynan piramidalar kesishmasidagi (U1 plastinkasi) kichik o'choq yoki katta teshik (foramen magnum) o'smasi 'krestsimon (xochsimon) gemiplegiya'ni — BIR tomondagi qo'l va QARAMA-QARSHI tomondagi oyoq falajini berishi mumkin?"
+      "en": "Why can a small focal lesion right at the pyramidal decussation (plate U1) or a foramen magnum meningioma produce cruciate hemiplegia (weakness of one arm and the opposite leg)?",
+      "uz": "Nima uchun aynan piramidalar kesishmasidagi (U1 plastinkasi) kichik o'choq yoki katta teshik (foramen magnum) o'smasi xochsimon gemiplegiyani — bir tomondagi qo'l va qarama-qarshi tomondagi oyoq falajini berishi mumkin?"
     },
     "options": [
       {
-        "en": "Because upper-limb (arm) corticospinal fibres decussate slightly more rostrally than lower-limb (leg) fibres, so a lesion at the junction can catch already-crossed arm fibres together with not-yet-crossed leg fibres",
-        "uz": "Chunki qo'l uchun kortikospinal tolalar oyoq tolalaridan biroz yuqoriroqda (rostralroqda) kesishadi; shu bois kesishmadagi o'choq allaqachon kesishgan qo'l tolalarini va hali kesishmagan oyoq tolalarini birga zararlashi mumkin"
+        "en": "Arm corticospinal fibres cross rostral to leg fibres, so a focal lesion catches crossed arm fibres and uncrossed leg fibres together",
+        "uz": "Qo'l kortikospinal tolalari oyoq tolalaridan yuqoriroqda kesishadi, shuning uchun o'choq kesishgan qo'l va kesishmagan oyoq tolalarini tutadi"
       },
       {
-        "en": "Because arm fibres never cross the midline while leg fibres cross twice",
-        "uz": "Chunki qo'l tolalari hech qachon kesishmaydi, oyoq tolalari esa ikki marta kesishadi"
+        "en": "Leg corticospinal fibres cross in the caudal pons while arm fibres remain uncrossed until the anterior white commissure of the cervical cord",
+        "uz": "Oyoq kortikospinal tolalari kaudal ko'prikda kesishadi, qo'l tolalari esa bo'yin orqa miyasining old oq bitishmasigacha kesishmay tushadi"
       },
       {
-        "en": "Because the arm is innervated by the rubrospinal tract and the leg by the vestibulospinal tract",
-        "uz": "Chunki qo'l rubrospinal trakt, oyoq esa vestibulospinal trakt tomonidan boshqariladi"
+        "en": "Arm motor commands descend through the crossed rubrospinal tract while leg motor commands descend in the uncrossed anterior corticospinal tract",
+        "uz": "Qo'l harakat buyruqlari kesishgan rubrospinal trakt orqali, oyoq harakat buyruqlari esa kesishmagan oldingi kortikospinal trakt orqali tushadi"
       },
       {
-        "en": "Because leg fibres cross in the pons while arm fibres cross in the lumbar cord",
-        "uz": "Chunki oyoq tolalari ko'prikda, qo'l tolalari esa bel orqa miyasida kesishadi"
+        "en": "Arm fibres decussate twice in the lower brainstem while leg fibres cross once at the cervicomedullary junction into the dorsal funiculus",
+        "uz": "Qo'l tolalari pastki miya ustunida ikki marta kesishadi, oyoq tolalari esa bo'yin-medulla chegarasida orqa tizimchaga bir marta kesishib o'tadi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Within the pyramidal decussation (`pyr-dec`, plate U1), fibres destined for the cervical cord (arm) cross rostral to those for the lumbosacral cord (leg). A small eccentric lesion at the decussation can hit the already-crossed ipsilateral arm fibres and the uncrossed contralateral leg fibres simultaneously ('cruciate hemiplegia').",
-      "uz": "Piramidalar kesishmasida (`pyr-dec`, U1 plastinkasi) qo'l tolalari oyoq tolalaridan yuqoriroqda kesishadi; shuning uchun aynan kesishmadagi kichik o'choq allaqachon kesib o'tgan o'sha tomon qo'l tolalarini va hali kesishmagan qarama-qarshi oyoq tolalarini birga falajlashi ('xochsimon gemiplegiya') mumkin."
+      "en": "Within the pyramidal decussation (plate U1), fibres destined for the cervical cord (arm) cross slightly rostral to those for the lumbosacral cord (leg). A small eccentric lesion at the decussation can hit the already-crossed ipsilateral arm fibres and the not-yet-crossed contralateral leg fibres simultaneously, producing cruciate hemiplegia.",
+      "uz": "Piramidalar kesishmasida (U1 plastinkasi) bo'yin segmentlariga (qo'lga) boruvchi tolalar bel-dumg'aza (oyoq) tolalaridan biroz rostralroqda kesishadi; shuning uchun aynan kesishmadagi kichik o'choq allaqachon kesib o'tgan o'sha tomon qo'l tolalarini va hali kesishmagan qarama-qarshi oyoq tolalarini birga falajlashi (xochsimon gemiplegiya) mumkin."
     },
     "refs": ["pyr-dec", "pyramid", "lcst", "bs-pyramid-of-medulla-oblongata"],
     "plate": "medulla-pyramidal-decussation",
@@ -619,31 +619,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "How is the face mapped along the rostro-caudal length of the spinal trigeminal nucleus (`sp5n`, Dejerine's 'onion-skin' somatotopy), and what facial sensory deficit results from a low lesion at the C1–C2 / caudal medullary level?",
-      "uz": "Spinal trigeminal yadro (`sp5n`) bo'ylab yuz sezgisi qanday 'piyoz po'sti' (Dejerine) tartibida joylashgan va yadroning pastki (C1–C2 / kaudal medulla) qismidagi o'choq yuzning qayerida og'riq sezgisini saqlab qoladi?"
+      "en": "How is the face mapped along the rostro-caudal length of the spinal trigeminal nucleus (Dejerine's onion-skin somatotopy), and what facial sensory deficit results from a low lesion at the C1–C2 / caudal medullary level?",
+      "uz": "Spinal trigeminal yadro bo'ylab yuz sezgisi qanday piyoz po'sti (Dejerine) tartibida joylashgan va yadroning pastki (C1–C2 / kaudal medulla) qismidagi o'choq yuzning qayerida og'riq sezgisini saqlab qoladi?"
     },
     "options": [
       {
-        "en": "The perioral area (mouth and nose) is represented rostrally in pars caudalis, while the peripheral outer face (forehead, jaw angle, preauricular border) is represented caudally at C1–C2; therefore a low caudal lesion spares the mouth and nose",
-        "uz": "Og'iz va burun atrofi yadroning yuqoriroq (rostral) qismida, yuzning tashqi halqasi esa pastki (kaudal, C1–C2) qismida joylashgan; shuning uchun pastdagi o'choqda og'iz va burun atrofi saqlanib qoladi"
+        "en": "Perioral region maps rostrally and outer face rings map caudally at C1–C2, so a low lesion spares pain sensation around the mouth and nose",
+        "uz": "Og'iz va burun atrofi rostralda, yuzning tashqi halqalari esa C1–C2 da joylashgan; pastki o'choq og'iz va burun atrofini saqlab qoladi"
       },
       {
-        "en": "The mouth is represented at C4 and the forehead in the midbrain",
-        "uz": "Og'iz atrofi C4 da, peshona esa o'rta miyada joylashgan"
+        "en": "Forehead and scalp map rostrally while the mouth and chin map caudally at C1–C2, so a low lesion spares pain sensation over the upper face",
+        "uz": "Peshona va bosh terisi rostralda, og'iz va iyak esa C1–C2 da joylashgan; pastki o'choq peshona va yuqori yuz og'riq sezgisini saqlaydi"
       },
       {
-        "en": "The spinal trigeminal nucleus maps the left face on its dorsal edge and the right face on its ventral edge",
-        "uz": "Spinal trigeminal yadroning dorsal cheti chap yuzni, ventral cheti o'ng yuzni ifodalaydi"
+        "en": "V1 ophthalmic fibres terminate rostrally, V2 maxillary in the middle, and V3 mandibular caudally, so a low lesion spares only the cornea",
+        "uz": "V1 ko'z tolalari rostralda, V2 o'rtada va V3 pastki jag' tolalari kaudalda tugaydi; pastki o'choq faqat shox parda sezgisini saqlab qoladi"
       },
       {
-        "en": "The spinal trigeminal nucleus carries only jaw motor fibres to the masseter",
-        "uz": "Spinal trigeminal yadro faqat chaynov mushaklariga harakat tolalarini beradi"
+        "en": "Contralateral face maps dorsally and ipsilateral face maps ventrally, so a low lesion spares discriminative touch across all three divisions",
+        "uz": "Qarama-qarshi yuz dorsalda, o'sha tomon yuzi ventralda joylashgan; pastki o'choq uchala shoxda ham nozik teginish sezgisini saqlab qoladi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "While the peripheral V1/V2/V3 dermatomes run horizontally from trigeminal ganglion divisions, inside the spinal trigeminal nucleus (`sp5n`, pars caudalis, plates U1–U3) the face is mapped in concentric 'onion-skin' (balaclava) rings: the mouth and nose sit rostrally near the obex, and successively outer rings of the face extend caudally to C2–C3.",
-      "uz": "Spinal trigeminal yadroda (`sp5n`, kaudal qism, U1–U3 plastinkalari) yuz konsentrik 'piyoz po'sti' shaklida xaritalangan: og'iz va burun atrofi rostralda (yuqoriroqda), yuzning tashqi chetlari esa kaudalda (C1–C2 da) joylashgan. Shu sababli pastdagi o'choq (masalan, C1–C2 siringobulbiyasi) og'iz va burun atrofida og'riq sezgisini saqlab qoladi."
+      "en": "While peripheral V1/V2/V3 dermatomes run in horizontal divisions from the trigeminal ganglion, inside the spinal trigeminal nucleus (pars caudalis, plates U1–U3) the face is mapped in concentric onion-skin rings: the mouth and nose sit rostrally near the obex, and successively outer rings (forehead, jaw angle, preauricular border) extend caudally to C1–C2. Thus a low caudal lesion spares the perioral region.",
+      "uz": "Periferik V1/V2/V3 dermatomlaridan farqli o'laroq, spinal trigeminal yadroda (kaudal qism, U1–U3 plastinkalari) yuz konsentrik piyoz po'sti halqalari shaklida xaritalangan: og'iz va burun atrofi rostralda (obeksga yaqin), yuzning tashqi chetlari esa kaudalda (C1–C2 da) joylashgan. Shu sababli pastdagi o'choq (masalan, C1–C2 siringobulbiyasi) og'iz va burun atrofida og'riq sezgisini saqlab qoladi."
     },
     "refs": ["sp5n", "sp5t", "n5-root"],
     "plate": "medulla-sensory-decussation",
@@ -660,31 +660,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "A patient with vitamin B12 deficiency (or nitrous-oxide toxicity / copper deficiency) develops paraesthesias, loss of vibration and position sense in both legs, a wide-based sensory ataxic gait with a positive Romberg sign, AND bilateral extensor plantar responses (Babinski) with brisk knee jerks. Which two spinal cord pathways are affected in this condition (subacute combined degeneration)?",
-      "uz": "B12 vitamini tanqisligi (yoki azot oksidi / mis tanqisligi) bo'lgan bemorda ikkala oyoqda tebranish va holat sezgisi yo'qolishi, Romberg sinovi musbat bo'lgan sezgi ataksiyasi HAMDA ikki tomonlama spastik zaiflik va musbat Babinski belgisi aniqlandi. Ushbu subakut qo'shma degeneratsiyada orqa miyaning qaysi ikki yo'li birgalikda zararlanadi?"
+      "en": "A patient with vitamin B12 deficiency (or nitrous-oxide toxicity) develops paraesthesias, loss of vibration and position sense in both legs, sensory ataxia with a positive Romberg sign, and bilateral extensor plantar responses (Babinski) with brisk knee jerks. Which two spinal cord pathways are affected in subacute combined degeneration?",
+      "uz": "B12 vitamini tanqisligi (yoki azot oksidi zaharlanishi) bo'lgan bemorda ikkala oyoqda tebranish va holat sezgisi yo'qolishi, Romberg sinovi musbat bo'lgan sezgi ataksiyasi hamda ikki tomonlama spastik zaiflik va musbat Babinski belgisi aniqlandi. Subakut qo'shma degeneratsiyada orqa miyaning qaysi ikki yo'li birgalikda zararlanadi?"
     },
     "options": [
       {
-        "en": "Dorsal columns (fasciculus gracilis and cuneatus → sensory ataxia, positive Romberg) and lateral corticospinal tracts (lateral columns → spastic weakness, Babinski)",
-        "uz": "Orqa ustunlar (nozik va ponasimon tutamlar → sezgi ataksiyasi, musbat Romberg) hamda lateral kortikospinal traktlar (lateral tizimchalar → spastik zaiflik, Babinski belgisi)"
+        "en": "Dorsal columns (fasciculus gracilis and cuneatus) and lateral corticospinal tracts",
+        "uz": "Orqa ustunlar (nozik va ponasimon tutamlar) va lateral kortikospinal traktlar"
       },
       {
-        "en": "Spinothalamic tracts and anterior white commissure only",
-        "uz": "Faqat spinotalamik traktlar va old oq bitishma"
+        "en": "Lateral spinothalamic tracts and segmental fibres of the anterior white commissure",
+        "uz": "Lateral spinotalamik traktlar va old oq bitishmaning segmentar kesishma tolalari"
       },
       {
-        "en": "Rubrospinal and tectospinal tracts only",
-        "uz": "Faqat rubrospinal va tektospinal traktlar"
+        "en": "Dorsal and ventral spinocerebellar tracts alongside the medial vestibulospinal tract",
+        "uz": "Dorsal va ventral spinoserebellyar traktlar hamda medial vestibulospinal trakt"
       },
       {
-        "en": "Trigeminal lemniscus and medial longitudinal fasciculus",
-        "uz": "Trigeminal lemnisk va medial bo'ylama tutam"
+        "en": "Anterior horn lower motor neurons together with the descending rubrospinal pathways",
+        "uz": "Orqa miya oldingi shox motoneyronlari va tushuvchi rubrospinal harakat yo'llari"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "Subacute combined degeneration (vitamin B12 or copper deficiency, or N₂O inactivation of methionine synthase) demyelinates the heavily myelinated dorsal columns (`fg`, `fc` → loss of vibration/proprioception, sensory ataxia with positive Romberg: steady with eyes open, falls with eyes closed) together with the lateral columns (`lcst` → UMN signs, spasticity, Babinski), while sparing the spinothalamic tract.",
-      "uz": "B12 vitamini (yoki mis) tanqisligida orqa ustunlar (`fg`, `fc` — tebranish va holat sezgisi yo'qolishi, ko'z yumilganda yiqilish bilan kechuvchi musbat Romberg sinovi) hamda lateral ustunlardagi kortikospinal yo'llar (`lcst` — piramidal spastiklik va Babinski belgisi) birgalikda demiyelinizatsiyaga uchraydi (subakut qo'shma degeneratsiya)."
+      "en": "Subacute combined degeneration (vitamin B12 or copper deficiency, or N₂O inactivation of methionine synthase) demyelinates the heavily myelinated dorsal columns (fasciculus gracilis and cuneatus → loss of vibration/proprioception, sensory ataxia with positive Romberg) together with the lateral corticospinal tracts (UMN signs, spastic weakness, Babinski), while sparing the spinothalamic tract.",
+      "uz": "B12 vitamini (yoki mis) tanqisligida orqa ustunlar (nozik va ponasimon tutamlar — tebranish va holat sezgisi yo'qolishi, ko'z yumilganda yiqilish bilan kechuvchi musbat Romberg sinovi) hamda lateral ustunlardagi kortikospinal yo'llar (piramidal spastiklik va Babinski belgisi) birgalikda demiyelinizatsiyaga uchraydi (subakut qo'shma degeneratsiya)."
     },
     "refs": ["fg", "fc", "lcst", "wm-corticospinal-tract"],
     "plate": "medulla-pyramidal-decussation",
@@ -701,31 +701,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "What is the clinical presentation of a lesion restricted to the postcentral gyrus (primary somatosensory cortex, S1, `level: 'cortex', zone: 'sensory'`) compared with a subcortical thalamic VPL lesion?",
-      "uz": "Orqa markaziy pushta (birlamchi somatosensor po'stloq — S1, `level: 'cortex', zone: 'sensory'`) zararlanishi talamusning VPL yadrosi zararlanishidan klinik jihatdan qanday farq qiladi?"
+      "en": "How does the clinical presentation of a lesion restricted to the postcentral gyrus (primary somatosensory cortex, S1) differ from a subcortical thalamic VPL lesion?",
+      "uz": "Orqa markaziy pushta (birlamchi somatosensor po'stloq — S1) zararlanishi talamusning VPL yadrosi zararlanishidan klinik jihatdan qanday farq qiladi?"
     },
     "options": [
       {
-        "en": "A cortical S1 lesion blunts but spares crude primary modalities (pain, crude touch) while abolishing discriminative cortical sensation — causing contralateral astereognosis, agraphaesthesia, loss of two-point discrimination, and sensory extinction",
-        "uz": "Po'stloq (S1) o'chog'ida birlamchi dag'al sezgilar (og'riq, oddiy teginish) deyarli saqlanib, farqlovchi murakkab sezgilar yo'qoladi — qarama-qarshi qo'lda astereognoz, agrafesteziya, ikki nuqtani farqlay olmaslik va sezgi 'so'nishi' kuzatiladi"
+        "en": "S1 lesions relatively spare crude pain and touch but abolish cortical discriminative modalities (astereognosis, agraphaesthesia, extinction)",
+        "uz": "S1 o'chog'ida dag'al og'riq va teginish deyarli saqlanib, farqlovchi po'stloq sezgilari (astereognoz, agrafesteziya, so'nish) yo'qoladi"
       },
       {
-        "en": "A cortical S1 lesion causes complete loss of pain and temperature on both sides of the body with preserved stereognosis",
-        "uz": "Po'stloq (S1) o'chog'i stereognoz saqlangan holda tananing ikkala tomonida og'riq va haroratni butunlay yo'qotadi"
+        "en": "S1 lesions cause dense bilateral loss of pain and temperature over the limbs while preserving two-point discrimination and stereognosis",
+        "uz": "S1 o'chog'i ikki nuqtani farqlash va stereognozni saqlab qolgan holda oyoq-qo'llarda ikki tomonlama og'riq va haroratni yo'qotadi"
       },
       {
-        "en": "A cortical S1 lesion causes ipsilateral flaccid paralysis and tongue atrophy",
-        "uz": "Po'stloq (S1) o'chog'i o'sha tomonda sust falaj va til atrofiyasini beradi"
+        "en": "S1 lesions produce severe contralateral spontaneous burning dysaesthesia (thalamic pain) with complete anaesthesia across all modalities",
+        "uz": "S1 o'chog'i barcha sezgi turlarining to'liq yo'qolishi va qarama-qarshi tomonda kuchli o'z-o'zidan yonuvchi talamik og'riqni keltirib chiqaradi"
       },
       {
-        "en": "A cortical S1 lesion causes bitemporal hemianopia",
-        "uz": "Po'stloq (S1) o'chog'i bitemporal gemianopiyani keltirib chiqaradi"
+        "en": "S1 lesions abolish ipsilateral vibration and joint position sense in the face and hand while sparing contralateral tactile localization",
+        "uz": "S1 o'chog'i qarama-qarshi teginish joyini aniqlashni saqlab, o'sha tomon yuz va qo'lida tebranish hamda holat sezgisini yo'qotadi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As described in `DCML` (`s1`) and `lesions.ts` (`cortex`, `sensory`), primary pain, temperature, and crude touch reach consciousness subcortically/diffusely and are only mildly blunted by an S1 lesion; instead, cortical sensory loss destroys synthetic/discriminative modalities: two-point discrimination, stereognosis (identifying an object in the hand by touch, especially BA2), graphaesthesia (recognizing numbers traced on the palm), and double simultaneous stimulation (sensory extinction).",
-      "uz": "`DCML` (`s1`) va `lesions.ts` (`cortex`, `sensory`) da ko'rsatilganidek, S1 po'stloq o'chog'i birlamchi dag'al sezgilarni faqat susaytiradi, lekin farqlovchi 'po'stloq sezgisini' yo'qotadi: bemor ko'zi yumuq holda qo'lidagi narsani paypaslab taniy olmaydi (astereognoz), kaftiga chizilgan raqamni bilmaydi (agrafesteziya) va ikki nuqtani farqlay olmaydi."
+      "en": "Primary pain, temperature, and crude touch reach consciousness subcortically and diffusely, so they are only mildly blunted by an S1 lesion. Instead, cortical sensory loss destroys synthetic discriminative modalities: two-point discrimination, stereognosis (identifying an object by touch, especially BA2), graphaesthesia (recognizing numbers traced on the palm), and double simultaneous stimulation (sensory extinction). By contrast, a VPL thalamic lesion impairs all contralateral primary sensory modalities and may cause Dejerine–Roussy pain.",
+      "uz": "Birlamchi dag'al sezgilar (og'riq, harorat, oddiy teginish) po'stloqosti darajasida ham idrok etilgani uchun S1 po'stloq o'chog'ida ular faqat biroz susayadi; buning o'rniga murakkab farqlovchi po'stloq sezgilari yo'qoladi: astereognoz (paypaslab narsani tanimaslik), agrafesteziya (kaftga chizilgan raqamni bilmaslik), ikki nuqtani farqlay olmaslik va sezgi so'nishi. Talamusning VPL o'chog'i esa barcha birlamchi sezgilarni chuqur buzadi va talamik og'riq (Dejerine–Roussy) berishi mumkin."
     },
     "refs": ["postcentral-gyrus", "j-area-3b", "j-postcg", "j-postcs"],
     "sources": [
@@ -741,31 +741,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "Why does occlusion of the anterior spinal artery at the mid-thoracic spinal cord (`level: 'cord', zone: 'ventral'`) produce bilateral paralysis and loss of pain/temperature below the lesion while completely sparing vibration and joint position sense?",
-      "uz": "Nima sababdan orqa miyaning oldingi spinal arteriyasi tiqilishi (`level: 'cord', zone: 'ventral'`) zararlanish sathidan pastda ikki tomonlama falaj (paraplegiya) hamda og'riq va harorat sezgisi yo'qolishini berib, tebranish va bo'g'im holati sezgisini butunlay saqlab qoladi?"
+      "en": "Why does occlusion of the anterior spinal artery at the mid-thoracic spinal cord produce bilateral paralysis and loss of pain and temperature below the lesion while sparing vibration and joint position sense?",
+      "uz": "Nima sababdan ko'krak orqa miyasida oldingi spinal arteriya tiqilishi zararlanish sathidan pastda ikki tomonlama falaj (paraplegiya) hamda og'riq va harorat sezgisi yo'qolishini berib, tebranish va bo'g'im holati sezgisini saqlab qoladi?"
     },
     "options": [
       {
-        "en": "The unpaired midline anterior spinal artery supplies the anterior two-thirds of the cord (ventral horns, lateral corticospinal tracts, and anterolateral spinothalamic tracts bilaterally), whereas the paired posterior spinal arteries supply the dorsal columns",
-        "uz": "O'rta chiziqdagi yagona oldingi spinal arteriya orqa miyaning oldingi uchdan ikki qismini (oldingi shoxlar, lateral kortikospinal va spinotalamik traktlarni ikki tomonda) ta'minlaydi; orqa ustunlar esa juft orqa spinal arteriyalardan qon olgani uchun saqlanib qoladi"
+        "en": "The unpaired anterior spinal artery supplies the anterior two-thirds (CST, ALS, ventral horns), while paired posterior arteries supply the dorsal columns",
+        "uz": "Yagona oldingi spinal arteriya oldingi 2/3 qismni (CST, ALS, old shoxlar) ta'minlaydi; orqa ustunlar juft orqa spinal arteriyalardan qon oladi"
       },
       {
-        "en": "The anterior spinal artery supplies only the dorsal root ganglia",
-        "uz": "Oldingi spinal arteriya faqat orqa ildiz tugunlarini qon bilan ta'minlaydi"
+        "en": "The paired anterior spinal arteries supply only the dorsal horns and gracile tracts, while the radicular artery of Adamkiewicz supplies the anterior horns",
+        "uz": "Juft oldingi spinal arteriyalar faqat orqa shox va nozik tutamni ta'minlaydi; oldingi shoxlar esa Adamkevich ildiz arteriyasidan qon oladi"
       },
       {
-        "en": "Vibration and position sense travel outside the spinal canal in the sympathetic chain",
-        "uz": "Tebranish va holat sezgisi umurtqa kanalidan tashqarida — simpatik zanjirda o'tadi"
+        "en": "Vibration and position sense bypass the thoracic spinal cord via the paravertebral sympathetic chain before re-entering at the lower cervical segments",
+        "uz": "Tebranish va holat sezgisi ko'krak orqa miyasini chetlab paravertebral simpatik zanjir orqali ko'tariladi va pastki bo'yin segmentlariga kiradi"
       },
       {
-        "en": "The anterior spinal artery supplies only the cerebellum and fourth ventricle",
-        "uz": "Oldingi spinal arteriya faqat miyacha va to'rtinchi qorinchani ta'minlaydi"
+        "en": "Dorsal column axons are unmyelinated C fibres with lower metabolic demand, making them selectively resistant to complete thoracic cord ischaemia",
+        "uz": "Orqa ustun aksonlari moddalar almashinuvi past bo'lgan miyelinsiz C tolalar bo'lib, ko'krak orqa miyasining to'liq ishemiyasiga chidamli"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In `lesions.ts` (`cord`, `ventral`), the single midline anterior spinal artery supplies the ventral two-thirds of the spinal cord: the anterior horns (LMN at the level), the lateral corticospinal tracts (`lcst` → bilateral spastic paraplegia/tetraplegia below), and the spinothalamic tracts (`als` → bilateral loss of pain and temperature below). The dorsal columns (`fg`, `fc`) are supplied by the paired posterior spinal arteries, so vibration and proprioception remain intact.",
-      "uz": "`lesions.ts` (`cord`, `ventral`) da ko'rsatilganidek, oldingi spinal arteriya o'rta chiziqda joylashgan bo'lib, orqa miyaning oldingi 2/3 qismini (lateral kortikospinal va spinotalamik traktlarni ikki tomonlama) qon bilan ta'minlaydi. U tiqilganda sathdan pastda para-/tetraplegiya va og'riq/harorat yo'qolishi yuzaga keladi, orqa spinal arteriyalardan qon oluvchi orqa ustunlar (tebranish va holat sezgisi) esa saqlanadi."
+      "en": "The single midline anterior spinal artery supplies the ventral two-thirds of the spinal cord: the anterior horns (LMN weakness at the level), the lateral corticospinal tracts (bilateral spastic paraplegia or tetraplegia below), and the spinothalamic tracts (bilateral loss of pain and temperature below). The dorsal columns (fasciculus gracilis and cuneatus) are supplied by the paired posterior spinal arteries, so vibration and proprioception remain intact.",
+      "uz": "Oldingi spinal arteriya o'rta chiziqda joylashgan bo'lib, orqa miyaning oldingi uchdan ikki qismini (oldingi shoxlar, lateral kortikospinal va spinotalamik traktlarni ikki tomonda) qon bilan ta'minlaydi. U tiqilganda sathdan pastda para- yoki tetraplegiya va og'riq/harorat yo'qolishi yuzaga keladi, juft orqa spinal arteriyalardan qon oluvchi orqa ustunlar (tebranish va holat sezgisi) esa saqlanadi."
     },
     "refs": ["lcst", "als", "fg", "fc"],
     "plate": "medulla-pyramidal-decussation",
@@ -782,31 +782,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "How does the 'neospinothalamic' component of the anterolateral system differ from the 'paleospinothalamic' (spinoreticular and spinomesencephalic) components in its thalamic/cortical targets and clinical role in pain?",
-      "uz": "Anterolateral og'riq tizimining 'neospinotalamik' qismi 'paleospinotalamik' (spinoretikulyar va spinomezensefalik) qismidan talamus/po'stloqdagi manzili va og'riqni idrok etishdagi vazifasi bo'yicha qanday farq qiladi?"
+      "en": "How does the neospinothalamic component of the anterolateral system differ from the paleospinothalamic (spinoreticular and spinomesencephalic) component in its thalamic/cortical targets and clinical role in pain?",
+      "uz": "Anterolateral og'riq tizimining neospinotalamik qismi paleospinotalamik (spinoretikulyar va spinomezensefalik) qismidan talamus/po'stloqdagi manzili va og'riqni idrok etishdagi vazifasi bo'yicha qanday farq qiladi?"
     },
     "options": [
       {
-        "en": "Neospinothalamic fibres project to VPL → S1 to encode the sharp, fast sensory-discriminative aspects of pain (where and how intense); paleospinothalamic/spinoreticular/spinomesencephalic fibres project to the reticular formation, PAG, and intralaminar/medial thalamus (CM/Pf, MD) → anterior cingulate and insula to encode slow, burning affective-motivational pain unpleasantness",
-        "uz": "Neospinotalamik tolalar VPL → S1 ga borib og'riqning aniq joyi va kuchini bildirse, paleospinotalamik/spinoretikulyar/spinomezensefalik tolalar retikulyar formatsiya, PAG hamda intralaminar/medial talamus (CM/Pf, MD) orqali oldingi belbog' pushtasi va orolchaga borib, og'riqning yoqimsiz hissiy (affektiv) tomonini va uyg'oqlikni ta'minlaydi"
+        "en": "Neospinothalamic projects to VPL → S1 for sharp, localized pain; paleospinothalamic projects to RF, PAG, and intralaminar thalamus → cingulate/insula for affective pain",
+        "uz": "Neospinotalamik VPL → S1 orqali og'riq joyi va kuchini bildiradi; paleospinotalamik RF, PAG va intralaminar talamus → belbog'/orolcha orqali affektiv og'riqni beradi"
       },
       {
-        "en": "Neospinothalamic fibres project to the cerebellum; paleospinothalamic fibres project to the retina",
-        "uz": "Neospinotalamik tolalar miyachaga, paleospinotalamik tolalar esa to'r pardaga boradi"
+        "en": "Neospinothalamic projects to intralaminar thalamus → cingulate for dull aching pain; paleospinothalamic projects to VPL → S1 for sharp pinprick localization",
+        "uz": "Neospinotalamik intralaminar talamus → belbog' orqali simillovchi og'riqni beradi; paleospinotalamik VPL → S1 orqali o'tkir sanchuvchi og'riq joyini aniqlaydi"
       },
       {
-        "en": "Neospinothalamic fibres are uncrossed; paleospinothalamic fibres cross in the corpus callosum",
-        "uz": "Neospinotalamik tolalar kesishmaydi, paleospinotalamik tolalar esa qadoqsimon tanada kesishadi"
+        "en": "Neospinothalamic projects uncrossed to the cerebellar vermis for reflex withdrawal; paleospinothalamic projects via the medial lemniscus to VPM for facial pain",
+        "uz": "Neospinotalamik kesishmasdan miyacha chuvalchangiga himoya refleksi uchun boradi; paleospinotalamik medial lemnisk orqali VPM ga yuz og'rig'ini olib chiqadi"
       },
       {
-        "en": "Both pathways carry only joint position sense and no pain signals",
-        "uz": "Ikkala yo'l ham faqat bo'g'im holati sezgisini tashiydi va og'riqqa aloqasi yo'q"
+        "en": "Neospinothalamic projects to the ventral anterior thalamus → premotor cortex for motor tone; paleospinothalamic projects to the pulvinar → visual cortex for arousal",
+        "uz": "Neospinotalamik ventral oldingi talamus → premotor po'stloqqa mushak tonusi uchun boradi; paleospinotalamik pulvinar → ko'rish po'stlog'iga uyg'oqlik beradi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As detailed in `ALS` (`als-pons`) and `FOREBRAIN_STRUCTURES` (`th-cm`), only the lateral neospinothalamic tract goes directly to VPL → S1 (sensory-discriminative pain: location and intensity). Parallel paleospinothalamic, spinoreticular (to brainstem RF → arousal), and spinomesencephalic (to PAG → descending pain control) fibres relay in the intralaminar (CM/Pf) and medial thalamus to the anterior cingulate cortex and anterior insula — mediating the affective, suffering dimension of pain (targeted by dorsal cingulotomy).",
-      "uz": "`ALS` (`als-pons`) va `th-cm` tavsiflarida ko'rsatilganidek, neospinotalamik yo'l VPL → S1 orqali og'riqning qayerda va qanchalik kuchli ekanini bildiradi; paleospinotalamik, spinoretikulyar va spinomezensefalik tolalar esa retikulyar formatsiya, PAG hamda intralaminar/medial talamus (CM, Pf) orqali oldingi belbog' pushtasi va orolchaga (insula) borib, og'riqning affektiv, azobli tomonini shakllantiradi."
+      "en": "Only the lateral neospinothalamic tract projects directly to VPL → S1 to encode the sensory-discriminative aspects of pain (exact location and intensity). Parallel paleospinothalamic, spinoreticular (to brainstem reticular formation for arousal), and spinomesencephalic (to PAG for descending pain modulation) fibres relay in the intralaminar (CM/Pf) and medial thalamus to the anterior cingulate cortex and anterior insula — mediating the slow, burning affective-motivational suffering of pain.",
+      "uz": "Neospinotalamik yo'l to'g'ridan-to'g'ri VPL → S1 ga borib og'riqning qayerda va qanchalik kuchli ekanini bildiradi; parallel paleospinotalamik, spinoretikulyar (miya ustuni retikulyar formatsiyasiga — uyg'oqlik) va spinomezensefalik (PAG ga — tushuvchi og'riq nazorati) tolalar esa intralaminar (CM, Pf) va medial talamus orqali oldingi belbog' pushtasi hamda orolchaga (insula) borib, og'riqning affektiv, azobli tomonini shakllantiradi."
     },
     "refs": ["als", "th-vpl", "th-cm", "bs-periaqueductal-grey-pag", "cingulate-gyrus", "insula"],
     "plate": "thalamus-coronal",
@@ -823,31 +823,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "A 29-year-old man sustains a penetrating stab wound to the RIGHT half of the cervical spinal cord at C6 (right spinal hemisection — `level: 'cord', side: 'R', zone: 'all'`, Brown-Séquard syndrome). Below C7–T1, what is the exact lateralization of his motor, dorsal-column, and spinothalamic deficits?",
-      "uz": "29 yoshli bemor bo'yin orqa miyasining C6 segmenti O'NG yarmidan pichoq jarohati oldi (orqa miyaning o'ng yarim kesilishi — `level: 'cord', side: 'R', zone: 'all'`, Brown-Séquard sindromi). Jarohat sathidan (C7–T1 dan) pastda harakat, orqa ustun va spinotalamik sezgi yo'qolishlari tananing qaysi tomonida namoyon bo'ladi?"
+      "en": "A 29-year-old man sustains a penetrating stab wound to the right half of the cervical spinal cord at C6 (right spinal hemisection, Brown-Séquard syndrome). Below C7–T1, what is the exact lateralization of his motor, dorsal-column, and spinothalamic deficits?",
+      "uz": "29 yoshli bemor bo'yin orqa miyasining C6 segmenti o'ng yarmidan pichoq jarohati oldi (orqa miyaning o'ng yarim kesilishi — Brown-Séquard sindromi). Jarohat sathidan (C7–T1 dan) pastda harakat, orqa ustun va spinotalamik sezgi yo'qolishlari tananing qaysi tomonida namoyon bo'ladi?"
     },
     "options": [
       {
-        "en": "Ipsilateral (RIGHT) spastic hemiparesis (crossed lateral CST) and ipsilateral (RIGHT) loss of vibration, fine touch, and joint position sense (uncrossed dorsal columns), with contralateral (LEFT) loss of pain and temperature beginning 1–2 segments below the lesion (already-crossed spinothalamic tract) plus ipsilateral C6 LMN signs and segmental anaesthesia",
-        "uz": "O'sha (O'NG) tomonda spastik falaj (allaqachon kesishgan lateral CST) va o'sha (O'NG) tomonda tebranish, nozik teginish hamda bo'g'im holati sezgisi yo'qolishi (hali kesishmagan orqa ustunlar); qarama-qarshi (CHAP) tomonda esa 1–2 segment pastdan boshlab og'riq va harorat sezgisi yo'qolishi (allaqachon kesishgan spinotalamik trakt)"
+        "en": "Right (ipsilateral) spastic hemiparesis and vibration/position loss, with left (contralateral) pain and temperature loss starting 1–2 segments below",
+        "uz": "O'ng (o'sha) tomonda spastik gemiparez va tebranish/holat yo'qolishi; chap (qarama-qarshi) tomonda 1–2 segment pastdan og'riq va harorat yo'qolishi"
       },
       {
-        "en": "Contralateral (LEFT) spastic hemiparesis, contralateral (LEFT) loss of vibration/position, and ipsilateral (RIGHT) loss of pain and temperature below C6",
-        "uz": "Qarama-qarshi (CHAP) tomonda spastik falaj va tebranish/holat yo'qolishi, o'sha (O'NG) tomonda esa og'riq va harorat yo'qolishi"
+        "en": "Left (contralateral) spastic hemiparesis and vibration/position loss, with right (ipsilateral) pain and temperature loss starting 1–2 segments below",
+        "uz": "Chap (qarama-qarshi) tomonda spastik gemiparez va tebranish/holat yo'qolishi; o'ng (o'sha) tomonda 1–2 segment pastdan og'riq va harorat yo'qolishi"
       },
       {
-        "en": "Ipsilateral (RIGHT) loss of all modalities (motor, vibration, and pain/temperature) on the right side only, with the left side completely normal",
-        "uz": "Faqat o'ng tomonda barcha harakat va sezgi turlarining yo'qolishi, chap tomon esa mutlaqo sog'lom"
+        "en": "Right (ipsilateral) spastic hemiparesis with bilateral cape-like pain and temperature loss, while vibration and joint position sense remain intact",
+        "uz": "O'ng (o'sha) tomonda spastik gemiparez va ikki tomonlama pelerin shaklida og'riq/harorat yo'qolishi; tebranish va bo'g'im holati sezgisi saqlangan"
       },
       {
-        "en": "Ipsilateral facial numbness and contralateral body pain loss with dysphagia and Horner syndrome",
-        "uz": "O'sha tomonda yuz uvishishi, qarama-qarshi tanada og'riq yo'qolishi, disfagiya va Horner sindromi"
+        "en": "Right (ipsilateral) loss of all motor, vibration, position, pain, and temperature modalities below C6, with completely preserved left-sided function",
+        "uz": "C6 dan pastda faqat o'ng tomonda barcha harakat, tebranish, holat, og'riq va harorat sezgilarining yo'qolishi; chap tomon esa mutlaqo normal"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In the lesion simulator (`signature({ level: 'cord', side: 'R', zone: 'all' })`), a right cervical cord hemisection cuts: (1) the right lateral CST (which crossed above in U1 → right/ipsilateral UMN weakness below), (2) the right dorsal columns (which have not yet crossed → right/ipsilateral loss of vibration and position sense below), and (3) the right spinothalamic tract (which already crossed 1–2 segments above its entry from the left body → left/contralateral loss of pain and temperature below), defining Brown-Séquard syndrome.",
-      "uz": "Shikastlanish simulyatorida (`level: 'cord', side: 'R', zone: 'all'`) o'ng bo'yin orqa miyasi yarim kesilganda (Brown-Séquard sindromi): (1) U1 da allaqachon kesishgan o'ng lateral CST uzilib, O'NG oyoq-qo'lda markaziy falaj beradi; (2) hali kesishmagan o'ng orqa ustunlar uzilib, O'NG tomonda tebranish va holat sezgisini yo'qotadi; (3) chap tanadan kirib allaqachon o'ng tomonga kesishib o'tgan spinotalamik trakt uzilib, CHAP tomonda (1–2 segment pastdan) og'riq va harorat sezgisini yo'qotadi."
+      "en": "A right C6 spinal hemisection (Brown-Séquard syndrome) cuts: (1) the right lateral CST (which already crossed at plate U1 → ipsilateral right UMN weakness below), (2) the right dorsal columns (which have not yet crossed → ipsilateral right loss of vibration, fine touch, and position sense below), and (3) the right spinothalamic tract (which already crossed 1–2 segments above its entry from the left body → contralateral left loss of pain and temperature starting 1–2 segments below), plus ipsilateral C6 segmental LMN signs and anaesthesia.",
+      "uz": "O'ng C6 bo'yin orqa miyasi yarim kesilganda (Brown-Séquard sindromi): (1) U1 da allaqachon kesishgan o'ng lateral CST uzilib, o'ng oyoq-qo'lda markaziy falaj beradi; (2) hali kesishmagan o'ng orqa ustunlar uzilib, o'ng tomonda tebranish va holat sezgisini yo'qotadi; (3) chap tanadan kirib allaqachon o'ng tomonga kesishib o'tgan spinotalamik trakt uzilib, chap tomonda 1–2 segment pastdan og'riq va harorat sezgisini yo'qotadi (hamda C6 darajasida o'ng segmentar LMN belgilari bo'ladi)."
     },
     "refs": ["lcst", "fg", "fc", "als", "wm-corticospinal-tract"],
     "plate": "medulla-pyramidal-decussation",
@@ -864,31 +864,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "In the reverse localization simulator (`localise()`), a patient has LEFT-body loss of pain and temperature (`path-als: 'L'`), RIGHT-face loss of pain and temperature (`path-v: 'R'`), and completely preserved motor strength (`path-cst: 'none'`) and vibration/position sense (`path-dcml: 'none'`), accompanied by right Horner syndrome, hoarseness/dysphagia (absent right gag reflex), vertigo/nystagmus, and right limb ataxia. Where is the lesion?",
-      "uz": "Teskari lokalizatsiya simulyatorida (`localise()`) bemorda tananing CHAP yarmida og'riq va harorat sezgisi yo'qolgan (`path-als: 'L'`), yuzning O'NG yarmida og'riq va harorat sezgisi yo'qolgan (`path-v: 'R'`), ammo oyoq-qo'l kuchi (`path-cst: 'none'`) hamda tebranish va bo'g'im holati sezgisi (`path-dcml: 'none'`) to'liq saqlangan. Qo'shimcha ravishda o'ngda Horner sindromi, disfagiya/xirillash, bosh aylanishi va o'ngda ataksiya bor. O'choq qayerda?"
+      "en": "A patient has left-body loss of pain and temperature, right-face loss of pain and temperature, and completely preserved motor strength and vibration/position sense, accompanied by right Horner syndrome, hoarseness and dysphagia (absent right gag reflex), vertigo/nystagmus, and right limb ataxia. Where is the lesion?",
+      "uz": "Bemorda tananing chap yarmida og'riq va harorat sezgisi yo'qolgan, yuzning o'ng yarmida og'riq va harorat sezgisi yo'qolgan, ammo oyoq-qo'l kuchi hamda tebranish va bo'g'im holati sezgisi to'liq saqlangan. Qo'shimcha ravishda o'ngda Horner sindromi, disfagiya/xirillash, bosh aylanishi va o'ngda ataksiya bor. O'choq qayerda?"
     },
     "options": [
       {
-        "en": "Right lateral medulla (`level: 'medulla-rostral', side: 'R', zone: 'lateral'`, plate U3) — right PICA / vertebral artery occlusion (Wallenberg syndrome)",
-        "uz": "O'ng uzunchoq miyaning lateral qismi (`level: 'medulla-rostral', side: 'R', zone: 'lateral'`, U3 plastinkasi) — o'ng PICA / umurtqa arteriyasi tiqilishi (Wallenberg sindromi)"
+        "en": "Right lateral medulla (plate U3) — right PICA or vertebral artery occlusion (Wallenberg syndrome)",
+        "uz": "O'ng lateral medulla (U3) — o'ng PICA yoki umurtqa arteriyasi infarkti (Wallenberg)"
       },
       {
-        "en": "Left paramedian medulla (`level: 'medulla-rostral', side: 'L', zone: 'medial'`, plate U3) — left anterior spinal artery occlusion (Dejerine syndrome)",
-        "uz": "Chap uzunchoq miyaning paramedian qismi (`level: 'medulla-rostral', side: 'L', zone: 'medial'`, U3 plastinkasi) — Dejerine sindromi"
+        "en": "Left paramedian medulla (plate U3) — left anterior spinal artery occlusion (Dejerine syndrome)",
+        "uz": "Chap paramedian uzunchoq miya (U3 plastinkasi) — chap oldingi spinal arteriya infarkti (Dejerine)"
       },
       {
-        "en": "Right ventral midbrain (`level: 'midbrain', side: 'R', zone: 'ventral'`, plate O2) — Weber syndrome",
-        "uz": "O'ng o'rta miyaning ventral qismi (`level: 'midbrain', side: 'R', zone: 'ventral'`, O2 plastinkasi) — Weber sindromi"
+        "en": "Right lateral pontomedullary junction (plate U4) — right AICA occlusion (lateral pontine syndrome)",
+        "uz": "O'ng lateral ko'prik-medulla chegarasi (U4 plastinkasi) — o'ng AICA infarkti (lateral pontin sindrom)"
       },
       {
-        "en": "Right VPL/VPM thalamus (`level: 'thalamus', side: 'R', zone: 'all'`, plate T1) — Dejerine–Roussy syndrome",
-        "uz": "O'ng talamusning VPL/VPM yadrolari (`level: 'thalamus', side: 'R', zone: 'all'`, T1 plastinkasi) — Dejerine–Roussy sindromi"
+        "en": "Right ventral midbrain crus cerebri (plate O2) — right PCA perforator occlusion (Weber syndrome)",
+        "uz": "O'ng ventral o'rta miya oyoqchasi (O2 plastinkasi) — o'ng PCA tarmog'i infarkti (Weber sindromi)"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In `lesions.ts`, `signature({ level: 'medulla-rostral', side: 'R', zone: 'lateral' })` gives `path-cst: 'none'`, `path-dcml: 'none'`, `path-als: 'L'`, `path-v: 'R'`. On plate U3, a right lateral medullary (Wallenberg) infarct hits the right spinothalamic tract (crossed from left body), right spinal V tract/nucleus (uncrossed from right face), right nucleus ambiguus (`amb` → dysphagia/hoarseness), right vestibular nuclei (`vn` → vertigo), right inferior cerebellar peduncle (`icp` → right ataxia), and right descending hypothalamospinal fibres (right Horner).",
-      "uz": "Shikastlanish simulyatorida `level: 'medulla-rostral', side: 'R', zone: 'lateral'` (U3 plastinkasi — o'ng lateral medullyar Wallenberg sindromi) aynan shu imzoni beradi: o'ng spinotalamik trakt (chap tanadan og'riq/harorat), o'ng spinal V trakt/yadro (o'ng yuzdan og'riq/harorat), o'ng ikki ma'noli yadro (`amb` — disfagiya va ovoz xirillashi), o'ng vestibulyar yadrolar (`vn` — bosh aylanishi), o'ng pastki miyacha oyoqchasi (`icp` — o'ng ataksiya) va tushuvchi simpatik tolalar (o'ng Horner) zararlanib, medialdagi piramida va medial lemnisk saqlanib qoladi."
+      "en": "On plate U3, a right lateral medullary (Wallenberg) infarct hits the right spinothalamic tract (already crossed from left body → left body pain/temp loss), right spinal trigeminal tract and nucleus (uncrossed from right face → right face pain/temp loss), right nucleus ambiguus (dysphagia, hoarseness, absent right gag), right vestibular nuclei (vertigo/nystagmus), right inferior cerebellar peduncle (right limb ataxia), and right descending hypothalamospinal fibres (right Horner), while sparing the medial pyramid and medial lemniscus.",
+      "uz": "U3 plastinkasidagi o'ng lateral uzunchoq miya infarkti (Wallenberg sindromi) o'ng spinotalamik traktni (chap tanadan og'riq/harorat), o'ng spinal trigeminal trakt/yadroni (o'ng yuzdan og'riq/harorat), o'ng ikki ma'noli yadroni (disfagiya va ovoz xirillashi), o'ng vestibulyar yadrolarni (bosh aylanishi), o'ng pastki miyacha oyoqchasini (o'ng ataksiya) va tushuvchi simpatik tolalarni (o'ng Horner) zararlaydi; medialdagi piramida va medial lemnisk esa saqlanib qoladi."
     },
     "refs": ["als", "sp5t", "sp5n", "amb", "vn", "icp", "posterior-inferior-cerebellar-artery"],
     "plate": "medulla-olive",
@@ -905,31 +905,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "A 67-year-old man presents with RIGHT spastic hemiparesis of the arm and leg (sparing the face), RIGHT loss of vibration, fine touch, and joint position sense, and deviation of the protruded tongue to the LEFT, while pain and temperature sensation are completely normal on both the face and body. In the lesion simulator, which territory is infarcted?",
-      "uz": "67 yoshli bemorda yuz saqlangan holda O'NG qo'l va oyoqning spastik gemiparezi, O'NG qo'l va oyoqda tebranish hamda bo'g'im holati sezgisining yo'qolishi va til chiqarilganda CHAP tomonga og'ishi aniqlandi; yuz va tanada og'riq hamda harorat sezgisi mutlaqo normal. Shikastlanish simulyatoriga ko'ra, o'choq qayerda joylashgan?"
+      "en": "A 67-year-old man presents with right spastic hemiparesis of the arm and leg (sparing the face), right loss of vibration, fine touch, and joint position sense, and deviation of the protruded tongue to the left, while pain and temperature sensation are completely normal on both the face and body. Which territory is infarcted?",
+      "uz": "67 yoshli bemorda yuz saqlangan holda o'ng qo'l va oyoqning spastik gemiparezi, o'ng qo'l va oyoqda tebranish hamda bo'g'im holati sezgisining yo'qolishi va til chiqarilganda chap tomonga og'ishi aniqlandi; yuz va tanada og'riq hamda harorat sezgisi mutlaqo normal. Qaysi sohada infarkt yuz bergan?"
     },
     "options": [
       {
-        "en": "Left paramedian (medial) medulla (`level: 'medulla-rostral', side: 'L', zone: 'medial'`, plate U3) — left anterior spinal artery occlusion (Dejerine medial medullary syndrome)",
-        "uz": "Chap uzunchoq miyaning paramedian (medial) qismi (`level: 'medulla-rostral', side: 'L', zone: 'medial'`, U3 plastinkasi) — chap oldingi orqa miya arteriyasi infarkti (Dejerine medial medullyar sindromi)"
+        "en": "Left paramedian medulla (plate U3) — anterior spinal artery occlusion (Dejerine syndrome)",
+        "uz": "Chap paramedian uzunchoq miya (U3) — oldingi spinal arteriya infarkti (Dejerine sindromi)"
       },
       {
-        "en": "Left lateral medulla (`level: 'medulla-rostral', side: 'L', zone: 'lateral'`, plate U3) — Wallenberg syndrome",
-        "uz": "Chap uzunchoq miyaning lateral qismi (`level: 'medulla-rostral', side: 'L', zone: 'lateral'`, U3 plastinkasi) — Wallenberg sindromi"
+        "en": "Left lateral medulla (plate U3) — posterior inferior cerebellar artery occlusion (Wallenberg)",
+        "uz": "Chap lateral uzunchoq miya (U3) — orqa pastki miyacha arteriyasi infarkti (Wallenberg)"
       },
       {
-        "en": "Left internal capsule genu (`level: 'capsule', side: 'L', zone: 'motor'`, plate B5)",
-        "uz": "Chap ichki kapsula tizzasi (`level: 'capsule', side: 'L', zone: 'motor'`, B5 plastinkasi)"
+        "en": "Left posterior limb of internal capsule (plate B5) — lenticulostriate artery lacunar infarct",
+        "uz": "Chap ichki kapsula orqa oyog'i (B5) — lentikulostriat arteriyaning lakunar infarkti"
       },
       {
-        "en": "Right cervical spinal cord hemisection (`level: 'cord', side: 'R', zone: 'all'`, plate U1) — Brown-Séquard syndrome",
-        "uz": "O'ng bo'yin orqa miyasi yarim kesilishi (`level: 'cord', side: 'R', zone: 'all'`, U1 plastinkasi) — Brown-Séquard sindromi"
+        "en": "Right cervical spinal cord hemisection (below plate U1) — ipsilateral Brown-Séquard syndrome",
+        "uz": "O'ng bo'yin orqa miyasining yarim kesilishi (U1 dan pastda) — Brown-Séquard sindromi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "In `lesions.ts`, `signature({ level: 'medulla-rostral', side: 'L', zone: 'medial' })` gives `path-cst: 'R'`, `path-dcml: 'R'`, `path-als: 'none'`, `path-v: 'none'`, plus ipsilateral (`L`) CN XII sign (`cn12`). On plate U3, a left paramedian medullary infarct (anterior spinal artery) hits the left pyramid (above the decussation → right body weakness sparing face), left medial lemniscus (already crossed → right body vibration/position loss), and exiting left hypoglossal nerve rootlets (`n12-root` → tongue deviates toward the left lesion).",
-      "uz": "U3 plastinkasida chap paramedian uzunchoq miya infarkti (Dejerine sindromi — `level: 'medulla-rostral', side: 'L', zone: 'medial'`) chap piramidani (o'ng qo'l-oyoq gemiparezi, yuz saqlangan), chap medial lemniskni (o'ng tomonda tebranish va holat sezgisi yo'qolishi) hamda chap til osti nervi tolalarini (`n12-root` — til o'choq tomonga, ya'ni chapga og'adi) zararlaydi; lateraldagi spinotalamik trakt saqlanadi."
+      "en": "On plate U3, a left paramedian (medial) medullary infarct (anterior spinal artery, Dejerine syndrome) hits the left medullary pyramid (above the decussation → right arm and leg spastic hemiparesis sparing the face), left medial lemniscus (already crossed → right body vibration and position loss), and exiting left hypoglossal nerve rootlets (LMN weakness causing the protruded tongue to deviate toward the left lesion), while sparing the lateral spinothalamic tract.",
+      "uz": "U3 plastinkasida chap paramedian uzunchoq miya infarkti (oldingi spinal arteriya, Dejerine sindromi) chap piramidani (yuz saqlangan holda o'ng qo'l-oyoq gemiparezi), chap medial lemniskni (o'ng tomonda tebranish va holat sezgisi yo'qolishi) hamda chap til osti nervi ildizchalarini (til o'choq tomonga, ya'ni chapga og'adi) zararlaydi; lateraldagi spinotalamik trakt esa saqlanadi."
     },
     "refs": ["pyramid", "ml", "n12", "n12-root", "bs-pyramid-of-medulla-oblongata", "wm-medial-lemniscus"],
     "plate": "medulla-olive",
@@ -946,31 +946,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "In the reverse localization simulator (`localise({ 'path-cst': 'R', 'path-dcml': 'none', 'path-als': 'none', 'path-v': 'none' })`), isolated RIGHT-sided corticospinal weakness without any sensory tract deficit matches four unilateral levels on the LEFT: (1) motor cortex, (2) internal capsule anterior posterior limb, (3) ventral midbrain (crus cerebri), and (4) ventral basis pontis. What accompanying clinical features distinguish these four sites from one another?",
-      "uz": "Teskari lokalizatsiya simulyatorida sezgi yo'llari butunlay saqlangan holda faqat O'NG tomonlama kortikospinal falajlik (`path-cst: 'R'`) CHAP tomondagi to'rtta darajaga mos keladi: (1) harakat po'stlog'i, (2) ichki kapsula, (3) ventral o'rta miya (oyoqcha) va (4) ko'prik asosi. Ushbu to'rtta joyni bir-biridan qaysi qo'shimcha klinik belgilar ajratib beradi?"
+      "en": "Isolated right-sided corticospinal weakness without any sensory tract deficit can localize to four unilateral sites on the left: (1) motor cortex, (2) internal capsule, (3) ventral midbrain (crus cerebri), and (4) ventral basis pontis. What accompanying clinical features distinguish these four sites from one another?",
+      "uz": "Sezgi yo'llari butunlay saqlangan holda faqat o'ng tomonlama kortikospinal falajlik chap tomondagi to'rtta darajaga mos kelishi mumkin: (1) harakat po'stlog'i, (2) ichki kapsula, (3) ventral o'rta miya (oyoqcha) va (4) ko'prik asosi. Ushbu to'rtta joyni bir-biridan qaysi qo'shimcha klinik belgilar ajratib beradi?"
     },
     "options": [
       {
-        "en": "(1) Motor cortex: unequal weakness (leg-predominant in ACA vs face+arm with aphasia in left MCA); (2) Internal capsule: equal dense face–arm–leg pure motor hemiparesis without cranial nerve or cortical signs; (3) Ventral midbrain (Weber): plus ipsilateral (left) CN III palsy (ptosis, eye down/out, blown pupil); (4) Ventral pons: dysarthria–clumsy hand / ataxic hemiparesis (pontocerebellar fibres) or ipsilateral CN VI/VII palsy (Millard–Gubler)",
-        "uz": "(1) Harakat po'stlog'i: notekis falaj (ACA da oyoq ustun, chap MCA da yuz+qo'l va afaziya); (2) Ichki kapsula: kalla nervi va po'stloq belgilarisiz yuz–qo'l–oyoqning teng 'sof harakat' gemiparezi; (3) Ventral o'rta miya (Weber): qo'shimcha chap III nerv falaji (ptoz, qorachiq kengayishi); (4) Ko'prik asosi: ataktik gemiparez / dizartriya–noqulay qo'l yoki chap VI/VII nerv falaji (Millard–Gubler)"
+        "en": "Cortex: unequal leg vs face/arm + aphasia; capsule: equal pure motor; midbrain: left CN III palsy; pons: ataxia/dysarthria or left CN VI/VII palsy",
+        "uz": "Po'stloq: notekis falaj + afaziya; kapsula: teng sof harakat; o'rta miya: chap III falaji; ko'prik: ataktik gemiparez yoki chap VI/VII falaji"
       },
       {
-        "en": "(1) Motor cortex causes ipsilateral Horner; (2) Capsule causes tongue atrophy; (3) Midbrain causes deafness; (4) Pons causes bitemporal hemianopia",
-        "uz": "(1) Po'stloq Horner sindromi beradi; (2) Kapsula til atrofiyasi beradi; (3) O'rta miya karlik beradi; (4) Ko'prik bitemporal gemianopiya beradi"
+        "en": "Cortex: equal face–arm–leg weakness; capsule: Broca aphasia + gaze deviation; midbrain: left CN XII palsy; pons: left CN III palsy with blown pupil",
+        "uz": "Po'stloq: yuz–qo'l–oyoq teng falaji; kapsula: Broka afaziyasi; o'rta miya: chap XII falaji; ko'prik: qorachiq kengayishi bilan chap III falaji"
       },
       {
-        "en": "All four sites produce identical clinical findings and cannot be distinguished without a spinal tap",
-        "uz": "To'rtala daraja ham bir xil klinik manzara beradi va ularni klinik ko'rikda farqlab bo'lmaydi"
+        "en": "Cortex: ipsilateral Horner syndrome; capsule: contralateral homonymous hemianopia; midbrain: sensorineural deafness; pons: vertical up-gaze palsy",
+        "uz": "Po'stloq: o'sha tomonda Horner sindromi; kapsula: gomonom gemianopiya; o'rta miya: bir tomonlama karlik; ko'prik: yuqoriga qarash falaji"
       },
       {
-        "en": "(1) Motor cortex spares the lower face; (3) Ventral midbrain paralyses only the ipsilateral leg",
-        "uz": "(1) Harakat po'stlog'i yuzning pastki qismini saqlaydi; (3) Ventral o'rta miya faqat o'sha tomon oyoqni falajlaydi"
+        "en": "Cortex: pure lower-face sparing; capsule: ipsilateral limb ataxia only; midbrain: bilateral palatal tremor; pons: contralateral sensory extinction",
+        "uz": "Po'stloq: pastki yuz saqlanishi; kapsula: faqat o'sha tomon ataksiyasi; o'rta miya: tanglay tremori; ko'prik: qarama-qarshi sezgi so'nishi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As designed in `lesions.ts` (`localise`), long-tract findings alone (`path-cst: 'R'`) return multiple candidate levels (`cortex/motor`, `capsule/motor`, `midbrain/ventral`, `pons/ventral`), teaching why cranial-nerve and cortical signs (`extra` and `CRANIAL_SIGNS`) are essential: cortical strokes split face/arm (MCA + aphasia/neglect) from leg (ACA); capsular lacunes give equal face–arm–leg pure motor hemiparesis; ventral midbrain adds ipsilateral CN III palsy (Weber); ventral pons adds pontocerebellar ataxia/dysarthria or CN VI/VII palsy (Millard–Gubler).",
-      "uz": "`lesions.ts` dagi teskari rejim aynan shuni ko'rsatadi: faqat uzun yo'l belgisi (`path-cst: 'R'`) to'rtta nomzodni (`cortex/motor`, `capsule/motor`, `midbrain/ventral`, `pons/ventral`) qaytaradi; aniq darajani topish uchun esa qo'shimcha belgilar hal qiluvchi ahamiyatga ega: po'stloqda — afaziya va qo'l/oyoq farqi, ichki kapsulada — teng 'sof harakat lakunasi', o'rta miyada — o'sha tomonda III nerv falaji (Weber), ko'prikda — VI/VII falaji (Millard–Gubler) yoki ataktik gemiparez."
+      "en": "Isolated contralateral corticospinal weakness requires accompanying cortical or cranial-nerve signs to localize the level: cortical strokes split face/arm (left MCA + aphasia) from leg (ACA); capsular lacunes produce equal face–arm–leg pure motor hemiparesis without cortical or cranial-nerve signs; ventral midbrain infarcts add ipsilateral CN III palsy (Weber syndrome); and ventral pontine infarcts add pontocerebellar ataxia/dysarthria (ataxic hemiparesis or dysarthria–clumsy hand) or ipsilateral CN VI/VII palsy (Millard–Gubler).",
+      "uz": "Faqat qarama-qarshi kortikospinal zaiflikning o'zi bilan aniq darajani topish uchun qo'shimcha belgilar hal qiluvchi ahamiyatga ega: po'stloqda — afaziya va qo'l/oyoq farqi (ACA da oyoq ustun, chap MCA da yuz+qo'l va afaziya); ichki kapsulada — kalla nervi va po'stloq belgilarisiz teng sof harakat lakunasi; ventral o'rta miyada — o'sha tomonda III nerv falaji (Weber); ko'prik asosida — ataktik gemiparez / dizartriya–noqulay qo'l yoki o'sha tomonda VI/VII falaji (Millard–Gubler)."
     },
     "refs": ["precentral-gyrus", "ic-pl", "cst-ic", "crus-cst", "n3-root", "basis-cst", "n7-root", "n6-root"],
     "plate": "midbrain-superior-colliculus",
@@ -991,31 +991,31 @@
     "topic": "pathways",
     "type": "mcq",
     "q": {
-      "en": "Six months after a large left internal capsule infarct (plate B5), follow-up brain MRI shows T2 hyperintensity and asymmetric shrinkage (atrophy) down the middle three-fifths of the left crus cerebri (plate O2), the left basis pontis (plate K2), and the left medullary pyramid (plate U3). What is this process, and how is diffusion tensor imaging (DTI) of this tract at 1–2 weeks post-stroke used clinically?",
+      "en": "Six months after a large left internal capsule infarct (plate B5), follow-up brain MRI shows T2 hyperintensity and asymmetric shrinkage down the middle three-fifths of the left crus cerebri (plate O2), the left basis pontis (plate K2), and the left medullary pyramid (plate U3). What is this process, and how is diffusion tensor imaging (DTI) of this tract at 1–2 weeks post-stroke used clinically?",
       "uz": "Chap ichki kapsulaning yirik infarktidan (B5 plastinkasi) olti oy o'tgach o'tkazilgan MRTda chap miya oyoqchasining o'rta qismi (O2), chap ko'prik asosi (K2) va chap uzunchoq miya piramidasi (U3) bo'ylab T2 giperintensivlik hamda kichrayish (atrofiya) aniqlandi. Bu jarayon nima deb ataladi va insultdan 1–2 hafta keyin ushbu traktning DTI ko'rsatkichi klinikada nimani bashorat qiladi?"
     },
     "options": [
       {
-        "en": "Wallerian (anterograde) degeneration of the descending corticospinal tract distal to the capsular lesion; early fractional anisotropy (FA) asymmetry of the posterior limb on DTI (combined with TMS motor evoked potentials in the PREP2 algorithm) predicts upper-limb motor recovery",
-        "uz": "Kapsula o'chog'idan pastdagi kortikospinal yo'lning Waller (anterograd) degeneratsiyasi; insultdan 1–2 hafta keyin DTI da ichki kapsula orqa oyog'ining fraksion anizotropiyasi (FA) asimmetriyasi (MEP bilan PREP2 algoritmida) qo'l harakati tiklanishini bashorat qiladi"
+        "en": "Wallerian degeneration of the corticospinal tract; early posterior-limb fractional anisotropy (FA) asymmetry on DTI predicts upper-limb motor recovery",
+        "uz": "Kortikospinal yo'lning Waller degeneratsiyasi; ichki kapsula orqa oyog'idagi erta DTI FA asimmetriyasi qo'l tiklanishini bashorat qiladi"
       },
       {
-        "en": "Hypertrophic olivary degeneration of the Guillain–Mollaret triangle causing palatal myoclonus",
-        "uz": "Guillain–Mollaret uchburchagida tanglay mioklonusini chaqiruvchi gipertrofik zaytun degeneratsiyasi"
+        "en": "Hypertrophic olivary degeneration of the Guillain–Mollaret triangle; early brainstem diffusivity predicts delayed palatal myoclonus and ocular tremor",
+        "uz": "Guillain–Mollaret uchburchagida gipertrofik zaytun degeneratsiyasi; erta miya ustuni diffuziyasi kechikkan tanglay mioklonusi va ko'z tremorini bashorat qiladi"
       },
       {
-        "en": "Retrograde trans-synaptic degeneration of the contralateral dorsal column nuclei",
-        "uz": "Qarama-qarshi orqa ustun yadrolarining retrograd transsinaptik degeneratsiyasi"
+        "en": "Retrograde trans-synaptic degeneration of the dorsal column nuclei; early lemniscal FA asymmetry predicts recovery of discriminative hand stereognosis",
+        "uz": "Orqa ustun yadrolarining retrograd transsinaptik degeneratsiyasi; erta lemnisk FA asimmetriyasi kaftdagi farqlovchi stereognoz tiklanishini bashorat qiladi"
       },
       {
-        "en": "Active multiple sclerosis dissemination in time (McDonald DIT) requiring corticosteroid pulse therapy",
-        "uz": "Tarqoq sklerozning vaqt bo'yicha tarqalishi (McDonald DIT)"
+        "en": "Secondary demyelinating plaque extension along the basis pontis; early axial diffusivity drop predicts response to high-dose intravenous corticosteroids",
+        "uz": "Ko'prik asosi bo'ylab ikkilamchi demiyelinizatsiya o'chog'i kengayishi; erta aksial diffuziya pasayishi kortikosteroid puls-terapiyasiga javobni bashorat qiladi"
       }
     ],
     "answer": 0,
     "why": {
-      "en": "As noted in `CST` (`crus`) and plate B5 (`Wallerian degeneration and DTI`), when upper motor neuron axons are transected in the internal capsule, their distal segments degenerate down the ipsilateral crus cerebri, basis pontis, and medullary pyramid (Wallerian degeneration). Early loss of fractional anisotropy (FA) along the posterior limb corticospinal fibres at 1–2 weeks quantifies tract integrity and predicts motor recovery (e.g. PREP2 algorithm).",
-      "uz": "`CST` (`crus`) va B5 plastinkasida ko'rsatilganidek, ichki kapsula insultidan so'ng uzilgan aksonlarning pastki davomi — o'sha tomondagi miya oyoqchasi, ko'prik asosi va piramida bo'ylab Waller degeneratsiyasiga uchraydi (MRTda T2 signal kuchayishi va oyoqcha kichrayishi). Insultdan 1–2 hafta o'tib DTI da orqa oyoq fraksion anizotropiyasi (FA) pasayishi harakat tiklanishi prognozini (PREP2 algoritmi) belgilab beradi."
+      "en": "When upper motor neuron axons are transected in the internal capsule (plate B5), their distal segments undergo anterograde Wallerian degeneration down the ipsilateral crus cerebri, basis pontis, and medullary pyramid, producing T2 hyperintensity and atrophy on follow-up MRI. Early loss of fractional anisotropy (FA) along the posterior limb corticospinal fibres at 1–2 weeks post-stroke quantifies tract integrity and, combined with TMS motor evoked potentials (PREP2 algorithm), predicts upper-limb motor recovery.",
+      "uz": "Ichki kapsula (B5 plastinkasi) insultidan so'ng uzilgan aksonlarning pastki davomi o'sha tomondagi miya oyoqchasi, ko'prik asosi va piramida bo'ylab anterograd Waller degeneratsiyasiga uchraydi (MRTda T2 signal kuchayishi va oyoqcha kichrayishi). Insultdan 1–2 hafta o'tib DTI da ichki kapsula orqa oyog'i fraksion anizotropiyasi (FA) pasayishi trakt butunligini baholab, TMS motor javoblari (PREP2 algoritmi) bilan birga qo'l harakati tiklanishini bashorat qiladi."
     },
     "refs": ["ic-pl", "cst-ic", "crus-cst", "basis-cst", "pyramid", "wm-corticospinal-tract"],
     "plate": "bg-capsule-axial",

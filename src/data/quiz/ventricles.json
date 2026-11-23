@@ -18,8 +18,8 @@
         "uz": "Uchta (bitta o'rta chiziqdagi yon qorincha, uchinchi qorincha va to'rtinchi qorincha)"
       },
       {
-        "en": "Two (a supratentorial cavity and an infratentorial cavity)",
-        "uz": "Ikkita (chodir usti bo'shlig'i va chodir osti bo'shlig'i)"
+        "en": "Two (a paired supratentorial lateral cavity and a single infratentorial cavity)",
+        "uz": "Ikkita (juft chodir usti yon bo'shlig'i va bitta chodir osti bo'shlig'i)"
       },
       {
         "en": "Five (two lateral ventricles, a paired third ventricle, and the fourth ventricle)",
@@ -50,20 +50,20 @@
     },
     "options": [
       {
-        "en": "Interventricular foramen (of Monro)",
-        "uz": "Qorinchalararo teshik (Monro teshigi)"
+        "en": "Interventricular foramen of Monro",
+        "uz": "Qorinchalararo Monro teshigi"
       },
       {
-        "en": "Cerebral aqueduct (of Sylvius)",
-        "uz": "Miya suv yo'li (Silviy suv yo'li)"
+        "en": "Cerebral aqueduct of Sylvius",
+        "uz": "Silviy miya suv yo'li"
       },
       {
-        "en": "Median aperture (of Magendie)",
-        "uz": "O'rta teshik (Magendie teshigi)"
+        "en": "Median aperture of Magendie",
+        "uz": "O'rta Magendie teshigi"
       },
       {
-        "en": "Lateral aperture (of Luschka)",
-        "uz": "Yon teshik (Luschka teshigi)"
+        "en": "Lateral aperture of Luschka",
+        "uz": "Yon Luschka teshigi"
       }
     ],
     "answer": 0,
@@ -132,20 +132,20 @@
     },
     "options": [
       {
-        "en": "Frontal (anterior) horn, body, atrium (trigone), occipital (posterior) horn, and temporal (inferior) horn",
-        "uz": "Oldingi (frontal) shox, tana, bo'lma (atrium), orqa (ensa) shox va pastki (chakka) shox"
+        "en": "Frontal horn, body, atrium, occipital horn, and temporal horn",
+        "uz": "Frontal shox, tana, bo'lma, ensa shoxi va chakka shoxi"
       },
       {
-        "en": "Rostrum, genu, body, splenium, and atrium",
-        "uz": "Tumshuq, tizza, tana, qalinlashma (splenium) va bo'lma"
+        "en": "Rostrum, genu, central body, splenium, and ventricular atrium",
+        "uz": "Tumshuq, tizza, markaziy tana, splenium va yon bo'lma"
       },
       {
-        "en": "Head, body, tail, atrium, and infundibular recess",
-        "uz": "Bosh, tana, dum, bo'lma va infundibulyar cho'ntak"
+        "en": "Anterior head, central body, curved tail, atrium, and recess",
+        "uz": "Oldingi bosh, markaziy tana, egri dum, bo'lma va cho'ntak"
       },
       {
-        "en": "Frontal horn, parietal horn, insular horn, occipital horn, and cerebellar horn",
-        "uz": "Frontal shox, tepa shoxi, orolcha shoxi, ensa shoxi va miyacha shoxi"
+        "en": "Frontal horn, parietal horn, insular horn, occipital horn, and temporal horn",
+        "uz": "Frontal shox, tepa shoxi, orolcha shoxi, ensa shoxi va chakka shoxi"
       }
     ],
     "answer": 0,
@@ -174,19 +174,19 @@
     "options": [
       {
         "en": "Choroid plexus",
-        "uz": "Tomirli chigal (plexus choroideus)"
+        "uz": "Tomirli chigal"
       },
       {
-        "en": "Arachnoid granulations (Pacchionian bodies)",
-        "uz": "Araxnoidal donachalar (Pachioni tanachalari)"
+        "en": "Arachnoid granulations",
+        "uz": "Araxnoidal donachalar"
       },
       {
         "en": "Septum pellucidum",
-        "uz": "Shaffof to'siq (septum pellucidum)"
+        "uz": "Shaffof to'siq"
       },
       {
         "en": "Superior medullary velum",
-        "uz": "Yuqori miya pardasi (velum medullare superius)"
+        "uz": "Yuqori miya pardasi"
       }
     ],
     "answer": 0,
@@ -213,20 +213,20 @@
     },
     "options": [
       {
-        "en": "Frontal (anterior) horn and occipital (posterior) horn",
-        "uz": "Oldingi (frontal) shox va orqa (ensa) shox"
+        "en": "Frontal horn and occipital horn",
+        "uz": "Frontal shox va ensa shoxi"
       },
       {
-        "en": "Body and atrium (trigone)",
-        "uz": "Tana va bo'lma (atrium)"
+        "en": "Central body and ventricular atrium",
+        "uz": "Markaziy tana va yon bo'lma"
       },
       {
-        "en": "Temporal (inferior) horn and atrium",
-        "uz": "Pastki (chakka) shox va bo'lma"
+        "en": "Temporal horn and ventricular atrium",
+        "uz": "Chakka shoxi va yon bo'lma"
       },
       {
-        "en": "Body and temporal (inferior) horn",
-        "uz": "Tana va pastki (chakka) shox"
+        "en": "Central body and temporal horn",
+        "uz": "Markaziy tana va chakka shoxi"
       }
     ],
     "answer": 0,
@@ -253,20 +253,20 @@
     },
     "options": [
       {
-        "en": "One median aperture (of Magendie) and two lateral apertures (of Luschka)",
-        "uz": "Bitta o'rta teshik (Magendie) va ikkita yon teshik (Luschka)"
+        "en": "One median aperture of Magendie and two lateral apertures of Luschka",
+        "uz": "Bitta o'rta Magendie teshigi va ikkita yon Luschka teshigi"
       },
       {
-        "en": "Two interventricular foramina (of Monro) and the cerebral aqueduct",
-        "uz": "Ikkita qorinchalararo teshik (Monro) va miya suv yo'li"
+        "en": "Two interventricular foramina of Monro and one cerebral aqueduct of Sylvius",
+        "uz": "Ikkita qorinchalararo Monro teshigi va bitta Silviy suv yo'li"
       },
       {
-        "en": "Two median apertures (of Luschka) and one lateral aperture (of Magendie)",
-        "uz": "Ikkita o'rta teshik (Luschka) va bitta yon teshik (Magendie)"
+        "en": "Two median apertures of Luschka and one lateral aperture of Magendie",
+        "uz": "Ikkita o'rta Luschka teshigi va bitta yon Magendie teshigi"
       },
       {
-        "en": "The obex and the infundibular recess",
-        "uz": "Obex va infundibulyar cho'ntak"
+        "en": "One caudal obex aperture and two paired infundibular recesses",
+        "uz": "Bitta kaudal obex teshigi va ikkita juft infundibulyar cho'ntak"
       }
     ],
     "answer": 0,
@@ -299,11 +299,11 @@
       },
       {
         "en": "Caudate nucleus and putamen",
-        "uz": "Dumli yadro va qobiq (putamen)"
+        "uz": "Dumli yadro va qobiq"
       },
       {
         "en": "Hippocampus and amygdala",
-        "uz": "Gippokamp va bodomsimon tana (amigdala)"
+        "uz": "Gippokamp va amigdala"
       },
       {
         "en": "Globus pallidus and claustrum",
@@ -336,10 +336,10 @@
     "options": [
       {
         "en": "Arachnoid granulations projecting into the superior sagittal sinus",
-        "uz": "Yuqori sagittal sinusga chiqib turgan araxnoidal donachalarda (Pachioni)"
+        "uz": "Yuqori sagittal sinusga chiqib turgan araxnoidal donachalarda"
       },
       {
-        "en": "Choroid plexus glomus in the atrium of the lateral ventricle",
+        "en": "Choroid plexus glomus in the lateral ventricular atrium",
         "uz": "Yon qorincha bo'lmasidagi tomirli chigal glomusida"
       },
       {
@@ -347,8 +347,8 @@
         "uz": "To'rtinchi qorinchaning pastki uchidagi area postremada"
       },
       {
-        "en": "Median eminence of the hypothalamic floor",
-        "uz": "Gipotalamus tubidagi median bo'rtmada"
+        "en": "Median eminence along the floor of the third ventricle",
+        "uz": "Uchinchi qorincha tubidagi median bo'rtma sohasida"
       }
     ],
     "answer": 0,
@@ -376,15 +376,15 @@
     "options": [
       {
         "en": "Corpus callosum",
-        "uz": "Qadoqsimon tana (corpus callosum)"
+        "uz": "Qadoqsimon tana"
       },
       {
-        "en": "Fornix",
-        "uz": "Gumbaz (fornix)"
+        "en": "Body of the fornix",
+        "uz": "Fornix tanasi"
       },
       {
-        "en": "Hippocampus",
-        "uz": "Gippokamp"
+        "en": "Hippocampal formation",
+        "uz": "Gippokamp tuzilmasi"
       },
       {
         "en": "Internal capsule",
@@ -425,11 +425,11 @@
       },
       {
         "en": "Putamen",
-        "uz": "Qobiq (putamen)"
+        "uz": "Putamen"
       },
       {
         "en": "Septum pellucidum",
-        "uz": "Shaffof to'siq (septum pellucidum)"
+        "uz": "Shaffof to'siq"
       }
     ],
     "answer": 0,
@@ -461,7 +461,7 @@
         "uz": "Oldinda fornix ustuni va orqada talamusning oldingi qutbi"
       },
       {
-        "en": "Genu of the corpus callosum anteriorly and head of the caudate posteriorly",
+        "en": "Genu of the corpus callosum anteriorly and caudate head posteriorly",
         "uz": "Oldinda qadoqsimon tana tizzasi va orqada dumli yadro boshi"
       },
       {
@@ -469,7 +469,7 @@
         "uz": "Oldinda oldingi komissura va orqada oxirgi plastinka (lamina terminalis)"
       },
       {
-        "en": "Septum pellucidum anteriorly and splenium posteriorly",
+        "en": "Septum pellucidum anteriorly and callosal splenium posteriorly",
         "uz": "Oldinda shaffof to'siq va orqada qadoqsimon tana spleniumi"
       }
     ],
@@ -538,16 +538,16 @@
     },
     "options": [
       {
-        "en": "Dilated lateral and third ventricles with a normal-sized fourth ventricle (triventricular hydrocephalus)",
-        "uz": "Yon va uchinchi qorinchalar kengaygan, to'rtinchi qorincha esa normal o'lchamda (uch qorinchali gidrotsefaliya)"
+        "en": "Dilated lateral and third ventricles with a normal-sized fourth ventricle",
+        "uz": "Yon va uchinchi qorinchalar kengaygan, to'rtinchi qorincha esa normal"
       },
       {
-        "en": "Dilated lateral, third, and fourth ventricles equally (panventricular dilatation)",
-        "uz": "Yon, uchinchi va to'rtinchi qorinchalar bir xilda kengaygan"
+        "en": "Symmetric dilatation of lateral, third, and fourth ventricles together",
+        "uz": "Yon, uchinchi va to'rtinchi qorinchalar bir xilda simmetrik kengaygan"
       },
       {
         "en": "Isolated dilatation of the fourth ventricle with small lateral ventricles",
-        "uz": "Yon qorinchalar kichik bo'lib, faqat to'rtinchi qorincha alohida kengaygan"
+        "uz": "Yon qorinchalar kichik qolib, faqat to'rtinchi qorincha alohida kengaygan"
       },
       {
         "en": "Dilatation of one lateral ventricle only, with normal third and fourth ventricles",
@@ -619,20 +619,20 @@
     },
     "options": [
       {
-        "en": "Glomus of the choroid plexus in the atrium (trigone) of the lateral ventricle",
-        "uz": "Yon qorincha bo'lmasidagi (atriumdagi) tomirli chigal glomusida"
+        "en": "Glomus of the choroid plexus in the ventricular atrium",
+        "uz": "Yon qorincha bo'lmasidagi tomirli chigal glomusida"
       },
       {
-        "en": "Tip of the frontal horn of the lateral ventricle",
-        "uz": "Yon qorinchaning oldingi (frontal) shoxi uchida"
+        "en": "Anterior tip of the frontal horn of the lateral ventricle",
+        "uz": "Yon qorincha oldingi (frontal) shoxining uchida"
       },
       {
-        "en": "Cerebral aqueduct of Sylvius",
-        "uz": "Silviy suv yo'lida"
+        "en": "Rostral opening of the cerebral aqueduct of Sylvius",
+        "uz": "Silviy suv yo'lining uchinchi qorinchaga kirish qismida"
       },
       {
-        "en": "Optic recess of the third ventricle",
-        "uz": "Uchinchi qorinchaning ko'rish cho'ntagida"
+        "en": "Optic and infundibular recesses of the third ventricle",
+        "uz": "Uchinchi qorinchaning ko'rish va voronka cho'ntaklarida"
       }
     ],
     "answer": 0,
@@ -660,20 +660,20 @@
     },
     "options": [
       {
-        "en": "Stria terminalis and thalamostriate vein (joining the septal vein at the venous angle)",
-        "uz": "Stria terminalis va talamostriar vena (venoz burchakda septal vena bilan qo'shiladi)"
+        "en": "Stria terminalis and superior thalamostriate vein (venous angle)",
+        "uz": "Stria terminalis va yuqori talamostriar vena (venoz burchak)"
       },
       {
         "en": "Stria medullaris thalami and great cerebral vein of Galen",
-        "uz": "Talamusning miya yo'li (stria medullaris) va Galenning katta miya venasi"
+        "uz": "Talamusning miya yo'li va Galenning katta miya venasi"
       },
       {
         "en": "Mammillothalamic tract and basal vein of Rosenthal",
         "uz": "Mamillotalamik trakt va Rozentalning bazal venasi"
       },
       {
-        "en": "Ansa lenticularis and superior sagittal sinus",
-        "uz": "Yasmiqsimon halqa (ansa lenticularis) va yuqori sagittal sinus"
+        "en": "Ansa lenticularis and superior sagittal venous sinus",
+        "uz": "Yasmiqsimon halqa va yuqori sagittal venoz sinus"
       }
     ],
     "answer": 0,
@@ -701,19 +701,19 @@
     },
     "options": [
       {
-        "en": "Disproportionate enlargement of the occipital horns of the lateral ventricles, accompanying agenesis of the corpus callosum",
-        "uz": "Yon qorinchalar orqa (ensa) shoxlarining nomutanosib kattalashishi bo'lib, qadoqsimon tana agenezida uchraydi"
+        "en": "Selective occipital horn enlargement in corpus callosum agenesis",
+        "uz": "Qadoqsimon tana agenezida ensa shoxlarining nomutanosib kengayishi"
       },
       {
-        "en": "Cystic dilatation of the fourth ventricle with vermian hypoplasia in Dandy–Walker malformation",
-        "uz": "Dandy–Walker nuqsonida chuvalchang gipoplaziyasi bilan IV qorinchaning kistasimon kengayishi"
+        "en": "Cystic fourth-ventricle dilatation with vermian hypoplasia in Dandy–Walker",
+        "uz": "Dandy–Walker nuqsonida chuvalchang gipoplaziyasi bilan IV qorincha kengayishi"
       },
       {
-        "en": "Flattening of the lateral wall of the frontal horns ('boxcar' ventricles) in Huntington disease",
-        "uz": "Huntington kasalligida frontal shoxlar yon devorining yassilanishi ('quti' qorinchalar)"
+        "en": "Flattening of frontal horn walls ('boxcar' ventricles) in Huntington disease",
+        "uz": "Huntington kasalligida frontal shoxlar yon devorining yassilanishi ('quti' shakl)"
       },
       {
-        "en": "Herniation of the fourth ventricle and cerebellar tonsils below the foramen magnum",
+        "en": "Downward herniation of the fourth ventricle and tonsils below the foramen magnum",
         "uz": "To'rtinchi qorincha va miyacha bodomchalarining katta teshikdan pastga tushishi"
       }
     ],
@@ -742,8 +742,8 @@
     },
     "options": [
       {
-        "en": "At the obex (transition from closed caudal medulla to open mid-olivary medulla, U3)",
-        "uz": "Obex darajasida (yopiq kaudal uzunchoq miyadan ochiq o'rta zaytun darajasiga o'tish joyi, U3)"
+        "en": "At the obex (closed-to-open medulla transition, U3)",
+        "uz": "Obex darajasida (yopiq va ochiq uzunchoq miya chegarasi, U3)"
       },
       {
         "en": "At the pyramidal decussation (medulla–cord junction, U1)",
@@ -788,15 +788,15 @@
       },
       {
         "en": "Pineal gland",
-        "uz": "Epifiz (pineal bez)"
+        "uz": "Epifiz bezi"
       },
       {
         "en": "Facial colliculus",
-        "uz": "Yuz do'ngligi (colliculus facialis)"
+        "uz": "Yuz do'ngligi"
       },
       {
         "en": "Habenula",
-        "uz": "Habenula (yuganak)"
+        "uz": "Habenula"
       }
     ],
     "answer": 0,
@@ -824,19 +824,19 @@
     },
     "options": [
       {
-        "en": "At the interventricular foramina of Monro (colloid cyst blocking both lateral ventricular outlets)",
-        "uz": "Qorinchalararo Monro teshiklarida (ikkala yon qorincha chiqishini to'sib qo'ygan kolloid kista)"
+        "en": "Interventricular foramina of Monro (colloid cyst obstructing both outlets)",
+        "uz": "Monro qorinchalararo teshiklarida (ikkala chiqishni to'sgan kolloid kista)"
       },
       {
-        "en": "In the cerebral aqueduct of Sylvius (pineal germinoma compressing the midbrain tectum)",
+        "en": "Cerebral aqueduct of Sylvius (pineal germinoma compressing the midbrain tectum)",
         "uz": "Silviy suv yo'lida (o'rta miya tektumini bosuvchi pineal germinoma)"
       },
       {
-        "en": "At the median and lateral apertures of the fourth ventricle (Dandy–Walker outlet atresia)",
+        "en": "Median and lateral apertures of the fourth ventricle (Dandy–Walker outlet atresia)",
         "uz": "To'rtinchi qorinchaning o'rta va yon teshiklarida (Dandy–Walker chiqish atreziyasi)"
       },
       {
-        "en": "In the arachnoid granulations of the superior sagittal sinus (communicating hydrocephalus)",
+        "en": "Arachnoid granulations of the superior sagittal sinus (communicating hydrocephalus)",
         "uz": "Yuqori sagittal sinusning araxnoidal donachalarida (kommunikatsiyalanuvchi gidrotsefaliya)"
       }
     ],
@@ -865,20 +865,20 @@
     },
     "options": [
       {
-        "en": "Tuber cinereum, in the midline triangle between the mammillary bodies posteriorly and the infundibular recess anteriorly",
-        "uz": "Kulrang do'mboq (tuber cinereum) — orqada so'rg'ichsimon tanalar va oldinda infundibulyar cho'ntak orasidagi o'rta chiziq sohasi"
+        "en": "Tuber cinereum, between the mammillary bodies and infundibular recess",
+        "uz": "Kulrang do'mboq (tuber cinereum), so'rg'ichsimon tanalar va voronka orasida"
       },
       {
-        "en": "Lamina terminalis, directly superior to the anterior commissure and columns of the fornix",
-        "uz": "Oxirgi plastinka (lamina terminalis) — bevosita oldingi komissura va fornix ustunlari ustida"
+        "en": "Lamina terminalis, directly superior to the anterior commissure and fornix",
+        "uz": "Oxirgi plastinka (lamina terminalis), oldingi komissura va fornix ustida"
       },
       {
-        "en": "Habenular commissure, immediately rostral to the pineal recess",
-        "uz": "Habenulyar komissura — epifiz cho'ntagidan bevosita oldinda"
+        "en": "Habenular commissure, immediately rostral to the pineal recess and stalk",
+        "uz": "Habenulyar komissura, epifiz cho'ntagi va oyoqchasidan bevosita oldinda"
       },
       {
-        "en": "Superior medullary velum, between the two superior cerebellar peduncles",
-        "uz": "Yuqori miya pardasi — ikki yuqori miyacha oyoqchasi orasida"
+        "en": "Superior medullary velum, stretched between the superior cerebellar peduncles",
+        "uz": "Yuqori miya pardasi, ikki yuqori miyacha oyoqchasi orasiga tortilgan qism"
       }
     ],
     "answer": 0,
@@ -906,20 +906,20 @@
     },
     "options": [
       {
-        "en": "Normal-pressure (communicating) hydrocephalus (Hakim–Adams triad), treated after a high-volume lumbar tap test by a ventriculoperitoneal shunt",
-        "uz": "Normal bosimli (kommunikatsiyalanuvchi) gidrotsefaliya (Hakim–Adams triadasi); lumbal tap-testdan so'ng ventrikuloperitoneal shunt qo'yiladi"
+        "en": "Normal-pressure communicating hydrocephalus (Hakim–Adams triad) from impaired CSF resorption",
+        "uz": "Likvor so'rilishi buzilishidan kelib chiqqan normal bosimli gidrotsefaliya (Hakim–Adams triadasi)"
       },
       {
         "en": "Aqueductal stenosis causing acute non-communicating triventricular hydrocephalus",
         "uz": "Silviy suv yo'li stenozi chaqirgan o'tkir nokommunikatsion uch qorinchali gidrotsefaliya"
       },
       {
-        "en": "Ex-vacuo ventriculomegaly solely from Huntington caudate head degeneration",
+        "en": "Ex-vacuo ventriculomegaly caused solely by Huntington caudate head degeneration",
         "uz": "Huntington kasalligida faqat kaudat boshi atrofiyasi hisobiga yuzaga kelgan ex-vacuo ventrikulomegaliya"
       },
       {
-        "en": "Choroid plexus papilloma of the fourth ventricle causing hypersecretory intracranial hypertension",
-        "uz": "To'rtinchi qorincha tomirli chigal papillomasi chaqirgan gipersekretor kalla ichi gipertenziyasi"
+        "en": "Fourth-ventricle choroid plexus papilloma causing hypersecretory hypertension",
+        "uz": "To'rtinchi qorincha chigal papillomasi chaqirgan gipersekretor gipertenziya"
       }
     ],
     "answer": 0,
@@ -947,19 +947,19 @@
     },
     "options": [
       {
-        "en": "Posterior commissure / pretectal area (Parinaud syndrome) and the underlying cerebral aqueduct of Sylvius",
-        "uz": "Orqa komissura / pretektal soha (Parinaud sindromi) va ularning ostidagi Silviy suv yo'li"
+        "en": "Posterior commissure / pretectum (Parinaud syndrome) and cerebral aqueduct",
+        "uz": "Orqa komissura / pretektum (Parinaud sindromi) va Silviy suv yo'li"
       },
       {
-        "en": "Abducens nucleus / facial genu (Foville syndrome) and the lateral aperture of Luschka",
-        "uz": "Uzoqlashtiruvchi yadro / yuz nervi tizzasi (Foville sindromi) va Luschka yon teshigi"
+        "en": "Abducens nucleus / facial genu (Foville syndrome) and lateral aperture of Luschka",
+        "uz": "Uzoqlashtiruvchi yadro / yuz nervi tizzasi (Foville sindromi) va Luschka teshigi"
       },
       {
-        "en": "Optic chiasm / suprachiasmatic nucleus and the interventricular foramen of Monro",
+        "en": "Optic chiasm / suprachiasmatic nucleus and interventricular foramen of Monro",
         "uz": "Ko'rish kesishmasi / suprachiazmatik yadro va Monro qorinchalararo teshigi"
       },
       {
-        "en": "Red nucleus / crus cerebri (Weber syndrome) and the central canal of the medulla",
+        "en": "Red nucleus / crus cerebri (Weber syndrome) and central canal of the medulla",
         "uz": "Qizil yadro / miya oyoqchasi (Weber sindromi) va uzunchoq miya markaziy kanali"
       }
     ],
@@ -988,19 +988,19 @@
     },
     "options": [
       {
-        "en": "Dandy–Walker malformation (fourth-ventricular outlet obstruction), whereas a choroid plexus papilloma causes rare hypersecretory (over-production) hydrocephalus",
-        "uz": "Dandy–Walker malformatsiyasi (IV qorincha chiqish teshiklari berkilishi); tomirli chigal papillomasi esa likvorni ortiqcha ishlab chiqarish (sekretor) hisobiga gidrotsefaliya beradi"
+        "en": "Dandy–Walker malformation (outlet obstruction), versus hypersecretory hydrocephalus from a papilloma",
+        "uz": "Dandy–Walker nuqsoni (chiqish berkilishi); papilloma esa likvorni ortiqcha ishlab chiqaradi"
       },
       {
-        "en": "Chiari II malformation (downward traction of a small fourth ventricle), whereas a papilloma blocks the foramen of Monro",
-        "uz": "Chiari II malformatsiyasi (kichik IV qorinchaning pastga tortilishi); papilloma esa faqat Monro teshigini yopadi"
+        "en": "Chiari II malformation (downward fourth-ventricle traction), versus foramen of Monro block by a papilloma",
+        "uz": "Chiari II nuqsoni (IV qorinchaning pastga tortilishi); papilloma esa Monro teshigini yopadi"
       },
       {
-        "en": "Colpocephaly from callosal agenesis, whereas a papilloma destroys the arachnoid granulations",
+        "en": "Colpocephaly from callosal agenesis, versus arachnoid granulation destruction by a papilloma",
         "uz": "Qadoqsimon tana agenezidan kolpotsefaliya; papilloma esa araxnoidal donachalarni yemiradi"
       },
       {
-        "en": "Septo-optic dysplasia (de Morsier syndrome), whereas a papilloma causes ex-vacuo atrophy",
+        "en": "Septo-optic dysplasia (de Morsier syndrome), versus ex-vacuo cortical atrophy from a papilloma",
         "uz": "Septo-optik displaziya (de Morsier sindromi); papilloma esa ex-vacuo atrofiya chaqiradi"
       }
     ],
