@@ -282,6 +282,46 @@ bepul ilova ichida qayta tarqatishga ruxsat bormi, attribution talabi; HCP Open 
 #### AG-7 — Pipeline: AR uchun USDZ eksport (Apple 2-bosqichi; hozir emas)
 GLB meshlardan tizim bo'yicha USDZ (`pipeline/tools/`), ≤150k uchburchak, ranglar `materials.ts` REAL presetidan. AG-3 dan keyin.
 
+> **AG-8…AG-10 — neyroxirurgik simulyator yo'nalishi (PLAN 5.8, `docs/HANDS.md`).** Kod `hands/HT-1` branchida saqlangan va
+> master'ga qo'shilmagan. Bu uch vazifa — faqat hujjat. `src/` ga ham, `hands/HT-1` branchiga ham tegmang.
+
+#### AG-8 — Tadqiqot: kamera funksiyalari qaysi platformada (faqat hujjat, kod yo'q)
+**Nega:** foydalanuvchi qo'l va bosh bilan boshqarishni (HT-1, HP-1) umumiy vebga qo'shish yoki faqat Mac/iPad ilovasiga
+qoldirishni hal qilishi kerak (`docs/HANDS.md` 4-bo'lim, A/B/C variantlar).
+**Qilish:** `docs/research/camera-platforms.md`:
+(1) macOS Vision framework: `VNDetectHumanHandPoseRequest`, yuz nuqtalari — aniqlik, kechikish, minimal macOS versiyasi. MediaPipe
+veb bilan solishtiring (Apple Developer hujjatlari, WWDC sessiyasi havolasi bilan);
+(2) iPadOS: ARKit face tracking. Qaysi iPad'larda TrueDepth bor (ro'yxat). U "3D oyna" uchun haqiqiy chuqurlik beradimi?
+Apple Pencil (hover, barrel roll, bosim) jarrohlik asbobi sifatida;
+(3) WKWebView'da `getUserMedia`: iOS/macOS versiyalari, ruxsat oqimi, `NSCameraUsageDescription`;
+`WKUIDelegate` media ruxsati; native → veb landmark uzatish tezligi (`postMessage`, chastota);
+(4) App Store: kamera ma'lumoti maxfiyligi, Privacy Manifest, Guideline 5.1.1/5.1.2 — joriy matndan iqtibos;
+(5) Safari va Firefox'da MediaPipe tasks-vision holati (GPU delegate, WASM SIMD);
+(6) **tavsiya jadvali**: HT-1 qo'llar, HP-1 bosh, HT-2 asbob, OP-* simulyator — har biri uchun veb / Mac / iPad, sababi bilan.
+Har havola ochib tekshirilsin, sana bilan. Taxmin bo'lsa, "taxmin" deb yozilsin.
+**Tegadigan fayllar:** `docs/research/camera-platforms.md`, `docs/handoff/AG-8.md`.
+
+#### AG-9 — Kontent: EVD va DBS protsedura ssenariylari (OP-1, OP-2 uchun xom ashyo; kod yo'q)
+**Nega:** simulyator dvigateli (OP-1/OP-2) uchun har qadamning anatomik va klinik asosi kerak. Bu PhD/neyroxirurg darajasidagi kontent.
+**Qilish:** `docs/research/procedures/evd.md` va `docs/research/procedures/dbs.md`, har biri:
+ko'rsatma va qarshi ko'rsatmalar; bemor holati; anatomik orientirlar mm bilan (Kocher nuqtasi: nazion/koronar chokdan masofa,
+o'rta chiziqdan; DBS: AC–PC, STN/GPi/Vim koordinatalari, kirish nuqtasi); traektoriya va burchaklar; qadamlar ketma-ketligi
+(har qadam: nima qilinadi, nima ko'rinadi, xato bo'lsa nima bo'ladi); asoratlar va ularning chastotasi; mahoratni baholash
+mezonlari (OSATS yoki shunga o'xshash, simulyator tadqiqotlaridan). Har fakt manba bilan: DOI → Crossref sarlavhasi tekshirilsin,
+NCBI Bookshelf → eutils; faqat ochiq yoki tekshiriladigan manbalar. Atlasimizda bor qismlarning id'lari ham yozilsin
+(`src/data/parts.json`, masalan `g-interventricular-foramen`). Tasvirlar ko'chirilmaydi (Rhoton va boshqalar — mualliflik huquqi).
+**Tegadigan fayllar:** `docs/research/procedures/*.md`, `docs/handoff/AG-9.md`.
+
+#### AG-10 — Tadqiqot: virtual operatsiya xonasi uchun ochiq 3D assetlar (faqat hujjat)
+**Nega:** keyingi bosqich — virtual operatsiya xonasi (stol, chiroq, bemor, asboblar), "3D oyna" bilan birga shlemsiz VR'ga
+eng yaqin ko'rinish.
+**Qilish:** `docs/research/or-assets.md`: HDRI (operatsiya xonasi yoki klinika), operatsiya stoli, jarrohlik chirog'i,
+Mayfield boshni mahkamlash moslamasi, neyroxirurgik asboblar (kraniotom, burg'u, so'rg'ich, bipolyar, retraktor, ventrikulyar
+kateter, DBS elektrodi), mato/qoplama teksturalari. Har asset uchun: havola, litsenziya (faqat CC0 yoki CC BY; **CC BY-ND
+va NC bo'lmagan "editorial" taqiqlanadi**), format, uchburchaklar soni, hajm. Manbalar: Poly Haven, ambientCG, Sketchfab
+(litsenziya filtri), NIH 3D. Yuklab, repoga qo'shmang — faqat ro'yxat va tavsiya (≤ 20 MB jami).
+**Tegadigan fayllar:** `docs/research/or-assets.md`, `docs/handoff/AG-10.md`.
+
 ---
 
 ## 6. CLAUDE UCHUN
@@ -435,7 +475,7 @@ public/                        meshes/ (gitignore), sections/real/*.webp (commit
 Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) · 🔧 tuzatish kerak · ✅ birlashtirildi (faol).
 
 **Parallel yo'llar (fayllar kesishmaydi — ikkalasi bir vaqtda ishlashi mumkin):**
-- **Antigravity yo'li** (ketma-ket, bitta worktree): AG-3 (deploy: `loader.ts`, vite, workflow, README) → AG-5 (savollar banki,
+- **Antigravity yo'li** (ketma-ket, bitta worktree; AG-8 → AG-9 → AG-10 ham — faqat hujjat): AG-3 (deploy: `loader.ts`, vite, workflow, README) → AG-5 (savollar banki,
   yangi JSON) → AG-6 (App Store tadqiqoti) → AG-4 (tadqiqot hujjatlari). Hech biri `src/ui/**`, `BrainScene.ts` ga tegmaydi.
 - **Claude yo'li** (ketma-ket): CL-6 (plastinka ko'ruvchisi: `SectionViewer/AtlasSliceView/ZoomPane`, `index.css` sv-/as-) → CL-3
   (`src/data/sections/*.ts`) → CL-7 (Apple ko'prigi, veb tishlari) → CL-4 (viktorina dvigateli, AG-5 tayyor bo'lgach) → CL-5 (R2/LG-3). AI-6 — OpenAI javobini kutadi.
@@ -458,6 +498,11 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | CL-3 | 5.1: 21 plastinkada chegaralar 100% | Claude | ✅ 2026-11-22 (egasiz 0% hamma 22 plastinkada; haqiqiy ustma-ustliklar tuzatildi) | master |
 | CL-4 | Mavzu viktorinasi + Anki | Claude | ✅ 2026-11-22 (foydalanuvchi tasdiqladi; savollar sayqali AG-5b da) | master |
 | CL-5 | R2 realizm ✅ 2026-11-22 (burmalardagi soyalar); LG-3 harakat ✅ 2026-11-22 (prujina fizikasi) | Claude | ✅ foydalanuvchi tasdiqladi | master |
+| HT-1 | Qo'l bilan boshqarish (Mac kamerasi, MediaPipe) — PLAN 5.8 | Claude | 🅿️ tayyor, saqlangan — master'ga QO'SHILMAYDI (foydalanuvchi, 2026-11-23) | hands/HT-1 · docs/HANDS.md |
+| HP-1 | Bosh bilan qarash ("3D oyna", off-axis) — PLAN 5.8 | Claude | 🅿️ tayyor, saqlangan — master'ga QO'SHILMAYDI | hands/HT-1 · docs/HANDS.md |
+| AG-8 | Tadqiqot: kamera funksiyalari — veb / Mac / iPad | Antigravity | ⏳ (HT-1/HP-1 qarori uchun) | ag/AG-8 |
+| AG-9 | Kontent: EVD va DBS protsedura ssenariylari | Antigravity | ⏳ | ag/AG-9 |
+| AG-10 | Tadqiqot: virtual operatsiya xonasi uchun ochiq assetlar | Antigravity | ⏳ | ag/AG-10 |
 
 **Jurnal** (yangisi pastda; har yozuv: sana · kim · nima):
 - 2026-11-21 · Claude · AI panel AI-1…AI-5 tayyor; Gemini tuzatishlari (`827e81d`, `9b18a8f`); haqiqiy kalit bilan muammo ochiq.
@@ -478,4 +523,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-22 · Claude · CL-4: viktorina. `src/quiz/engine.ts` (bank yuklash, urug'li aralashtirish, Leitner 0–3 qutilari `na:quiz`, `pickDeck` mixed/weak, `summarise` + kalibratsiya), `src/quiz/anki.ts` (3 ustunli .txt, umumiy; AIPanel ham shuni ishlatadi), `src/ui/QuizPanel.tsx` (sozlash → savol → natija), store `quizTopic/openQuiz`, O'rganish tabida har mavzuda "Viktorina" kartasi (yangi tab yo'q). PhD qatlami: 'Ishonchim komil' belgisi → kalibratsiya (ishonchli xatolar), ekspert klinik keyslar, zaif tuzilmalar (3D da), takrorlash rejimi. Tekshirildi: engine (urug' bir xil deck, weak/Leitner, variant o'rni 85–111/400, Anki matni), UI (3D qaytish, plastinka ustida Esc, qora+yorug' rejim), tsc, build, audit-lesions 0, audit-pick 0. QOLDI: AG-5b savollari (uzunlik tarafkashligi) va foydalanuvchi sinovi.
 - 2026-11-22 · Claude · CL-5/R2: burmalardagi soyalar (GTAO). Tanlov: vertexga pishirish rad etildi — 1.0M gross vertex × 8 nur ≈ 8M nur (headless 150k nur/s → ~1 daq), qo'shni qismlar bir-biriga tegib turgani uchun (nurlarning 65% urilishi) tarqatish/kesimda noto'g'ri qorong'u yuzalar beradi, Draco vertex tartibini o'zgartirishi mumkin. Dinamik SSAO: kadr odatdagidek chiziladi (ton egri chizig'i, MSAA, fon o'zgarmaydi), AO chuqurlik+normaldan hisoblanib ustiga ko'paytiriladi (`CustomBlending`). Faqat yig'ilgan model, kamera tinch, kesim/tarqatish/ajratish/dars yo'q (`aoWanted`); depth/normal o'tish kamera yoki ko'rinish o'zgarganda qayta hisoblanadi (hover/tanlash o'tishlarida emas). GTAO alohida chunk (7.8 kB gzip), «…» menyusida «Burmalardagi soyalar» (`na:ao`, telefonda standart o'chiq). Tekshirildi: qora+yorug' rejim, kesim/tarqatish/sudrashda o'chadi, tinchlikda qaytadi, tsc, build, audit-lesions 0, audit-pick 0. TEKSHIRILMAGAN: haqiqiy GPU'da kadr vaqti (headless dasturiy GL) — foydalanuvchi sinovi.
 - 2026-11-22 · Claude · CL-5/LG-3: harakat. Namuna video (`Screen Recording 2026-11-15 at 18.54.53.mov`) Desktop'da yo'q bo'lib chiqdi — kadrma-kadr emas, haqiqiy prujina modeli bo'yicha: `scripts/gen-spring.mjs` (SwiftUI `response/damping` → CSS `linear()`; glide 0.34 s/0.78 → overshoot 2.0 %, 0.43 s; spring 0.30 s/0.62 → 8.4 %, 0.48 s), `@supports (linear())` bilan cubic-bezier zaxirasi. Tanlov kapsulasi sayohatda cho'ziladi (squash & stretch, masofaga qarab ≤ 1.34×, 430 ms) va sudralganda barmoq tezligiga qarab (`--sx/--sy`); menyu, dars kartasi, AI panel, plastinka/viktorina kartasi prujinada va xiralikdan chiqadi (`prefers-reduced-motion` o'chiradi). O'lchandi (WAAPI currentTime): siljish 71 px, overshoot 2.0 %, cho'zilish cho'qqisi 1.24× @100 ms, 430 ms da joyiga. TEKSHIRILMAGAN: haqiqiy qurilmada "hissi" — foydalanuvchi sinovi; kerak bo'lsa video qayta berilsa kadrlar bilan solishtiriladi.
-
+- 2026-11-23 · Claude · HT-1 (qo'l bilan boshqarish) va HP-1 (bosh bilan qarash, "3D oyna") `hands/HT-1` branchida tayyor; foydalanuvchi qarori bilan master'ga qo'shilmaydi (veb / faqat Mac / faqat iPad keyin hal qilinadi). Holat: `docs/HANDS.md`. Antigravity uchun AG-8 (platformalar tadqiqoti), AG-9 (EVD/DBS kontenti), AG-10 (operatsiya xonasi assetlari).

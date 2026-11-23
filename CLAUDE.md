@@ -139,6 +139,10 @@ Villiz doirasi variantlari (PhD); U1 uchun ochiq histologik manba; BigBrain 20 m
 5.4 UI qoldiqlari (dars kartasi va kesim ko'ruvchisi yorug' rejimda "qora orol"); erkin o'choqning PhD davomi
 (sxema↔atlas farqi ogohlantirishi, JHU tolalaridan yo'llar, PPMS yo'li, T2/FLAIR ko'rinishi, 3D da o'choqni sudrash). Tezlik: real kesimni foydalanuvchi o'z brauzerida hali tasdiqlamagan — so'rang.
 
+**Kamera bilan boshqarish 🅿️ (2026-11-23)** — qo'l (HT-1) va bosh "3D oyna" (HP-1) `hands/HT-1` branchida tayyor, lekin
+foydalanuvchi qarori bilan master'ga QO'SHILMAYDI (veb / faqat Mac / faqat iPad keyin hal qilinadi). Hammasi `docs/HANDS.md` da;
+reja PLAN 5.8 (neyroxirurgik simulyator); Antigravity: AG-8/9/10.
+
 Ish uslubi bo'yicha eslatmalar (2026-11-17):
 - TS mantiqni tekshirish: `npx -y tsx` ruxsat bermadi → vaqtinchalik `scripts/_x_tmp.mjs` (puppeteer) da dev serverdan
   `await import('/src/...ts')` qilib, keyin faylni o'chiring.

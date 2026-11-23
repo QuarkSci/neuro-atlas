@@ -1319,3 +1319,10 @@ Namuna video Desktop'da topilmadi, shuning uchun kadrma-kadr solishtirish o'rnig
 sudralganda tezlikka qarab cho'zilish. Menyu, dars kartasi, AI panel, plastinka/viktorina kartasi — prujina + xiralikdan paydo bo'lish
 (katta kartalarda blur yo'q: SVG qimmat). Tekshiruv: WAAPI `currentTime` bilan deterministik namuna (headless'da real vaqtli rAF kadr tashlaydi):
 71 px siljish, overshoot 2.0 %, cho'zilish 1.24× @100 ms, 430 ms da tinadi. QOLDI: haqiqiy qurilmada his qilish, video bilan solishtirish.
+
+## HT-1 + HP-1 — kamera bilan boshqarish, saqlangan (2026-11-22/23)
+
+Neyroxirurgik simulyator g'oyasi (PLAN 5.8) bo'yicha birinchi ikki qatlam `hands/HT-1` branchida tayyorlandi: qo'l bilan
+boshqarish (MediaPipe, 3D shisha qo'llar, imo-ishoralar) va bosh bilan qarash (BlazeFace → off-axis "3D oyna"). Headless'da
+13/13 tekshiruv o'tdi, `audit-pick` 0; haqiqiy kamerada sinalmagan. Foydalanuvchi qarori (2026-11-23): master'ga
+qo'shilmaydi — avval veb / faqat Mac / faqat iPad taqsimoti (AG-8). To'liq tafsilot branchdagi HISTORY "HT-1", "HP-1" va `docs/HANDS.md`.
