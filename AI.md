@@ -531,14 +531,19 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | HT-1 | Qo'l bilan boshqarish (Mac kamerasi, MediaPipe) — PLAN 5.8 | Claude | ✅ sx/main da (master'ga QO'SHILMAYDI, foydalanuvchi 2026-11-23) | sx/main · docs/HANDS.md |
 | HP-1 | Bosh bilan qarash ("3D oyna", off-axis) — PLAN 5.8 | Claude | ✅ sx/main da (master'ga QO'SHILMAYDI) | sx/main · docs/HANDS.md |
 | AG-8 | Tadqiqot: kamera funksiyalari — veb / Mac / iPad | Antigravity | ⏳ (HT-1/HP-1 qarori uchun) | ag/AG-8 |
-| AG-9 | Kontent: EVD va DBS protsedura ssenariylari | Antigravity | ⏳ | ag/AG-9 |
-| AG-10 | Tadqiqot: virtual operatsiya xonasi uchun ochiq assetlar | Antigravity | ⏳ | ag/AG-10 |
-| AG-11 | Pipeline: operatsiya xonasi assetlari (glb + Draco) → sx/main | Antigravity | ⏳ (AG-10 dan keyin) | ag/AG-11 (origin/sx/main dan) |
+| AG-9 | Kontent: EVD va DBS protsedura ssenariylari | Antigravity | ✅ 2026-11-23 (tekshirildi, master'ga birlashtirildi) | docs/research/procedures/ · docs/handoff/AG-9.md |
+| AG-10 | Tadqiqot: virtual operatsiya xonasi uchun ochiq assetlar | Antigravity | ✅ 2026-11-23 (tekshirildi, master'ga birlashtirildi) | docs/research/or-assets.md · docs/handoff/AG-10.md |
+| AG-11 | Pipeline: operatsiya xonasi assetlari (glb + Draco) → sx/main | Antigravity | ⏳ (Sketchfab tokeni kerak) | ag/AG-11 (origin/sx/main dan) |
+| AG-14 | Xonaga assetlarni ulash (`src/or/assets.ts`) — SURGERY.md 6 | Antigravity | ⏳ (AG-11 dan keyin) | ag/AG-14 (sx/main dan) |
+| AG-15 | EVD ma'lumot + UI qobig'i + mashg'ulotlar tarixi — SURGERY.md 6 | Antigravity | ⏳ (CC `evd/types.ts` yozgach) | ag/AG-15 (sx/main dan) |
+| AG-16 | DBS ma'lumot + MER tovushi — SURGERY.md 6 | Antigravity | ⏳ | ag/AG-16 (sx/main dan) |
+| AG-17 | Burg'u chang zarrachalari va tovushi — SURGERY.md 6 | Antigravity | ⏳ | ag/AG-17 (sx/main dan) |
+| AG-18 | Yagona tekshiruv `scripts/check-all.mjs` + hisobot | Antigravity | ⏳ BIRINCHI | ag/AG-18 (sx/main dan) |
 | AG-12 | Tadqiqot: simulyator validatsiyasi va mahorat o'lchovlari | Antigravity | ⏳ | ag/AG-12 |
 | AG-13 | Tadqiqot: marker kuzatuvi (6DoF qalam) | Antigravity | ⏳ | ag/AG-13 |
 | SX-1 | Virtual operatsiya xonasi (docs/SURGERY.md 2) | Claude Code | ✅ 2026-11-23 (`1bb44e0`) | sx/main |
 | SX-2 | Asbob dvigateli (HT-2): masofa, to'qnashuv, titrash | Claude Code | ✅ 2026-11-23 (`0fa0815`) | sx/main |
-| SX-3 | OP-1 EVD simulyatori + baholash | Claude Code | ⏳ KEYINGI (AG-9, AG-12 kerak) | sx/main |
+| SX-3 | OP-1 EVD: faqat mantiq (Kocher, baholash, hodisalar); ma'lumot/UI → AG-15 | Claude Code | ⏳ KEYINGI (AG-9 ✅; AG-12 ixtiyoriy) | sx/main |
 | SX-4 | Suyakni burg'ulash (voksel) | Claude Code | ⏳ | sx/main |
 | SX-5 | Kuzatiladigan qalam (6DoF marker) | Claude Code | ⏳ (AG-13) | sx/main |
 | SX-6 | OP-2 DBS | Claude Code | ⏳ | sx/main |
@@ -567,4 +572,5 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-23 · Claude · AG-5b va AG-6 tekshirildi va birlashtirildi. AG-5b: mustaqil skript (o'zgarmas maydonlar 0 farq, eng uzun to'g'ri javob 166→46), 6 savol anatomik tekshiruvi, audit-lesions 0, audit-pick 0, viktorina UI. AG-6: Apple 4.2/2.5.2/1.4.1/5.1.2, FSL, HCP, CC iqtiboslari asl manbalardan tasdiqlandi; Jetsam raqamlari "taxmin" deb belgilandi, SUIT litsenziya izohi aniqlashtirildi. Muhim xulosalar (App Store'dan oldin): AI rozilik oynasi (5.1.2), tibbiy ogohlantirish (1.4.1), JHU uchun yozma ruxsat, HCP minnatdorchilik matni.
 - 2026-11-23 · Claude · Jarrohlik simulyatori ish paketi: `docs/SURGERY.md` (qarorlar, sharoit, SX-1…SX-7, promptlar), integratsiya branchi `sx/main` (= hands/HT-1 + master, `../neuro-atlas-sx`, port 3021, shot-hands 13/13), yangi AGY vazifalari AG-11 (assetlar → sx/main), AG-12 (validatsiya o'lchovlari), AG-13 (marker kuzatuvi).
 - 2026-11-23 · Claude · SX-2 tayyor (`sx/main` `0fa0815`, push qilindi): `src/or/tools/` asbob dvigateli (zond/kateter/burg'u, BVH masofa, to'qnashuv, HUD, titrash, traektoriya CSV); `scripts/shot-tools.mjs` hammasi ✓ (masofa xatosi ~1e-15 mm), shot-or 20/20, shot-hands 13/13, audit 0. Tekshirilmadi: haqiqiy kamera/gamepad. Keyingi: SX-3 (AG-9 va AG-12 hujjatlari master'da bormi — tekshirish kerak).
+- 2026-11-23 · Claude · AG-9 va AG-10 tekshirildi (Crossref/eutils/Sketchfab API) va master'ga birlashtirildi. **Qayta taqsimot** (foydalanuvchi talabi): CC — kritik mantiq va tekshiruv, AGY — ma'lumot/UI/tovush/test kodi `sx/main` dan olingan `ag/*` branchlarda; yangi AG-14…AG-18, qoidalar `docs/SURGERY.md` 6.
 - 2026-11-23 · Claude · SX-1 tayyor (`sx/main` `1bb44e0`, push qilindi): `src/or/` virtual operatsiya xonasi, bosh terisi suyakdan, Mayfield, chiroq, chizg'ich; `scripts/shot-or.mjs` 20 tekshiruv ✓, `audit-pick` 0, `audit-lesions` 0, `shot-hands` 13/13. Tafsilot: sx/main `docs/HISTORY.md` "SX-1". Tekshirilmadi: haqiqiy kamera, Mac FPS. Keyingi: SX-2.

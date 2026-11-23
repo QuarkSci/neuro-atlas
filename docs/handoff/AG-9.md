@@ -65,3 +65,5 @@ Jarrohlik simulyatori (`docs/SURGERY.md` §2 — SX-3 EVD va SX-6 DBS) uchun ikk
 - Navbatdagi jarrohlik vazifasi (`docs/SURGERY.md` §3 tartibida): **AG-10** (virtual operatsiya xonasi uchun ochiq 3D assetlar ro'yxati).
 
 ## Ko'rib chiqish (Claude to'ldiradi)
+
+✅ 2026-11-23 Claude: 5 DOI Crossref bilan (Fried 2016, Morone 2019, Ghajar 1985, Follett 2010, Horn 2019) va 2 PMID eutils bilan (21471831, 7431075) sarlavhasi mos; 46 atlas ID auditi AG hisobotida (0 noma'lum). Hujjat, kod yo'q → master'ga birlashtirildi. SX-3/SX-6 uchun asosiy manba.

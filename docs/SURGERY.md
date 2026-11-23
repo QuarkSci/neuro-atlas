@@ -119,3 +119,37 @@ AG-11 (assetlar) esa faqat sx/main ga birlashtiriladi (neuro-atlas-sx papkasida)
 - [ ] Ta'lim ogohlantirishi (operatsiya ekranlarida). Asset litsenziyalari `ATTRIBUTION.md` da.
 - [ ] Commit o'zbekcha (nima va NEGA), `Co-Authored-By` qatori; push `origin sx/main`. Master'ga faqat hujjat yangilanishlari.
 - [ ] Haqiqiy kamera bilan sinalmagan narsalar ochiq yoziladi ("tekshirilmadi").
+
+## 6. Qayta taqsimot (2026-11-23): CC — kritik va tekshiruv, AGY — qolgani
+
+**Sabab.** AGY tez ishlaydi (AG-9, AG-10 bir kunda tugadi), CC esa har SX ga ko'p vaqt sarflaydi. Shuning uchun AGY ga **kodli, lekin
+kritik bo'lmagan** ishlar ham beriladi; CC shartnoma (interfeys) yozadi, tekshiradi va xatolarni o'zi tuzatadi.
+
+**CC da qoladi (kritik):** interfeys/tur shartnomalari (`types.ts`); SX-3 asosiy mantiq (Kocher nuqtasini mesh'lardan topish, traektoriya
+baholash, Kakarla darajasi, hodisalar); SX-4 voksel dvigateli (SDF → mesh, kadr byudjeti); SX-5 poza matematikasi; SX-6 traektoriya xavfi
+va AC–PC mantiqi; barcha AGY kodini tekshirish (diff, tsc, build, auditlar, screenshot), xatolarni tuzatish, `sx/main` ga birlashtirish,
+Mac'dagi tezlik o'lchovi.
+
+**AGY ga o'tadi (mantiq emas, ma'lumot, UI, tovush, test):**
+
+| ID | Nima | Kirish (CC beradi) | Tegadigan fayllar | Qayerga |
+|---|---|---|---|---|
+| AG-11 | Assetlar → glb + Draco (AG-10 asosida; Sketchfab tokeni kerak) | `docs/research/or-assets.md` | `pipeline/tools/or_assets.py`, `public/or/*`, `ATTRIBUTION.md` | sx/main |
+| AG-14 | Xonaga assetlarni ulash: `src/or/assets.ts` (manifest, Draco yuklash, jonli tanlov: asset yo'q bo'lsa protsedurali zaxira); stol, chiroq, bosh ramasi almashadi | `public/or/manifest.json` (AG-11), `room.ts` joylari | `src/or/assets.ts`, `room.ts` faqat `buildTable/buildLamp/buildProps` | sx/main |
+| AG-15 | EVD ma'lumot va UI qobig'i: `src/or/evd/data.ts` (orientirlar, qadam jadvali, chegaralar, har qiymatda manba), uz/en matnlar, qadam yo'riqnomasi paneli (mantiqsiz), mashg'ulotlar tarixi (localStorage), o'rganish egri chizig'i, CSV eksport tugmasi | `src/or/evd/types.ts` (CC yozadi), `docs/research/procedures/evd.md` | `src/or/evd/data.ts`, `src/or/evd/strings.ts`, `src/or/evd/EvdPanel.tsx`, `src/or/evd/history.ts` | sx/main |
+| AG-16 | DBS ma'lumot va MER tovushi: `src/or/dbs/data.ts` (nishonlar, AC–PC, MER jadvali, nojo'ya ta'sirlar), `merAudio.ts` (WebAudio, `merPattern(target, depthMm)` sof funksiya + tovush) | `src/or/dbs/types.ts` (CC), `docs/research/procedures/dbs.md` | `src/or/dbs/data.ts`, `merAudio.ts`, `strings.ts` | sx/main |
+| AG-17 | Burg'u hissi: chang zarrachalari, WebAudio burg'u tovushi (tezlik/qarshilikka qarab), titrash namunalari | `src/or/drill/types.ts` (CC) | `src/or/drill/dust.ts`, `drillAudio.ts` | sx/main |
+| AG-18 | Yagona tekshiruv: `scripts/check-all.mjs` (shot-or, shot-tools, shot-hands, audit-pick, audit-lesions, qora+yorug' screenshotlar) va bir sahifa hisobot `docs/handoff/checks/<sana>.md` | mavjud skriptlar | `scripts/check-all.mjs`, `docs/handoff/checks/*` | master + sx/main |
+| AG-12, AG-13, AG-8 | Tadqiqotlar (oldingidek, faqat hujjat) | — | `docs/research/*` | master |
+
+**Qoidalar (AI.md 4-bo'lim qoidasiga o'zgartirish).**
+1. AGY `sx/main` dagi kodga **faqat jadvaldagi "Tegadigan fayllar"** doirasida yozadi, `ag/<id>` branchda (`git switch -c ag/AG-15 origin/sx/main`),
+   `sx/main` ga push qilmaydi. `src/or/tools/engine.ts`, `src/or/orMode.ts`, `src/scene/BrainScene.ts`, `src/hands/*` ga tegmaydi.
+2. **Shartnoma avval:** CC har vazifa uchun kichik `types.ts` yozib `sx/main` ga qo'yadi; AGY unga amal qiladi, o'zgartirmaydi
+   (o'zgartirish kerak bo'lsa handoff'da yozadi).
+3. AGY tugagach: `check-all` (AG-18 tayyor bo'lgach) natijasini handoff'ga qo'shadi. CC: diff o'qiydi, tsc/build/auditlar, 1–2 screenshot,
+   mantiq xatosini o'zi tuzatadi (AGY ga qaytarmaydi, vaqt tejaladi), so'ng `sx/main` ga `--no-ff`.
+4. Ma'lumot qiymatlari (mm, foizlar) AG-9/AG-12 hujjatlariga **izohda manba bilan** bog'lanadi; manbasiz son kiritilmaydi.
+
+**Tartib (parallel):** CC: avval `types.ts` shartnomalari (EVD, DBS, drill), so'ng SX-3 mantig'i. AGY bir vaqtda: AG-18 → AG-15 → AG-11 → AG-14 →
+AG-16 → AG-17 (AG-11 token kutadi: u bloklansa keyingisiga o'tadi). SX-4/SX-5/SX-6 mantig'i CC da, tayyor shartnoma va ma'lumot bilan.
