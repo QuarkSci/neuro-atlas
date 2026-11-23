@@ -32,6 +32,9 @@ tekshir (diff, tsc, build, auditlar, screenshot, manbalar) va menga natijani ayt
 Keyin 9-bo'limdagi navbatdagi CL vazifani (CL-1 dan) davom ettir. Javoblar o'zbekcha.
 ```
 
+**Jarrohlik simulyatori (sx/main) uchun alohida promptlar:** `docs/SURGERY.md` 4-bo'lim (CC: SX vazifa, AGY: jarrohlik
+vazifalari, CC: integrator). Simulyator kodi master'ga birlashtirilmaydi.
+
 ---
 
 ## 1. Loyiha va joriy holat
@@ -285,6 +288,31 @@ GLB meshlardan tizim bo'yicha USDZ (`pipeline/tools/`), ≤150k uchburchak, rang
 > **AG-8…AG-10 — neyroxirurgik simulyator yo'nalishi (PLAN 5.8, `docs/HANDS.md`).** Kod `hands/HT-1` branchida saqlangan va
 > master'ga qo'shilmagan. Bu uch vazifa — faqat hujjat. `src/` ga ham, `hands/HT-1` branchiga ham tegmang.
 
+#### AG-11 — Pipeline: operatsiya xonasi assetlari (AG-10 dan keyin; natija sx/main ga)
+**Nega:** SX-1 protsedurali xonani real assetlar bilan almashtiradi.
+**Qilish:** AG-10 ro'yxatidan tavsiya etilgan (faqat CC0 / CC BY) assetlarni yuklab olish, `pipeline/tools/or_assets.py` bilan
+glb + Draco ga o'tkazish (millimetr masshtab, Y yuqoriga, ≤ 20 MB jami, har biri ≤ 150k uchburchak) → `public/or/*.glb` +
+`public/or/manifest.json` (id, fayl, litsenziya, muallif, manba URL, o'lcham). `ATTRIBUTION.md` ga bo'lim. Branch
+**`origin/sx/main` dan** boshlanadi (`git switch -c ag/AG-11 origin/sx/main`); `src/` ga tegmang. Claude uni faqat `sx/main` ga birlashtiradi.
+**Tegadigan fayllar:** `pipeline/tools/or_assets.py`, `public/or/*`, `ATTRIBUTION.md`, `docs/handoff/AG-11.md`.
+
+#### AG-12 — Tadqiqot: simulyator validatsiyasi va mahorat o'lchovlari (faqat hujjat)
+**Nega:** SX-3/SX-6 baholash tizimi (vaqt, titrash, yo'l samaradorligi, xavfli tegishlar) ilmiy asosga ega bo'lsin (PhD daraja).
+**Qilish:** `docs/research/sim-metrics.md`: neyroxirurgik simulyatorlar (NeuroVR/NeuroTouch, ImmersiveTouch, Wraith-VR va b.)
+validatsiya tadqiqotlari; qaysi o'lchovlar mutaxassis va novichokni ajratadi (konstrukt validligi), titrash va yo'l samaradorligini
+hisoblash formulalari, OSATS va GRS shkalalari, o'rganish egri chizig'i modellari, EVD/ventrikulostomiya simulyatori tadqiqotlari.
+Har maqola: DOI (Crossref sarlavhasi tekshirilgan) yoki PMID (eutils), ochiq yoki ochiq emasligi. Bizga tavsiya: SX-3 uchun 6–10 ta
+o'lchov, formulasi va chegaralari bilan.
+**Tegadigan fayllar:** `docs/research/sim-metrics.md`, `docs/handoff/AG-12.md`.
+
+#### AG-13 — Tadqiqot: kamera orqali marker kuzatuvi (SX-5 uchun; faqat hujjat)
+**Nega:** chop etilgan marker yopishtirilgan qalam = shlemsiz 6DoF jarrohlik asbobi.
+**Qilish:** `docs/research/marker-tracking.md`: brauzer kutubxonalari (js-aruco2, AprilTag WASM portlari, OpenCV.js aruco va b.):
+litsenziya (CC BY-ND/GPL ehtiyotkorligi; MIT/BSD/Apache afzal), hajm, tezlik, 6DoF pose aniqligi; bitta veb-kamera bilan kalibrlash
+(katakli qog'oz), qalam uchi offsetini kalibrlash; adabiyot (masalan, DodecaPen, UIST 2017) — DOI tekshirilgan. Tavsiya: bitta
+kutubxona + marker shakli (kub yoki dodekaedr) + chop etiladigan fayl spetsifikatsiyasi (o'lcham mm).
+**Tegadigan fayllar:** `docs/research/marker-tracking.md`, `docs/handoff/AG-13.md`.
+
 #### AG-8 — Tadqiqot: kamera funksiyalari qaysi platformada (faqat hujjat, kod yo'q)
 **Nega:** foydalanuvchi qo'l va bosh bilan boshqarishni (HT-1, HP-1) umumiy vebga qo'shish yoki faqat Mac/iPad ilovasiga
 qoldirishni hal qilishi kerak (`docs/HANDS.md` 4-bo'lim, A/B/C variantlar).
@@ -475,6 +503,8 @@ public/                        meshes/ (gitignore), sections/real/*.webp (commit
 Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) · 🔧 tuzatish kerak · ✅ birlashtirildi (faol).
 
 **Parallel yo'llar (fayllar kesishmaydi — ikkalasi bir vaqtda ishlashi mumkin):**
+- **Jarrohlik simulyatori yo'li** (`docs/SURGERY.md`): Claude Code SX-1 → SX-7 `../neuro-atlas-sx` da (`sx/main`, port 3021, master'ga
+  birlashtirilmaydi); Antigravity AG-9 → AG-10 → AG-12 → AG-11 → AG-13 → AG-8.
 - **Antigravity yo'li** (ketma-ket, bitta worktree; AG-8 → AG-9 → AG-10 ham — faqat hujjat): AG-3 (deploy: `loader.ts`, vite, workflow, README) → AG-5 (savollar banki,
   yangi JSON) → AG-6 (App Store tadqiqoti) → AG-4 (tadqiqot hujjatlari). Hech biri `src/ui/**`, `BrainScene.ts` ga tegmaydi.
 - **Claude yo'li** (ketma-ket): CL-6 (plastinka ko'ruvchisi: `SectionViewer/AtlasSliceView/ZoomPane`, `index.css` sv-/as-) → CL-3
@@ -498,11 +528,21 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | CL-3 | 5.1: 21 plastinkada chegaralar 100% | Claude | ✅ 2026-11-22 (egasiz 0% hamma 22 plastinkada; haqiqiy ustma-ustliklar tuzatildi) | master |
 | CL-4 | Mavzu viktorinasi + Anki | Claude | ✅ 2026-11-22 (foydalanuvchi tasdiqladi; savollar sayqali AG-5b da) | master |
 | CL-5 | R2 realizm ✅ 2026-11-22 (burmalardagi soyalar); LG-3 harakat ✅ 2026-11-22 (prujina fizikasi) | Claude | ✅ foydalanuvchi tasdiqladi | master |
-| HT-1 | Qo'l bilan boshqarish (Mac kamerasi, MediaPipe) — PLAN 5.8 | Claude | 🅿️ tayyor, saqlangan — master'ga QO'SHILMAYDI (foydalanuvchi, 2026-11-23) | hands/HT-1 · docs/HANDS.md |
-| HP-1 | Bosh bilan qarash ("3D oyna", off-axis) — PLAN 5.8 | Claude | 🅿️ tayyor, saqlangan — master'ga QO'SHILMAYDI | hands/HT-1 · docs/HANDS.md |
+| HT-1 | Qo'l bilan boshqarish (Mac kamerasi, MediaPipe) — PLAN 5.8 | Claude | ✅ sx/main da (master'ga QO'SHILMAYDI, foydalanuvchi 2026-11-23) | sx/main · docs/HANDS.md |
+| HP-1 | Bosh bilan qarash ("3D oyna", off-axis) — PLAN 5.8 | Claude | ✅ sx/main da (master'ga QO'SHILMAYDI) | sx/main · docs/HANDS.md |
 | AG-8 | Tadqiqot: kamera funksiyalari — veb / Mac / iPad | Antigravity | ⏳ (HT-1/HP-1 qarori uchun) | ag/AG-8 |
 | AG-9 | Kontent: EVD va DBS protsedura ssenariylari | Antigravity | ⏳ | ag/AG-9 |
 | AG-10 | Tadqiqot: virtual operatsiya xonasi uchun ochiq assetlar | Antigravity | ⏳ | ag/AG-10 |
+| AG-11 | Pipeline: operatsiya xonasi assetlari (glb + Draco) → sx/main | Antigravity | ⏳ (AG-10 dan keyin) | ag/AG-11 (origin/sx/main dan) |
+| AG-12 | Tadqiqot: simulyator validatsiyasi va mahorat o'lchovlari | Antigravity | ⏳ | ag/AG-12 |
+| AG-13 | Tadqiqot: marker kuzatuvi (6DoF qalam) | Antigravity | ⏳ | ag/AG-13 |
+| SX-1 | Virtual operatsiya xonasi (docs/SURGERY.md 2) | Claude Code | ⏳ KEYINGI | sx/main |
+| SX-2 | Asbob dvigateli (HT-2): masofa, to'qnashuv, titrash | Claude Code | ⏳ | sx/main |
+| SX-3 | OP-1 EVD simulyatori + baholash | Claude Code | ⏳ (AG-9, AG-12) | sx/main |
+| SX-4 | Suyakni burg'ulash (voksel) | Claude Code | ⏳ | sx/main |
+| SX-5 | Kuzatiladigan qalam (6DoF marker) | Claude Code | ⏳ (AG-13) | sx/main |
+| SX-6 | OP-2 DBS | Claude Code | ⏳ | sx/main |
+| SX-7 | Mikroskop + pterional | Claude Code | ⏳ (keyin) | sx/main |
 
 **Jurnal** (yangisi pastda; har yozuv: sana · kim · nima):
 - 2026-11-21 · Claude · AI panel AI-1…AI-5 tayyor; Gemini tuzatishlari (`827e81d`, `9b18a8f`); haqiqiy kalit bilan muammo ochiq.
@@ -525,3 +565,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-22 · Claude · CL-5/LG-3: harakat. Namuna video (`Screen Recording 2026-11-15 at 18.54.53.mov`) Desktop'da yo'q bo'lib chiqdi — kadrma-kadr emas, haqiqiy prujina modeli bo'yicha: `scripts/gen-spring.mjs` (SwiftUI `response/damping` → CSS `linear()`; glide 0.34 s/0.78 → overshoot 2.0 %, 0.43 s; spring 0.30 s/0.62 → 8.4 %, 0.48 s), `@supports (linear())` bilan cubic-bezier zaxirasi. Tanlov kapsulasi sayohatda cho'ziladi (squash & stretch, masofaga qarab ≤ 1.34×, 430 ms) va sudralganda barmoq tezligiga qarab (`--sx/--sy`); menyu, dars kartasi, AI panel, plastinka/viktorina kartasi prujinada va xiralikdan chiqadi (`prefers-reduced-motion` o'chiradi). O'lchandi (WAAPI currentTime): siljish 71 px, overshoot 2.0 %, cho'zilish cho'qqisi 1.24× @100 ms, 430 ms da joyiga. TEKSHIRILMAGAN: haqiqiy qurilmada "hissi" — foydalanuvchi sinovi; kerak bo'lsa video qayta berilsa kadrlar bilan solishtiriladi.
 - 2026-11-23 · Claude · HT-1 (qo'l bilan boshqarish) va HP-1 (bosh bilan qarash, "3D oyna") `hands/HT-1` branchida tayyor; foydalanuvchi qarori bilan master'ga qo'shilmaydi (veb / faqat Mac / faqat iPad keyin hal qilinadi). Holat: `docs/HANDS.md`. Antigravity uchun AG-8 (platformalar tadqiqoti), AG-9 (EVD/DBS kontenti), AG-10 (operatsiya xonasi assetlari).
 - 2026-11-23 · Claude · AG-5b va AG-6 tekshirildi va birlashtirildi. AG-5b: mustaqil skript (o'zgarmas maydonlar 0 farq, eng uzun to'g'ri javob 166→46), 6 savol anatomik tekshiruvi, audit-lesions 0, audit-pick 0, viktorina UI. AG-6: Apple 4.2/2.5.2/1.4.1/5.1.2, FSL, HCP, CC iqtiboslari asl manbalardan tasdiqlandi; Jetsam raqamlari "taxmin" deb belgilandi, SUIT litsenziya izohi aniqlashtirildi. Muhim xulosalar (App Store'dan oldin): AI rozilik oynasi (5.1.2), tibbiy ogohlantirish (1.4.1), JHU uchun yozma ruxsat, HCP minnatdorchilik matni.
+- 2026-11-23 · Claude · Jarrohlik simulyatori ish paketi: `docs/SURGERY.md` (qarorlar, sharoit, SX-1…SX-7, promptlar), integratsiya branchi `sx/main` (= hands/HT-1 + master, `../neuro-atlas-sx`, port 3021, shot-hands 13/13), yangi AGY vazifalari AG-11 (assetlar → sx/main), AG-12 (validatsiya o'lchovlari), AG-13 (marker kuzatuvi).
