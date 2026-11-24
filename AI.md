@@ -516,7 +516,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | AG-1 | Kontent: Desikan, JHU, Destrieux, Glasser ta'riflari | Antigravity | ✅ 2026-11-22 | birlashtirildi (`616d941`) · docs/handoff/AG-1.md |
 | AG-2 | Yorug' rejim: dars kartasi va kesim ko'ruvchisi | Antigravity | ✅ 2026-11-22 | birlashtirildi · docs/handoff/AG-2.md |
 | AG-3 | Deploy: meshlar Release + Draco, README, ATTRIBUTION | Antigravity | ✅ 2026-11-22 (qoldi: `meshes-v1` Release'ni foydalanuvchi yuklaydi) | birlashtirildi (`6d6156f`) · docs/handoff/AG-3.md |
-| AG-4 | Tadqiqot: U1 gistologiya; BigBrain 20 mkm | Antigravity | ⏳ | ag/AG-4 |
+| AG-4 | Tadqiqot: U1 gistologiya; BigBrain 20 mkm | Antigravity | ✅ 2026-11-25 birlashtirildi (3 DOI Crossref ✓) | ag/AG-4 |
 | CL-1 | AI panel: haqiqiy Gemini kaliti bilan ishlamayapti | Claude | ✅ tashxis: Google 503 (bepul tarif, band model); xato tafsiloti + avtomatik model almashtirish (`cd06af4`, `8b8ef1b`) | master |
 | CL-2 | AI-6 (ChatGPT/Google kirish), panel joylashuvi, look_at_screen | Claude | 🔨 panel joylashuvi va `look_at_screen` ✅ 2026-11-22; AI-6 — OpenAI javobini kutmoqda (SIWC statik sayt uchun hujjatlashtirilmagan) | master |
 | AG-5 | Kontent: viktorina savollar banki (CL-4 uchun) | Antigravity | ✅ 2026-11-22 (birlashtirildi; sifat tuzatishlari AG-5b da) | docs/handoff/AG-5.md |
@@ -530,24 +530,31 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | CL-5 | R2 realizm ✅ 2026-11-22 (burmalardagi soyalar); LG-3 harakat ✅ 2026-11-22 (prujina fizikasi) | Claude | ✅ foydalanuvchi tasdiqladi | master |
 | HT-1 | Qo'l bilan boshqarish (Mac kamerasi, MediaPipe) — PLAN 5.8 | Claude | ✅ sx/main da (master'ga QO'SHILMAYDI, foydalanuvchi 2026-11-23) | sx/main · docs/HANDS.md |
 | HP-1 | Bosh bilan qarash ("3D oyna", off-axis) — PLAN 5.8 | Claude | ✅ sx/main da (master'ga QO'SHILMAYDI) | sx/main · docs/HANDS.md |
-| AG-8 | Tadqiqot: kamera funksiyalari — veb / Mac / iPad | Antigravity | ⏳ (HT-1/HP-1 qarori uchun) | ag/AG-8 |
+| AG-8 | Tadqiqot: kamera funksiyalari — veb / Mac / iPad | Antigravity | ✅ 2026-11-25 birlashtirildi (HT-1/HP-1 qarori foydalanuvchida) | ag/AG-8 |
 | AG-9 | Kontent: EVD va DBS protsedura ssenariylari | Antigravity | ✅ 2026-11-23 (tekshirildi, master'ga birlashtirildi) | docs/research/procedures/ · docs/handoff/AG-9.md |
 | AG-10 | Tadqiqot: virtual operatsiya xonasi uchun ochiq assetlar | Antigravity | ✅ 2026-11-23 (tekshirildi, master'ga birlashtirildi) | docs/research/or-assets.md · docs/handoff/AG-10.md |
 | AG-11 | Pipeline: operatsiya xonasi assetlari (glb + Draco) → sx/main | Antigravity | ⏳ (Sketchfab tokeni kerak) | ag/AG-11 (origin/sx/main dan) |
 | AG-14 | Xonaga assetlarni ulash (`src/or/assets.ts`) — SURGERY.md 6 | Antigravity | ⏳ (AG-11 dan keyin) | ag/AG-14 (sx/main dan) |
-| AG-15 | EVD ma'lumot + UI qobig'i + mashg'ulotlar tarixi — SURGERY.md 6 | Antigravity | ⏳ (CC `evd/types.ts` yozgach) | ag/AG-15 (sx/main dan) |
-| AG-16 | DBS ma'lumot + MER tovushi — SURGERY.md 6 | Antigravity | ⏳ | ag/AG-16 (sx/main dan) |
-| AG-17 | Burg'u chang zarrachalari va tovushi — SURGERY.md 6 | Antigravity | ⏳ | ag/AG-17 (sx/main dan) |
-| AG-18 | Yagona tekshiruv `scripts/check-all.mjs` + hisobot | Antigravity | ⏳ BIRINCHI | ag/AG-18 (sx/main dan) |
-| AG-12 | Tadqiqot: simulyator validatsiyasi va mahorat o'lchovlari | Antigravity | ⏳ | ag/AG-12 |
-| AG-13 | Tadqiqot: marker kuzatuvi (6DoF qalam) | Antigravity | ⏳ | ag/AG-13 |
+| AG-15 | EVD ma'lumot + UI qobig'i + mashg'ulotlar tarixi — SURGERY.md 6 | Antigravity | ✅ 2026-11-24 tekshirildi va `sx/main` ga birlashtirildi (5 DOI qayta tekshirildi). `EvdPanel` ORPanel/EvdSession ga ulandi (SX-3b) | ag/AG-15 |
+| AG-16 | DBS ma'lumot + MER tovushi — SURGERY.md 6 | Antigravity | ✅ 2026-11-24 tekshirildi va `sx/main` ga birlashtirildi (12 DOI Crossref ✓; SX-6 mantig'i `--real` ma'lumot bilan ✓) | ag/AG-16 |
+| AG-17 | Burg'u chang zarrachalari va tovushi — SURGERY.md 6 | Antigravity | ✅ 2026-11-24 birlashtirildi va `DrillRig` ga ulandi (SX-4c) | ag/AG-17 |
+| AG-18 | Yagona tekshiruv `scripts/check-all.mjs` + hisobot | Antigravity | ✅ 2026-11-24 tekshirildi, sx/main ga birlashtirildi (`927a95f`; CC: `shot-evd` qo'shdi) | ag/AG-18 |
+| AG-12 | Tadqiqot: simulyator validatsiyasi va mahorat o'lchovlari | Antigravity | ✅ 2026-11-24 tekshirildi, master ga birlashtirildi (2 tuzatish) | ag/AG-12 |
+| AG-13 | Tadqiqot: marker kuzatuvi (6DoF qalam) | Antigravity | ✅ 2026-11-25 birlashtirildi (3 DOI Crossref ✓) | ag/AG-13 |
 | SX-1 | Virtual operatsiya xonasi (docs/SURGERY.md 2) | Claude Code | ✅ 2026-11-23 (`1bb44e0`) | sx/main |
 | SX-2 | Asbob dvigateli (HT-2): masofa, to'qnashuv, titrash | Claude Code | ✅ 2026-11-23 (`0fa0815`) | sx/main |
-| SX-3 | OP-1 EVD: faqat mantiq (Kocher, baholash, hodisalar); ma'lumot/UI → AG-15 | Claude Code | ⏳ KEYINGI (AG-9 ✅; AG-12 ixtiyoriy) | sx/main |
-| SX-4 | Suyakni burg'ulash (voksel) | Claude Code | ⏳ | sx/main |
+| SX-3 | OP-1 EVD: faqat mantiq (Kocher, baholash, hodisalar); ma'lumot/UI → AG-15 | Claude Code | ✅ 2026-11-24 (`a9ad416`): Kocher, qadam mashinasi, baholash; `shot-evd` 29 ✓. UI/ma'lumot → AG-15; `sceneWorld` ni ToolEngine/ORPanel bilan ulash hali yo'q | sx/main |
+| SX-4 | Suyakni burg'ulash (voksel) | Claude Code | ✅ 2026-11-24 (`54fc3fd`): BoneVolume + surface nets + DrillSession, `shot-drill` 21 ✓; real suyak 6.0 mm; UI/ToolEngine ga ulanmagan, AG-17 `DrillState` ni oladi | sx/main |
 | SX-5 | Kuzatiladigan qalam (6DoF marker) | Claude Code | ⏳ (AG-13) | sx/main |
-| SX-6 | OP-2 DBS | Claude Code | ⏳ | sx/main |
+| SX-6 | OP-2 DBS | Claude Code | ✅ mantiq 2026-11-24 (`9cf7fb6`): `src/or/dbs/` AC–PC, traektoriya xavfi, MER, stim, baho, sessiya; `shot-dbs` 22 ✓. Ma'lumot `DbsData` sifatida inyeksiya — AG-16 shu shaklda yozsin (`src/or/dbs/logic.ts`); UI/3D yo'q | sx/main |
 | SX-7 | Mikroskop + pterional | Claude Code | ⏳ (keyin) | sx/main |
+| RL-A | Realizm A: anatomiya suyakdan miyagacha (A-0 audit → A-1 yaxlit po'stloq → A-3 meninges/likvor → A-4 tomirlar → A-2/A-5/A-6) — `docs/REALISM.md` | Claude Code (+ subagentlar) | ⏳ reja tasdiqlandi 2026-11-24; A-0 dan boshlanadi | sx/main |
+| RL-B | Realizm B: odam boshi (qatlamli teri, kesim, real yuz/soch) — `docs/REALISM.md` | Claude Code | ⏳ (B-2 AG-22 dan keyin) | sx/main |
+| AG-19 | Tadqiqot (cortex-surface) + QURISH: `pial_surface.py` (A-1 yaxlit po'stloq) — `docs/REALISM.md` | Antigravity | ⏳ | ag/AG-19 (origin/sx/main dan) |
+| AG-20 | Tadqiqot (pial tomirlar) + QURISH: `vessel_snap.py`, `pial_vessels_grow.py` (A-4) | Antigravity | ⏳ (A-1 dan keyin) | ag/AG-20 (origin/sx/main dan) |
+| AG-21 | Tadqiqot (qatlam qalinliklari) + QURISH: `meninges_shells.py`, `src/or/anatomy/layers.ts` (A-3) | Antigravity | ⏳ | ag/AG-21 (origin/sx/main dan) |
+| AG-22 | Tadqiqot (CC0 bosh assetlari) + QURISH: `head_fit.py` → `public/or/head.glb` (B-2) | Antigravity | ⏳ | ag/AG-22 (origin/sx/main dan) |
+| AG-23 | Tadqiqot (ho'l to'qima shaderi) + QURISH: `src/or/anatomy/wetTissue.ts` + demo sahifa (A-5) | Antigravity | ⏳ | ag/AG-23 (origin/sx/main dan) |
 
 **Jurnal** (yangisi pastda; har yozuv: sana · kim · nima):
 - 2026-11-21 · Claude · AI panel AI-1…AI-5 tayyor; Gemini tuzatishlari (`827e81d`, `9b18a8f`); haqiqiy kalit bilan muammo ochiq.
@@ -574,3 +581,15 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-23 · Claude · SX-2 tayyor (`sx/main` `0fa0815`, push qilindi): `src/or/tools/` asbob dvigateli (zond/kateter/burg'u, BVH masofa, to'qnashuv, HUD, titrash, traektoriya CSV); `scripts/shot-tools.mjs` hammasi ✓ (masofa xatosi ~1e-15 mm), shot-or 20/20, shot-hands 13/13, audit 0. Tekshirilmadi: haqiqiy kamera/gamepad. Keyingi: SX-3 (AG-9 va AG-12 hujjatlari master'da bormi — tekshirish kerak).
 - 2026-11-23 · Claude · AG-9 va AG-10 tekshirildi (Crossref/eutils/Sketchfab API) va master'ga birlashtirildi. **Qayta taqsimot** (foydalanuvchi talabi): CC — kritik mantiq va tekshiruv, AGY — ma'lumot/UI/tovush/test kodi `sx/main` dan olingan `ag/*` branchlarda; yangi AG-14…AG-18, qoidalar `docs/SURGERY.md` 6.
 - 2026-11-23 · Claude · SX-1 tayyor (`sx/main` `1bb44e0`, push qilindi): `src/or/` virtual operatsiya xonasi, bosh terisi suyakdan, Mayfield, chiroq, chizg'ich; `scripts/shot-or.mjs` 20 tekshiruv ✓, `audit-pick` 0, `audit-lesions` 0, `shot-hands` 13/13. Tafsilot: sx/main `docs/HISTORY.md` "SX-1". Tekshirilmadi: haqiqiy kamera, Mac FPS. Keyingi: SX-2.
+- 2026-11-24 · Claude · Shartnomalar (`src/or/{types,evd/types,dbs/types,drill/types}.ts`, `sx/main` `528061f`) — AGY boshlashi mumkin. SX-3 mantig'i tayyor (`a9ad416`): real meshlarda Kocher (28 mm lateral, suture +15 mm), 9 qadam, baholash; ideal o'tish 4.75/5, noto'g'ri yo'llar past; `shot-evd` ✓, tsc/build, audit-pick 0, audit-lesions 0. AG-18 tekshirildi va sx/main ga birlashtirildi. Ongli chetga chiqishlar (chuqurlik atlasga nisbatan, Kakarla asl ta'rifi) — sx/main `docs/HISTORY.md` "SX-3". Tekshirilmadi: haqiqiy kamera/gamepad, chap tomon, SX-4 gacha suyak teshiksiz.
+- 2026-11-24 · Claude · SX-4 tayyor (`sx/main` `54fc3fd`): `src/or/drill/` voksel suyak (0.5 mm, sdf), surface nets, burg'u sessiyasi (tezlik/qarshilik, plunge-ogohlantirish, breakthrough, qalinlik xaritasi). Topilma: atlas suyaklari juft yupqa qatlam → ray urilishlari parity bo'yicha juftlanadi. `shot-drill` 21 ✓, tsc/build, audit-pick 0, audit-lesions 0. Tekshirilmadi: haqiqiy kamera/geympad, Mac kadr byudjeti (headless CPU 1 ms), ToolEngine/ORPanel ulanishi. AGY navbati: AG-15 → AG-11 → AG-14 → AG-16 → AG-17.
+- 2026-11-24 · Claude · SX-4b: burg'u ToolEngine ga ulandi (`sx/main`): Kocher nuqtasida suyak kesiladi (shader discard), panel, `shot-drill-ui` 9 ✓; shot-tools/or/hands, audit-pick 0, audit-lesions 0. AG-15 birlashtirildi. AGY keyingisi: AG-11 (bloklansa AG-14). Sinalmagan: real vaqtda sichqoncha/qo'l bilan, Mac FPS.
+- 2026-11-24 · Claude · SX-3b: EvdPanel ORPanel ga ulandi (`sx/main`): belgi (scalp bosish), burg'u breakthrough → 'burr' qadami, kateter ToolEngine orqali, hisobot; `shot-evd-ui` 12 ✓, regressiya (shot-evd/tools/or/drill-ui) ✗ 0, audit-pick 0, audit-lesions 0. Xato tuzatildi: panel throttle oxirgi holatni yo'qotardi. SX-5 AG-13 (marker tadqiqoti) ni kutadi.
+- 2026-11-24 · Claude · SX-6 mantig'i tayyor (`sx/main` `9cf7fb6`): AC–PC ramka (atlas AC–PC 32 mm), traektoriya xavfi, MER (qatlam oynalari, chord modeli), brain shift, stimulyatsiya oynasi, baho (dbs.md 6); ehtiyotkor 5.0 vs beparvo 2.0. AG-16 uchun: ma'lumot `DbsData` (`logic.ts`) shaklida; `effectRefDistMm` 6 mm atlasga kalibrlangan. UI, 3D elektrod, GPi/Vim to'liq sessiyalari, real AG-16 ma'lumoti — keyin.
+- 2026-11-24 · Claude · SX-6b: DBS paneli ORPanel ga ulandi (`sx/main`): 7 qadam, AC–PC (yordamli/bosish), kirish nuqtasi bosish, MER+audio, stim, hisobot; `shot-dbs-ui` 16 ✓, `shot-dbs --real` 22 ✓, regressiya ✗ 0, audit-pick 0, audit-lesions 0. AG-16 va AG-17 tekshirilib birlashtirildi. AG-12 branchi (tadqiqot) hali ko'rilmagan: u AI.md/SURGERY.md ga ham tegibdi — ko'rib chiqiladi. Keyingi: AG-17 ni DrillRig ga ulash (chang/ovoz/titrash), SX-5 AG-13 ni kutadi.
+- 2026-11-24 · Claude · SX-4c: AG-17 DrillRig ga ulandi (`sx/main`): chang (`drill-dust`), tovush ("Tovush" tugmasi, bosishdan keyin), geympad titrashi; `shot-drill-ui` 15 ✓, regressiya ✗ 0, audit-pick 0, audit-lesions 0. Sinalmagan: tovush eshitilishi, geympad, chang ko'rinishi (headless). AG-12 hali ko'rilmagan.
+- 2026-11-24 · Claude · AG-12 (simulyator validatsiyasi tadqiqoti) tekshirildi va master ga birlashtirildi: manbalar ✓, ikki izoh tuzatildi (8+1 metrika, chegaralar dizayn qiymati). Taklif: LC-CUSUM + LDJ — keyingi PhD qatlami (EVD/DBS tarix tabiga).
+- 2026-11-24 · Claude · PhD qatlami (`sx/main`): LDJ (silliqlik) va LC-CUSUM (kompetentlik) — `src/or/skill.ts`, EVD hisobot/tarix/CSV, tarix tabida LC-CUSUM kartasi; `shot-skill` 14 ✓, regressiya ✗ 0, audit-pick 0, audit-lesions 0. Ochiq: DBS tarixi yo'q (LC-CUSUM u yerga keyin), p0/p1/h simulyatsiya bilan tanlanmagan, LDJ chegaralari ekspert ma'lumotisiz kalibrlanmagan.
+- 2026-11-24 · Claude · Realizm rejasi (`docs/REALISM.md`): foydalanuvchi talabi — suyak/parda ostida havo (arachnoid, likvor, pia yo'q; tomirlar va miya muallaq), bosh/qo'l/stol realistik emas. Qaror: aralash agentlar (kod — Claude, tadqiqot/asset — AGY), hozir A (anatomiya) va B (bosh), sifat — tibbiy video, Mac ≥ 30 FPS; yondashuv: atlas tuzilmasi + ochiq real sirt + protsedural PBR (litsenziya toza va real). Yangi vazifalar RL-A, RL-B, AG-19…AG-22. Kuzatuv: meninges 4 mesh (dura 6.09 mm da suyak tagida), po'stloq 55 bo'lak, tomirlar 246 mesh.
+- 2026-11-24 · Claude · Foydalanuvchi: AGY ga boshidan faqat tadqiqot berilgan, u o'zi real narsa qurib ko'rsin. REALISM.md yangilandi: AG-19…AG-23 endi "tadqiqot + QURISH" (pipeline vositalari va sof modullar: pial_surface.py, vessel_snap.py, meninges_shells.py, head_fit.py, wetTissue.ts), har birida qabul skripti. Sahnaga ulashni Claude qiladi.
+- 2026-11-25 · Claude · AG-4, AG-8, AG-13 (faqat hujjat) tekshirildi: 6 DOI Crossref, havolalar; foydalanuvchi roziligi bilan master ga birlashtirildi.
