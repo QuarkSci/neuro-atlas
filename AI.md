@@ -539,7 +539,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | AG-16 | DBS ma'lumot + MER tovushi — SURGERY.md 6 | Antigravity | ✅ 2026-11-24 tekshirildi va `sx/main` ga birlashtirildi (12 DOI Crossref ✓; SX-6 mantig'i `--real` ma'lumot bilan ✓) | ag/AG-16 |
 | AG-17 | Burg'u chang zarrachalari va tovushi — SURGERY.md 6 | Antigravity | ✅ 2026-11-24 birlashtirildi va `DrillRig` ga ulandi (SX-4c) | ag/AG-17 |
 | AG-18 | Yagona tekshiruv `scripts/check-all.mjs` + hisobot | Antigravity | ✅ 2026-11-24 tekshirildi, sx/main ga birlashtirildi (`927a95f`; CC: `shot-evd` qo'shdi) | ag/AG-18 |
-| AG-12 | Tadqiqot: simulyator validatsiyasi va mahorat o'lchovlari | Antigravity | ⏳ | ag/AG-12 |
+| AG-12 | Tadqiqot: simulyator validatsiyasi va mahorat o'lchovlari | Antigravity | ✅ 2026-11-24 tekshirildi, master ga birlashtirildi (2 tuzatish) | ag/AG-12 |
 | AG-13 | Tadqiqot: marker kuzatuvi (6DoF qalam) | Antigravity | ⏳ | ag/AG-13 |
 | SX-1 | Virtual operatsiya xonasi (docs/SURGERY.md 2) | Claude Code | ✅ 2026-11-23 (`1bb44e0`) | sx/main |
 | SX-2 | Asbob dvigateli (HT-2): masofa, to'qnashuv, titrash | Claude Code | ✅ 2026-11-23 (`0fa0815`) | sx/main |
@@ -581,3 +581,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-24 · Claude · SX-6 mantig'i tayyor (`sx/main` `9cf7fb6`): AC–PC ramka (atlas AC–PC 32 mm), traektoriya xavfi, MER (qatlam oynalari, chord modeli), brain shift, stimulyatsiya oynasi, baho (dbs.md 6); ehtiyotkor 5.0 vs beparvo 2.0. AG-16 uchun: ma'lumot `DbsData` (`logic.ts`) shaklida; `effectRefDistMm` 6 mm atlasga kalibrlangan. UI, 3D elektrod, GPi/Vim to'liq sessiyalari, real AG-16 ma'lumoti — keyin.
 - 2026-11-24 · Claude · SX-6b: DBS paneli ORPanel ga ulandi (`sx/main`): 7 qadam, AC–PC (yordamli/bosish), kirish nuqtasi bosish, MER+audio, stim, hisobot; `shot-dbs-ui` 16 ✓, `shot-dbs --real` 22 ✓, regressiya ✗ 0, audit-pick 0, audit-lesions 0. AG-16 va AG-17 tekshirilib birlashtirildi. AG-12 branchi (tadqiqot) hali ko'rilmagan: u AI.md/SURGERY.md ga ham tegibdi — ko'rib chiqiladi. Keyingi: AG-17 ni DrillRig ga ulash (chang/ovoz/titrash), SX-5 AG-13 ni kutadi.
 - 2026-11-24 · Claude · SX-4c: AG-17 DrillRig ga ulandi (`sx/main`): chang (`drill-dust`), tovush ("Tovush" tugmasi, bosishdan keyin), geympad titrashi; `shot-drill-ui` 15 ✓, regressiya ✗ 0, audit-pick 0, audit-lesions 0. Sinalmagan: tovush eshitilishi, geympad, chang ko'rinishi (headless). AG-12 hali ko'rilmagan.
+- 2026-11-24 · Claude · AG-12 (simulyator validatsiyasi tadqiqoti) tekshirildi va master ga birlashtirildi: manbalar ✓, ikki izoh tuzatildi (8+1 metrika, chegaralar dizayn qiymati). Taklif: LC-CUSUM + LDJ — keyingi PhD qatlami (EVD/DBS tarix tabiga).

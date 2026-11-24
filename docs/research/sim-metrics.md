@@ -136,7 +136,9 @@ $$S_t = \max(0,\; S_{t-1} + W_t), \qquad S_0 = 0$$
 
 ## 7. Neuro Atlas SX-3 (EVD) uchun tavsiya etilgan 8+2 o'lchovlar tizimi
 
-Quyidagi 8 ta asosiy o'lchov `src/or/evd/params.ts` va `score.ts` da amalga oshirilgan; 9–10-o'lchovlar PhD darajasidagi keyingi kengaytma sifatida tavsiya etiladi:
+Quyidagi jadvaldagi 1–9-o'lchovlar `sx/main` da amalga oshirilgan, lekin ular **8 ta ballanadigan metrika + 1 ta qat'iy cheklov**: vaqt (#9), urinishlar (#5), burchak (#3), Monro masofasi (#2), chuqurlik (#4), to'qnashuv (#6), titrash (#7), samaradorlik (#8) o'rtacha ballga kiradi; Kakarla (#1) ballanmaydi, faqat umumiy bahoni cheklaydi (Grade 3 → ≤ 2.0). Vaqt qadam 2 (belgi) dan 8 (seat) gacha. 10-o'lchov PhD darajasidagi keyingi kengaytma sifatida tavsiya etiladi. *(CC tuzatishi 2026-11-24: asl matn "8 ta o'lchov" deb Kakarlani ham sanagan.)*
+> **Chegaralar haqida:** 5/3/1 chegaralari simulyator dizayn qiymatlari (dbs.md / evd.md dan olingan), manbalar ularni "qo'llab-quvvatlaydi", lekin aynan shu sonlarni bermaydi. Masalan, Banerjee 2007 da ImmersiveTouch uchun uchdan Monro teshigigacha o'rtacha masofa **16.09 ± 7.85 mm** (erkin qo'l bilan klinik o'rtacha ≈ 16 ± 9.6 mm); bizning ≤ 5 mm "a'lo" chegarasi undan qat'iyroq.
+
 
 | # | O'lchov | Formula / ta'rif | A'lo (5) | Qoniqarli (3) | Qoniqarsiz (1) | Ilmiy asos |
 |---|---|---|---|---|---|---|
