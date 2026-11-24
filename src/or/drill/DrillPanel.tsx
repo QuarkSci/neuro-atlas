@@ -17,6 +17,7 @@ const LAYER: Record<BoneLayer, L10n> = {
 const T = {
   uz: {
     spin: 'Burg‘u aylanadi',
+    sound: 'Tovush',
     spinHint: 'Space ni bosib turing yoki tugmani yoqing. G‘ildirak — chuqurlik.',
     push: 'Bosim',
     layer: 'Qatlam',
@@ -37,6 +38,7 @@ const T = {
   },
   en: {
     spin: 'Spin the drill',
+    sound: 'Sound',
     spinHint: 'Hold Space or toggle the button. Wheel = depth.',
     push: 'Push',
     layer: 'Layer',
@@ -80,6 +82,15 @@ export function DrillPanel() {
       <div className="or-row">
         <button className={`or-chip ${d.spin ? 'on' : ''}`} style={{ whiteSpace: 'nowrap' }} aria-pressed={d.spin} onClick={() => d.set({ spin: !d.spin })} type="button">
           {t.spin}
+        </button>
+        <button
+          className={`or-chip ${d.sound ? 'on' : ''}`}
+          style={{ whiteSpace: 'nowrap' }}
+          aria-pressed={d.sound}
+          onClick={() => activeTools()?.drill?.setSound(!d.sound)}
+          type="button"
+        >
+          {t.sound}
         </button>
         <button className="or-chip" onClick={() => activeTools()?.resetDrill()} type="button" aria-label={t.reset} title={t.reset} style={{ whiteSpace: 'nowrap' }}>
           <RotateCcw size={14} /> {t.reset}

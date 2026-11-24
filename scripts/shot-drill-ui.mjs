@@ -54,6 +54,17 @@ try {
     const thick = window.__drill.getState().thicknessMm
     const goal = thick - 0.4
     const seen = new Set()
+    const log = { audio: [], haptics: [], maxDust: 0 }
+    const wrap = (o, k, tag) => {
+      const f = o[k].bind(o)
+      o[k] = (e) => {
+        log[tag].push(e.type)
+        return f(e)
+      }
+    }
+    wrap(rig.audio, 'event', 'audio')
+    wrap(rig.haptics, 'event', 'haptics')
+    window.__feel = log
     rig.manual = true
     // Fixed 60 Hz steps, 5 mm/s down, then 1.2 s of dwell (the spindle keeps cutting where the tip is).
     const steps = Math.round(((goal + 4) / 5 + 1.2) * 60)
@@ -62,6 +73,7 @@ try {
       window.__orMode.tools().setInput(at(d), dir)
       rig.tick(1 / 60, performance.now() + i * 20)
       seen.add(window.__drill.getState().layer)
+      log.maxDust = Math.max(log.maxDust, rig.dust.object.geometry.drawRange.count)
     }
     const s = window.__drill.getState()
     return {
@@ -83,6 +95,66 @@ try {
   check(run.removed > 10 && !run.breached, `bone removed ${run.removed.toFixed(0)} mm³, inner table intact`)
   check(run.rpm > 40000, `spindle at ${Math.round(run.rpm)} rpm under load`)
 
+  const F = await page.evaluate(async () => {
+    const rig = window.__orMode.tools().drill
+    const log = window.__feel
+    const dust = log.maxDust
+    // Finish the job through the inner table with a hard push: warning + breakthrough reach audio and haptics.
+    const V = window.__scene.camera.position.constructor
+    const sc = (p) => new V(-p[0], p[2], p[1])
+    const n = rig.vol.w
+    const e = rig.entry
+    const thick = window.__drill.getState().thicknessMm
+    const dir = sc(n).sub(sc([0, 0, 0]))
+    window.__drill.getState().set({ push: 0.9 })
+    for (let i = 0; i < 60 * 4; i++) {
+      const d = Math.min(thick + 1.5, thick - 0.4 + (i / 60) * 4)
+      window.__orMode.tools().setInput(sc([e[0] + n[0] * d, e[1] + n[1] * d, e[2] + n[2] * d]), dir)
+      rig.tick(1 / 60, performance.now() + 100000 + i * 20)
+    }
+    let soundErr = null
+    try {
+      rig.setSound(true)
+    } catch (err) {
+      soundErr = String(err)
+    }
+    const feel = await import('/src/or/drill/drillAudio.ts')
+    const base = {
+      t: 0,
+      running: true,
+      rpm: 60000,
+      maxRpm: 75000,
+      push: 0.5,
+      tip: [0, 0, 0],
+      axis: [0, 0, -1],
+      depthMm: 1,
+      layer: 'outer-table',
+      layerProgress: 0.2,
+      resistance: 0.5,
+      speedMmS: 2,
+      removedMm3: 0,
+      toNextMm: 1,
+    }
+    return {
+      maxDust: dust,
+      audio: log.audio,
+      haptics: log.haptics,
+      soundErr,
+      soundOn: window.__drill.getState().sound,
+      pitchOuter: feel.drillPitchHz(base),
+      pitchDiploe: feel.drillPitchHz({ ...base, layer: 'diploe' }),
+      rumble: feel.hapticPulseForEvent({ t: 0, type: 'breakthrough', depthMm: 6, push: 0.9 }),
+    }
+  })
+  check(F.maxDust > 20, `bone dust: up to ${F.maxDust} particles in the scene while cutting`)
+  check(
+    F.audio.includes('layer') && F.audio.includes('breakthrough') && F.audio.includes('plunge-warning'),
+    `drill events reach the sound engine: ${[...new Set(F.audio)].join(', ')}`,
+  )
+  check(F.haptics.includes('breakthrough') && F.haptics.length === F.audio.length, `…and the rumble driver (${F.haptics.length} events, no gamepad = silent no-op)`)
+  check(F.soundErr === null && F.soundOn, 'sound switch starts the engine without errors')
+  check(F.pitchOuter > 100 && Math.abs(F.pitchOuter - F.pitchDiploe) > 5, `bit pitch differs by layer: outer table ${F.pitchOuter} Hz, diploë ${F.pitchDiploe} Hz`)
+  check(F.rumble && F.rumble.strong >= 0.9, 'breakthrough gives the strongest rumble impulse')
   // Atlas bone is cut out where the patch is, and comes back with the tool.
   const cut = await page.evaluate(() => {
     const rig = window.__orMode.tools().drill
@@ -108,7 +180,8 @@ try {
   await page.evaluate(() => window.__tool.getState().set({ tool: 'off' }))
   await sleep(400)
   const off = await page.evaluate(() => ({ rig: window.__orMode.tools().drill, ready: window.__drill.getState().ready }))
-  check(off.rig === null && !off.ready, 'tool off: drill rig disposed')
+  const gone = await page.evaluate(() => !window.__scene.scene.getObjectByName('drill-dust'))
+  check(off.rig === null && !off.ready && gone, 'tool off: drill rig and its dust disposed')
 } finally {
   await browser.close()
 }

@@ -6,6 +6,8 @@ export interface DrillUi {
   ready: boolean
   /** The learner's switch (Space held also turns it on). */
   spin: boolean
+  /** Bit sound on (needs a click to start). */
+  sound: boolean
   push: number
   rpm: number
   layer: BoneLayer
@@ -27,6 +29,7 @@ export interface DrillUi {
 export const useDrill = create<DrillUi>((set) => ({
   ready: false,
   spin: false,
+  sound: false,
   push: 0.5,
   rpm: 0,
   layer: 'air',

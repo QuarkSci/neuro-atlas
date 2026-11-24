@@ -9,6 +9,9 @@ import { BoneCutout } from './cutout'
 import { DrillSession } from './session'
 import { useDrill } from './useDrill'
 import { DrillMeshView } from './view'
+import { createDust } from './dust'
+import { createDrillAudio, createDrillHaptics } from './drillAudio'
+import type { DrillAudio, DrillHaptics, DustEmitter } from './types'
 import { BoneVolume } from './volume'
 import type { DrillEvent, DrillState } from './types'
 
@@ -36,6 +39,10 @@ export class DrillRig {
   private stopSub: (() => void) | null = null
   private scene: BrainScene
   readonly entry: Mni
+  /** Feel (AG-17): bone dust in the scene, procedural bit sound (starts on a click), gamepad rumble. */
+  readonly dust: DustEmitter = createDust()
+  readonly audio: DrillAudio = createDrillAudio()
+  readonly haptics: DrillHaptics = createDrillHaptics()
 
   constructor(scene: BrainScene) {
     this.scene = scene
@@ -46,6 +53,7 @@ export class DrillRig {
     this.vol = new BoneVolume(sceneBone(scene, BONES), { center: k.entry, outerNormal: k.normal })
     this.view = new DrillMeshView(this.vol)
     scene.scene.add(this.view.group)
+    scene.scene.add(this.dust.object)
     const geos = new Set<unknown>(
       scene
         .toolTargets()
@@ -63,6 +71,7 @@ export class DrillRig {
     window.addEventListener('keyup', this.onKey)
     useDrill.setState({
       ready: true,
+      sound: false,
       events: [],
       thicknessMm: this.vol.thicknessAt(k.entry),
       breached: false,
@@ -102,6 +111,8 @@ export class DrillRig {
       this.session.subscribe((e) => {
         const ev = useDrill.getState().events
         useDrill.setState({ events: [...ev, e].filter((x) => x.type !== 'start' && x.type !== 'stop').slice(-12) })
+        this.audio.event(e)
+        this.haptics.event(e)
         for (const f of this.eventListeners) f(e)
       })
     }
@@ -123,6 +134,10 @@ export class DrillRig {
     const ui = useDrill.getState()
     const st = s.update({ target: this.target, axis: this.axis, push: ui.push, dt, running: ui.spin || this.space })
     for (const f of this.listeners) f(st)
+    this.dust.update(dt, st)
+    this.audio.update(st)
+    this.haptics.update(st)
+    if ((this.dust.object as unknown as { geometry: { drawRange: { count: number } } }).geometry.drawRange.count > 0) this.scene.redraw()
     const sync = this.view.sync(4)
     if (sync.chunks || st.removedMm3 > 0) this.scene.redraw()
     if (now - this.lastUi > UI_MS) {
@@ -145,6 +160,13 @@ export class DrillRig {
     }
   }
 
+  /** Sound on / off. Call from a click: browsers start audio only on a user gesture. */
+  setSound(on: boolean) {
+    if (on) this.audio.start()
+    this.audio.mute(!on)
+    useDrill.setState({ sound: on })
+  }
+
   /** Fresh bone (the patch is rebuilt from the atlas). */
   reset() {
     this.dispose()
@@ -156,9 +178,12 @@ export class DrillRig {
     window.removeEventListener('keydown', this.onKey)
     window.removeEventListener('keyup', this.onKey)
     this.cutout.clear()
+    this.dust.dispose()
+    this.dust.object.removeFromParent()
+    this.audio.dispose()
     this.view.dispose()
     this.stopSub?.()
-    useDrill.setState({ ready: false, rpm: 0, spin: false })
+    useDrill.setState({ ready: false, rpm: 0, spin: false, sound: false })
     this.scene.redraw()
   }
 }

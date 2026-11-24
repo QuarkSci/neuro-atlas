@@ -1539,3 +1539,10 @@ AG-16 (`dbs/data.ts`, `merAudio.ts`, `strings.ts`) va AG-17 (`drill/dust.ts`, `d
 kirish nuqtasini boshda bosish (teri → suyak ray) va tahlil (burchaklar, masofalar), dura yopish va brain shift, kanula, MER (yo'llar, chuqurlik slayderi, qatlam/chastota/javob, WebAudio, chegara belgilari) + makrostimulyatsiya (mA, foyda, oyna, nojo'ya ta'sirlar), implant va hisobot (CSV nusxa).
 3D: sariq chiziq (yo'l), ko'k shar (reja), to'q sariq shar (elektrod uchi). Test: `scripts/shot-dbs-ui.mjs` (16 ✓, "7g"): panel tugmalari, bosish orqali kirish nuqtasi, MER ketma-ketligi, hisobot 5.0.
 Sinalmagan: haqiqiy AC/PC ni sichqoncha bilan topish (tuzilmalar odatda yashirin; asosiy yo'l "yordamli"), MER tovushining eshitilishi (headless), 3D da elektrod konturi (faqat nuqta), GPi/Vim ning UI orqali to'liq o'tishi, chap tomon, mobil joylashuv.
+
+### SX-4c — burg'u hissi (AG-17) DrillRig ga ulandi, 2026-11-24
+
+`DrillRig` endi `createDust()` (sahnada `drill-dust` Points), `createDrillAudio()` va `createDrillHaptics()` ni yaratadi: har tick `dust.update`, `audio.update`, `haptics.update`; `DrillSession` hodisalari (start/layer/stall/plunge-warning/breakthrough)
+`audio.event` va `haptics.event` ga uzatiladi. Tovush brauzer qoidasi bo'yicha faqat bosishdan keyin: DrillPanel "Tovush" tugmasi → `rig.setSound(true)` (`audio.start()`), Space ham ishlatiladi lekin tovushni boshlamaydi. Rig yo'q qilinganda chang va audio ham dispose.
+Sinov (`shot-drill-ui`, 15 ✓): kesish paytida 336 gacha zarracha, hodisalar audio va haptikaga yetadi (11 ta), qatlamga qarab burg'u balandligi o'zgaradi (tashqi plastinka 639 Hz, diploe 504 Hz), breakthrough eng kuchli titrash.
+Sinalmagan: tovushning eshitilishi va sifati (headless), geympad titrashi, changning ko'rinishi (rasmda zarrachalar kesish tugagach tarqab ketgan), changning mikroskop/yaqin rejimdagi o'lchami.
