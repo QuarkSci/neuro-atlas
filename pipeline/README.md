@@ -6,7 +6,7 @@ both gitignored. The per-source catalogues (`data/*.json`) and the merged
 anything here. Re-run only when adding structures or on a fresh machine.
 
 ```bash
-python3 -m venv pipeline/.venv && pipeline/.venv/bin/pip install numpy nibabel scikit-image trimesh fast-simplification siibra
+python3 -m venv pipeline/.venv && pipeline/.venv/bin/pip install numpy nibabel scikit-image trimesh fast-simplification pymeshlab rtree siibra
 ```
 
 ## 1. BodyParts3D → gross anatomy (379 parts)
@@ -90,6 +90,20 @@ pipeline/.venv/bin/python pipeline/subcortical_to_glb.py suit
 
 ```bash
 pipeline/.venv/bin/python pipeline/build_catalogue.py   # data/*.json → src/data/parts.json (1672 parts, 9 layers)
+```
+
+## 6. Snapped & grown pial vessels (AG-20 / A-4)
+
+Requires `public/meshes/gross/pial-unified.glb` (AG-19). Extracts 1D centerlines
+and local radii from the 246 gross artery/vein meshes, snaps segments within
+≤ 6 mm of the cortex onto the pial surface (with sulcal sinking and elastic
+relaxation), optionally grows fine pial arterioles/venules via Space Colonization
++ Murray's Law (`pial_vessels_grow.py`), and enforces 0 self-intersections:
+
+```bash
+pipeline/.venv/bin/python pipeline/tools/vessel_snap.py --with-grown   # → public/meshes/gross/vessels-snapped.glb (gitignored)
+pipeline/.venv/bin/python pipeline/tools/pial_vessels_grow.py          # standalone grown pial network → public/meshes/gross/pial-vessels-grown.glb
+pipeline/.venv/bin/python scripts/audit-vessels.py                     # verifies >=95% adherence <=0.5mm, 0 self-intersections, <=1.5x faces
 ```
 
 ## Standalone preview (no app build)
