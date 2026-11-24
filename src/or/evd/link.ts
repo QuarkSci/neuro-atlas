@@ -22,6 +22,9 @@ export class EvdLink {
   private target: T.Mesh
   private unsub: () => void
   private snap: EvdSnapshot
+  private prevStep: string | null = null
+  /** Fired once when the incision step begins: scene point of the mark (or Kocher) and the wanted Kocher point. orMode plans the scalp incision there. */
+  onIncisionStep: ((at: T.Vector3, want: T.Vector3 | null) => void) | null = null
 
   private scene: BrainScene
   private tools: ToolEngine
@@ -63,6 +66,14 @@ export class EvdLink {
 
   private onSnap(s: EvdSnapshot) {
     this.snap = s
+    const step = s.running ? s.step : null
+    if (step === 'incision' && this.prevStep !== 'incision') {
+      const k = s.kocher
+      const want = k ? new T.Vector3(...mniToScene(k.entry)) : null
+      const at = s.mark ? new T.Vector3(...mniToScene(s.mark.point)) : want
+      if (at) this.onIncisionStep?.(at, want)
+    }
+    this.prevStep = step
     const m = s.mark
     this.mark.visible = !!m
     if (m) this.mark.position.set(...mniToScene(m.point))

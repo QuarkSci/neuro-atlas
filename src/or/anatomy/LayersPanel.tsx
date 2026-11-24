@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import * as T from 'three'
 import { useAtlas } from '@/store/useAtlas'
-import { activeAnatomy, activeDura, activeRoom } from '../orMode'
+import { activeAnatomy, activeDura, activeHead, activeRoom } from '../orMode'
 import type { LayerKind } from './shells'
 
 const NAMES: Record<LayerKind, { uz: string; en: string }> = {
@@ -19,6 +19,8 @@ export function LayersPanel() {
   if (!an || !du) return null
   const uz = lang === 'uz'
   const rep = du.report()
+  const head = activeHead()
+  const hrep = head?.report() ?? null
   const refresh = () => bump((n) => n + 1)
   const plan = () => {
     const room = activeRoom()
@@ -27,8 +29,48 @@ export function LayersPanel() {
     du.begin(room.scalp.surfaceAt(new T.Vector3(0.28, 0.88, 0.38)), 12)
     refresh()
   }
+  const planHead = () => {
+    const room = activeRoom()
+    if (!room || !head) return
+    head.begin(room.scalp.surfaceAt(new T.Vector3(0.28, 0.88, 0.38)), 25)
+    refresh()
+  }
+  const LAYER_UZ: Record<string, string> = { skin: 'teri', fat: "yog'", galea: 'galea', pericranium: 'perikranium', temporalis: 'temporal mushak' }
   return (
     <>
+      {head && (
+        <>
+          <div className="or-row">
+            <button className={`or-chip ${hrep ? 'on' : ''}`} aria-pressed={!!hrep} onClick={() => (hrep ? (head.close(), refresh()) : planHead())} type="button">
+              {hrep ? (uz ? 'Teri kesmasini yopish' : 'Close scalp incision') : uz ? 'Teri kesmasi' : 'Scalp incision'}
+            </button>
+            {hrep && (
+              <>
+                <label className="or-label">
+                  {uz ? 'Kesish' : 'Cut'}
+                  <input type="range" min={0} max={1} step={0.05} value={head.cut} onChange={(e) => (head.setCut(+e.target.value), refresh())} />
+                </label>
+                <label className="or-label">
+                  {uz ? 'Chuqurlik' : 'Depth'}
+                  <input type="range" min={0} max={1} step={0.05} value={head.depth} onChange={(e) => (head.setDepth(+e.target.value), refresh())} />
+                </label>
+                <label className="or-label">
+                  {uz ? 'Retraktor' : 'Retract'}
+                  <input type="range" min={0} max={1} step={0.05} value={head.retract} onChange={(e) => (head.setRetract(+e.target.value), refresh())} />
+                </label>
+              </>
+            )}
+          </div>
+          {hrep && (
+            <p className="or-hint">
+              {uz ? 'Kesma' : 'Incision'} {hrep.lengthMm.toFixed(0)} mm · {uz ? 'yumshoq to‘qima' : 'soft tissue'} {hrep.thicknessMm.toFixed(1)} mm (
+              {uz ? 'taxminiy' : 'provisional'}) ·{' '}
+              {hrep.cutThrough ? (uz ? `kesilgan: ${LAYER_UZ[hrep.cutThrough]}` : `cut through: ${hrep.cutThrough}`) : uz ? 'kesilmagan' : 'not cut'}
+              {hrep.offsetMm != null && ` · ${uz ? 'Kocherdan' : 'from Kocher'} ${hrep.offsetMm.toFixed(1)} mm`}
+            </p>
+          )}
+        </>
+      )}
       <div className="or-row">
         <span className="or-label">{uz ? 'Pardalar' : 'Membranes'}</span>
         {(['dura', 'arachnoid', 'csf'] as const).map((k) => (

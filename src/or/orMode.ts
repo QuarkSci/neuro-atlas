@@ -14,6 +14,7 @@ import { useDbs } from './dbs/useDbs'
 import { useTool } from './tools/useTool'
 import { LayerStack } from './anatomy/layerStack'
 import { DuraOpening } from './anatomy/duraOpen'
+import { HeadLayers } from './anatomy/headLayers'
 
 /** Atlas fields the room overrides while it is on (restored exactly on the way out). */
 const FORCED = { explode: 0, peel: 0, isolate: false, cutaway: false, autoRotate: false, sidebar: false } as const
@@ -44,6 +45,7 @@ interface Session {
   dbs: DbsLink
   anatomy: LayerStack | null
   dura: DuraOpening | null
+  head: HeadLayers | null
   unsub: (() => void)[]
 }
 
@@ -59,6 +61,7 @@ export const activeRoom = () => session?.room ?? null
 /** The membrane layers (dura, arachnoid, CSF) and the dura opening of the live session. */
 export const activeAnatomy = () => session?.anatomy ?? null
 export const activeDura = () => session?.dura ?? null
+export const activeHead = () => session?.head ?? null
 
 const UP = new T.Vector3(0, 0, 1)
 
@@ -111,6 +114,7 @@ export function enterOR(): boolean {
     dbs: undefined as unknown as DbsLink,
     anatomy: null,
     dura: null,
+    head: null,
     unsub: [],
   }
   s.tools = new ToolEngine(scene, room)
@@ -122,11 +126,23 @@ export function enterOR(): boolean {
   } catch (e) {
     console.warn('[anatomy] layers unavailable:', (e as Error).message)
   }
+  try {
+    const skull = scene
+      .toolTargets()
+      .filter((t) => SKULL_IDS.includes(t.id) && t.geometry.boundsTree)
+      .map((t) => t.geometry)
+    s.head = new HeadLayers(scene, room, skull)
+    s.head.onChange = () => showLayers(useOR.getState().skin)
+    s.evd.onIncisionStep = (at, want) => s.head?.begin(at, 25, want)
+  } catch (e) {
+    console.warn('[anatomy] scalp layers unavailable:', (e as Error).message)
+  }
   session = s
 
   useAtlas.setState({ ...FORCED })
   scene.scene.add(room.group, room.lights, room.scalpMesh, s.measureGroup)
   if (s.anatomy) scene.scene.add(s.anatomy.group)
+  if (s.head) scene.scene.add(s.head.group)
   scene.setOrMode(true)
   scene.setUp(UP)
   cam.clearViewOffset()
@@ -139,6 +155,7 @@ export function enterOR(): boolean {
   const o = useOR.getState()
   room.setSkin(o.skin)
   s.anatomy?.setSkin(o.skin)
+  s.head?.setSkin(o.skin)
   showLayers(o.skin)
   room.setLamp(o.lamp)
   room.setTheme(atlas.theme)
@@ -152,6 +169,7 @@ export function enterOR(): boolean {
       if (st.skin !== prev.skin) {
         room.setSkin(st.skin)
         s.anatomy?.setSkin(st.skin)
+        s.head?.setSkin(st.skin)
         showLayers(st.skin)
       }
       if (st.lamp !== prev.lamp) room.setLamp(st.lamp)
@@ -203,6 +221,7 @@ export function exitOR() {
   s.evd.dispose()
   s.dbs.dispose()
   s.dura?.dispose()
+  s.head?.dispose()
   s.anatomy?.dispose()
   s.tools.dispose()
   useTool.setState({ tool: 'off', lock: false, depth: 0 })
@@ -234,7 +253,8 @@ function showLayers(skin: Skin) {
   if (!s) return
   const base = (s.atlas.visible as SystemId[]) ?? []
   const rest = base.filter((id) => id !== 'skull')
-  useAtlas.setState({ visible: skin === 'ghost' || skin === 'bone' ? [...rest, 'skull'] : rest })
+  // An open scalp wound shows the outer table under it, whatever the skin layer says.
+  useAtlas.setState({ visible: skin === 'ghost' || skin === 'bone' || s.head?.boneExposed ? [...rest, 'skull'] : rest })
 }
 
 export const toggleOR = () => (session ? (exitOR(), true) : enterOR())
@@ -344,4 +364,5 @@ if (import.meta.env.DEV)
     dbs: () => session?.dbs,
     anatomy: () => session?.anatomy,
     dura: () => session?.dura,
+    head: () => session?.head,
   }
