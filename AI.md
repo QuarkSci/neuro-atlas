@@ -550,10 +550,11 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | SX-7 | Mikroskop + pterional | Claude Code | ⏳ (keyin) | sx/main |
 | RL-A | Realizm A: anatomiya suyakdan miyagacha (A-0 audit → A-1 yaxlit po'stloq → A-3 meninges/likvor → A-4 tomirlar → A-2/A-5/A-6) — `docs/REALISM.md` | Claude Code (+ subagentlar) | ⏳ reja tasdiqlandi 2026-11-24; A-0 dan boshlanadi | sx/main |
 | RL-B | Realizm B: odam boshi (qatlamli teri, kesim, real yuz/soch) — `docs/REALISM.md` | Claude Code | ⏳ (B-2 AG-22 dan keyin) | sx/main |
-| AG-19 | Tadqiqot: realistik po'stloq yuzasi manbalari (BigBrain, fsaverage, HCP, CIVET; litsenziya) | Antigravity | ⏳ | ag/AG-19 |
-| AG-20 | Tadqiqot: pial tomirlar realizmi (ochiq to'plamlar, protsedural o'stirish, pulsatsiya) | Antigravity | ⏳ | ag/AG-20 |
-| AG-21 | Tadqiqot: qatlam qalinliklari va to'qima ranglari (DOI bilan) | Antigravity | ⏳ | ag/AG-21 |
-| AG-22 | Asset tadqiqoti: CC0/CC BY real bosh, teri PBR, soch, ko'z; atlas skullga moslash | Antigravity | ⏳ | ag/AG-22 |
+| AG-19 | Tadqiqot (cortex-surface) + QURISH: `pial_surface.py` (A-1 yaxlit po'stloq) — `docs/REALISM.md` | Antigravity | ⏳ | ag/AG-19 |
+| AG-20 | Tadqiqot (pial tomirlar) + QURISH: `vessel_snap.py`, `pial_vessels_grow.py` (A-4) | Antigravity | ⏳ (A-1 dan keyin) | ag/AG-20 |
+| AG-21 | Tadqiqot (qatlam qalinliklari) + QURISH: `meninges_shells.py`, `src/or/anatomy/layers.ts` (A-3) | Antigravity | ⏳ | ag/AG-21 |
+| AG-22 | Tadqiqot (CC0 bosh assetlari) + QURISH: `head_fit.py` → `public/or/head.glb` (B-2) | Antigravity | ⏳ | ag/AG-22 |
+| AG-23 | Tadqiqot (ho'l to'qima shaderi) + QURISH: `src/or/anatomy/wetTissue.ts` + demo sahifa (A-5) | Antigravity | ⏳ | ag/AG-23 |
 
 **Jurnal** (yangisi pastda; har yozuv: sana · kim · nima):
 - 2026-11-21 · Claude · AI panel AI-1…AI-5 tayyor; Gemini tuzatishlari (`827e81d`, `9b18a8f`); haqiqiy kalit bilan muammo ochiq.
@@ -590,3 +591,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-24 · Claude · AG-12 (simulyator validatsiyasi tadqiqoti) tekshirildi va master ga birlashtirildi: manbalar ✓, ikki izoh tuzatildi (8+1 metrika, chegaralar dizayn qiymati). Taklif: LC-CUSUM + LDJ — keyingi PhD qatlami (EVD/DBS tarix tabiga).
 - 2026-11-24 · Claude · PhD qatlami (`sx/main`): LDJ (silliqlik) va LC-CUSUM (kompetentlik) — `src/or/skill.ts`, EVD hisobot/tarix/CSV, tarix tabida LC-CUSUM kartasi; `shot-skill` 14 ✓, regressiya ✗ 0, audit-pick 0, audit-lesions 0. Ochiq: DBS tarixi yo'q (LC-CUSUM u yerga keyin), p0/p1/h simulyatsiya bilan tanlanmagan, LDJ chegaralari ekspert ma'lumotisiz kalibrlanmagan.
 - 2026-11-24 · Claude · Realizm rejasi (`docs/REALISM.md`): foydalanuvchi talabi — suyak/parda ostida havo (arachnoid, likvor, pia yo'q; tomirlar va miya muallaq), bosh/qo'l/stol realistik emas. Qaror: aralash agentlar (kod — Claude, tadqiqot/asset — AGY), hozir A (anatomiya) va B (bosh), sifat — tibbiy video, Mac ≥ 30 FPS; yondashuv: atlas tuzilmasi + ochiq real sirt + protsedural PBR (litsenziya toza va real). Yangi vazifalar RL-A, RL-B, AG-19…AG-22. Kuzatuv: meninges 4 mesh (dura 6.09 mm da suyak tagida), po'stloq 55 bo'lak, tomirlar 246 mesh.
+- 2026-11-24 · Claude · Foydalanuvchi: AGY ga boshidan faqat tadqiqot berilgan, u o'zi real narsa qurib ko'rsin. REALISM.md yangilandi: AG-19…AG-23 endi "tadqiqot + QURISH" (pipeline vositalari va sof modullar: pial_surface.py, vessel_snap.py, meninges_shells.py, head_fit.py, wetTissue.ts), har birida qabul skripti. Sahnaga ulashni Claude qiladi.

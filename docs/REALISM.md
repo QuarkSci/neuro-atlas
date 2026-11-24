@@ -59,17 +59,25 @@ Tashqi tayyor bosh modeli (litsenziya, koordinata mos kelmasligi xavfi) ham, faq
 | **B-2** | Real bosh/yuz: CC0/CC BY bazaviy mesh (AG-22 tanlaydi), atlas skulliga mos deformatsiya (teri qalinligi xaritasi), teri PBR + SSS, soch (kartalar), ko'z, quloq | CC (AG-22 dan keyin) | yuz tanish odam ko'rinishida; bosh suyagiga kirmaydi; ≥ 30 FPS |
 | **B-3** | Steril qoplamalar, Mayfield pinlar, teri tozalash rangi, belgi chiziqlari | CC / keyin AGY asset | amaliy ko'rinish |
 
-### Antigravity yo'laklari (tadqiqot va asset; faqat hujjat/asset, `src/` ga tegmaydi)
-| ID | Vazifa |
-|---|---|
-| **AG-19** | Realistik po'stloq yuzasi manbalari: BigBrain sirtlari, fsaverage, HCP group average, MNI152 CIVET va b. — litsenziya sahifasidan iqtibos (ND yo'q; NC mumkin), format, ko'pburchak soni, MNI ga moslash, hajm; tavsiya bitta |
-| **AG-20** | Pial qon tomirlar realizmi: ochiq tomir atlaslari/to'plamlari (litsenziya), protsedural tomir o'stirish adabiyoti (space colonization, L-system, DOI bilan), arteriya/vena rang va devor tuzilishi, pulsatsiya chastotalari |
-| **AG-21** | Qatlam qalinliklari va rang referenslari: bosh terisi, galea, perikranium, dura, arachnoid, subaraxnoidal likvor (konveksitet va egatlarda), po'stloq — **DOI/PMID bilan** (bu hujjatdagi 1-bo'lim jadvalini tasdiqlash yoki tuzatish); to'qima ranglari (ho'l po'stloq, dura, tomirlar) uchun ochiq manbalar |
-| **AG-22** | Real bosh/yuz assetlari: CC0 / CC BY bazaviy bosh (MakeHuman/MPFB CC0, Smithsonian 3D, Sketchfab CC0 va b.), teri PBR teksturalari (CC0), soch kartalari, ko'z, quloq; litsenziya iqtibosi, ko'pburchak soni, UV, atlas skullga moslash usuli (non-rigid registration) |
+### Antigravity yo'laklari: avval qisqa tadqiqot, KEYIN o'zi real narsa quradi (foydalanuvchi talabi, 2026-11-24)
+Har yo'lak ikki bosqich: **(1)** ≤ 1 kunlik tadqiqot hujjati (manba, litsenziya, usul tanlovi); **(2)** shu asosda **o'zi qurgan, sinovdan o'tkazilgan mahsulot**
+(pipeline vositasi yoki sof modul) va qabul skripti. Sahnaga (BrainScene, orMode, UI) ulashni Claude qiladi; AGY faqat o'z fayllarida ishlaydi va `docs/handoff/<id>.md` ga
+natijani, o'lchovni va screenshotni yozadi. Qabul mezoni bajarilmasa branch "tayyor" emas (AI.md 6.2).
+
+| ID | (1) Tadqiqot | (2) QURADI | Tegadigan fayllar | Qabul (AGY o'zi yuguradi) |
+|---|---|---|---|---|
+| **AG-19** | Realistik po'stloq yuzasi manbalari (BigBrain, fsaverage, HCP, CIVET; litsenziya, format, MNI ga moslash) → `docs/research/cortex-surface.md` | **A-1 pipeline:** `pipeline/tools/pial_surface.py` — 55 ta `telencephalon` g'ijimini voksellashtirish (0.5 mm) → marching cubes → Taubin silliqlash → decimate (≤ 600k yuz) → bitta suv o'tkazmaydigan mesh; har vertexga gyrus id (eng yaqin asl mesh) | `pipeline/tools/pial_surface.py`, `public/meshes/gross/pial-unified.glb` (gitignore), `data/gross_pial_labels.json`, `scripts/audit-pial.py`, `pipeline/README.md` (retsept) | watertight; hajm asl birlashmadan ±3 %; Hausdorff ≤ 0.6 mm; yorliqlar 100 %; vaqt va hajm yozilgan |
+| **AG-20** | Pial tomirlar realizmi (ochiq to'plamlar, protsedural o'stirish adabiyoti, devor/rang/pulsatsiya) → `docs/research/pial-vessels.md` | **A-4 vosita:** `pipeline/tools/vessel_snap.py` — tomir meshlarining markaz chizig'i va radiusi, po'stloq yuzasiga ≤ 6 mm ichida bo'lganlarni relaksatsiya bilan yuzaga yopishtirish (egatga cho'kish); `pial_vessels_grow.py` — yuzada mayda tomirlarni o'stirish (space colonization) | `pipeline/tools/vessel_snap.py`, `pipeline/tools/pial_vessels_grow.py`, `public/meshes/gross/vessels-snapped.glb`, `scripts/audit-vessels.py` | yuzaga ≤ 6 mm yaqin tomir uzunligining ≥ 95 % i po'stloqdan ≤ 0.5 mm; o'z-o'zini kesish 0; hajm (yuz soni) ≤ asl × 1.5 |
+| **AG-21** | Qatlam qalinliklari va to'qima ranglari (DOI/PMID) → `docs/research/layer-thickness.md` (REALISM.md 1-bo'lim jadvalini tasdiqlash/tuzatish) | **A-3 generator:** `pipeline/tools/meninges_shells.py` — ichki suyak yuzasidan dura (konveksitet), po'stloqdan arachnoid va pia qobig'i (qalinlik xaritasi bilan), likvor hajmi chegarasi; `src/or/anatomy/layers.ts` — qalinliklar `Sourced<T>` bilan tipli | `pipeline/tools/meninges_shells.py`, `public/meshes/gross/meninges-*.glb`, `src/or/anatomy/layers.ts`, `scripts/audit-meninges.py` | qobiqlar bir-birini kesmaydi; o'lchangan qalinlik jadvaldagi diapazonda; suyak tagidagi dura mavjud dura meshiga mos (≤ 1 mm) |
+| **AG-22** | Real bosh/yuz assetlari (CC0/CC BY: MakeHuman/MPFB, Smithsonian 3D va b.), teri PBR, soch, ko'z, quloq → `docs/research/head-assets.md` | **B-2 vosita:** `pipeline/tools/head_fit.py` — bazaviy boshni atlas skullga non-rigid moslash (teri qalinligi xaritasi bilan, suyakka kirmaydi) → `public/or/head.glb` + teri teksturalari | `pipeline/tools/head_fit.py`, `public/or/head.glb`, `public/or/skin/*`, `scripts/audit-head.py`, `ATTRIBUTION.md` | teri–suyak masofa ≥ minimal qalinlik hamma joyda; kirish 0; ≤ 150k yuz; fayl ≤ 20 MB |
+| **AG-23** | (tadqiqot qisqa) ho'l to'qima shaderi: SSS taxminlari, ho'l yuza modellari, real vaqtli usullar → `docs/research/wet-tissue-shading.md` | **A-5 modul:** `src/or/anatomy/wetTissue.ts` — three.js material quruvchi (po'stloq/pia/tomir/dura/teri preset), `onBeforeCompile` bilan, `clippingPlanes` ga tegmaydi; mustaqil sinov sahifa `scripts/shader-demo.html` va skript (qora/yorug', FPS o'lchovi) | `src/or/anatomy/wetTissue.ts`, `scripts/shader-demo.html`, `scripts/shot-shader.mjs` | demo sahifada har preset screenshot (qora+yorug'); Mac Chrome da ≥ 60 FPS demo, sahna ichida ≥ 30 FPS ni Claude tekshiradi |
+
+Tartib: AG-19 (A-1) birinchi (hammasi unga tayanadi; AG-20 va AG-21 tadqiqot bosqichi parallel, qurish bosqichi A-1 natijasi bilan); AG-22 va AG-23 mustaqil, parallel.
+Yangi `src/or/anatomy/` papkasi AGY niki (sof modullar); sahnaga ulash `src/or/` boshqa fayllarida Claude'da.
 
 ## 4. Tartib
 
-1. **A-0 audit** (CC, 1 sessiya) — hajm aniq bo'ladi; shu paytda AG-19…AG-22 parallel boshlanadi.
+1. **A-0 audit** (CC, 1 sessiya) — hajm aniq bo'ladi; shu paytda AG-19…AG-23 parallel boshlanadi.
 2. **A-1 → A-3 → A-4** (ketma-ket, po'stloq yuzasi hammasiga asos); A-2 AG-19 tayyor bo'lgach.
 3. **B-1** (A-3 bilan parallel mumkin, boshqa fayllar), **B-2** AG-22 dan keyin.
 4. A-5, A-6, B-3 — oxirida.
