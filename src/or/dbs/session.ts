@@ -118,6 +118,18 @@ export class DbsSession {
   get trajectory() {
     return this.analysis
   }
+  get activeTrack(): TrackState | null {
+    return this.cur >= 0 ? this.tracks[this.cur] : null
+  }
+  get trackList(): readonly TrackState[] {
+    return this.tracks
+  }
+  get lastReport() {
+    return this.report
+  }
+  get sealedDura() {
+    return this.sealed
+  }
   get tracksUsed() {
     return this.tracks.length
   }

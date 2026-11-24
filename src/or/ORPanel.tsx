@@ -10,6 +10,8 @@ import { ToolHUD, ToolPanel } from './tools/ToolPanel'
 import { useTool } from './tools/useTool'
 import { EvdPanel } from './evd/EvdPanel'
 import { useEvd } from './evd/useEvd'
+import { DbsPanel } from './dbs/DbsPanel'
+import { useDbs } from './dbs/useDbs'
 
 /** The operating-room panel: views, scalp, lamp, ruler, and the teaching-only notice. */
 export function ORPanel() {
@@ -25,6 +27,7 @@ export function ORPanel() {
   const set = useOR((s) => s.set)
   const [copied, setCopied] = useState(false)
   const evdOpen = useEvd((s) => s.open)
+  const dbsOpen = useDbs((s) => s.open)
   const t = OR_STRINGS[lang]
 
   // Draws per second: the scene renders only when something changes, so this reads the renderer's own counter.
@@ -96,8 +99,27 @@ export function ORPanel() {
         </div>
         <ToolPanel />
         <div className="or-row">
-          <button className={`or-chip ${evdOpen ? 'on' : ''}`} aria-pressed={evdOpen} onClick={() => useEvd.getState().set(!evdOpen)} type="button">
+          <button
+            className={`or-chip ${evdOpen ? 'on' : ''}`}
+            aria-pressed={evdOpen}
+            onClick={() => {
+              useEvd.getState().set(!evdOpen)
+              if (!evdOpen) useDbs.getState().set({ open: false })
+            }}
+            type="button"
+          >
             {lang === 'uz' ? 'Protsedura: EVD (ventrikulostomiya)' : 'Procedure: EVD (ventriculostomy)'}
+          </button>
+          <button
+            className={`or-chip ${dbsOpen ? 'on' : ''}`}
+            aria-pressed={dbsOpen}
+            onClick={() => {
+              useDbs.getState().set({ open: !dbsOpen })
+              if (!dbsOpen) useEvd.getState().set(false)
+            }}
+            type="button"
+          >
+            {lang === 'uz' ? 'DBS (chuqur stimulyatsiya)' : 'DBS (deep brain stim.)'}
           </button>
         </div>
         <div className="or-row">
@@ -140,6 +162,11 @@ export function ORPanel() {
         <p className="or-scale">{t.scale}</p>
       </aside>
       <ToolHUD />
+      {dbsOpen && (
+        <div className="evd-dock">
+          <DbsPanel />
+        </div>
+      )}
       {evdOpen && activeEvd() && (
         <div className="evd-dock">
           <EvdPanel api={activeEvd()!.session} onClose={() => useEvd.getState().set(false)} />

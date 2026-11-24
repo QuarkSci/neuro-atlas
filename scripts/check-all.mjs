@@ -153,7 +153,7 @@ const checkServerReachable = async () => {
   }
 }
 
-const needServer = ['audit-lesions', 'audit-pick', 'shot-hands', 'shot-or', 'shot-tools', 'shot-evd', 'shot-drill', 'shot-drill-ui', 'shot-evd-ui', 'shot-dbs', 'shots-theme'].some(shouldRun)
+const needServer = ['audit-lesions', 'audit-pick', 'shot-hands', 'shot-or', 'shot-tools', 'shot-evd', 'shot-drill', 'shot-drill-ui', 'shot-evd-ui', 'shot-dbs', 'shot-dbs-ui', 'shots-theme'].some(shouldRun)
 if (needServer) {
   const ok = await checkServerReachable()
   if (!ok) {
@@ -430,6 +430,29 @@ if (shouldRun('shot-dbs')) {
     record({
       id: 'shot-dbs',
       label: 'DBS mantig‘i (`shot-dbs`)',
+      status: ok ? 'pass' : 'fail',
+      summary: `${cm.passed}/${cm.passed + cm.failed} ✓${costNote}`,
+      durationSec: r.durationSec,
+      errors: ok ? [] : [...cm.failedLines, ...extractErrors(r.stderr)],
+    })
+  }
+}
+
+// 7g. shot-dbs-ui-ui (sx/main)
+if (shouldRun('shot-dbs-ui')) {
+  if (!scriptExists('scripts/shot-dbs-ui.mjs')) {
+    record({ id: 'shot-dbs-ui', label: 'DBS paneli ORPanelda (`shot-dbs-ui`)', status: 'skip', summary: 'skript yo‘q (faqat `sx/main`)', durationSec: 0, errors: [] })
+  } else {
+    const outDir = path.join(tmpDir, 'dbs-ui')
+    const r = await runCmd('node', ['scripts/shot-dbs-ui.mjs', outDir, '--w', String(width), '--h', String(height)])
+    const cm = parseCheckMarks(r.stdout)
+    const costNote = ''
+    copyIfExists(path.join(outDir, 'dbs-ui-dark.png'), 'dbs-ui-dark.png', screenshots)
+    copyIfExists(path.join(outDir, 'dbs-ui-light.png'), 'dbs-ui-light.png', screenshots)
+    const ok = r.code === 0 && cm.failed === 0 && cm.passed > 0
+    record({
+      id: 'shot-dbs-ui',
+      label: 'DBS paneli ORPanelda (`shot-dbs-ui`)',
       status: ok ? 'pass' : 'fail',
       summary: `${cm.passed}/${cm.passed + cm.failed} ✓${costNote}`,
       durationSec: r.durationSec,

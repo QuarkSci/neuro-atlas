@@ -4,7 +4,7 @@
  * real data (AG-16) run the same code.
  */
 import type { L10n, Mni, ScoreBand } from '../types'
-import type { DbsExportRow, DbsTarget, DbsTargetId, MerLayer, MerPattern, StimEffect } from './types'
+import type { DbsAvoid, DbsExportRow, DbsTarget, DbsTargetId, MerLayer, MerPattern, StimEffect } from './types'
 
 export type DbsSide = 'right' | 'left'
 
@@ -41,6 +41,9 @@ export type TrackOffset = 'center' | 'anterior' | 'posterior' | 'medial' | 'late
 
 export interface TrajectoryItem {
   partId: string
+  kind: DbsAvoid['kind']
+  /** Ventricle, vessel or sulcus: crossing or touching one is a collision (dbs.md 6 row 2); capsule, nucleus and tract crossings are only listed. */
+  critical: boolean
   /** Closest approach to the structure along the line, mm (0 when inside). */
   minMm: number
   crossed: boolean

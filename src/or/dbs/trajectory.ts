@@ -6,6 +6,7 @@ import type { AcPcFrame, DbsData, DbsParams, DbsSide, DbsWorld, TrajectoryAnalys
 import type { DbsTargetId } from './types'
 
 const STEP_MM = 0.5
+const CRITICAL: readonly string[] = ['ventricle', 'vessel', 'sulcus']
 
 /**
  * Risk of the straight line entry → target (dbs.md 3.4, 6 row 2): for every structure the target says to avoid, the closest
@@ -42,10 +43,11 @@ export function analyseTrajectory(world: DbsWorld, data: DbsData, P: DbsParams, 
       }
     }
     if (!known) continue
-    items.push({ partId: part, minMm: min, crossed, atMm: at, severity: a.severity, consequence: a.consequence })
+    items.push({ partId: part, kind: a.kind, critical: CRITICAL.includes(a.kind), minMm: min, crossed, atMm: at, severity: a.severity, consequence: a.consequence })
   }
   items.sort((x, y) => x.minMm - y.minMm)
-  const bad = items.filter((x) => x.crossed || x.minMm < P.contactMm)
+  const crit = items.filter((x) => x.critical)
+  const bad = crit.filter((x) => x.crossed || x.minMm < P.contactMm)
   const ang = lineAngles(frame, entry, target)
   const lim = (r: { min: number; max: number }, v: number) => v >= r.min - 2 && v <= r.max + 2
   return {
@@ -53,7 +55,7 @@ export function analyseTrajectory(world: DbsWorld, data: DbsData, P: DbsParams, 
     sagittalDeg: ang.sagittalDeg,
     coronalDeg: ang.coronalDeg,
     items,
-    minClearanceMm: items.length ? items[0].minMm : Infinity,
+    minClearanceMm: crit.length ? crit[0].minMm : Infinity,
     collisions: bad.length,
     collisionIds: bad.map((x) => x.partId),
     anglesOk: lim(T.entry.sagittalDeg.value, ang.sagittalDeg) && lim(T.entry.coronalDeg.value, ang.coronalDeg),

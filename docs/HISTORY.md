@@ -1530,3 +1530,12 @@ guide (kanula; < 10 mm yuqorida = "too-deep") → mer (mikrodrayv 0.5 mm, +15…
 ehtiyotkor sessiya (2 yo'l, medial yo'l tanlandi) radial 0.89 mm, 5.0 ball; beparvo (AC/PC 3 mm xato, dura 40 min ochiq, qorincha orqali, 4 yo'l, MER belgisiz) 2.0 (cap). gross↔Julich STN farqi 7.6 mm (dbs.md 3.4 bilan mos).
 
 **Sinalmagan / ochiq:** UI yo'q (ORPanel, 3D elektrod, AG-16 paneli keyin); real AG-16 ma'lumoti bilan; GPi va Vim to'liq sessiyalari (faqat STN sinaldi, GPi/Vim yo'llari fixture bilan MER ketma-ketligigacha emas); chap tomon faqat reja x ishorasi; yuklanmagan tuzilmalar (JHU, Julich) uchun nojo'ya ta'sir masofasi markazdan olinadi (meshlar yuklansa aniqroq); kirish nuqtasi suyakda ekanini tekshirmaydi; `aheadOfCoronalMm` hisoblanmaydi; screenshotlar yo'q (UI yo'q).
+
+### SX-6b — DBS paneli ORPanel ga ulandi, 2026-11-24
+
+AG-16 (`dbs/data.ts`, `merAudio.ts`, `strings.ts`) va AG-17 (`drill/dust.ts`, `drillAudio.ts`) tekshirilib birlashtirildi. SX-6 mantig'i haqiqiy AG-16 ma'lumoti bilan ham o'tadi (`shot-dbs --real`, 22 ✓); farq: `avoid` dagi kapsula/dumli yadro/trakt kesib o'tilishi to'qnashuv emas
+(faqat qorincha, tomir, sulkus — dbs.md 6 qator 2); `TrajectoryItem.critical`.
+`src/or/dbs/link.ts` (DbsLink), `useDbs.ts`, `DbsPanel.tsx`; ORPanel da "DBS" tugmasi (EVD bilan o'zaro chiqarib tashlaydi), o'ngdagi `.evd-dock`. 7 qadam: AC–PC (yordamli tugma yoki AC/PC ni bosish; tuzilmani bosish markazga snap qiladi),
+kirish nuqtasini boshda bosish (teri → suyak ray) va tahlil (burchaklar, masofalar), dura yopish va brain shift, kanula, MER (yo'llar, chuqurlik slayderi, qatlam/chastota/javob, WebAudio, chegara belgilari) + makrostimulyatsiya (mA, foyda, oyna, nojo'ya ta'sirlar), implant va hisobot (CSV nusxa).
+3D: sariq chiziq (yo'l), ko'k shar (reja), to'q sariq shar (elektrod uchi). Test: `scripts/shot-dbs-ui.mjs` (16 ✓, "7g"): panel tugmalari, bosish orqali kirish nuqtasi, MER ketma-ketligi, hisobot 5.0.
+Sinalmagan: haqiqiy AC/PC ni sichqoncha bilan topish (tuzilmalar odatda yashirin; asosiy yo'l "yordamli"), MER tovushining eshitilishi (headless), 3D da elektrod konturi (faqat nuqta), GPi/Vim ning UI orqali to'liq o'tishi, chap tomon, mobil joylashuv.

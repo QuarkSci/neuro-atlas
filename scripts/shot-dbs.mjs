@@ -12,6 +12,7 @@ import puppeteer from 'puppeteer-core'
 import fs from 'node:fs'
 
 const out = process.argv[2] ?? 'dbs-out'
+const real = process.argv.includes('--real') // AG-16's src/or/dbs/data.ts instead of the fixture
 const url = process.env.NA_URL ?? 'http://localhost:3019/'
 fs.mkdirSync(out, { recursive: true })
 const browser = await puppeteer.launch({
@@ -35,13 +36,15 @@ try {
   await page.waitForFunction(() => window.__atlas && window.__atlas.getState().progress >= 100, { timeout: 90000 })
   await page.evaluate(() => window.__orMode.enterOR())
 
-  const R = await page.evaluate(async () => {
+  const R = await page.evaluate(async (real) => {
     const { sceneWorld } = await import('/src/or/evd/world.ts')
     const { DbsSession } = await import('/src/or/dbs/session.ts')
     const { makeFrame, toAcpc, fromAcpc, lineAngles } = await import('/src/or/dbs/geometry.ts')
     const { DBS_PARAMS } = await import('/src/or/dbs/params.ts')
     const { analyseTrajectory } = await import('/src/or/dbs/trajectory.ts')
-    const { DATA } = await import('/scripts/dbs-fixture.mjs')
+    const DATA = real
+      ? await import('/src/or/dbs/data.ts').then((m) => ({ targets: m.DBS_TARGETS, layers: m.DBS_MER_LAYERS, effects: m.DBS_STIM_EFFECTS }))
+      : (await import('/scripts/dbs-fixture.mjs')).DATA
     const { PART_BY_ID } = await import('/src/data/index.ts')
     const sw = sceneWorld(window.__scene)
     const world = {
@@ -133,7 +136,7 @@ try {
       clr: best.a.minClearanceMm,
       ang: [best.a.sagittalDeg, best.a.coronalDeg],
       ok: best.a.anglesOk,
-      items: best.a.items.map((i) => [i.partId, +i.minMm.toFixed(1), i.crossed]),
+      items: best.a.items.map((i) => [i.partId, +i.minMm.toFixed(1), i.crossed, i.critical]),
     }
     // a line through the lateral ventricle: from straight above its body to the planned target
     const vc = world.centroid('g-right-lateral-ventricle')
@@ -294,7 +297,7 @@ try {
     res.careful = brief(g)
     res.careless = brief(b)
     return res
-  })
+  }, real)
 
   // ── Frame ──
   check(
@@ -324,7 +327,7 @@ try {
 
   // ── MER ──
   const seq = R.merCenter.seq
-  check(seq.join('>') === 'stn-thal>stn-zi>stn>stn-snr' || seq.join('>').includes('stn-zi>stn>stn-snr'), `MER layers on the centre track: ${seq.join(' → ')}`)
+  check(seq.length === 4 && /zi/.test(seq[1]) && /snr/.test(seq[3]), `MER layers on the centre track: ${seq.join(' → ')}`)
   const lenC = R.merCenter.enter - R.merCenter.exit,
     lenA = R.merAnterior.enter === null ? 0 : R.merAnterior.enter - R.merAnterior.exit,
     lenL = R.merLateral.enter === null ? 0 : R.merLateral.enter - R.merLateral.exit
