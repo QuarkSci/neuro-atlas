@@ -1510,3 +1510,23 @@ dasturiy GL bir necha fps beradi. Sinalmagan: real vaqtda sichqoncha bilan (qo'l
 Topilgan xato: `EvdSession.publish` throttle oxirgi yangilanishni yo'qotardi (panelda CSF ko'rinmay qolardi) → keyingi yangilanish `setTimeout` bilan kechiktirib beriladi.
 Test: `scripts/shot-evd-ui.mjs` (12 ✓, `check-all` "7e"): bosish → belgi (xato 8.2 mm), burg'u → qadam, kateter → CSF 59 mm, hisobot, panel yopilishi.
 Sinalmagan: real sichqoncha bilan belgi qo'yish; chap tomon; burg'u patchi belgidan emas, doim ideal Kocher nuqtasida (belgi 8 mm gacha farq qilishi mumkin); tarix tabi real mashg'ulotlar bilan.
+
+## SX-6 — DBS mantig'i (OP-2), 2026-11-24
+
+`src/or/dbs/`: `logic.ts` (kirish/chiqish turlari: `DbsData`, `DbsWorld`, `DbsReport`), `params.ts`, `geometry.ts` (AC–PC ramka), `trajectory.ts`, `mer.ts`, `stim.ts`, `score.ts`, `session.ts` (`DbsSession`).
+Ma'lumot (nishonlar, MER qatlamlari, nojo'ya ta'sirlar) **inyeksiya** qilinadi: `DbsData` — haqiqiy ma'lumot AG-16 `data.ts` dan keladi; sinov `scripts/dbs-fixture.mjs` (dbs.md 3.2, 3.3, 4.2, 4.3) bilan. Sinov: `scripts/shot-dbs.mjs` (22 ✓, `check-all` "7f"), haqiqiy atlas meshlarida.
+
+**Oqim (7 qadam):** plan (AC/PC belgilash → ramka xatosi, nishon rejasi) → trajectory (kirish nuqtasi, burchaklar, xavfli tuzilmalargacha masofa) → burr (ochiq dura soati, `sealDura`) →
+guide (kanula; < 10 mm yuqorida = "too-deep") → mer (mikrodrayv 0.5 mm, +15…−5 mm, Ben-Gun yo'llari, chegara belgilash) → stim (mA) → implant → hisobot (6 metrika + ramka xatosi, CSV qatori, atlaslararo farq).
+
+**Modellar (dizayn, adabiyot raqam bermagan):**
+- *Haqiqiy nishon:* STN uchun `j-stn-right` (Julich) markazi; GPi (butun GP markazi nishon emas) va Vim (j-vim butun tuzilma, z = +6.8 vs adabiyot 0) uchun **haqiqiy AC–PC ramkasidagi adabiyot nuqtasi**. Reja o'rtacha diapazon bo'yicha; STN rejasi Julich markazidan 2.1 mm (atlaslararo farq PhD hisobotida).
+- *MER haqiqati:* qatlam oynalari rejalangan nishonga nisbatan; yo'l nishondan `miss` mm o'tsa nishon qatlami `√(1−(miss/R)²)` ga qisqaradi (R: STN 3, GPi 4, Vim 2.5 mm), `miss ≥ R` — qatlam yo'q (qo'shni qatlam eshitiladi).
+- *Brain shift:* dura ochiq 0.25 mm/min, yopilgach 0.05 mm/min, cheklov 4 mm, yo'nalish orqa-pastki (dbs.md 5: 2–4 mm).
+- *Stimulyatsiya:* nojo'ya ta'sir chegarasi = o'rtacha chegara × (d / 6 mm)², d = kontaktdan tuzilma sirtigacha (yuklanmagan tuzilmalar uchun markazgacha); foyda chegarasi = 0.8 mA × (1 + (r/3 mm)²), r = kontaktdan haqiqiy nishongacha. 6 mm atlasda ichki kapsula–STN masofasi bo'yicha kalibrlangan (≈ 3.7 mA, dbs.md 6 "> 3.5 mA").
+- *Baho:* dbs.md 6 jadvali (radial ≤ 1.5/2.5, xavfsizlik ≥ 3 mm / kesib o'tish, MER ±0.5/1.0, oyna ≥ 1.5/1.0 mA, yo'llar ≤ 2/3/≥ 4), + AC–PC ramka xatosi (≤ 1/2 mm). Kesib o'tish yoki radial > 2.5 mm → umumiy ≤ 2.0.
+
+**Natijalar (atlasda):** AC–PC 32.0 mm (adabiyot 23–28 — atlas kattaroq); STN rejasi (11.5, −3.0, −4.5); adabiyot burchaklari (65°/20°) bilan chiziq 0 to'qnashuv, eng yaqin: dumli yadro 5.6 mm; qorincha markazi orqali chiziq to'qnashuv; STN MER ketma-ketligi thal → ZI → STN → SNr, oyna 3.5 mm;
+ehtiyotkor sessiya (2 yo'l, medial yo'l tanlandi) radial 0.89 mm, 5.0 ball; beparvo (AC/PC 3 mm xato, dura 40 min ochiq, qorincha orqali, 4 yo'l, MER belgisiz) 2.0 (cap). gross↔Julich STN farqi 7.6 mm (dbs.md 3.4 bilan mos).
+
+**Sinalmagan / ochiq:** UI yo'q (ORPanel, 3D elektrod, AG-16 paneli keyin); real AG-16 ma'lumoti bilan; GPi va Vim to'liq sessiyalari (faqat STN sinaldi, GPi/Vim yo'llari fixture bilan MER ketma-ketligigacha emas); chap tomon faqat reja x ishorasi; yuklanmagan tuzilmalar (JHU, Julich) uchun nojo'ya ta'sir masofasi markazdan olinadi (meshlar yuklansa aniqroq); kirish nuqtasi suyakda ekanini tekshirmaydi; `aheadOfCoronalMm` hisoblanmaydi; screenshotlar yo'q (UI yo'q).
