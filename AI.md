@@ -516,7 +516,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | AG-1 | Kontent: Desikan, JHU, Destrieux, Glasser ta'riflari | Antigravity | ✅ 2026-11-22 | birlashtirildi (`616d941`) · docs/handoff/AG-1.md |
 | AG-2 | Yorug' rejim: dars kartasi va kesim ko'ruvchisi | Antigravity | ✅ 2026-11-22 | birlashtirildi · docs/handoff/AG-2.md |
 | AG-3 | Deploy: meshlar Release + Draco, README, ATTRIBUTION | Antigravity | ✅ 2026-11-22 (qoldi: `meshes-v1` Release'ni foydalanuvchi yuklaydi) | birlashtirildi (`6d6156f`) · docs/handoff/AG-3.md |
-| AG-4 | Tadqiqot: U1 gistologiya; BigBrain 20 mkm | Antigravity | ⏳ | ag/AG-4 |
+| AG-4 | Tadqiqot: U1 gistologiya; BigBrain 20 mkm | Antigravity | ✅ 2026-11-25 birlashtirildi (3 DOI Crossref ✓) | ag/AG-4 |
 | CL-1 | AI panel: haqiqiy Gemini kaliti bilan ishlamayapti | Claude | ✅ tashxis: Google 503 (bepul tarif, band model); xato tafsiloti + avtomatik model almashtirish (`cd06af4`, `8b8ef1b`) | master |
 | CL-2 | AI-6 (ChatGPT/Google kirish), panel joylashuvi, look_at_screen | Claude | 🔨 panel joylashuvi va `look_at_screen` ✅ 2026-11-22; AI-6 — OpenAI javobini kutmoqda (SIWC statik sayt uchun hujjatlashtirilmagan) | master |
 | AG-5 | Kontent: viktorina savollar banki (CL-4 uchun) | Antigravity | ✅ 2026-11-22 (birlashtirildi; sifat tuzatishlari AG-5b da) | docs/handoff/AG-5.md |
@@ -530,7 +530,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | CL-5 | R2 realizm ✅ 2026-11-22 (burmalardagi soyalar); LG-3 harakat ✅ 2026-11-22 (prujina fizikasi) | Claude | ✅ foydalanuvchi tasdiqladi | master |
 | HT-1 | Qo'l bilan boshqarish (Mac kamerasi, MediaPipe) — PLAN 5.8 | Claude | ✅ sx/main da (master'ga QO'SHILMAYDI, foydalanuvchi 2026-11-23) | sx/main · docs/HANDS.md |
 | HP-1 | Bosh bilan qarash ("3D oyna", off-axis) — PLAN 5.8 | Claude | ✅ sx/main da (master'ga QO'SHILMAYDI) | sx/main · docs/HANDS.md |
-| AG-8 | Tadqiqot: kamera funksiyalari — veb / Mac / iPad | Antigravity | ⏳ (HT-1/HP-1 qarori uchun) | ag/AG-8 |
+| AG-8 | Tadqiqot: kamera funksiyalari — veb / Mac / iPad | Antigravity | ✅ 2026-11-25 birlashtirildi (HT-1/HP-1 qarori foydalanuvchida) | ag/AG-8 |
 | AG-9 | Kontent: EVD va DBS protsedura ssenariylari | Antigravity | ✅ 2026-11-23 (tekshirildi, master'ga birlashtirildi) | docs/research/procedures/ · docs/handoff/AG-9.md |
 | AG-10 | Tadqiqot: virtual operatsiya xonasi uchun ochiq assetlar | Antigravity | ✅ 2026-11-23 (tekshirildi, master'ga birlashtirildi) | docs/research/or-assets.md · docs/handoff/AG-10.md |
 | AG-11 | Pipeline: operatsiya xonasi assetlari (glb + Draco) → sx/main | Antigravity | ⏳ (Sketchfab tokeni kerak) | ag/AG-11 (origin/sx/main dan) |
@@ -540,7 +540,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | AG-17 | Burg'u chang zarrachalari va tovushi — SURGERY.md 6 | Antigravity | ✅ 2026-11-24 birlashtirildi va `DrillRig` ga ulandi (SX-4c) | ag/AG-17 |
 | AG-18 | Yagona tekshiruv `scripts/check-all.mjs` + hisobot | Antigravity | ✅ 2026-11-24 tekshirildi, sx/main ga birlashtirildi (`927a95f`; CC: `shot-evd` qo'shdi) | ag/AG-18 |
 | AG-12 | Tadqiqot: simulyator validatsiyasi va mahorat o'lchovlari | Antigravity | ✅ 2026-11-24 tekshirildi, master ga birlashtirildi (2 tuzatish) | ag/AG-12 |
-| AG-13 | Tadqiqot: marker kuzatuvi (6DoF qalam) | Antigravity | ⏳ | ag/AG-13 |
+| AG-13 | Tadqiqot: marker kuzatuvi (6DoF qalam) | Antigravity | ✅ 2026-11-25 birlashtirildi (3 DOI Crossref ✓) | ag/AG-13 |
 | SX-1 | Virtual operatsiya xonasi (docs/SURGERY.md 2) | Claude Code | ✅ 2026-11-23 (`1bb44e0`) | sx/main |
 | SX-2 | Asbob dvigateli (HT-2): masofa, to'qnashuv, titrash | Claude Code | ✅ 2026-11-23 (`0fa0815`) | sx/main |
 | SX-3 | OP-1 EVD: faqat mantiq (Kocher, baholash, hodisalar); ma'lumot/UI → AG-15 | Claude Code | ✅ 2026-11-24 (`a9ad416`): Kocher, qadam mashinasi, baholash; `shot-evd` 29 ✓. UI/ma'lumot → AG-15; `sceneWorld` ni ToolEngine/ORPanel bilan ulash hali yo'q | sx/main |
@@ -592,3 +592,4 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 - 2026-11-24 · Claude · PhD qatlami (`sx/main`): LDJ (silliqlik) va LC-CUSUM (kompetentlik) — `src/or/skill.ts`, EVD hisobot/tarix/CSV, tarix tabida LC-CUSUM kartasi; `shot-skill` 14 ✓, regressiya ✗ 0, audit-pick 0, audit-lesions 0. Ochiq: DBS tarixi yo'q (LC-CUSUM u yerga keyin), p0/p1/h simulyatsiya bilan tanlanmagan, LDJ chegaralari ekspert ma'lumotisiz kalibrlanmagan.
 - 2026-11-24 · Claude · Realizm rejasi (`docs/REALISM.md`): foydalanuvchi talabi — suyak/parda ostida havo (arachnoid, likvor, pia yo'q; tomirlar va miya muallaq), bosh/qo'l/stol realistik emas. Qaror: aralash agentlar (kod — Claude, tadqiqot/asset — AGY), hozir A (anatomiya) va B (bosh), sifat — tibbiy video, Mac ≥ 30 FPS; yondashuv: atlas tuzilmasi + ochiq real sirt + protsedural PBR (litsenziya toza va real). Yangi vazifalar RL-A, RL-B, AG-19…AG-22. Kuzatuv: meninges 4 mesh (dura 6.09 mm da suyak tagida), po'stloq 55 bo'lak, tomirlar 246 mesh.
 - 2026-11-24 · Claude · Foydalanuvchi: AGY ga boshidan faqat tadqiqot berilgan, u o'zi real narsa qurib ko'rsin. REALISM.md yangilandi: AG-19…AG-23 endi "tadqiqot + QURISH" (pipeline vositalari va sof modullar: pial_surface.py, vessel_snap.py, meninges_shells.py, head_fit.py, wetTissue.ts), har birida qabul skripti. Sahnaga ulashni Claude qiladi.
+- 2026-11-25 · Claude · AG-4, AG-8, AG-13 (faqat hujjat) tekshirildi: 6 DOI Crossref, havolalar; foydalanuvchi roziligi bilan master ga birlashtirildi.
