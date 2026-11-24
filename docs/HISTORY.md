@@ -1466,3 +1466,29 @@ Qarorlar (AG-9 hujjatidan ONGLI chetga chiqishlar):
 Tekshirilmadi / ochiq: haqiqiy kamera va geympad bilan; chap tomon (`side: 'left'`) kodi bor, lekin sinovdan o'tmagan;
 suyak SX-4 gacha teshiksiz o'tiladi (asbob suyak bilan to'qnashmaydi); daraja 3 (slit/siljish) geometriyasi yo'q;
 UI (EvdPanel) va `sceneWorld` ni ToolEngine bilan ulash AG-15 + keyingi qadam.
+
+## SX-4 — Suyakni burg'ulash (voksel dvigateli), 2026-11-24
+
+`src/or/drill/`: `volume.ts` (BoneVolume), `mesher.ts` (surface nets), `session.ts` (DrillSession), `boneWorld.ts` (atlas meshlari → `BoneSource`),
+`view.ts` (DrillMeshView, bo'lak-bo'lak mesh). Sinov: `node scripts/shot-drill.mjs <papka>` (21 ✓, `check-all` da "7c").
+
+**Model.** Burg'u joyi atrofida 40 × 40 mm, 28 mm chuqur, 0.5 mm voksel; `sdf` (manfiy = suyak). Burg'u = sfera (R 2 mm), uchi = eng pastki nuqta
+(`DrillState.tip`), markazi bir radius orqada. Kesish: `sdf = max(sdf, r − |x − p|)`, olib tashlangan hajm = ishorasi o'zgargan vokselar × h³.
+Qatlamlar asl suyakdan (o'zgarmas): tashqi plastinka / diploe / ichki plastinka (har biri ustun qalinligining 20 %, 0.5–1.5 mm), undan keyin dura (1 mm) va miya.
+Tezlik: `cutRate × rpm × (0.2 + 0.8·push) ÷ qatlam qattiqligi`; to'xtagan burg'u suyakka kirmaydi (qarshilik ≥ 0.4). Ichki plastinkadan push > 0.6 bilan o'tilsa —
+"plunge": uch `lungeMm` (3 mm gacha) oldinga otiladi, `pastBoneMm` shuni o'lchaydi; oldin `plunge-warning` (ichki plastinkada < 1 mm qolganda).
+
+**Muhim topilma (atlas).** BodyParts3D suyaklari qattiq jism emas, **juft yupqa qatlam** (tashqi va ichki sirt, har biri 2 ta ustma-ust yuza, enter/exit/exit/enter).
+Shuning uchun `sceneBone` ray urilishlarini 0.15 mm ichida bitta sirtga birlashtiradi va **juftlik (parity)** bo'yicha suyak oraliqlarini oladi (1–2-sirt = suyak).
+Yo'nalish normaliga ishonilmaydi. Faqat birinchi oraliq (kalvariya) olinadi: chuqurroq oraliq (orbita tomi) boshqa tuzilma.
+
+**Natijalar (Kocher nuqtasi, o'ng).** Suyak qalinligi 6.0 mm (patch bo'yicha 0.15–6.85, o'rtacha 5.5; adabiyotda frontal ≈ 6–7 mm). Sintetik plitada (8 mm)
+teshik chuqurligi ±0.25 mm, kengligi 4.0 mm. Tick CPU p95 0.2 ms, kesish + remesh p95 ≤ 1 ms (byudjet 8 ms, headless CPU). Mesh bo'laklar chegarasida yopiq (ochiq qirra 0).
+PhD: `thicknessMap()` (qalinlik xaritasi: min / o'rtacha / maks / qoplam).
+
+**Ongli qarorlar.** Burg'u sferik (burr), perforator / kraniotom emas (SX-7). Qatlam nisbati (20 %) dizayn qiymati, adabiyot bo'yicha emas.
+Dura "membrana" sifatida modellanadi, yirtilishi (`pastBoneMm`) ko'rsatkich, to'qima fizikasi yo'q.
+
+**Sinalmagan.** Haqiqiy kamera / geympad bilan; ToolEngine va ORPanel ga ulanmagan (kiritish → `DrillSession.update`, `DrillMeshView.sync` har kadr);
+bosh suyagining boshqa joylari (patch egriligi katta joyda ustunlar qiya); haqiqiy Mac'da kadr byudjeti (faqat headless CPU o'lchandi); suyak mesh'ining asl bo'shlig'i (sinus) hisobga olinmagan.
+AG-17 (chang / ovoz / titrash) `DrillState` ni shu sessiyadan oladi.
