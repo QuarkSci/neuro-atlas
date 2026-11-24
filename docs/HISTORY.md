@@ -1500,3 +1500,13 @@ Kocher (o'ng) nuqtasida 40 × 40 mm suyak bo'lagi; atlas suyagi shu quti ichida 
 (`onBeforeCompile`, `clippingPlanes` ga tegilmaydi), o'rniga kesilgan mesh ko'rinadi. Ishga tushirish: Space (bosib turish) yoki "Burg'u aylanadi", bosim — slayder,
 chuqurlik — g'ildirak (mavjud asbob boshqaruvi). Test: `scripts/shot-drill-ui.mjs` (9 ✓, `check-all` "7d"); kadr tsikli sinovda qo'lda (`rig.manual`, 60 Hz qadam), chunki
 dasturiy GL bir necha fps beradi. Sinalmagan: real vaqtda sichqoncha bilan (qo'l bilan), boshqa nuqtalar (patch faqat Kocher), qo'l kuzatuvi bilan burg'u, burg'u tovushi/changi (AG-17).
+
+### SX-3b — EVD paneli ORPanel ga ulandi, 2026-11-24
+
+`src/or/evd/link.ts` (EvdLink: sessiya, kateter uchi, belgi, burg'u hodisasi, belgi/Kocher halqasi), `useEvd.ts`; `ORPanel` da "Protsedura: EVD" tugmasi va o'ng tomonda
+`.evd-dock` (EvdPanel OR panelini yopmasligi uchun). Oqim: **belgi** — scalp ustida bosish (`tapOverride` → `placeMark`, ustki sirtdan skullga proyeksiya), qizil shar; "laser" bo'lsa yashil Kocher halqasi.
+**Burg'u qadami** — SX-4 burg'usi ichki plastinkadan o'tganda (`breakthrough`) avtomatik tasdiqlanadi (qo'lda tasdiqlash ham ishlaydi). **Kateter** — `ToolEngine.query` har harakatda `session.feed`
+(scalpDepth = −skinMm, tableDepth sessiya o'zi hisoblaydi). OR dan chiqilsa panel yopiladi.
+Topilgan xato: `EvdSession.publish` throttle oxirgi yangilanishni yo'qotardi (panelda CSF ko'rinmay qolardi) → keyingi yangilanish `setTimeout` bilan kechiktirib beriladi.
+Test: `scripts/shot-evd-ui.mjs` (12 ✓, `check-all` "7e"): bosish → belgi (xato 8.2 mm), burg'u → qadam, kateter → CSF 59 mm, hisobot, panel yopilishi.
+Sinalmagan: real sichqoncha bilan belgi qo'yish; chap tomon; burg'u patchi belgidan emas, doim ideal Kocher nuqtasida (belgi 8 mm gacha farq qilishi mumkin); tarix tabi real mashg'ulotlar bilan.

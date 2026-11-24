@@ -57,6 +57,7 @@ export class EvdSession implements EvdApi {
   private clock: () => number
   private listeners = new Set<(s: EvdSnapshot) => void>()
   private lastPublish = 0
+  private trailing: ReturnType<typeof setTimeout> | null = null
 
   private opts: EvdOptions = { level: 2, side: 'right', laser: false }
   private ids = EVD_PARAMS.ids
@@ -480,7 +481,19 @@ export class EvdSession implements EvdApi {
 
   private publish(force: boolean) {
     const now = performance.now()
-    if (!force && now - this.lastPublish < PUBLISH_MS) return
+    if (!force && now - this.lastPublish < PUBLISH_MS) {
+      // A throttled update must not be lost: the last tip of a move is published a moment later.
+      if (this.trailing === null && this.listeners.size) {
+        this.trailing = setTimeout(
+          () => {
+            this.trailing = null
+            this.publish(true)
+          },
+          PUBLISH_MS - (now - this.lastPublish) + 5,
+        )
+      }
+      return
+    }
     this.lastPublish = now
     if (!this.listeners.size) return
     const s = this.snapshot()

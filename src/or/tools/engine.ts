@@ -64,6 +64,9 @@ export class ToolEngine {
   private tool: T.Group | null = null
   /** SX-4: the bone patch and the drill session, alive only while the drill is the tool. */
   drill: DrillRig | null = null
+  /** Hooks for the EVD link: every query of a catheter tip, and drill events. */
+  onSample: ((tip: T.Vector3, dir: T.Vector3, skinMm: number) => void) | null = null
+  onDrillEvent: ((e: import('../drill/types').DrillEvent) => void) | null = null
   private tip = new T.Vector3()
   private dir = new T.Vector3(0, 0, -1)
   private have = false
@@ -128,6 +131,7 @@ export class ToolEngine {
     if (kind === 'drill') {
       try {
         this.drill = new DrillRig(this.scene)
+        this.drill.onEvent((e) => this.onDrillEvent?.(e))
       } catch (e) {
         console.warn(e) // skull not loaded: the drill model still moves, it just cuts nothing
       }
@@ -215,6 +219,7 @@ export class ToolEngine {
     this.hazardNear = out.contact
 
     this.record(now, out)
+    if (this.tool?.name === 'tool-catheter') this.onSample?.(this.tip, this.dir, out.skinMm)
     this.buzz(out)
     const st = useTool.getState()
     const tNow = performance.now()

@@ -1603,3 +1603,7 @@ html.or-on .bottom-dock, html.or-on .studio-credit { display: none; }
 @keyframes tool-pulse { from { opacity: 0.55; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .tool-pulse.bad { animation: none; } }
 .or-panel { max-height: calc(100vh - 150px); overflow: auto; }
+
+/* EVD panel docks on the right so it does not cover the operating-room panel (SX-3 UI). */
+.evd-dock .or-panel { left: auto; right: var(--edge); top: 64px; }
+@media (max-width: 760px) { .evd-dock .or-panel { right: 12px; left: 12px; width: auto !important; } }

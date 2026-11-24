@@ -7,6 +7,8 @@ import { OperatingRoom, type Skin } from './room'
 import { SKULL_IDS } from './scalp'
 import { useOR, type Measure, type OrCamera } from './useOR'
 import { ToolEngine } from './tools/engine'
+import { EvdLink } from './evd/link'
+import { useEvd } from './evd/useEvd'
 import { useTool } from './tools/useTool'
 
 /** Atlas fields the room overrides while it is on (restored exactly on the way out). */
@@ -34,6 +36,7 @@ interface Session {
   envIntensity: number
   measureGroup: T.Group
   tools: ToolEngine
+  evd: EvdLink
   unsub: (() => void)[]
 }
 
@@ -42,6 +45,8 @@ export const orActive = () => !!session
 /** The live instrument engine (panel buttons, dev checks). */
 export const activeTools = () => session?.tools ?? null
 /** The live room (dev checks and the panel's readouts). */
+/** The live EVD link (session, panel). */
+export const activeEvd = () => session?.evd ?? null
 export const activeRoom = () => session?.room ?? null
 
 const UP = new T.Vector3(0, 0, 1)
@@ -90,9 +95,12 @@ export function enterOR(): boolean {
     },
     envIntensity: scene.scene.environmentIntensity,
     measureGroup: new T.Group(),
-    tools: new ToolEngine(scene, room),
+    tools: undefined as unknown as ToolEngine,
+    evd: undefined as unknown as EvdLink,
     unsub: [],
   }
+  s.tools = new ToolEngine(scene, room)
+  s.evd = new EvdLink(scene, s.tools)
   session = s
 
   useAtlas.setState({ ...FORCED })
@@ -149,6 +157,7 @@ export function enterOR(): boolean {
     }),
   )
   scene.tapOverride = (x, y) => {
+    if (s.evd.tap(x, y, room.scalpMesh)) return true
     if (useTool.getState().tool !== 'off') return s.tools.tap()
     if (!useOR.getState().measure) return false
     const hit = scene.pickPoint(x, y, [room.scalpMesh])
@@ -166,6 +175,7 @@ export function exitOR() {
   for (const u of s.unsub) u()
   const { scene, cam: k } = s
   scene.tapOverride = null
+  s.evd.dispose()
   s.tools.dispose()
   useTool.setState({ tool: 'off', lock: false, depth: 0 })
   s.measureGroup.removeFromParent()
@@ -184,6 +194,7 @@ export function exitOR() {
   scene.scene.environmentIntensity = s.envIntensity
   scene.flyCamera(k.pos, k.target, { fov: k.fov, animate: false })
   useAtlas.setState(s.atlas)
+  useEvd.setState({ open: false })
   useOR.setState({ on: false, measure: false, measures: [], pending: null })
   scene.redraw()
 }
@@ -292,4 +303,4 @@ export function measuresCsv(measures: Measure[]) {
   return rows.join('\n')
 }
 
-if (import.meta.env.DEV) (window as unknown as { __orMode: unknown }).__orMode = { enterOR, exitOR, toggleOR, applyCamera, activeRoom, tools: () => session?.tools }
+if (import.meta.env.DEV) (window as unknown as { __orMode: unknown }).__orMode = { enterOR, exitOR, toggleOR, applyCamera, activeRoom, tools: () => session?.tools, evd: () => session?.evd }

@@ -4,10 +4,12 @@ import { useAtlas } from '@/store/useAtlas'
 import { activeScene } from '@/scene/sceneRef'
 import { OR_STRINGS } from './strings'
 import { useOR, type OrCamera } from './useOR'
-import { exitOR, measuresCsv, sceneToMni } from './orMode'
+import { activeEvd, exitOR, measuresCsv, sceneToMni } from './orMode'
 import type { Skin } from './room'
 import { ToolHUD, ToolPanel } from './tools/ToolPanel'
 import { useTool } from './tools/useTool'
+import { EvdPanel } from './evd/EvdPanel'
+import { useEvd } from './evd/useEvd'
 
 /** The operating-room panel: views, scalp, lamp, ruler, and the teaching-only notice. */
 export function ORPanel() {
@@ -22,6 +24,7 @@ export function ORPanel() {
   const fps = useOR((s) => s.fps)
   const set = useOR((s) => s.set)
   const [copied, setCopied] = useState(false)
+  const evdOpen = useEvd((s) => s.open)
   const t = OR_STRINGS[lang]
 
   // Draws per second: the scene renders only when something changes, so this reads the renderer's own counter.
@@ -93,6 +96,11 @@ export function ORPanel() {
         </div>
         <ToolPanel />
         <div className="or-row">
+          <button className={`or-chip ${evdOpen ? 'on' : ''}`} aria-pressed={evdOpen} onClick={() => useEvd.getState().set(!evdOpen)} type="button">
+            {lang === 'uz' ? 'Protsedura: EVD (ventrikulostomiya)' : 'Procedure: EVD (ventriculostomy)'}
+          </button>
+        </div>
+        <div className="or-row">
           <button className={`or-chip ${lamp ? 'on' : ''}`} aria-pressed={lamp} onClick={() => set({ lamp: !lamp })} type="button">
             <Lamp size={15} /> {t.lamp}
           </button>
@@ -132,6 +140,11 @@ export function ORPanel() {
         <p className="or-scale">{t.scale}</p>
       </aside>
       <ToolHUD />
+      {evdOpen && activeEvd() && (
+        <div className="evd-dock">
+          <EvdPanel api={activeEvd()!.session} onClose={() => useEvd.getState().set(false)} />
+        </div>
+      )}
       <div className="or-warn glass" role="note">
         {t.warn}
       </div>
