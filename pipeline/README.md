@@ -6,7 +6,7 @@ both gitignored. The per-source catalogues (`data/*.json`) and the merged
 anything here. Re-run only when adding structures or on a fresh machine.
 
 ```bash
-python3 -m venv pipeline/.venv && pipeline/.venv/bin/pip install numpy nibabel scikit-image trimesh fast-simplification siibra
+python3 -m venv pipeline/.venv && pipeline/.venv/bin/pip install numpy nibabel scikit-image trimesh fast-simplification pymeshlab rtree siibra
 ```
 
 ## 1. BodyParts3D → gross anatomy (379 parts)
@@ -90,6 +90,18 @@ pipeline/.venv/bin/python pipeline/subcortical_to_glb.py suit
 
 ```bash
 pipeline/.venv/bin/python pipeline/build_catalogue.py   # data/*.json → src/data/parts.json (1672 parts, 9 layers)
+```
+
+## 6. Nested meninges shells (AG-21 / A-3)
+
+Requires `public/meshes/gross/pial-unified.glb` (AG-19). Builds four strictly
+nested, non-intersecting shells (`pia`, `csf`, `arachnoid`, `dura`) matched to
+the existing atlas dura under the cranial vault (≤ 1 mm) and literature layer
+thicknesses (`src/or/anatomy/layers.ts`):
+
+```bash
+pipeline/.venv/bin/python pipeline/tools/meninges_shells.py   # → public/meshes/gross/meninges-{pia,csf,arachnoid,dura}.glb (gitignored)
+pipeline/.venv/bin/python scripts/audit-meninges.py           # verifies 0 shell intersections, thickness ranges, and dura match <= 1 mm
 ```
 
 ## Standalone preview (no app build)
