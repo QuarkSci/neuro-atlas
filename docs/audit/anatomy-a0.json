@@ -1,0 +1,216 @@
+{
+  "counts": {
+    "skull": 22,
+    "cortex": 55,
+    "vessels": 246,
+    "layers": [
+      "g-tentorium-cerebelli",
+      "g-right-half-of-tentorium-cerebelli",
+      "g-cerebral-hemisphere-segment-of-dura-mater",
+      "g-falx-cerebri"
+    ]
+  },
+  "centreMni": [
+    0.4960975646972656,
+    -16.198467254638672,
+    19.20547866821289
+  ],
+  "sites": {
+    "kocher": {
+      "outer": 85.1907729618167,
+      "inner": 78.65629098429064,
+      "boneMm": 6.53448197752607,
+      "cortexOuter": 77.73173803263325,
+      "gapMm": 0.9245529516573896,
+      "layerSurfaces": [
+        76.25,
+        78.71
+      ],
+      "duraBetween": true,
+      "coveredMm": 0.9245529516573896,
+      "unfilledMm": 0,
+      "entry": [
+        27.997154724227236,
+        54.8034177078752,
+        57.41401154648517
+      ]
+    },
+    "pterional": {
+      "outer": 78.79413623288141,
+      "inner": 73.81577557356331,
+      "boneMm": 4.978360659318099,
+      "cortexOuter": 70.04782012170803,
+      "gapMm": 3.7679554518552862,
+      "layerSurfaces": [
+        71.57,
+        73.84
+      ],
+      "duraBetween": true,
+      "coveredMm": 2.2428863169835154,
+      "unfilledMm": 1.5250691348717709,
+      "entry": [
+        73.30778224701571,
+        13.875924244579817,
+        17.622615957727707
+      ]
+    },
+    "vertex": {
+      "outer": 75.17641311765107,
+      "inner": 69.90960044232399,
+      "boneMm": 5.266812675327074,
+      "cortexOuter": 65.75698176908882,
+      "gapMm": 4.1526186732351675,
+      "layerSurfaces": [
+        67.79,
+        69.95
+      ],
+      "duraBetween": true,
+      "coveredMm": 2.1168366708783566,
+      "unfilledMm": 2.035782002356811,
+      "entry": [
+        9.453007890902086,
+        -16.198467254638672,
+        93.84639805325305
+      ]
+    },
+    "occipital": {
+      "outer": 98.13499967065651,
+      "inner": 90.72349499430462,
+      "boneMm": 7.411504676351896,
+      "cortexOuter": 88.70244157575495,
+      "gapMm": 2.02105341854967,
+      "layerSurfaces": [
+        88.75,
+        91.08
+      ],
+      "duraBetween": true,
+      "coveredMm": 1.9691949398038702,
+      "unfilledMm": 0.05185847874579963,
+      "entry": [
+        14.982820503617935,
+        -112.77662018077648,
+        28.863293960826674
+      ]
+    },
+    "temporal": {
+      "outer": 81.83313868465456,
+      "inner": 78.44349514314419,
+      "boneMm": 3.3896435415103667,
+      "cortexOuter": 75.11411740503486,
+      "gapMm": 3.3293777381093292,
+      "layerSurfaces": [
+        76.27,
+        78.48
+      ],
+      "duraBetween": true,
+      "coveredMm": 2.1703895325624245,
+      "unfilledMm": 1.1589882055469047,
+      "entry": [
+        79.7926680520949,
+        -20.163295779008553,
+        -0.618663953636517
+      ]
+    }
+  },
+  "sweep": {
+    "rays": 3000,
+    "hit": 2998,
+    "boneMm": {
+      "n": 2998,
+      "min": 0.15042531912546053,
+      "p5": 0.18352413842453075,
+      "median": 4.625647939013902,
+      "mean": 4.141357182673641,
+      "p95": 6.53838690261766,
+      "max": 8.37732846026988
+    },
+    "gapMm": {
+      "n": 2955,
+      "min": -0.0006274023146062291,
+      "p5": 1.1231065811457341,
+      "median": 3.4662921051109947,
+      "mean": 4.400574284995307,
+      "p95": 10.21039602205154,
+      "max": 71.24476256542042
+    },
+    "unfilledMm": {
+      "n": 2955,
+      "min": 0,
+      "p5": 0,
+      "median": 1.370498763664898,
+      "mean": 2.3349339095179027,
+      "p95": 7.743094105257711,
+      "max": 63.979376575719826
+    },
+    "duraCoverage": 0.9996615905245347,
+    "gapOver0p5": 0.9942470389170897,
+    "unfilledOver0p5": 0.65414551607445,
+    "negativeGap": 1
+  },
+  "vessels": {
+    "stride": 4,
+    "totalVertices": 270431,
+    "sampled": 67702,
+    "inCortex": 14259,
+    "near": 35331,
+    "onSurface": 5864,
+    "air05": 29467,
+    "air1": 22956,
+    "air2": 12689,
+    "far": 18112,
+    "airborneFracOfNear": 0.8340267753530893,
+    "over1FracOfNear": 0.6497410206334381,
+    "nearDist": {
+      "n": 35331,
+      "min": 0.00004488252258231282,
+      "p5": 0.1620928871242184,
+      "median": 1.4555751982645424,
+      "mean": 1.839682626219327,
+      "p95": 4.986694463876951,
+      "max": 5.99973906381233
+    },
+    "worst": [
+      {
+        "id": "g-left-anterior-temporal-artery",
+        "near": 276,
+        "airFrac": 1
+      },
+      {
+        "id": "g-branch-of-left-anterior-choroidal-artery-to-posterior-limb-of-left-internal-capsule",
+        "near": 31,
+        "airFrac": 1
+      },
+      {
+        "id": "g-hypothalamic-branch-of-left-posterior-communicating-artery",
+        "near": 43,
+        "airFrac": 1
+      },
+      {
+        "id": "g-hypothalamic-branch-of-right-posterior-communicating-artery",
+        "near": 50,
+        "airFrac": 1
+      },
+      {
+        "id": "g-left-ophthalmic-artery",
+        "near": 91,
+        "airFrac": 1
+      },
+      {
+        "id": "g-right-ophthalmic-artery",
+        "near": 253,
+        "airFrac": 1
+      },
+      {
+        "id": "g-left-posterior-inferior-cerebellar-artery",
+        "near": 21,
+        "airFrac": 1
+      },
+      {
+        "id": "g-right-posterior-inferior-cerebellar-artery",
+        "near": 51,
+        "airFrac": 1
+      }
+    ],
+    "meshesWithNear": 174
+  }
+}
