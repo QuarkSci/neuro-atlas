@@ -4,6 +4,7 @@ import type { BrainScene } from '@/scene/BrainScene'
 import type { OperatingRoom } from '../room'
 import { buildTool } from './models'
 import { handTool } from './handBridge'
+import { DrillRig } from '../drill/rig'
 import { EMPTY, useTool, type Kind, type Readout, type ToolEvent } from './useTool'
 
 /** Tip closer than this to a vessel or nerve surface = contact (a collision event), mm. */
@@ -61,6 +62,8 @@ export class ToolEngine {
   private targets: Target[] = []
   private scalp: Geo
   private tool: T.Group | null = null
+  /** SX-4: the bone patch and the drill session, alive only while the drill is the tool. */
+  drill: DrillRig | null = null
   private tip = new T.Vector3()
   private dir = new T.Vector3(0, 0, -1)
   private have = false
@@ -88,6 +91,12 @@ export class ToolEngine {
     this.refreshTargets()
   }
 
+  /** Fresh bone: rebuild the patch and the session (the drill stays the tool). */
+  resetDrill() {
+    if (!this.drill) return
+    this.setTool('drill')
+  }
+
   /** Re-read the loaded structures (layers load on demand). */
   refreshTargets() {
     this.targets = this.scene
@@ -97,6 +106,8 @@ export class ToolEngine {
   }
 
   setTool(kind: 'off' | 'probe' | 'catheter' | 'drill') {
+    this.drill?.dispose()
+    this.drill = null
     if (this.tool) {
       this.model.remove(this.tool)
       this.tool.traverse((o) => {
@@ -114,6 +125,13 @@ export class ToolEngine {
       return
     }
     this.tool = buildTool(kind)
+    if (kind === 'drill') {
+      try {
+        this.drill = new DrillRig(this.scene)
+      } catch (e) {
+        console.warn(e) // skull not loaded: the drill model still moves, it just cuts nothing
+      }
+    }
     this.tool.visible = this.have
     this.model.add(this.tool)
     this.t0 = performance.now()
@@ -135,6 +153,7 @@ export class ToolEngine {
     this.tool.visible = true
     this.tool.position.copy(tip)
     this.tool.quaternion.setFromUnitVectors(new T.Vector3(0, 1, 0), this.dir.clone().negate())
+    this.drill?.aim(tip, this.dir)
     this.query()
     this.scene.redraw()
   }

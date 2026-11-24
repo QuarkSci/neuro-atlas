@@ -5,6 +5,7 @@ import { useAtlas } from '@/store/useAtlas'
 import { OR_STRINGS } from '../strings'
 import { activeTools } from '../orMode'
 import { WARN_MM, CONTACT_MM } from './engine'
+import { DrillPanel } from '../drill/DrillPanel'
 import { useTool, type ToolId } from './useTool'
 
 const nameOf = (id: string | null, lang: 'en' | 'uz') =>
@@ -55,6 +56,7 @@ export function ToolPanel() {
       {tool !== 'off' && (
         <>
           <p className="or-hint">{lock ? t.locked : t.toolHint}</p>
+          {tool === 'drill' && <DrillPanel />}
           <div className="tool-grid">
             <span>{t.inside}</span>
             <b>{r.inside.length ? r.inside.map((id) => nameOf(id, lang)).join(', ') : t.nothing}</b>

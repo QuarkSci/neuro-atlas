@@ -153,7 +153,7 @@ const checkServerReachable = async () => {
   }
 }
 
-const needServer = ['audit-lesions', 'audit-pick', 'shot-hands', 'shot-or', 'shot-tools', 'shot-evd', 'shot-drill', 'shots-theme'].some(shouldRun)
+const needServer = ['audit-lesions', 'audit-pick', 'shot-hands', 'shot-or', 'shot-tools', 'shot-evd', 'shot-drill', 'shot-drill-ui', 'shots-theme'].some(shouldRun)
 if (needServer) {
   const ok = await checkServerReachable()
   if (!ok) {
@@ -363,6 +363,29 @@ if (shouldRun('shot-drill')) {
     record({
       id: 'shot-drill',
       label: 'Suyak burg‘ulash (`shot-drill`)',
+      status: ok ? 'pass' : 'fail',
+      summary: `${cm.passed}/${cm.passed + cm.failed} ✓${costNote}`,
+      durationSec: r.durationSec,
+      errors: ok ? [] : [...cm.failedLines, ...extractErrors(r.stderr)],
+    })
+  }
+}
+
+// 7d. shot-drill-ui-ui (sx/main)
+if (shouldRun('shot-drill-ui')) {
+  if (!scriptExists('scripts/shot-drill-ui.mjs')) {
+    record({ id: 'shot-drill-ui', label: 'Burg‘u asbob dvigatelida (`shot-drill-ui`)', status: 'skip', summary: 'skript yo‘q (faqat `sx/main`)', durationSec: 0, errors: [] })
+  } else {
+    const outDir = path.join(tmpDir, 'drill-ui')
+    const r = await runCmd('node', ['scripts/shot-drill-ui.mjs', outDir, '--w', String(width), '--h', String(height)])
+    const cm = parseCheckMarks(r.stdout)
+    const costNote = ''
+    const ok = r.code === 0 && cm.failed === 0 && cm.passed > 0
+    copyIfExists(path.join(outDir, 'drill-ui-dark.png'), 'drill-ui-dark.png', screenshots)
+    copyIfExists(path.join(outDir, 'drill-ui-light.png'), 'drill-ui-light.png', screenshots)
+    record({
+      id: 'shot-drill-ui',
+      label: 'Burg‘u asbob dvigatelida (`shot-drill-ui`)',
       status: ok ? 'pass' : 'fail',
       summary: `${cm.passed}/${cm.passed + cm.failed} ✓${costNote}`,
       durationSec: r.durationSec,

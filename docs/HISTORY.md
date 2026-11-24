@@ -1492,3 +1492,11 @@ Dura "membrana" sifatida modellanadi, yirtilishi (`pastBoneMm`) ko'rsatkich, to'
 **Sinalmagan.** Haqiqiy kamera / geympad bilan; ToolEngine va ORPanel ga ulanmagan (kiritish → `DrillSession.update`, `DrillMeshView.sync` har kadr);
 bosh suyagining boshqa joylari (patch egriligi katta joyda ustunlar qiya); haqiqiy Mac'da kadr byudjeti (faqat headless CPU o'lchandi); suyak mesh'ining asl bo'shlig'i (sinus) hisobga olinmagan.
 AG-17 (chang / ovoz / titrash) `DrillState` ni shu sessiyadan oladi.
+
+### SX-4b — burg'u ToolEngine ga ulandi, 2026-11-24
+
+`src/or/drill/rig.ts` (DrillRig), `cutout.ts`, `useDrill.ts`, `DrillPanel.tsx`; `ToolEngine.setTool('drill')` rig yaratadi, `setInput` → `rig.aim`.
+Kocher (o'ng) nuqtasida 40 × 40 mm suyak bo'lagi; atlas suyagi shu quti ichida **fragment shader `discard`** bilan olib tashlanadi
+(`onBeforeCompile`, `clippingPlanes` ga tegilmaydi), o'rniga kesilgan mesh ko'rinadi. Ishga tushirish: Space (bosib turish) yoki "Burg'u aylanadi", bosim — slayder,
+chuqurlik — g'ildirak (mavjud asbob boshqaruvi). Test: `scripts/shot-drill-ui.mjs` (9 ✓, `check-all` "7d"); kadr tsikli sinovda qo'lda (`rig.manual`, 60 Hz qadam), chunki
+dasturiy GL bir necha fps beradi. Sinalmagan: real vaqtda sichqoncha bilan (qo'l bilan), boshqa nuqtalar (patch faqat Kocher), qo'l kuzatuvi bilan burg'u, burg'u tovushi/changi (AG-17).
