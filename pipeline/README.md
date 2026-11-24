@@ -6,7 +6,7 @@ both gitignored. The per-source catalogues (`data/*.json`) and the merged
 anything here. Re-run only when adding structures or on a fresh machine.
 
 ```bash
-python3 -m venv pipeline/.venv && pipeline/.venv/bin/pip install numpy nibabel scikit-image trimesh fast-simplification siibra
+python3 -m venv pipeline/.venv && pipeline/.venv/bin/pip install numpy nibabel scikit-image trimesh fast-simplification pymeshlab rtree siibra
 ```
 
 ## 1. BodyParts3D → gross anatomy (379 parts)
@@ -90,6 +90,18 @@ pipeline/.venv/bin/python pipeline/subcortical_to_glb.py suit
 
 ```bash
 pipeline/.venv/bin/python pipeline/build_catalogue.py   # data/*.json → src/data/parts.json (1672 parts, 9 layers)
+```
+
+## 6. Unified watertight pial surface (AG-19 / A-1)
+
+Unifies the 55 gross `telencephalon` meshes (BodyParts3D, CC BY-SA 2.1 JP) into a
+single watertight pial surface via 0.5 mm 3-axis ray-parity voxelization, Marching
+Cubes, shrinkage-free Taubin smoothing, and topology-preserving quadric decimation
+(`pymeshlab`, ≤ 600k faces), plus per-vertex nearest-gyrus labels:
+
+```bash
+pipeline/.venv/bin/python pipeline/tools/pial_surface.py   # → public/meshes/gross/pial-unified.glb (gitignored) + data/gross_pial_labels.json
+pipeline/.venv/bin/python scripts/audit-pial.py            # verifies watertightness, volume (±3%), Hausdorff (HD95/HD99/HD100), and 100% labels
 ```
 
 ## Standalone preview (no app build)
