@@ -153,7 +153,7 @@ const checkServerReachable = async () => {
   }
 }
 
-const needServer = ['audit-lesions', 'audit-pick', 'shot-hands', 'shot-or', 'shot-tools', 'shots-theme'].some(shouldRun)
+const needServer = ['audit-lesions', 'audit-pick', 'shot-hands', 'shot-or', 'shot-tools', 'shot-evd', 'shots-theme'].some(shouldRun)
 if (needServer) {
   const ok = await checkServerReachable()
   if (!ok) {
@@ -317,6 +317,29 @@ if (shouldRun('shot-tools')) {
     record({
       id: 'shot-tools',
       label: 'Asbob dvigateli (`shot-tools`)',
+      status: ok ? 'pass' : 'fail',
+      summary: `${cm.passed}/${cm.passed + cm.failed} ✓${costNote}`,
+      durationSec: r.durationSec,
+      errors: ok ? [] : [...cm.failedLines, ...extractErrors(r.stderr)],
+    })
+  }
+}
+
+// 7b. shot-evd (sx/main)
+if (shouldRun('shot-evd')) {
+  if (!scriptExists('scripts/shot-evd.mjs')) {
+    record({ id: 'shot-evd', label: 'EVD mantig‘i (`shot-evd`)', status: 'skip', summary: 'skript yo‘q (faqat `sx/main`)', durationSec: 0, errors: [] })
+  } else {
+    const outDir = path.join(tmpDir, 'evd')
+    const r = await runCmd('node', ['scripts/shot-evd.mjs', outDir, '--w', String(width), '--h', String(height)])
+    const cm = parseCheckMarks(r.stdout)
+    const costNote = ''
+    const ok = r.code === 0 && cm.failed === 0 && cm.passed > 0
+    copyIfExists(path.join(outDir, 'evd-dark.png'), 'evd-dark.png', screenshots)
+    copyIfExists(path.join(outDir, 'evd-light.png'), 'evd-light.png', screenshots)
+    record({
+      id: 'shot-evd',
+      label: 'EVD mantig‘i (`shot-evd`)',
       status: ok ? 'pass' : 'fail',
       summary: `${cm.passed}/${cm.passed + cm.failed} ✓${costNote}`,
       durationSec: r.durationSec,
