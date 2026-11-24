@@ -1440,3 +1440,29 @@ tashqi diametr, har 10 mm da chuqurlik belgisi). `src/or/tools/`: `engine.ts` (`
 - **Tekshirilmadi:** haqiqiy kamera bilan qo'l (chimdish chuqurligi barmoq-ekran bo'yicha, kameraga yaqinlik bo'yicha emas), haqiqiy
   gamepad titrashi, Mac'da kadr byudjeti. Burg'u hozircha faqat ko'rinish (kesish SX-4 da). "Ichida" testi nomanifold meshlarda adashishi mumkin.
 - Keyingi: SX-3 (EVD: Kocher nuqtasi, qadamlar, baholash; AG-9 va AG-12 hujjatlari kerak — taxtani tekshiring).
+
+## SX-3 — EVD mantig'i (2026-11-24, sx/main)
+
+Kod: `src/or/evd/` — `params.ts` (sonlar, har birida manba), `kocher.ts` (koronar chokni meshlardan topish: frontal suyak
+cho'qqilari o'ng tepa suyakka < 2 mm; lateral 28 mm da mahalliy chiziqli moslash; +15 mm oldinga; vertikal nur bilan tashqi
+plastinkaga tushirish; ideal yo'nalish = kirish → Monro), `score.ts` (titrash RMS 4–12 Hz, Kakarla, 8 metrika, ballar,
+chegaralar), `session.ts` (9 qadam holat mashinasi, tartib xatolari, urinishlar, to'qnashuvlar, CSF, hisobot),
+`world.ts` (`EvdWorld` — atlas meshlari BVH ustida). Tekshiruv: `NA_URL=… node scripts/shot-evd.mjs <papka>` (31 ✓).
+
+Real mesh natijalari: kirish (28.0, 54.8, 57.4), suyakdan qorinchaga 59 mm, Monro gacha 80.5 mm; Ghajar normali ideal
+yo'nalishdan 10.9° farq qiladi.
+
+Qarorlar (AG-9 hujjatidan ONGLI chetga chiqishlar):
+1. **Chuqurlik** adabiyot oynasi (55–65 mm) bilan emas, atlasning o'z ideal chuqurligidan og'ish (≤5 / ≤10 mm) bilan
+   baholanadi: atlas boshi kattaroq (kirish→Monro 80 mm), aks holda ideal o'tish ham 1 ball olardi.
+2. **Kakarla 1** — asl Kakarla bo'yicha: ipsilateral frontal shox yoki uchinchi qorincha; hujjatdagi "Monro ≤ 10 mm" sharti
+   alohida "Monro masofasi" metrikasiga ko'chirildi. Yo'l xavflari (kaudat, tomir) darajaga emas, `collisions` va
+   umumiy ball chegarasiga (cap) kiradi.
+3. Qorincha ichida qattiq xavf (kaudat, fornix) hisoblanmaydi: atlas meshlari qorincha bilan ustma-ust tushadi (kaudat
+   yo'lda 62–72 mm da, fornix 76–80 mm da).
+4. Oddiy ideal yo'lda ham 3 mm dan yaqin tomirlar (ichki miya venasi 1.9 mm) bor → "yaqinlik" ogohlantirishi, to'qnashuv emas
+   (collisions bahosi 3). Bu atlas anatomiyasi, xato emas.
+
+Tekshirilmadi / ochiq: haqiqiy kamera va geympad bilan; chap tomon (`side: 'left'`) kodi bor, lekin sinovdan o'tmagan;
+suyak SX-4 gacha teshiksiz o'tiladi (asbob suyak bilan to'qnashmaydi); daraja 3 (slit/siljish) geometriyasi yo'q;
+UI (EvdPanel) va `sceneWorld` ni ToolEngine bilan ulash AG-15 + keyingi qadam.

@@ -87,6 +87,8 @@ export interface EvdParams {
   // — Depth (evd.md 4.2) —
   depthBestMm: Sourced<Range>
   depthOkMm: Sourced<Range>
+  /** Depth is scored against the atlas's own ideal depth (entry → Monro), because the atlas head is larger than the literature mean. Bands on |depth − ideal|, mm. */
+  depthDevBandsMm: readonly ScoreBand[]
   /** Ependymal "pop" is expected in this band below the outer table, mm. */
   popBandMm: Sourced<Range>
   /** Deeper than this the tip is in the red zone (hypothalamus / third-ventricle floor / brainstem), mm. */
@@ -259,6 +261,7 @@ export interface MarkResult {
 export type EvdEvent =
   | { t: number; type: 'step'; step: EvdStepId; status: EvdStepStatus }
   | { t: number; type: 'out-of-order'; wanted: EvdStepId; current: EvdStepId }
+  | { t: number; type: 'position'; issues: readonly ('side' | 'head' | 'elevation' | 'coag')[] }
   | { t: number; type: 'mark'; mark: MarkResult }
   | { t: number; type: 'pass-start'; pass: number }
   | { t: number; type: 'pass-end'; pass: number }
@@ -294,6 +297,8 @@ export interface EvdMetrics {
   tipToMonroMm: number
   /** Final tip, below the outer table of the skull, mm. */
   depthMm: number
+  /** Entry → Monro foramen along the ideal line, mm (the depth a perfect pass reaches). */
+  idealDepthMm: number
   /** Distinct hazard structures hit (inside a solid, or touching a surface), and how many hits in total. */
   collisionIds: readonly string[]
   collisions: number
@@ -333,6 +338,7 @@ export interface EvdReport {
   kocher: KocherResult | null
   mark: MarkResult | null
   marks: number
+  position: PositionChecks | null
   metrics: EvdMetrics
   scores: EvdMetricScores
   /** Mean of the 8 scores, 1…5. */
