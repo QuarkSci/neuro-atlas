@@ -153,3 +153,5 @@ Mac'dagi tezlik o'lchovi.
 
 **Tartib (parallel):** CC: avval `types.ts` shartnomalari (EVD, DBS, drill), so'ng SX-3 mantig'i. AGY bir vaqtda: AG-18 → AG-15 → AG-11 → AG-14 →
 AG-16 → AG-17 (AG-11 token kutadi: u bloklansa keyingisiga o'tadi). SX-4/SX-5/SX-6 mantig'i CC da, tayyor shartnoma va ma'lumot bilan.
+
+> **Realizm (2026-11-24):** suyak ostidagi qatlamlar, tomirlar va bosh terisi bo'yicha alohida reja — `docs/REALISM.md` (RL-A, RL-B, AG-19…AG-22).
