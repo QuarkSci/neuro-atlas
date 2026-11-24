@@ -153,7 +153,7 @@ const checkServerReachable = async () => {
   }
 }
 
-const needServer = ['audit-lesions', 'audit-pick', 'shot-hands', 'shot-or', 'shot-tools', 'shot-evd', 'shot-drill', 'shot-drill-ui', 'shot-evd-ui', 'shot-dbs', 'shot-dbs-ui', 'shots-theme'].some(shouldRun)
+const needServer = ['audit-lesions', 'audit-pick', 'shot-hands', 'shot-or', 'shot-tools', 'shot-evd', 'shot-drill', 'shot-drill-ui', 'shot-evd-ui', 'shot-dbs', 'shot-dbs-ui', 'shot-skill', 'shots-theme'].some(shouldRun)
 if (needServer) {
   const ok = await checkServerReachable()
   if (!ok) {
@@ -453,6 +453,29 @@ if (shouldRun('shot-dbs-ui')) {
     record({
       id: 'shot-dbs-ui',
       label: 'DBS paneli ORPanelda (`shot-dbs-ui`)',
+      status: ok ? 'pass' : 'fail',
+      summary: `${cm.passed}/${cm.passed + cm.failed} ✓${costNote}`,
+      durationSec: r.durationSec,
+      errors: ok ? [] : [...cm.failedLines, ...extractErrors(r.stderr)],
+    })
+  }
+}
+
+// 7h. shot-skill-ui (sx/main)
+if (shouldRun('shot-skill')) {
+  if (!scriptExists('scripts/shot-skill.mjs')) {
+    record({ id: 'shot-skill', label: 'LDJ va LC-CUSUM (`shot-skill`)', status: 'skip', summary: 'skript yo‘q (faqat `sx/main`)', durationSec: 0, errors: [] })
+  } else {
+    const outDir = path.join(tmpDir, 'skill')
+    const r = await runCmd('node', ['scripts/shot-skill.mjs', outDir, '--w', String(width), '--h', String(height)])
+    const cm = parseCheckMarks(r.stdout)
+    const costNote = ''
+    copyIfExists(path.join(outDir, 'skill-dark.png'), 'skill-dark.png', screenshots)
+    copyIfExists(path.join(outDir, 'skill-light.png'), 'skill-light.png', screenshots)
+    const ok = r.code === 0 && cm.failed === 0 && cm.passed > 0
+    record({
+      id: 'shot-skill',
+      label: 'LDJ va LC-CUSUM (`shot-skill`)',
       status: ok ? 'pass' : 'fail',
       summary: `${cm.passed}/${cm.passed + cm.failed} ✓${costNote}`,
       durationSec: r.durationSec,

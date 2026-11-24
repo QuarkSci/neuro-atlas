@@ -2,6 +2,7 @@ import type { L10n, Mni } from '../types'
 import { angleDeg, dist, mul, sub, unit } from '../vec'
 import { findKocher, judgeMark, projectToSkull, type KocherModel } from './kocher'
 import { EVD_PARAMS, sideId } from './params'
+import { ldj } from '../skill'
 import { kakarla, pathLength, scoreAll, tipRegion, tremorRms } from './score'
 import {
   EVD_STEPS,
@@ -415,6 +416,7 @@ export class EvdSession implements EvdApi {
         P.tremorHz.value,
       ),
       pathEfficiency: lActual > 1e-6 ? Math.min(1, lIdeal / lActual) : 0,
+      ldj: ldj(inHead.map((p) => ({ t: p.t, p: p.p }))),
       sequenceErrors: this.sequenceErrors,
       kakarla: kakarla(P, region, toMonro),
     }

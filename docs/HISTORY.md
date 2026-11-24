@@ -1546,3 +1546,11 @@ Sinalmagan: haqiqiy AC/PC ni sichqoncha bilan topish (tuzilmalar odatda yashirin
 `audio.event` va `haptics.event` ga uzatiladi. Tovush brauzer qoidasi bo'yicha faqat bosishdan keyin: DrillPanel "Tovush" tugmasi → `rig.setSound(true)` (`audio.start()`), Space ham ishlatiladi lekin tovushni boshlamaydi. Rig yo'q qilinganda chang va audio ham dispose.
 Sinov (`shot-drill-ui`, 15 ✓): kesish paytida 336 gacha zarracha, hodisalar audio va haptikaga yetadi (11 ta), qatlamga qarab burg'u balandligi o'zgaradi (tashqi plastinka 639 Hz, diploe 504 Hz), breakthrough eng kuchli titrash.
 Sinalmagan: tovushning eshitilishi va sifati (headless), geympad titrashi, changning ko'rinishi (rasmda zarrachalar kesish tugagach tarqab ketgan), changning mikroskop/yaqin rejimdagi o'lchami.
+
+### PhD qatlami: LDJ va LC-CUSUM (sim-metrics.md 3.3, 5.3), 2026-11-24
+
+`src/or/skill.ts`: `ldj(trace)` — −ln(DJ), DJ = D⁵/L² · ∫|j|² dt (50 Hz ga qayta namunalash, 3 nuqtali silliqlash, uchinchi hosila); `lcCusum(success[], {p0 .25, p1 .10, h 2.5})` — muvaffaqiyat +ln(0.9/0.75) = +0.182, xato ln(0.1/0.25) = −0.916, S ≥ 0 dan pastga tushmaydi.
+Oracle: minimum-jerk harakat DJ = 720 (LDJ −6.58) o'lcham va davomiylikka bog'liq emas (sinov: −6.46 / −6.53); 8 Hz titrash −16.0; to'xtab-yurish −10.8; 14 ta ketma-ket muvaffaqiyat h ga yetadi, bitta xato signalni 20-sessiyagacha kechiktiradi.
+EVD: `EvdMetrics.ldj` (ballanmaydi), hisobotda "Silliqlik" qatori; tarix qatoriga va CSV ning oxirgi ustuniga `ldj` (eski saqlangan sessiyalarda yo'q: egri chiziqda o'tkazib yuboriladi); tarix tabida "Kompetentlik (LC-CUSUM)" kartasi (S_t chizig'i, h chegarasi, "barqaror kompetent ✓ (n-sessiyadan)").
+Muvaffaqiyat = Kakarla 1, to'qnashuvsiz, umumiy ball ≥ 4.0. Test: `scripts/shot-skill.mjs` (14 ✓, `check-all` "7h").
+Ochiq: DBS ning tarixi yo'q (LC-CUSUM u yerga keyin: radial xato ≤ 1.5 mm, to'qnashuvsiz); LDJ chegaralari ekspert/novice ma'lumotisiz kalibrlanmagan (faqat nisbiy ko'rsatkich); p₀, p₁, h simulyatsiyasi bilan tanlanmagan (hujjatdagi boshlang'ich qiymatlar); LDJ doimiy tezlikli sinov yo'lida past (−16): haqiqiy qo'l harakatida boshqacha bo'ladi.

@@ -10,7 +10,7 @@ import { Check, Copy, Download, RotateCcw, Trash2, X } from 'lucide-react'
 import { PART_BY_ID } from '@/data'
 import { useAtlas, type Lang } from '@/store/useAtlas'
 import { EVD_COMPLICATIONS, EVD_DISCLAIMER, EVD_KAKARLA_DESC, EVD_LANDMARKS, EVD_LEVELS, EVD_REFS, EVD_STEPS_DATA, EVD_STEP_BY_ID } from './data'
-import { appendReport, clearHistory, downloadCsv, historyToCsv, learningCurve, loadHistory, traceToCsv, type CurveMetric } from './history'
+import { appendReport, clearHistory, competence, downloadCsv, historyToCsv, learningCurve, loadHistory, traceToCsv, type CurveMetric } from './history'
 import { EVD_STRINGS } from './strings'
 import type { EvdApi, EvdEvent, EvdHistoryRow, EvdLevel, EvdMetricScores, EvdReport, EvdSnapshot, PositionChecks, Side } from './types'
 
@@ -41,6 +41,34 @@ const mutedStyle: React.CSSProperties = {
   fontSize: 11,
   color: 'color-mix(in oklab, var(--ink) 60%, transparent)',
   lineHeight: 1.4,
+}
+
+/** LC-CUSUM trace S_t against the threshold h: the line crosses h when the evidence of competence is enough. */
+function CusumSvg({ s, h, signalAt }: { s: readonly number[]; h: number; signalAt: number | null }) {
+  const W = 256,
+    H = 70,
+    padL = 28,
+    padR = 10,
+    padT = 8,
+    padB = 14
+  const maxV = Math.max(h * 1.2, ...s, 1)
+  const xAt = (i: number) => (s.length <= 1 ? (padL + W - padR) / 2 : padL + (i / (s.length - 1)) * (W - padL - padR))
+  const yAt = (v: number) => padT + (1 - v / maxV) * (H - padT - padB)
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label="LC-CUSUM" style={{ display: 'block' }} data-testid="cusum">
+      <line x1={padL} y1={H - padB} x2={W - padR} y2={H - padB} stroke="currentColor" strokeOpacity={0.22} />
+      <line x1={padL} y1={yAt(h)} x2={W - padR} y2={yAt(h)} stroke="#34c759" strokeOpacity={0.8} strokeDasharray="4 3" />
+      <text x={padL - 4} y={yAt(h) + 3} textAnchor="end" fontSize={9} fill="currentColor" fillOpacity={0.6}>
+        h
+      </text>
+      {s.length > 1 && (
+        <polyline fill="none" stroke="currentColor" strokeOpacity={0.75} strokeWidth={1.6} points={s.map((v, i) => `${xAt(i).toFixed(1)},${yAt(v).toFixed(1)}`).join(' ')} />
+      )}
+      {s.map((v, i) => (
+        <circle key={i} cx={xAt(i)} cy={yAt(v)} r={signalAt === i + 1 ? 3.6 : 2} fill={signalAt !== null && i + 1 >= signalAt ? '#34c759' : 'currentColor'} fillOpacity={0.85} />
+      ))}
+    </svg>
+  )
 }
 
 function LearningCurveSvg({ rows, metric }: { rows: readonly EvdHistoryRow[]; metric: CurveMetric }) {
@@ -466,6 +494,8 @@ export function EvdPanel({ api, onClose }: EvdPanelProps) {
                   <b>{fmt(snap.report.metrics.entryErrMm, 1, 'mm')}</b>
                   <span>{t.seqErrors}</span>
                   <b>{snap.report.metrics.sequenceErrors}</b>
+                  <span>{t.curveMetrics.ldj}</span>
+                  <b>{fmt(snap.report.metrics.ldj, 1)}</b>
                 </div>
               </div>
 
@@ -505,6 +535,20 @@ export function EvdPanel({ api, onClose }: EvdPanelProps) {
                   <b>{Math.max(...history.map((r) => Number(r.total))).toFixed(2)} / 5</b>
                 </div>
               </div>
+
+              {(() => {
+                const c = competence(history)
+                return (
+                  <div style={cardStyle}>
+                    <strong style={{ fontSize: 12 }}>{t.cusumTitle}</strong>
+                    <CusumSvg s={c.s} h={c.h} signalAt={c.signalAt} />
+                    <span style={{ ...mutedStyle, color: c.signalAt !== null ? '#34c759' : undefined }}>
+                      {c.signalAt !== null ? t.cusumCompetent(c.signalAt) : t.cusumProgress(c.current, c.h)}
+                    </span>
+                    <span style={mutedStyle}>{t.cusumHint}</span>
+                  </div>
+                )
+              })()}
 
               <div style={cardStyle}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 6 }}>

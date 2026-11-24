@@ -2,12 +2,13 @@
  * EVD training session history (localStorage), CSV export, and learning-curve helpers (AG-15).
  * Strictly follows `EVD_CSV_COLUMNS` and `EvdHistoryRow` from `src/or/evd/types.ts`.
  */
+import { CUSUM, lcCusum, type CusumResult } from '../skill'
 import { EVD_CSV_COLUMNS, type EvdHistoryRow, type EvdReport } from './types'
 
 export const EVD_HISTORY_KEY = 'na:evd:history'
 const MAX_ROWS = 200
 
-export type CurveMetric = 'total' | 'angleErrDeg' | 'tipToMonroMm' | 'durationS' | 'tremorRmsMm'
+export type CurveMetric = 'total' | 'angleErrDeg' | 'tipToMonroMm' | 'durationS' | 'tremorRmsMm' | 'ldj'
 
 export interface CurvePoint {
   index: number
@@ -38,6 +39,7 @@ export function reportToRow(report: EvdReport): EvdHistoryRow {
     collisions: m.collisions,
     sequenceErrors: m.sequenceErrors,
     total: r(report.total, 2),
+    ldj: m.ldj === null ? '' : r(m.ldj, 2),
   }
 }
 
@@ -103,7 +105,7 @@ const csvCell = (v: string | number) => {
 /** Serialize history rows into RFC 4180 CSV using the exact `EVD_CSV_COLUMNS` order. */
 export function historyToCsv(rows: readonly EvdHistoryRow[]): string {
   const header = EVD_CSV_COLUMNS.join(',')
-  const body = rows.map((row) => EVD_CSV_COLUMNS.map((col) => csvCell(row[col])).join(','))
+  const body = rows.map((row) => EVD_CSV_COLUMNS.map((col) => csvCell(row[col] ?? '')).join(','))
   return [header, ...body].join('\n')
 }
 
@@ -127,12 +129,19 @@ export function downloadCsv(filename: string, csv: string): void {
   URL.revokeObjectURL(url)
 }
 
-/** Extract a 1-based learning curve series for the chosen metric. */
+/** Extract a 1-based learning curve series for the chosen metric. Sessions saved before a metric existed (no `ldj`) are skipped. */
 export function learningCurve(rows: readonly EvdHistoryRow[], metric: CurveMetric): CurvePoint[] {
-  return rows.map((row, i) => ({
-    index: i + 1,
-    value: Number(row[metric]) || 0,
-    kakarla: Number(row.kakarlaGrade) || 3,
-    timestamp: String(row.timestamp),
-  }))
+  const out: CurvePoint[] = []
+  rows.forEach((row, i) => {
+    const raw = row[metric]
+    if (metric === 'ldj' && (raw === undefined || raw === '' || !Number.isFinite(Number(raw)))) return
+    out.push({ index: i + 1, value: Number(raw) || 0, kakarla: Number(row.kakarlaGrade) || 3, timestamp: String(row.timestamp) })
+  })
+  return out
 }
+
+/** A session counts as a success for LC-CUSUM when it ends in Kakarla 1, with no collision, and an overall score of at least 4.0 (sim-metrics.md 5.3). */
+export const isSuccess = (row: EvdHistoryRow) => Number(row.kakarlaGrade) === 1 && Number(row.collisions) === 0 && Number(row.total) >= 4
+
+/** LC-CUSUM over the stored sessions (p0 = 0.25, p1 = 0.10, h = 2.5). */
+export const competence = (rows: readonly EvdHistoryRow[]): CusumResult => lcCusum(rows.map(isSuccess), CUSUM)

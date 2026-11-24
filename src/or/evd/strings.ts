@@ -73,7 +73,12 @@ export interface EvdStrings {
     tipToMonroMm: string
     durationS: string
     tremorRmsMm: string
+    ldj: string
   }
+  cusumTitle: string
+  cusumCompetent: (n: number) => string
+  cusumProgress: (cur: number, h: number) => string
+  cusumHint: string
   clearHistory: string
   // Reference tab
   refLandmarks: string
@@ -162,7 +167,12 @@ export const EVD_STRINGS: Record<Lang, EvdStrings> = {
       tipToMonroMm: 'Monro masofasi (mm)',
       durationS: 'Vaqt (s)',
       tremorRmsMm: 'Titrash RMS (mm)',
+      ldj: 'Silliqlik (LDJ, baland = silliq)',
     },
+    cusumTitle: 'Kompetentlik (LC-CUSUM)',
+    cusumCompetent: (n) => `Barqaror kompetent ✓ (${n}-mashg‘ulotdan)`,
+    cusumProgress: (cur, h) => `Hali dalil yetarli emas: S = ${cur.toFixed(1)} / ${h}`,
+    cusumHint: 'Muvaffaqiyat: Kakarla 1, to‘qnashuvsiz, ball ≥ 4.0. Xato S ni kamaytiradi.',
     clearHistory: 'Tarixni tozalash',
     refLandmarks: 'Kocher orientirlari (mm)',
     refAccessPoints: 'Muqobil kirish nuqtalari',
@@ -247,7 +257,12 @@ export const EVD_STRINGS: Record<Lang, EvdStrings> = {
       tipToMonroMm: 'Tip to Monro (mm)',
       durationS: 'Duration (s)',
       tremorRmsMm: 'Tremor RMS (mm)',
+      ldj: 'Smoothness (LDJ, higher = smoother)',
     },
+    cusumTitle: 'Competence (LC-CUSUM)',
+    cusumCompetent: (n) => `Stable competence ✓ (from session ${n})`,
+    cusumProgress: (cur, h) => `Not enough evidence yet: S = ${cur.toFixed(1)} / ${h}`,
+    cusumHint: 'Success: Kakarla 1, no collision, score ≥ 4.0. A failure lowers S.',
     clearHistory: 'Clear history',
     refLandmarks: 'Kocher landmarks (mm)',
     refAccessPoints: 'Alternative access points',

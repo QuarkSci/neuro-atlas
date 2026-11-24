@@ -308,6 +308,8 @@ export interface EvdMetrics {
   tremorRmsMm: number
   /** L_ideal / L_actual in 0…1 (L_actual includes every pass). */
   pathEfficiency: number
+  /** Smoothness of the tip path in the head: −ln(dimensionless jerk), higher = smoother; `null` for a path shorter than 1 s. Not scored (PhD layer, sim-metrics.md 3.3). */
+  ldj: number | null
   /** Wrong-order attempts. */
   sequenceErrors: number
   kakarla: Kakarla
@@ -370,6 +372,7 @@ export const EVD_CSV_COLUMNS = [
   'collisions',
   'sequenceErrors',
   'total',
+  'ldj',
 ] as const
 export type EvdCsvColumn = (typeof EVD_CSV_COLUMNS)[number]
 export type EvdHistoryRow = Record<EvdCsvColumn, string | number>
