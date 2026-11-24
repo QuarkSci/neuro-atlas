@@ -548,7 +548,7 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | SX-5 | Kuzatiladigan qalam (6DoF marker) | Claude Code | ⏳ (AG-13) | sx/main |
 | SX-6 | OP-2 DBS | Claude Code | ✅ mantiq 2026-11-24 (`9cf7fb6`): `src/or/dbs/` AC–PC, traektoriya xavfi, MER, stim, baho, sessiya; `shot-dbs` 22 ✓. Ma'lumot `DbsData` sifatida inyeksiya — AG-16 shu shaklda yozsin (`src/or/dbs/logic.ts`); UI/3D yo'q | sx/main |
 | SX-7 | Mikroskop + pterional | Claude Code | ⏳ (keyin) | sx/main |
-| RL-A | Realizm A: anatomiya suyakdan miyagacha (A-0 audit → A-1 yaxlit po'stloq → A-3 meninges/likvor → A-4 tomirlar → A-2/A-5/A-6) — `docs/REALISM.md` | Claude Code (+ subagentlar) | 🔨 A-0 audit ✅ 2026-11-25 (`audit-anatomy.mjs`, docs/HISTORY.md); keyingi: qatlam dvigateli, likvor, dura ochish | sx/main |
+| RL-A | Realizm A: anatomiya suyakdan miyagacha (A-0 audit → A-1 yaxlit po'stloq → A-3 meninges/likvor → A-4 tomirlar → A-2/A-5/A-6) — `docs/REALISM.md` | Claude Code (+ subagentlar) | 🔨 A-0 audit ✅ 2026-11-25; 2-qadam ✅ 2026-11-25 (qatlam dvigateli, likvor, dura ochish — vaqtinchalik qobiqlar, docs/HISTORY.md); keyingi: B-1 qatlamli bosh terisi | sx/main |
 | RL-B | Realizm B: odam boshi (qatlamli teri, kesim, real yuz/soch) — `docs/REALISM.md` | Claude Code | ⏳ (B-2 AG-22 dan keyin) | sx/main |
 | AG-19 | Tadqiqot (cortex-surface) + QURISH: `pial_surface.py` (A-1 yaxlit po'stloq) — `docs/REALISM.md` | Antigravity | ⏳ | ag/AG-19 (origin/sx/main dan) |
 | AG-20 | Tadqiqot (pial tomirlar) + QURISH: `vessel_snap.py`, `pial_vessels_grow.py` (A-4) | Antigravity | ⏳ (A-1 dan keyin) | ag/AG-20 (origin/sx/main dan) |

@@ -12,6 +12,8 @@ import { useEvd } from './evd/useEvd'
 import { DbsLink } from './dbs/link'
 import { useDbs } from './dbs/useDbs'
 import { useTool } from './tools/useTool'
+import { LayerStack } from './anatomy/layerStack'
+import { DuraOpening } from './anatomy/duraOpen'
 
 /** Atlas fields the room overrides while it is on (restored exactly on the way out). */
 const FORCED = { explode: 0, peel: 0, isolate: false, cutaway: false, autoRotate: false, sidebar: false } as const
@@ -40,6 +42,8 @@ interface Session {
   tools: ToolEngine
   evd: EvdLink
   dbs: DbsLink
+  anatomy: LayerStack | null
+  dura: DuraOpening | null
   unsub: (() => void)[]
 }
 
@@ -52,6 +56,9 @@ export const activeTools = () => session?.tools ?? null
 export const activeEvd = () => session?.evd ?? null
 export const activeDbs = () => session?.dbs ?? null
 export const activeRoom = () => session?.room ?? null
+/** The membrane layers (dura, arachnoid, CSF) and the dura opening of the live session. */
+export const activeAnatomy = () => session?.anatomy ?? null
+export const activeDura = () => session?.dura ?? null
 
 const UP = new T.Vector3(0, 0, 1)
 
@@ -102,15 +109,24 @@ export function enterOR(): boolean {
     tools: undefined as unknown as ToolEngine,
     evd: undefined as unknown as EvdLink,
     dbs: undefined as unknown as DbsLink,
+    anatomy: null,
+    dura: null,
     unsub: [],
   }
   s.tools = new ToolEngine(scene, room)
   s.evd = new EvdLink(scene, s.tools)
   s.dbs = new DbsLink(scene)
+  try {
+    s.anatomy = new LayerStack(scene)
+    s.dura = new DuraOpening(s.anatomy)
+  } catch (e) {
+    console.warn('[anatomy] layers unavailable:', (e as Error).message)
+  }
   session = s
 
   useAtlas.setState({ ...FORCED })
   scene.scene.add(room.group, room.lights, room.scalpMesh, s.measureGroup)
+  if (s.anatomy) scene.scene.add(s.anatomy.group)
   scene.setOrMode(true)
   scene.setUp(UP)
   cam.clearViewOffset()
@@ -122,6 +138,7 @@ export function enterOR(): boolean {
 
   const o = useOR.getState()
   room.setSkin(o.skin)
+  s.anatomy?.setSkin(o.skin)
   showLayers(o.skin)
   room.setLamp(o.lamp)
   room.setTheme(atlas.theme)
@@ -134,6 +151,7 @@ export function enterOR(): boolean {
       if (!session) return
       if (st.skin !== prev.skin) {
         room.setSkin(st.skin)
+        s.anatomy?.setSkin(st.skin)
         showLayers(st.skin)
       }
       if (st.lamp !== prev.lamp) room.setLamp(st.lamp)
@@ -184,6 +202,8 @@ export function exitOR() {
   scene.tapOverride = null
   s.evd.dispose()
   s.dbs.dispose()
+  s.dura?.dispose()
+  s.anatomy?.dispose()
   s.tools.dispose()
   useTool.setState({ tool: 'off', lock: false, depth: 0 })
   s.measureGroup.removeFromParent()
@@ -322,4 +342,6 @@ if (import.meta.env.DEV)
     tools: () => session?.tools,
     evd: () => session?.evd,
     dbs: () => session?.dbs,
+    anatomy: () => session?.anatomy,
+    dura: () => session?.dura,
   }

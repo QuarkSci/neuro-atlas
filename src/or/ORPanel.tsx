@@ -12,6 +12,7 @@ import { EvdPanel } from './evd/EvdPanel'
 import { useEvd } from './evd/useEvd'
 import { DbsPanel } from './dbs/DbsPanel'
 import { useDbs } from './dbs/useDbs'
+import { LayersPanel } from './anatomy/LayersPanel'
 
 /** The operating-room panel: views, scalp, lamp, ruler, and the teaching-only notice. */
 export function ORPanel() {
@@ -98,6 +99,7 @@ export function ORPanel() {
           </div>
         </div>
         <ToolPanel />
+        <LayersPanel />
         <div className="or-row">
           <button
             className={`or-chip ${evdOpen ? 'on' : ''}`}

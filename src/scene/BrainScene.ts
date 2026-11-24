@@ -1091,6 +1091,11 @@ export class BrainScene {
     return this.parts.map((p) => ({ id: p.id, system: p.system, geometry: p.mesh.geometry as T.BufferGeometry & { boundsTree?: import('three-mesh-bvh').MeshBVH } }))
   }
 
+  /** The shared section planes: layers added outside the atlas parts (src/or/anatomy) clip with the same array. */
+  get sectionPlanes() {
+    return this.clipPlanes
+  }
+
   /** Ask for a redraw (the room animates lights and screens on its own). */
   redraw() {
     this.dirty = true
