@@ -73,7 +73,7 @@ natijani, o'lchovni va screenshotni yozadi. Qabul mezoni bajarilmasa branch "tay
 | **AG-23** | (tadqiqot qisqa) ho'l to'qima shaderi: SSS taxminlari, ho'l yuza modellari, real vaqtli usullar → `docs/research/wet-tissue-shading.md` | **A-5 modul:** `src/or/anatomy/wetTissue.ts` — three.js material quruvchi (po'stloq/pia/tomir/dura/teri preset), `onBeforeCompile` bilan, `clippingPlanes` ga tegmaydi; mustaqil sinov sahifa `scripts/shader-demo.html` va skript (qora/yorug', FPS o'lchovi) | `src/or/anatomy/wetTissue.ts`, `scripts/shader-demo.html`, `scripts/shot-shader.mjs` | demo sahifada har preset screenshot (qora+yorug'); Mac Chrome da ≥ 60 FPS demo, sahna ichida ≥ 30 FPS ni Claude tekshiradi |
 
 Tartib: AG-19 (A-1) birinchi (hammasi unga tayanadi; AG-20 va AG-21 tadqiqot bosqichi parallel, qurish bosqichi A-1 natijasi bilan); AG-22 va AG-23 mustaqil, parallel.
-Yangi `src/or/anatomy/` papkasi AGY niki (sof modullar); sahnaga ulash `src/or/` boshqa fayllarida Claude'da.
+**Branch asosi: `origin/sx/main`** (`git switch -c ag/<id> origin/sx/main`): `src/or/` va `public/or/` faqat shu branchda bor. Yangi `src/or/anatomy/` papkasi AGY niki (sof modullar); sahnaga ulash `src/or/` boshqa fayllarida Claude'da.
 
 ## 4. Tartib
 
@@ -91,3 +91,37 @@ Har bir paket: screenshot (qora + yorug'), kadr byudjeti o'lchovi, referens bila
 - Ochiq sirt (BigBrain/fsaverage) va BodyParts3D tomirlari orasidagi register xatosi: tomirlar A-4 da yuzaga moslanadi, shuning uchun mm xato ko'rinmaydi, lekin anatomik aniqlik o'lchovi (register xatosi) hisobotga yoziladi.
 - Real teri/yuz assetlari uchun CC0 sifati noaniq: bo'lmasa B-2 protsedural (displacement + PBR) bilan boshlanadi.
 - Bu hujjatdagi qalinliklar TAXMINIY; klinik aniqlik talab qilinadigan joyda AG-21 manbasisiz ishlatilmaydi.
+
+## 6. CC (Claude Code) ketma-ketligi va yangi chat prompti
+
+**Ketma-ketlik** (har qadam: screenshot qora+yorug', tsc+build, audit-pick 0, audit-lesions 0, kadr byudjeti; HISTORY.md ga tafsilot, taxta yangilansin):
+0. **Sessiya boshi:** `git fetch`; `ag/*` branchlar (AG-4, AG-8, AG-13 — foydalanuvchi roziligi kutilmoqda; AG-19…AG-23 — kelgan sari AI.md 6.2 bo'yicha tekshirish, `sx/main` ga `--no-ff`).
+1. **A-0 audit + qabul asbobi** (AGY ga bog'liq emas): `scripts/audit-anatomy.mjs` — 5 nuqtada suyak → dura → po'stloq masofalari, "havodagi" tomir segmentlari ulushi (po'stloqdan > 0.5 mm), qatlam ketma-ketligi bo'shliqsizmi. Bu AGY natijalarining ham qabul o'lchovi bo'ladi.
+2. **Qatlam dvigateli (AGY kutmasdan):** `src/or/anatomy/` ga ulash qatlami (`LayerStack`: qatlam ko'rinishi, bosish/yorliqdan chiqarish, kesim `clipping` bilan mosligi) + **likvor shaderi** (shaffof suyuqlik, sinish, egatlarda chuqur) va **dura ochish** operatsiyasi — vaqtinchalik qobiqlar mavjud meshlardan offset bilan; AG-21 generatori kelgach almashtiriladi.
+3. **B-1 qatlamli bosh terisi va kesim** (EVD "incision" bilan ulanadi): teri, yog', galea, perikranium, temporal mushak; qalinliklar AG-21 `layers.ts` dan (kelguncha taxminiy, belgilangan).
+4. **AG-19 kelsa:** A-1 yaxlit po'stloqni sahnaga ulash (yorliqlar, `audit-pick`, LOD), `audit-anatomy` yangilanadi.
+5. **AG-21 kelsa:** haqiqiy dura/arachnoid/pia qobiqlari (vaqtinchalik qobiqlar o'rniga).
+6. **AG-20 kelsa:** yopishtirilgan va o'stirilgan tomirlar; arterial pulsatsiya; "havodagi tomir" 0.
+7. **AG-23 kelsa:** `wetTissue` presetlari sahnaga (A-5), FPS o'lchovi.
+8. **AG-22 kelsa:** `head.glb` ni ulash (B-2), teri PBR, soch; keyin B-3.
+9. A-2 (AG-19 tavsiyasi bo'yicha real egatlar) va A-6 (likvor oqishi, pulsatsiya, brain shift) — oxirida.
+Keyin: C (qo'l, asboblar), D (stol, xona) rejasi shu hujjatga qo'shiladi.
+
+**Yangi chat prompti (CC):**
+
+```text
+Neuro Atlas — shlemsiz VR jarrohlik simulyatori, CC roli (mantiq, integratsiya, tekshiruv). Ish papkasi /Users/apple/Documents/Loyihalar/neuro-atlas-sx,
+branch sx/main, port 3021. Javoblar o'zbekcha, kod izohlari inglizcha. Avval qisqa reja ko'rsating.
+
+O'QING: docs/REALISM.md (to'liq), AI.md 6.1–6.2 va taxta, docs/SURGERY.md, docs/HISTORY.md oxirgi bo'limlar, CLAUDE.md.
+VAZIFA: realizm (RL-A anatomiya suyakdan miyagacha, RL-B odam boshi). Muammo: suyak/parda ostida havo, arachnoid/likvor/pia yo'q, tomirlar va
+miya muallaq; bosh/qo'l/stol realistik emas. Qaror: aralash agentlar (kod — siz, tadqiqot+QURISH — AGY AG-19…AG-23), sifat — tibbiy video, Mac ≥ 30 FPS,
+yondashuv — atlas tuzilmasi + ochiq real sirt + protsedural PBR (litsenziya toza). Ketma-ketlik: REALISM.md 6-bo'lim.
+BOSHLASH: git fetch; ag/* branchlar (AG-4/8/13 — foydalanuvchidan rozilik so'rang, hujjat, master ga); AG-19…23 kelgan bo'lsa AI.md 6.2 bo'yicha tekshiring,
+sx/main ga --no-ff. Keyin 1-qadam: A-0 audit + scripts/audit-anatomy.mjs (AGY natijalarini ham shu bilan qabul qilasiz), so'ng 2-qadam (qatlam dvigateli, likvor, dura ochish).
+QOIDALAR: master ga KOD yo'q (faqat hujjat); sx/main ga commit+push. Commit oldidan npx tsc -p tsconfig.app.json --noEmit && npm run build && rm -rf dist;
+prettier --no-semi --single-quote --print-width 180; commit xabari o'zbekcha (nima va NEGA) + "Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>".
+Testlar: NA_URL=http://localhost:3021/ node scripts/<x>.mjs (shot-evd, shot-evd-ui, shot-drill, shot-drill-ui, shot-dbs, shot-dbs-ui, shot-skill, shot-or, shot-tools,
+audit-pick diff 0, audit-lesions 0); uzoq skriptlarni fonda faylga yozdirib kuting. Dasturiy GL sekin: testlarda rig.manual + tick(1/60).
+Atlas suyaklari juft yupqa qatlam (parity), koordinatalar MNI mm (sahna (−x,z,y)). Har yangi funksiyaga PhD darajasidagi imkoniyat taklif qiling. Sinalmaganni ochiq yozing.
+```

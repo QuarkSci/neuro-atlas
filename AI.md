@@ -550,11 +550,11 @@ Belgilar: ⏳ kutmoqda · 🔨 ishlanmoqda · 👀 tekshiruvga tayyor (branch) �
 | SX-7 | Mikroskop + pterional | Claude Code | ⏳ (keyin) | sx/main |
 | RL-A | Realizm A: anatomiya suyakdan miyagacha (A-0 audit → A-1 yaxlit po'stloq → A-3 meninges/likvor → A-4 tomirlar → A-2/A-5/A-6) — `docs/REALISM.md` | Claude Code (+ subagentlar) | ⏳ reja tasdiqlandi 2026-11-24; A-0 dan boshlanadi | sx/main |
 | RL-B | Realizm B: odam boshi (qatlamli teri, kesim, real yuz/soch) — `docs/REALISM.md` | Claude Code | ⏳ (B-2 AG-22 dan keyin) | sx/main |
-| AG-19 | Tadqiqot (cortex-surface) + QURISH: `pial_surface.py` (A-1 yaxlit po'stloq) — `docs/REALISM.md` | Antigravity | ⏳ | ag/AG-19 |
-| AG-20 | Tadqiqot (pial tomirlar) + QURISH: `vessel_snap.py`, `pial_vessels_grow.py` (A-4) | Antigravity | ⏳ (A-1 dan keyin) | ag/AG-20 |
-| AG-21 | Tadqiqot (qatlam qalinliklari) + QURISH: `meninges_shells.py`, `src/or/anatomy/layers.ts` (A-3) | Antigravity | ⏳ | ag/AG-21 |
-| AG-22 | Tadqiqot (CC0 bosh assetlari) + QURISH: `head_fit.py` → `public/or/head.glb` (B-2) | Antigravity | ⏳ | ag/AG-22 |
-| AG-23 | Tadqiqot (ho'l to'qima shaderi) + QURISH: `src/or/anatomy/wetTissue.ts` + demo sahifa (A-5) | Antigravity | ⏳ | ag/AG-23 |
+| AG-19 | Tadqiqot (cortex-surface) + QURISH: `pial_surface.py` (A-1 yaxlit po'stloq) — `docs/REALISM.md` | Antigravity | ⏳ | ag/AG-19 (origin/sx/main dan) |
+| AG-20 | Tadqiqot (pial tomirlar) + QURISH: `vessel_snap.py`, `pial_vessels_grow.py` (A-4) | Antigravity | ⏳ (A-1 dan keyin) | ag/AG-20 (origin/sx/main dan) |
+| AG-21 | Tadqiqot (qatlam qalinliklari) + QURISH: `meninges_shells.py`, `src/or/anatomy/layers.ts` (A-3) | Antigravity | ⏳ | ag/AG-21 (origin/sx/main dan) |
+| AG-22 | Tadqiqot (CC0 bosh assetlari) + QURISH: `head_fit.py` → `public/or/head.glb` (B-2) | Antigravity | ⏳ | ag/AG-22 (origin/sx/main dan) |
+| AG-23 | Tadqiqot (ho'l to'qima shaderi) + QURISH: `src/or/anatomy/wetTissue.ts` + demo sahifa (A-5) | Antigravity | ⏳ | ag/AG-23 (origin/sx/main dan) |
 
 **Jurnal** (yangisi pastda; har yozuv: sana · kim · nima):
 - 2026-11-21 · Claude · AI panel AI-1…AI-5 tayyor; Gemini tuzatishlari (`827e81d`, `9b18a8f`); haqiqiy kalit bilan muammo ochiq.
